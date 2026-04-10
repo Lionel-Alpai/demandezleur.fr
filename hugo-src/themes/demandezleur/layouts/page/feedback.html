@@ -1,0 +1,68 @@
+{{ define "main" }}
+<div class="page-feedback">
+    
+    <section class="feedback-hero">
+        <h1>Partager un retour</h1>
+        <p class="intro">
+            Votre expérience nous intéresse. Ce formulaire permet d'envoyer un
+            message directement à la personne qui maintient le projet.
+        </p>
+    </section>
+    
+    <section class="feedback-principes">
+        <h2>Comment ça marche</h2>
+        <ul>
+            <li>
+                <strong>C'est anonyme</strong> — aucun email, aucun nom, aucun cookie
+                de tracking n'est collecté. Seul votre message est transmis.
+            </li>
+            <li>
+                <strong>Ce n'est pas public</strong> — votre message n'est pas affiché
+                sur le site. Il est simplement envoyé au mainteneur du projet via
+                un canal privé.
+            </li>
+            <li>
+                <strong>Pas de réponse automatique</strong> — puisque vous n'avez pas
+                laissé de coordonnées, il n'y a pas de canal pour vous répondre.
+                Si votre message appelle une réponse, mentionnez-le et indiquez
+                un moyen de vous joindre dans le texte.
+            </li>
+        </ul>
+    </section>
+    
+    <section class="feedback-form-section">
+        <form id="feedback-form" class="feedback-form">
+            <label for="feedback-message">Votre message</label>
+            <textarea 
+                id="feedback-message" 
+                name="message" 
+                rows="8" 
+                maxlength="2000"
+                minlength="10"
+                placeholder="Partagez votre expérience, signalez un bug, proposez une amélioration, ou simplement dites ce que vous pensez du projet..."
+                required></textarea>
+            <div class="feedback-counter">
+                <span id="feedback-chars">0</span>/2000 caractères
+            </div>
+            <button type="submit" id="feedback-submit" class="btn btn-primary" disabled>
+                Envoyer
+            </button>
+        </form>
+        
+        <div id="feedback-result" class="feedback-result" style="display: none;"></div>
+    </section>
+    
+    <section class="feedback-alternative">
+        <h2>Autres façons de contribuer</h2>
+        <p>
+            Si vous préférez soutenir le projet financièrement plutôt qu'avec des mots,
+            la <a href="/soutenir/">page de soutien</a> vous explique comment contribuer
+            via Liberapay.
+        </p>
+    </section>
+    
+</div>
+
+<link rel="stylesheet" href="/css/feedback.css">
+<script src="/js/feedback.js" defer></script>
+{{ end }}

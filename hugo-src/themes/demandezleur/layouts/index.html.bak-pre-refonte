@@ -1,0 +1,33 @@
+{{ define "main" }}
+<div class="lef">
+  <span>Liberté</span>
+  <span>Égalité</span>
+  <span>Fraternité</span>
+</div>
+<div class="question-wrap">
+  <div class="question-halo"></div>
+  <div class="question">?</div>
+</div>
+<div class="site-title">demandezleur<span class="dot">.</span>fr</div>
+<div class="subtitle">interrogez leurs programmes</div>
+<div class="badge-2027">
+  <div class="yr">2027</div>
+  <div class="lbl">élection<br>présidentielle</div>
+</div>
+<div class="actions">
+  <a href="/candidats/" class="btn btn-primary">tous les candidats</a>
+  <a href="/debat/" class="btn btn-secondary">lancer un débat</a>
+</div>
+
+{{ partial "carousel.html" . }}
+
+<div class="prompt-hint">
+  <a href="/transparence/" style="text-decoration:none; color:inherit;">
+    <span class="chev">&gt;</span> transparence totale<span class="blink"></span>
+  </a>
+</div>
+{{ end }}
+
+{{ define "scripts" }}
+<script src="{{ "js/carousel.js" | relURL }}"></script>
+{{ end }}

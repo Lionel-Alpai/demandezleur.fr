@@ -1,0 +1,33 @@
+# Secrets
+.env
+*.env
+config.py
+secrets/
+
+# Backend runtime
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/corpus/
+
+# Hugo build output
+hugo-src/public/
+hugo-src/resources/
+
+# Logs & données personnelles
+logs/
+*.log
+historique_debats.json
+
+# Fichiers backup session
+backend/api.py.backup
+backend/api.py.broken
+backend/api.py.clean
+backend/api.py.fixed_backup
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Public HTML généré (servi par Hestia)
+public_html/

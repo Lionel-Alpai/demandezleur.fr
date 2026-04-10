@@ -1,0 +1,51 @@
+{{ define "main" }}
+<div class="lef">
+  <span class="lef-bleu">Liberté</span>
+  <span class="lef-blanc">Égalité</span>
+  <span class="lef-rouge">Fraternité</span>
+</div>
+<div class="question-wrap">
+  <div class="question-halo"></div>
+  <div class="question">?</div>
+</div>
+<div class="site-title">demandezleur<span class="dot">.</span>fr</div>
+<div class="subtitle">interrogez leurs programmes</div>
+
+<div class="candidats-label">{{ len (where .Site.RegularPages "Section" "candidats") }} candidats déclarés · touchez pour interroger</div>
+
+{{ partial "carousel.html" . }}
+
+<div class="hook">
+  <div class="hook-main">Et si vous pouviez faire débattre les programmes politiques&nbsp;?</div>
+  <div class="hook-sub">
+    Posez vos questions à une IA qui ne répond qu'à partir des <strong>programmes officiels</strong> des candidats.<br>
+    Chaque réponse est <strong>sourcée</strong>, le code est <strong>ouvert</strong>, aucun tracking.
+  </div>
+</div>
+
+<div class="badge-2027">
+  <div class="yr">2027</div>
+  <div class="lbl">élection<br>présidentielle</div>
+</div>
+
+<a href="/debat/" class="debat-feature">
+  <div class="debat-title">Devenez <em>modérateur</em><br>d'un débat entre candidats</div>
+  <div class="debat-desc">
+    Sélectionnez jusqu'à 5 candidats, lancez un sujet, orchestrez les tours de parole.
+    L'IA fait s'affronter leurs programmes en temps réel.
+  </div>
+  <span class="debat-cta">Lancer un débat →</span>
+</a>
+
+<a href="/candidats/" class="all-candidates-link">voir tous les candidats →</a>
+
+<div class="prompt-hint">
+  <a href="/transparence/" style="text-decoration:none; color:inherit;">
+    <span class="chev">&gt;</span> transparence totale<span class="blink"></span>
+  </a>
+</div>
+{{ end }}
+
+{{ define "scripts" }}
+<script src="{{ "js/carousel.js" | relURL }}"></script>
+{{ end }}

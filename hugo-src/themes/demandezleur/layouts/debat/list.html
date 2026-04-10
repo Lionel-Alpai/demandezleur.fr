@@ -1,0 +1,141 @@
+{{ define "main" }}
+<div class="debat-page">
+  
+  {{/* ÉTAT 1 — Sélection des candidats et du sujet */}}
+  <section id="debat-setup" class="debat-section">
+    <div class="debat-header">
+      <h1 style="font-family:'JetBrains Mono', monospace; font-size:24px; margin-bottom:12px;">Lancer un débat</h1>
+      <p class="debat-intro" style="font-size:14px; color:var(--text-secondary); margin-bottom:24px;">
+        Sélectionnez 2 à 5 candidats et lancez un sujet. Vous êtes le modérateur.
+      </p>
+    </div>
+    
+    <div class="debat-selection">
+      <div class="debat-counter" style="font-family:'JetBrains Mono', monospace; font-size:12px; margin-bottom:16px; color:var(--text-tertiary);">
+        <span id="counter-selected" style="color:var(--rouge-france); font-weight:bold;">0</span> / 5 candidats sélectionnés
+      </div>
+      
+      <div class="candidats-grid" id="candidats-grid">
+        {{ $candidats := index .Site.Data "candidats" }}
+        {{ range $candidats }}
+        <div class="candidat-select-card" 
+             data-candidat-id="{{ .id }}"
+             data-candidat-nom="{{ .nom }}"
+             data-candidat-parti="{{ .parti_court }}"
+             data-candidat-famille="{{ .famille }}"
+             data-candidat-couleur="{{ .couleur_fond }}">
+          <div class="candidat-photo-wrap" style="background: {{ .couleur_fond }};">
+            {{ if .photo }}
+              <img src="{{ .photo }}" alt="{{ .nom }}" loading="lazy">
+            {{ else }}
+              <span class="candidat-initiales">{{ .initiales }}</span>
+            {{ end }}
+            <div class="candidat-check">✓</div>
+          </div>
+          <div class="candidat-info">
+            <div class="candidat-nom">{{ .nom }}</div>
+            <div class="candidat-parti">{{ .parti_court }}</div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    
+    <div class="debat-sujet" style="margin-top:30px;">
+      <label for="sujet-input" style="display:block; font-family:'JetBrains Mono', monospace; font-size:12px; margin-bottom:8px; color:var(--text-tertiary); text-transform:uppercase;">Sujet du débat</label>
+      <textarea id="sujet-input" 
+                placeholder="Exemple : le pouvoir d'achat, le nucléaire, l'immigration, l'école..."
+                maxlength="500"
+                rows="2"
+                style="width:100%; background:rgba(255,255,255,0.05); border:1px solid var(--border-subtle); border-radius:4px; padding:12px; color:var(--text-primary); font-family:inherit; resize:none;"></textarea>
+      <div class="sujet-counter" style="text-align:right; font-size:10px; color:var(--text-tertiary); margin-top:4px;"><span id="sujet-chars">0</span>/500</div>
+    </div>
+    
+    <div class="debat-launch" style="margin-top:40px; text-align:center;">
+      <button id="btn-launch" class="btn btn-launch-debat" disabled>
+        Lancer le débat
+      </button>
+      <p class="debat-notice" style="font-size:10px; color:var(--text-tertiary); margin-top:16px; letter-spacing:0.5px;">
+        Ordre de parole randomisé · 5 tours maximum · transparence totale
+      </p>
+    </div>
+  </section>
+  
+  {{/* ÉTAT 2 — Débat en cours */}}
+  <section id="debat-arena" class="debat-section" style="display: none;">
+    <div class="debat-header-arena" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; padding-bottom:15px; border-bottom:1px solid var(--border-subtle);">
+      <div class="debat-sujet-display">
+        <span class="label" style="font-size:10px; color:var(--text-tertiary); text-transform:uppercase; display:block;">Sujet</span>
+        <span class="valeur" id="sujet-display" style="font-weight:bold; color:var(--text-primary);"></span>
+      </div>
+      <div class="debat-tour-display" style="text-align:right;">
+        <span class="label" style="font-size:10px; color:var(--text-tertiary); text-transform:uppercase; display:block;">Tour</span>
+        <span class="valeur" id="tour-display" style="font-family:'JetBrains Mono', monospace; font-weight:bold; color:var(--rouge-france);">1/5</span>
+      </div>
+    </div>
+    
+    <div class="debat-ordre" id="debat-ordre" style="font-size:11px; color:var(--text-tertiary); margin-bottom:20px; padding:8px; background:rgba(255,255,255,0.03); border-radius:4px;">
+      <span class="label">Ordre de parole :</span>
+      <span class="ordre-liste" id="ordre-liste" style="color:var(--text-secondary); margin-left:5px;"></span>
+    </div>
+    
+    <div class="debat-interventions" id="debat-interventions">
+      {{/* Les cartes d'intervention sont générées par JS au fil du stream */}}
+    </div>
+    
+    <div class="debat-actions" id="debat-actions" style="display: none;">
+      <button class="btn btn-debat-action" id="btn-tour-suivant">
+        <span class="btn-icon">↻</span>
+        <span class="btn-label">Tour suivant</span>
+      </button>
+      <button class="btn btn-debat-action" id="btn-intervenir">
+        <span class="btn-icon">✋</span>
+        <span class="btn-label">Intervenir</span>
+      </button>
+      <button class="btn btn-debat-action btn-end" id="btn-fin-debat">
+        <span class="btn-icon">■</span>
+        <span class="btn-label">Fin du débat</span>
+      </button>
+    </div>
+    
+    {{/* Panneau intervention (s'ouvre quand on clique Intervenir) */}}
+    <div class="debat-intervention-panel" id="intervention-panel" style="display: none; background:var(--bg-elevated); border:1px solid var(--border-medium); border-radius:8px; padding:20px; margin-top:20px;">
+      <label for="intervention-input" style="display:block; font-family:'JetBrains Mono', monospace; font-size:12px; margin-bottom:12px; color:var(--text-tertiary); text-transform:uppercase;">Votre question en tant que modérateur</label>
+      <textarea id="intervention-input" 
+                placeholder="Posez votre question ou recadrez le débat..."
+                maxlength="300"
+                rows="2"
+                style="width:100%; background:rgba(255,255,255,0.05); border:1px solid var(--border-subtle); border-radius:4px; padding:12px; color:var(--text-primary); font-family:inherit; resize:none; margin-bottom:20px;"></textarea>
+      
+      <div class="intervention-target" style="margin-bottom:24px;">
+        <label style="display:block; font-family:'JetBrains Mono', monospace; font-size:11px; margin-bottom:12px; color:var(--text-tertiary); text-transform:uppercase;">Qui doit répondre en premier ?</label>
+        <div class="intervention-target-buttons" id="intervention-target-buttons" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(120px, 1fr)); gap:8px;">
+          {{/* Boutons générés par JS selon candidats en jeu */}}
+        </div>
+      </div>
+      
+      <div class="intervention-actions" style="display:flex; gap:12px;">
+        <button class="btn btn-secondary" id="btn-intervention-cancel" style="flex:1;">Annuler</button>
+        <button class="btn btn-primary" id="btn-intervention-submit" disabled style="flex:1;">Valider</button>
+      </div>
+    </div>
+  </section>
+  
+  {{/* ÉTAT 3 — Fin du débat / récapitulatif */}}
+  <section id="debat-recap" class="debat-section" style="display: none;">
+    <div class="debat-header" style="text-align:center; margin-bottom:40px;">
+      <h1 style="font-family:'JetBrains Mono', monospace; font-size:24px; margin-bottom:12px;">Fin du débat</h1>
+      <p style="font-size:14px; color:var(--text-secondary);">Récapitulatif des positions de chaque candidat.</p>
+    </div>
+    <div id="recap-container" style="display:flex; flex-direction:column; gap:24px; margin-bottom:40px;"></div>
+    <div class="debat-recap-actions" style="display:flex; flex-direction:column; gap:12px; align-items:center;">
+      <button class="btn btn-primary" id="btn-nouveau-debat" style="width:100%; max-width:300px;">Lancer un nouveau débat</button>
+      <a href="/" class="btn btn-secondary" style="width:100%; max-width:300px; text-decoration:none; display:flex; align-items:center; justify-content:center;">Retour à l'accueil</a>
+    </div>
+  </section>
+  
+</div>
+
+<link rel="stylesheet" href="/css/debat.css">
+<script src="/js/debat.js" defer></script>
+{{ end }}

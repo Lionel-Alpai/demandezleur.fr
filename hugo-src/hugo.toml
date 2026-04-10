@@ -1,0 +1,12 @@
+baseURL = "https://demandezleur.fr/"
+languageCode = "fr"
+title = "demandezleur.fr — Interrogez leurs programmes"
+theme = "demandezleur"
+
+[params]
+  description = "L'IA au service du citoyen. Interrogez les programmes des candidats à la présidentielle 2027."
+  apiBase = "/api"
+  maxDebatTours = 5
+
+[markup.goldmark.renderer]
+  unsafe = true

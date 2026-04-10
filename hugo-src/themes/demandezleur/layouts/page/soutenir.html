@@ -1,0 +1,139 @@
+{{ define "main" }}
+<div class="page-soutenir">
+    
+    <section class="soutenir-hero">
+        <h1>Soutenir le projet</h1>
+        <p class="intro">
+            demandezleur.fr est un projet citoyen indépendant, développé bénévolement,
+            sans publicité, sans collecte de données personnelles, sans affiliation politique.
+            Son fonctionnement a un coût réel. Si vous trouvez cet outil utile,
+            vous pouvez contribuer librement à son existence.
+        </p>
+    </section>
+    
+    <section class="soutenir-couts">
+        <h2>Où va l'argent ?</h2>
+        <p>
+            Les frais de fonctionnement du projet se composent principalement de :
+        </p>
+        <ul>
+            <li>
+                <strong>L'API d'intelligence artificielle</strong> (DeepSeek V3.2) —
+                chaque question posée et chaque intervention dans un débat génère un coût,
+                payé à l'usage. C'est le poste de dépense principal, qui varie selon
+                la fréquentation du site.
+            </li>
+            <li>
+                <strong>L'hébergement du serveur</strong> (VPS chez OVH) —
+                quelques euros par mois pour faire tourner le backend et servir les pages.
+            </li>
+            <li>
+                <strong>Le nom de domaine</strong> — frais annuels fixes et modestes.
+            </li>
+        </ul>
+        <p>
+            Le site ne rémunère personne : ni développeur, ni modérateur, ni prestataire
+            externe. Il n'y a aucune masse salariale. Les contributions servent
+            strictement à couvrir les frais techniques ci-dessus.
+        </p>
+    </section>
+    
+    <section class="soutenir-transparence">
+        <h2>Combien ça coûte exactement ?</h2>
+        <p>
+            Les coûts varient avec la fréquentation. À titre indicatif, voici les ordres
+            de grandeur :
+        </p>
+        <ul class="cout-grille">
+            <li><span class="cout-label">Quelques dizaines de visiteurs par jour</span><span class="cout-valeur">~3 €/mois</span></li>
+            <li><span class="cout-label">Quelques centaines de visiteurs par jour</span><span class="cout-valeur">~25 €/mois</span></li>
+            <li><span class="cout-label">Quelques milliers de visiteurs par jour</span><span class="cout-valeur">~200 €/mois</span></li>
+        </ul>
+        <p class="petit">
+            Ces chiffres sont des estimations basées sur les tarifs publics de DeepSeek
+            et les mesures réelles effectuées sur notre infrastructure. Ils sont mis
+            à jour périodiquement.
+        </p>
+    </section>
+    
+    <section class="soutenir-cta">
+        <h2>Contribuer</h2>
+        <p>
+            Vous pouvez contribuer librement via Liberapay, une plateforme française
+            à but non lucratif qui ne prélève aucune commission — 100 % de votre don
+            finance réellement le projet.
+        </p>
+        
+        <a href="https://liberapay.com/demandezleur/" class="btn btn-liberapay" target="_blank" rel="noopener">
+            Contribuer via Liberapay
+        </a>
+        
+        <p class="petit precision">
+            <strong>Important :</strong> les contributions sont libres et ne donnent
+            accès à aucun avantage particulier. Elles ne débloquent pas de fonctionnalités
+            supplémentaires, ne suppriment pas les limites d'usage, et ne confèrent aucun
+            statut particulier. Votre contribution soutient le projet, pas votre propre usage.
+            C'est un choix délibéré pour préserver l'égalité d'accès de tous les citoyens
+            à cet outil.
+        </p>
+    </section>
+    
+    <section class="soutenir-faq">
+        <h2>Questions fréquentes</h2>
+        
+        <details>
+            <summary>Pourquoi Liberapay plutôt qu'une autre plateforme ?</summary>
+            <p>
+                Liberapay est une plateforme française à but non lucratif qui prend
+                zéro commission sur les dons. C'est cohérent avec la philosophie du projet :
+                soutenir un outil citoyen indépendant via un intermédiaire qui ne fait pas
+                de profit. Les alternatives comme Ko-fi ou Tipeee prennent des commissions
+                comprises entre 5 et 8 %.
+            </p>
+        </details>
+        
+        <details>
+            <summary>Le projet est-il une association ?</summary>
+            <p>
+                Non, pas pour l'instant. Il s'agit d'un projet personnel et bénévole,
+                sans structure juridique. Les contributions reçues couvrent uniquement
+                les frais techniques, pas une rémunération.
+            </p>
+        </details>
+        
+        <details>
+            <summary>Que se passe-t-il si le projet reçoit plus de dons que nécessaire ?</summary>
+            <p>
+                Les fonds excédentaires sont conservés comme réserve pour couvrir les
+                pics de fréquentation imprévus (par exemple si le site devient viral)
+                et les frais à venir jusqu'à la fin de la période électorale. Aucun
+                bénéfice personnel n'est tiré du projet.
+            </p>
+        </details>
+        
+        <details>
+            <summary>Que se passe-t-il après l'élection présidentielle 2027 ?</summary>
+            <p>
+                Le projet est conçu pour accompagner la campagne présidentielle 2027.
+                Son avenir après avril 2027 dépendra des retours des utilisateurs et
+                du contexte. Si des fonds résiduels subsistent, ils seront utilisés
+                pour maintenir le site en ligne en lecture seule aussi longtemps que
+                possible, à titre d'archive historique de la campagne.
+            </p>
+        </details>
+        
+        <details>
+            <summary>Puis-je contribuer autrement qu'avec de l'argent ?</summary>
+            <p>
+                Oui. Vous pouvez partager le site autour de vous, signaler des bugs
+                ou des améliorations via le formulaire de feedback (bientôt disponible),
+                ou simplement utiliser l'outil pour mieux comprendre les programmes des
+                candidats — c'est déjà une contribution à son existence.
+            </p>
+        </details>
+    </section>
+    
+</div>
+
+<link rel="stylesheet" href="/css/soutenir.css">
+{{ end }}

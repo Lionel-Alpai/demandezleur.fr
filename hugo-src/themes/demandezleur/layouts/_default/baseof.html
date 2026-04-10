@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+{{ partial "head.html" . }}
+<body>
+  {{ partial "tricolore.html" }}
+  <div class="code-watermark">system_prompt = """Tu es un militant convaincu qui défend le programme de {candidat} pour la présidentielle 2027. Tu ne réponds QUE sur la base des extraits fournis."""  corpus = load_json(f"corpus/{candidat_id}.json")  context = tfidf_search(corpus, question, top_k=3)  # transparence totale — code public</div>
+  
+  {{ partial "header.html" . }}
+  
+  <main class="main-content">
+    {{ block "main" . }}{{ end }}
+  </main>
+  
+  {{ partial "footer.html" . }}
+  {{ partial "tricolore.html" }}
+  
+  {{ block "scripts" . }}{{ end }}
+</body>
+</html>

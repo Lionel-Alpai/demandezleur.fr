@@ -1,0 +1,169 @@
+.page-soutenir {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.page-soutenir h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: var(--text-primary);
+    margin: 0 0 24px 0;
+    font-weight: 500;
+}
+
+.page-soutenir h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 48px 0 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.page-soutenir p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0 0 16px 0;
+}
+
+.page-soutenir .intro {
+    font-size: 15px;
+    color: var(--text-primary);
+}
+
+.page-soutenir ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.page-soutenir ul li {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0 0 12px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.page-soutenir ul li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--rouge-france);
+}
+
+.page-soutenir strong {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.cout-grille {
+    border: 1px solid var(--border-medium);
+    border-radius: 4px;
+    background: rgba(255,255,255,0.02);
+    padding: 0 !important;
+    margin: 24px 0;
+}
+
+.cout-grille li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px !important;
+    margin: 0 !important;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.cout-grille li::before {
+    display: none;
+}
+
+.cout-grille li:last-child {
+    border-bottom: none;
+}
+
+.cout-label {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.cout-valeur {
+    font-size: 13px;
+    color: var(--rouge-france);
+    font-weight: 500;
+}
+
+.soutenir-cta {
+    text-align: center;
+    margin: 56px 0;
+    padding: 32px;
+    border: 1px solid var(--rouge-france);
+    border-radius: 4px;
+    background: rgba(237, 41, 57, 0.03);
+}
+
+.btn-liberapay {
+    display: inline-block;
+    padding: 14px 36px;
+    background: var(--rouge-france);
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 16px 0;
+    transition: background 0.2s ease;
+}
+
+.btn-liberapay:hover {
+    background: #c71a2e;
+}
+
+.precision {
+    font-size: 12px !important;
+    color: var(--text-tertiary) !important;
+    margin-top: 24px !important;
+    line-height: 1.6 !important;
+}
+
+.petit {
+    font-size: 12px !important;
+    color: var(--text-tertiary) !important;
+}
+
+.soutenir-faq details {
+    margin: 16px 0;
+    padding: 16px;
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.soutenir-faq summary {
+    font-size: 14px;
+    color: var(--text-primary);
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+}
+
+.soutenir-faq summary:hover {
+    color: var(--rouge-france);
+}
+
+.soutenir-faq details[open] {
+    background: rgba(255,255,255,0.02);
+}
+
+.soutenir-faq details[open] summary {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-subtle);
+}

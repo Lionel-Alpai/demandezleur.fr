@@ -1,0 +1,60 @@
+{{ define "main" }}
+{{ $candidat := index (where site.Data.candidats "id" .Params.candidat_id) 0 }}
+<div style="display:flex; flex-direction:column; align-items:center; margin-bottom: 24px; position:relative; width: 100%;">
+  <a href="/" style="position:absolute; left:0; top:0; color:var(--text-secondary); text-decoration:none; font-size:14px; border: 1px solid rgba(255,255,255,0.1); padding: 4px 10px; border-radius: 4px;">&larr; Retour</a>
+  
+  <div style="width:100px; height:100px; border-radius:50%; overflow:hidden; border: 3px solid {{ .Params.couleur_fond }}; margin-bottom: 12px; display:flex; align-items:center; justify-content:center; background:{{ .Params.couleur_fond }}; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+    {{ if $candidat.photo }}
+      <img src="{{ $candidat.photo }}" alt="{{ .Title }}" style="width:100%; height:100%; object-fit:cover; display:block;">
+    {{ else }}
+      <span style="font-size:32px;">{{ .Params.initiales }}</span>
+    {{ end }}
+  </div>
+  <h1 style="font-family:'JetBrains Mono', monospace; font-size:22px; margin:0 0 4px 0; font-weight:600;">{{ .Title }}</h1>
+  <div style="font-size:11px; color:rgba(255,255,255,0.5); text-transform:uppercase; letter-spacing:1px; background: rgba(255,255,255,0.05); padding: 2px 8px; border-radius: 12px;">{{ .Params.parti }}</div>
+</div>
+
+<div class="chat-full" style="width:100%; display:flex; flex-direction:column; height: 50vh; min-height: 400px; border: 1px solid var(--border-subtle); border-radius: 8px; background: var(--bg-elevated); margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+  <div class="chat-body" id="chatWindow" style="flex:1; overflow-y:auto; padding:16px; display:flex; flex-direction:column; gap:12px;">
+    <div class="chat-message system-msg" style="font-size:12px; color:var(--text-tertiary); margin-bottom:8px; text-align:center; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.05);">
+      Vous interrogez le programme de <strong style="color:var(--text-primary);">{{ .Title }}</strong>.<br>Posez votre question.
+    </div>
+    
+    {{/* Les messages s'ajouteront ici dynamiquement */}}
+  </div>
+  
+  <div class="chat-footer" style="padding:14px; background: rgba(0,0,0,0.2); border-top:1px solid var(--border-subtle);">
+    <form id="chatFormFull" class="chat-input-row" data-candidat="{{ .Params.candidat_id }}" style="margin:0;">
+      <input type="text" id="chatInputFull" class="chat-input" placeholder="votre question..." required style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+      <button type="submit" id="chatSendFull" class="chat-send">&rsaquo;</button>
+    </form>
+    <div style="text-align:center; margin-top:8px;">
+      <a href="/transparence/" style="font-family:'JetBrains Mono', monospace; font-size:8px; color:rgba(255,255,255,0.15); text-decoration:none;">voir les sources RAG</a>
+    </div>
+  </div>
+</div>
+
+<div style="width: 100%; border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 15px; margin-top: 5px;">
+  {{ partial "carousel.html" . }}
+</div>
+
+{{ if $candidat.sources }}
+<div class="sources-bloc">
+  <div class="sources-label">Documents utilisés pour entraîner l'IA de {{ $candidat.nom }}</div>
+  <ul class="sources-list">
+    {{ range $candidat.sources }}
+    <li>{{ . }}</li>
+    {{ end }}
+  </ul>
+  <div class="sources-note">
+    L'IA ne répond qu'à partir de ces documents. Toute réponse est ancrée dans les positions officielles du candidat.
+  </div>
+</div>
+{{ end }}
+
+{{ end }}
+
+{{ define "scripts" }}
+<script src="{{ "js/carousel.js" | relURL }}"></script>
+<script src="{{ "js/chat.js" | relURL }}"></script>
+{{ end }}
