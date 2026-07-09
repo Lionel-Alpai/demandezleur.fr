@@ -12,22 +12,9 @@
     "photo": "/img/candidats/nathalie-arthaud.webp",
     "photo_credit": "Wikimedia Commons — CC BY-SA 4.0",
     "note": null,
-    "sources": ["Positions politiques Lutte Ouvrière / Programme Nathalie Arthaud 2027"]
-  },
-  {
-    "id": "francois-ruffin",
-    "slug": "francois-ruffin",
-    "nom": "François Ruffin",
-    "initiales": "FR",
-    "parti": "Debout !",
-    "parti_court": "D!",
-    "famille": "gauche",
-    "couleur_fond": "#1a3320",
-    "date_declaration": "Avril 2026",
-    "photo": "/img/candidats/francois-ruffin.webp",
-    "photo_credit": "Wikimedia Commons — CC BY-SA 4.0",
-    "note": null,
-    "sources": ["Programme François Ruffin — Debout! 2027 (site officiel, manifeste, interviews)"]
+    "sources": [
+      "Positions politiques Lutte Ouvrière / Programme Nathalie Arthaud 2027"
+    ]
   },
   {
     "id": "delphine-batho",
@@ -42,7 +29,9 @@
     "photo": "/img/candidats/delphine-batho.webp",
     "photo_credit": "Wikimedia Commons — CC BY-SA 4.0",
     "note": null,
-    "sources": ["Programme Génération Écologie — Delphine Batho 2027"]
+    "sources": [
+      "Programme Génération Écologie — Delphine Batho 2027"
+    ]
   },
   {
     "id": "jerome-guedj",
@@ -57,7 +46,9 @@
     "photo": "/img/candidats/jerome-guedj.webp",
     "photo_credit": "Wikimedia Commons — CC BY-SA 3.0 (2010)",
     "note": null,
-    "sources": ["Programme Jérôme Guedj — Candidature Présidentielle 2027 (PS)"]
+    "sources": [
+      "Programme Jérôme Guedj — Candidature Présidentielle 2027 (PS)"
+    ]
   },
   {
     "id": "edouard-philippe",
@@ -72,7 +63,9 @@
     "photo": "/img/candidats/edouard-philippe.webp",
     "photo_credit": "Wikimedia Commons — CC BY-SA 4.0",
     "note": null,
-    "sources": ["Programme Édouard Philippe — Horizons 2027 (déclarations, interviews, livre)"]
+    "sources": [
+      "Programme Édouard Philippe — Horizons 2027 (déclarations, interviews, livre)"
+    ]
   },
   {
     "id": "bruno-retailleau",
@@ -87,22 +80,9 @@
     "photo": "/img/candidats/bruno-retailleau.webp",
     "photo_credit": "Wikimedia Commons — CC BY-SA 4.0 (portrait ministériel 2024)",
     "note": null,
-    "sources": ["Programme Bruno Retailleau — Les Républicains 2027 (déclarations, pacte législatif, interviews)"]
-  },
-  {
-    "id": "laurent-wauquiez",
-    "slug": "laurent-wauquiez",
-    "nom": "Laurent Wauquiez",
-    "initiales": "LW",
-    "parti": "Les Républicains",
-    "parti_court": "LR",
-    "famille": "droite",
-    "couleur_fond": "#1a2744",
-    "date_declaration": "Mars 2025",
-    "photo": "/img/candidats/laurent-wauquiez.webp",
-    "photo_credit": "Wikimedia Commons — CC BY-SA 4.0 (2021)",
-    "note": null,
-    "sources": ["Programme Laurent Wauquiez — Les Républicains 2027 (Pacte législatif + déclarations)"]
+    "sources": [
+      "Programme Bruno Retailleau — Les Républicains 2027 (déclarations, pacte législatif, interviews)"
+    ]
   },
   {
     "id": "xavier-bertrand",
@@ -117,7 +97,9 @@
     "photo": "/img/candidats/xavier-bertrand.webp",
     "photo_credit": "Wikimedia Commons — CC BY-SA 4.0 (2025)",
     "note": null,
-    "sources": ["Programme Xavier Bertrand — Nous France 2027"]
+    "sources": [
+      "Programme Xavier Bertrand — Nous France 2027"
+    ]
   },
   {
     "id": "david-lisnard",
@@ -132,7 +114,9 @@
     "photo": "/img/candidats/david-lisnard.webp",
     "photo_credit": "Wikimedia Commons — CC0 Public Domain (nov. 2024)",
     "note": null,
-    "sources": ["Programme Nouvelle Énergie — David Lisnard 2027"]
+    "sources": [
+      "Programme Nouvelle Énergie — David Lisnard 2027"
+    ]
   },
   {
     "id": "nicolas-dupont-aignan",
@@ -147,7 +131,9 @@
     "photo": "/img/candidats/nicolas-dupont-aignan.webp",
     "photo_credit": "Wikimedia Commons — CC BY-SA 4.0",
     "note": null,
-    "sources": ["100 Décisions pour la France — DLF 2022"]
+    "sources": [
+      "100 Décisions pour la France — DLF 2022"
+    ]
   },
   {
     "id": "francois-asselineau",
@@ -162,7 +148,9 @@
     "photo": "/img/candidats/francois-asselineau.webp",
     "photo_credit": "Wikimedia Commons — CC BY-SA 4.0 (Haute Résolution)",
     "note": null,
-    "sources": ["Programme Présidentiel UPR — François Asselineau 2022"]
+    "sources": [
+      "Programme Présidentiel UPR — François Asselineau 2022"
+    ]
   },
   {
     "id": "marine-le-pen",
@@ -177,6 +165,8 @@
     "photo": "/img/candidats/marine-le-pen.webp",
     "photo_credit": "Wikimedia Commons — CC BY-SA 4.0 (2025)",
     "note": "Inéligibilité en appel — jugement 7 juillet 2026",
-    "sources": ["Programme présidentiel RN — Marine Le Pen 2022/2027 (22 mesures + livrets thématiques)"]
+    "sources": [
+      "Programme présidentiel RN — Marine Le Pen 2022/2027 (22 mesures + livrets thématiques)"
+    ]
   }
 ]

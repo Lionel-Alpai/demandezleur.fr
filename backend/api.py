@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 # Charger les variables d'environnement depuis .env
 load_dotenv()
 
-from fastapi import FastAPI, HTTPException, Request
+from fastapi import FastAPI, HTTPException, Request, UploadFile, File, Form
 from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -124,20 +124,10 @@ CANDIDATS_META = {
         "parti": "Nous France",
         "ton_file": "ton_droite.txt"
     },
-    "laurent-wauquiez": {
-        "nom": "Laurent Wauquiez",
-        "parti": "Les Républicains (LR)",
-        "ton_file": "ton_droite.txt"
-    },
     "bruno-retailleau": {
         "nom": "Bruno Retailleau",
         "parti": "Les Républicains (LR)",
         "ton_file": "ton_droite.txt"
-    },
-    "francois-ruffin": {
-        "nom": "François Ruffin",
-        "parti": "Debout!",
-        "ton_file": "ton_gauche.txt"
     }
 }
 
@@ -499,6 +489,74 @@ async def soumettre_feedback(request: Request):
         "success": True,
         "message": resultat["message_utilisateur"],
     }
+
+@app.post("/api/suggerer-document")
+async def suggerer_document(
+    request: Request,
+    candidat: str = Form(...),
+    titre: str = Form(...),
+    url: str = Form(""),
+    notes: str = Form(""),
+    fichier: Optional[UploadFile] = File(None),
+):
+    """Reçoit une suggestion de document RAG et la transmet via Telegram."""
+    ip = extraire_ip_reelle(request)
+    TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
+    TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_FEEDBACK_CHAT_ID")
+
+    if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
+        raise HTTPException(status_code=500, detail="Configuration Telegram manquante")
+
+    # Validation basique
+    if not candidat.strip() or not titre.strip():
+        raise HTTPException(status_code=400, detail="Candidat et titre sont requis")
+    if len(titre) > 200 or len(notes) > 1000:
+        raise HTTPException(status_code=400, detail="Champs trop longs")
+
+    from datetime import datetime
+    horodatage = datetime.now().strftime("%Y-%m-%d %H:%M")
+
+    # Construction du texte de notification
+    lignes = [
+        f"📎 Suggestion de document — demandezleur.fr",
+        f"🕐 {horodatage}",
+        f"━━━━━━━━━━━━━━━",
+        f"👤 Candidat : {candidat}",
+        f"📄 Document : {titre}",
+    ]
+    if url:
+        lignes.append(f"🔗 URL : {url}")
+    if notes:
+        lignes.append(f"📝 Notes : {notes}")
+    lignes.append("━━━━━━━━━━━━━━━")
+    texte = "\n".join(lignes)
+
+    import httpx
+    try:
+        async with httpx.AsyncClient(timeout=30.0) as client:
+            if fichier and fichier.filename:
+                # Envoi avec pièce jointe
+                contenu = await fichier.read()
+                if len(contenu) > 20 * 1024 * 1024:
+                    raise HTTPException(status_code=400, detail="Fichier trop volumineux (max 20 Mo)")
+                resp = await client.post(
+                    f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendDocument",
+                    data={"chat_id": TELEGRAM_CHAT_ID, "caption": texte[:1024]},
+                    files={"document": (fichier.filename, contenu, fichier.content_type or "application/octet-stream")},
+                )
+            else:
+                # Envoi texte seul
+                resp = await client.post(
+                    f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage",
+                    json={"chat_id": TELEGRAM_CHAT_ID, "text": texte},
+                )
+            resp.raise_for_status()
+    except httpx.HTTPError as e:
+        logger.error(f"[SUGGESTION] Erreur Telegram : {e}")
+        raise HTTPException(status_code=500, detail="Erreur lors de l'envoi")
+
+    return {"success": True, "message_utilisateur": "Suggestion transmise avec succès."}
+
 
 @app.post("/api/ask")
 async def ask_candidat(request: Request, ask_request: AskRequest):

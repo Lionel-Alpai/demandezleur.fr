@@ -1,0 +1,105 @@
+{{ define "main" }}
+<div class="page-suggerer">
+
+  <section class="suggerer-hero">
+    <h1>Suggérer un document</h1>
+    <p class="intro">
+      Vous connaissez un programme, une interview, un texte officiel d'un candidat
+      qui n'est pas encore dans notre base ? Signalez-le ici.
+    </p>
+  </section>
+
+  <section class="suggerer-contexte">
+    <div class="contexte-bloc">
+      <div class="contexte-titre">Pourquoi c'est important</div>
+      <p>
+        L'IA ne répond qu'à partir des documents que nous lui fournissons.
+        Un corpus incomplet peut donner une image partielle ou injuste d'un candidat.
+        Votre contribution aide à corriger ça.
+      </p>
+      <p>
+        Par exemple, le programme de François Asselineau dans notre base date de 2022 —
+        si vous avez accès à des positions plus récentes de l'UPR, c'est exactement
+        ce type de document qui nous manque.
+      </p>
+    </div>
+  </section>
+
+  <section class="suggerer-form-section">
+    <form id="suggerer-form" class="suggerer-form" enctype="multipart/form-data">
+
+      <div class="form-groupe">
+        <label for="sg-candidat">Candidat concerné</label>
+        <select id="sg-candidat" name="candidat" required>
+          <option value="">— sélectionnez un candidat —</option>
+          {{ $candidats := site.Data.candidats }}
+          {{ range $candidats }}
+          <option value="{{ .id }}">{{ .nom }} ({{ .parti_court }})</option>
+          {{ end }}
+          <option value="autre">Autre / Nouveau candidat</option>
+        </select>
+      </div>
+
+      <div class="form-groupe">
+        <label for="sg-titre">Titre ou description du document</label>
+        <input type="text" id="sg-titre" name="titre" maxlength="200"
+               placeholder="ex : Programme présidentiel UPR 2027, Interview BFM TV mars 2026…"
+               required>
+      </div>
+
+      <div class="form-groupe">
+        <label for="sg-url">Lien vers le document <span class="optionnel">(optionnel)</span></label>
+        <input type="url" id="sg-url" name="url"
+               placeholder="https://...">
+      </div>
+
+      <div class="form-groupe">
+        <label for="sg-fichier">Fichier à joindre <span class="optionnel">(optionnel — PDF, DOCX, TXT, max 20 Mo)</span></label>
+        <div class="file-drop-zone" id="file-drop-zone">
+          <input type="file" id="sg-fichier" name="fichier"
+                 accept=".pdf,.docx,.doc,.txt,.odt"
+                 style="display:none;">
+          <div class="file-drop-inner" id="file-drop-inner">
+            <span class="file-icon">📄</span>
+            <span class="file-label">Glissez un fichier ici ou <button type="button" id="file-browse-btn">parcourir</button></span>
+            <span class="file-name" id="file-name" style="display:none;"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-groupe">
+        <label for="sg-notes">Notes ou contexte <span class="optionnel">(optionnel)</span></label>
+        <textarea id="sg-notes" name="notes" rows="3" maxlength="1000"
+                  placeholder="Pourquoi ce document est-il pertinent ? Y a-t-il des sections particulièrement importantes ?"></textarea>
+        <div class="char-counter"><span id="sg-notes-chars">0</span>/1000</div>
+      </div>
+
+      <button type="submit" id="sg-submit" class="btn-suggerer" disabled>
+        Envoyer la suggestion
+      </button>
+
+    </form>
+
+    <div id="sg-result" class="sg-result" style="display:none;"></div>
+  </section>
+
+  <section class="suggerer-garanties">
+    <div class="garantie">
+      <span class="g-icon">👁</span>
+      <span>Chaque suggestion est examinée manuellement avant intégration</span>
+    </div>
+    <div class="garantie">
+      <span class="g-icon">✓</span>
+      <span>Seuls les documents officiels ou vérifiables sont acceptés</span>
+    </div>
+    <div class="garantie">
+      <span class="g-icon">🔒</span>
+      <span>Aucune donnée personnelle collectée — la suggestion est anonyme</span>
+    </div>
+  </section>
+
+</div>
+
+<link rel="stylesheet" href="/css/suggerer.css">
+<script src="/js/suggerer.js" defer></script>
+{{ end }}
