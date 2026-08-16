@@ -63,9 +63,12 @@ def extraire_ip_reelle(request: Request) -> str:
 def is_admin_bypass(request: Request) -> bool:
     """
     Vérifie si la requête a le token admin pour bypasser le rate limiting.
-    Token: "abahargadon-bypass-2026" dans le header X-Admin-Token.
+    Token lu depuis ADMIN_BYPASS_TOKEN (env, injecté par systemd) — JAMAIS de littéral.
     """
-    return request.headers.get("X-Admin-Token") == "abahargadon-bypass-2026"
+    jeton = os.environ.get("ADMIN_BYPASS_TOKEN")
+    if not jeton:
+        return False
+    return request.headers.get("X-Admin-Token") == jeton
 # Utilisation de DeepSeek par défaut via le SDK OpenAI
 client = AsyncOpenAI(
     api_key=DEEPSEEK_API_KEY,
