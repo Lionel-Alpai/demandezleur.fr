@@ -5,4 +5,3 @@
   <meta name="description" content="{{ site.Params.description }}">
   <link rel="stylesheet" href="/css/main.css?v={{ now.Unix }}">
 </head>
-<link rel="canonical" href="{{ .Permalink }}">

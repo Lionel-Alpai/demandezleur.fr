@@ -1,10 +1,7 @@
-<footer class="site-footer">
-  <div class="footer-mentions">
-    Site citoyen indépendant. Aucune affiliation avec les institutions de la République française, les partis politiques ou les candidats.
-  </div>
-  <nav class="footer-nav">
+<header class="site-header">
+  <a href="/" class="header-logo">demandezleur<span class="dot">.</span>fr</a>
+  <nav class="header-nav">
     <a href="/transparence/">Transparence</a>
-    <a href="/mentions-legales/">Mentions légales</a>
     <span class="sep">·</span>
     <a href="https://github.com/Lionel-Alpai/demandezleur.fr" target="_blank" rel="noopener">Code ouvert</a>
     <span class="sep">·</span>
@@ -14,4 +11,5 @@
     <span class="sep">·</span>
     <a href="/suggerer/">Suggérer un doc</a>
   </nav>
-</footer>
+  <button class="header-menu-btn" aria-label="Menu">☰</button>
+</header>

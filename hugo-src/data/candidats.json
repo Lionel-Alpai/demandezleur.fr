@@ -168,5 +168,25 @@
     "sources": [
       "Programme présidentiel RN — Marine Le Pen 2022/2027 (22 mesures + livrets thématiques)"
     ]
+  },
+  {
+    "id": "gabriel-attal",
+    "slug": "gabriel-attal",
+    "nom": "Gabriel Attal",
+    "initiales": "GA",
+    "parti": "Renaissance",
+    "parti_court": "RE",
+    "famille": "centre",
+    "couleur_fond": "#1a2744",
+    "date_declaration": "Mai 2026",
+    "photo": null,
+    "photo_credit": "Wikimedia Commons — CC BY 4.0 (2025)",
+    "note": null,
+    "sources": [
+      "Données biographiques vérifiées (sources publiques)",
+      "Le Monde, 22 mai 2026 ; RTS, 22 mai 2026",
+      "Le Monde, 22 mai 2026",
+      "attalpresident.fr — rubrique « Mes chantiers capitaux »"
+    ]
   }
 ]

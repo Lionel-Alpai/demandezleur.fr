@@ -41,14 +41,6 @@
       </div>
     </div>
     
-    {{/* [parlement-ui] bandeau des sujets parlementaires, rempli par debat.js */}}
-    <section id="parlement-bandeau" style="display:none; margin-top:30px; padding:16px; border:1px solid var(--border-subtle); background:rgba(255,255,255,0.03);">
-      <div style="font-family:'JetBrains Mono', monospace; font-size:12px; text-transform:uppercase; letter-spacing:1px; color:var(--text-tertiary);">Ce qui s'est dit à l'Assemblée</div>
-      <span id="parlement-maj" style="display:block; margin-top:6px; font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.5px; color:var(--text-tertiary);"></span>
-      <div id="parlement-sujets" style="margin-top:14px;"></div>
-      <p style="font-size:10px; color:var(--text-tertiary); margin-top:12px; letter-spacing:0.5px;">Cliquez un sujet pour le reprendre comme sujet de débat.</p>
-    </section>
-    <!-- [parlement-ui] fin du bandeau -->
     <div class="debat-sujet" style="margin-top:30px;">
       <label for="sujet-input" style="display:block; font-family:'JetBrains Mono', monospace; font-size:12px; margin-bottom:8px; color:var(--text-tertiary); text-transform:uppercase;">Sujet du débat</label>
       <textarea id="sujet-input" 
@@ -63,13 +55,6 @@
       <button id="btn-launch" class="btn btn-launch-debat" disabled>
         Lancer le débat
       </button>
-      <!-- [parlement-ui] bascule du mode Arène -->
-      <label for="mode-arene" style="display:inline-flex; align-items:center; gap:8px; margin-top:16px; font-family:'JetBrains Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:1px; color:var(--text-secondary); cursor:pointer;">
-        <input type="checkbox" id="mode-arene" style="width:14px; height:14px; accent-color:var(--rouge-france); cursor:pointer;">
-        <span style="color:var(--text-primary);">Arène</span>
-      </label>
-      <p id="arene-avertissement" style="display:none; font-size:11px; line-height:1.6; color:var(--text-secondary); margin-top:10px; padding:10px 12px; border:1px solid var(--border-subtle); border-left:2px solid var(--rouge-france); background:rgba(255,255,255,0.03);">Mode Arène : les candidats peuvent se voir opposer des propos réellement tenus à l'Assemblée. Le ton est plus vif, les échanges plus directs.</p>
-      <!-- [parlement-ui] fin de la bascule -->
       <p class="debat-notice" style="font-size:10px; color:var(--text-tertiary); margin-top:16px; letter-spacing:0.5px;">
         Ordre de parole randomisé · 5 tours maximum · transparence totale
       </p>
