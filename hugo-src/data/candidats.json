@@ -102,23 +102,6 @@
     ]
   },
   {
-    "id": "david-lisnard",
-    "slug": "david-lisnard",
-    "nom": "David Lisnard",
-    "initiales": "DL",
-    "parti": "Nouvelle Énergie",
-    "parti_court": "Nlle Énergie",
-    "famille": "droite",
-    "couleur_fond": "#1a2744",
-    "date_declaration": "Mars 2026",
-    "photo": "/img/candidats/david-lisnard.webp",
-    "photo_credit": "Wikimedia Commons — CC0 Public Domain (nov. 2024)",
-    "note": null,
-    "sources": [
-      "Programme Nouvelle Énergie — David Lisnard 2027"
-    ]
-  },
-  {
     "id": "nicolas-dupont-aignan",
     "slug": "nicolas-dupont-aignan",
     "nom": "Nicolas Dupont-Aignan",
@@ -179,7 +162,7 @@
     "famille": "centre",
     "couleur_fond": "#1a2744",
     "date_declaration": "Mai 2026",
-    "photo": null,
+    "photo": "/img/candidats/gabriel-attal.webp",
     "photo_credit": "Wikimedia Commons — CC BY 4.0 (2025)",
     "note": null,
     "sources": [

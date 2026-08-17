@@ -31,3 +31,7 @@ Thumbs.db
 
 # Public HTML généré (servi par Hestia)
 public_html/
+
+# Sauvegardes du rail (rollbacks) — jamais versionnées
+*.bak-pre-*
+*.bak.*
