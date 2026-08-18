@@ -171,5 +171,22 @@
       "Le Monde, 22 mai 2026",
       "attalpresident.fr — rubrique « Mes chantiers capitaux »"
     ]
+  },
+  {
+    "id": "bernard-cazeneuve",
+    "slug": "bernard-cazeneuve",
+    "nom": "Bernard Cazeneuve",
+    "initiales": "BC",
+    "parti": "La Convention",
+    "parti_court": "La Convention",
+    "famille": "gauche",
+    "couleur_fond": "#331a1a",
+    "date_declaration": "16 juillet 2026",
+    "photo": null,
+    "photo_credit": "Wikimedia Commons — CC BY-SA 2.0 (2018)",
+    "note": null,
+    "sources": [
+      "Synthèse de la lettre de 86 pages aux Français (La Convention · bc2027.fr) — extraits"
+    ]
   }
 ]
