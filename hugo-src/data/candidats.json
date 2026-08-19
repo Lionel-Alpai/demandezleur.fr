@@ -182,8 +182,8 @@
     "famille": "gauche",
     "couleur_fond": "#331a1a",
     "date_declaration": "16 juillet 2026",
-    "photo": null,
-    "photo_credit": "Wikimedia Commons — CC BY-SA 2.0 (2018)",
+    "photo": "/img/candidats/bernard-cazeneuve.webp",
+    "photo_credit": "Wikimedia Commons — CC BY-SA 2.0",
     "note": null,
     "sources": [
       "Synthèse de la lettre de 86 pages aux Français (La Convention · bc2027.fr) — extraits"
@@ -199,8 +199,8 @@
     "famille": "extreme_gauche",
     "couleur_fond": "#2a1a2a",
     "date_declaration": "1er juin 2026",
-    "photo": null,
-    "photo_credit": null,
+    "photo": "/img/candidats/anasse-kazib.webp",
+    "photo_credit": "Wikimedia Commons — CC BY-SA 4.0 (2021)",
     "note": null,
     "sources": [
       "Wikipédia — biographie d'Anasse Kazib",
@@ -219,8 +219,8 @@
     "famille": "gauche",
     "couleur_fond": "#331a1a",
     "date_declaration": "3 mai 2026",
-    "photo": null,
-    "photo_credit": null,
+    "photo": "/img/candidats/jean-luc-melenchon.webp",
+    "photo_credit": "Wikimedia Commons — CC BY 3.0",
     "note": null,
     "sources": [
       "Wikipédia — Jean-Luc Mélenchon, biographie",
@@ -243,7 +243,7 @@
     "famille": "gauche",
     "couleur_fond": "#331a1a",
     "date_declaration": "9 juin 2026",
-    "photo": null,
+    "photo": "/img/candidats/karim-bouamrane.webp",
     "photo_credit": null,
     "note": null,
     "sources": [
@@ -263,8 +263,8 @@
     "famille": "souverainistes",
     "couleur_fond": "#1a1a33",
     "date_declaration": "9 mai 2026",
-    "photo": null,
-    "photo_credit": null,
+    "photo": "/img/candidats/florian-philippot.webp",
+    "photo_credit": "Wikimedia Commons — CC BY 4.0",
     "note": null,
     "sources": [
       "Wikipédia — biographie de Florian Philippot (sources/01-wikipedia-bio.txt)",
@@ -284,8 +284,8 @@
     "famille": "extreme_gauche",
     "couleur_fond": "#2a1a2a",
     "date_declaration": "17 juin 2026",
-    "photo": null,
-    "photo_credit": null,
+    "photo": "/img/candidats/selma-labib.webp",
+    "photo_credit": "Wikimedia Commons — CC BY 3.0",
     "note": null,
     "sources": [
       "npa-revolutionnaires.org — Communiqué « Présidentielle 2027 : Selma Labib, une candidature ouvrière et révolutionnaire, soutenue par Gaël Quirante » (sources/1-communique-declaration.txt)"
