@@ -188,5 +188,25 @@
     "sources": [
       "Synthèse de la lettre de 86 pages aux Français (La Convention · bc2027.fr) — extraits"
     ]
+  },
+  {
+    "id": "anasse-kazib",
+    "slug": "anasse-kazib",
+    "nom": "Anasse Kazib",
+    "initiales": "AK",
+    "parti": "Révolution permanente",
+    "parti_court": "RP",
+    "famille": "extreme_gauche",
+    "couleur_fond": "#2a1a2a",
+    "date_declaration": "1er juin 2026",
+    "photo": null,
+    "photo_credit": null,
+    "note": null,
+    "sources": [
+      "Wikipédia — biographie d'Anasse Kazib",
+      "Wikipédia et Le Courrier de l'Atlas — annonce de candidature 2027",
+      "Programme 2022, site de campagne anasse2027.fr",
+      "Le Courrier de l'Atlas et programme de campagne anasse2027.fr"
+    ]
   }
 ]
