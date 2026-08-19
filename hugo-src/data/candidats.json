@@ -273,5 +273,22 @@
       "franceinfo — «Présidentielle 2027 : le souverainiste Florian Philippot annonce sa candidature à l'Élysée», 09/05/2026 (sources/12-declaration.txt)",
       "Les Patriotes — «Grandes orientations pour un projet patriote» (programme officiel, sources/11-programme_officiel.txt)"
     ]
+  },
+  {
+    "id": "selma-labib",
+    "slug": "selma-labib",
+    "nom": "Selma Labib",
+    "initiales": "SL",
+    "parti": "NPA – Révolutionnaires",
+    "parti_court": "NPA",
+    "famille": "extreme_gauche",
+    "couleur_fond": "#2a1a2a",
+    "date_declaration": "17 juin 2026",
+    "photo": null,
+    "photo_credit": null,
+    "note": null,
+    "sources": [
+      "npa-revolutionnaires.org — Communiqué « Présidentielle 2027 : Selma Labib, une candidature ouvrière et révolutionnaire, soutenue par Gaël Quirante » (sources/1-communique-declaration.txt)"
+    ]
   }
 ]
