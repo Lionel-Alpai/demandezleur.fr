@@ -232,5 +232,25 @@
       "Melenchon2027.fr — L'Avenir en commun (présentation du programme)",
       "Melenchon2027.fr — L'Avenir en commun, chapitre 17 (Europe)"
     ]
+  },
+  {
+    "id": "karim-bouamrane",
+    "slug": "karim-bouamrane",
+    "nom": "Karim Bouamrane",
+    "initiales": "KB",
+    "parti": "Parti socialiste",
+    "parti_court": "PS",
+    "famille": "gauche",
+    "couleur_fond": "#331a1a",
+    "date_declaration": "9 juin 2026",
+    "photo": null,
+    "photo_credit": null,
+    "note": null,
+    "sources": [
+      "Wikipédia — article « Karim Bouamrane » (biographie)",
+      "La Dépêche, 09/06/2026 — annonce de candidature",
+      "Franceinfo, 09/06/2026 — annonce de candidature à la présidentielle",
+      "Manifeste « La France Humaine & Forte » — site karimbouamrane2027.org"
+    ]
   }
 ]
