@@ -208,5 +208,29 @@
       "Programme 2022, site de campagne anasse2027.fr",
       "Le Courrier de l'Atlas et programme de campagne anasse2027.fr"
     ]
+  },
+  {
+    "id": "jean-luc-melenchon",
+    "slug": "jean-luc-melenchon",
+    "nom": "Jean-Luc Mélenchon",
+    "initiales": "JL",
+    "parti": "La France insoumise",
+    "parti_court": "LFI",
+    "famille": "gauche",
+    "couleur_fond": "#331a1a",
+    "date_declaration": "3 mai 2026",
+    "photo": null,
+    "photo_credit": null,
+    "note": null,
+    "sources": [
+      "Wikipédia — Jean-Luc Mélenchon, biographie",
+      "LCP — Assemblée nationale, officialisation de la candidature (03/05/2026)",
+      "Franceinfo — tentative d'instaurer le face-à-face avec le RN pour la présidentielle 2027",
+      "LCP — Assemblée nationale, annonce de la candidature (03/05/2026)",
+      "Melenchon2027.fr — L'Avenir en commun, chapitre 1, section 1",
+      "Melenchon2027.fr — L'Avenir en commun, chapitre 8, section 4 (salaires)",
+      "Melenchon2027.fr — L'Avenir en commun (présentation du programme)",
+      "Melenchon2027.fr — L'Avenir en commun, chapitre 17 (Europe)"
+    ]
   }
 ]
