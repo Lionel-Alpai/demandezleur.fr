@@ -290,5 +290,44 @@
     "sources": [
       "npa-revolutionnaires.org — Communiqué « Présidentielle 2027 : Selma Labib, une candidature ouvrière et révolutionnaire, soutenue par Gaël Quirante » (sources/1-communique-declaration.txt)"
     ]
+  },
+  {
+    "id": "francis-lalanne",
+    "slug": "francis-lalanne",
+    "nom": "Francis Lalanne",
+    "initiales": "FL",
+    "parti": "France Libre",
+    "parti_court": "France Libre",
+    "famille": "souverainistes",
+    "couleur_fond": "#1a1a33",
+    "date_declaration": "19 août 2026",
+    "photo": "/img/candidats/francis-lalanne.webp",
+    "photo_credit": "Thomas Bresson — Wikimedia Commons, CC BY 4.0 (2021)",
+    "note": "Aucun parti politique enregistré (DIV) : étiquette de campagne « France Libre ». Famille souverainiste (Frexit, sortie de l'OTAN, souveraineté monétaire, RIC). Couvrir en ENTIER le programme de campagne (9 propositions) + les thèmes du mouvement France Libre.",
+    "sources": [
+      "France Libre — À propos (france-libre.fr/a-propos)",
+      "Le Parisien, 19/08/2026 — candidature officielle et lancement de campagne (02-declaration-le-parisien.txt)",
+      "France Info, 19/08/2026 — annonce de candidature et premier meeting (02-declaration-france-info.txt)",
+      "France Libre — Nos thèmes et valeurs, section Le Respect du Vivant (programme-00-nos-themes-et-valeurs.txt)",
+      "Site officiel de campagne — Le Programme 2027, proposition économie-social-écologie (programme-00-programme.txt)",
+      "France Libre — Nos thèmes et valeurs, section L'Économie (programme-00-nos-themes-et-valeurs.txt)",
+      "Site officiel de campagne — Le Programme 2027, proposition souveraineté & France Libre — Nos thèmes et valeurs (programme-00-programme.txt)",
+      "France Libre — Nos thèmes et valeurs, section La Protection des Enfants (programme-00-nos-themes-et-valeurs.txt)",
+      "Site officiel de campagne — Le Programme 2027, proposition souveraineté-indépendance (programme-00-programme.txt)",
+      "France Libre — Nos thèmes et valeurs, section Vivre en Paix (programme-00-nos-themes-et-valeurs.txt)",
+      "France Libre — Une Bougie Pour La Paix (programme-08-une-bougie-pour-la-paix.txt)",
+      "France Libre — Libération de Paul Watson (programme-09-liberation-de-paul-watson.txt)",
+      "France Libre — Nos thèmes et valeurs, section Une vraie Démocratie (programme-00-nos-themes-et-valeurs.txt)",
+      "France Libre — Nos thèmes et valeurs, sections La Justice et La reprise en main (programme-00-nos-themes-et-valeurs.txt)",
+      "Site officiel de campagne — Le Programme 2027, proposition libertés-démocratie (programme-00-programme.txt)",
+      "France Libre — Newsletters, juillet 2026 « Démission de Francis et Assemblée Générale » (programme-07-newsletters.txt)",
+      "France Libre — Newsletters, 29 novembre 2025 « La Désinformation Dans Notre Pays Est Totale » (programme-07-newsletters.txt)",
+      "France Libre — Rejoignez la résistance (programme-12-rejoignez-la-resistance.txt)",
+      "France Libre — Nos thèmes et valeurs, section Les Libertés Fondamentales (programme-00-nos-themes-et-valeurs.txt)",
+      "Site officiel de campagne — Le Programme 2027, proposition santé holistique (programme-00-programme.txt)",
+      "Site officiel de campagne — Le Programme 2027 (programme-00-programme.txt)",
+      "France Libre — Nos thèmes et valeurs, introduction (programme-00-nos-themes-et-valeurs.txt)",
+      "France Libre — À propos (programme-16-a-propos.txt)"
+    ]
   }
 ]
