@@ -205,10 +205,26 @@
         '<div><strong>' + DL.echapper(d.nom) + '</strong><span class="meta"> · ' + DL.echapper(d.parti) + '</span></div></div>' +
         tours.map(function (x) { return '<div class="recap-tour"><span class="meta">Tour ' + x.tour + (x.q ? ' · question du modérateur : « ' + DL.echapper(x.q) + ' »' : '') + '</span>' + DL.echapper(x.i.texte) + DL.rendrePreuves(x.i.preuves || [], libellePreuves(x.i.preuves || [])) + '</div>'; }).join('') + '</article>';
     }).join('');
-    $recapPartage.innerHTML = '<button type="button" class="btn btn-secondaire btn-petit" id="btn-export-texte">Exporter en texte</button>';
+    $recapPartage.innerHTML = '<button type="button" class="btn btn-accent btn-petit" id="btn-lien">Obtenir un lien permanent</button><button type="button" class="btn btn-secondaire btn-petit" id="btn-export-texte">Exporter en texte</button><button type="button" class="btn btn-secondaire btn-petit" id="btn-export-image">Exporter en image</button><span class="meta" id="partage-etat"></span>';
     $('btn-export-texte').addEventListener('click', exporterTexte);
-    if (window.DL_partage) window.DL_partage(state, $recapPartage);
+    $('btn-export-image').addEventListener('click', function () { DL.exporterImage(documentPartage(), dataPourImage()); });
+    $('btn-lien').addEventListener('click', function () {
+      var b = this, etat = $('partage-etat'); b.disabled = true; etat.textContent = 'Enregistrement…';
+      DL.fetchJSON(DL.api('/debat/sauver'), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(documentPartage()) })
+        .then(function (r) {
+          var url = window.location.origin + r.url; b.remove(); etat.textContent = '';
+          $recapPartage.insertAdjacentHTML('afterbegin', '<span class="recap-lien" id="lien-permanent">' + DL.echapper(url) + '</span><button type="button" class="btn btn-secondaire btn-petit" id="btn-copier-lien">Copier</button><a class="btn btn-secondaire btn-petit" href="' + DL.echapper(r.url) + '" target="_blank" rel="noopener">Ouvrir ↗</a>');
+          $('btn-copier-lien').addEventListener('click', function () { navigator.clipboard && navigator.clipboard.writeText(url).then(function () { this.textContent = 'Copié ✓'; }.bind(this)); });
+          state.id = r.id;
+        }).catch(function (e) { b.disabled = false; etat.textContent = e.status === 429 ? 'Quota de partages atteint pour aujourd’hui.' : 'Enregistrement impossible.'; });
+    });
   }
+  function documentPartage() {
+    return { id: state.id || null, sujet: state.sujet, mode: state.mode, candidats: state.selection.slice(),
+      tours: state.historique.map(function (t) { return { tour: t.tour, type: t.type, question_moderateur: t.question_moderateur, candidat_interpelle_id: t.candidat_interpelle_id,
+        interventions: t.interventions.map(function (i) { return { candidat_id: i.candidat_id, texte: i.texte, preuves: i.preuves || [], revisions: i.revisions || [] }; }) }; }) };
+  }
+  function dataPourImage() { var d = {}; state.selection.forEach(function (id) { var c = state.data[id]; d[id] = { nom: c.nom, parti_court: c.parti, photo: c.photo }; }); return d; }
   function exporterTexte() {
     var lignes = ['Débat — ' + state.sujet + (state.mode === 'arene' ? ' (mode Arène)' : ''), 'demandezleur.fr — réponses générées par IA à partir des programmes officiels', ''];
     state.historique.forEach(function (t) {

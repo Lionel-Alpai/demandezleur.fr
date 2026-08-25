@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="debat" id="partage">
+  <div class="page-entete">
+    <p class="sur-titre">Débat partagé <span class="badge-mode" id="partage-mode" hidden>Arène</span></p>
+    <h1 id="partage-sujet">Chargement…</h1>
+    <p class="hero-texte" id="partage-sous">Ce que chaque candidat a défendu, et sur quoi il s'est appuyé. Réponses générées par IA à partir des programmes officiels.</p>
+  </div>
+  <div class="recap-partage" id="partage-actions"></div>
+  <div id="partage-container" class="recap"></div>
+  <p class="meta" id="partage-meta"></p>
+  <div class="recap-actions">
+    <a href="/debat/" class="btn btn-accent">Lancer votre propre débat</a>
+    <a href="/" class="btn btn-secondaire">Retour à l'accueil</a>
+  </div>
+</div>
+<div id="candidats-data" hidden>{{ range site.Data.candidats }}<span data-id="{{ .id }}" data-nom="{{ .nom }}" data-parti="{{ .parti_court }}" data-famille="{{ .famille }}" data-photo="{{ .photo }}"></span>{{ end }}</div>
+{{ end }}
+{{ define "scripts" }}<script src="/js/export-image.js?v={{ now.Unix }}"></script><script src="/js/debat-partage.js?v={{ now.Unix }}"></script>{{ end }}

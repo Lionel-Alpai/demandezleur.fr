@@ -18,12 +18,13 @@ from typing import Literal
 LIMITE_CHAT_PAR_JOUR = 20
 LIMITE_DEBAT_COURT_PAR_JOUR = 3
 LIMITE_DEBAT_LONG_PAR_JOUR = 2
+LIMITE_PARTAGE_PAR_JOUR = 20
 
 # Seuils de catégorisation des débats
 SEUIL_DEBAT_LONG_CANDIDATS = 4  # 4 candidats ou plus = débat long
 SEUIL_DEBAT_LONG_TOURS = 4      # 4 tours ou plus = débat long
 
-ActionType = Literal["chat", "debat_court", "debat_long"]
+ActionType = Literal["chat", "debat_court", "debat_long", "partage"]
 
 # ============================================================================
 # État interne
@@ -34,7 +35,7 @@ _lock = Lock()
 
 
 def _get_compteur_vide() -> dict[str, int]:
-    return {"chat": 0, "debat_court": 0, "debat_long": 0}
+    return {"chat": 0, "debat_court": 0, "debat_long": 0, "partage": 0}
 
 
 def verifier_et_incrementer(ip: str, action: ActionType) -> tuple[bool, int, int]:
@@ -48,6 +49,7 @@ def verifier_et_incrementer(ip: str, action: ActionType) -> tuple[bool, int, int
         "chat": LIMITE_CHAT_PAR_JOUR,
         "debat_court": LIMITE_DEBAT_COURT_PAR_JOUR,
         "debat_long": LIMITE_DEBAT_LONG_PAR_JOUR,
+        "partage": LIMITE_PARTAGE_PAR_JOUR,
     }
     limite = limites[action]
     if os.environ.get("DL_SANS_QUOTA") == "1":  # développement local / banc : pas de quota

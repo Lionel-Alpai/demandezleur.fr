@@ -154,6 +154,7 @@ def load_prompts(candidat_id: str):
 from fastapi import Request
 from garde_fou import generer_replique_validee, verifier_faits
 from debat import (
+    MAX_TOURS,
     charger_faits,
     valider_requete_debat,
     randomiser_ordre,
@@ -609,6 +610,36 @@ async def ask_candidat(request: Request, ask_request: AskRequest):
             yield format_sse("error", {"candidat_id": candidat_id, "error": str(e)})
 
     return StreamingResponse(generate(), media_type="text/event-stream")
+
+
+# ---------- Débats permanents (/d/?id=…) ----------
+import debats_store
+
+@app.post("/api/debat/sauver")
+async def debat_sauver(request: Request):
+    ip = extraire_ip_reelle(request)
+    if not is_admin_bypass(request):
+        autorise, usage, limite = verifier_et_incrementer(ip, "partage")
+        if not autorise:
+            raise HTTPException(status_code=429, detail={"error": "rate_limit_exceeded", "action": "partage", "usage": usage, "limite": limite,
+                                                         "message": "Vous avez atteint votre quota quotidien de partages."})
+    try:
+        doc = await request.json()
+    except Exception:
+        raise HTTPException(status_code=400, detail="JSON invalide")
+    motif = debats_store.valider(doc, max_tours=MAX_TOURS)
+    if motif:
+        raise HTTPException(status_code=422, detail=motif)
+    did = debats_store.sauver(doc, moteur=llm.MODELE)
+    return {"id": did, "url": f"/d/?id={did}"}
+
+
+@app.get("/api/debat/{did}")
+async def debat_lire(did: str):
+    doc = debats_store.lire(did)
+    if not doc:
+        raise HTTPException(status_code=404, detail="Débat introuvable")
+    return doc
 
 
 @app.get("/api/parlement/etat")  # [parlement]
