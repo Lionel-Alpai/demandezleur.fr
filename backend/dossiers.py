@@ -66,9 +66,30 @@ def _src(sources: list) -> str:
     return ", ".join(f"{x.get('media') or x['url']}" + (f" ({x['date']})" if x.get("date") else "") for x in s[:3])
 
 
-def pieces_pour(orateur: dict, adversaires: list) -> tuple:
-    """(texte_prompt, preuves) : ce que l'orateur sait des adversaires présents, en Arène."""
+import re as _re
+import unicodedata as _ud
+
+_VIDES = set("avec pour dans cette celui celle leurs votre notre elles ils sont etre avoir comme mais donc plus sans sous entre".split())
+
+
+def _mots_cles(t: str) -> set:
+    t = _ud.normalize("NFKD", t or "").encode("ascii", "ignore").decode().lower()
+    return {m for m in _re.findall(r"[a-z]{6,}", t) if m not in _VIDES}
+
+
+def deja_cite(entree_texte: str, textes_debat: list, seuil: int = 3) -> bool:
+    """Vrai si assez de mots distinctifs du fait/grief apparaissent déjà dans une réplique du débat."""
+    cles = _mots_cles(entree_texte)
+    if len(cles) < seuil:
+        seuil = max(1, len(cles))
+    return any(len(cles & _mots_cles(t)) >= seuil for t in textes_debat)
+
+
+def pieces_pour(orateur: dict, adversaires: list, textes_debat: list = None) -> tuple:
+    """(texte_prompt, preuves) : ce que l'orateur sait des adversaires présents, en Arène.
+    textes_debat : répliques déjà prononcées — un fait/grief déjà lancé est marqué DÉJÀ CITÉ (une fois par débat)."""
     blocs, preuves = [], []
+    textes_debat = textes_debat or []
     for adv in adversaires:
         faits = faits_de(adv["id"])
         r = rapport(orateur, adv)
@@ -78,7 +99,9 @@ def pieces_pour(orateur: dict, adversaires: list) -> tuple:
         if faits:
             lignes.append("  FAITS VÉRIFIÉS (tu peux les citer tels quels, avec leur qualification exacte, jamais aggravés) :")
             for e in faits[:6]:
-                lignes.append(f"   · [{CLASSES_LIBELLE.get(e.get('classe'), e.get('classe'))}] {e['fait']}" + (f" — sources : {_src(e.get('sources'))}" if e.get("sources") else ""))
+                cite = deja_cite(e["fait"], textes_debat)
+                lignes.append(f"   · [{CLASSES_LIBELLE.get(e.get('classe'), e.get('classe'))}] {e['fait']}" + (f" — sources : {_src(e.get('sources'))}" if e.get("sources") else "")
+                              + ("  ⟵ DÉJÀ CITÉ dans ce débat : ne le répète PAS (au plus une allusion de trois mots, ou rien)." if cite else ""))
                 preuves.append({"type": "dossier", "candidat_id": adv["id"], "titre": CLASSES_LIBELLE.get(e.get("classe"), e.get("classe", "")),
                                 "page": e.get("date", ""), "theme": e.get("instance", ""), "extrait": e["fait"], "texte_integral": e["fait"],
                                 "url": (e.get("sources") or [{}])[0].get("url", ""), "orateur": (e.get("sources") or [{}])[0].get("media", ""), "date_lisible": e.get("date", "")})
@@ -88,7 +111,9 @@ def pieces_pour(orateur: dict, adversaires: list) -> tuple:
             lignes.append("  CE QUE TON CAMP LUI REPROCHE (reproches documentés — porte-les COMME DES REPROCHES, pas comme des faits) :")
             for g in r["griefs"][:5]:
                 ex = (g.get("exemples") or [{}])[0]
-                lignes.append(f"   · {g['grief']}" + (f" — ex. {ex.get('auteur', '')}, {ex.get('date', '')} : « {ex.get('verbatim', '')} »" if ex.get("verbatim") else ""))
+                cite = deja_cite(g["grief"] + " " + (ex.get("verbatim") or ""), textes_debat)
+                lignes.append(f"   · {g['grief']}" + (f" — ex. {ex.get('auteur', '')}, {ex.get('date', '')} : « {ex.get('verbatim', '')} »" if ex.get("verbatim") else "")
+                              + ("  ⟵ DÉJÀ CITÉ dans ce débat : ne le répète PAS." if cite else ""))
                 preuves.append({"type": "reproche", "candidat_id": adv["id"], "titre": g["grief"], "page": "", "theme": r.get("registre", ""),
                                 "extrait": (f"{ex.get('auteur', '')}, {ex.get('date', '')} : « {ex.get('verbatim', '')} »" if ex.get("verbatim") else g["grief"]),
                                 "texte_integral": g["grief"] + " " + " / ".join(f"{x.get('auteur', '')} ({x.get('date', '')}) : « {x.get('verbatim', '')} »" for x in (g.get("exemples") or [])[:3]),
@@ -96,8 +121,11 @@ def pieces_pour(orateur: dict, adversaires: list) -> tuple:
         blocs.append("\n".join(lignes))
     if not blocs:
         return "", []
+    preuves_neuves = [p for p in preuves if not deja_cite(p.get("texte_integral") or p.get("extrait", ""), textes_debat)]
+    for p in preuves:
+        p["deja_cite"] = p not in preuves_neuves
     texte = ("\n\nDOSSIER DE TES ADVERSAIRES (Arène) :\n" + "\n".join(blocs) +
-             "\nRÈGLES DU DOSSIER : un fait se cite avec sa qualification exacte (« condamnée en première instance », « mis en examen »), jamais aggravée. "
+             "\nRÈGLES DU DOSSIER : un même fait ou reproche ne se lance qu'UNE fois par débat, par qui que ce soit — s'il est marqué DÉJÀ CITÉ, tu passes au fond ou à un autre élément. Un fait se cite avec sa qualification exacte (« condamnée en première instance », « mis en examen »), jamais aggravée. "
              "Un reproche se porte comme reproche de ton camp (« vous que nous appelons… », « comme le disait X… »), jamais comme une vérité établie. "
              "Rien sur la vie privée, la santé, la famille. Aucune insulte nue : le coup, c'est le fait ou le reproche documenté.")
     return texte, preuves

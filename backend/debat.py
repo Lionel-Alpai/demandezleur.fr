@@ -262,7 +262,8 @@ def construire_prompt_debat(
     if mode == "arene" and adversaires:
         try:
             import dossiers as _d
-            texte_dossier, preuves_dossier = _d.pieces_pour(candidat, adversaires)
+            textes_debat = [i.get("texte", "") for t in (historique or []) for i in t.get("interventions", [])]
+            texte_dossier, preuves_dossier = _d.pieces_pour(candidat, adversaires, textes_debat)
             if texte_dossier:
                 prompt += texte_dossier
                 liste_preuves.extend(preuves_dossier)

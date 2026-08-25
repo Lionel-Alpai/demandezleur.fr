@@ -314,10 +314,17 @@ async def debat_stream(request: Request):
                 def _usage_cb(p_tok, c_tok, _u=usage):
                     _u["in"], _u["out"] = p_tok, c_tok
                 cle_demo = ("debat", candidat_id, llm.normaliser(payload.get("question_moderateur") or payload["sujet"]), type_tour, mode_debat)
-                a_du_dossier = any(p.get("type") in ("dossier", "reproche") for p in preuves_locuteur)
+                dossier_neuf = any(p.get("type") in ("dossier", "reproche") and not p.get("deja_cite") for p in preuves_locuteur)
+                dossier_use = any(p.get("type") in ("dossier", "reproche") and p.get("deja_cite") for p in preuves_locuteur)
+                if mode_debat == "arene" and dossier_neuf:
+                    rappel = "Prends la parole maintenant. Tu as un DOSSIER NEUF sur au moins un adversaire présent : place UN coup de dossier (fait vérifié avec sa qualification exacte, ou reproche documenté porté comme reproche), en une phrase, puis reviens au fond. Ne ressers rien de ce qui est marqué DÉJÀ CITÉ."
+                elif mode_debat == "arene" and dossier_use:
+                    rappel = "Prends la parole maintenant. Le dossier a DÉJÀ SERVI dans ce débat : ne le répète pas, pas même en passant — joue le fond, le programme et la pièce au dossier."
+                else:
+                    rappel = "Prends la parole maintenant."
                 messages_locuteur = [
                     {"role": "system", "content": prompt_system},
-                    {"role": "user", "content": ("Prends la parole maintenant. Tu as un DOSSIER sur au moins un adversaire présent : place UN coup de dossier (fait vérifié avec sa qualification exacte, ou reproche documenté porté comme reproche), en une phrase, puis reviens au fond." if (mode_debat == "arene" and a_du_dossier) else "Prends la parole maintenant.")},
+                    {"role": "user", "content": rappel},
                 ]
                 params_llm = dict(
                     max_tokens=(MAX_TOKENS_ARENE if mode_debat == "arene" else MAX_TOKENS_DEBAT),  # [parlement]

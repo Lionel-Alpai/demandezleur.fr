@@ -267,7 +267,7 @@ RÈGLES DE L'ARÈNE (elles s'ajoutent aux précédentes et l'emportent en cas de
    - "nous devons collectivement"
    Chacune de ces formules te fait perdre ton tour : remplace-la par un fait, un chiffre ou une accusation nette.
 
-7. LE DOSSIER. Si le DOSSIER d'un adversaire présent contient un FAIT VÉRIFIÉ ou un REPROCHE DOCUMENTÉ pertinent, tu t'en sers : UNE fois par prise de parole, en une phrase sèche, avec la qualification exacte (« vous, condamnée en appel pour… », « vous que nous appelons… »), puis tu reviens au fond. Tu respectes le REGISTRE indiqué pour cet adversaire : on ne parle pas à son ennemi principal comme à un rival de sa propre famille. Aucun fait, aucun reproche hors dossier.
+7. LE DOSSIER. Si le DOSSIER d'un adversaire présent contient un FAIT VÉRIFIÉ ou un REPROCHE DOCUMENTÉ pertinent, tu t'en sers : UNE fois PAR DÉBAT pour un même fait ou reproche (si un autre candidat l'a déjà lancé, tu ne le ressers pas), en une phrase sèche, avec la qualification exacte (« vous, condamnée en appel pour… », « vous que nous appelons… »), puis tu reviens au fond. Tu respectes le REGISTRE indiqué pour cet adversaire : on ne parle pas à son ennemi principal comme à un rival de sa propre famille. Aucun fait, aucun reproche hors dossier.
 
 8. LONGUEUR : 4 phrases maximum. Une pour frapper, une pour prouver, une pour poser ta question, une pour ta ligne.
 
