@@ -75,7 +75,7 @@
   /* ---------- Tour ---------- */
   function lancerTour(typeTour, options) {
     state.phase = 'tour_en_cours';
-    state.enCours = { type: typeTour, question: options.question, cibleId: options.cibleId, textes: {}, preuves: {}, revisions: {} };
+    state.enCours = { type: typeTour, question: options.question, cibleId: options.cibleId, textes: {}, preuves: {}, revisions: {}, annotations: {} };
     $actions.hidden = true; $interventions.innerHTML = '';
     var payload = { candidats: state.selection.slice(), sujet: state.sujet, tour: state.tour, type_tour: typeTour, historique: state.historique, mode: state.mode };
     if (typeTour === 'intervention') { payload.question_moderateur = options.question; payload.candidat_interpelle_id = options.cibleId; }
@@ -138,20 +138,21 @@
   function finReplique(ev) {
     var id = ev.candidat_id, c = state.enCours, carte = $('replique-' + id);
     if (carte) carte.classList.remove('parle');
-    if (ev.full_text) { c.textes[id] = ev.full_text; var t = texteDe(id); t.className = 'replique-texte'; t.textContent = ev.full_text; }
-    c.revisions[id] = ev.revisions || [];
-    var pied = $('pied-' + id); if (pied) pied.innerHTML = DL.rendrePreuves(c.preuves[id] || [], libellePreuves(c.preuves[id] || []));
-    var badges = $('badges-' + id);
-    if (badges && ev.revisions && ev.revisions.length) {
-      badges.innerHTML = '<span class="badge-revision">' + ev.revisions.length + ' affirmation' + (ev.revisions.length > 1 ? 's' : '') + ' retirée' + (ev.revisions.length > 1 ? 's' : '') + '</span>';
-      pied.insertAdjacentHTML('beforeend', '<details class="revisions"><summary>Ce qui a été retiré, et pourquoi</summary><ul>' +
-        ev.revisions.map(function (r) { return '<li>« ' + DL.echapper(r.phrase) + ' » — ' + DL.echapper(r.raison || r.type) + '</li>'; }).join('') + '</ul></details>');
-    }
-    if (ev.fallback && pied) pied.insertAdjacentHTML('beforeend', '<p class="meta">A renoncé à attaquer faute de pièce.</p>');
+    c.revisions[id] = ev.revisions || []; c.annotations[id] = ev.annotations || [];
+    if (ev.full_text) c.textes[id] = ev.full_text;
+    var t = texteDe(id); t.className = 'replique-texte'; t.innerHTML = DL.rendreTexteAnnote(c.textes[id], c.annotations[id]);
+    var pied = $('pied-' + id); if (pied) pied.innerHTML = DL.rendrePreuves(c.preuves[id] || [], libellePreuves(c.preuves[id] || [], c.annotations[id]), c.annotations[id]);
+    var badges = $('badges-' + id), b = [];
+    if (c.annotations[id].length) b.push('<span class="badge-annotation" title="Laissées dans le texte, marquées d’un astérisque">' + c.annotations[id].length + ' non étayée' + (c.annotations[id].length > 1 ? 's' : '') + '</span>');
+    if (c.revisions[id].length) b.push('<span class="badge-revision">' + c.revisions[id].length + ' retirée' + (c.revisions[id].length > 1 ? 's' : '') + '</span>');
+    if (badges) badges.innerHTML = b.join(' ');
+    if (pied && c.revisions[id].length) pied.insertAdjacentHTML('beforeend', '<details class="revisions"><summary>Ce qui a été retiré, et pourquoi</summary><ul>' +
+      c.revisions[id].map(function (r) { return '<li>« ' + DL.echapper(r.phrase) + ' » — ' + DL.echapper(r.raison || r.type) + '</li>'; }).join('') + '</ul></details>');
   }
-  function libellePreuves(p) {
+  function libellePreuves(p, annotations) {
     var n = { programme: 0, piece: 0, adversaire: 0 }; p.forEach(function (x) { n[x.type] = (n[x.type] || 0) + 1; });
     var parts = [];
+    if (annotations && annotations.length) parts.push(annotations.length + ' note' + (annotations.length > 1 ? 's' : '') + ' *');
     if (n.programme) parts.push(n.programme + ' extrait' + (n.programme > 1 ? 's' : '') + ' de son programme');
     if (n.piece) parts.push(n.piece + ' pièce Assemblée');
     if (n.adversaire) parts.push(n.adversaire + ' extrait' + (n.adversaire > 1 ? 's' : '') + ' du programme adverse');
@@ -161,7 +162,7 @@
     state.phase = 'fin_de_tour';
     var c = state.enCours;
     var interventions = (ev.interventions_complete || []).map(function (i) {
-      return { candidat_id: i.candidat_id, candidat_nom: i.candidat_nom, texte: i.texte, preuves: i.preuves || c.preuves[i.candidat_id] || [], revisions: c.revisions[i.candidat_id] || [] };
+      return { candidat_id: i.candidat_id, candidat_nom: i.candidat_nom, texte: i.texte, preuves: i.preuves || c.preuves[i.candidat_id] || [], revisions: c.revisions[i.candidat_id] || [], annotations: i.annotations || c.annotations[i.candidat_id] || [] };
     });
     state.historique.push({ tour: state.tour, type: c.type, question_moderateur: c.question || null,
       candidat_interpelle_nom: c.cibleId ? state.data[c.cibleId].nom : null, candidat_interpelle_id: c.cibleId || null, interventions: interventions });
@@ -203,7 +204,7 @@
       state.historique.forEach(function (t) { t.interventions.forEach(function (i) { if (i.candidat_id === id) tours.push({ tour: t.tour, i: i, q: t.question_moderateur }); }); });
       return '<article class="recap-candidat famille-' + DL.echapper(d.famille || '') + '" style="--famille: var(--pastille)"><div class="recap-entete">' + (d.photo ? '<img src="' + DL.echapper(d.photo) + '" alt="">' : '') +
         '<div><strong>' + DL.echapper(d.nom) + '</strong><span class="meta"> · ' + DL.echapper(d.parti) + '</span></div></div>' +
-        tours.map(function (x) { return '<div class="recap-tour"><span class="meta">Tour ' + x.tour + (x.q ? ' · question du modérateur : « ' + DL.echapper(x.q) + ' »' : '') + '</span>' + DL.echapper(x.i.texte) + DL.rendrePreuves(x.i.preuves || [], libellePreuves(x.i.preuves || [])) + '</div>'; }).join('') + '</article>';
+        tours.map(function (x) { return '<div class="recap-tour"><span class="meta">Tour ' + x.tour + (x.q ? ' · question du modérateur : « ' + DL.echapper(x.q) + ' »' : '') + '</span>' + DL.rendreTexteAnnote(x.i.texte, x.i.annotations) + DL.rendrePreuves(x.i.preuves || [], libellePreuves(x.i.preuves || [], x.i.annotations), x.i.annotations) + '</div>'; }).join('') + '</article>';
     }).join('');
     $recapPartage.innerHTML = '<button type="button" class="btn btn-accent btn-petit" id="btn-lien">Obtenir un lien permanent</button><button type="button" class="btn btn-secondaire btn-petit" id="btn-export-texte">Exporter en texte</button><button type="button" class="btn btn-secondaire btn-petit" id="btn-export-image">Exporter en image</button><span class="meta" id="partage-etat"></span>';
     $('btn-export-texte').addEventListener('click', exporterTexte);
@@ -222,7 +223,7 @@
   function documentPartage() {
     return { id: state.id || null, sujet: state.sujet, mode: state.mode, candidats: state.selection.slice(),
       tours: state.historique.map(function (t) { return { tour: t.tour, type: t.type, question_moderateur: t.question_moderateur, candidat_interpelle_id: t.candidat_interpelle_id,
-        interventions: t.interventions.map(function (i) { return { candidat_id: i.candidat_id, texte: i.texte, preuves: i.preuves || [], revisions: i.revisions || [] }; }) }; }) };
+        interventions: t.interventions.map(function (i) { return { candidat_id: i.candidat_id, texte: i.texte, preuves: i.preuves || [], revisions: i.revisions || [], annotations: i.annotations || [] }; }) }; }) };
   }
   function dataPourImage() { var d = {}; state.selection.forEach(function (id) { var c = state.data[id]; d[id] = { nom: c.nom, parti_court: c.parti, photo: c.photo }; }); return d; }
   function exporterTexte() {

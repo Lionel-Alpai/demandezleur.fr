@@ -324,10 +324,10 @@ async def debat_stream(request: Request):
                 )
                 adversaires_presents = [candidats_by_id[cid] for cid in ordre_ids if cid != candidat_id]
                 faits_tous = charger_faits()
-                revisions, meta_garde = [], {}
+                revisions, annotations, meta_garde = [], [], {}
                 if mode_debat == "arene":
                     # ARÈNE : générer → A.2 (faits) → A.3 (juge monde clos) → streamer le texte VALIDÉ
-                    full_text, revisions, meta_garde = await generer_replique_validee(
+                    full_text, revisions, annotations, meta_garde = await generer_replique_validee(
                         messages_locuteur, params=params_llm, orateur=candidat, adversaires=adversaires_presents,
                         preuves=preuves_locuteur, faits=faits_tous, historique=historique_pour_ce_candidat,
                         cle_demo=cle_demo, juger_actif=True,
@@ -357,6 +357,7 @@ async def debat_stream(request: Request):
                     "full_text": full_text,
                     "finish_reason": "stop",
                     "revisions": revisions,
+                    "annotations": annotations,
                     "regenerations": meta_garde.get("regenerations", 0),
                     "fallback": meta_garde.get("fallback", False),
                 })
@@ -389,6 +390,7 @@ async def debat_stream(request: Request):
                 "texte": full_text,
                 "preuves": preuves_locuteur,
                 "revisions": revisions,
+                "annotations": annotations,
             })
         
         # Événement : fin du tour

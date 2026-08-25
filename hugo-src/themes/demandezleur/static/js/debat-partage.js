@@ -18,8 +18,8 @@
         (c.photo ? '<img src="' + DL.echapper(c.photo) + '" alt="">' : '') + '<div><strong>' + DL.echapper(c.nom) + '</strong><span class="meta"> · ' + DL.echapper(c.parti_court || c.parti || '') + '</span></div></div>' +
         tours.map(function (x) {
           var rev = x.i.revisions || [];
-          return '<div class="recap-tour"><span class="meta">Tour ' + x.t.tour + (x.t.question_moderateur ? ' · question du modérateur : « ' + DL.echapper(x.t.question_moderateur) + ' »' : '') + '</span>' + DL.echapper(x.i.texte) +
-            DL.rendrePreuves(x.i.preuves || []) + (rev.length ? '<details class="revisions"><summary>' + rev.length + ' affirmation' + (rev.length > 1 ? 's' : '') + ' retirée' + (rev.length > 1 ? 's' : '') + ' par le garde-fou</summary><ul>' + rev.map(function (r) { return '<li>« ' + DL.echapper(r.phrase) + ' » — ' + DL.echapper(r.raison || '') + '</li>'; }).join('') + '</ul></details>' : '') + '</div>';
+          return '<div class="recap-tour"><span class="meta">Tour ' + x.t.tour + (x.t.question_moderateur ? ' · question du modérateur : « ' + DL.echapper(x.t.question_moderateur) + ' »' : '') + '</span>' + DL.rendreTexteAnnote(x.i.texte, x.i.annotations) +
+            DL.rendrePreuves(x.i.preuves || [], null, x.i.annotations) + (rev.length ? '<details class="revisions"><summary>' + rev.length + ' affirmation' + (rev.length > 1 ? 's' : '') + ' retirée' + (rev.length > 1 ? 's' : '') + ' par le garde-fou</summary><ul>' + rev.map(function (r) { return '<li>« ' + DL.echapper(r.phrase) + ' » — ' + DL.echapper(r.raison || '') + '</li>'; }).join('') + '</ul></details>' : '') + '</div>';
         }).join('') + '</article>';
     }).join('');
     $meta.textContent = 'Débat du ' + new Date(doc.cree_le).toLocaleString('fr-FR') + ' · ' + doc.tours.length + ' tour' + (doc.tours.length > 1 ? 's' : '') + ' · modèle ' + (doc.moteur || '') + ' · identifiant ' + doc.id;

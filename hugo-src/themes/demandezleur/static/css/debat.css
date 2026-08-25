@@ -59,3 +59,12 @@
 .recap-lien { flex: 1 1 260px; padding: 10px 12px; border-radius: var(--r-1); background: var(--bg-3); border: 1px solid var(--border); font-family: var(--font-mono); font-size: var(--fs-14); user-select: all; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .recap-actions { display: flex; flex-wrap: wrap; gap: var(--sp-3); justify-content: center; }
 @media (max-width: 600px) { .replique { grid-template-columns: 40px 1fr; } .replique-avatar { width: 40px; height: 40px; } .arene-entete { flex-direction: column; } .arene-tour { text-align: left; } }
+
+/* Affirmations non étayées : laissées dans le texte, atténuées, astérisque vers la note */
+.non-etayee { color: var(--fg-3); font-style: italic; text-decoration: underline dotted rgba(242, 169, 59, 0.7); text-underline-offset: 3px; }
+.asterisque { color: #f2a93b; font-weight: 700; font-style: normal; font-size: 0.8em; margin-left: 1px; }
+.badge-annotation { display: inline-block; padding: 1px 8px; border-radius: var(--r-round); font-size: var(--fs-12); font-weight: 600; background: rgba(242, 169, 59, 0.18); color: #f2a93b; }
+.notes-non-etayees { padding: var(--sp-2) var(--sp-3) var(--sp-3); border-top: 1px solid var(--border); }
+.notes-titre { margin: 0 0 var(--sp-1); font-weight: 600; color: #f2a93b; font-size: var(--fs-14); }
+.notes-non-etayees ol { margin: 0; padding-left: 0; list-style: none; }
+.notes-non-etayees li { color: var(--fg-2); font-size: var(--fs-14); margin-bottom: var(--sp-1); }

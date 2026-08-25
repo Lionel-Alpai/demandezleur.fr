@@ -21,10 +21,10 @@ Chaque candidat reçoit en plus **ce qu'ont dit les autres** aux tours précéde
 
 En mode Arène, une **pièce au dossier** est ajoutée : un extrait officiel des débats de l'Assemblée nationale sur le sujet. Puis, avant que la réplique ne s'affiche :
 
-- une **garde déterministe** retire toute phrase qui prête à un adversaire un bilan gouvernemental ou un vote qu'il ne peut pas avoir (d'après `faits.json`, public) ;
-- un **juge** (le même modèle, à température zéro, avec pour seule matière les pièces fournies) liste chaque affirmation faite sur un adversaire et dit si elle est ancrée ; les phrases non ancrées sont retirées ; si la réplique en est trop amputée, elle est régénérée (deux fois au plus), sinon le candidat renvoie à son programme.
+- une **garde déterministe** retire toute phrase qui prête à un adversaire un bilan gouvernemental ou un vote qu'il ne peut pas avoir (d'après `faits.json`, public) : ces phrases sont **fausses par construction**. Elles sont retirées du texte mais conservées, repliées, sous « Ce qui a été retiré, et pourquoi » ;
+- un **juge** (le même modèle, à température zéro, avec pour seule matière les pièces fournies) liste chaque affirmation faite sur un adversaire et dit si elle est **étayée**. Une affirmation non étayée n'est pas forcément fausse : elle **reste dans le texte**, atténuée et marquée d'un astérisque, et la note sous la réplique dit pourquoi aucune pièce ne la soutient.
 
-Ce qui a été retiré est **affiché** sous la réplique, avec la raison. Un banc de mesure (`backend/banc/`) rejoue régulièrement des paires adversariales et publie ce qui a été retiré et ce qui reste.
+Le débat garde ainsi son mordant ; le lecteur voit le coup, et voit qu'il est douteux. Un banc de mesure (`backend/banc/`) rejoue régulièrement des paires adversariales et publie ce qui a été retiré et ce qui reste.
 
 ## Limites connues
 

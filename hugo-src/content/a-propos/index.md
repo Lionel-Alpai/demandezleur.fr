@@ -15,7 +15,7 @@ Pendant une campagne, on entend beaucoup les candidats et on lit peu leurs progr
 
 - **Interroger un programme.** Chaque candidat déclaré à la présidentielle 2027 est représenté par une IA qui répond **uniquement** à partir de ses documents officiels (programme, site de campagne, déclaration de candidature). Sous chaque réponse, les extraits utilisés sont affichés.
 - **Faire débattre les programmes.** Vous choisissez un sujet, 2 à 5 candidats, et vous menez le débat : ordre de parole, interpellation, clôture.
-- **L'Arène.** Les candidats se voient opposer ce qui s'est réellement dit à l'Assemblée nationale (comptes rendus officiels) et le programme de leurs adversaires. Un garde-fou vérifie chaque affirmation faite sur un adversaire ; ce qui n'est pas ancré dans une pièce est retiré et signalé.
+- **L'Arène.** Les candidats se voient opposer ce qui s'est réellement dit à l'Assemblée nationale (comptes rendus officiels) et le programme de leurs adversaires. Un garde-fou vérifie chaque affirmation faite sur un adversaire : ce qui n'est pas étayé est marqué d'un astérisque et expliqué, ce qui est faux est retiré et signalé.
 
 ## Ce que le site ne fait pas
 

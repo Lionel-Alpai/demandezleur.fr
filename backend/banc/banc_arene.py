@@ -46,7 +46,7 @@ async def une_replique(orateur, adversaires, sujet, tours, gate):
             msgs = [{"role": "system", "content": prompt}, {"role": "user", "content": "Prends la parole maintenant."}]
             t0 = time.time()
             if gate:
-                texte, revisions, meta = await garde_fou.generer_replique_validee(msgs, params=dict(max_tokens=MAX_TOKENS_ARENE, temperature=TEMPERATURE_ARENE),
+                texte, revisions, annotations, meta = await garde_fou.generer_replique_validee(msgs, params=dict(max_tokens=MAX_TOKENS_ARENE, temperature=TEMPERATURE_ARENE),
                     orateur=c, adversaires=advs, preuves=preuves, faits=faits, historique=historique, cle_demo=("banc", c["id"], sujet, tour), juger_actif=True,
                     cible_par_defaut=(advs[0]["id"] if len(advs) == 1 else None))
                 brut = meta["brut"]
@@ -54,14 +54,14 @@ async def une_replique(orateur, adversaires, sujet, tours, gate):
                 morceaux = []
                 async for d in llm.completer(msgs, cle_demo=("banc", c["id"], sujet, tour), max_tokens=MAX_TOKENS_ARENE, temperature=TEMPERATURE_ARENE):
                     morceaux.append(d)
-                texte = brut = "".join(morceaux); revisions, meta = [], {"regenerations": 0, "fallback": False}
+                texte = brut = "".join(morceaux); revisions, annotations, meta = [], [], {"regenerations": 0, "fallback": False}
             latence = time.time() - t0
             non_soutenues = await auditer(texte, c, advs, preuves, faits, historique)
             lignes.append({"sujet": sujet, "tour": tour, "orateur": c["id"], "adversaires": [a["id"] for a in advs], "brut": brut, "final": texte,
-                           "revisions": revisions, "regenerations": meta.get("regenerations", 0), "fallback": meta.get("fallback", False),
+                           "revisions": revisions, "annotations": annotations, "regenerations": meta.get("regenerations", 0), "fallback": meta.get("fallback", False),
                            "residuel": non_soutenues, "latence_s": round(latence, 1)})
             interventions.append({"candidat_id": c["id"], "candidat_nom": c["nom"], "texte": texte})
-            print(f"  {sujet[:22]:22} T{tour} {c['id']:22} retirées={len(revisions)} regen={meta.get('regenerations',0)} résiduel={len(non_soutenues)} {latence:.1f}s", flush=True)
+            print(f"  {sujet[:22]:22} T{tour} {c['id']:22} retirées={len(revisions)} annotées={len(annotations)} regen={meta.get('regenerations',0)} résiduel={len(non_soutenues)} {latence:.1f}s", flush=True)
         historique.append({"tour": tour, "type": type_tour, "interventions": interventions})
     return lignes
 
@@ -82,7 +82,7 @@ async def main():
         print(f"[{i+1}/{a.paires}] {o} vs {adv} — {sujet}")
         resultats += await une_replique(charger_candidat(o), [charger_candidat(adv)], sujet, a.tours, gate=not a.sans_gate)
     n = len(resultats)
-    brut = sum(len(r["revisions"]) for r in resultats)
+    brut = sum(len(r["revisions"]) + len(r.get("annotations", [])) for r in resultats)
     res = sum(len(r["residuel"]) for r in resultats)
     repl = sum(1 for r in resultats if r["fallback"])
     regen = sum(r["regenerations"] for r in resultats)
@@ -90,14 +90,15 @@ async def main():
     stamp = datetime.now().strftime("%Y%m%d-%H%M")
     md = [f"# Banc Arène — {stamp} — gate {'OFF' if a.sans_gate else 'ON'}", "",
           f"- répliques : **{n}** ({a.paires} paires × {a.tours} tour(s) × 2 orateurs)",
-          f"- affirmations retirées par le garde-fou (A.2 + A.3) : **{brut}** ({brut/max(1,n):.2f}/réplique)",
+          f"- affirmations traitées par le garde-fou : **{brut}** ({brut/max(1,n):.2f}/réplique) — retirées (fausses, A.2) : {sum(len(r['revisions']) for r in resultats)} · annotées (non étayées, A.3) : {sum(len(r.get('annotations', [])) for r in resultats)}",
           f"- affirmations NON SOUTENUES restantes (audit indépendant) : **{res}** ({res/max(1,n):.2f}/réplique) → taux résiduel {100*sum(1 for r in resultats if r['residuel'])/max(1,n):.0f} % des répliques",
           f"- replis « je vous renvoie à mon programme » : {repl} ({100*repl/max(1,n):.0f} %) · régénérations : {regen}",
           f"- latence par réplique : p50 {lat[len(lat)//2] if lat else 0}s · max {lat[-1] if lat else 0}s", "", "## Détail", ""]
     for r in resultats:
         md.append(f"### {r['orateur']} vs {', '.join(r['adversaires'])} — {r['sujet']} (T{r['tour']})")
         md.append(f"**Final :** {r['final']}\n")
-        for v in r["revisions"]: md.append(f"- retiré ({v['type']}) : « {v['phrase'][:160]} » — {v['raison'][:120]}")
+        for v in r["revisions"]: md.append(f"- retiré (fausse) : « {v['phrase'][:160]} » — {v['raison'][:120]}")
+        for v in r.get("annotations", []): md.append(f"- annoté* (non étayée) : « {v['phrase'][:160]} » — {v['raison'][:120]}")
         for v in r["residuel"]: md.append(f"- ⚠ résiduel : « {str(v.get('phrase',''))[:160]} » — {str(v.get('raison',''))[:120]}")
         md.append("")
     out = Path(__file__).resolve().parent / "rapports"; out.mkdir(exist_ok=True)

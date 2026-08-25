@@ -70,6 +70,7 @@ def sauver(doc: dict, moteur: str = "") -> str:
                 "preuves": [{k: v for k, v in p.items() if k in ("type", "candidat_id", "titre", "page", "theme", "extrait", "url", "orateur", "date_lisible")}
                             for p in (i.get("preuves") or [])[:12] if isinstance(p, dict)],
                 "revisions": [{k: str(v)[:300] for k, v in r.items() if k in ("type", "phrase", "cible", "raison")} for r in (i.get("revisions") or [])[:10] if isinstance(r, dict)],
+                "annotations": [{k: str(v)[:300] for k, v in r.items() if k in ("type", "phrase", "cible", "raison")} for r in (i.get("annotations") or [])[:10] if isinstance(r, dict)],
             } for i in t["interventions"]],
         } for n, t in enumerate(doc["tours"])],
         "moteur": moteur, "site_version": "refonte-plateau",

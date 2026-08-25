@@ -191,41 +191,24 @@ def _recouvrement(a: str, b: str) -> float:
 async def generer_replique_validee(messages: list, *, params: dict, orateur: dict, adversaires: list, preuves: list,
                                    faits: dict, historique: list, cle_demo, juger_actif: bool = True,
                                    cible_par_defaut: str = None) -> tuple:
-    """(texte_final, revisions, meta). meta = {regenerations, fallback, brut, usage}."""
+    """(texte_final, revisions, annotations, meta).
+    - revisions   : phrases FAUSSES par construction (A.2), RETIRÉES du texte, conservées pour affichage replié.
+    - annotations : affirmations NON ÉTAYÉES (A.3), LAISSÉES dans le texte, à marquer (astérisque) et expliquer.
+    Décision Lionel 25/08 : le juge annote, il ne coupe plus ; pas de régénération, pas de repli."""
     usage = {"in": 0, "out": 0}
 
     def _cb(p, c):
         usage["in"] += p; usage["out"] += c
 
-    async def _generer(msgs, cle):
-        morceaux = []
-        async for d in llm.completer(msgs, cle_demo=cle, usage_cb=_cb, **params):
-            morceaux.append(d)
-        return "".join(morceaux)
-
-    brut = await _generer(messages, cle_demo)
-    texte, revisions = brut, []
-    regenerations, fallback = 0, False
-    while True:
-        texte_nettoye, rev_faits = verifier_faits(texte, adversaires, faits, cible_par_defaut)
-        rev_juge = []
-        if juger_actif and llm.MODE != "demo":
-            try:
-                rev_juge = await juger(texte_nettoye, orateur, adversaires, preuves, faits, historique, tuple(cle_demo) + ("juge", regenerations))
-            except Exception:
-                logger.warning("juge arène en échec — garde déterministe seule", exc_info=True)
-        texte_final = _retirer_phrases(texte_nettoye, rev_juge) if rev_juge else texte_nettoye
-        revisions = rev_faits + rev_juge
-        nb_avant, nb_apres = len(decouper_phrases(texte)), len(decouper_phrases(texte_final))
-        trop_ampute = nb_apres < 2 or (nb_avant and (nb_avant - nb_apres) / nb_avant > 0.4)
-        if not revisions or not trop_ampute or regenerations >= MAX_REGENERATIONS:
-            break
-        regenerations += 1
-        rappel = ("Ta précédente prise de parole contenait des affirmations non fondées sur tes adversaires : "
-                  + " / ".join("« " + r["phrase"][:160] + " »" for r in revisions[:3])
-                  + ". Réécris-la ENTIÈREMENT en ne t'appuyant que sur les PIÈCES fournies (leur programme, les faits, la pièce au dossier). Pas de chiffre, de vote ni de bilan hors pièces.")
-        texte = await _generer(messages + [{"role": "assistant", "content": texte}, {"role": "user", "content": rappel}], tuple(cle_demo) + ("regen", regenerations))
-    if revisions and len(decouper_phrases(texte_final)) < 2:
-        texte_final = (texte_final + " " + REPLI).strip()
-        fallback = True
-    return texte_final, revisions, {"regenerations": regenerations, "fallback": fallback, "brut": brut, "usage": usage}
+    morceaux = []
+    async for d in llm.completer(messages, cle_demo=cle_demo, usage_cb=_cb, **params):
+        morceaux.append(d)
+    brut = "".join(morceaux)
+    texte_final, revisions = verifier_faits(brut, adversaires, faits, cible_par_defaut)
+    annotations = []
+    if juger_actif and llm.MODE != "demo":
+        try:
+            annotations = await juger(texte_final, orateur, adversaires, preuves, faits, historique, tuple(cle_demo) + ("juge",))
+        except Exception:
+            logger.warning("juge arène en échec — garde déterministe seule", exc_info=True)
+    return texte_final, revisions, annotations, {"regenerations": 0, "fallback": False, "brut": brut, "usage": usage}
