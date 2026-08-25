@@ -195,9 +195,7 @@
     }
     
     try {
-      const apiUrl = window.location.port === '1313'
-        ? 'http://' + window.location.hostname + ':8001/debat/stream'
-        : '/api/debat/stream';
+      const apiUrl = (window.DL_API || '/api') + '/debat/stream';
 
       const response = await fetch(apiUrl, {
         method: 'POST',
@@ -492,9 +490,7 @@
   // [parlement-ui] début
   function urlSujetsParlement() {
     // [parlement-ui] même convention d'URL que le reste du fichier
-    return window.location.port === '1313'
-      ? 'http://' + window.location.hostname + ':8001/parlement/sujets'
-      : '/api/parlement/sujets';
+    return (window.DL_API || '/api') + '/parlement/sujets';
   }
 
   function echapper(s) {

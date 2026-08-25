@@ -1,0 +1,4 @@
+# Surcharge DEV (hugo server) — chargé après hugo.toml :
+#   hugo server --config hugo.toml,hugo.dev.toml --port 1313
+[params]
+  apiBase = "http://127.0.0.1:8001/api"

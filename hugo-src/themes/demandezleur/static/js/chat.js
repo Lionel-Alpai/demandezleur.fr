@@ -35,9 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const placeholderMsg = appendMessage('assistant', '', true);
     
     // Déduction de l'URL du backend en fonction de là où on se trouve
-    const apiUrl = window.location.port === '1313' 
-      ? `http://${window.location.hostname}:8001/api/ask` 
-      : '/api/ask';
+    const apiUrl = (window.DL_API || '/api') + '/ask';
     
     fetch(apiUrl, {
       method: 'POST',

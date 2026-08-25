@@ -6,6 +6,11 @@ from dotenv import load_dotenv
 # Charger les variables d'environnement depuis .env
 load_dotenv()
 
+# Chemins relatifs au fichier (lancement possible depuis n'importe quel cwd)
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent
+
+
 from fastapi import FastAPI, HTTPException, Request, UploadFile, File, Form
 from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
@@ -181,7 +186,7 @@ class AskRequest(BaseModel):
 
 def load_corpus(candidat_id: str):
     # Charge le corpus JSON du candidat, puis ajoute l'actu parlementaire.
-    path = f"corpus/{candidat_id}.json"
+    path = str(BASE_DIR / "corpus" / f"{candidat_id}.json")
     corpus = []
     if os.path.exists(path):
         with open(path, "r", encoding="utf-8") as f:
@@ -233,12 +238,12 @@ def load_prompts(candidat_id: str):
         return None, None, None
     
     base_prompt = ""
-    if os.path.exists("prompts/base.txt"):
-        with open("prompts/base.txt", "r", encoding="utf-8") as f:
+    if os.path.exists(BASE_DIR / "prompts" / "base.txt"):
+        with open(BASE_DIR / "prompts" / "base.txt", "r", encoding="utf-8") as f:
             base_prompt = f.read()
     
     ton_content = ""
-    ton_path = f"prompts/{meta['ton_file']}"
+    ton_path = str(BASE_DIR / "prompts" / meta['ton_file'])
     if os.path.exists(ton_path):
         with open(ton_path, "r", encoding="utf-8") as f:
             ton_content = f.read()
@@ -470,7 +475,7 @@ async def debat_stream(request: Request):
 
         # --- Archivage du débat ---
         try:
-            archive_path = "/home/lionel/web/demandezleur.fr/historique_debats.json"
+            archive_path = str(BASE_DIR.parent / "historique_debats.json")
             archive_entry = {
                 "timestamp": str(asyncio.get_event_loop().time()),
                 "sujet": payload["sujet"],

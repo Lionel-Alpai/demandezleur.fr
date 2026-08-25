@@ -31,9 +31,7 @@
         
         try {
             // Déduction de l'URL du backend en fonction de là où on se trouve (localhost ou IP locale)
-            const apiUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.hostname.startsWith('192.168.') 
-                ? 'http://' + window.location.hostname + ':8001/api/feedback'
-                : '/api/feedback';
+            const apiUrl = (window.DL_API || '/api') + '/feedback';
 
             const response = await fetch(apiUrl, {
                 method: 'POST',
