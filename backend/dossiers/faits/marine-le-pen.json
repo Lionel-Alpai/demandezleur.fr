@@ -29,7 +29,14 @@
    "verifie_le": "2026-08-25",
    "notes": "réfutation : confirme (3 sources concordantes, 2 médias de référence) — Les articles S1, S6 et S9 confirment tous les éléments du fait : date, juridiction, peines, éligibilité et pourvoi en cassation suspensif. | divergences : S1 indique '1 an ferme sous bracelet électronique' et '45 mois d'inéligibilité, dont 30 mois avec sursis' ; S6 précise 'trois ans de prison, dont deux ans avec sursis et un an ferme aménageable avec bracelet électronique' et '45 mois dont 30 mois assortis du sursis' ; S9 confirme 'trois ans de prison, dont un an ferme aménageable sous bracelet électronique, une amende de 100 000 euros et une peine d'inéligibilité de 45 mois, dont 30 mois avec sursis'.",
    "decide_le": "2026-08-25T22:33",
-   "motif": ""
+   "motif": "",
+   "themes": [
+    "probité",
+    "justice",
+    "argent public",
+    "institutions",
+    "démocratie"
+   ]
   },
   {
    "id": "24414ceca2",
@@ -61,7 +68,14 @@
     }
    ],
    "verifie_le": "2026-08-25",
-   "notes": "réfutation : refute (9 sources concordantes, 3 médias de référence) — Le fait est confirmé par les sources S2, S3, S4, S5, S6, S7, S8, S9, S10, mais S1 contredit la peine de prison en indiquant '1 an ferme sous bracelet électronique' et une inéligibilité de 45 mois, ce qui correspond à la décision d'appel, pas à la première instance. | divergences : S1 mentionne 'quatre ans de prison dont deux ans ferme, 100 000 euros d'amende et surtout cinq ans d'inéligibilité avec exécution provisoire' ; S2 précise 'cinq ans d'inéligibilité immédiate et quatre ans de prison, dont deux ferme aménagés sous bracelet électronique, et à une amende de 100 000 euros' ; S3 détaille 'quatre ans d'emprisonnement, dont deux ans assortis du sursis' et 'une amende de 100 000 euros' ; S4 contient le jugement intégral."
+   "notes": "réfutation : refute (9 sources concordantes, 3 médias de référence) — Le fait est confirmé par les sources S2, S3, S4, S5, S6, S7, S8, S9, S10, mais S1 contredit la peine de prison en indiquant '1 an ferme sous bracelet électronique' et une inéligibilité de 45 mois, ce qui correspond à la décision d'appel, pas à la première instance. | divergences : S1 mentionne 'quatre ans de prison dont deux ans ferme, 100 000 euros d'amende et surtout cinq ans d'inéligibilité avec exécution provisoire' ; S2 précise 'cinq ans d'inéligibilité immédiate et quatre ans de prison, dont deux ferme aménagés sous bracelet électronique, et à une amende de 100 000 euros' ; S3 détaille 'quatre ans d'emprisonnement, dont deux ans assortis du sursis' et 'une amende de 100 000 euros' ; S4 contient le jugement intégral.",
+   "themes": [
+    "probité",
+    "justice",
+    "argent public",
+    "institutions",
+    "démocratie"
+   ]
   }
  ]
 }

@@ -7,7 +7,7 @@
   {
    "id": "92c9ab07c4",
    "grief": "reproche au centre de mener des poursuites politiques contre les militants de gauche",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Elsa Marcel",
@@ -18,7 +18,16 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:05",
+   "motif": "",
+   "themes": [
+    "justice",
+    "institutions",
+    "liberté de la presse",
+    "probité",
+    "démocratie"
+   ]
   }
  ],
  "justification": "L'extrême gauche critique le centre comme un adversaire politique proche sur l'échiquier, mais avec des divergences fondamentales sur la politique sociale et économique."

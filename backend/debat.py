@@ -263,7 +263,10 @@ def construire_prompt_debat(
         try:
             import dossiers as _d
             textes_debat = [i.get("texte", "") for t in (historique or []) for i in t.get("interventions", [])]
-            texte_dossier, preuves_dossier = _d.pieces_pour(candidat, adversaires, textes_debat)
+            ids_adv = {a["id"] for a in adversaires}
+            dernieres_adv = [i.get("texte", "") for t in (historique or [])[-1:] for i in t.get("interventions", []) if i.get("candidat_id") in ids_adv]
+            requete = " ".join([sujet, question_moderateur or ""])
+            texte_dossier, preuves_dossier = _d.pieces_pour(candidat, adversaires, textes_debat, requete, " ".join(dernieres_adv))
             if texte_dossier:
                 prompt += texte_dossier
                 liste_preuves.extend(preuves_dossier)

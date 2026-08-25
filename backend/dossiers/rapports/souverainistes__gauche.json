@@ -7,7 +7,7 @@
   {
    "id": "b651c6651c",
    "grief": "reproche à la gauche d'être complice du gouvernement et de trahir les classes populaires",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Nicolas Dupont-Aignan",
@@ -18,7 +18,16 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:07",
+   "motif": "",
+   "themes": [
+    "justice sociale",
+    "retraites",
+    "probité",
+    "institutions",
+    "économie"
+   ]
   }
  ],
  "justification": "Les souverainistes se positionnent comme les véritables défenseurs du peuple face à une gauche qu'ils jugent complice du système, partageant un électorat populaire."

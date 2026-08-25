@@ -26,7 +26,13 @@
      "n_sources": 2
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "themes": [
+    "institutions",
+    "probité",
+    "démocratie",
+    "élections"
+   ]
   },
   {
    "id": "2fde7ccaf0",
@@ -44,7 +50,13 @@
    ],
    "verifie_le": "2026-08-25",
    "decide_le": "2026-08-25T22:33",
-   "motif": ""
+   "motif": "",
+   "themes": [
+    "probité",
+    "justice",
+    "politique",
+    "élections"
+   ]
   }
  ],
  "justification": "Le camp centre, à travers Gabriel Attal, attaque Marine Le Pen sur des thèmes électoraux (condamnation, détournement de fonds) et tente de protéger son identité politique, ce qui indique une concurrence directe pour le même électorat modéré."

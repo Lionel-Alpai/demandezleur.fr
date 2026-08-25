@@ -7,7 +7,7 @@
   {
    "id": "9c1980be31",
    "grief": "reproche au centre de faire payer les Français par des hausses de taxes et de franchises médicales",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Nicolas Dupont-Aignan",
@@ -18,12 +18,20 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:06",
+   "motif": "",
+   "themes": [
+    "argent public",
+    "santé",
+    "fiscalité",
+    "justice sociale"
+   ]
   },
   {
    "id": "162d207f4f",
    "grief": "reproche au centre de vouloir effacer l'histoire et l'identité de la France",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Nicolas Dupont-Aignan",
@@ -34,12 +42,20 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:06",
+   "motif": "",
+   "themes": [
+    "identité nationale",
+    "histoire",
+    "souveraineté",
+    "institutions"
+   ]
   },
   {
    "id": "7d5eccd142",
    "grief": "reproche au centre de ne pas lutter efficacement contre le narcotrafic",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Nicolas Dupont-Aignan",
@@ -50,7 +66,15 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:06",
+   "motif": "",
+   "themes": [
+    "sécurité",
+    "police",
+    "justice",
+    "narcotrafic"
+   ]
   }
  ],
  "justification": "Les souverainistes critiquent le centre comme un adversaire politique qui trahit les intérêts nationaux, mais ils ne le considèrent pas comme leur ennemi principal, car ils partagent certains électorats avec eux."

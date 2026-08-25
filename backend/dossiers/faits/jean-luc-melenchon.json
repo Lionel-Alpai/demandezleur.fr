@@ -37,7 +37,14 @@
     }
    ],
    "verifie_le": "2026-08-25",
-   "notes": "réfutation : confirme (4 sources concordantes, 4 médias de référence) — Les articles S1, S2, S6 et S13 confirment la condamnation à trois mois de prison avec sursis et 8 000 euros d'amende pour rébellion et provocation lors de la perquisition du 16 octobre 2018, par le tribunal correctionnel de Bobigny le 9 décembre 2019, et l'annonce de ne pas faire appel."
+   "notes": "réfutation : confirme (4 sources concordantes, 4 médias de référence) — Les articles S1, S2, S6 et S13 confirment la condamnation à trois mois de prison avec sursis et 8 000 euros d'amende pour rébellion et provocation lors de la perquisition du 16 octobre 2018, par le tribunal correctionnel de Bobigny le 9 décembre 2019, et l'annonce de ne pas faire appel.",
+   "themes": [
+    "justice",
+    "institutions",
+    "liberté de la presse",
+    "police",
+    "probité"
+   ]
   },
   {
    "id": "f1d9f996ba",
@@ -76,7 +83,13 @@
    "verifie_le": "2026-08-25",
    "notes": "réfutation : confirme (5 sources concordantes, 2 médias de référence) — Les articles S7, S8, S9, S10 et S11 confirment tous la condamnation en appel pour diffamation envers Pablo Paranagua, les propos de février 2018, la cour d'appel de Paris, le jugement du 29 juin 2022, l'euro symbolique et les 2000 euros de frais de justice.",
    "decide_le": "2026-08-25T22:32",
-   "motif": ""
+   "motif": "",
+   "themes": [
+    "liberté de la presse",
+    "justice",
+    "probité",
+    "institutions"
+   ]
   },
   {
    "id": "a87d4da26e",
@@ -93,7 +106,13 @@
     }
    ],
    "verifie_le": "2026-08-25",
-   "notes": "réfutation : refute (0 sources concordantes, 1 médias de référence) — Le fait confond deux affaires distinctes : la condamnation pour injure publique envers Radio France (janvier 2022, appel) et la condamnation pour rébellion et provocation lors de la perquisition de LFI (décembre 2019, sans appel). | divergences : La date exacte du jugement n'est pas précisée dans la source, seulement 'janvier dernier'."
+   "notes": "réfutation : refute (0 sources concordantes, 1 médias de référence) — Le fait confond deux affaires distinctes : la condamnation pour injure publique envers Radio France (janvier 2022, appel) et la condamnation pour rébellion et provocation lors de la perquisition de LFI (décembre 2019, sans appel). | divergences : La date exacte du jugement n'est pas précisée dans la source, seulement 'janvier dernier'.",
+   "themes": [
+    "liberté de la presse",
+    "justice",
+    "probité",
+    "institutions"
+   ]
   },
   {
    "id": "c21c015c3f",
@@ -132,7 +151,13 @@
    "verifie_le": "2026-08-25",
    "notes": "réfutation : confirme (5 sources concordantes, 3 médias de référence) — Les articles S3, S7, S9, S10 et S11 confirment la condamnation en première instance à 500 euros d'amende avec sursis pour avoir qualifié Pablo Paranagua d'assassin repenti, le jugement du 24 septembre 2021 et l'appel annoncé.",
    "decide_le": "2026-08-25T22:33",
-   "motif": ""
+   "motif": "",
+   "themes": [
+    "liberté de la presse",
+    "justice",
+    "probité",
+    "institutions"
+   ]
   },
   {
    "id": "1601e0ebaa",
@@ -154,7 +179,14 @@
     }
    ],
    "verifie_le": "2026-08-25",
-   "notes": "réfutation : refute (0 sources concordantes, 1 médias de référence) — Les articles S13, S14, S15 et S16 indiquent que l'information judiciaire a été ouverte en novembre 2018 pour escroquerie et tentatives d'escroquerie, mais que l'instruction a été clôturée sans mise en examen en mai 2026, donc le fait tel que formulé est inexact. | divergences : La date exacte de la mise en examen n'est pas précisée, seulement l'ouverture de l'information judiciaire."
+   "notes": "réfutation : refute (0 sources concordantes, 1 médias de référence) — Les articles S13, S14, S15 et S16 indiquent que l'information judiciaire a été ouverte en novembre 2018 pour escroquerie et tentatives d'escroquerie, mais que l'instruction a été clôturée sans mise en examen en mai 2026, donc le fait tel que formulé est inexact. | divergences : La date exacte de la mise en examen n'est pas précisée, seulement l'ouverture de l'information judiciaire.",
+   "themes": [
+    "probité",
+    "argent public",
+    "justice",
+    "institutions",
+    "économie"
+   ]
   }
  ]
 }

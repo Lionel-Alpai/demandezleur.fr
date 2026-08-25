@@ -7,7 +7,7 @@
   {
    "id": "49f5a2d3e2",
    "grief": "reproche à l'extrême droite d'être incapable de gouverner et de proposer des solutions crédibles",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Bruno Retailleau",
@@ -18,12 +18,21 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:03",
+   "motif": "",
+   "themes": [
+    "institutions",
+    "économie",
+    "travail",
+    "sécurité",
+    "immigration"
+   ]
   },
   {
    "id": "1ffcb648ef",
    "grief": "reproche à l'extrême droite d'être un danger pour la République et ses valeurs",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Xavier Bertrand",
@@ -34,7 +43,16 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:03",
+   "motif": "",
+   "themes": [
+    "institutions",
+    "laïcité",
+    "liberté de la presse",
+    "justice",
+    "immigration"
+   ]
   }
  ],
  "justification": "Les responsables de la droite républicaine, comme Bruno Retailleau et Xavier Bertrand, s'opposent frontalement au RN sur des sujets comme l'immigration et la justice, mais ils cherchent aussi à capter le même électorat, ce qui en fait des concurrents directs."

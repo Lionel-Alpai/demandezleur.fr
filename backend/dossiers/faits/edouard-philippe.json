@@ -24,7 +24,14 @@
    "verifie_le": "2026-08-25",
    "notes": "réfutation : confirme (2 sources concordantes, 0 médias de référence) — Les articles S2 et S7 confirment que le tribunal administratif de Paris a rejeté la requête de la communauté urbaine et l'a condamnée à verser 1 800 euros de frais de justice.",
    "decide_le": "2026-08-25T22:30",
-   "motif": ""
+   "motif": "",
+   "themes": [
+    "probité",
+    "justice",
+    "argent public",
+    "lanceur d'alerte",
+    "institutions"
+   ]
   },
   {
    "id": "daea757e7e",
@@ -41,7 +48,14 @@
     }
    ],
    "verifie_le": "2026-08-25",
-   "notes": "réfutation : refute (1 sources concordantes, 0 médias de référence) — Le fait est confirmé par l'article S3, mais les autres articles pertinents (S2, S7) traitent d'une décision différente du tribunal administratif de Paris confirmant le statut de lanceuse d'alerte, ce qui pourrait prêter à confusion."
+   "notes": "réfutation : refute (1 sources concordantes, 0 médias de référence) — Le fait est confirmé par l'article S3, mais les autres articles pertinents (S2, S7) traitent d'une décision différente du tribunal administratif de Paris confirmant le statut de lanceuse d'alerte, ce qui pourrait prêter à confusion.",
+   "themes": [
+    "justice",
+    "travail",
+    "harcèlement",
+    "discrimination",
+    "fonction publique"
+   ]
   },
   {
    "id": "508e19cc95",
@@ -60,7 +74,14 @@
    "verifie_le": "2026-08-25",
    "notes": "réfutation : nuance (5 sources concordantes, 0 médias de référence) — Les articles confirment les faits mais précisent que l'information judiciaire a été ouverte en mai 2026, et que la plainte initiale de septembre 2023 a été complétée par une plainte avec constitution de partie civile en juin 2025. | divergences : La date exacte de l'ouverture de l'information judiciaire n'est pas précisée dans toutes les sources ; S13 indique le 19 mai 2026, d'autres sources mentionnent une enquête préliminaire ouverte en 2023.",
    "decide_le": "2026-08-25T22:31",
-   "motif": ""
+   "motif": "",
+   "themes": [
+    "probité",
+    "justice",
+    "argent public",
+    "favoritisme",
+    "institutions"
+   ]
   },
   {
    "id": "29ec458ab5",
@@ -89,7 +110,14 @@
    "verifie_le": "2026-08-25",
    "notes": "réfutation : confirme (3 sources concordantes, 1 médias de référence) — Les citations d'Édouard Philippe sont rapportées dans plusieurs articles concordants, notamment Le Parisien et d'autres sources.",
    "decide_le": "2026-08-25T22:31",
-   "motif": ""
+   "motif": "",
+   "themes": [
+    "probité",
+    "justice",
+    "institutions",
+    "élection présidentielle",
+    "présomption d'innocence"
+   ]
   }
  ]
 }

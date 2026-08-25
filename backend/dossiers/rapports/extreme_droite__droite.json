@@ -7,7 +7,7 @@
   {
    "id": "56f623d4c8",
    "grief": "reproche à la droite d'être trop modérée et de ne pas incarner une véritable opposition à l'extrême gauche",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Marine Le Pen",
@@ -18,7 +18,15 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:03",
+   "motif": "",
+   "themes": [
+    "institutions",
+    "politique",
+    "idéologie",
+    "gouvernance"
+   ]
   }
  ],
  "justification": "Le RN critique la droite traditionnelle (représentée par Retailleau et Bertrand) comme un concurrent pour le même électorat, en lui reprochant de ne pas être assez ferme sur les thèmes identitaires et sécuritaires, tout en cherchant à attirer ses électeurs."

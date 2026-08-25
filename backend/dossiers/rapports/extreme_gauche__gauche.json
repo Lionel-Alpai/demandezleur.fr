@@ -7,7 +7,7 @@
   {
    "id": "0a846e1c12",
    "grief": "reproche à la gauche d'être trop modérée et de ne pas soutenir pleinement la résistance palestinienne",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Anasse Kazib",
@@ -18,7 +18,16 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:05",
+   "motif": "",
+   "themes": [
+    "politique étrangère",
+    "justice",
+    "liberté d'expression",
+    "conflit israélo-palestinien",
+    "institutions"
+   ]
   }
  ],
  "justification": "L'extrême gauche et la gauche partagent un électorat potentiel, mais l'extrême gauche critique la gauche pour son manque de radicalité et son institutionnalisation, ce qui en fait un concurrent pour le même électorat."

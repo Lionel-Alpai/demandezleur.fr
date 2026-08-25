@@ -7,7 +7,7 @@
   {
    "id": "0a5f095a22",
    "grief": "reproche aux écologistes de vouloir abattre un avantage historique de la France en s'attaquant au nucléaire",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Jordan Bardella",
@@ -18,7 +18,16 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:03",
+   "motif": "",
+   "themes": [
+    "écologie",
+    "nucléaire",
+    "économie",
+    "énergie",
+    "institutions"
+   ]
   }
  ],
  "justification": "Le camp d'extrême droite considère les écologistes comme partie intégrante de la gauche radicale, qu'il présente comme une menace existentielle pour la Nation."

@@ -7,7 +7,7 @@
   {
    "id": "eeec9c5b39",
    "grief": "reproche au centre de ne pas prendre de mesures suffisantes pour le climat et de privilégier des solutions superficielles comme la promotion de climatiseurs",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Delphine Batho",
@@ -18,7 +18,16 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:03",
+   "motif": "",
+   "themes": [
+    "écologie",
+    "climat",
+    "consommation",
+    "argent public",
+    "probité"
+   ]
   }
  ],
  "justification": "Les écologistes et le centre s'adressent à des électorats différents mais se disputent l'électorat modéré et écologiste, avec des divergences marquées sur les questions climatiques et sociales."

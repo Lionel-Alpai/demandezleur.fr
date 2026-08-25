@@ -72,7 +72,15 @@ EXPANSION = {
     "impot": "fiscalite taxe tva prelevement budget",
     "democrat": "referendum institution assemblee proportionnelle citoyen",
     "agricult": "paysan ferme alimentation agriculteur",
-    "polic": "securite ordre gendarmerie",
+    "polic": "securite ordre gendarmerie rebellion",
+    "probit": "condamnation detournement fonds publics fraude justice exemplarite ethique corruption transparence",
+    "exemplar": "condamnation detournement fonds publics probite ethique",
+    "corrupt": "condamnation detournement fonds publics probite fraude",
+    "justic": "condamnation tribunal juridiction peine procedure",
+    "fraud": "detournement fonds publics condamnation",
+    "press": "diffamation journaliste liberte expression",
+    "journal": "diffamation presse liberte expression",
+    "terror": "apologie terrorisme poursuite",
 }
 
 

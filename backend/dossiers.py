@@ -85,14 +85,35 @@ def deja_cite(entree_texte: str, textes_debat: list, seuil: int = 3) -> bool:
     return any(len(cles & _mots_cles(t)) >= seuil for t in textes_debat)
 
 
-def pieces_pour(orateur: dict, adversaires: list, textes_debat: list = None) -> tuple:
+def pertinent(entree_texte: str, themes: list, requete: str, requete_adverse: str = "") -> bool:
+    """Un élément du dossier n'est servi que s'il touche le débat :
+    - contre le SUJET / la QUESTION du modérateur : une racine commune suffit (thèmes déclarés compris) ;
+    - contre ce que l'adversaire VIENT DE DIRE : deux racines communes du FAIT lui-même (pas des thèmes, trop génériques)."""
+    import preuves as _p
+    if requete and requete.strip():
+        rq = set(_p.analyser(_p.etendre_requete(requete)))
+        en = set(_p.analyser(_p.etendre_requete(entree_texte + " " + " ".join(themes or []))))
+        if rq & en:
+            return True
+    if requete_adverse and requete_adverse.strip():
+        ra = set(_p.analyser(requete_adverse))
+        ef = set(_p.analyser(entree_texte))
+        if len(ra & ef) >= 2:
+            return True
+    return False
+
+
+def pieces_pour(orateur: dict, adversaires: list, textes_debat: list = None, requete: str = "", requete_adverse: str = "") -> tuple:
     """(texte_prompt, preuves) : ce que l'orateur sait des adversaires présents, en Arène.
-    textes_debat : répliques déjà prononcées — un fait/grief déjà lancé est marqué DÉJÀ CITÉ (une fois par débat)."""
+    textes_debat : répliques déjà prononcées — un fait/grief déjà lancé est marqué DÉJÀ CITÉ (une fois par débat).
+    requete      : sujet + question du modérateur + dernières répliques — seuls les éléments PERTINENTS sont servis."""
     blocs, preuves = [], []
     textes_debat = textes_debat or []
     for adv in adversaires:
-        faits = faits_de(adv["id"])
+        faits = [e for e in faits_de(adv["id"]) if pertinent(e["fait"], e.get("themes"), requete, requete_adverse)]
         r = rapport(orateur, adv)
+        if r.get("griefs"):
+            r["griefs"] = [g for g in r["griefs"] if pertinent(g["grief"] + " " + " ".join(x.get("verbatim", "") for x in (g.get("exemples") or [])[:2]), g.get("themes"), requete, requete_adverse)]
         lignes = [f"— {adv['nom']} ({adv.get('parti_court') or adv.get('parti', '')}) :"]
         if r.get("registre") in REGISTRES:
             lignes.append(f"  REGISTRE : {REGISTRES[r['registre']]}")
@@ -106,7 +127,7 @@ def pieces_pour(orateur: dict, adversaires: list, textes_debat: list = None) -> 
                                 "page": e.get("date", ""), "theme": e.get("instance", ""), "extrait": e["fait"], "texte_integral": e["fait"],
                                 "url": (e.get("sources") or [{}])[0].get("url", ""), "orateur": (e.get("sources") or [{}])[0].get("media", ""), "date_lisible": e.get("date", "")})
         else:
-            lignes.append("  FAITS VÉRIFIÉS : aucun au dossier. Tu ne lui prêtes aucune condamnation, aucune affaire.")
+            lignes.append("  FAITS VÉRIFIÉS : aucun en rapport avec ce sujet. Tu ne lui prêtes aucune condamnation, aucune affaire.")
         if r.get("griefs"):
             lignes.append("  CE QUE TON CAMP LUI REPROCHE (reproches documentés — porte-les COMME DES REPROCHES, pas comme des faits) :")
             for g in r["griefs"][:5]:
@@ -125,7 +146,7 @@ def pieces_pour(orateur: dict, adversaires: list, textes_debat: list = None) -> 
     for p in preuves:
         p["deja_cite"] = p not in preuves_neuves
     texte = ("\n\nDOSSIER DE TES ADVERSAIRES (Arène) :\n" + "\n".join(blocs) +
-             "\nRÈGLES DU DOSSIER : un même fait ou reproche ne se lance qu'UNE fois par débat, par qui que ce soit — s'il est marqué DÉJÀ CITÉ, tu passes au fond ou à un autre élément. Un fait se cite avec sa qualification exacte (« condamnée en première instance », « mis en examen »), jamais aggravée. "
+             "\nRÈGLES DU DOSSIER : tu ne sors un élément du dossier que s'il a un RAPPORT DIRECT avec le sujet, la question posée ou ce que l'adversaire vient de dire — un coup hors sujet te fait perdre l'échange. Un même fait ou reproche ne se lance qu'UNE fois par débat, par qui que ce soit — s'il est marqué DÉJÀ CITÉ, tu passes au fond ou à un autre élément. Un fait se cite avec sa qualification exacte (« condamnée en première instance », « mis en examen »), jamais aggravée. "
              "Un reproche se porte comme reproche de ton camp (« vous que nous appelons… », « comme le disait X… »), jamais comme une vérité établie. "
              "Rien sur la vie privée, la santé, la famille. Aucune insulte nue : le coup, c'est le fait ou le reproche documenté.")
     return texte, preuves

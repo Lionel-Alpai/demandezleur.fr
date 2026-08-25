@@ -7,7 +7,7 @@
   {
    "id": "fd37f0c878",
    "grief": "reproche aux écologistes de promouvoir une écologie dogmatique et idéologique, nuisible concrètement",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Bruno Retailleau",
@@ -18,7 +18,16 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:03",
+   "motif": "",
+   "themes": [
+    "écologie",
+    "santé",
+    "argent public",
+    "idéologie",
+    "efficacité"
+   ]
   }
  ],
  "justification": "La droite critique l'écologie politique comme une idéologie dogmatique, tout en revendiquant une 'écologie des résultats', ce qui indique une concurrence pour capter l'électorat sensible aux questions environnementales."

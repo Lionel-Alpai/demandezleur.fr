@@ -7,7 +7,7 @@
   {
    "id": "7b7aef904a",
    "grief": "reproche à Marine Le Pen d'être une candidate illégitime et de ne pas être républicaine",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Nicolas Dupont-Aignan",
@@ -18,12 +18,21 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:06",
+   "motif": "",
+   "themes": [
+    "institutions",
+    "laïcité",
+    "probité",
+    "justice",
+    "démocratie"
+   ]
   },
   {
    "id": "21fe6c8a8f",
    "grief": "reproche à Marine Le Pen d'être une candidate de la trahison nationale",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "François Asselineau",
@@ -34,12 +43,21 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:06",
+   "motif": "",
+   "themes": [
+    "patriotisme",
+    "souveraineté",
+    "sécurité",
+    "défense",
+    "identité nationale"
+   ]
   },
   {
    "id": "1eda77115a",
    "grief": "reproche à Marine Le Pen d'être une candidate de la soumission à l'Union européenne",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Florian Philippot",
@@ -50,7 +68,16 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:06",
+   "motif": "",
+   "themes": [
+    "europe",
+    "souveraineté",
+    "économie",
+    "immigration",
+    "institutions"
+   ]
   }
  ],
  "justification": "Les souverainistes se positionnent comme des concurrents directs de l'extrême droite pour capter le même électorat, en critiquant sa crédibilité et son manque de sincérité."

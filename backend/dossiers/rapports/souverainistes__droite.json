@@ -7,7 +7,7 @@
   {
    "id": "896d0d89d6",
    "grief": "reproche à la droite d'être trop modérée et de ne pas défendre fermement la souveraineté nationale",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Nicolas Dupont-Aignan",
@@ -18,7 +18,16 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:06",
+   "motif": "",
+   "themes": [
+    "institutions",
+    "souveraineté",
+    "retraites",
+    "argent public",
+    "économie"
+   ]
   }
  ],
  "justification": "Les souverainistes se positionnent comme une alternative plus ferme sur la souveraineté nationale, critiquant la droite républicaine pour son manque de fermeté, tout en partageant un électorat potentiel."

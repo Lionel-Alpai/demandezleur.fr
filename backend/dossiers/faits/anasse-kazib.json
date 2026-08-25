@@ -8,7 +8,7 @@
    "fait": "Le 12 juin 2025, le tribunal judiciaire de Paris a condamné Anasse Kazib à 1500 euros d'amende pour organisation d'une manifestation non déclarée, en lien avec des prises de parole devant la Sorbonne le 9 février 2022. Anasse Kazib a fait appel de cette décision.",
    "date": "2025-06-12",
    "instance": "Tribunal judiciaire de Paris",
-   "statut": "a_valider",
+   "statut": "valide",
    "sources": [
     {
      "url": "https://www.revolutionpermanente.fr/Condamnation-d-Anasse-Kazib-2-ans-apres-le-proces-d-un-ouvrier-arabe-candidat-a-la-presidentielle",
@@ -22,7 +22,15 @@
     }
    ],
    "verifie_le": "2026-08-25",
-   "notes": "réfutation : confirme (2 sources concordantes, 0 médias de référence) — Les articles S5 et S7 confirment la condamnation à 1500 euros d'amende pour organisation de manifestation non déclarée le 9 février 2022 devant la Sorbonne, et l'appel interjeté. | divergences : La date exacte du jugement n'est pas précisée dans les sources ; seule l'année et le mois sont indiqués."
+   "notes": "réfutation : confirme (2 sources concordantes, 0 médias de référence) — Les articles S5 et S7 confirment la condamnation à 1500 euros d'amende pour organisation de manifestation non déclarée le 9 février 2022 devant la Sorbonne, et l'appel interjeté. | divergences : La date exacte du jugement n'est pas précisée dans les sources ; seule l'année et le mois sont indiqués.",
+   "decide_le": "2026-08-25T22:59",
+   "motif": "",
+   "themes": [
+    "liberté de la presse",
+    "police",
+    "justice",
+    "institutions"
+   ]
   },
   {
    "id": "ff0378e97b",
@@ -30,7 +38,7 @@
    "fait": "Anasse Kazib est poursuivi pour apologie du terrorisme à la suite de publications sur les réseaux sociaux en octobre 2023. Le procès initialement prévu le 18 juin 2025 a été renvoyé, puis une question prioritaire de constitutionnalité (QPC) a été transmise à la Cour de cassation le 25 juin 2025, suspendant la procédure.",
    "date": "2025-06-25",
    "instance": "Tribunal judiciaire de Paris",
-   "statut": "a_valider",
+   "statut": "valide",
    "sources": [
     {
      "url": "https://www.france24.com/fr/info-en-continu/20250618-conflit-isra%C3%A9lo-palestinien-le-proc%C3%A8s-du-militant-anasse-kazib-pour-apologie-du-terrorisme-report%C3%A9",
@@ -49,7 +57,15 @@
     }
    ],
    "verifie_le": "2026-08-25",
-   "notes": "réfutation : nuance (3 sources concordantes, 1 médias de référence) — Les articles confirment les faits, mais le procès du 18 juin a été renvoyé en raison d'une audience trop chargée, et la QPC a été transmise lors de l'audience du 25 juin, ce qui nuance légèrement la chronologie. | divergences : Les sources divergent sur la date du renvoi : S1 indique un renvoi d'office le 18 juin 2025, tandis que S6 mentionne un renvoi après transmission d'une QPC le 25 juin 2025. Il s'agit probablement de deux audiences distinctes."
+   "notes": "réfutation : nuance (3 sources concordantes, 1 médias de référence) — Les articles confirment les faits, mais le procès du 18 juin a été renvoyé en raison d'une audience trop chargée, et la QPC a été transmise lors de l'audience du 25 juin, ce qui nuance légèrement la chronologie. | divergences : Les sources divergent sur la date du renvoi : S1 indique un renvoi d'office le 18 juin 2025, tandis que S6 mentionne un renvoi après transmission d'une QPC le 25 juin 2025. Il s'agit probablement de deux audiences distinctes.",
+   "decide_le": "2026-08-25T23:00",
+   "motif": "",
+   "themes": [
+    "terrorisme",
+    "liberté de la presse",
+    "justice",
+    "institutions"
+   ]
   }
  ]
 }

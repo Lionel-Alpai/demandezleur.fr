@@ -7,7 +7,7 @@
   {
    "id": "22ccb36b88",
    "grief": "reproche à l'extrême gauche d'être une menace existentielle pour la Nation française",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Jordan Bardella",
@@ -18,12 +18,20 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:03",
+   "motif": "",
+   "themes": [
+    "institutions",
+    "sécurité",
+    "démocratie",
+    "politique"
+   ]
   },
   {
    "id": "9d5dadd1de",
    "grief": "reproche à l'extrême gauche d'être une alliance du pire et de rassembler des agents du chaos",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Jordan Bardella",
@@ -34,12 +42,20 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:04",
+   "motif": "",
+   "themes": [
+    "politique",
+    "institutions",
+    "démocratie",
+    "sécurité"
+   ]
   },
   {
    "id": "a17d34edb6",
    "grief": "reproche à l'extrême gauche de vouloir ouvrir les vannes de l'immigration et libérer des détenus",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Jordan Bardella",
@@ -50,12 +66,20 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:04",
+   "motif": "",
+   "themes": [
+    "immigration",
+    "sécurité",
+    "justice",
+    "ordre public"
+   ]
   },
   {
    "id": "7c85ebcc9c",
    "grief": "reproche à l'extrême gauche de vouloir augmenter massivement les taxes et impôts",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Jordan Bardella",
@@ -66,12 +90,20 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:04",
+   "motif": "",
+   "themes": [
+    "économie",
+    "travail",
+    "fiscalité",
+    "argent public"
+   ]
   },
   {
    "id": "99fae86f69",
    "grief": "reproche à l'extrême gauche de piétiner le droit à la propriété privée et de se faire complice de ceux qui contestent la culture et les principes de la République",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Jordan Bardella",
@@ -82,12 +114,20 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:04",
+   "motif": "",
+   "themes": [
+    "propriété privée",
+    "laïcité",
+    "république",
+    "sécurité"
+   ]
   },
   {
    "id": "b9cdef38d4",
    "grief": "reproche à l'extrême gauche de vouloir abattre un avantage historique de la France en s'attaquant au nucléaire",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Jordan Bardella",
@@ -98,12 +138,20 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:04",
+   "motif": "",
+   "themes": [
+    "écologie",
+    "nucléaire",
+    "économie",
+    "énergie"
+   ]
   },
   {
    "id": "c8166610a8",
    "grief": "reproche à l'extrême gauche d'être intolérante et sectaire, et de jouer le pourrissement à l'Assemblée nationale",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Jordan Bardella",
@@ -114,12 +162,20 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:05",
+   "motif": "",
+   "themes": [
+    "institutions",
+    "démocratie",
+    "politique",
+    "respect"
+   ]
   },
   {
    "id": "823c1f405a",
    "grief": "reproche à l'extrême gauche d'avoir cautionné le pire de l'antisémitisme en refusant de condamner les attentats du Hamas",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Jordan Bardella",
@@ -130,12 +186,20 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:05",
+   "motif": "",
+   "themes": [
+    "antisémitisme",
+    "terrorisme",
+    "sécurité",
+    "valeurs"
+   ]
   },
   {
    "id": "8ed5746d61",
    "grief": "reproche à l'extrême gauche d'assumer une stratégie du conflit permanent",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Jordan Bardella",
@@ -146,7 +210,15 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:05",
+   "motif": "",
+   "themes": [
+    "politique",
+    "institutions",
+    "démocratie",
+    "stabilité"
+   ]
   }
  ],
  "justification": "Le camp d'extrême droite qualifie l'extrême gauche de menace existentielle et d'agents du chaos, ce qui correspond à une relation d'ennemi principal."

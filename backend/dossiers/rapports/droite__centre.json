@@ -7,7 +7,7 @@
   {
    "id": "65c71a9cc7",
    "grief": "reproche au centre d'être trop complaisant envers la gauche et de manquer de fermeté sur les valeurs républicaines",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Bruno Retailleau",
@@ -18,7 +18,16 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:02",
+   "motif": "",
+   "themes": [
+    "institutions",
+    "laïcité",
+    "sécurité",
+    "immigration",
+    "justice"
+   ]
   }
  ],
  "justification": "La droite critique le centre sur des positions jugées trop proches de la gauche ou trop modérées, tout en reconnaissant une proximité électorale sur certains sujets, ce qui en fait un concurrent pour le même électorat."

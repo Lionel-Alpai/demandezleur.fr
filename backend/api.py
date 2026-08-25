@@ -317,7 +317,7 @@ async def debat_stream(request: Request):
                 dossier_neuf = any(p.get("type") in ("dossier", "reproche") and not p.get("deja_cite") for p in preuves_locuteur)
                 dossier_use = any(p.get("type") in ("dossier", "reproche") and p.get("deja_cite") for p in preuves_locuteur)
                 if mode_debat == "arene" and dossier_neuf:
-                    rappel = "Prends la parole maintenant. Tu as un DOSSIER NEUF sur au moins un adversaire présent : place UN coup de dossier (fait vérifié avec sa qualification exacte, ou reproche documenté porté comme reproche), en une phrase, puis reviens au fond. Ne ressers rien de ce qui est marqué DÉJÀ CITÉ."
+                    rappel = "Prends la parole maintenant. Le dossier contient un élément NEUF en rapport avec ce sujet : si, et seulement si, il sert ton argument ou contredit l'adversaire, place-le en une phrase (fait avec sa qualification exacte, ou reproche porté comme reproche), puis reviens au fond. Hors propos, tu n'y touches pas."
                 elif mode_debat == "arene" and dossier_use:
                     rappel = "Prends la parole maintenant. Le dossier a DÉJÀ SERVI dans ce débat : ne le répète pas, pas même en passant — joue le fond, le programme et la pièce au dossier."
                 else:

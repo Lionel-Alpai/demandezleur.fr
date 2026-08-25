@@ -18,7 +18,13 @@
      "n_sources": 2
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "themes": [
+    "probité",
+    "justice",
+    "argent public",
+    "institutions"
+   ]
   },
   {
    "id": "0b99917a4c",
@@ -34,7 +40,13 @@
      "n_sources": 2
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "themes": [
+    "dignité",
+    "débat public",
+    "campagne électorale",
+    "institutions"
+   ]
   },
   {
    "id": "7b709d0d3a",
@@ -52,7 +64,15 @@
    ],
    "verifie_le": "2026-08-25",
    "decide_le": "2026-08-25T22:36",
-   "motif": ""
+   "motif": "",
+   "themes": [
+    "république",
+    "sécurité",
+    "économie",
+    "travail",
+    "retraites",
+    "immigration"
+   ]
   },
   {
    "id": "4ea888a14c",
@@ -70,7 +90,13 @@
    ],
    "verifie_le": "2026-08-25",
    "decide_le": "2026-08-25T22:36",
-   "motif": ""
+   "motif": "",
+   "themes": [
+    "vérité",
+    "manipulation",
+    "confiance",
+    "démocratie"
+   ]
   },
   {
    "id": "9cca9521e2",
@@ -88,7 +114,13 @@
    ],
    "verifie_le": "2026-08-25",
    "decide_le": "2026-08-25T22:36",
-   "motif": ""
+   "motif": "",
+   "themes": [
+    "outrance",
+    "dignité",
+    "sécurité",
+    "terrorisme"
+   ]
   },
   {
    "id": "01c88b1b14",
@@ -106,7 +138,13 @@
    ],
    "verifie_le": "2026-08-25",
    "decide_le": "2026-08-25T22:37",
-   "motif": ""
+   "motif": "",
+   "themes": [
+    "amour de la france",
+    "unité",
+    "tolérance",
+    "laïcité"
+   ]
   },
   {
    "id": "549e021d2f",
@@ -124,7 +162,13 @@
    ],
    "verifie_le": "2026-08-25",
    "decide_le": "2026-08-25T22:37",
-   "motif": ""
+   "motif": "",
+   "themes": [
+    "terrorisme",
+    "instrumentalisation",
+    "sécurité",
+    "politique"
+   ]
   }
  ],
  "justification": "Les responsables de gauche qualifient Marine Le Pen de menace pour la République et l'accusent de nuire à la cohésion nationale, la traitant comme un adversaire politique majeur."

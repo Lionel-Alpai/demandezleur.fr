@@ -7,7 +7,7 @@
   {
    "id": "21ac613a2c",
    "grief": "reproche aux souverainistes de diviser le camp national et de faire le jeu de l'extrême gauche en maintenant des candidatures séparées",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Marine Le Pen",
@@ -18,7 +18,16 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T23:05",
+   "motif": "",
+   "themes": [
+    "institutions",
+    "politique",
+    "union nationale",
+    "souveraineté",
+    "extrême gauche"
+   ]
   }
  ],
  "justification": "Le RN critique les souverainistes comme des concurrents sur le même électorat, les accusant de diviser le camp national et de faire le jeu de l'extrême gauche."

@@ -8,7 +8,7 @@
    "fait": "Le Conseil d'État a confirmé l'obligation pour la région Hauts-de-France de verser les subventions dues au lycée Averroès comme pour tout lycée sous contrat, condamnant Xavier Bertrand pour la seconde fois dans ce litige.",
    "date": "2024-04-22",
    "instance": "Conseil d'État",
-   "statut": "a_valider",
+   "statut": "valide",
    "sources": [
     {
      "url": "https://www.mediacites.fr/breve/lille/2024/04/23/subventions-au-lycee-musulman-averroes-xavier-bertrand-condamne-pour-la-seconde-fois-par-le-conseil-detat/",
@@ -17,7 +17,16 @@
     }
    ],
    "verifie_le": "2026-08-25",
-   "notes": "réfutation : confirme (1 sources concordantes, 0 médias de référence) — L'article S6 confirme exactement le fait : le Conseil d'État a confirmé l'obligation de verser les subventions au lycée Averroès et condamné Xavier Bertrand pour la seconde fois."
+   "notes": "réfutation : confirme (1 sources concordantes, 0 médias de référence) — L'article S6 confirme exactement le fait : le Conseil d'État a confirmé l'obligation de verser les subventions au lycée Averroès et condamné Xavier Bertrand pour la seconde fois.",
+   "decide_le": "2026-08-25T23:02",
+   "motif": "",
+   "themes": [
+    "probité",
+    "justice",
+    "argent public",
+    "institutions",
+    "école"
+   ]
   },
   {
    "id": "b813e6099a",
@@ -25,7 +34,7 @@
    "fait": "La cour administrative d'appel de Douai a annulé la décision de Xavier Bertrand de retirer la subvention à la radio Pastel FM, estimant que les accusations de 'prosélytisme religieux' ne reposaient sur aucun élément matériel.",
    "date": "2024-03-14",
    "instance": "Cour administrative d'appel de Douai",
-   "statut": "a_valider",
+   "statut": "valide",
    "sources": [
     {
      "url": "https://www.mediapart.fr/journal/france/200324/subvention-d-une-radio-roubaisienne-xavier-bertrand-desavoue-par-la-justice",
@@ -34,7 +43,16 @@
     }
    ],
    "verifie_le": "2026-08-25",
-   "notes": "réfutation : confirme (1 sources concordantes, 1 médias de référence) — L'article Mediapart confirme que la cour administrative d'appel de Douai a annulé la décision de Xavier Bertrand de retirer la subvention à Pastel FM, estimant que les accusations de 'prosélytisme religieux' ne reposaient sur aucun élément matériel."
+   "notes": "réfutation : confirme (1 sources concordantes, 1 médias de référence) — L'article Mediapart confirme que la cour administrative d'appel de Douai a annulé la décision de Xavier Bertrand de retirer la subvention à Pastel FM, estimant que les accusations de 'prosélytisme religieux' ne reposaient sur aucun élément matériel.",
+   "decide_le": "2026-08-25T23:02",
+   "motif": "",
+   "themes": [
+    "probité",
+    "justice",
+    "liberté de la presse",
+    "laïcité",
+    "institutions"
+   ]
   },
   {
    "id": "b1782dc9d7",
@@ -51,7 +69,13 @@
     }
    ],
    "verifie_le": "2026-08-25",
-   "notes": "réfutation : refute (0 sources concordantes, 0 médias de référence) — Aucun article ne mentionne la condamnation de la région Hauts-de-France à verser 3000 euros à Alexandre Ouizille pour des subventions illégales à une association anti-éolien ; les articles fournis traitent d'autres sujets (prénom Xavier, affaire Le Pen, subventions au lycée Averroès, diffamation, etc.) et ne contiennent aucune information sur ce fait."
+   "notes": "réfutation : refute (0 sources concordantes, 0 médias de référence) — Aucun article ne mentionne la condamnation de la région Hauts-de-France à verser 3000 euros à Alexandre Ouizille pour des subventions illégales à une association anti-éolien ; les articles fournis traitent d'autres sujets (prénom Xavier, affaire Le Pen, subventions au lycée Averroès, diffamation, etc.) et ne contiennent aucune information sur ce fait.",
+   "themes": [
+    "probité",
+    "justice",
+    "argent public",
+    "institutions"
+   ]
   },
   {
    "id": "517faf4813",
@@ -59,7 +83,7 @@
    "fait": "Xavier Bertrand a été mis en examen pour diffamation envers Mediapart le 30 juin 2011, pour des propos tenus le 6 juillet 2010 où il accusait le site d'utiliser des 'méthodes fascistes'.",
    "date": "2011-06-30",
    "instance": "Juge d'instruction de Paris",
-   "statut": "a_valider",
+   "statut": "valide",
    "sources": [
     {
      "url": "https://lepetitjournal.com/xavier-bertrand-mis-en-examen-pour-diffamation-envers-mediapart-191520",
@@ -83,7 +107,15 @@
     }
    ],
    "verifie_le": "2026-08-25",
-   "notes": "réfutation : confirme (4 sources concordantes, 2 médias de référence) — Les articles S8, S9, S10 et S11 confirment la mise en examen de Xavier Bertrand pour diffamation envers Mediapart le 30 juin 2011, pour des propos tenus le 6 juillet 2010, incluant l'expression 'méthodes fascistes'."
+   "notes": "réfutation : confirme (4 sources concordantes, 2 médias de référence) — Les articles S8, S9, S10 et S11 confirment la mise en examen de Xavier Bertrand pour diffamation envers Mediapart le 30 juin 2011, pour des propos tenus le 6 juillet 2010, incluant l'expression 'méthodes fascistes'.",
+   "decide_le": "2026-08-25T23:02",
+   "motif": "",
+   "themes": [
+    "probité",
+    "justice",
+    "liberté de la presse",
+    "institutions"
+   ]
   }
  ]
 }
