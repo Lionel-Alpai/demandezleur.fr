@@ -228,17 +228,6 @@ def construire_prompt_debat(
             + "\nRÈGLE : toute affirmation sur le programme, le bilan, les votes ou les fonctions d'un adversaire doit s'appuyer sur une de ces pièces. Sinon, tu ne la fais pas."
         )
 
-    # ARÈNE — le DOSSIER (faits vérifiés + reproches documentés), par adversaire présent
-    if mode == "arene" and adversaires:
-        try:
-            import dossiers as _d
-            texte_dossier, preuves_dossier = _d.pieces_pour(candidat, adversaires)
-            if texte_dossier:
-                prompt += texte_dossier
-                liste_preuves.extend(preuves_dossier)
-        except Exception:
-            pass
-
     # [parlement] mode arene : consigne + pièce Assemblée (verbatim officiel)
     if mode == "arene":
         try:
@@ -266,6 +255,17 @@ def construire_prompt_debat(
                         "texte_integral": sq["texte"],
                         "orateur": sq["orateur"], "date_lisible": sq["date_lisible"], "url": sq.get("url", ""),
                     })
+        except Exception:
+            pass
+
+    # ARÈNE — le DOSSIER (faits vérifiés + reproches documentés), en fin de prompt : c'est la dernière chose lue
+    if mode == "arene" and adversaires:
+        try:
+            import dossiers as _d
+            texte_dossier, preuves_dossier = _d.pieces_pour(candidat, adversaires)
+            if texte_dossier:
+                prompt += texte_dossier
+                liste_preuves.extend(preuves_dossier)
         except Exception:
             pass
     return prompt, liste_preuves
