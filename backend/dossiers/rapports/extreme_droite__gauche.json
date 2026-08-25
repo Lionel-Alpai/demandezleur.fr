@@ -1,0 +1,73 @@
+{
+ "de": "extreme_droite",
+ "vers": "gauche",
+ "registre": "ennemi_principal",
+ "maj": "2026-08-25",
+ "griefs": [
+  {
+   "id": "7e3893cf5d",
+   "grief": "reproche à la gauche d'être une menace existentielle pour la Nation française",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Jordan Bardella",
+     "date": "2024-07-03",
+     "verbatim": "L’extrême gauche constitue une menace existentielle pour la Nation française.",
+     "media": "rassemblementnational.fr",
+     "source_url": "https://rassemblementnational.fr/",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  },
+  {
+   "id": "d256f9672f",
+   "grief": "reproche à la gauche de vouloir ouvrir les vannes de l'immigration et libérer des détenus",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Jordan Bardella",
+     "date": "2024-07-03",
+     "verbatim": "Une victoire de cette coalition, qui veut ouvrir grand les vannes de l’immigration et libérer 20% des détenus, signifierait pour la France une régression inédite de l’ordre public.",
+     "media": "rassemblementnational.fr",
+     "source_url": "https://rassemblementnational.fr/",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  },
+  {
+   "id": "8d8b4c5ce6",
+   "grief": "reproche à la gauche d'être intolérante et sectaire, et de jouer le pourrissement à l'Assemblée nationale",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Jordan Bardella",
+     "date": "2024-07-03",
+     "verbatim": "Cette extrême gauche, intolérante et sectaire, n’a cessé, à l’Assemblée nationale, de jouer le pourrissement et de faire naître les tensions.",
+     "media": "rassemblementnational.fr",
+     "source_url": "https://rassemblementnational.fr/",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  },
+  {
+   "id": "08ebd1ce14",
+   "grief": "reproche à la gauche de cautionner l'antisémitisme en refusant de condamner les attentats du Hamas",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Jordan Bardella",
+     "date": "2024-07-03",
+     "verbatim": "En refusant de condamner les attentats ignobles perpétrés par le Hamas, elle a cautionné le pire d’un antisémitisme que l’on croyait révolu.",
+     "media": "rassemblementnational.fr",
+     "source_url": "https://rassemblementnational.fr/",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  }
+ ],
+ "justification": "Le camp d'extrême droite, à travers Jordan Bardella, qualifie la gauche de 'menace existentielle' et l'accuse de vouloir détruire la Nation, ce qui correspond à une relation d'ennemi principal."
+}

@@ -1,0 +1,49 @@
+{
+ "de": "centre",
+ "vers": "extreme_droite",
+ "registre": "concurrent_meme_electorat",
+ "maj": "2026-08-25",
+ "griefs": [
+  {
+   "id": "7404fa0800",
+   "grief": "reproche à Marine Le Pen de détourner l'identité et le nom de son parti pour créer une confusion chez les électeurs",
+   "statut": "verifie_auto",
+   "exemples": [
+    {
+     "auteur": "Gabriel Attal",
+     "date": "2026-07-30",
+     "verbatim": "Notre identité 'Renaissance', qui désigne notre mouvement politique depuis 2019, ne peut être détournée dans le seul but de créer une confusion dans l'esprit des électeurs.",
+     "media": "gala.fr",
+     "source_url": "https://www.gala.fr/politique/marine-le-pen-et-gabriel-attal-s-affrontent-au-tribunal-la-justice-a-tranche-20260801",
+     "n_sources": 1
+    },
+    {
+     "auteur": "Renaissance (parti de Gabriel Attal)",
+     "date": "2026-07-30",
+     "verbatim": "Une formation politique ne peut voir son identité brouillée ou détournée au moment où le débat démocratique exige, au contraire, clarté et sincérité.",
+     "media": "nouvelobs.com",
+     "source_url": "https://www.nouvelobs.com/politique/20260730.OBS117082/gabriel-attal-deboute-par-la-justice-face-a-marine-le-pen-sur-l-utilisation-de-renaissance.html",
+     "n_sources": 2
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  },
+  {
+   "id": "2fde7ccaf0",
+   "grief": "reproche à Marine Le Pen d'être une candidate condamnée pour détournement de fonds, inapte à représenter la France",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Gabriel Attal",
+     "date": "2026-07-10",
+     "verbatim": "Vous en avez marre de la vieille politique ? Nous aussi.",
+     "media": "leparisien.fr",
+     "source_url": "https://www.leparisien.fr/elections/presidentielle/bracelet-electronique-condamnation-gabriel-attal-sattaque-sans-la-nommer-a-marine-le-pen-dans-un-tract-10-07-2026-XXYMDUWV2ND3FDBEEKKW356DB4.php",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  }
+ ],
+ "justification": "Le camp centre, à travers Gabriel Attal, attaque Marine Le Pen sur des thèmes électoraux (condamnation, détournement de fonds) et tente de protéger son identité politique, ce qui indique une concurrence directe pour le même électorat modéré."
+}

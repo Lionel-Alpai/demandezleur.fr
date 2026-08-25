@@ -1,0 +1,57 @@
+{
+ "de": "extreme_droite",
+ "vers": "centre",
+ "registre": "concurrent_meme_electorat",
+ "maj": "2026-08-25",
+ "griefs": [
+  {
+   "id": "9864671373",
+   "grief": "reproche au centre d'être responsable des politiques destructrices pour le pouvoir d'achat et la souveraineté nationale",
+   "statut": "verifie_auto",
+   "exemples": [
+    {
+     "auteur": "Marine Le Pen",
+     "date": "2026-04-17",
+     "verbatim": "Il n’est jamais inutile de rappeler que l’héritage d’Emmanuel Macron, c’est aussi celui de tous ceux qui ont docilement mis en œuvre ses politiques destructrices pour le pouvoir d’achat des Français et la souveraineté nationale",
+     "media": "gentside.com",
+     "source_url": "https://www.gentside.com/news/politique/edouard-philippe-repond-sechement-aux-attaques-de-marine-le-pen-sur-son-bilan-a-matignon_art125365.html",
+     "n_sources": 2
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  },
+  {
+   "id": "0cb16c8f4c",
+   "grief": "reproche au centre de tenter une escroquerie pour se déresponsabiliser de son bilan",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Marine Le Pen",
+     "date": "2026-04-17",
+     "verbatim": "Nous ne sommes pas dupes de l’escroquerie",
+     "media": "lefigaro.fr",
+     "source_url": "https://www.lefigaro.fr/politique/passe-d-armes-entre-marine-le-pen-et-edouard-phillippe-sur-le-nucleaire-20260417?msockid=1f757b328d3c6e0708a56cf28c2b6f51",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  },
+  {
+   "id": "d4fa4b465a",
+   "grief": "reproche au centre d'être hypocrite en se présentant comme nouveau alors qu'il est l'artisan du macronisme",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Marine Le Pen",
+     "date": "2026-04-17",
+     "verbatim": "La campagne présidentielle qui s’annonce sera aussi l’occasion pour nous de démasquer cette hypocrisie",
+     "media": "lefigaro.fr",
+     "source_url": "https://www.lefigaro.fr/politique/passe-d-armes-entre-marine-le-pen-et-edouard-phillippe-sur-le-nucleaire-20260417?msockid=1f757b328d3c6e0708a56cf28c2b6f51",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  }
+ ],
+ "justification": "L'extrême droite attaque le centre sur son bilan et sa crédibilité, tout en cherchant à capter son électorat, ce qui correspond à une relation de concurrence pour le même électorat."
+}

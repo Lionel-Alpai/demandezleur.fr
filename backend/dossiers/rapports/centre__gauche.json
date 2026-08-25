@@ -1,0 +1,41 @@
+{
+ "de": "centre",
+ "vers": "gauche",
+ "registre": "concurrent_meme_electorat",
+ "maj": "2026-08-25",
+ "griefs": [
+  {
+   "id": "a258cefa2b",
+   "grief": "reproche à la gauche de ne pas être crédible pour gouverner et de rester dans l'opposition stérile",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Édouard Philippe",
+     "date": "2025-08-30",
+     "verbatim": "La France ne pourra s'en sortir que par la responsabilité et le compromis.",
+     "media": "lelaboratoiredelarepublique.fr",
+     "source_url": "https://www.lelaboratoiredelarepublique.fr/evenements/comptes-rendus/debat-e-philippe-et-b-cazeneuve-comment-sortir-de-limpasse-universite-dete-2025/",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  },
+  {
+   "id": "bf42333831",
+   "grief": "reproche à Jean-Luc Mélenchon de ne pas être capable de rassembler la gauche et de faire preuve d'extrémisme",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Gabriel Attal",
+     "date": "2026-05-22",
+     "verbatim": "Extrême centre.",
+     "media": "election-presidentielle-francaise-2027.fr",
+     "source_url": "https://election-presidentielle-francaise-2027.fr/les-candidats-declares-pour-lelection-de-2027/",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  }
+ ],
+ "justification": "Le camp centre, représenté par Édouard Philippe et Gabriel Attal, s'adresse à la gauche comme à un concurrent pour l'électorat modéré, tout en la critiquant sur son incapacité à gouverner et son extrémisme, sans la traiter en ennemi principal."
+}

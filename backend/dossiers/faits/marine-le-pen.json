@@ -1,0 +1,65 @@
+{
+ "candidat_id": "marine-le-pen",
+ "maj": "2026-08-25",
+ "entrees": [
+  {
+   "id": "8ca64a20be",
+   "classe": "condamnation_appel",
+   "fait": "Le 7 juillet 2026, la cour d'appel de Paris a condamné Marine Le Pen pour détournement de fonds publics à 100 000 euros d'amende, trois ans de prison dont deux ans avec sursis et un an ferme aménageable sous bracelet électronique, et à une peine d'inéligibilité de 45 mois dont 30 mois avec sursis. La peine ferme d'inéligibilité de 15 mois, déjà purgée en raison de l'exécution provisoire de la première instance, la rend éligible à l'élection présidentielle de 2027. Marine Le Pen a annoncé se pourvoir en cassation, ce qui suspend l'exécution de la peine.",
+   "date": "2026-07-07",
+   "instance": "Cour d'appel de Paris",
+   "statut": "a_valider",
+   "sources": [
+    {
+     "url": "https://www.publicsenat.fr/actualites/politique/direct-suivez-le-delibere-du-proces-en-appel-de-marine-le-pen",
+     "media": "publicsenat.fr",
+     "titre": "Marine Le Pen condamnée à 1 an ferme sous bracelet électronique, et à ..."
+    },
+    {
+     "url": "https://www.touteleurope.eu/vie-politique-des-etats-membres/proces-des-assistants-du-rn-marine-le-pen-condamnee-en-appel-mais-eligible-a-l-election-presidentielle-2027/",
+     "media": "touteleurope.eu",
+     "titre": "Procès des assistants du RN : Marine Le Pen condamnée en appel, mais ..."
+    },
+    {
+     "url": "https://www.franceinfo.fr/politique/front-national/affaire-des-assistants-fn-au-parlement-europeen/apres-le-pourvoi-en-cassation-de-marine-le-pen-on-vous-explique-comment-va-se-derouler-l-examen-de-ce-recours-scrute-en-haut-lieu_8099348.html",
+     "media": "franceinfo.fr",
+     "titre": "Après le pourvoi en cassation de Marine Le Pen, on vous explique ..."
+    }
+   ],
+   "verifie_le": "2026-08-25",
+   "notes": "réfutation : confirme (3 sources concordantes, 2 médias de référence) — Les articles S1, S6 et S9 confirment tous les éléments du fait : date, juridiction, peines, éligibilité et pourvoi en cassation suspensif. | divergences : S1 indique '1 an ferme sous bracelet électronique' et '45 mois d'inéligibilité, dont 30 mois avec sursis' ; S6 précise 'trois ans de prison, dont deux ans avec sursis et un an ferme aménageable avec bracelet électronique' et '45 mois dont 30 mois assortis du sursis' ; S9 confirme 'trois ans de prison, dont un an ferme aménageable sous bracelet électronique, une amende de 100 000 euros et une peine d'inéligibilité de 45 mois, dont 30 mois avec sursis'."
+  },
+  {
+   "id": "24414ceca2",
+   "classe": "condamnation_appel",
+   "fait": "Le 31 mars 2025, le tribunal correctionnel de Paris a condamné Marine Le Pen pour détournement de fonds publics à quatre ans de prison dont deux ans ferme aménagés sous bracelet électronique, 100 000 euros d'amende, et cinq ans d'inéligibilité avec exécution provisoire. Cette décision de première instance a été frappée d'appel par Marine Le Pen.",
+   "date": "2025-03-31",
+   "instance": "Tribunal correctionnel de Paris",
+   "statut": "refuse",
+   "sources": [
+    {
+     "url": "https://www.publicsenat.fr/actualites/politique/direct-suivez-le-delibere-du-proces-en-appel-de-marine-le-pen",
+     "media": "publicsenat.fr",
+     "titre": "Marine Le Pen condamnée à 1 an ferme sous bracelet électronique, et à ..."
+    },
+    {
+     "url": "https://www.france24.com/fr/france/20250331-tribunal-condamnation-marine-le-pen-principaux-points-du-jugement-rassemblement-national",
+     "media": "france24.com",
+     "titre": "Condamnation de Marine Le Pen : les principaux points du jugement"
+    },
+    {
+     "url": "https://www.leclubdesjuristes.com/justice/condamnation-de-marine-le-pen-des-motivations-qui-font-debat-10159/",
+     "media": "leclubdesjuristes.com",
+     "titre": "Condamnation de Marine Le Pen : des motivations qui font débat"
+    },
+    {
+     "url": "https://www.simonnetavocat.fr/jugement-marine-le-pen-en-entier-pdf-affaire-des-assistant-parlementaires/",
+     "media": "simonnetavocat.fr",
+     "titre": "Jugement Marine Le Pen en entier (pdf) - affaire des assistant ..."
+    }
+   ],
+   "verifie_le": "2026-08-25",
+   "notes": "réfutation : refute (9 sources concordantes, 3 médias de référence) — Le fait est confirmé par les sources S2, S3, S4, S5, S6, S7, S8, S9, S10, mais S1 contredit la peine de prison en indiquant '1 an ferme sous bracelet électronique' et une inéligibilité de 45 mois, ce qui correspond à la décision d'appel, pas à la première instance. | divergences : S1 mentionne 'quatre ans de prison dont deux ans ferme, 100 000 euros d'amende et surtout cinq ans d'inéligibilité avec exécution provisoire' ; S2 précise 'cinq ans d'inéligibilité immédiate et quatre ans de prison, dont deux ferme aménagés sous bracelet électronique, et à une amende de 100 000 euros' ; S3 détaille 'quatre ans d'emprisonnement, dont deux ans assortis du sursis' et 'une amende de 100 000 euros' ; S4 contient le jugement intégral."
+  }
+ ]
+}

@@ -1,0 +1,156 @@
+{
+ "candidat_id": "jean-luc-melenchon",
+ "maj": "2026-08-25",
+ "entrees": [
+  {
+   "id": "01806992c7",
+   "classe": "condamnation_definitive",
+   "fait": "Condamné à trois mois de prison avec sursis et 8 000 euros d'amende pour rébellion et provocation lors de la perquisition du siège de La France insoumise le 16 octobre 2018, par le tribunal correctionnel de Bobigny le 9 décembre 2019. Jean-Luc Mélenchon a annoncé ne pas faire appel, rendant la décision définitive.",
+   "date": "2019-12-09",
+   "instance": "Tribunal correctionnel de Bobigny",
+   "statut": "verifie_auto",
+   "sources": [
+    {
+     "url": "https://www.publicsenat.fr/actualites/non-classe/melenchon-condamne-a-trois-mois-avec-sursis-pour-la-perquisition-houleuse-a-lfi",
+     "media": "publicsenat.fr",
+     "titre": "Mélenchon condamné à trois mois avec sursis pour la perquisition ..."
+    },
+    {
+     "url": "https://www.leparisien.fr/politique/jean-luc-melenchon-condamne-a-trois-mois-de-prison-avec-sursis-pour-rebellion-et-provocation-09-12-2019-8212674.php",
+     "media": "leparisien.fr",
+     "titre": "Jean-Luc Mélenchon condamné à trois mois de prison avec sursis pour ..."
+    },
+    {
+     "url": "https://www.radiofrance.fr/franceinter/affaires-en-cours-et-condamnations-ou-en-sont-les-candidats-a-la-presidentielle-avec-la-justice-9223367",
+     "media": "radiofrance.fr",
+     "titre": "Affaires en cours et condamnations : où en sont les candidats à la ..."
+    },
+    {
+     "url": "https://www.radiofrance.fr/franceinter/condamne-a-3-mois-de-prison-avec-sursis-jean-luc-melenchon-denonce-un-jugement-politique-1251608",
+     "media": "radiofrance.fr",
+     "titre": "Condamné à 3 mois de prison avec sursis, Jean-Luc Mélenchon dénonce un ..."
+    },
+    {
+     "url": "https://www.charentelibre.fr/societe/justice/assistant-parlementaire-jean-luc-melenchon-echappe-a-une-mise-en-examen-apres-huit-ans-d-enquete-29238131.php",
+     "media": "charentelibre.fr",
+     "titre": "Assistant parlementaire : Jean-Luc Mélenchon échappe à une mise en examen après huit ans d’enquête - Charente Libre.fr"
+    }
+   ],
+   "verifie_le": "2026-08-25",
+   "notes": "réfutation : confirme (4 sources concordantes, 4 médias de référence) — Les articles S1, S2, S6 et S13 confirment la condamnation à trois mois de prison avec sursis et 8 000 euros d'amende pour rébellion et provocation lors de la perquisition du 16 octobre 2018, par le tribunal correctionnel de Bobigny le 9 décembre 2019, et l'annonce de ne pas faire appel."
+  },
+  {
+   "id": "f1d9f996ba",
+   "classe": "condamnation_appel",
+   "fait": "Condamné en appel pour diffamation envers l'ancien journaliste du Monde Pablo Paranagua, pour des propos tenus en février 2018 sur Facebook. La cour d'appel de Paris a condamné Jean-Luc Mélenchon à verser un euro symbolique de dommages et intérêts et 2 000 euros au titre des frais de justice. Le jugement est intervenu le 29 juin 2022.",
+   "date": "2022-06-29",
+   "instance": "Cour d'appel de Paris",
+   "statut": "a_valider",
+   "sources": [
+    {
+     "url": "https://www.europe1.fr/politique/jean-luc-melenchon-condamne-en-appel-pour-diffamation-envers-un-ex-journaliste-4120613",
+     "media": "europe1.fr",
+     "titre": "Jean-Luc Mélenchon condamné en appel pour diffamation envers un ex ..."
+    },
+    {
+     "url": "https://www.epochtimes.fr/jean-luc-melenchon-condamne-par-la-cour-dappel-de-paris-pour-diffamation-envers-un-ex-journaliste-2061451.html",
+     "media": "epochtimes.fr",
+     "titre": "Jean-Luc Mélenchon condamné par la cour d'appel de Paris pour ..."
+    },
+    {
+     "url": "https://www.jeanmarcmorandini.com/article-504047-jean-luc-melenchon-condamne-par-la-cour-d-appel-de-paris-pour-diffamation-a-l-encontre-d-un-ancien-journaliste-du-monde-qu-il-accusait-d-avoir-contribue-a-l-arrestation-d-un-militant-contre-la-dictature-chilienne.html",
+     "media": "jeanmarcmorandini.com",
+     "titre": "Jean-Luc Mélenchon condamné par la cour d'appel de Paris pour ..."
+    },
+    {
+     "url": "https://www.valeursactuelles.com/politique/jean-luc-melenchon-condamne-en-appel-pour-avoir-diffame-un-ancien-journaliste-du-monde",
+     "media": "valeursactuelles.com",
+     "titre": "Jean-Luc Mélenchon condamné en appel pour avoir diffamé un ancien ..."
+    },
+    {
+     "url": "https://www.sudouest.fr/justice/jean-luc-melenchon-condamne-en-appel-pour-diffamation-envers-un-ex-journaliste-11481201.php",
+     "media": "sudouest.fr",
+     "titre": "Jean-Luc Mélenchon condamné en appel pour diffamation envers un ex ..."
+    }
+   ],
+   "verifie_le": "2026-08-25",
+   "notes": "réfutation : confirme (5 sources concordantes, 2 médias de référence) — Les articles S7, S8, S9, S10 et S11 confirment tous la condamnation en appel pour diffamation envers Pablo Paranagua, les propos de février 2018, la cour d'appel de Paris, le jugement du 29 juin 2022, l'euro symbolique et les 2000 euros de frais de justice."
+  },
+  {
+   "id": "a87d4da26e",
+   "classe": "condamnation_appel",
+   "fait": "Condamné en première instance pour injure publique envers Radio France, après avoir qualifié d'\"abrutis\" et de \"menteurs\" des journalistes du groupe ayant enquêté sur sa campagne de 2017. Le jugement est intervenu en janvier 2022. Son avocat a annoncé faire appel, donc la condamnation n'est pas définitive.",
+   "date": "2022-01-01",
+   "instance": "Tribunal correctionnel de Paris",
+   "statut": "refuse",
+   "sources": [
+    {
+     "url": "https://www.radiofrance.fr/franceinter/affaires-en-cours-et-condamnations-ou-en-sont-les-candidats-a-la-presidentielle-avec-la-justice-9223367",
+     "media": "radiofrance.fr",
+     "titre": "Affaires en cours et condamnations : où en sont les candidats à la ..."
+    }
+   ],
+   "verifie_le": "2026-08-25",
+   "notes": "réfutation : refute (0 sources concordantes, 1 médias de référence) — Le fait confond deux affaires distinctes : la condamnation pour injure publique envers Radio France (janvier 2022, appel) et la condamnation pour rébellion et provocation lors de la perquisition de LFI (décembre 2019, sans appel). | divergences : La date exacte du jugement n'est pas précisée dans la source, seulement 'janvier dernier'."
+  },
+  {
+   "id": "c21c015c3f",
+   "classe": "condamnation_appel",
+   "fait": "Condamné en première instance à 500 euros d'amende avec sursis pour avoir qualifié l'ancien journaliste du Monde Pablo Paranagua d'\"assassin repenti\" sur son blog en 2016. Le jugement est intervenu le 24 septembre 2021. Son avocat a annoncé faire appel, donc la condamnation n'est pas définitive.",
+   "date": "2021-09-24",
+   "instance": "Tribunal correctionnel de Paris",
+   "statut": "a_valider",
+   "sources": [
+    {
+     "url": "https://www.radiofrance.fr/franceinter/affaires-en-cours-et-condamnations-ou-en-sont-les-candidats-a-la-presidentielle-avec-la-justice-9223367",
+     "media": "radiofrance.fr",
+     "titre": "Affaires en cours et condamnations : où en sont les candidats à la ..."
+    },
+    {
+     "url": "https://www.europe1.fr/politique/jean-luc-melenchon-condamne-en-appel-pour-diffamation-envers-un-ex-journaliste-4120613",
+     "media": "europe1.fr",
+     "titre": "Jean-Luc Mélenchon condamné en appel pour diffamation envers un ex ..."
+    },
+    {
+     "url": "https://www.jeanmarcmorandini.com/article-504047-jean-luc-melenchon-condamne-par-la-cour-d-appel-de-paris-pour-diffamation-a-l-encontre-d-un-ancien-journaliste-du-monde-qu-il-accusait-d-avoir-contribue-a-l-arrestation-d-un-militant-contre-la-dictature-chilienne.html",
+     "media": "jeanmarcmorandini.com",
+     "titre": "Jean-Luc Mélenchon condamné par la cour d'appel de Paris pour ..."
+    },
+    {
+     "url": "https://www.valeursactuelles.com/politique/jean-luc-melenchon-condamne-en-appel-pour-avoir-diffame-un-ancien-journaliste-du-monde",
+     "media": "valeursactuelles.com",
+     "titre": "Jean-Luc Mélenchon condamné en appel pour avoir diffamé un ancien ..."
+    },
+    {
+     "url": "https://www.sudouest.fr/justice/jean-luc-melenchon-condamne-en-appel-pour-diffamation-envers-un-ex-journaliste-11481201.php",
+     "media": "sudouest.fr",
+     "titre": "Jean-Luc Mélenchon condamné en appel pour diffamation envers un ex ..."
+    }
+   ],
+   "verifie_le": "2026-08-25",
+   "notes": "réfutation : confirme (5 sources concordantes, 3 médias de référence) — Les articles S3, S7, S9, S10 et S11 confirment la condamnation en première instance à 500 euros d'amende avec sursis pour avoir qualifié Pablo Paranagua d'assassin repenti, le jugement du 24 septembre 2021 et l'appel annoncé."
+  },
+  {
+   "id": "1601e0ebaa",
+   "classe": "mise_en_examen",
+   "fait": "Mis en examen pour escroquerie et tentatives d'escroquerie au préjudice d'une personne publique ou d'un organisme chargé d'une mission de service public pour l'obtention d'un paiement ou d'un avantage indu, dans le cadre de l'enquête sur le financement de sa campagne présidentielle de 2017. L'information judiciaire a été ouverte en novembre 2018.",
+   "date": "2018-11-01",
+   "instance": "Juges d'instruction de Paris",
+   "statut": "refuse",
+   "sources": [
+    {
+     "url": "https://www.mediapart.fr/journal/france/dossier/les-affaires-financieres-de-la-france-insoumise",
+     "media": "mediapart.fr",
+     "titre": "Les affaires financières de La France insoumise | Mediapart"
+    },
+    {
+     "url": "https://www.charentelibre.fr/societe/justice/assistant-parlementaire-jean-luc-melenchon-echappe-a-une-mise-en-examen-apres-huit-ans-d-enquete-29238131.php",
+     "media": "charentelibre.fr",
+     "titre": "Assistant parlementaire : Jean-Luc Mélenchon échappe à une mise en examen après huit ans d’enquête - Charente Libre.fr"
+    }
+   ],
+   "verifie_le": "2026-08-25",
+   "notes": "réfutation : refute (0 sources concordantes, 1 médias de référence) — Les articles S13, S14, S15 et S16 indiquent que l'information judiciaire a été ouverte en novembre 2018 pour escroquerie et tentatives d'escroquerie, mais que l'instruction a été clôturée sans mise en examen en mai 2026, donc le fait tel que formulé est inexact. | divergences : La date exacte de la mise en examen n'est pas précisée, seulement l'ouverture de l'information judiciaire."
+  }
+ ]
+}

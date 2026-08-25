@@ -68,3 +68,6 @@
 .notes-titre { margin: 0 0 var(--sp-1); font-weight: 600; color: #f2a93b; font-size: var(--fs-14); }
 .notes-non-etayees ol { margin: 0; padding-left: 0; list-style: none; }
 .notes-non-etayees li { color: var(--fg-2); font-size: var(--fs-14); margin-bottom: var(--sp-1); }
+.preuve-dossier .preuve-type { color: #f2a93b; }
+.preuve-reproche .preuve-type { color: #8b7bd8; }
+.preuve-reproche .preuve-extrait { font-style: normal; }

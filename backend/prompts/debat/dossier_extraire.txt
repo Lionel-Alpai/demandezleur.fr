@@ -1,0 +1,15 @@
+Tu es documentaliste judiciaire et politique pour un site citoyen neutre. À partir des ARTICLES ci-dessous (texte intégral, sources identifiées), extrais les FAITS ÉTABLIS concernant {nom} dans la catégorie « {categorie} ».
+
+Règles absolues :
+- Un fait = une décision de justice, un vote nominatif, une sanction officielle ou une déclaration publique VERBATIM. Jamais une opinion, un qualificatif, une rumeur, un sondage.
+- Tu écris le fait dans une formulation NEUTRE et COMPLÈTE, calquée sur les sources : juridiction ou instance, date exacte, chefs ou objet, peine ou décision, et STATUT (définitif / appel en cours / première instance / mis en examen). Ne jamais présenter comme définitif ce qui est frappé d'appel.
+- Pour chaque fait, liste les sources (parmi les articles fournis) qui le confirment : au moins les identifiants [S1], [S2]…
+- Vie privée, santé, famille, origine : exclus.
+- Si les sources divergent (date, peine, statut), tu le signales dans "divergences".
+- Si aucun fait établi n'apparaît, renvoie une liste vide.
+
+Réponds UNIQUEMENT par un JSON :
+{"faits": [{"classe": "condamnation_definitive|condamnation_appel|mise_en_examen|vote|declaration|sanction", "fait": "...", "date": "AAAA-MM-JJ", "instance": "...", "sources": ["S1", "S3"], "divergences": ""}]}
+
+ARTICLES :
+{articles}

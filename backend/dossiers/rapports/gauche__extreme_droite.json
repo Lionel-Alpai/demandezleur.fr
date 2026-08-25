@@ -1,0 +1,121 @@
+{
+ "de": "gauche",
+ "vers": "extreme_droite",
+ "registre": "ennemi_principal",
+ "maj": "2026-08-25",
+ "griefs": [
+  {
+   "id": "b024e0b5be",
+   "grief": "reproche à Marine Le Pen d'être indigne de la fonction présidentielle en raison de sa condamnation pour détournement de fonds publics",
+   "statut": "verifie_auto",
+   "exemples": [
+    {
+     "auteur": "Jérôme Guedj",
+     "date": "2025-03-31",
+     "verbatim": "Peut-on se projeter dans le cas où on aurait comme Présidente de la République quelqu’un qui aurait été condamné quelques semaines avant pour détournement de fonds public ? C’est-à-dire pour le mépris de ce qui fait nation. À savoir le respect des finances publiques ; une éthique.",
+     "media": "publicsenat.fr",
+     "source_url": "https://www.publicsenat.fr/emission/bonjour-chez-vous/jerome-guedj-je-nai-pas-envie-que-la-campagne-soit-le-feuilleton-judiciaire-de-marine-le-pen-e0",
+     "n_sources": 2
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  },
+  {
+   "id": "0b99917a4c",
+   "grief": "reproche à Marine Le Pen de polluer le débat public et de nuire à la dignité de la campagne électorale",
+   "statut": "verifie_auto",
+   "exemples": [
+    {
+     "auteur": "Jérôme Guedj",
+     "date": "2025-03-31",
+     "verbatim": "Je m’en fiche de savoir si juridiquement elle peut candidater ou pas (…), je me place sur le terrain de la dignité de notre pays pour la qualité de la campagne. La campagne va être polluée.",
+     "media": "publicsenat.fr",
+     "source_url": "https://www.publicsenat.fr/emission/bonjour-chez-vous/jerome-guedj-je-nai-pas-envie-que-la-campagne-soit-le-feuilleton-judiciaire-de-marine-le-pen-e0",
+     "n_sources": 2
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  },
+  {
+   "id": "7b709d0d3a",
+   "grief": "reproche à Marine Le Pen d'être une menace pour la République et de ne pas offrir de réponses adaptées aux problèmes du pays",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Jérôme Guedj",
+     "date": "2025-03-30",
+     "verbatim": "Sur tous ces sujets, je préfère porter des réponses aux électeurs qui sont tentés par Marine Le Pen. Je m’adresse à tous les électeurs de ce pays pour leur dire que ce n’est pas la bonne réponse.",
+     "media": "lejdd.fr",
+     "source_url": "https://www.lejdd.fr/politique/2027-si-rien-ne-se-passe-la-pente-naturelle-est-la-victoire-de-marine-le-pen-salarme-jerome-guedj-156545",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  },
+  {
+   "id": "4ea888a14c",
+   "grief": "reproche à Marine Le Pen de mentir et de manipuler l'opinion publique",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Bernard Cazeneuve",
+     "date": "2015-11-28",
+     "verbatim": "Marine Le Pen a une stratégie qui m’apparaît de plus en plus clairement dans cette campagne, c'est la stratégie du bobard assumé.",
+     "media": "rtl.fr",
+     "source_url": "https://www.rtl.fr/actu/politique/attentats-a-paris-marine-le-pen-adopte-la-strategie-du-bobard-assume-accuse-bernard-cazeneuve-7780669598",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  },
+  {
+   "id": "9cca9521e2",
+   "grief": "reproche à Marine Le Pen de faire preuve d'outrance et de manquer de dignité dans ses critiques",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Bernard Cazeneuve",
+     "date": "2017-03-18",
+     "verbatim": "Alors qu'un événement grave aurait pu advenir ce matin à Orly, Mme Le Pen choisit l'outrance.",
+     "media": "publicsenat.fr",
+     "source_url": "https://www.publicsenat.fr/actualites/non-classe/orly-cazeneuve-fustige-l-outrance-des-critiques-de-le-pen-57372",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  },
+  {
+   "id": "01c88b1b14",
+   "grief": "reproche à Marine Le Pen de ne pas aimer la France et de vouloir diviser le pays",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Bernard Cazeneuve",
+     "date": "2015-12-07",
+     "verbatim": "Marine Le Pen n'aime pas la France. La France qu'aime Marine Le Pen n'est pas la nôtre, elle n'est pas celle de la Concorde, de la tolérance, de l'altérité.",
+     "media": "rtl.fr",
+     "source_url": "https://www.rtl.fr/actu/politique/marine-le-pen-n-aime-pas-la-france-attaque-bernard-cazeneuve-7780691629",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  },
+  {
+   "id": "549e021d2f",
+   "grief": "reproche à Marine Le Pen d'instrumentaliser le terrorisme à des fins politiques",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Bernard Cazeneuve",
+     "date": "2015-12-07",
+     "verbatim": "Pour Marine Le Pen le terrorisme n'est pas un sujet à combattre, c'est un terreau sur lequel elle prospère.",
+     "media": "rtl.fr",
+     "source_url": "https://www.rtl.fr/actu/politique/marine-le-pen-n-aime-pas-la-france-attaque-bernard-cazeneuve-7780691629",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  }
+ ],
+ "justification": "Les responsables de gauche qualifient Marine Le Pen de menace pour la République et l'accusent de nuire à la cohésion nationale, la traitant comme un adversaire politique majeur."
+}

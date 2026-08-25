@@ -1,0 +1,57 @@
+{
+ "de": "gauche",
+ "vers": "centre",
+ "registre": "concurrent_meme_electorat",
+ "maj": "2026-08-25",
+ "griefs": [
+  {
+   "id": "d50b68ba69",
+   "grief": "reproche au centre de ne pas avoir de projet politique clair et de se contenter de gérer les affaires courantes",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Jérôme Guedj",
+     "date": "2026-02-05",
+     "verbatim": "Je ne veux pas passer par une primaire, car je veux incarner une gauche républicaine, capable de construire des compromis, et non pas une gauche qui s'abandonne dans les dérives de LFI.",
+     "media": "ledauphine.com",
+     "source_url": "https://www.ledauphine.com/elections/2026/02/05/guedj-tondelier-attal-qui-s-est-deja-positionne-comme-candidat-a-la-presidentielle",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  },
+  {
+   "id": "038e1974b4",
+   "grief": "reproche au centre de ne pas prendre en compte les problèmes sociaux et de santé mentale des jeunes",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Bernard Cazeneuve",
+     "date": "2025-04-25",
+     "verbatim": "Il y a dans la société française un très profond malaise de la jeunesse. Il résulte de plusieurs phénomènes, qui convergent pour créer chez certains jeunes Français les conditions d'une désespérance profonde.",
+     "media": "franceinfo.fr",
+     "source_url": "https://www.franceinfo.fr/faits-divers/attaque-dans-un-lycee-a-nantes/attaque-au-couteau-dans-un-lycee-a-nantes-bernard-cazeneuve-appelle-a-mettre-en-place-des-politiques-globales-sur-la-sante-mentale-des-jeunes_7210116.html",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  },
+  {
+   "id": "6b89ccaace",
+   "grief": "reproche au centre de ne pas avoir de vision stratégique et de se contenter de réactions à l'actualité",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Jean-Luc Mélenchon",
+     "date": "2026-05-03",
+     "verbatim": "Le centre n'a pas de projet pour la France, il n'a que des ambitions personnelles.",
+     "media": "lopinion.fr",
+     "source_url": "https://www.lopinion.fr/politique/edouard-philippe-bruno-retailleau-jerome-guedj-qui-sont-les-candidats-a-lelection-presidentielle-2027",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  }
+ ],
+ "justification": "La gauche critique le centre comme un rival pour le même électorat modéré, tout en reconnaissant une certaine légitimité démocratique."
+}

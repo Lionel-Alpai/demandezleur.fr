@@ -150,12 +150,14 @@
       c.revisions[id].map(function (r) { return '<li>« ' + DL.echapper(r.phrase) + ' » — ' + DL.echapper(r.raison || r.type) + '</li>'; }).join('') + '</ul></details>');
   }
   function libellePreuves(p, annotations) {
-    var n = { programme: 0, piece: 0, adversaire: 0 }; p.forEach(function (x) { n[x.type] = (n[x.type] || 0) + 1; });
+    var n = { programme: 0, piece: 0, adversaire: 0, dossier: 0, reproche: 0 }; p.forEach(function (x) { n[x.type] = (n[x.type] || 0) + 1; });
     var parts = [];
     if (annotations && annotations.length) parts.push(annotations.length + ' note' + (annotations.length > 1 ? 's' : '') + ' *');
     if (n.programme) parts.push(n.programme + ' extrait' + (n.programme > 1 ? 's' : '') + ' de son programme');
     if (n.piece) parts.push(n.piece + ' pièce Assemblée');
     if (n.adversaire) parts.push(n.adversaire + ' extrait' + (n.adversaire > 1 ? 's' : '') + ' du programme adverse');
+    if (n.dossier) parts.push(n.dossier + ' fait' + (n.dossier > 1 ? 's' : '') + ' du dossier');
+    if (n.reproche) parts.push(n.reproche + ' reproche' + (n.reproche > 1 ? 's' : '') + ' documenté' + (n.reproche > 1 ? 's' : ''));
     return 'Sur quoi il s’appuie : ' + (parts.join(' · ') || 'rien de précis');
   }
   function finDeTour(ev) {

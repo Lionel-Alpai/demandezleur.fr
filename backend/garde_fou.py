@@ -105,7 +105,11 @@ def _formater_pieces(preuves: list) -> str:
     lignes = []
     for p in preuves:
         if p.get("type") == "adversaire":
-            lignes.append(f"[{p.get('candidat_id')}] {p.get('titre', '')} {('(' + str(p.get('page')) + ')') if p.get('page') else ''} : « {p.get('texte_integral') or p.get('extrait', '')} »")
+            lignes.append(f"[{p.get('candidat_id')}] PROGRAMME {p.get('titre', '')} {('(' + str(p.get('page')) + ')') if p.get('page') else ''} : « {p.get('texte_integral') or p.get('extrait', '')} »")
+        elif p.get("type") == "dossier":
+            lignes.append(f"[{p.get('candidat_id')}] FAIT VÉRIFIÉ ({p.get('titre', '')}, {p.get('date_lisible', '')}) : {p.get('texte_integral') or p.get('extrait', '')}")
+        elif p.get("type") == "reproche":
+            lignes.append(f"[{p.get('candidat_id')}] REPROCHE DOCUMENTÉ (ce que le camp de l'orateur dit publiquement de lui, pas un fait) : {p.get('texte_integral') or p.get('extrait', '')}")
     return "\n".join(lignes) or "(aucune pièce sur les adversaires)"
 
 
@@ -131,7 +135,7 @@ def _formater_historique(historique: list, adversaires: list) -> str:
     for tour in historique or []:
         for i in tour.get("interventions", []):
             if i.get("candidat_id") in ids:
-                lignes.append(f"[{i.get('candidat_id')}] {i.get('texte', '')[:400]}")
+                lignes.append(f"[{i.get('candidat_id')}] {i.get('texte', '')[:900]}")
     return "\n".join(lignes) or "(rien encore)"
 
 
@@ -150,10 +154,12 @@ async def juger(texte: str, orateur: dict, adversaires: list, preuves: list, fai
     """Affirmations non ancrées : [{type:'juge', phrase, cible, raison}]. Vide en démo ou si le juge est muet."""
     if not adversaires or not texte.strip():
         return []
+    sans_extrait = [a for a in adversaires if not any(p.get("type") == "adversaire" and p.get("candidat_id") == a["id"] for p in preuves)]
+    pieces_txt = _formater_pieces(preuves) + "".join(f"\n[{a['id']}] PROGRAMME : aucun extrait sur ce sujet — dire que son programme n'en parle pas est ANCRÉ." for a in sans_extrait)
     prompt = (PROMPT_JUGE.read_text(encoding="utf-8")
               .replace("{orateur}", f"{orateur.get('nom', '')} ({orateur.get('id', '')})")
               .replace("{adversaires}", ", ".join(f"{a['id']} → {a['nom']}" for a in adversaires))
-              .replace("{pieces}", _formater_pieces(preuves))
+              .replace("{pieces}", pieces_txt)
               .replace("{faits}", _formater_faits(adversaires, faits))
               .replace("{piece}", _formater_piece_assemblee(preuves))
               .replace("{historique}", _formater_historique(historique, adversaires))
