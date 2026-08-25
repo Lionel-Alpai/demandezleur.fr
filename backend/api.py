@@ -152,7 +152,9 @@ def load_prompts(candidat_id: str):
     return base_prompt, ton_content, meta
 
 from fastapi import Request
+from garde_fou import generer_replique_validee, verifier_faits
 from debat import (
+    charger_faits,
     valider_requete_debat,
     randomiser_ordre,
     construire_prompt_debat,
@@ -311,27 +313,51 @@ async def debat_stream(request: Request):
                 def _usage_cb(p_tok, c_tok, _u=usage):
                     _u["in"], _u["out"] = p_tok, c_tok
                 cle_demo = ("debat", candidat_id, llm.normaliser(payload.get("question_moderateur") or payload["sujet"]), type_tour, mode_debat)
-                async for delta in llm.completer(
-                    [
-                        {"role": "system", "content": prompt_system},
-                        {"role": "user", "content": "Prends la parole maintenant."},
-                    ],
-                    cle_demo=cle_demo,
+                messages_locuteur = [
+                    {"role": "system", "content": prompt_system},
+                    {"role": "user", "content": "Prends la parole maintenant."},
+                ]
+                params_llm = dict(
                     max_tokens=(MAX_TOKENS_ARENE if mode_debat == "arene" else MAX_TOKENS_DEBAT),  # [parlement]
                     temperature=(TEMPERATURE_ARENE if mode_debat == "arene" else TEMPERATURE_DEBAT),  # [parlement]
-                    usage_cb=_usage_cb,
-                ):
-                    full_text += delta
-                    yield format_sse("token", {
-                        "candidat_id": candidat_id,
-                        "text": delta,
-                    })
+                )
+                adversaires_presents = [candidats_by_id[cid] for cid in ordre_ids if cid != candidat_id]
+                faits_tous = charger_faits()
+                revisions, meta_garde = [], {}
+                if mode_debat == "arene":
+                    # ARÈNE : générer → A.2 (faits) → A.3 (juge monde clos) → streamer le texte VALIDÉ
+                    full_text, revisions, meta_garde = await generer_replique_validee(
+                        messages_locuteur, params=params_llm, orateur=candidat, adversaires=adversaires_presents,
+                        preuves=preuves_locuteur, faits=faits_tous, historique=historique_pour_ce_candidat,
+                        cle_demo=cle_demo, juger_actif=True,
+                        cible_par_defaut=(adversaires_presents[0]["id"] if len(adversaires_presents) == 1 else None),
+                    )
+                    usage["in"], usage["out"] = meta_garde["usage"]["in"], meta_garde["usage"]["out"]
+                    for i in range(0, len(full_text), 4):
+                        yield format_sse("token", {"candidat_id": candidat_id, "text": full_text[i:i + 4]})
+                        await asyncio.sleep(0.012)
+                else:
+                    # STANDARD : streaming direct, puis garde déterministe a posteriori (gratuite)
+                    async for delta in llm.completer(messages_locuteur, cle_demo=cle_demo, usage_cb=_usage_cb, **params_llm):
+                        full_text += delta
+                        yield format_sse("token", {
+                            "candidat_id": candidat_id,
+                            "text": delta,
+                        })
+                    texte_nettoye, revisions = verifier_faits(
+                        full_text, adversaires_presents, faits_tous,
+                        cible_par_defaut=(adversaires_presents[0]["id"] if len(adversaires_presents) == 1 else None))
+                    if revisions:
+                        full_text = texte_nettoye
                 tokens_in, tokens_out = usage.get("in", 0), usage.get("out", 0)
                 
                 yield format_sse("speaker_end", {
                     "candidat_id": candidat_id,
                     "full_text": full_text,
                     "finish_reason": "stop",
+                    "revisions": revisions,
+                    "regenerations": meta_garde.get("regenerations", 0),
+                    "fallback": meta_garde.get("fallback", False),
                 })
                 
                 # Si tokens_in/out sont toujours à 0 (fallback estimation)
@@ -361,6 +387,7 @@ async def debat_stream(request: Request):
                 "candidat_nom": candidat["nom"],
                 "texte": full_text,
                 "preuves": preuves_locuteur,
+                "revisions": revisions,
             })
         
         # Événement : fin du tour

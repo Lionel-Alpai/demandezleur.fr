@@ -1,0 +1,140 @@
+[
+ {
+  "sujet": "les retraites",
+  "tour": 1,
+  "orateur": "marine-le-pen",
+  "adversaires": [
+   "gabriel-attal"
+  ],
+  "brut": "Mesdames et Messieurs, ce débat sur les retraites, je vais le dire clairement : pendant que certains, comme Gabriel Attal, nous ressortent des promesses sans programme, nous, nous défendons les Français qui ont trimé toute leur vie, avec le refus de tout recul de l’âge légal et la retraite à 60 ans pour ceux qui ont commencé avant 20 ans, car c’est une question de justice et de dignité. Mais vous, Monsieur Attal, vous qui avez porté la réforme qui allonge la vie au travail, pouvez-vous me dire, oui ou non, si vous garantissez aux Français une retraite minimale à 1 000 euros par mois, indexée sur l’inflation, sans toucher à leur pouvoir d’achat ? Nous, nous voulons protéger nos aînés et nos familles, pas les sacrifiés sur l’autel de la technocratie.",
+  "final": "Mesdames et Messieurs, ce débat sur les retraites, je vais le dire clairement : pendant que certains, comme Gabriel Attal, nous ressortent des promesses sans programme, nous, nous défendons les Français qui ont trimé toute leur vie, avec le refus de tout recul de l’âge légal et la retraite à 60 ans pour ceux qui ont commencé avant 20 ans, car c’est une question de justice et de dignité. Nous, nous voulons protéger nos aînés et nos familles, pas les sacrifiés sur l’autel de la technocratie.",
+  "revisions": [
+   {
+    "type": "juge",
+    "phrase": "vous qui avez porté la réforme qui allonge la vie au travail",
+    "cible": "gabriel-attal",
+    "raison": "Aucune pièce ne mentionne que Gabriel Attal a porté une réforme des retraites allongeant la vie au travail."
+   }
+  ],
+  "regenerations": 0,
+  "fallback": false,
+  "residuel": [],
+  "latence_s": 4.9
+ },
+ {
+  "sujet": "les retraites",
+  "tour": 1,
+  "orateur": "gabriel-attal",
+  "adversaires": [
+   "marine-le-pen"
+  ],
+  "brut": "Mesdames, Messieurs, je veux parler de la réalité des Français qui triment : notre réforme des retraites, c’est préserver le système par répartition en allongeant la durée de cotisation, pas en cassant tout comme le propose Marine Le Pen, qui refuse toute augmentation de l’âge légal sans dire comment elle finance les 1 000 euros minimum qu’elle promet à tous. Vous, Madame Le Pen, vous promettez la retraite à 60 ans pour ceux qui ont commencé tôt, mais quel est le coût exact pour la Sécurité sociale, et comment l’assumez-vous sans exploser nos déficits ? Nous, nous construisons une Europe qui protège en modernisant, et je vous pose la question : combien de postes de soignants en Ehpad votre programme finance-t-il concrètement, avec quels recettes budgétaires ?",
+  "final": "Vous parlez de l’inflation pour préserver le pouvoir d’achat, mais sans recettes nouvelles, c’est une promesse en l’air que vous ne pourrez pas tenir. Moi, je choisis la réalité qui protège, pas le rêve qui ruine.",
+  "revisions": [
+   {
+    "type": "juge",
+    "phrase": "vous ne dites pas un mot sur le financement de vos 1 000 euros minimum pour tous",
+    "cible": "marine-le-pen",
+    "raison": "Le programme mentionne une retraite minimale mais pas le chiffre de 1000 euros ni son financement."
+   }
+  ],
+  "regenerations": 1,
+  "fallback": false,
+  "residuel": [],
+  "latence_s": 11.9
+ },
+ {
+  "sujet": "l'immigration",
+  "tour": 1,
+  "orateur": "jean-luc-melenchon",
+  "adversaires": [
+   "edouard-philippe"
+  ],
+  "brut": "Mesdames et Messieurs, l’immigration, on arrête de mentir : elle n’est pas un fardeau, mais une force pour nos services publics et notre économie, et c’est la solidarité qui doit guider notre politique, pas la peur instrumentalisée par la droite extrémisée. Édouard Philippe, vous voulez des quotas annuels et abroger l’accord franco-algérien de 1968, mais c’est une logique de tri qui casse les familles et nourrit la haine, alors posez-moi une question simple : combien de vies humaines comptez-vous sacrifier pour satisfaire votre « réduction drastique » du droit familial ? Moi, je vous le dis, La France insoumise défend une régularisation massive des travailleurs sans papiers, car ils cotisent, ils soignent, ils construisent, et on ne traite pas des êtres humains comme des variables d’ajustement du marché. Cessons cette surenchère sécuritaire qui, comme l’a dit Marianne Maximi, « ne dissuade pas du tout le passage à l’acte », et investissons plutôt dans des enquêtes et des moyens concrets pour une justice qui protège tous les habitants de ce pays, sans distinction de papier.",
+  "final": "Mesdames et Messieurs, l’immigration, on arrête de mentir : elle n’est pas un fardeau, mais une force pour nos services publics et notre économie, et c’est la solidarité qui doit guider notre politique, pas la peur instrumentalisée par la droite extrémisée. Édouard Philippe, vous voulez des quotas annuels et abroger l’accord franco-algérien de 1968, mais c’est une logique de tri qui casse les familles et nourrit la haine, alors posez-moi une question simple : combien de vies humaines comptez-vous sacrifier pour satisfaire votre « réduction drastique » du droit familial ? Moi, je vous le dis, La France insoumise défend une régularisation massive des travailleurs sans papiers, car ils cotisent, ils soignent, ils construisent, et on ne traite pas des êtres humains comme des variables d’ajustement du marché. Cessons cette surenchère sécuritaire qui, comme l’a dit Marianne Maximi, « ne dissuade pas du tout le passage à l’acte », et investissons plutôt dans des enquêtes et des moyens concrets pour une justice qui protège tous les habitants de ce pays, sans distinction de papier.",
+  "revisions": [],
+  "regenerations": 0,
+  "fallback": false,
+  "residuel": [],
+  "latence_s": 6.6
+ },
+ {
+  "sujet": "l'immigration",
+  "tour": 1,
+  "orateur": "edouard-philippe",
+  "adversaires": [
+   "jean-luc-melenchon"
+  ],
+  "brut": "L'immigration, ce n'est ni une insulte ni une naïveté : c'est un outil que nous devons piloter, pas subir ! Vous, Mélenchon, vous n'avez aucun programme sur le sujet, rien que des slogans, alors que nous proposons des quotas votés par le Parlement et une fin de l'exception algérienne de 1968 pour enfin choisir qui entre. Refuser de débattre des chiffres, c'est laisser les extrêmes imposer leur loi, alors je vous pose la question : acceptez-vous, oui ou non, de réduire drastiquement le regroupement familial pour en faire une immigration de travail assumée ?",
+  "final": "L'immigration, ce n'est ni une insulte ni une naïveté : c'est un outil que nous devons piloter, pas subir ! Refuser de débattre des chiffres, c'est laisser les extrêmes imposer leur loi, alors je vous pose la question : acceptez-vous, oui ou non, de réduire drastiquement le regroupement familial pour en faire une immigration de travail assumée ?",
+  "revisions": [
+   {
+    "type": "juge",
+    "phrase": "Vous, Mélenchon, vous n'avez aucun programme sur le sujet, rien que des slogans",
+    "cible": "jean-luc-melenchon",
+    "raison": "Aucune pièce ne fournit le programme de Mélenchon sur l'immigration."
+   }
+  ],
+  "regenerations": 0,
+  "fallback": false,
+  "residuel": [],
+  "latence_s": 4.1
+ },
+ {
+  "sujet": "le nucléaire",
+  "tour": 1,
+  "orateur": "jerome-guedj",
+  "adversaires": [
+   "bruno-retailleau"
+  ],
+  "brut": "Mes amis, parlons clair : le nucléaire, c'est la question de notre souveraineté énergétique et de la justice sociale, pas un totem pour les beaux discours de Bruno Retailleau, qui nous ressort cette vieille rengaine technocratique sans jamais parler de la facture des Français. Nous, à gauche, on ne laisse pas l'énergie aux seuls actionnaires d'EDF : on exige que le débat au Parlement – que je veux redonner au peuple, sans 49.3 – décide de notre mix énergétique, avec des services publics forts, des emplois de qualité et une sortie du tout-nucléaire qui protège les travailleurs. Alors, Monsieur Retailleau, pouvez-vous nous dire combien de nouvelles centrales vous promettez sans augmenter la précarité énergétique des ménages les plus modestes ?",
+  "final": "Nous, à gauche, on ne laisse pas l'énergie aux seuls actionnaires d'EDF : on exige que le débat au Parlement – que je veux redonner au peuple, sans 49.3 – décide de notre mix énergétique, avec des services publics forts, des emplois de qualité et une sortie du tout-nucléaire qui protège les travailleurs. Alors, Monsieur Retailleau, pouvez-vous nous dire combien de nouvelles centrales vous promettez sans augmenter la précarité énergétique des ménages les plus modestes ?",
+  "revisions": [
+   {
+    "type": "juge",
+    "phrase": "qui nous ressort cette vieille rengaine technocratique sans jamais parler de la facture des Français",
+    "cible": "bruno-retailleau",
+    "raison": "Le programme de Bruno Retailleau mentionne le soutien à la filière nucléaire, mais ne contient pas de 'rengaine technocratique' ni de silence sur la facture des Français."
+   }
+  ],
+  "regenerations": 0,
+  "fallback": false,
+  "residuel": [],
+  "latence_s": 5.4
+ },
+ {
+  "sujet": "le nucléaire",
+  "tour": 1,
+  "orateur": "bruno-retailleau",
+  "adversaires": [
+   "jerome-guedj"
+  ],
+  "brut": "Je vous le dis sans détour : la souveraineté énergétique, c'est notre capacité à décider nous-mêmes de notre avenir, et le nucléaire français en est le socle inébranlable - personne ne peut se passer de cette force. Pendant que certains ici, comme Jérôme Guedj, veulent affaiblir l'exécutif et noyer la décision dans des débats parlementaires sans fin, nous, nous agissons pour réindustrialiser nos territoires et garantir des emplois, en soutenant massivement la filière nucléaire. Alors, Monsieur Guedj, pouvez-vous me dire si votre projet de réforme démocratique, qui prône l'abandon du 49.3, est prêt à assumer les années de blocage qui freineront la construction de nos réacteurs, ou préférez-vous laisser la France dépendre du gaz étranger ? C'est ça, votre idée de la diversité : celle qui nous rend esclaves des autres puissances, quand nous, nous bâtissons une France forte et indépendante.",
+  "final": "Je vous le dis sans détour : la souveraineté énergétique, c'est notre capacité à décider nous-mêmes de notre avenir, et le nucléaire français en est le socle inébranlable - personne ne peut se passer de cette force. Pendant que certains ici, comme Jérôme Guedj, veulent affaiblir l'exécutif et noyer la décision dans des débats parlementaires sans fin, nous, nous agissons pour réindustrialiser nos territoires et garantir des emplois, en soutenant massivement la filière nucléaire. C'est ça, votre idée de la diversité : celle qui nous rend esclaves des autres puissances, quand nous, nous bâtissons une France forte et indépendante.",
+  "revisions": [
+   {
+    "type": "juge",
+    "phrase": "votre projet de réforme démocratique, qui prône l'abandon du 49.3",
+    "cible": "jerome-guedj",
+    "raison": "Le programme fourni ne mentionne pas explicitement l'abandon du 49.3."
+   }
+  ],
+  "regenerations": 0,
+  "fallback": false,
+  "residuel": [
+   {
+    "phrase": "Jérôme Guedj veut affaiblir l'exécutif et noyer la décision dans des débats parlementaires sans fin",
+    "cible": "Jérôme Guedj",
+    "soutenue": false,
+    "raison": "Le document de programme mentionne que le Parlement doit redevenir le lieu central du débat démocratique, mais ne dit pas explicitement qu'il veut affaiblir l'exécutif ou noyer la décision dans des débats sans fin."
+   },
+   {
+    "phrase": "C'est ça, votre idée de la diversité : celle qui nous rend esclaves des autres puissances",
+    "cible": "Jérôme Guedj",
+    "soutenue": false,
+    "raison": "Le programme de Guedj parle de reconnaître la société française dans sa diversité, mais ne mentionne pas de rendre la France esclave des autres puissances."
+   }
+  ],
+  "latence_s": 5.4
+ }
+]
