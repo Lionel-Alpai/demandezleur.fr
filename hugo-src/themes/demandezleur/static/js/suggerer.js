@@ -63,9 +63,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     dropZone.classList.add('has-file');
     fileName.textContent = f.name + ' (' + (f.size / 1024).toFixed(0) + ' Ko)';
-    fileName.style.display = 'block';
-    document.querySelector('.file-label').style.display = 'none';
-    document.querySelector('.file-icon').style.display = 'none';
+    fileName.hidden = false;
+    document.querySelector('.file-label').hidden = true;
+    document.querySelector('.file-icon').hidden = true;
   }
 
   // Soumission
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
     e.preventDefault();
     submit.disabled = true;
     submit.textContent = 'Envoi en cours…';
-    result.style.display = 'none';
+    result.hidden = true;
 
     const data = new FormData();
     data.append('candidat', candidat.value);
@@ -94,9 +94,9 @@ document.addEventListener('DOMContentLoaded', function () {
         showResult('success', 'Merci ! Votre suggestion a bien été transmise. Elle sera examinée manuellement avant toute intégration.');
         form.reset();
         dropZone.classList.remove('has-file');
-        fileName.style.display = 'none';
-        document.querySelector('.file-label').style.display = '';
-        document.querySelector('.file-icon').style.display = '';
+        fileName.hidden = true;
+        document.querySelector('.file-label').hidden = false;
+        document.querySelector('.file-icon').hidden = false;
         notesCount.textContent = '0';
       } else {
         showResult('error', json.message_utilisateur || 'Une erreur est survenue.');
@@ -110,9 +110,9 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   function showResult(type, msg) {
-    result.className = 'sg-result ' + type;
+    result.className = 'resultat ' + type;
     result.textContent = msg;
-    result.style.display = 'block';
+    result.hidden = false;
     result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 });

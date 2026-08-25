@@ -7,9 +7,9 @@
     if (cur) out.push(cur); return out;
   }
   function meilleure(interventions) {
-    var courtes = interventions.filter(function (t) { return t.length <= 320; });
+    var courtes = interventions.filter(function (t) { return t.length <= 700; });
     var src = courtes.length ? courtes : interventions;
-    var t = src[src.length - 1] || ''; return t.length > 320 ? t.slice(0, 317).replace(/\s\S*$/, '') + '…' : t;
+    var t = src[src.length - 1] || ''; return t.length > 700 ? t.slice(0, 697).replace(/\s\S*$/, '') + '…' : t;
   }
   function charger(src) { return new Promise(function (res) { var im = new Image(); im.onload = function () { res(im); }; im.onerror = function () { res(null); }; im.src = src; }); }
   DL.exporterImage = function (doc, candidats) {

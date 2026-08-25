@@ -17,3 +17,8 @@ disableKinds = ["taxonomy", "term", "RSS"]
 
 [markup.goldmark.renderer]
   unsafe = true
+
+# Blocs de code : classes CSS plutôt que styles inline (page Transparence)
+[markup.highlight]
+  noClasses = false
+  codeFences = true

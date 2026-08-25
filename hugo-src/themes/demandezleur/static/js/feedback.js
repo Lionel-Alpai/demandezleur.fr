@@ -27,7 +27,7 @@
         
         $submit.disabled = true;
         $submit.textContent = 'Envoi en cours...';
-        $result.style.display = 'none';
+        $result.hidden = true;
         
         try {
             // Déduction de l'URL du backend en fonction de là où on se trouve (localhost ou IP locale)
@@ -42,24 +42,24 @@
             const data = await response.json();
             
             if (response.ok) {
-                $result.className = 'feedback-result success';
+                $result.className = 'resultat success';
                 $result.textContent = data.message || 'Merci pour votre retour.';
-                $result.style.display = 'block';
+                $result.hidden = false;
                 $textarea.value = '';
                 updateCounter();
                 $submit.textContent = 'Envoyer';
             } else {
-                $result.className = 'feedback-result error';
+                $result.className = 'resultat error';
                 $result.textContent = (data.detail && data.detail.message) || 
                                       'Une erreur est survenue. Merci de réessayer.';
-                $result.style.display = 'block';
+                $result.hidden = false;
                 $submit.disabled = false;
                 $submit.textContent = 'Envoyer';
             }
         } catch (e) {
-            $result.className = 'feedback-result error';
+            $result.className = 'resultat error';
             $result.textContent = 'Erreur réseau. Vérifiez votre connexion et réessayez.';
-            $result.style.display = 'block';
+            $result.hidden = false;
             $submit.disabled = false;
             $submit.textContent = 'Envoyer';
         }

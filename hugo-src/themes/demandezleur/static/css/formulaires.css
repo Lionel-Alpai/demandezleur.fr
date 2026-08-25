@@ -1,0 +1,39 @@
+/* formulaires.css — feedback, soutenir, suggérer (remplace feedback.css, soutenir.css, suggerer.css). */
+.page-formulaire { max-width: var(--maxw-prose); margin: 0 auto; }
+.page-formulaire section { margin-bottom: var(--sp-6); }
+.page-formulaire h2 { font-size: var(--fs-22); margin-top: var(--sp-2); }
+.page-formulaire p, .page-formulaire li { color: var(--fg-2); }
+.page-formulaire strong { color: var(--fg); }
+.page-formulaire ul { padding-left: var(--sp-5); }
+.page-formulaire li { margin-bottom: var(--sp-2); }
+.page-formulaire a { color: var(--accent-2); }
+.formulaire { display: grid; gap: var(--sp-4); padding: var(--sp-5); border: 1px solid var(--border); border-radius: var(--r-3); background: var(--bg-2); }
+.formulaire label { display: block; font-weight: 600; margin-bottom: var(--sp-2); color: var(--fg); }
+.formulaire .optionnel { font-weight: 400; color: var(--fg-3); font-size: var(--fs-14); }
+.formulaire input[type="text"], .formulaire input[type="url"], .formulaire select, .formulaire textarea { width: 100%; padding: 12px 14px; border-radius: var(--r-1); border: 1px solid var(--border-2); background: var(--bg-3); color: var(--fg); font: inherit; }
+.formulaire textarea { resize: vertical; }
+.formulaire :is(input, select, textarea):focus { outline: none; border-color: var(--accent-2); }
+.formulaire .compteur { text-align: right; margin: var(--sp-1) 0 0; }
+.formulaire .btn { justify-self: start; }
+.resultat { margin-top: var(--sp-4); padding: var(--sp-4); border-radius: var(--r-2); border: 1px solid var(--border); }
+.resultat.success { border-color: var(--ok); color: var(--fg); }
+.resultat.error { border-color: var(--accent); color: var(--fg); }
+.file-drop-zone { border: 2px dashed var(--border-2); border-radius: var(--r-2); padding: var(--sp-5); text-align: center; color: var(--fg-2); transition: border-color 0.15s, background 0.15s; }
+.file-drop-zone.drag-over, .file-drop-zone.has-file { border-color: var(--accent-2); background: rgba(229, 57, 70, 0.06); }
+.file-drop-zone button { background: none; border: 0; color: var(--accent-2); text-decoration: underline; cursor: pointer; font: inherit; }
+.file-icon { display: block; font-size: var(--fs-28); margin-bottom: var(--sp-2); }
+.file-name { display: block; margin-top: var(--sp-2); color: var(--fg); font-weight: 600; }
+.garanties { display: grid; gap: var(--sp-3); }
+.garantie { display: flex; gap: var(--sp-3); align-items: flex-start; color: var(--fg-2); }
+.g-icon { flex: none; width: 28px; text-align: center; }
+.cout-grille { list-style: none; padding: 0; margin: 0 0 var(--sp-3); border: 1px solid var(--border); border-radius: var(--r-2); overflow: hidden; }
+.cout-grille li { display: flex; justify-content: space-between; gap: var(--sp-4); padding: var(--sp-3) var(--sp-4); border-bottom: 1px solid var(--border); margin: 0; }
+.cout-grille li:last-child { border-bottom: 0; }
+.cout-valeur { font-weight: 700; color: var(--fg); white-space: nowrap; }
+.petit { font-size: var(--fs-14); color: var(--fg-3); }
+.page-formulaire details { border: 1px solid var(--border); border-radius: var(--r-2); padding: var(--sp-3) var(--sp-4); margin-bottom: var(--sp-2); background: var(--bg-2); }
+.page-formulaire summary { cursor: pointer; font-weight: 600; color: var(--fg); }
+.page-formulaire details p { margin: var(--sp-3) 0 0; }
+.cta-bloc { text-align: center; padding: var(--sp-5); border-radius: var(--r-3); background: linear-gradient(135deg, var(--bg-3), var(--bg-2)); border: 1px solid var(--border); }
+.page-formulaire a.btn-accent, .page-formulaire .btn-accent { color: var(--accent-fg); }
+.page-formulaire a.btn-secondaire { color: var(--fg); }

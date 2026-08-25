@@ -12,7 +12,7 @@ Le site **demandezleur.fr** est un projet indépendant, sans affiliation avec un
 
 **Adresse de l'éditeur :** non publiée, en application de l'article 6 III 2 de la loi pour la confiance dans l'économie numérique (LCEN). Ce texte autorise un éditeur non professionnel à ne pas rendre son adresse publique, dès lors que l'hébergeur détient son identité complète. Il ne s'agit pas d'un oubli, mais d'un droit exercé.
 
-**Contact :** le formulaire accessible sur la page [Feedback](/feedback/) du site. C'est le seul canal de contact existant — aucune adresse e-mail n'est publiée.
+**Contact :** voir la section [Contact, signalement, droit de réponse](#contact-signalement-droit-de-réponse) ci-dessous.
 
 ## Hébergement
 
@@ -40,9 +40,16 @@ Ce site simule les positions des candidats à partir de leurs **programmes offic
 
 Les programmes politiques cités ou utilisés sur ce site appartiennent à leurs auteurs respectifs. Ils sont reproduits et analysés à des fins d'information et de débat public, dans le cadre de l'exception pédagogique et du droit de citation.
 
-## Points à compléter
+## Contact, signalement, droit de réponse
 
-Les informations suivantes, susceptibles d'être requises, ne sont pas encore formalisées :
+**Contact :** `[À COMPLÉTER — adresse e-mail dédiée, ex. contact@demandezleur.fr]`. Le [formulaire de feedback](/feedback/) reste disponible pour les retours anonymes.
 
-- **Durée de conservation des données personnelles** transmises via les formulaires.
-- **Base légale précise** du traitement (consentement, intérêt légitime, etc.).
+**Signaler un contenu.** Toute personne, et en particulier un candidat ou son équipe, peut signaler une réponse ou une réplique qu'elle estime inexacte, en indiquant le candidat, la question posée et le passage contesté. Le signalement est examiné et traité dans un délai indicatif de `[À COMPLÉTER — ex. 48 heures]` : correction du corpus, retrait du passage, ou explication motivée.
+
+**Droit de réponse.** Conformément à l'article 6-IV de la loi pour la confiance dans l'économie numérique, toute personne nommée ou désignée sur ce site peut exercer un droit de réponse, en adressant sa demande au contact ci-dessus avec la référence du contenu concerné et le texte de la réponse souhaitée. `[À COMPLÉTER — modalités et délai de publication]`.
+
+**Retrait.** Un candidat déclaré peut demander le retrait de sa fiche ; la demande est traitée par le même canal et tracée.
+
+## Données transmises par les formulaires
+
+Les formulaires de feedback et de suggestion ne collectent aucune donnée personnelle obligatoire. Les messages sont conservés `[À COMPLÉTER — durée, ex. 12 mois]` puis supprimés. Base légale : intérêt légitime de l'éditeur à améliorer le service (art. 6-1-f du RGPD). Aucun cookie, aucun traceur, aucune mesure d'audience individualisée.
