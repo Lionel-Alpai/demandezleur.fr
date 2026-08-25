@@ -8,7 +8,7 @@
    "fait": "Le 7 juillet 2026, la cour d'appel de Paris a condamné Marine Le Pen pour détournement de fonds publics à 100 000 euros d'amende, trois ans de prison dont deux ans avec sursis et un an ferme aménageable sous bracelet électronique, et à une peine d'inéligibilité de 45 mois dont 30 mois avec sursis. La peine ferme d'inéligibilité de 15 mois, déjà purgée en raison de l'exécution provisoire de la première instance, la rend éligible à l'élection présidentielle de 2027. Marine Le Pen a annoncé se pourvoir en cassation, ce qui suspend l'exécution de la peine.",
    "date": "2026-07-07",
    "instance": "Cour d'appel de Paris",
-   "statut": "a_valider",
+   "statut": "valide",
    "sources": [
     {
      "url": "https://www.publicsenat.fr/actualites/politique/direct-suivez-le-delibere-du-proces-en-appel-de-marine-le-pen",
@@ -27,7 +27,9 @@
     }
    ],
    "verifie_le": "2026-08-25",
-   "notes": "réfutation : confirme (3 sources concordantes, 2 médias de référence) — Les articles S1, S6 et S9 confirment tous les éléments du fait : date, juridiction, peines, éligibilité et pourvoi en cassation suspensif. | divergences : S1 indique '1 an ferme sous bracelet électronique' et '45 mois d'inéligibilité, dont 30 mois avec sursis' ; S6 précise 'trois ans de prison, dont deux ans avec sursis et un an ferme aménageable avec bracelet électronique' et '45 mois dont 30 mois assortis du sursis' ; S9 confirme 'trois ans de prison, dont un an ferme aménageable sous bracelet électronique, une amende de 100 000 euros et une peine d'inéligibilité de 45 mois, dont 30 mois avec sursis'."
+   "notes": "réfutation : confirme (3 sources concordantes, 2 médias de référence) — Les articles S1, S6 et S9 confirment tous les éléments du fait : date, juridiction, peines, éligibilité et pourvoi en cassation suspensif. | divergences : S1 indique '1 an ferme sous bracelet électronique' et '45 mois d'inéligibilité, dont 30 mois avec sursis' ; S6 précise 'trois ans de prison, dont deux ans avec sursis et un an ferme aménageable avec bracelet électronique' et '45 mois dont 30 mois assortis du sursis' ; S9 confirme 'trois ans de prison, dont un an ferme aménageable sous bracelet électronique, une amende de 100 000 euros et une peine d'inéligibilité de 45 mois, dont 30 mois avec sursis'.",
+   "decide_le": "2026-08-25T22:33",
+   "motif": ""
   },
   {
    "id": "24414ceca2",

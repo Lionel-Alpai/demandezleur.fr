@@ -23,7 +23,7 @@
   {
    "id": "0cb16c8f4c",
    "grief": "reproche au centre de tenter une escroquerie pour se déresponsabiliser de son bilan",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Marine Le Pen",
@@ -34,12 +34,14 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T22:34",
+   "motif": ""
   },
   {
    "id": "d4fa4b465a",
    "grief": "reproche au centre d'être hypocrite en se présentant comme nouveau alors qu'il est l'artisan du macronisme",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Marine Le Pen",
@@ -50,7 +52,9 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T22:34",
+   "motif": ""
   }
  ],
  "justification": "L'extrême droite attaque le centre sur son bilan et sa crédibilité, tout en cherchant à capter son électorat, ce qui correspond à une relation de concurrence pour le même électorat."

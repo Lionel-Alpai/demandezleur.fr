@@ -1,7 +1,25 @@
 {
  "de": "extreme_droite",
  "vers": "ecologistes",
- "registre": "neutre",
+ "registre": "ennemi_principal",
  "maj": "2026-08-25",
- "griefs": []
+ "griefs": [
+  {
+   "id": "0a5f095a22",
+   "grief": "reproche aux écologistes de vouloir abattre un avantage historique de la France en s'attaquant au nucléaire",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Jordan Bardella",
+     "date": "2024-07-01",
+     "verbatim": "En s’attaquant au nucléaire, elle veut abattre un avantage historique de notre pays, fruit du génie visionnaire du Général de Gaulle.",
+     "media": "rassemblementnational.fr",
+     "source_url": "https://rassemblementnational.fr/",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  }
+ ],
+ "justification": "Le camp d'extrême droite considère les écologistes comme partie intégrante de la gauche radicale, qu'il présente comme une menace existentielle pour la Nation."
 }

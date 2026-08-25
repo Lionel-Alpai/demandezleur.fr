@@ -45,7 +45,7 @@
    "fait": "Condamné en appel pour diffamation envers l'ancien journaliste du Monde Pablo Paranagua, pour des propos tenus en février 2018 sur Facebook. La cour d'appel de Paris a condamné Jean-Luc Mélenchon à verser un euro symbolique de dommages et intérêts et 2 000 euros au titre des frais de justice. Le jugement est intervenu le 29 juin 2022.",
    "date": "2022-06-29",
    "instance": "Cour d'appel de Paris",
-   "statut": "a_valider",
+   "statut": "valide",
    "sources": [
     {
      "url": "https://www.europe1.fr/politique/jean-luc-melenchon-condamne-en-appel-pour-diffamation-envers-un-ex-journaliste-4120613",
@@ -74,7 +74,9 @@
     }
    ],
    "verifie_le": "2026-08-25",
-   "notes": "réfutation : confirme (5 sources concordantes, 2 médias de référence) — Les articles S7, S8, S9, S10 et S11 confirment tous la condamnation en appel pour diffamation envers Pablo Paranagua, les propos de février 2018, la cour d'appel de Paris, le jugement du 29 juin 2022, l'euro symbolique et les 2000 euros de frais de justice."
+   "notes": "réfutation : confirme (5 sources concordantes, 2 médias de référence) — Les articles S7, S8, S9, S10 et S11 confirment tous la condamnation en appel pour diffamation envers Pablo Paranagua, les propos de février 2018, la cour d'appel de Paris, le jugement du 29 juin 2022, l'euro symbolique et les 2000 euros de frais de justice.",
+   "decide_le": "2026-08-25T22:32",
+   "motif": ""
   },
   {
    "id": "a87d4da26e",
@@ -99,7 +101,7 @@
    "fait": "Condamné en première instance à 500 euros d'amende avec sursis pour avoir qualifié l'ancien journaliste du Monde Pablo Paranagua d'\"assassin repenti\" sur son blog en 2016. Le jugement est intervenu le 24 septembre 2021. Son avocat a annoncé faire appel, donc la condamnation n'est pas définitive.",
    "date": "2021-09-24",
    "instance": "Tribunal correctionnel de Paris",
-   "statut": "a_valider",
+   "statut": "valide",
    "sources": [
     {
      "url": "https://www.radiofrance.fr/franceinter/affaires-en-cours-et-condamnations-ou-en-sont-les-candidats-a-la-presidentielle-avec-la-justice-9223367",
@@ -128,7 +130,9 @@
     }
    ],
    "verifie_le": "2026-08-25",
-   "notes": "réfutation : confirme (5 sources concordantes, 3 médias de référence) — Les articles S3, S7, S9, S10 et S11 confirment la condamnation en première instance à 500 euros d'amende avec sursis pour avoir qualifié Pablo Paranagua d'assassin repenti, le jugement du 24 septembre 2021 et l'appel annoncé."
+   "notes": "réfutation : confirme (5 sources concordantes, 3 médias de référence) — Les articles S3, S7, S9, S10 et S11 confirment la condamnation en première instance à 500 euros d'amende avec sursis pour avoir qualifié Pablo Paranagua d'assassin repenti, le jugement du 24 septembre 2021 et l'appel annoncé.",
+   "decide_le": "2026-08-25T22:33",
+   "motif": ""
   },
   {
    "id": "1601e0ebaa",

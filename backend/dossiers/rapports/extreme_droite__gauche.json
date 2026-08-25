@@ -7,7 +7,7 @@
   {
    "id": "7e3893cf5d",
    "grief": "reproche à la gauche d'être une menace existentielle pour la Nation française",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Jordan Bardella",
@@ -18,12 +18,14 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T22:34",
+   "motif": ""
   },
   {
    "id": "d256f9672f",
    "grief": "reproche à la gauche de vouloir ouvrir les vannes de l'immigration et libérer des détenus",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Jordan Bardella",
@@ -34,12 +36,14 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T22:34",
+   "motif": ""
   },
   {
    "id": "8d8b4c5ce6",
    "grief": "reproche à la gauche d'être intolérante et sectaire, et de jouer le pourrissement à l'Assemblée nationale",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Jordan Bardella",
@@ -50,12 +54,14 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T22:35",
+   "motif": ""
   },
   {
    "id": "08ebd1ce14",
    "grief": "reproche à la gauche de cautionner l'antisémitisme en refusant de condamner les attentats du Hamas",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Jordan Bardella",
@@ -66,7 +72,9 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T22:35",
+   "motif": ""
   }
  ],
  "justification": "Le camp d'extrême droite, à travers Jordan Bardella, qualifie la gauche de 'menace existentielle' et l'accuse de vouloir détruire la Nation, ce qui correspond à une relation d'ennemi principal."

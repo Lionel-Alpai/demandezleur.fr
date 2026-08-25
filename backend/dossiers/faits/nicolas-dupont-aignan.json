@@ -1,5 +1,23 @@
 {
  "candidat_id": "nicolas-dupont-aignan",
  "maj": "2026-08-25",
- "entrees": []
+ "entrees": [
+  {
+   "id": "ed1f8879ee",
+   "classe": "mise_en_examen",
+   "fait": "Nicolas Dupont-Aignan a été traduit en justice pour incitation à la haine raciale, à la suite de propos tenus le 12 septembre 2025 lors de l'émission 'Face à l'info' sur CNews, dans lesquels il a déclaré : 'On ne peut pas laisser ces populations venues d'ailleurs imposer leur culture et leurs lois dans nos quartiers. C'est une invasion silencieuse qu'il faut stopper par tous les moyens légaux.' Le parquet de Paris a retenu la qualification d'incitation à la haine raciale au sens de l'article 24 alinéa 8 de la loi du 29 juillet 1881. Une ordonnance de renvoi a été rendue par le juge d'instruction le 15 janvier 2026.",
+   "date": "2026-01-15",
+   "instance": "Juge d'instruction de Paris",
+   "statut": "refuse",
+   "sources": [
+    {
+     "url": "https://racismeavocat.fr/blog/dupont-aignan-traduit-en-justice-pour-incitation-a-la-haine-raciale-que-dit-la-loi",
+     "media": "racismeavocat.fr",
+     "titre": "Dupont-Aignan incitation à la haine raciale traduit en justice"
+    }
+   ],
+   "verifie_le": "2026-08-25",
+   "notes": "réfutation : refute (0 sources concordantes, 0 médias de référence) — Aucun article ne confirme le fait ; les seuls articles pertinents (S3) ne mentionnent ni la date exacte du 12 septembre 2025, ni l'émission 'Face à l'info', ni la qualification précise, ni l'ordonnance de renvoi du 15 janvier 2026, et les autres sources sont hors sujet."
+  }
+ ]
 }

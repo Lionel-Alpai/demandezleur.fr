@@ -1,7 +1,25 @@
 {
  "de": "souverainistes",
  "vers": "droite",
- "registre": "neutre",
+ "registre": "concurrent_meme_electorat",
  "maj": "2026-08-25",
- "griefs": []
+ "griefs": [
+  {
+   "id": "896d0d89d6",
+   "grief": "reproche à la droite d'être trop modérée et de ne pas défendre fermement la souveraineté nationale",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Nicolas Dupont-Aignan",
+     "date": "2026-08-21",
+     "verbatim": "SCANDALE D'ETAT ! Le gouvernement veut réduire nos dépenses en désindexant les pensions de retraite.",
+     "media": "debout-la-france.fr",
+     "source_url": "https://www.debout-la-france.fr/",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  }
+ ],
+ "justification": "Les souverainistes se positionnent comme une alternative plus ferme sur la souveraineté nationale, critiquant la droite républicaine pour son manque de fermeté, tout en partageant un électorat potentiel."
 }

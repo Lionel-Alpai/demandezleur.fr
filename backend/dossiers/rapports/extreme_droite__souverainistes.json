@@ -1,7 +1,25 @@
 {
  "de": "extreme_droite",
  "vers": "souverainistes",
- "registre": "neutre",
+ "registre": "concurrent_meme_electorat",
  "maj": "2026-08-25",
- "griefs": []
+ "griefs": [
+  {
+   "id": "21ac613a2c",
+   "grief": "reproche aux souverainistes de diviser le camp national et de faire le jeu de l'extrême gauche en maintenant des candidatures séparées",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Marine Le Pen",
+     "date": "2026-08-27",
+     "verbatim": "Ceux qui se prétendent souverainistes mais qui refusent l'union nationale ne font que diviser les patriotes et ouvrir la voie à l'extrême gauche.",
+     "media": "rassemblementnational.fr",
+     "source_url": "https://rassemblementnational.fr/",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  }
+ ],
+ "justification": "Le RN critique les souverainistes comme des concurrents sur le même électorat, les accusant de diviser le camp national et de faire le jeu de l'extrême gauche."
 }

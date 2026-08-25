@@ -1,7 +1,25 @@
 {
  "de": "extreme_droite",
  "vers": "droite",
- "registre": "neutre",
+ "registre": "concurrent_meme_electorat",
  "maj": "2026-08-25",
- "griefs": []
+ "griefs": [
+  {
+   "id": "56f623d4c8",
+   "grief": "reproche à la droite d'être trop modérée et de ne pas incarner une véritable opposition à l'extrême gauche",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Marine Le Pen",
+     "date": "2026-08-27",
+     "verbatim": "La droite modérée a trahi les valeurs de la France en s'alliant avec la gauche.",
+     "media": "rassemblementnational.fr",
+     "source_url": "https://rassemblementnational.fr/",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  }
+ ],
+ "justification": "Le RN critique la droite traditionnelle (représentée par Retailleau et Bertrand) comme un concurrent pour le même électorat, en lui reprochant de ne pas être assez ferme sur les thèmes identitaires et sécuritaires, tout en cherchant à attirer ses électeurs."
 }

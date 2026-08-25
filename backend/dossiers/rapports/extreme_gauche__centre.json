@@ -1,7 +1,25 @@
 {
  "de": "extreme_gauche",
  "vers": "centre",
- "registre": "neutre",
+ "registre": "concurrent_meme_electorat",
  "maj": "2026-08-25",
- "griefs": []
+ "griefs": [
+  {
+   "id": "92c9ab07c4",
+   "grief": "reproche au centre de mener des poursuites politiques contre les militants de gauche",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Elsa Marcel",
+     "date": "2025-06-18",
+     "verbatim": "Ils organisent des poursuites politiques mais ne veulent pas qu'on se défende politiquement.",
+     "media": "france24.com",
+     "source_url": "https://www.france24.com/fr/info-en-continu/20250618-conflit-isra%C3%A9lo-palestinien-le-proc%C3%A8s-du-militant-anasse-kazib-pour-apologie-du-terrorisme-report%C3%A9",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  }
+ ],
+ "justification": "L'extrême gauche critique le centre comme un adversaire politique proche sur l'échiquier, mais avec des divergences fondamentales sur la politique sociale et économique."
 }

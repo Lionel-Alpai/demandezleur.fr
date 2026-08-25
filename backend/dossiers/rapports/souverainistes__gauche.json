@@ -1,7 +1,25 @@
 {
  "de": "souverainistes",
  "vers": "gauche",
- "registre": "neutre",
+ "registre": "concurrent_meme_electorat",
  "maj": "2026-08-25",
- "griefs": []
+ "griefs": [
+  {
+   "id": "b651c6651c",
+   "grief": "reproche à la gauche d'être complice du gouvernement et de trahir les classes populaires",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Nicolas Dupont-Aignan",
+     "date": "2026-08-21",
+     "verbatim": "SCANDALE D'ETAT ! Le gouvernement veut réduire nos dépenses en désindexant les pensions de retraite.",
+     "media": "debout-la-france.fr",
+     "source_url": "https://www.debout-la-france.fr/",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  }
+ ],
+ "justification": "Les souverainistes se positionnent comme les véritables défenseurs du peuple face à une gauche qu'ils jugent complice du système, partageant un électorat populaire."
 }

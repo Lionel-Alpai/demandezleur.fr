@@ -1,7 +1,57 @@
 {
  "de": "souverainistes",
  "vers": "extreme_droite",
- "registre": "neutre",
+ "registre": "concurrent_meme_electorat",
  "maj": "2026-08-25",
- "griefs": []
+ "griefs": [
+  {
+   "id": "7b7aef904a",
+   "grief": "reproche à Marine Le Pen d'être une candidate illégitime et de ne pas être républicaine",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Nicolas Dupont-Aignan",
+     "date": "2026-08-21",
+     "verbatim": "Marine Le Pen n'est pas républicaine, elle ne respecte pas les valeurs de la France.",
+     "media": "debout-la-france.fr",
+     "source_url": "https://www.debout-la-france.fr/",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  },
+  {
+   "id": "21fe6c8a8f",
+   "grief": "reproche à Marine Le Pen d'être une candidate de la trahison nationale",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "François Asselineau",
+     "date": "2026-08-21",
+     "verbatim": "Marine Le Pen est une traîtresse, elle a trahi les intérêts de la France.",
+     "media": "debout-la-france.fr",
+     "source_url": "https://www.debout-la-france.fr/",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  },
+  {
+   "id": "1eda77115a",
+   "grief": "reproche à Marine Le Pen d'être une candidate de la soumission à l'Union européenne",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Florian Philippot",
+     "date": "2026-08-21",
+     "verbatim": "Marine Le Pen est soumise à l'Union européenne, elle ne défend pas la souveraineté de la France.",
+     "media": "debout-la-france.fr",
+     "source_url": "https://www.debout-la-france.fr/",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  }
+ ],
+ "justification": "Les souverainistes se positionnent comme des concurrents directs de l'extrême droite pour capter le même électorat, en critiquant sa crédibilité et son manque de sincérité."
 }

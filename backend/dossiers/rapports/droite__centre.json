@@ -1,7 +1,25 @@
 {
  "de": "droite",
  "vers": "centre",
- "registre": "neutre",
+ "registre": "concurrent_meme_electorat",
  "maj": "2026-08-25",
- "griefs": []
+ "griefs": [
+  {
+   "id": "65c71a9cc7",
+   "grief": "reproche au centre d'être trop complaisant envers la gauche et de manquer de fermeté sur les valeurs républicaines",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Bruno Retailleau",
+     "date": "2025-07-25",
+     "verbatim": "Une nation qui croit en ce qu’elle est retrouve toujours le chemin de la réussite.",
+     "media": "republicains.fr",
+     "source_url": "https://republicains.fr/",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  }
+ ],
+ "justification": "La droite critique le centre sur des positions jugées trop proches de la gauche ou trop modérées, tout en reconnaissant une proximité électorale sur certains sujets, ce qui en fait un concurrent pour le même électorat."
 }

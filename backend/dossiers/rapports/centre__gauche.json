@@ -7,7 +7,7 @@
   {
    "id": "a258cefa2b",
    "grief": "reproche à la gauche de ne pas être crédible pour gouverner et de rester dans l'opposition stérile",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Édouard Philippe",
@@ -18,12 +18,14 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T22:33",
+   "motif": ""
   },
   {
    "id": "bf42333831",
    "grief": "reproche à Jean-Luc Mélenchon de ne pas être capable de rassembler la gauche et de faire preuve d'extrémisme",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Gabriel Attal",
@@ -34,7 +36,9 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T22:33",
+   "motif": ""
   }
  ],
  "justification": "Le camp centre, représenté par Édouard Philippe et Gabriel Attal, s'adresse à la gauche comme à un concurrent pour l'électorat modéré, tout en la critiquant sur son incapacité à gouverner et son extrémisme, sans la traiter en ennemi principal."

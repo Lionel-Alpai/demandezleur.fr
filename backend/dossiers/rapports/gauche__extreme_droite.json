@@ -39,7 +39,7 @@
   {
    "id": "7b709d0d3a",
    "grief": "reproche à Marine Le Pen d'être une menace pour la République et de ne pas offrir de réponses adaptées aux problèmes du pays",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Jérôme Guedj",
@@ -50,12 +50,14 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T22:36",
+   "motif": ""
   },
   {
    "id": "4ea888a14c",
    "grief": "reproche à Marine Le Pen de mentir et de manipuler l'opinion publique",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Bernard Cazeneuve",
@@ -66,12 +68,14 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T22:36",
+   "motif": ""
   },
   {
    "id": "9cca9521e2",
    "grief": "reproche à Marine Le Pen de faire preuve d'outrance et de manquer de dignité dans ses critiques",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Bernard Cazeneuve",
@@ -82,12 +86,14 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T22:36",
+   "motif": ""
   },
   {
    "id": "01c88b1b14",
    "grief": "reproche à Marine Le Pen de ne pas aimer la France et de vouloir diviser le pays",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Bernard Cazeneuve",
@@ -98,12 +104,14 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T22:37",
+   "motif": ""
   },
   {
    "id": "549e021d2f",
    "grief": "reproche à Marine Le Pen d'instrumentaliser le terrorisme à des fins politiques",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Bernard Cazeneuve",
@@ -114,7 +122,9 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T22:37",
+   "motif": ""
   }
  ],
  "justification": "Les responsables de gauche qualifient Marine Le Pen de menace pour la République et l'accusent de nuire à la cohésion nationale, la traitant comme un adversaire politique majeur."

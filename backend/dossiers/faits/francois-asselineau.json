@@ -1,5 +1,38 @@
 {
  "candidat_id": "francois-asselineau",
  "maj": "2026-08-25",
- "entrees": []
+ "entrees": [
+  {
+   "id": "0831b94d24",
+   "classe": "condamnation_appel",
+   "fait": "François Asselineau a été renvoyé devant le tribunal correctionnel de Paris par arrêt de la chambre de l'instruction de la cour d'appel de Paris en date du 7 avril 2026, infirmant l'ordonnance de non-lieu du 6 décembre 2024. Il devra répondre de harcèlement sexuel et agression sexuelle par personne abusant de l'autorité que lui confère sa fonction sur un collaborateur, et de tentative d'agression sexuelle par personne abusant de l'autorité que lui confère sa fonction sur un autre collaborateur. Le procès n'est pas encore fixé.",
+   "date": "2026-04-07",
+   "instance": "Chambre de l'instruction de la cour d'appel de Paris",
+   "statut": "a_valider",
+   "sources": [
+    {
+     "url": "https://www.france24.com/fr/info-en-continu/20260519-agression-et-harc%C3%A8lement-sexuels-fran%C3%A7ois-asselineau-renvoy%C3%A9-en-proc%C3%A8s",
+     "media": "france24.com",
+     "titre": "Agression et harcèlement sexuels: François Asselineau renvoyé en procès"
+    },
+    {
+     "url": "https://politique-france.info/articles/francois-asselineau-renvoye-en-justice-pour-agressions-sexuelles-lupr-dans-la-tourmente",
+     "media": "politique-france.info",
+     "titre": "François Asselineau renvoyé en justice pour agressions sexuelles : l ..."
+    },
+    {
+     "url": "https://www.franceinfo.fr/politique/francois-asselineau/info-franceinfo-francois-asselineau-finalement-renvoye-devant-le-tribunal-correctionnel-notamment-pour-harcelement-sexuel-et-agressions-sexuelles-sur-deux-collaborateurs_8002061.html",
+     "media": "franceinfo.fr",
+     "titre": "INFO FRANCEINFO. François Asselineau finalement renvoyé devant le ..."
+    },
+    {
+     "url": "https://www.fpop.media/francois-asselineau-renvoye-en-correctionnelle-pour-agressions-et-harcelement-sexuels/",
+     "media": "fpop.media",
+     "titre": "François Asselineau renvoyé en correctionnelle pour agressions et ..."
+    }
+   ],
+   "verifie_le": "2026-08-25",
+   "notes": "réfutation : confirme (4 sources concordantes, 2 médias de référence) — Les articles S1, S3, S4 et S5 confirment tous le renvoi de François Asselineau devant le tribunal correctionnel de Paris par arrêt de la chambre de l'instruction de la cour d'appel de Paris du 7 avril 2026, infirmant le non-lieu du 6 décembre 2024, pour harcèlement sexuel et agression sexuelle sur un collaborateur et tentative d'agression sexuelle sur un autre, sans date de procès fixée. | divergences : Aucune divergence sur la date et le contenu de la décision. S3 mentionne une date de publication au parquet le 13 mai 2026, mais l'arrêt est du 7 avril."
+  }
+ ]
 }

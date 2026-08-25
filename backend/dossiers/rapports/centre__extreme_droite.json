@@ -31,7 +31,7 @@
   {
    "id": "2fde7ccaf0",
    "grief": "reproche à Marine Le Pen d'être une candidate condamnée pour détournement de fonds, inapte à représenter la France",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Gabriel Attal",
@@ -42,7 +42,9 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T22:33",
+   "motif": ""
   }
  ],
  "justification": "Le camp centre, à travers Gabriel Attal, attaque Marine Le Pen sur des thèmes électoraux (condamnation, détournement de fonds) et tente de protéger son identité politique, ce qui indique une concurrence directe pour le même électorat modéré."

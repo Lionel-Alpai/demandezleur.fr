@@ -7,7 +7,7 @@
   {
    "id": "d50b68ba69",
    "grief": "reproche au centre de ne pas avoir de projet politique clair et de se contenter de gérer les affaires courantes",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Jérôme Guedj",
@@ -18,12 +18,14 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T22:35",
+   "motif": ""
   },
   {
    "id": "038e1974b4",
    "grief": "reproche au centre de ne pas prendre en compte les problèmes sociaux et de santé mentale des jeunes",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Bernard Cazeneuve",
@@ -34,12 +36,14 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T22:35",
+   "motif": ""
   },
   {
    "id": "6b89ccaace",
    "grief": "reproche au centre de ne pas avoir de vision stratégique et de se contenter de réactions à l'actualité",
-   "statut": "a_valider",
+   "statut": "valide",
    "exemples": [
     {
      "auteur": "Jean-Luc Mélenchon",
@@ -50,7 +54,9 @@
      "n_sources": 1
     }
    ],
-   "verifie_le": "2026-08-25"
+   "verifie_le": "2026-08-25",
+   "decide_le": "2026-08-25T22:35",
+   "motif": ""
   }
  ],
  "justification": "La gauche critique le centre comme un rival pour le même électorat modéré, tout en reconnaissant une certaine légitimité démocratique."

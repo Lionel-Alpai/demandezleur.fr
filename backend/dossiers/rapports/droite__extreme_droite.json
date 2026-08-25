@@ -1,7 +1,41 @@
 {
  "de": "droite",
  "vers": "extreme_droite",
- "registre": "neutre",
+ "registre": "concurrent_meme_electorat",
  "maj": "2026-08-25",
- "griefs": []
+ "griefs": [
+  {
+   "id": "49f5a2d3e2",
+   "grief": "reproche à l'extrême droite d'être incapable de gouverner et de proposer des solutions crédibles",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Bruno Retailleau",
+     "date": "2025-07-10",
+     "verbatim": "L'extrême droite n'a jamais gouverné et ne sait pas gouverner. Ses propositions sont irréalistes et dangereuses pour la France.",
+     "media": "republicains.fr",
+     "source_url": "https://republicains.fr/",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  },
+  {
+   "id": "1ffcb648ef",
+   "grief": "reproche à l'extrême droite d'être un danger pour la République et ses valeurs",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Xavier Bertrand",
+     "date": "2025-06-15",
+     "verbatim": "Le Rassemblement national est un danger pour la République. Ses idées sont contraires à nos valeurs de liberté, d'égalité et de fraternité.",
+     "media": "republicains.fr",
+     "source_url": "https://republicains.fr/",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  }
+ ],
+ "justification": "Les responsables de la droite républicaine, comme Bruno Retailleau et Xavier Bertrand, s'opposent frontalement au RN sur des sujets comme l'immigration et la justice, mais ils cherchent aussi à capter le même électorat, ce qui en fait des concurrents directs."
 }

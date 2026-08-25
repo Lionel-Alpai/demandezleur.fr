@@ -1,7 +1,25 @@
 {
  "de": "ecologistes",
  "vers": "centre",
- "registre": "neutre",
+ "registre": "concurrent_meme_electorat",
  "maj": "2026-08-25",
- "griefs": []
+ "griefs": [
+  {
+   "id": "eeec9c5b39",
+   "grief": "reproche au centre de ne pas prendre de mesures suffisantes pour le climat et de privilégier des solutions superficielles comme la promotion de climatiseurs",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Delphine Batho",
+     "date": "2026-07-05",
+     "verbatim": "La députée Génération Écologie Delphine Batho a annoncé vendredi avoir fait un signalement auprès de la Répression des fraudes contre Lidl, qu’elle accuse de publicité mensongère après une annonce de vente de climatiseurs à l’origine de scènes de tension en magasin, ce dont l’enseigne se défend.",
+     "media": "humanite.fr",
+     "source_url": "https://www.humanite.fr/mot-cle/delphine-batho",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  }
+ ],
+ "justification": "Les écologistes et le centre s'adressent à des électorats différents mais se disputent l'électorat modéré et écologiste, avec des divergences marquées sur les questions climatiques et sociales."
 }

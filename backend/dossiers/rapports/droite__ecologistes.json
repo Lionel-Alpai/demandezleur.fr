@@ -1,7 +1,25 @@
 {
  "de": "droite",
  "vers": "ecologistes",
- "registre": "neutre",
+ "registre": "concurrent_meme_electorat",
  "maj": "2026-08-25",
- "griefs": []
+ "griefs": [
+  {
+   "id": "fd37f0c878",
+   "grief": "reproche aux écologistes de promouvoir une écologie dogmatique et idéologique, nuisible concrètement",
+   "statut": "a_valider",
+   "exemples": [
+    {
+     "auteur": "Bruno Retailleau",
+     "date": "2025-01-01",
+     "verbatim": "Quand un hôpital flambant neuf à Nantes, construit pour plus d’un milliard d’euros, ouvre sans climatisation, c’est le symptôme d’une écologie devenue dogmatique. Je crois à l’écologie des résultats.",
+     "media": "republicains.fr",
+     "source_url": "https://republicains.fr/",
+     "n_sources": 1
+    }
+   ],
+   "verifie_le": "2026-08-25"
+  }
+ ],
+ "justification": "La droite critique l'écologie politique comme une idéologie dogmatique, tout en revendiquant une 'écologie des résultats', ce qui indique une concurrence pour capter l'électorat sensible aux questions environnementales."
 }
