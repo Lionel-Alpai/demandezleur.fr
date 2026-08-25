@@ -6,6 +6,7 @@ Philosophie : zéro persistance, zéro tracking, zéro donnée stockée au-delà
 de la journée en cours. Cohérent avec le positionnement "zéro tracking" du projet.
 """
 
+import os
 import asyncio
 from datetime import datetime, time as dtime, timedelta
 from threading import Lock
@@ -49,6 +50,8 @@ def verifier_et_incrementer(ip: str, action: ActionType) -> tuple[bool, int, int
         "debat_long": LIMITE_DEBAT_LONG_PAR_JOUR,
     }
     limite = limites[action]
+    if os.environ.get("DL_SANS_QUOTA") == "1":  # développement local / banc : pas de quota
+        return (True, 0, limite)
     
     with _lock:
         if ip not in _compteurs:

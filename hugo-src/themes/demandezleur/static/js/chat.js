@@ -1,180 +1,68 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const form = document.getElementById('chatFormFull');
-  const input = document.getElementById('chatInputFull');
-  const windowEl = document.getElementById('chatWindow');
-  
-  if (!form) return;
-  
-  const candidatId = form.dataset.candidat;
-  let history = [];
+/* chat.js — chat d'une fiche candidat : preuves, chips, historique, quota. Dépend de dl.js. */
+(function () {
+  'use strict';
+  var form = document.getElementById('chatFormFull'); if (!form) return;
+  var input = document.getElementById('chatInputFull'), bouton = document.getElementById('chatSendFull');
+  var fenetre = document.getElementById('chatWindow'), chips = document.getElementById('chat-chips');
+  var candidatId = form.dataset.candidat, historique = [], enCours = false;
 
-  // Check if there is a query param (e.g. redirected from homepage preview)
-  const urlParams = new URLSearchParams(window.location.search);
-  const initialQuery = urlParams.get('q');
-  
-  if (initialQuery) {
-    input.value = initialQuery;
-    handleSubmit(new Event('submit'));
-    // clean url
-    window.history.replaceState({}, document.title, window.location.pathname);
+  var params = new URLSearchParams(window.location.search), q = params.get('q');
+  if (q) { input.value = q; window.history.replaceState({}, document.title, window.location.pathname); envoyer(); }
+
+  form.addEventListener('submit', function (e) { e.preventDefault(); envoyer(); });
+  if (chips) chips.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-question]'); if (!b || enCours) return;
+    input.value = b.getAttribute('data-question'); envoyer();
+  });
+
+  function ajouter(role, html) {
+    var el = document.createElement('div'); el.className = 'msg msg-' + role; el.innerHTML = html;
+    fenetre.appendChild(el); fenetre.scrollTop = fenetre.scrollHeight; return el;
   }
+  function occupe(b) { enCours = b; input.disabled = b; bouton.disabled = b; if (!b) input.focus(); }
+  function texteHTML(t) { return DL.echapper(t).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\n\n/g, '</p><p>').replace(/\n/g, '<br>'); }
 
-  form.addEventListener('submit', handleSubmit);
+  function envoyer() {
+    var texte = input.value.trim(); if (!texte || enCours) return;
+    ajouter('visiteur', '<p>' + DL.echapper(texte) + '</p>');
+    input.value = ''; occupe(true);
+    var rep = ajouter('candidat', '<p class="msg-attente">Consulte son programme…</p>');
+    var corps = document.createElement('div'); corps.className = 'msg-corps';
+    var complet = '', preuvesHTML = '';
 
-  function handleSubmit(e) {
-    if (e && e.preventDefault) e.preventDefault();
-    
-    const text = input.value.trim();
-    if (!text) return;
-    
-    appendMessage('user', text);
-    input.value = '';
-    input.disabled = true;
-    document.getElementById('chatSendFull').disabled = true;
-    
-    const placeholderMsg = appendMessage('assistant', '', true);
-    
-    // Déduction de l'URL du backend en fonction de là où on se trouve
-    const apiUrl = (window.DL_API || '/api') + '/ask';
-    
-    fetch(apiUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        candidat_id: candidatId,
-        question: text,
-        history: history
-      })
-    }).then(async response => {
-      if (response.status === 429) {
-        const data = await response.json();
-        afficherMessageBlocage(data.detail);
-        placeholderMsg.parentElement.remove(); // Remove the empty assistant placeholder
-        input.disabled = false;
-        document.getElementById('chatSendFull').disabled = false;
-        return;
-      }
-
-      if (!response.ok) throw new Error("Erreur serveur");
-      
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder();
-      let fullResponse = "";
-      
-      while (true) {
-        const {value, done} = await reader.read();
-        if (done) break;
-        
-        const chunk = decoder.decode(value, {stream: true});
-        const lines = chunk.split('\n');
-        
-        for (const line of lines) {
-          if (line.startsWith('data: ')) {
-            const dataStr = line.substring(6);
-            if (dataStr === '[DONE]') {
-              input.disabled = false;
-              document.getElementById('chatSendFull').disabled = false;
-              input.focus();
-              
-              // On sauvegarde l'historique
-              history.push({role: "user", content: text});
-              history.push({role: "assistant", content: fullResponse});
-              break;
-            }
-            
-            try {
-              const data = JSON.parse(dataStr);
-              if (data.content) {
-                fullResponse += data.content;
-                placeholderMsg.innerHTML = formatResponse(fullResponse);
-                windowEl.scrollTop = windowEl.scrollHeight;
-              } else if (data.sources && data.sources.length > 0) {
-                const sourceHtml = `<div style="margin-top:8px; padding-top:8px; border-top:1px dashed rgba(255,255,255,0.1); font-size:10px; color:rgba(255,255,255,0.4);">Sources : ${data.sources.join(' | ')}</div>`;
-                placeholderMsg.innerHTML = formatResponse(fullResponse) + sourceHtml;
-                windowEl.scrollTop = windowEl.scrollHeight;
-              } else if (data.error) {
-                placeholderMsg.innerHTML = `<span style="color:#ED2939;">Erreur API: ${data.error}</span>`;
-                input.disabled = false;
-                document.getElementById('chatSendFull').disabled = false;
-              }
-            } catch(e) {
-              // Ignore parse errors on incomplete chunks
-            }
-          }
-        }
-      }
-    }).catch(error => {
-      placeholderMsg.innerHTML = `<span style="color:#ED2939;">Serveur injoignable. Le backend est-il lancé ?</span>`;
-      input.disabled = false;
-      document.getElementById('chatSendFull').disabled = false;
+    fetch(DL.api('/ask'), {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ candidat_id: candidatId, question: texte, history: historique })
+    }).then(function (r) {
+      if (r.status === 429) return r.json().then(function (d) { rep.remove(); blocage(d.detail); occupe(false); });
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      rep.innerHTML = ''; rep.appendChild(corps);
+      return DL.lireSSE(r, function (ev) {
+        if (ev.type === 'preuves') { preuvesHTML = DL.rendrePreuves(ev.preuves || []); }
+        else if (ev.type === 'token') { complet += ev.text || ''; corps.innerHTML = '<p>' + texteHTML(complet) + '</p>'; fenetre.scrollTop = fenetre.scrollHeight; }
+        else if (ev.type === 'done') { terminer(); }
+        else if (ev.type === 'error') { corps.innerHTML += '<p class="msg-erreur">Erreur : ' + DL.echapper(ev.error || 'inconnue') + '</p>'; occupe(false); }
+      }).then(function () { if (enCours) terminer(); });
+    }).catch(function () {
+      rep.innerHTML = '<p class="msg-erreur">Serveur injoignable. Réessayez dans un instant.</p>'; occupe(false);
     });
-  }
 
-  function formatResponse(text) {
-    return escapeHTML(text).replace(/\n/g, '<br>');
-  }
-
-  function appendMessage(role, content, isPlaceholder = false) {
-    const div = document.createElement('div');
-    div.className = `chat-message ${role}-msg`;
-    div.style.marginBottom = '12px';
-    div.style.fontSize = '12px';
-    div.style.lineHeight = '1.4';
-    
-    if (role === 'user') {
-      div.style.color = '#f5f5f5';
-      div.style.textAlign = 'right';
-      div.innerHTML = `<span style="background:rgba(255,255,255,0.08); padding:8px 12px; border-radius:12px 12px 0 12px; display:inline-block;">${escapeHTML(content)}</span>`;
-    } else {
-      div.style.color = 'var(--text-secondary)';
-      div.innerHTML = `<span style="background:rgba(255,255,255,0.03); padding:8px 12px; border-radius:12px 12px 12px 0; display:inline-block; border:1px solid var(--border-light);">${content}</span>`;
+    function terminer() {
+      if (!enCours) return;
+      corps.innerHTML = '<p>' + texteHTML(complet) + '</p>' + preuvesHTML +
+        '<div class="msg-actions"><button type="button" class="lien-bouton" data-copier>Copier la réponse</button></div>';
+      corps.querySelector('[data-copier]').addEventListener('click', function () {
+        navigator.clipboard && navigator.clipboard.writeText(complet).then(function () { this.textContent = 'Copié ✓'; }.bind(this));
+      });
+      historique.push({ role: 'user', content: texte }, { role: 'assistant', content: complet });
+      if (historique.length > 6) historique = historique.slice(-6);
+      fenetre.scrollTop = fenetre.scrollHeight; occupe(false);
     }
-    
-    windowEl.appendChild(div);
-    windowEl.scrollTop = windowEl.scrollHeight;
-    
-    return div.querySelector('span');
   }
 
-  function afficherMessageBlocage(detail) {
-    const messageHTML = `
-        <div class="rate-limit-blocage">
-            <h3 style="margin-top:0;">Quota quotidien atteint</h3>
-            <p>${detail.message}</p>
-            <p class="limite-info">Limite quotidienne : ${detail.limite} ${
-                detail.action === 'chat' ? 'questions' : 'débats'
-            } par adresse IP.</p>
-            <div class="rate-limit-soutien">
-                <p class="petit" style="font-size:11px; color:rgba(255,255,255,0.4); margin-bottom:8px;">
-                    Ce projet citoyen est développé bénévolement et son fonctionnement
-                    a un coût en infrastructures et en API d'intelligence artificielle.
-                    Si vous souhaitez soutenir son existence, vous pouvez contribuer
-                    librement sur <a href="/soutenir/" style="color:var(--rouge-france); text-decoration:underline;">notre page de soutien</a>.
-                </p>
-                <p class="petit" style="font-size:10px; color:rgba(255,255,255,0.3); font-style:italic;">
-                    Aucun don ne donne droit à un accès prioritaire : votre contribution
-                    soutient le projet, pas votre propre usage.
-                </p>
-            </div>
-        </div>
-    `;
-    const div = document.createElement('div');
-    div.innerHTML = messageHTML;
-    windowEl.appendChild(div);
-    windowEl.scrollTop = windowEl.scrollHeight;
+  function blocage(detail) {
+    ajouter('systeme', '<div class="rate-limit-blocage"><h3>Quota quotidien atteint</h3><p>' + DL.echapper(detail.message || '') +
+      '</p><p class="limite-info">Limite : ' + DL.echapper(String(detail.limite || '')) + ' questions par jour et par adresse IP.</p>' +
+      '<p class="petit">Ce site citoyen est développé bénévolement ; l’IA a un coût. <a href="/soutenir/">Soutenir le projet</a> — sans accès prioritaire pour personne.</p></div>');
   }
-
-  function escapeHTML(str) {
-    return str.replace(/[&<>'"]/g, 
-      tag => ({
-        '&': '&amp;',
-        '<': '&lt;',
-        '>': '&gt;',
-        "'": '&#39;',
-        '"': '&quot;'
-      }[tag] || tag)
-    );
-  }
-});
+})();

@@ -248,3 +248,45 @@ pre { background: var(--bg-2); border: 1px solid var(--border); border-radius: v
 .cdot { width: 6px; height: 6px; border-radius: 50%; background: var(--border-2); cursor: pointer; }
 .cdot.active { background: var(--fg); }
 .candidats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: var(--sp-4); }
+
+/* ---------- Fiche candidat & chat (incrément 2) ---------- */
+.visuellement-cache { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.fiche-entete { display: grid; grid-template-columns: 120px 1fr; gap: var(--sp-5); align-items: start; margin-bottom: var(--sp-6); }
+.fiche-photo { width: 120px; }
+.fiche-identite h1 { margin-bottom: var(--sp-2); }
+.fiche-parti { color: var(--fg-2); font-size: var(--fs-18); display: flex; flex-wrap: wrap; gap: var(--sp-3); align-items: center; }
+.badge-famille { display: inline-flex; align-items: center; gap: 6px; font-size: var(--fs-14); color: var(--fg-3); }
+.fiche-resume { color: var(--fg-2); max-width: 680px; }
+@media (min-width: 768px) { .fiche-entete { grid-template-columns: 160px 1fr; } .fiche-photo { width: 160px; } }
+
+.chat { background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--r-3); padding: var(--sp-4); margin-bottom: var(--sp-6); box-shadow: var(--ombre); }
+.chat-fenetre { min-height: 200px; max-height: 60vh; overflow-y: auto; display: flex; flex-direction: column; gap: var(--sp-3); padding: var(--sp-2) var(--sp-1) var(--sp-3); }
+.chat-systeme { font-size: var(--fs-14); color: var(--fg-3); text-align: center; margin: 0 auto var(--sp-2); max-width: 560px; }
+.msg { max-width: 92%; border-radius: var(--r-2); padding: var(--sp-3) var(--sp-4); line-height: 1.6; }
+.msg p { margin: 0 0 var(--sp-2); } .msg p:last-child { margin-bottom: 0; }
+.msg-visiteur { align-self: flex-end; background: var(--accent); color: #fff; border-bottom-right-radius: 4px; }
+.msg-candidat { align-self: flex-start; background: var(--bg-3); border: 1px solid var(--border); border-bottom-left-radius: 4px; }
+.msg-systeme { align-self: stretch; max-width: none; padding: 0; }
+.msg-attente { color: var(--fg-3); font-style: italic; }
+.msg-attente::after { content: ""; display: inline-block; width: 1.2em; text-align: left; animation: points 1.2s steps(4, end) infinite; }
+@keyframes points { 0% { content: ""; } 25% { content: "."; } 50% { content: ".."; } 75% { content: "..."; } }
+.msg-erreur { color: var(--accent-2); }
+.msg-actions { margin-top: var(--sp-2); }
+.lien-bouton { background: none; border: 0; padding: 0; color: var(--fg-3); font-size: var(--fs-14); cursor: pointer; text-decoration: underline; }
+.lien-bouton:hover { color: var(--fg); }
+.chat-chips { padding: var(--sp-3) 0; border-top: 1px solid var(--border); }
+.chat-saisie { display: flex; gap: var(--sp-2); }
+.chat-saisie .chat-input { flex: 1; min-width: 0; }
+.chat-note { margin: var(--sp-2) 0 0; }
+.chat-note a { color: var(--fg-3); }
+.preuves-vide { margin: var(--sp-2) 0 0; }
+.documents { margin-bottom: var(--sp-6); }
+.documents-liste { margin: 0 0 var(--sp-3); padding-left: var(--sp-5); color: var(--fg-2); }
+.grille-compacte { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+.grille-compacte .carte-cta { display: none; }
+.demo-fenetre { display: flex; flex-direction: column; gap: var(--sp-3); }
+.demo-entete { display: flex; align-items: center; gap: var(--sp-3); }
+.demo-entete img { width: 40px; height: 40px; border-radius: var(--r-1); object-fit: cover; }
+.demo-entete .demo-suivant { margin-left: auto; }
+.demo-cta { margin: var(--sp-1) 0 0; }
+@media (min-width: 900px) { .plateau-2col { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-5); align-items: start; } }

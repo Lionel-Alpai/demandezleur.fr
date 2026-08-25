@@ -15,7 +15,15 @@
     "sources": [
       "Positions politiques Lutte Ouvrière / Programme Nathalie Arthaud 2027"
     ],
-    "photo_type": "portrait"
+    "photo_type": "portrait",
+    "resume": "Son programme propose d'interdire les licenciements, de répartir le travail sans perte de salaire, et d'augmenter immédiatement les salaires et les retraites. Il prévoit l'expropriation des banques et des grands groupes capitalistes, ainsi que le renversement du capitalisme pour instaurer une société communiste. Il s'oppose à la guerre impérialiste, au nucléaire, et propose de garantir un logement décent pour tous.",
+    "questions_suggerees": [
+      "Comment comptez-vous financer l'augmentation des salaires ?",
+      "Quelles sont les modalités de l'expropriation des banques ?",
+      "Comment assurerez-vous la transition écologique sans nucléaire ?",
+      "Quel est votre plan pour résoudre la crise du logement ?"
+    ],
+    "resume_statut": "brouillon"
   },
   {
     "id": "delphine-batho",
@@ -33,7 +41,15 @@
     "sources": [
       "Programme Génération Écologie — Delphine Batho 2027"
     ],
-    "photo_type": "portrait"
+    "photo_type": "portrait",
+    "resume": "Son programme propose une transition vers une société de décroissance, respectant les limites planétaires, avec un État-Résilience adapté au réchauffement de +3°C. Il inclut des mesures pour l'eau, l'alimentation, la biodiversité, l'énergie, et une réforme démocratique abolissant le présidentialisme.",
+    "questions_suggerees": [
+      "Comment comptez-vous concrètement mettre en œuvre la décroissance ?",
+      "Quelles sont vos mesures pour garantir la sécurité alimentaire et hydrique ?",
+      "Comment financerez-vous la renationalisation d'EDF ?",
+      "Quel est votre plan pour renforcer la démocratie participative ?"
+    ],
+    "resume_statut": "brouillon"
   },
   {
     "id": "jerome-guedj",
@@ -51,7 +67,15 @@
     "sources": [
       "Programme Jérôme Guedj — Candidature Présidentielle 2027 (PS)"
     ],
-    "photo_type": "affiche"
+    "photo_type": "affiche",
+    "resume": "Son programme repose sur trois piliers : le partage des richesses par la justice fiscale, le partage du savoir par la réforme de l'éducation, et le partage du pouvoir par une participation citoyenne accrue. Il propose une taxation exceptionnelle des grandes fortunes, le maintien de l'âge légal de départ à la retraite à 62 ans et 9 mois, l'extension de la Sécurité sociale pour lutter contre les déserts médicaux, et l'introduction d'une dose de proportionnelle pour renforcer la légitimité parlementaire. Il défend également une transition écologique juste et un renforcement des services publics.",
+    "questions_suggerees": [
+      "Comment financerez-vous la taxation des grandes fortunes ?",
+      "Quelles mesures pour résorber les déserts médicaux ?",
+      "Comment rétablirez-vous le dialogue social sur les retraites ?",
+      "Quel calendrier pour la proportionnelle aux législatives ?"
+    ],
+    "resume_statut": "brouillon"
   },
   {
     "id": "edouard-philippe",
@@ -69,7 +93,15 @@
     "sources": [
       "Programme Édouard Philippe — Horizons 2027 (déclarations, interviews, livre)"
     ],
-    "photo_type": "portrait"
+    "photo_type": "portrait",
+    "resume": "Son programme propose des réformes structurelles dans les domaines de l'éducation, de la santé, de la justice, de l'économie, des retraites, du logement, de l'immigration et de la défense. Il prévoit de recourir à des référendums et à des ordonnances pour accélérer les changements, notamment sur les retraites et la limitation des déficits publics. Il souhaite également simplifier la fiscalité, réduire la dette, et renforcer l'autonomie des établissements scolaires et universitaires.",
+    "questions_suggerees": [
+      "Comment comptez-vous financer la réforme des retraites ?",
+      "Quelles mesures concrètes pour réduire les déserts médicaux ?",
+      "Comment allez-vous garantir l'équilibre budgétaire avec la règle d'or ?",
+      "Quels critères pour l'immigration choisie et les quotas annuels ?"
+    ],
+    "resume_statut": "brouillon"
   },
   {
     "id": "bruno-retailleau",
@@ -87,7 +119,15 @@
     "sources": [
       "Programme Bruno Retailleau — Les Républicains 2027 (déclarations, pacte législatif, interviews)"
     ],
-    "photo_type": "portrait"
+    "photo_type": "portrait",
+    "resume": "Son programme prône une politique de civilisation contre le multiculturalisme et le wokisme, avec une révolution pénale et un renforcement de l'ordre. Il propose de réduire drastiquement l'immigration par référendum, de restreindre le droit du sol et de durcir les conditions d'accès à la nationalité. En économie, il veut supprimer les 35 heures, plafonner les aides sociales et introduire une part de capitalisation dans les retraites, tout en renforçant la souveraineté nationale face à l'Europe.",
+    "questions_suggerees": [
+      "Comment concrètement réduire l'immigration sans nuire à l'économie ?",
+      "Quelles mesures pour garantir l'équité entre les citoyens et les étrangers ?",
+      "Comment financer la transition vers un système de retraite par capitalisation ?",
+      "Quel impact de la primauté du droit national sur les engagements européens ?"
+    ],
+    "resume_statut": "brouillon"
   },
   {
     "id": "xavier-bertrand",
@@ -105,7 +145,15 @@
     "sources": [
       "Programme Xavier Bertrand — Nous France 2027"
     ],
-    "photo_type": "portrait"
+    "photo_type": "portrait",
+    "resume": "Son programme propose de restaurer la valeur du travail en garantissant un salaire minimum de 1500 euros net pour les temps plein, d'exonérer les heures supplémentaires, et de favoriser le partage de la valeur en entreprise. Il prévoit de porter l'âge de départ à la retraite à 64 ans avec un minimum de pension de 1000 euros. En matière de sécurité, il souhaite abaisser la majorité pénale à 15 ans, créer 20 000 places de prison supplémentaires, et instaurer des peines minimales. Il propose une décentralisation accrue, une réduction de l'immigration, un soutien au nucléaire et au solaire, et une réforme de la santé axée sur la transparence et la lutte contre les déserts médicaux.",
+    "questions_suggerees": [
+      "Comment financerez-vous la hausse du salaire minimum à 1500 euros ?",
+      "Quelles seront les conséquences de l'abaissement de la majorité pénale à 15 ans ?",
+      "Comment concilier décentralisation et égalité des territoires ?",
+      "Quelles mesures concrètes pour réduire l'immigration tout en respectant les droits ?"
+    ],
+    "resume_statut": "brouillon"
   },
   {
     "id": "nicolas-dupont-aignan",
@@ -123,7 +171,15 @@
     "sources": [
       "100 Décisions pour la France — DLF 2022"
     ],
-    "photo_type": "portrait"
+    "photo_type": "portrait",
+    "resume": "Son programme propose de rendre la souveraineté au peuple français par le référendum et le RIC, de renforcer l'indépendance nationale en quittant l'OTAN et en réformant l'Europe, et de restaurer les services publics et l'ordre. Il prévoit également de supprimer le passe sanitaire et de réorienter la diplomatie et la défense.",
+    "questions_suggerees": [
+      "Comment comptez-vous financer la remise à niveau de la défense ?",
+      "Quelles sont vos priorités pour la reconstruction des services publics ?",
+      "Comment comptez-vous concrètement sortir de l'OTAN ?",
+      "Quelles mesures pour renforcer la souveraineté alimentaire ?"
+    ],
+    "resume_statut": "brouillon"
   },
   {
     "id": "francois-asselineau",
@@ -141,7 +197,15 @@
     "sources": [
       "Programme Présidentiel UPR — François Asselineau 2022"
     ],
-    "photo_type": "portrait"
+    "photo_type": "portrait",
+    "resume": "Son programme propose la sortie de l'Union européenne et de l'OTAN, le rétablissement d'une monnaie nationale, et des mesures pour augmenter le pouvoir d'achat et l'emploi. Il prévoit des réformes fiscales, la renationalisation de services publics, et des changements dans l'éducation et les institutions.",
+    "questions_suggerees": [
+      "Quelles seront les conséquences économiques de la sortie de l'euro ?",
+      "Comment financerez-vous l'augmentation du SMIC de 24% ?",
+      "Quelles mesures concrètes pour lutter contre la fraude fiscale ?",
+      "Comment garantirez-vous la qualité des services publics après renationalisation ?"
+    ],
+    "resume_statut": "brouillon"
   },
   {
     "id": "marine-le-pen",
@@ -159,7 +223,15 @@
     "sources": [
       "Programme présidentiel RN — Marine Le Pen 2022/2027 (22 mesures + livrets thématiques)"
     ],
-    "photo_type": "portrait"
+    "photo_type": "portrait",
+    "resume": "Son programme propose de réduire l'immigration par référendum, de renforcer la sécurité avec des peines minimales et plus de places de prison, de baisser la TVA sur l'énergie et certains produits, de protéger les retraites, d'augmenter les dépenses de santé, de relancer le nucléaire, et de recentrer l'école sur les fondamentaux.",
+    "questions_suggerees": [
+      "Comment comptez-vous financer la baisse de la TVA sur l'énergie ?",
+      "Quelles mesures concrètes pour renforcer la sécurité dans les zones rurales ?",
+      "Comment garantir l'accès aux soins dans les déserts médicaux ?",
+      "Quel est votre plan pour relancer la filière nucléaire française ?"
+    ],
+    "resume_statut": "brouillon"
   },
   {
     "id": "gabriel-attal",
@@ -180,7 +252,15 @@
       "Le Monde, 22 mai 2026",
       "attalpresident.fr — rubrique « Mes chantiers capitaux »"
     ],
-    "photo_type": "portrait"
+    "photo_type": "portrait",
+    "resume": "Son programme, intitulé 'LA FORCE D'AGIR', est structuré autour de cinq 'chantiers capitaux' : l'éducation, présentée comme priorité absolue ; la revalorisation du travail, avec l'objectif de faire monter les salaires ; la protection des frontières ; le redressement des finances publiques ; et la prise en charge de la dette écologique. Il inclut également une déclaration sur l'intelligence artificielle, souhaitant que cette révolution technologique bénéficie à tous.",
+    "questions_suggerees": [
+      "Comment comptez-vous faire monter les salaires concrètement ?",
+      "Quelles mesures pour protéger les frontières sans nuire à l'Europe ?",
+      "Comment réduirez-vous la dette écologique sans pénaliser les ménages ?",
+      "Quel est votre plan pour redresser les finances publiques ?"
+    ],
+    "resume_statut": "brouillon"
   },
   {
     "id": "bernard-cazeneuve",
@@ -198,7 +278,15 @@
     "sources": [
       "Synthèse de la lettre de 86 pages aux Français (La Convention · bc2027.fr) — extraits"
     ],
-    "photo_type": "portrait"
+    "photo_type": "portrait",
+    "resume": "Son programme met l'accent sur la sécurité, l'immigration, l'économie, l'écologie, la santé et l'éducation. Il propose des mesures pour renforcer la police de proximité, lutter contre le narcotrafic, et conjuguer humanité et fermeté en matière d'immigration. Il prévoit une réforme des retraites basée sur la durée de cotisation, une fiscalité plus juste, un plan de réindustrialisation, et une politique énergétique fondée sur le nucléaire. Il inclut également des mesures pour la santé, le grand âge, l'égalité femmes-hommes, la protection de l'enfance et l'école.",
+    "questions_suggerees": [
+      "Comment financerez-vous la police de proximité et la prévention ?",
+      "Quelles sont vos mesures concrètes pour lutter contre l'immigration irrégulière ?",
+      "Comment conciliez-vous réindustrialisation et transition écologique ?",
+      "Quel est votre calendrier pour la réforme des retraites et la pénibilité ?"
+    ],
+    "resume_statut": "brouillon"
   },
   {
     "id": "anasse-kazib",
@@ -219,7 +307,15 @@
       "Programme 2022, site de campagne anasse2027.fr",
       "Le Courrier de l'Atlas et programme de campagne anasse2027.fr"
     ],
-    "photo_type": "portrait"
+    "photo_type": "portrait",
+    "resume": "Son programme propose des mesures économiques et sociales radicales, notamment l'interdiction des licenciements, une augmentation généralisée des salaires, la réquisition des logements vacants, et la nationalisation des mutuelles. Il prévoit également des réformes institutionnelles comme la suppression du Sénat et de la Présidence, ainsi que des mesures sur l'immigration, l'écologie et la sécurité.",
+    "questions_suggerees": [
+      "Comment financer l'augmentation des salaires et le SMIC à 1800 euros ?",
+      "Quelles sont les modalités de réquisition des logements vacants ?",
+      "Comment assurer la transition écologique sans les entreprises privées ?",
+      "Quel serait le fonctionnement de l'assemblée unique proposée ?"
+    ],
+    "resume_statut": "brouillon"
   },
   {
     "id": "jean-luc-melenchon",
@@ -244,7 +340,15 @@
       "Melenchon2027.fr — L'Avenir en commun (présentation du programme)",
       "Melenchon2027.fr — L'Avenir en commun, chapitre 17 (Europe)"
     ],
-    "photo_type": "portrait"
+    "photo_type": "portrait",
+    "resume": "Son programme propose une refonte des institutions avec le passage à une 6e République via une Assemblée constituante, une augmentation du SMIC à 1600 euros net, la retraite à 60 ans, et une planification écologique. Il prévoit également de désobéir aux règles européennes si nécessaire pour appliquer ses mesures.",
+    "questions_suggerees": [
+      "Comment financerez-vous le SMIC à 1600 euros net ?",
+      "Quelles sont les étapes pour convoquer l'Assemblée constituante ?",
+      "Comment concrètement mettre en œuvre la retraite à 60 ans ?",
+      "Quelles actions de désobéissance envisagez-vous face à l'UE ?"
+    ],
+    "resume_statut": "brouillon"
   },
   {
     "id": "karim-bouamrane",
@@ -265,7 +369,15 @@
       "Franceinfo, 09/06/2026 — annonce de candidature à la présidentielle",
       "Manifeste « La France Humaine & Forte » — site karimbouamrane2027.org"
     ],
-    "photo_type": "affiche"
+    "photo_type": "affiche",
+    "resume": "Son programme propose une vision d'une France à la fois humaine et forte, axée sur la protection des citoyens, la sécurité, la valorisation du travail, et une transition écologique juste. Il met l'accent sur l'éducation, la santé, la protection de l'enfance et des femmes, ainsi que sur une politique migratoire équilibrée. Il souhaite également renforcer la souveraineté numérique et simplifier l'action publique.",
+    "questions_suggerees": [
+      "Comment comptez-vous lutter contre le narcotrafic ?",
+      "Quelles mesures pour valoriser le travail ?",
+      "Comment assurez-vous une transition écologique juste ?",
+      "Quel est votre plan pour protéger les enfants ?"
+    ],
+    "resume_statut": "brouillon"
   },
   {
     "id": "florian-philippot",
@@ -287,7 +399,15 @@
       "franceinfo — «Présidentielle 2027 : le souverainiste Florian Philippot annonce sa candidature à l'Élysée», 09/05/2026 (sources/12-declaration.txt)",
       "Les Patriotes — «Grandes orientations pour un projet patriote» (programme officiel, sources/11-programme_officiel.txt)"
     ],
-    "photo_type": "portrait"
+    "photo_type": "portrait",
+    "resume": "Son programme prévoit la sortie de l'Union européenne, de l'euro et de l'OTAN, afin de restaurer la souveraineté nationale. Il propose de limiter strictement l'immigration, de renforcer la sécurité et la justice, de réindustrialiser la France par une nouvelle monnaie nationale et de renationaliser des secteurs clés. En matière d'énergie, il souhaite quitter le marché européen de l'électricité et investir dans le nucléaire.",
+    "questions_suggerees": [
+      "Comment comptez-vous financer la transition vers une nouvelle monnaie nationale ?",
+      "Quelles mesures concrètes pour limiter l'immigration tout en respectant les droits humains ?",
+      "Quel est votre plan pour renégocier les accords de libre-échange ?",
+      "Comment assurez-vous la sécurité énergétique en quittant le marché européen ?"
+    ],
+    "resume_statut": "brouillon"
   },
   {
     "id": "selma-labib",
@@ -305,7 +425,15 @@
     "sources": [
       "npa-revolutionnaires.org — Communiqué « Présidentielle 2027 : Selma Labib, une candidature ouvrière et révolutionnaire, soutenue par Gaël Quirante » (sources/1-communique-declaration.txt)"
     ],
-    "photo_type": "portrait"
+    "photo_type": "portrait",
+    "resume": "Son programme propose de rompre avec le système capitaliste, jugé responsable des oppressions, des atteintes à la nature et des guerres. Il défend la défense des services publics (éducation, santé, logement), des salaires, retraites et emplois, et s'oppose aux subventions au patronat. Il adopte une position anti-impérialiste, critiquant la politique étrangère française et le soutien à Israël.",
+    "questions_suggerees": [
+      "Comment financerez-vous la défense des services publics ?",
+      "Quelles mesures pour lutter contre les subventions au patronat ?",
+      "Comment comptez-vous réduire les bases militaires françaises ?",
+      "Quelle est votre position sur le conflit au Moyen-Orient ?"
+    ],
+    "resume_statut": "brouillon"
   },
   {
     "id": "francis-lalanne",
@@ -345,6 +473,14 @@
       "France Libre — Nos thèmes et valeurs, introduction (programme-00-nos-themes-et-valeurs.txt)",
       "France Libre — À propos (programme-16-a-propos.txt)"
     ],
-    "photo_type": "portrait"
+    "photo_type": "portrait",
+    "resume": "Son programme propose une rupture avec le système politique actuel, incluant une souveraineté nationale renforcée, une réforme de la justice, et une démocratie plus directe. Il prévoit une sortie de l'Union européenne et de l'OTAN, une souveraineté monétaire avec le retour au franc, et une agriculture paysanne avec sortie de la PAC. Il défend également la protection des savoir-faire artisanaux, le soutien aux TPE/PME, et une éducation où les familles ont un rôle prépondérant.",
+    "questions_suggerees": [
+      "Comment comptez-vous organiser la sortie de l'Union européenne ?",
+      "Quelles sont vos mesures pour garantir la souveraineté alimentaire ?",
+      "Comment allez-vous associer les parents aux programmes scolaires ?",
+      "Quel est votre plan pour le retour au franc et la Banque de France ?"
+    ],
+    "resume_statut": "brouillon"
   }
 ]

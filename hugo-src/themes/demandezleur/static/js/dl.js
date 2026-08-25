@@ -36,6 +36,20 @@
     }
     return boucle();
   };
+  /* Rendu du bloc « Sur quoi il s'appuie » */
+  DL.rendrePreuves = function (preuves, titre) {
+    if (!preuves || !preuves.length) return '<p class="meta preuves-vide">Aucun extrait du programme ne correspondait précisément à cette question.</p>';
+    var n = preuves.length, lib = { programme: 'Programme', piece: 'Assemblée', adversaire: 'Programme adverse' };
+    var html = '<details class="bloc-preuves"><summary>' + DL.echapper(titre || ('Sur quoi il s’appuie : ' + n + ' extrait' + (n > 1 ? 's' : ''))) + '</summary>';
+    preuves.forEach(function (p) {
+      html += '<div class="preuve"><span class="preuve-type">' + DL.echapper(lib[p.type] || p.type) + '</span><span class="preuve-titre">' + DL.echapper(p.titre || '') + '</span>' +
+        (p.page ? ' <span class="meta">· ' + DL.echapper(String(p.page)) + '</span>' : '') +
+        (p.orateur ? ' <span class="meta">· ' + DL.echapper(p.orateur) + (p.date_lisible ? ', ' + DL.echapper(p.date_lisible) : '') + '</span>' : '') +
+        (p.extrait ? '<p class="preuve-extrait">« ' + DL.echapper(p.extrait) + ' »</p>' : '') +
+        (p.url ? '<a href="' + DL.echapper(p.url) + '" target="_blank" rel="noopener">Compte rendu officiel ↗</a>' : '') + '</div>';
+    });
+    return html + '</details>';
+  };
   /* Menu mobile */
   var btn = document.getElementById('menu-btn'), entete = document.getElementById('entete');
   if (btn && entete) {

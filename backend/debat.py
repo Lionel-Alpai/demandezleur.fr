@@ -49,15 +49,40 @@ def search_corpus_cached(candidat_id: str, query: str, top_k: int, window: int, 
         cache[cle] = resultat
     return resultat
 
+def search_blocs_cached(candidat_id: str, query: str, top_k: int, cache: dict) -> list:
+    """Comme search_corpus_cached mais renvoie les blocs (pour les preuves). Même cache."""
+    from api import load_corpus
+    import preuves
+    cle = ("blocs", candidat_id, hash_query(query), top_k)
+    if cache is not None and cle in cache:
+        return cache[cle]
+    blocs = preuves.rechercher_blocs(load_corpus(candidat_id), query, top_k=top_k)
+    if cache is not None:
+        cache[cle] = blocs
+    return blocs
+
+
 def load_prompt(name: str) -> str:
     """Charge un fichier prompt depuis prompts/debat/"""
     path = PROMPTS_DIR / "debat" / f"{name}.txt"
     return path.read_text(encoding="utf-8")
 
 
+# Famille politique -> fichier de ton (miroir de hugo-src/data/familles.json, champ "ton")
+TON_PAR_FAMILLE = {
+    "extreme_gauche": "ton_extreme_gauche",
+    "gauche": "ton_gauche",
+    "ecologistes": "ton_ecologie",
+    "centre": "ton_centre",
+    "droite": "ton_droite",
+    "souverainistes": "ton_souverainiste",
+    "extreme_droite": "ton_extreme_droite",
+}
+
+
 def load_ton_famille(famille: str) -> str:
     """Charge le prompt de ton militant pour une famille politique."""
-    path = PROMPTS_DIR / f"ton_{famille}.txt"
+    path = PROMPTS_DIR / f"{TON_PAR_FAMILLE.get(famille, 'ton_' + str(famille))}.txt"
     # Fallback si le fichier spécifique à la famille n'existe pas
     if not path.exists():
         return "Sois convaincant, poli et fidèle à tes convictions."

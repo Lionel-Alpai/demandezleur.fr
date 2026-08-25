@@ -75,105 +75,10 @@ def is_admin_bypass(request: Request) -> bool:
     if not jeton:
         return False
     return request.headers.get("X-Admin-Token") == jeton
-# Utilisation de DeepSeek par défaut via le SDK OpenAI
-client = AsyncOpenAI(
-    api_key=DEEPSEEK_API_KEY,
-    base_url="https://api.deepseek.com"
-)
+# Accès au modèle : voir llm.py (DL_MODE = live | demo | record)
+import llm
+import preuves
 
-# Méta-données des candidats déclarés
-CANDIDATS_META = {
-    "edouard-philippe": {
-        "nom": "Édouard Philippe",
-        "parti": "Horizons",
-        "ton_file": "ton_centre.txt"
-    },
-    "nicolas-dupont-aignan": {
-        "nom": "Nicolas Dupont-Aignan",
-        "parti": "Debout la France",
-        "ton_file": "ton_souverainiste.txt"
-    },
-    "francois-asselineau": {
-        "nom": "François Asselineau",
-        "parti": "Union Populaire Républicaine (UPR)",
-        "ton_file": "ton_souverainiste.txt"
-    },
-    "nathalie-arthaud": {
-        "nom": "Nathalie Arthaud",
-        "parti": "Lutte Ouvrière (LO)",
-        "ton_file": "ton_extreme_gauche.txt"
-    },
-    "delphine-batho": {
-        "nom": "Delphine Batho",
-        "parti": "Génération Écologie",
-        "ton_file": "ton_ecologie.txt"
-    },
-    "jerome-guedj": {
-        "nom": "Jérôme Guedj",
-        "parti": "Parti Socialiste (PS)",
-        "ton_file": "ton_gauche.txt"
-    },
-    "marine-le-pen": {
-        "nom": "Marine Le Pen",
-        "parti": "Rassemblement National (RN)",
-        "ton_file": "ton_extreme_droite.txt"
-    },
-    "edouard-philippe": {
-        "nom": "Édouard Philippe",
-        "parti": "Horizons",
-        "ton_file": "ton_centre.txt"
-    },
-    "xavier-bertrand": {
-        "nom": "Xavier Bertrand",
-        "parti": "Nous France",
-        "ton_file": "ton_droite.txt"
-    },
-    "bruno-retailleau": {
-        "nom": "Bruno Retailleau",
-        "parti": "Les Républicains (LR)",
-        "ton_file": "ton_droite.txt"
-    },
-        "gabriel-attal": {
-            "nom": "Gabriel Attal",
-            "parti": "Renaissance (RE)",
-            "ton_file": "ton_centre.txt"
-        },
-        "bernard-cazeneuve": {
-            "nom": "Bernard Cazeneuve",
-            "parti": "La Convention (La Convention)",
-            "ton_file": "ton_gauche.txt"
-        },
-        "anasse-kazib": {
-            "nom": "Anasse Kazib",
-            "parti": "Révolution permanente (RP)",
-            "ton_file": "ton_extreme_gauche.txt"
-        },
-        "jean-luc-melenchon": {
-            "nom": "Jean-Luc Mélenchon",
-            "parti": "La France insoumise (LFI)",
-            "ton_file": "ton_gauche.txt"
-        },
-        "karim-bouamrane": {
-            "nom": "Karim Bouamrane",
-            "parti": "Parti socialiste (PS)",
-            "ton_file": "ton_gauche.txt"
-        },
-        "florian-philippot": {
-            "nom": "Florian Philippot",
-            "parti": "Les Patriotes (LP)",
-            "ton_file": "ton_souverainiste.txt"
-        },
-        "selma-labib": {
-            "nom": "Selma Labib",
-            "parti": "NPA – Révolutionnaires (NPA)",
-            "ton_file": "ton_extreme_gauche.txt"
-        },
-        "francis-lalanne": {
-            "nom": "Francis Lalanne",
-            "parti": "France Libre (France Libre)",
-            "ton_file": "ton_souverainiste.txt"
-        }
-}
 
 class Message(BaseModel):
     role: str
@@ -204,27 +109,8 @@ def search_corpus_from_list(corpus: list, query: str, top_k: int = 3, threshold:
     """Recherche TF-IDF pour trouver les blocs les plus pertinents."""
     if not corpus:
         return ""
-    
-    texts = [item["text"] for item in corpus]
-    vectorizer = TfidfVectorizer(stop_words='english') # ou un dictionnaire français si dispo
-    try:
-        tfidf_matrix = vectorizer.fit_transform(texts + [query])
-        cosine_similarities = cosine_similarity(tfidf_matrix[-1], tfidf_matrix[:-1]).flatten()
-        related_docs_indices = cosine_similarities.argsort()[:-top_k-1:-1]
-        
-        results = []
-        for i in related_docs_indices:
-            if cosine_similarities[i] >= threshold:
-                block = corpus[i]
-                text = block["text"]
-                if window and len(text) > window:
-                    text = text[:window] + "..."
-                results.append(f"[Source: {block['source']}, page {block.get('page', 'N/A')}]\n{text}")
-        
-        return "\n\n".join(results) if results else "Aucun extrait pertinent trouvé dans le programme officiel sur ce sujet précis."
-    except Exception as e:
-        logger.error(f"Erreur lors de la recherche TF-IDF : {e}")
-        return "Erreur lors de la recherche dans le programme."
+    blocs = preuves.rechercher_blocs(corpus, query, top_k=top_k, threshold=threshold)
+    return preuves.formater_contexte(blocs, window=window)
 
 def search_corpus(candidat_id: str, query: str, top_k: int = 3, window: int = None):
     """Interface simplifiée pour la recherche RAG."""
@@ -232,10 +118,14 @@ def search_corpus(candidat_id: str, query: str, top_k: int = 3, window: int = No
     return search_corpus_from_list(corpus, query, top_k=top_k, window=window)
 
 def load_prompts(candidat_id: str):
-    """Charge le prompt de base et le ton politique du candidat."""
-    meta = CANDIDATS_META.get(candidat_id)
-    if not meta:
+    """Charge le prompt de base et le ton politique du candidat (source : candidats.json)."""
+    from debat import charger_candidat, TON_PAR_FAMILLE
+    try:
+        c = charger_candidat(candidat_id)
+    except (ValueError, FileNotFoundError):
         return None, None, None
+    meta = {"nom": c["nom"], "parti": c.get("parti", ""), "famille": c.get("famille", ""),
+            "ton_file": TON_PAR_FAMILLE.get(c.get("famille"), "ton_" + str(c.get("famille"))) + ".txt"}
     
     base_prompt = ""
     if os.path.exists(BASE_DIR / "prompts" / "base.txt"):
@@ -331,6 +221,8 @@ async def debat_stream(request: Request):
         autres_ids = [cid for cid in payload["candidats"] if cid != interpelle_id]
         random.shuffle(autres_ids)
         ordre_ids = [interpelle_id] + autres_ids
+    elif llm.MODE == "demo":
+        ordre_ids = list(payload["candidats"])  # démo : ordre reçu, rejeu reproductible
     else:
         ordre_ids = randomiser_ordre(payload["candidats"])
     
@@ -400,32 +292,26 @@ async def debat_stream(request: Request):
             tokens_in = 0
             tokens_out = 0
             try:
-                stream = await client.chat.completions.create(
-                    model="deepseek-v4-flash",
-                    extra_body={"thinking": {"type": "disabled"}},
-                    messages=[
+                usage = {}
+                def _usage_cb(p_tok, c_tok, _u=usage):
+                    _u["in"], _u["out"] = p_tok, c_tok
+                cle_demo = ("debat", candidat_id, llm.normaliser(payload.get("question_moderateur") or payload["sujet"]), type_tour, mode_debat)
+                async for delta in llm.completer(
+                    [
                         {"role": "system", "content": prompt_system},
                         {"role": "user", "content": "Prends la parole maintenant."},
                     ],
+                    cle_demo=cle_demo,
                     max_tokens=(MAX_TOKENS_ARENE if mode_debat == "arene" else MAX_TOKENS_DEBAT),  # [parlement]
                     temperature=(TEMPERATURE_ARENE if mode_debat == "arene" else TEMPERATURE_DEBAT),  # [parlement]
-                    stream=True,
-                    stream_options={"include_usage": True}
-                )
-                
-                async for chunk in stream:
-                    if hasattr(chunk, "usage") and chunk.usage is not None:
-                        tokens_in = chunk.usage.prompt_tokens
-                        tokens_out = chunk.usage.completion_tokens
-                        logger.info(f"[DEBAT] REAL TOKENS tour={payload['tour']} candidat={candidat_id} in={tokens_in} out={tokens_out}")
-                    
-                    if chunk.choices and chunk.choices[0].delta.content:
-                        delta = chunk.choices[0].delta.content
-                        full_text += delta
-                        yield format_sse("token", {
-                            "candidat_id": candidat_id,
-                            "text": delta,
-                        })
+                    usage_cb=_usage_cb,
+                ):
+                    full_text += delta
+                    yield format_sse("token", {
+                        "candidat_id": candidat_id,
+                        "text": delta,
+                    })
+                tokens_in, tokens_out = usage.get("in", 0), usage.get("out", 0)
                 
                 yield format_sse("speaker_end", {
                     "candidat_id": candidat_id,
@@ -618,7 +504,10 @@ async def suggerer_document(
 @app.post("/api/ask")
 async def ask_candidat(request: Request, ask_request: AskRequest):
     ip = extraire_ip_reelle(request)
-    autorise, usage, limite = verifier_et_incrementer(ip, "chat")
+    if is_admin_bypass(request):
+        autorise, usage, limite = True, 0, 0
+    else:
+        autorise, usage, limite = verifier_et_incrementer(ip, "chat")
     
     if not autorise:
         raise HTTPException(
@@ -643,37 +532,11 @@ async def ask_candidat(request: Request, ask_request: AskRequest):
         base_prompt = "Tu es un militant politique. Réponds sur la base des extraits." if not base_prompt else base_prompt
         ton_content = "Sois convaincant et poli."
         
-    # 2. RAG : Recherche dans le corpus
+    # 2. RAG structuré : blocs -> contexte pour le modèle + preuves pour le visiteur
     corpus = load_corpus(candidat_id)
-    # On récupère les blocs bruts pour les sources et le formattage
-    texts = [item["text"] for item in corpus]
-    if not texts:
-        rag_context = "Aucun extrait pertinent trouvé dans le programme officiel sur ce sujet précis."
-        sources_used = []
-    else:
-        vectorizer = TfidfVectorizer(stop_words='english')
-        try:
-            tfidf_matrix = vectorizer.fit_transform(texts + [ask_request.question])
-            cosine_similarities = cosine_similarity(tfidf_matrix[-1], tfidf_matrix[:-1]).flatten()
-            top_k = 3
-            threshold = 0.02
-            related_docs_indices = cosine_similarities.argsort()[:-top_k-1:-1]
-            
-            relevant_blocks = []
-            for i in related_docs_indices:
-                if cosine_similarities[i] >= threshold:
-                    relevant_blocks.append(corpus[i])
-            
-            if relevant_blocks:
-                rag_context = "\n\n".join([f"[Source: {b['source']}, page {b.get('page', 'N/A')}]\n{b['text']}" for b in relevant_blocks])
-                sources_used = list(set([f"{b['source']}, p.{b.get('page', 'N/A')}" for b in relevant_blocks]))
-            else:
-                rag_context = "Aucun extrait pertinent trouvé dans le programme officiel sur ce sujet précis."
-                sources_used = []
-        except Exception as e:
-            logger.error(f"Erreur RAG ask: {e}")
-            rag_context = "Erreur technique lors de la recherche."
-            sources_used = []
+    blocs = preuves.rechercher_blocs(corpus, ask_request.question, top_k=3, threshold=0.02)
+    rag_context = preuves.formater_contexte(blocs)
+    preuves_visiteur = preuves.vers_preuves(blocs, candidat_id)
         
     # 4. Assemblage du prompt système
     system_prompt = base_prompt.replace("{candidat}", meta["nom"]) \
@@ -690,31 +553,17 @@ async def ask_candidat(request: Request, ask_request: AskRequest):
     # Ajout de la question actuelle
     messages.append({"role": "user", "content": ask_request.question})
 
-    # 5. Appel à DeepSeek (en mode Streaming)
+    # 5. Flux SSE typé : preuves -> token* -> done | error
     async def generate():
         try:
-            stream = await client.chat.completions.create(
-                model="deepseek-v4-flash",
-                extra_body={"thinking": {"type": "disabled"}},
-                messages=messages,
-                temperature=0.65,
-                max_tokens=700,
-                stream=True
-            )
-            async for chunk in stream:
-                if chunk.choices and chunk.choices[0].delta.content is not None:
-                    # Envoi au format SSE
-                    data = {"content": chunk.choices[0].delta.content}
-                    yield f"data: {json.dumps(data)}\n\n"
-            
-            # Envoi des sources à la fin du flux
-            yield f"data: {json.dumps({'sources': sources_used})}\n\n"
-            yield "data: [DONE]\n\n"
-            
+            yield format_sse("preuves", {"candidat_id": candidat_id, "preuves": preuves_visiteur})
+            cle_demo = ("ask", candidat_id, llm.normaliser(ask_request.question))
+            async for delta in llm.completer(messages, cle_demo=cle_demo, max_tokens=700, temperature=0.65):
+                yield format_sse("token", {"candidat_id": candidat_id, "text": delta})
+            yield format_sse("done", {"candidat_id": candidat_id})
         except Exception as e:
             logger.error(f"Erreur DeepSeek API: {e}")
-            yield f"data: {json.dumps({'error': str(e)})}\n\n"
-            yield "data: [DONE]\n\n"
+            yield format_sse("error", {"candidat_id": candidat_id, "error": str(e)})
 
     return StreamingResponse(generate(), media_type="text/event-stream")
 
