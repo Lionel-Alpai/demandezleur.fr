@@ -1,0 +1,9 @@
+{
+  "extreme_gauche": {"libelle": "Extrême gauche", "couleur": "#c2185b", "ton": "ton_extreme_gauche"},
+  "gauche":         {"libelle": "Gauche",          "couleur": "#e0526a", "ton": "ton_gauche"},
+  "ecologistes":    {"libelle": "Écologistes",     "couleur": "#3fa66b", "ton": "ton_ecologie"},
+  "centre":         {"libelle": "Centre",          "couleur": "#f2a93b", "ton": "ton_centre"},
+  "droite":         {"libelle": "Droite",          "couleur": "#4f8df5", "ton": "ton_droite"},
+  "souverainistes": {"libelle": "Souverainistes",  "couleur": "#8b7bd8", "ton": "ton_souverainiste"},
+  "extreme_droite": {"libelle": "Extrême droite",  "couleur": "#2f4fa8", "ton": "ton_extreme_droite"}
+}

@@ -2,11 +2,18 @@ baseURL = "https://demandezleur.fr/"
 languageCode = "fr"
 title = "demandezleur.fr — Interrogez leurs programmes"
 theme = "demandezleur"
+disableKinds = ["taxonomy", "term", "RSS"]
 
 [params]
-  description = "L'IA au service du citoyen. Interrogez les programmes des candidats à la présidentielle 2027."
+  description = "Posez vos questions aux programmes officiels des candidats à la présidentielle 2027, et faites-les débattre. Réponses sourcées, prompts publics, code ouvert, aucun traceur."
   apiBase = "/api"
   maxDebatTours = 5
+  ogImage = "/img/og.png"
+
+# Mesure d'audience sans cookie (Umami). Vide = rien n'est chargé.
+[params.umami]
+  url = ""
+  siteId = ""
 
 [markup.goldmark.renderer]
   unsafe = true

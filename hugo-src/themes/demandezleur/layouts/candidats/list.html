@@ -1,26 +1,15 @@
 {{ define "main" }}
-<div class="site-title" style="margin-top:20px;">tous les candidats</div>
-<div class="candidats-grid">
-  {{ $candidats := site.Data.candidats }}
-  
-  {{/* Shuffle server-side just in case */}}
-  {{ range seq (len $candidats) }}
-    {{/* Not easy to shuffle in pure Hugo without custom logic, we'll iterate normally and we can add client-side shuffle if needed */}}
-  {{ end }}
-  
-  {{ range $candidats }}
-    <a href="/candidats/{{ .slug }}/" class="candidate-card" style="width:100%;">
-      <div class="candidate-photo" style="background:{{ .couleur_fond }}; width:100%; max-width:96px; height:96px; font-size:32px; border-radius:50%; overflow:hidden; display:flex; align-items:center; justify-content:center; padding:0;">
-      {{ if .photo }}
-        <img src="{{ .photo }}" alt="{{ .nom }}" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
-      {{ else }}
-        {{ .initiales }}
-      {{ end }}
-      </div>
-      <div class="candidate-name" style="font-size:11px; margin-top:12px;">{{ .nom }}</div>
-      <div class="candidate-party" style="font-size:9px;">{{ .parti }}</div>
-      <div class="candidate-cta" style="font-size:9px;">interroger &rsaquo;</div>
-    </a>
-  {{ end }}
+<section class="page-entete">
+  <p class="sur-titre">Présidentielle 2027</p>
+  <h1>{{ len site.Data.candidats }} candidats déclarés</h1>
+  <p class="hero-texte">Chaque candidat répond à partir de son programme officiel, et de rien d'autre. Choisissez-en un, posez votre question.</p>
+</section>
+<div class="chips filtres" id="filtres-famille" role="group" aria-label="Filtrer par famille politique">
+  <button class="chip selectionne" data-famille="">Tous</button>
+  {{ range $k, $f := site.Data.familles }}<button class="chip" data-famille="{{ $k }}"><span class="pastille famille-{{ $k }}"></span>{{ $f.libelle }}</button>{{ end }}
 </div>
+<div class="grille-candidats grille-large" id="grille-candidats">
+  {{ range site.Data.candidats }}{{ partial "candidat-carte.html" (dict "c" . "mode" "lien") }}{{ end }}
+</div>
+<p class="meta centre">Ordre d'apparition : ordre de déclaration de candidature. Un candidat manque ? <a href="/suggerer/">Suggérez un document</a>.</p>
 {{ end }}

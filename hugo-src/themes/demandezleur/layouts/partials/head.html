@@ -1,11 +1,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | demandezleur.fr{{ end }}</title>
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · demandezleur.fr{{ end }}</title>
   <meta name="description" content="{{ .Description | default site.Params.description }}">
   <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="demandezleur.fr">
+  <meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+  <meta property="og:description" content="{{ .Description | default site.Params.description }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  {{ with site.Params.ogImage }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="dl-api" content="{{ site.Params.apiBase | default "/api" }}">
   <meta name="dl-max-tours" content="{{ site.Params.maxDebatTours | default 5 }}">
   <script>(function(){var m=function(n){var e=document.querySelector('meta[name="'+n+'"]');return e?e.content:''};window.DL_API=m('dl-api')||'/api';window.DL_MAX_TOURS=parseInt(m('dl-max-tours'),10)||5;})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="/css/main.css?v={{ now.Unix }}">
+  <style>{{ range $k, $f := site.Data.familles }}.famille-{{ $k }}{--pastille:{{ $f.couleur | safeCSS }}}{{ end }}</style>
+  {{ range .Params.css }}<link rel="stylesheet" href="/css/{{ . }}.css?v={{ now.Unix }}">{{ end }}
+  {{ with site.Params.umami }}{{ if and .url .siteId }}<script defer src="{{ .url }}" data-website-id="{{ .siteId }}"></script>{{ end }}{{ end }}
 </head>

@@ -1,51 +1,46 @@
 {{ define "main" }}
-<div class="lef">
-  <span class="lef-bleu">Liberté</span>
-  <span class="lef-blanc">Égalité</span>
-  <span class="lef-rouge">Fraternité</span>
-</div>
-<div class="question-wrap">
-  <div class="question-halo"></div>
-  <div class="question">?</div>
-</div>
-<div class="site-title">demandezleur<span class="dot">.</span>fr</div>
-<div class="subtitle">interrogez leurs programmes</div>
-
-<div class="candidats-label">{{ len (where .Site.RegularPages "Section" "candidats") }} candidats déclarés · touchez pour interroger</div>
-
-{{ partial "carousel.html" . }}
-
-<div class="hook">
-  <div class="hook-main">Et si vous pouviez faire débattre les programmes politiques&nbsp;?</div>
-  <div class="hook-sub">
-    Posez vos questions à une IA qui ne répond qu'à partir des <strong>programmes officiels</strong> des candidats.<br>
-    Chaque réponse est <strong>sourcée</strong>, le code est <strong>ouvert</strong>, aucun tracking.
+<section class="hero">
+  <p class="sur-titre">Présidentielle 2027 · {{ len site.Data.candidats }} candidats déclarés</p>
+  <h1>Vous êtes dans le fauteuil du journaliste.</h1>
+  <p class="hero-texte">Posez vos questions aux programmes officiels des candidats. Puis faites-les débattre entre eux — c'est vous qui menez.</p>
+  <div class="hero-actions">
+    <a href="/debat/" class="btn btn-accent btn-grand">Ouvrir un débat</a>
+    <a href="#candidats" class="btn btn-secondaire btn-grand">Interroger un candidat</a>
   </div>
-</div>
+</section>
 
-<div class="badge-2027">
-  <div class="yr">2027</div>
-  <div class="lbl">élection<br>présidentielle</div>
-</div>
+<section class="bandeau-assemblee" id="bandeau-assemblee" hidden>
+  <div class="bandeau-titre"><span class="point-direct"></span> Cette semaine à l'Assemblée</div>
+  <p class="bandeau-sous">Reprenez un sujet réellement débattu au Palais-Bourbon et faites-en débattre les candidats.</p>
+  <div class="chips" id="assemblee-themes"></div>
+  <p class="meta" id="assemblee-maj"></p>
+</section>
 
-<a href="/debat/" class="debat-feature">
-  <div class="debat-title">Devenez <em>modérateur</em><br>d'un débat entre candidats</div>
-  <div class="debat-desc">
-    Sélectionnez jusqu'à 5 candidats, lancez un sujet, orchestrez les tours de parole.
-    L'IA fait s'affronter leurs programmes en temps réel.
+<section class="demo-live" id="demo-live" hidden>
+  <div class="demo-titre"><span class="point-direct"></span> En direct sur le plateau</div>
+  <div class="demo-fenetre" id="demo-fenetre"></div>
+</section>
+
+<section class="section-candidats" id="candidats">
+  <div class="section-entete">
+    <h2>Interroger un candidat</h2>
+    <a href="/candidats/" class="lien-discret">Tous les candidats et filtres →</a>
   </div>
-  <span class="debat-cta">Lancer un débat →</span>
-</a>
+  <div class="grille-candidats">
+    {{ range site.Data.candidats }}{{ partial "candidat-carte.html" (dict "c" . "mode" "lien") }}{{ end }}
+  </div>
+</section>
 
-<a href="/candidats/" class="all-candidates-link">voir tous les candidats →</a>
+<section class="cta-plateau">
+  <div class="cta-plateau-texte">
+    <h2>Faites débattre les programmes.</h2>
+    <p>Choisissez 2 à 5 candidats, lancez un sujet, distribuez la parole, interpellez. En mode <strong>Arène</strong>, les candidats se voient opposer ce qui s'est vraiment dit à l'Assemblée — et le programme officiel de leurs adversaires.</p>
+    <a href="/debat/" class="btn btn-accent">Ouvrir le plateau</a>
+  </div>
+</section>
 
-<div class="prompt-hint">
-  <a href="/transparence/" style="text-decoration:none; color:inherit;">
-    <span class="chev">&gt;</span> transparence totale<span class="blink"></span>
-  </a>
-</div>
+<section class="ligne-honnete">
+  <span>Programmes officiels seulement</span><span>Chaque réponse sourcée</span><span>Prompts publics</span><span>Code ouvert</span><span>Aucun traceur</span>
+</section>
 {{ end }}
-
-{{ define "scripts" }}
-<script src="{{ "js/carousel.js" | relURL }}"></script>
-{{ end }}
+{{ define "scripts" }}<script src="/js/accueil.js?v={{ now.Unix }}"></script>{{ end }}
