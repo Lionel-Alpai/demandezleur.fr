@@ -32,7 +32,7 @@ REGISTRES = {
     "neutre": "Pas de relation particulière : tu attaques sur le programme.",
 }
 CLASSES_LIBELLE = {
-    "condamnation_definitive": "condamnation définitive", "condamnation_appel": "condamnation en première instance (appel en cours)",
+    "condamnation_definitive": "condamnation définitive", "condamnation_appel": "condamnation NON définitive — reprendre l'étape exacte donnée dans le fait (première instance, appel, pourvoi en cassation)",
     "mise_en_examen": "mise en examen (présomption d'innocence)", "vote": "vote", "declaration": "déclaration publique", "sanction": "sanction officielle",
 }
 
