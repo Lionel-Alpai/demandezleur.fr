@@ -142,6 +142,7 @@ def vers_preuves(blocs: list, candidat_id: str, type_defaut: str = "programme", 
             "page": b.get("page", ""),
             "theme": b.get("theme", ""),
             "extrait": texte,
+            "texte_integral": b.get("text", "") or "",  # pour le juge ; non affiché, non stocké
         }
         for k in ("url", "date", "orateur", "date_lisible"):
             if b.get(k):

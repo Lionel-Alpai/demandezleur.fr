@@ -252,6 +252,7 @@ def construire_prompt_debat(
                         "type": "piece", "candidat_id": candidat["id"],
                         "titre": sq.get("libelle") or sq["titre"], "page": sq["titre"], "theme": "",
                         "extrait": (sq["texte"][:280].rsplit(" ", 1)[0] + "…") if len(sq["texte"]) > 280 else sq["texte"],
+                        "texte_integral": sq["texte"],
                         "orateur": sq["orateur"], "date_lisible": sq["date_lisible"], "url": sq.get("url", ""),
                     })
         except Exception:

@@ -105,7 +105,7 @@ def _formater_pieces(preuves: list) -> str:
     lignes = []
     for p in preuves:
         if p.get("type") == "adversaire":
-            lignes.append(f"[{p.get('candidat_id')}] {p.get('titre', '')} {('(' + str(p.get('page')) + ')') if p.get('page') else ''} : « {p.get('extrait', '')} »")
+            lignes.append(f"[{p.get('candidat_id')}] {p.get('titre', '')} {('(' + str(p.get('page')) + ')') if p.get('page') else ''} : « {p.get('texte_integral') or p.get('extrait', '')} »")
     return "\n".join(lignes) or "(aucune pièce sur les adversaires)"
 
 
@@ -121,7 +121,7 @@ def _formater_faits(adversaires: list, faits: dict) -> str:
 def _formater_piece_assemblee(preuves: list) -> str:
     for p in preuves:
         if p.get("type") == "piece":
-            return f"{p.get('orateur', '')}, {p.get('date_lisible', '')} : « {p.get('extrait', '')} »"
+            return f"{p.get('orateur', '')}, {p.get('date_lisible', '')} : « {p.get('texte_integral') or p.get('extrait', '')} »"
     return "(aucune)"
 
 
