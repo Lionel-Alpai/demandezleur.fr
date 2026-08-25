@@ -22,6 +22,8 @@ MIN_CANDIDATS = 2
 MAX_TOURS = 5
 MAX_TOKENS_DEBAT = 200
 TEMPERATURE_DEBAT = 0.8
+MAX_TOKENS_ARENE = 320       # [parlement] mode arène : on laisse la place à la citation
+TEMPERATURE_ARENE = 0.95     # [parlement] mode arène : plus mordant
 RAG_TOP_K_OUVERTURE = 2       # Tour d'ouverture : le candidat a besoin de matière pour poser sa vision
 RAG_TOP_K_INTERPELLE = 2      # Candidat interpellé : même logique, il doit répondre en profondeur
 RAG_TOP_K_REACTION = 1        # Réaction rapide : un seul bloc suffit, le candidat réagit aux autres
@@ -111,6 +113,7 @@ def construire_prompt_debat(
     est_interpelle: bool = False,
     position_dans_tour: int = 0,
     cache_rag: dict = None,
+    mode: str = "standard",  # [parlement]
 ) -> str:
     """Construit le prompt système complet pour un candidat à un tour donné."""
     # Charger le bon template selon le type de tour
@@ -173,6 +176,26 @@ def construire_prompt_debat(
         reponses_autres_note=reponses_autres_note,
     )
     
+    # [parlement] mode arene : injection citation assemblee
+    if mode == "arene":
+        try:
+            import parlement as _p
+            consigne_path = PROMPTS_DIR / "debat" / "consigne_arene.txt"
+            if consigne_path.exists():
+                consigne = consigne_path.read_text(encoding="utf-8")
+                prompt += "\n\n" + consigne
+                seqs = _p.sequences_pour_sujet(sujet, n=1)
+                if seqs:
+                    s = seqs[0]
+                    prompt += (
+                        "\n\nPIÈCE AU DOSSIER — verbatim officiel de l'Assemblée nationale, sur « "
+                        + s["titre"] + " » :\n"
+                        + "« " + s["texte"] + " »\n"
+                        + "— " + s["orateur"] + ", séance du " + s["date_lisible"] + "\n"
+                        + "Tu peux la citer TELLE QUELLE. Tu n'inventes JAMAIS une autre citation."
+                    )
+        except Exception:
+            pass
     return prompt
 
 
@@ -209,6 +232,9 @@ def valider_requete_debat(payload: dict) -> tuple[bool, str]:
         if candidat_interpelle_id not in candidats:
             return False, "candidat_interpelle_id doit être dans la liste des candidats"
     
+    mode = payload.get("mode", "standard")  # [parlement]
+    if mode not in ("standard", "arene"):
+        return False, "mode invalide"
     return True, ""
 
 

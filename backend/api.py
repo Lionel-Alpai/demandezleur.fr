@@ -21,6 +21,7 @@ from rate_limiter import (
     get_stats_actuelles,
 )
 from feedback import traiter_feedback
+import parlement  # [parlement] couche actualité parlementaire
 
 # --- Configuration Logging ---
 logging.basicConfig(level=logging.INFO)
@@ -87,11 +88,6 @@ CANDIDATS_META = {
         "parti": "Debout la France",
         "ton_file": "ton_souverainiste.txt"
     },
-    "david-lisnard": {
-        "nom": "David Lisnard",
-        "parti": "Nouvelle Énergie",
-        "ton_file": "ton_droite.txt"
-    },
     "francois-asselineau": {
         "nom": "François Asselineau",
         "parti": "Union Populaire Républicaine (UPR)",
@@ -131,7 +127,47 @@ CANDIDATS_META = {
         "nom": "Bruno Retailleau",
         "parti": "Les Républicains (LR)",
         "ton_file": "ton_droite.txt"
-    }
+    },
+        "gabriel-attal": {
+            "nom": "Gabriel Attal",
+            "parti": "Renaissance (RE)",
+            "ton_file": "ton_centre.txt"
+        },
+        "bernard-cazeneuve": {
+            "nom": "Bernard Cazeneuve",
+            "parti": "La Convention (La Convention)",
+            "ton_file": "ton_gauche.txt"
+        },
+        "anasse-kazib": {
+            "nom": "Anasse Kazib",
+            "parti": "Révolution permanente (RP)",
+            "ton_file": "ton_extreme_gauche.txt"
+        },
+        "jean-luc-melenchon": {
+            "nom": "Jean-Luc Mélenchon",
+            "parti": "La France insoumise (LFI)",
+            "ton_file": "ton_gauche.txt"
+        },
+        "karim-bouamrane": {
+            "nom": "Karim Bouamrane",
+            "parti": "Parti socialiste (PS)",
+            "ton_file": "ton_gauche.txt"
+        },
+        "florian-philippot": {
+            "nom": "Florian Philippot",
+            "parti": "Les Patriotes (LP)",
+            "ton_file": "ton_souverainiste.txt"
+        },
+        "selma-labib": {
+            "nom": "Selma Labib",
+            "parti": "NPA – Révolutionnaires (NPA)",
+            "ton_file": "ton_extreme_gauche.txt"
+        },
+        "francis-lalanne": {
+            "nom": "Francis Lalanne",
+            "parti": "France Libre (France Libre)",
+            "ton_file": "ton_souverainiste.txt"
+        }
 }
 
 class Message(BaseModel):
@@ -144,12 +180,20 @@ class AskRequest(BaseModel):
     history: List[Message] = []
 
 def load_corpus(candidat_id: str):
-    """Charge le corpus JSON du candidat."""
+    # Charge le corpus JSON du candidat, puis ajoute l'actu parlementaire.
     path = f"corpus/{candidat_id}.json"
+    corpus = []
     if os.path.exists(path):
         with open(path, "r", encoding="utf-8") as f:
-            return json.load(f)
-    return []
+            corpus = json.load(f)
+    # [parlement] greffe actu load_corpus
+    try:
+        corpus.extend(parlement.blocs_actu(candidat_id))
+    except Exception:
+        logging.getLogger(__name__).warning(
+            "parlement.blocs_actu en echec pour %s", candidat_id, exc_info=True
+        )
+    return corpus
 
 def search_corpus_from_list(corpus: list, query: str, top_k: int = 3, threshold: float = 0.02, window: int = None):
     """Recherche TF-IDF pour trouver les blocs les plus pertinents."""
@@ -209,6 +253,8 @@ from debat import (
     charger_candidat,
     MAX_TOKENS_DEBAT,
     TEMPERATURE_DEBAT,
+    MAX_TOKENS_ARENE,  # [parlement]
+    TEMPERATURE_ARENE,  # [parlement]
 )
 import asyncio
 import random
@@ -274,6 +320,7 @@ async def debat_stream(request: Request):
     
     # Déterminer l'ordre de parole
     type_tour = payload.get("type_tour", "ouverture")
+    mode_debat = payload.get("mode", "standard")  # [parlement]
     if type_tour == "intervention":
         interpelle_id = payload["candidat_interpelle_id"]
         autres_ids = [cid for cid in payload["candidats"] if cid != interpelle_id]
@@ -340,6 +387,7 @@ async def debat_stream(request: Request):
                 est_interpelle=est_interpelle,
                 position_dans_tour=position,
                 cache_rag=cache_rag,
+                mode=mode_debat,  # [parlement]
             )
             
             # Appeler Groq en streaming
@@ -348,13 +396,14 @@ async def debat_stream(request: Request):
             tokens_out = 0
             try:
                 stream = await client.chat.completions.create(
-                    model="deepseek-chat",
+                    model="deepseek-v4-flash",
+                    extra_body={"thinking": {"type": "disabled"}},
                     messages=[
                         {"role": "system", "content": prompt_system},
                         {"role": "user", "content": "Prends la parole maintenant."},
                     ],
-                    max_tokens=MAX_TOKENS_DEBAT,
-                    temperature=TEMPERATURE_DEBAT,
+                    max_tokens=(MAX_TOKENS_ARENE if mode_debat == "arene" else MAX_TOKENS_DEBAT),  # [parlement]
+                    temperature=(TEMPERATURE_ARENE if mode_debat == "arene" else TEMPERATURE_DEBAT),  # [parlement]
                     stream=True,
                     stream_options={"include_usage": True}
                 )
@@ -640,7 +689,8 @@ async def ask_candidat(request: Request, ask_request: AskRequest):
     async def generate():
         try:
             stream = await client.chat.completions.create(
-                model="deepseek-chat",
+                model="deepseek-v4-flash",
+                extra_body={"thinking": {"type": "disabled"}},
                 messages=messages,
                 temperature=0.65,
                 max_tokens=700,
@@ -662,6 +712,35 @@ async def ask_candidat(request: Request, ask_request: AskRequest):
             yield "data: [DONE]\n\n"
 
     return StreamingResponse(generate(), media_type="text/event-stream")
+
+
+@app.get("/api/parlement/etat")  # [parlement]
+async def parlement_etat():
+    return parlement.etat()
+
+@app.get("/api/parlement/sujets")  # [parlement]
+async def parlement_sujets(n: int = 8):
+    if n < 1:
+        n = 1
+    elif n > 24:
+        n = 24
+    return parlement.sujets(n)
+
+@app.post("/api/parlement/ingest")  # [parlement]
+async def parlement_ingest(request: Request):
+    token = request.headers.get("X-Parlement-Token")
+    if not parlement.verifier_token(token):
+        raise HTTPException(status_code=401, detail="token invalide")
+    if parlement.OFF.exists():
+        raise HTTPException(status_code=503, detail="feed desactive")
+    try:
+        obj = await request.json()
+    except Exception:
+        raise HTTPException(status_code=400, detail="JSON invalide")
+    ok, raison = parlement.valider_payload(obj)
+    if not ok:
+        raise HTTPException(status_code=422, detail=raison)
+    return {"ok": True, **parlement.ecrire(obj)}
 
 if __name__ == "__main__":
     import uvicorn
