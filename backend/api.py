@@ -645,6 +645,35 @@ async def debat_lire(did: str):
     return doc
 
 
+# ---------- Pupitre de validation du dossier (Lionel) ----------
+from fastapi import Form
+from fastapi.responses import HTMLResponse, RedirectResponse
+import dossiers_admin
+
+
+def _acces_admin(request: Request, jeton: str = "") -> bool:
+    if extraire_ip_reelle(request) in ("127.0.0.1", "::1", "unknown") and (request.client and request.client.host in ("127.0.0.1", "::1")):
+        return True
+    attendu = os.environ.get("ADMIN_BYPASS_TOKEN", "")
+    return bool(attendu) and jeton == attendu
+
+
+@app.get("/admin/dossiers", response_class=HTMLResponse)
+async def admin_dossiers(request: Request, jeton: str = ""):
+    if not _acces_admin(request, jeton):
+        raise HTTPException(status_code=403, detail="accès réservé")
+    return HTMLResponse(dossiers_admin.page(jeton))
+
+
+@app.post("/admin/dossiers/decider")
+async def admin_dossiers_decider(request: Request, id: str = Form(...), statut: str = Form(...), motif: str = Form(""), jeton: str = ""):
+    if not _acces_admin(request, jeton):
+        raise HTTPException(status_code=403, detail="accès réservé")
+    if not dossiers_admin.decider(id, statut, motif):
+        raise HTTPException(status_code=404, detail="entrée inconnue ou statut invalide")
+    return RedirectResponse(url="/admin/dossiers" + (f"?jeton={jeton}" if jeton else ""), status_code=303)
+
+
 @app.get("/api/parlement/etat")  # [parlement]
 async def parlement_etat():
     return parlement.etat()
