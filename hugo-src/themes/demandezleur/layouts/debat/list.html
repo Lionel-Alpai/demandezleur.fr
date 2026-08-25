@@ -1,156 +1,89 @@
 {{ define "main" }}
-<div class="debat-page">
-  
-  {{/* ÉTAT 1 — Sélection des candidats et du sujet */}}
-  <section id="debat-setup" class="debat-section">
-    <div class="debat-header">
-      <h1 style="font-family:'JetBrains Mono', monospace; font-size:24px; margin-bottom:12px;">Lancer un débat</h1>
-      <p class="debat-intro" style="font-size:14px; color:var(--text-secondary); margin-bottom:24px;">
-        Sélectionnez 2 à 5 candidats et lancez un sujet. Vous êtes le modérateur.
-      </p>
-    </div>
-    
-    <div class="debat-selection">
-      <div class="debat-counter" style="font-family:'JetBrains Mono', monospace; font-size:12px; margin-bottom:16px; color:var(--text-tertiary);">
-        <span id="counter-selected" style="color:var(--rouge-france); font-weight:bold;">0</span> / 5 candidats sélectionnés
-      </div>
-      
-      <div class="candidats-grid" id="candidats-grid">
-        {{ $candidats := index .Site.Data "candidats" }}
-        {{ range $candidats }}
-        <div class="candidat-select-card" 
-             data-candidat-id="{{ .id }}"
-             data-candidat-nom="{{ .nom }}"
-             data-candidat-parti="{{ .parti_court }}"
-             data-candidat-famille="{{ .famille }}"
-             data-candidat-couleur="{{ .couleur_fond }}">
-          <div class="candidat-photo-wrap" style="background: {{ .couleur_fond }};">
-            {{ if .photo }}
-              <img src="{{ .photo }}" alt="{{ .nom }}" loading="lazy">
-            {{ else }}
-              <span class="candidat-initiales">{{ .initiales }}</span>
-            {{ end }}
-            <div class="candidat-check">✓</div>
-          </div>
-          <div class="candidat-info">
-            <div class="candidat-nom">{{ .nom }}</div>
-            <div class="candidat-parti">{{ .parti_court }}</div>
-          </div>
-        </div>
-        {{ end }}
-      </div>
-    </div>
-    
-    {{/* [parlement-ui] bandeau des sujets parlementaires, rempli par debat.js */}}
-    <section id="parlement-bandeau" style="display:none; margin-top:30px; padding:16px; border:1px solid var(--border-subtle); background:rgba(255,255,255,0.03);">
-      <div style="font-family:'JetBrains Mono', monospace; font-size:12px; text-transform:uppercase; letter-spacing:1px; color:var(--text-tertiary);">Ce qui s'est dit à l'Assemblée</div>
-      <span id="parlement-maj" style="display:block; margin-top:6px; font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.5px; color:var(--text-tertiary);"></span>
-      <div id="parlement-sujets" style="margin-top:14px;"></div>
-      <p style="font-size:10px; color:var(--text-tertiary); margin-top:12px; letter-spacing:0.5px;">Cliquez un sujet pour le reprendre comme sujet de débat.</p>
-    </section>
-    <!-- [parlement-ui] fin du bandeau -->
-    <div class="debat-sujet" style="margin-top:30px;">
-      <label for="sujet-input" style="display:block; font-family:'JetBrains Mono', monospace; font-size:12px; margin-bottom:8px; color:var(--text-tertiary); text-transform:uppercase;">Sujet du débat</label>
-      <textarea id="sujet-input" 
-                placeholder="Exemple : le pouvoir d'achat, le nucléaire, l'immigration, l'école..."
-                maxlength="500"
-                rows="2"
-                style="width:100%; background:rgba(255,255,255,0.05); border:1px solid var(--border-subtle); border-radius:4px; padding:12px; color:var(--text-primary); font-family:inherit; resize:none;"></textarea>
-      <div class="sujet-counter" style="text-align:right; font-size:10px; color:var(--text-tertiary); margin-top:4px;"><span id="sujet-chars">0</span>/500</div>
-    </div>
-    
-    <div class="debat-launch" style="margin-top:40px; text-align:center;">
-      <button id="btn-launch" class="btn btn-launch-debat" disabled>
-        Lancer le débat
-      </button>
-      <!-- [parlement-ui] bascule du mode Arène -->
-      <label for="mode-arene" style="display:inline-flex; align-items:center; gap:8px; margin-top:16px; font-family:'JetBrains Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:1px; color:var(--text-secondary); cursor:pointer;">
-        <input type="checkbox" id="mode-arene" style="width:14px; height:14px; accent-color:var(--rouge-france); cursor:pointer;">
-        <span style="color:var(--text-primary);">Arène</span>
-      </label>
-      <p id="arene-avertissement" style="display:none; font-size:11px; line-height:1.6; color:var(--text-secondary); margin-top:10px; padding:10px 12px; border:1px solid var(--border-subtle); border-left:2px solid var(--rouge-france); background:rgba(255,255,255,0.03);">Mode Arène : les candidats peuvent se voir opposer des propos réellement tenus à l'Assemblée. Le ton est plus vif, les échanges plus directs.</p>
-      <!-- [parlement-ui] fin de la bascule -->
-      <p class="debat-notice" style="font-size:10px; color:var(--text-tertiary); margin-top:16px; letter-spacing:0.5px;">
-        Ordre de parole randomisé · 5 tours maximum · transparence totale
-      </p>
-    </div>
-  </section>
-  
-  {{/* ÉTAT 2 — Débat en cours */}}
-  <section id="debat-arena" class="debat-section" style="display: none;">
-    <div class="debat-header-arena" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; padding-bottom:15px; border-bottom:1px solid var(--border-subtle);">
-      <div class="debat-sujet-display">
-        <span class="label" style="font-size:10px; color:var(--text-tertiary); text-transform:uppercase; display:block;">Sujet</span>
-        <span class="valeur" id="sujet-display" style="font-weight:bold; color:var(--text-primary);"></span>
-      </div>
-      <div class="debat-tour-display" style="text-align:right;">
-        <span class="label" style="font-size:10px; color:var(--text-tertiary); text-transform:uppercase; display:block;">Tour</span>
-        <span class="valeur" id="tour-display" style="font-family:'JetBrains Mono', monospace; font-weight:bold; color:var(--rouge-france);">1/5</span>
-      </div>
-    </div>
-    
-    <div class="debat-ordre" id="debat-ordre" style="font-size:11px; color:var(--text-tertiary); margin-bottom:20px; padding:8px; background:rgba(255,255,255,0.03); border-radius:4px;">
-      <span class="label">Ordre de parole :</span>
-      <span class="ordre-liste" id="ordre-liste" style="color:var(--text-secondary); margin-left:5px;"></span>
-    </div>
-    
-    <div class="debat-interventions" id="debat-interventions">
-      {{/* Les cartes d'intervention sont générées par JS au fil du stream */}}
-    </div>
-    
-    <div class="debat-actions" id="debat-actions" style="display: none;">
-      <button class="btn btn-debat-action" id="btn-tour-suivant">
-        <span class="btn-icon">↻</span>
-        <span class="btn-label">Tour suivant</span>
-      </button>
-      <button class="btn btn-debat-action" id="btn-intervenir">
-        <span class="btn-icon">✋</span>
-        <span class="btn-label">Intervenir</span>
-      </button>
-      <button class="btn btn-debat-action btn-end" id="btn-fin-debat">
-        <span class="btn-icon">■</span>
-        <span class="btn-label">Fin du débat</span>
-      </button>
-    </div>
-    
-    {{/* Panneau intervention (s'ouvre quand on clique Intervenir) */}}
-    <div class="debat-intervention-panel" id="intervention-panel" style="display: none; background:var(--bg-elevated); border:1px solid var(--border-medium); border-radius:8px; padding:20px; margin-top:20px;">
-      <label for="intervention-input" style="display:block; font-family:'JetBrains Mono', monospace; font-size:12px; margin-bottom:12px; color:var(--text-tertiary); text-transform:uppercase;">Votre question en tant que modérateur</label>
-      <textarea id="intervention-input" 
-                placeholder="Posez votre question ou recadrez le débat..."
-                maxlength="300"
-                rows="2"
-                style="width:100%; background:rgba(255,255,255,0.05); border:1px solid var(--border-subtle); border-radius:4px; padding:12px; color:var(--text-primary); font-family:inherit; resize:none; margin-bottom:20px;"></textarea>
-      
-      <div class="intervention-target" style="margin-bottom:24px;">
-        <label style="display:block; font-family:'JetBrains Mono', monospace; font-size:11px; margin-bottom:12px; color:var(--text-tertiary); text-transform:uppercase;">Qui doit répondre en premier ?</label>
-        <div class="intervention-target-buttons" id="intervention-target-buttons" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(120px, 1fr)); gap:8px;">
-          {{/* Boutons générés par JS selon candidats en jeu */}}
-        </div>
-      </div>
-      
-      <div class="intervention-actions" style="display:flex; gap:12px;">
-        <button class="btn btn-secondary" id="btn-intervention-cancel" style="flex:1;">Annuler</button>
-        <button class="btn btn-primary" id="btn-intervention-submit" disabled style="flex:1;">Valider</button>
-      </div>
-    </div>
-  </section>
-  
-  {{/* ÉTAT 3 — Fin du débat / récapitulatif */}}
-  <section id="debat-recap" class="debat-section" style="display: none;">
-    <div class="debat-header" style="text-align:center; margin-bottom:40px;">
-      <h1 style="font-family:'JetBrains Mono', monospace; font-size:24px; margin-bottom:12px;">Fin du débat</h1>
-      <p style="font-size:14px; color:var(--text-secondary);">Récapitulatif des positions de chaque candidat.</p>
-    </div>
-    <div id="recap-container" style="display:flex; flex-direction:column; gap:24px; margin-bottom:40px;"></div>
-    <div class="debat-recap-actions" style="display:flex; flex-direction:column; gap:12px; align-items:center;">
-      <button class="btn btn-primary" id="btn-nouveau-debat" style="width:100%; max-width:300px;">Lancer un nouveau débat</button>
-      <a href="/" class="btn btn-secondary" style="width:100%; max-width:300px; text-decoration:none; display:flex; align-items:center; justify-content:center;">Retour à l'accueil</a>
-    </div>
-  </section>
-  
-</div>
+<div class="debat" id="debat">
 
-<link rel="stylesheet" href="/css/debat.css">
-<script src="/js/debat.js" defer></script>
+  {{/* ÉTAT 1 — préparation du plateau */}}
+  <section id="debat-setup" class="debat-section">
+    <div class="page-entete">
+      <p class="sur-titre">Le plateau</p>
+      <h1>Faites débattre les programmes.</h1>
+      <p class="hero-texte">Choisissez un sujet, 2 à 5 candidats, et menez le débat : vous distribuez la parole, vous interpellez, vous clôturez.</p>
+    </div>
+
+    <div class="etape">
+      <h2 class="etape-titre"><span class="etape-num">1</span> Le sujet</h2>
+      <section class="bandeau-assemblee" id="parlement-bandeau" hidden>
+        <div class="bandeau-titre"><span class="point-direct"></span> Ce qui s'est dit à l'Assemblée</div>
+        <p class="bandeau-sous">Reprenez un sujet réellement débattu au Palais-Bourbon <span id="parlement-maj" class="meta"></span></p>
+        <div class="chips" id="parlement-sujets"></div>
+      </section>
+      <label for="sujet-input" class="etiquette">Sujet du débat</label>
+      <textarea id="sujet-input" class="champ" placeholder="Exemple : le pouvoir d'achat, le nucléaire, l'immigration, l'école…" maxlength="500" rows="2"></textarea>
+      <p class="meta compteur"><span id="sujet-chars">0</span>/500</p>
+    </div>
+
+    <div class="etape">
+      <h2 class="etape-titre"><span class="etape-num">2</span> Les candidats <span class="meta" id="compteur-selection"><span id="counter-selected">0</span> / 5 sélectionnés (2 minimum)</span></h2>
+      <div class="grille-candidats grille-selection" id="candidats-grid">
+        {{ range site.Data.candidats }}{{ partial "candidat-carte.html" (dict "c" . "mode" "selection") }}{{ end }}
+      </div>
+    </div>
+
+    <div class="etape">
+      <h2 class="etape-titre"><span class="etape-num">3</span> Le ton</h2>
+      <label class="carte-arene" for="mode-arene">
+        <input type="checkbox" id="mode-arene" role="switch">
+        <span class="carte-arene-texte">
+          <strong>Mode Arène</strong>
+          <span>Les candidats se voient opposer des propos réellement tenus à l'Assemblée et le programme officiel de leurs adversaires. Ton plus vif, échanges plus directs. Chaque affirmation sur un adversaire doit s'appuyer sur une pièce ; ce qui n'est pas ancré est retiré et signalé.</span>
+        </span>
+      </label>
+    </div>
+
+    <div class="lancement">
+      <button id="btn-launch" class="btn btn-accent btn-grand" disabled>Ouvrir le plateau</button>
+      <p class="meta">Ordre de parole tiré au sort · 5 tours maximum · prompts publics</p>
+    </div>
+  </section>
+
+  {{/* ÉTAT 2 — débat en cours */}}
+  <section id="debat-arena" class="debat-section" hidden>
+    <header class="arene-entete">
+      <div><p class="sur-titre">Sujet</p><h1 class="arene-sujet" id="sujet-display"></h1></div>
+      <div class="arene-tour"><p class="sur-titre">Tour</p><strong id="tour-display">1/5</strong><span class="badge-mode" id="mode-display" hidden>Arène</span></div>
+    </header>
+    <p class="meta arene-ordre"><span>Ordre de parole :</span> <span id="ordre-liste"></span></p>
+    <div class="interventions" id="debat-interventions"></div>
+    <div class="arene-actions" id="debat-actions" hidden>
+      <button class="btn btn-secondaire" id="btn-tour-suivant">↻ Tour suivant</button>
+      <button class="btn btn-secondaire" id="btn-intervenir">✋ Intervenir</button>
+      <button class="btn btn-accent" id="btn-fin-debat">■ Clore le débat</button>
+    </div>
+    <div class="panneau" id="intervention-panel" hidden>
+      <label for="intervention-input" class="etiquette">Votre question, en tant que modérateur</label>
+      <textarea id="intervention-input" class="champ" placeholder="Posez votre question ou recadrez le débat…" maxlength="300" rows="2"></textarea>
+      <p class="etiquette">Qui doit répondre en premier ?</p>
+      <div class="chips" id="intervention-target-buttons"></div>
+      <div class="panneau-actions">
+        <button class="btn btn-secondaire" id="btn-intervention-cancel">Annuler</button>
+        <button class="btn btn-accent" id="btn-intervention-submit" disabled>Poser la question</button>
+      </div>
+    </div>
+  </section>
+
+  {{/* ÉTAT 3 — récapitulatif */}}
+  <section id="debat-recap" class="debat-section" hidden>
+    <div class="page-entete">
+      <p class="sur-titre">Fin du débat</p>
+      <h1 id="recap-sujet"></h1>
+      <p class="hero-texte">Ce que chaque candidat a défendu, et sur quoi il s'est appuyé.</p>
+    </div>
+    <div class="recap-partage" id="recap-partage"></div>
+    <div id="recap-container" class="recap"></div>
+    <div class="recap-actions">
+      <button class="btn btn-accent" id="btn-nouveau-debat">Lancer un nouveau débat</button>
+      <a href="/" class="btn btn-secondaire">Retour à l'accueil</a>
+    </div>
+  </section>
+</div>
 {{ end }}
+{{ define "scripts" }}<script src="/js/debat.js?v={{ now.Unix }}"></script>{{ end }}

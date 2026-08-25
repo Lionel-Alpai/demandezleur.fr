@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "statut": "a_valider_par_lionel",
+  "note": "Faits structurés injectés dans les prompts et utilisés par la garde A.2. a_gouverne = a été membre d'un gouvernement (ministre, Premier ministre). depute = député en exercice à la 17e législature. À VALIDER avant tout déploiement.",
+  "candidats": {
+    "nathalie-arthaud":      {"a_gouverne": false, "depute": false, "mandats": [], "fonctions_passees": []},
+    "delphine-batho":        {"a_gouverne": true,  "depute": true,  "mandats": ["députée des Deux-Sèvres"], "fonctions_passees": ["ministre de l'Écologie (2012-2013)"]},
+    "jerome-guedj":          {"a_gouverne": false, "depute": true,  "mandats": ["député de l'Essonne"], "fonctions_passees": []},
+    "edouard-philippe":      {"a_gouverne": true,  "depute": false, "mandats": ["maire du Havre"], "fonctions_passees": ["Premier ministre (2017-2020)"]},
+    "bruno-retailleau":      {"a_gouverne": true,  "depute": false, "mandats": ["sénateur de la Vendée"], "fonctions_passees": ["ministre de l'Intérieur (2024-2025)"]},
+    "xavier-bertrand":       {"a_gouverne": true,  "depute": false, "mandats": ["président de la région Hauts-de-France"], "fonctions_passees": ["ministre du Travail", "ministre de la Santé"]},
+    "nicolas-dupont-aignan": {"a_gouverne": false, "depute": true,  "mandats": ["député de l'Essonne"], "fonctions_passees": []},
+    "francois-asselineau":   {"a_gouverne": false, "depute": false, "mandats": [], "fonctions_passees": []},
+    "marine-le-pen":         {"a_gouverne": false, "depute": true,  "mandats": ["députée du Pas-de-Calais"], "fonctions_passees": [], "note": "n'a jamais été ministre ni au gouvernement"},
+    "gabriel-attal":         {"a_gouverne": true,  "depute": true,  "mandats": ["député des Hauts-de-Seine"], "fonctions_passees": ["Premier ministre (2024)", "ministre de l'Éducation nationale (2023-2024)"]},
+    "bernard-cazeneuve":     {"a_gouverne": true,  "depute": false, "mandats": [], "fonctions_passees": ["Premier ministre (2016-2017)", "ministre de l'Intérieur (2014-2016)"]},
+    "anasse-kazib":          {"a_gouverne": false, "depute": false, "mandats": [], "fonctions_passees": []},
+    "jean-luc-melenchon":    {"a_gouverne": true,  "depute": false, "mandats": [], "fonctions_passees": ["ministre délégué à l'Enseignement professionnel (2000-2002)"]},
+    "karim-bouamrane":       {"a_gouverne": false, "depute": false, "mandats": ["maire de Saint-Ouen-sur-Seine"], "fonctions_passees": []},
+    "florian-philippot":     {"a_gouverne": false, "depute": false, "mandats": [], "fonctions_passees": []},
+    "selma-labib":           {"a_gouverne": false, "depute": false, "mandats": [], "fonctions_passees": []},
+    "francis-lalanne":       {"a_gouverne": false, "depute": false, "mandats": [], "fonctions_passees": []}
+  }
+}

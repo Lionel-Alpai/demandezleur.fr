@@ -138,6 +138,9 @@ def sujets(n=8):
                 extrait = _couper_texte(premiere.get("texte", ""))
                 orateur = premiere.get("orateur", "")
         resultats.append({
+            "cr_uid": s.get("cr_uid", ""),
+            "segment": s.get("segment", ""),
+            "extraits": [q.get("texte", "")[:600] for q in sequences[:2] if isinstance(q, dict)] if isinstance(sequences, list) else [],
             "titre": s.get("titre", ""),
             "libelle": s.get("libelle", ""),
             "section": s.get("section", ""),
@@ -204,7 +207,10 @@ def sequences_pour_sujet(sujet, n=1):
             "texte": seq.get("texte", ""),
             "date_lisible": meilleur_sujet.get("date_lisible", ""),
             "titre": meilleur_sujet.get("titre", ""),
+            "libelle": meilleur_sujet.get("libelle", meilleur_sujet.get("section", "")),
             "url": meilleur_sujet.get("url", ""),
+            "cr_uid": meilleur_sujet.get("cr_uid", ""),
+            "segment": meilleur_sujet.get("segment", ""),
         })
     return resultats
 

@@ -50,6 +50,17 @@ app.add_middleware(
 @app.on_event("startup")
 async def au_demarrage():
     demarrer_tache_reset()
+    asyncio.create_task(_precalculer_themes())
+
+
+async def _precalculer_themes():
+    """Thèmes lisibles des sujets parlementaires (cache sidecar), en tâche de fond."""
+    try:
+        import themes_parlement
+        bruts = parlement.sujets(n=64).get("sujets", [])
+        await themes_parlement.precalculer(bruts, {themes_parlement.cle_sujet(s): s.get("extraits", []) for s in bruts})
+    except Exception:
+        logger.warning("précalcul des thèmes parlementaires en échec", exc_info=True)
 
 def extraire_ip_reelle(request: Request) -> str:
     """
@@ -239,11 +250,12 @@ async def debat_stream(request: Request):
             "tour": payload.get("tour", 1),
             "candidats_ordre": ordre_ids,
             "candidats_meta": [
-                {"id": c["id"], "nom": c["nom"], "parti": c.get("parti_court", c["parti"])}
+                {"id": c["id"], "nom": c["nom"], "parti": c.get("parti_court", c["parti"]), "famille": c.get("famille", ""), "photo": c.get("photo", "")}
                 for c in [candidats_by_id[cid] for cid in ordre_ids]
             ],
             "sujet": payload["sujet"],
             "type_tour": type_tour,
+            "mode": mode_debat,
         })
         
         # Historique qui s'enrichit au fil des interventions de CE tour
@@ -273,7 +285,7 @@ async def debat_stream(request: Request):
             }] if interventions_ce_tour else historique_complet
             
             # Construire le prompt système
-            prompt_system = construire_prompt_debat(
+            prompt_system, preuves_locuteur = construire_prompt_debat(
                 candidat=candidat,
                 tour=payload["tour"],
                 type_tour=type_tour,
@@ -285,7 +297,10 @@ async def debat_stream(request: Request):
                 position_dans_tour=position,
                 cache_rag=cache_rag,
                 mode=mode_debat,  # [parlement]
+                adversaires=[candidats_by_id[cid] for cid in ordre_ids if cid != candidat_id],
             )
+            # A.4 — les pièces sur lesquelles ce locuteur s'appuie, avant le premier mot
+            yield format_sse("preuves", {"candidat_id": candidat_id, "preuves": preuves_locuteur})
             
             # Appeler Groq en streaming
             full_text = ""
@@ -345,6 +360,7 @@ async def debat_stream(request: Request):
                 "candidat_id": candidat_id,
                 "candidat_nom": candidat["nom"],
                 "texte": full_text,
+                "preuves": preuves_locuteur,
             })
         
         # Événement : fin du tour
@@ -573,12 +589,16 @@ async def parlement_etat():
     return parlement.etat()
 
 @app.get("/api/parlement/sujets")  # [parlement]
-async def parlement_sujets(n: int = 8):
-    if n < 1:
-        n = 1
-    elif n > 24:
-        n = 24
-    return parlement.sujets(n)
+async def parlement_sujets(n: int = 8, dedup: int = 1):
+    """Sujets parlementaires avec thème lisible (cache sidecar) ; dédoublonnés par thème."""
+    import themes_parlement
+    n = max(1, min(int(n), 24))
+    brut = parlement.sujets(n=64)
+    enrichis = themes_parlement.enrichir(brut.get("sujets", []), dedup=(dedup != 0))[:n]
+    for sj in enrichis:
+        sj.pop("extraits", None)
+    brut["sujets"] = enrichis
+    return brut
 
 @app.post("/api/parlement/ingest")  # [parlement]
 async def parlement_ingest(request: Request):
@@ -594,6 +614,7 @@ async def parlement_ingest(request: Request):
     ok, raison = parlement.valider_payload(obj)
     if not ok:
         raise HTTPException(status_code=422, detail=raison)
+    asyncio.create_task(_precalculer_themes())
     return {"ok": True, **parlement.ecrire(obj)}
 
 if __name__ == "__main__":

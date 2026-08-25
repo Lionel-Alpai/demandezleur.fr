@@ -1,332 +1,61 @@
-.btn-launch-debat {
-  display: block;
-  width: 100%;
-  max-width: 60%;
-  margin: 0 auto;
-  padding: 18px 0;
-  background: rgba(212, 175, 110, 0.1);
-  border: 2px solid var(--champagne);
-  border-radius: 6px;
-  color: var(--champagne-bright);
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  cursor: pointer;
-  opacity: 1;
-  transition: background 0.25s, color 0.25s, box-shadow 0.25s, opacity 0.25s;
-  box-shadow: 0 0 18px var(--champagne-glow);
-}
+/* debat.css — le plateau (états : préparation, arène, récapitulatif). Tokens de main.css. */
+.etape { margin-bottom: var(--sp-6); }
+.etape-titre { display: flex; align-items: center; gap: var(--sp-3); font-size: var(--fs-22); margin-bottom: var(--sp-4); flex-wrap: wrap; }
+.etape-titre .meta { font-weight: 400; }
+.etape-num { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: #fff; font-size: var(--fs-16); font-weight: 700; flex: none; }
+.etiquette { display: block; font-size: var(--fs-14); font-weight: 600; color: var(--fg-2); margin: var(--sp-4) 0 var(--sp-2); }
+.champ { width: 100%; padding: 12px 14px; border-radius: var(--r-1); border: 1px solid var(--border-2); background: var(--bg-3); color: var(--fg); font: inherit; resize: vertical; }
+.champ:focus { outline: none; border-color: var(--accent-2); }
+.compteur { text-align: right; margin: var(--sp-1) 0 0; }
+.grille-selection { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+.carte-arene { display: flex; gap: var(--sp-4); align-items: flex-start; padding: var(--sp-4); border: 1px solid var(--border); border-radius: var(--r-2); background: var(--bg-2); cursor: pointer; transition: border-color 0.15s; }
+.carte-arene:hover { border-color: var(--border-2); }
+.carte-arene:has(input:checked) { border-color: var(--accent); background: linear-gradient(135deg, rgba(229, 57, 70, 0.10), var(--bg-2)); }
+.carte-arene input { appearance: none; width: 46px; height: 26px; border-radius: var(--r-round); background: var(--border-2); position: relative; flex: none; cursor: pointer; transition: background 0.15s; margin-top: 2px; }
+.carte-arene input::after { content: ""; position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%; background: #fff; transition: transform 0.15s; }
+.carte-arene input:checked { background: var(--accent); }
+.carte-arene input:checked::after { transform: translateX(20px); }
+.carte-arene-texte { display: flex; flex-direction: column; gap: var(--sp-1); }
+.carte-arene-texte strong { font-size: var(--fs-18); }
+.carte-arene-texte span { color: var(--fg-2); font-size: var(--fs-14); }
+.lancement { text-align: center; padding: var(--sp-4) 0 var(--sp-6); }
+.lancement .meta { margin-top: var(--sp-3); }
 
-.btn-launch-debat:hover {
-  background: var(--champagne);
-  color: var(--bg-deeper);
-  box-shadow: 0 0 32px rgba(212, 175, 110, 0.3);
-}
+/* Arène */
+.arene-entete { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--sp-4); padding-bottom: var(--sp-4); border-bottom: 1px solid var(--border); margin-bottom: var(--sp-3); }
+.arene-sujet { font-size: var(--fs-28); margin: 0; }
+.arene-tour { text-align: right; flex: none; }
+.arene-tour strong { font-size: var(--fs-28); color: var(--accent-2); display: block; line-height: 1; }
+.badge-mode { display: inline-block; margin-top: var(--sp-2); padding: 2px 10px; border-radius: var(--r-round); background: var(--accent); color: #fff; font-size: var(--fs-12); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+.arene-ordre { margin-bottom: var(--sp-5); }
+.interventions { display: flex; flex-direction: column; gap: var(--sp-4); margin-bottom: var(--sp-5); }
+.replique { display: grid; grid-template-columns: 56px 1fr; gap: var(--sp-3); padding: var(--sp-4); border: 1px solid var(--border); border-radius: var(--r-2); background: var(--bg-2); border-left: 4px solid var(--famille, var(--border-2)); transition: box-shadow 0.2s, border-color 0.2s; }
+.replique.parle { box-shadow: 0 0 0 2px rgba(229, 57, 70, 0.35); }
+.replique-avatar { width: 56px; height: 56px; border-radius: var(--r-1); object-fit: cover; background: var(--bg-3); }
+.replique-entete { display: flex; align-items: baseline; gap: var(--sp-2); flex-wrap: wrap; margin-bottom: var(--sp-2); }
+.replique-nom { font-weight: 700; font-size: var(--fs-18); }
+.replique-parti { color: var(--fg-3); font-size: var(--fs-14); }
+.badge-interpelle, .badge-revision { display: inline-block; padding: 1px 8px; border-radius: var(--r-round); font-size: var(--fs-12); font-weight: 600; }
+.badge-interpelle { background: var(--accent); color: #fff; }
+.badge-revision { background: rgba(242, 169, 59, 0.18); color: #f2a93b; }
+.replique-texte { font-size: var(--fs-16); line-height: 1.65; white-space: pre-wrap; }
+.replique-texte.attente { color: var(--fg-3); font-style: italic; }
+.replique-erreur { color: var(--accent-2); }
+.arene-actions { display: flex; flex-wrap: wrap; gap: var(--sp-3); justify-content: center; padding: var(--sp-4) 0; border-top: 1px solid var(--border); }
+.panneau { margin-top: var(--sp-4); padding: var(--sp-4); border: 1px solid var(--border-2); border-radius: var(--r-2); background: var(--bg-2); }
+.panneau-actions { display: flex; gap: var(--sp-3); justify-content: flex-end; margin-top: var(--sp-4); flex-wrap: wrap; }
+.revisions { margin-top: var(--sp-2); font-size: var(--fs-14); }
+.revisions summary { cursor: pointer; color: #f2a93b; }
+.revisions li { color: var(--fg-2); }
 
-.btn-launch-debat[disabled] {
-  opacity: 0.35;
-  cursor: not-allowed;
-}
-
-.candidats-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  padding: 16px 0;
-}
-
-@media (min-width: 768px) {
-  .candidats-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .candidats-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-.candidat-select-card {
-  border: 1px solid var(--border-medium);
-  border-radius: 6px;
-  padding: 12px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  -webkit-tap-highlight-color: transparent;
-  position: relative;
-  background: rgba(255,255,255,0.02);
-}
-
-.candidat-select-card:active {
-  transform: scale(0.97);
-}
-
-.candidat-select-card.selected {
-  border-color: var(--rouge-france);
-  background: rgba(237,41,57,0.05);
-}
-
-.candidat-select-card.disabled {
-  opacity: 0.3;
-  pointer-events: none;
-}
-
-.candidat-photo-wrap {
-  width: 100%;
-  aspect-ratio: 1;
-  border-radius: 4px;
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 8px;
-}
-
-.candidat-photo-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.candidat-initiales {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
-  font-family: 'JetBrains Mono', monospace;
-}
-
-.candidat-check {
-  position: absolute;
-  top: 4px;
-  right: 4px;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: var(--rouge-france);
-  color: white;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  font-weight: 500;
-}
-
-.candidat-select-card.selected .candidat-check {
-  display: flex;
-}
-
-.candidat-nom {
-  font-weight: bold;
-  font-size: 14px;
-  margin-bottom: 2px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.candidat-parti {
-  font-size: 10px;
-  color: var(--text-tertiary);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.debat-interventions {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin: 24px 0;
-}
-
-.intervention-card {
-  border: 1px solid var(--border-light);
-  border-left: 3px solid var(--candidat-couleur, var(--border-medium));
-  border-radius: 4px;
-  padding: 16px;
-  background: rgba(255,255,255,0.02);
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
-  line-height: 1.6;
-}
-
-.intervention-card.speaking {
-  border-color: var(--rouge-france);
-  box-shadow: 0 0 0 1px rgba(237,41,57,0.2);
-}
-
-.intervention-card.speaking::before {
-  content: "en cours...";
-  display: block;
-  font-size: 9px;
-  color: var(--rouge-france);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-  animation: blink 1.5s ease-in-out infinite;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
-}
-
-.intervention-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 12px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.intervention-avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 4px;
-  object-fit: cover;
-}
-
-.intervention-nom {
-  font-weight: 500;
-  color: var(--text-primary);
-  font-size: 14px;
-}
-
-.intervention-parti {
-  font-size: 10px;
-  color: var(--text-tertiary);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.intervention-texte {
-  color: var(--text-secondary);
-  white-space: pre-wrap;
-}
-
-.intervention-badge-interpelle {
-  display: inline-block;
-  font-size: 9px;
-  padding: 2px 8px;
-  border: 1px solid var(--rouge-france);
-  color: var(--rouge-france);
-  border-radius: 2px;
-  margin-left: 8px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.debat-actions {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  margin-top: 24px;
-}
-
-@media (min-width: 768px) {
-  .debat-actions {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.btn-debat-action {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 16px;
-  border: 1px solid var(--border-medium);
-  border-radius: 4px;
-  background: transparent;
-  color: var(--text-secondary);
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  cursor: pointer;
-  min-height: 56px;
-}
-
-.btn-debat-action .btn-icon {
-  font-size: 18px;
-}
-
-.btn-debat-action:hover,
-.btn-debat-action:active {
-  background: rgba(255,255,255,0.04);
-  border-color: var(--text-secondary);
-}
-
-.btn-debat-action.btn-end {
-  border-color: rgba(237,41,57,0.3);
-  color: rgba(237,41,57,0.8);
-}
-
-.btn-target {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid var(--border-subtle);
-  border-radius: 4px;
-  padding: 8px;
-  color: var(--text-secondary);
-  font-size: 12px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.btn-target.selected {
-  background: var(--rouge-france);
-  color: white;
-  border-color: var(--rouge-france);
-}
-
-.recap-candidat {
-  border: 1px solid var(--border-medium);
-  border-left: 4px solid var(--candidat-couleur);
-  border-radius: 6px;
-  padding: 20px;
-  background: rgba(255,255,255,0.02);
-}
-
-.recap-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.recap-header img {
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
-  object-fit: cover;
-}
-
-.recap-nom {
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.recap-parti {
-  font-size: 11px;
-  color: var(--text-tertiary);
-  text-transform: uppercase;
-}
-
-.recap-positions {
-  font-size: 13px;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-.recap-positions p {
-  margin-bottom: 12px;
-}
+/* Récap */
+.recap { display: flex; flex-direction: column; gap: var(--sp-4); margin-bottom: var(--sp-5); }
+.recap-candidat { padding: var(--sp-4); border: 1px solid var(--border); border-radius: var(--r-2); background: var(--bg-2); border-left: 4px solid var(--famille, var(--border-2)); }
+.recap-entete { display: flex; align-items: center; gap: var(--sp-3); margin-bottom: var(--sp-3); }
+.recap-entete img { width: 48px; height: 48px; border-radius: var(--r-1); object-fit: cover; }
+.recap-tour { margin-bottom: var(--sp-3); }
+.recap-tour .meta { display: block; margin-bottom: 2px; }
+.recap-partage { display: flex; flex-wrap: wrap; gap: var(--sp-2); align-items: center; margin-bottom: var(--sp-5); }
+.recap-lien { flex: 1 1 260px; padding: 10px 12px; border-radius: var(--r-1); background: var(--bg-3); border: 1px solid var(--border); font-family: var(--font-mono); font-size: var(--fs-14); user-select: all; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.recap-actions { display: flex; flex-wrap: wrap; gap: var(--sp-3); justify-content: center; }
+@media (max-width: 600px) { .replique { grid-template-columns: 40px 1fr; } .replique-avatar { width: 40px; height: 40px; } .arene-entete { flex-direction: column; } .arene-tour { text-align: left; } }

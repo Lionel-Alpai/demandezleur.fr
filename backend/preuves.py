@@ -40,7 +40,8 @@ def analyser(texte: str) -> list:
     if _STOP_NORM is None:
         _STOP_NORM = {_normaliser_mot(w) for w in STOP_FR} | set(STOP_FR)
     out = []
-    for tok in re.findall(r"[a-zA-ZÀ-ÿ']{2,}", texte or ""):
+    texte = unicodedata.normalize("NFC", texte or "")  # corpus parfois en NFD (é = e + accent combinant)
+    for tok in re.findall(r"[a-zA-ZÀ-ÿ']{2,}", texte):
         tok = tok.lower().lstrip("'")
         if "'" in tok:
             tok = tok.split("'")[-1]
@@ -52,14 +53,49 @@ def analyser(texte: str) -> list:
     return out
 
 
+# Expansion de requête : le vocabulaire des électeurs n'est pas celui des programmes
+# (« sécurité » → peines, police, délinquance…). Petite table, français politique courant.
+EXPANSION = {
+    "securit": "police delinquance peine prison justice ordre gendarmerie criminalite violence",
+    "ecol": "education enseignant eleve professeur scolaire lycee college",
+    "retrait": "pension cotisation age depart",
+    "immigr": "frontiere asile etranger naturalisation regroupement expulsion",
+    "sant": "hopital medecin soin medical urgence",
+    "nuclea": "energie electricite centrale reacteur",
+    "climat": "ecologie environnement carbone transition energie",
+    "logement": "loyer habitat construction locataire proprietaire",
+    "salair": "pouvoir achat remuneration smic revenu",
+    "pouvoir achat": "salaire prix inflation tva revenu",
+    "europ": "union bruxelles souverainete traite frexit",
+    "enfant": "famille jeunesse mineur parent",
+    "travail": "emploi chomage entreprise salarie",
+    "impot": "fiscalite taxe tva prelevement budget",
+    "democrat": "referendum institution assemblee proportionnelle citoyen",
+    "agricult": "paysan ferme alimentation agriculteur",
+    "polic": "securite ordre gendarmerie",
+}
+
+
+def etendre_requete(query: str) -> str:
+    """Ajoute des termes voisins (une fois) pour les racines connues présentes dans la requête."""
+    racines = set(analyser(query))
+    q_norm = " ".join(racines)
+    extra = []
+    for cle, mots in EXPANSION.items():
+        if any(r.startswith(cle) for r in racines) or cle in q_norm:
+            extra.append(mots)
+    return query + (" " + " ".join(extra) if extra else "")
+
+
 def rechercher_blocs(corpus: list, query: str, top_k: int = 3, threshold: float = 0.02) -> list:
-    """Blocs les plus proches de la requête (TF-IDF cosinus), avec leur score, triés décroissant."""
+    """Blocs les plus proches de la requête (TF-IDF cosinus), avec leur score, triés décroissant.
+    Le thème de chaque bloc est indexé avec son texte ; la requête est étendue (synonymes)."""
     if not corpus or not query or not query.strip():
         return []
-    textes = [b.get("text", "") for b in corpus]
+    textes = [(str(b.get("theme", "")).replace("-", " ") + " ") * 2 + b.get("text", "") for b in corpus]
     try:
         vec = TfidfVectorizer(analyzer=analyser, sublinear_tf=True)
-        mat = vec.fit_transform(textes + [query])
+        mat = vec.fit_transform(textes + [etendre_requete(query)])
         sims = cosine_similarity(mat[-1], mat[:-1]).flatten()
     except Exception as e:  # requête vide après filtrage, etc.
         logger.error("TF-IDF : %s", e)

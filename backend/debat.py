@@ -139,8 +139,10 @@ def construire_prompt_debat(
     position_dans_tour: int = 0,
     cache_rag: dict = None,
     mode: str = "standard",  # [parlement]
-) -> str:
-    """Construit le prompt système complet pour un candidat à un tour donné."""
+    adversaires: list = None,
+) -> tuple:
+    """Construit le prompt système d'un candidat pour un tour. Retourne (prompt, preuves) où
+    preuves = liste publique des pièces utilisées (programme, pièce Assemblée, programmes adverses)."""
     # Charger le bon template selon le type de tour
     if type_tour == "intervention" and est_interpelle:
         template = load_prompt("base_interpelle")
@@ -177,15 +179,12 @@ def construire_prompt_debat(
     else:  # tour_suivant
         top_k = RAG_TOP_K_TOUR_SUIVANT
 
-    # Récupérer le RAG pour ce candidat sur ce sujet/question
+    # Récupérer le RAG pour ce candidat sur ce sujet/question (blocs -> contexte + preuves)
+    import preuves as _preuves
     query = question_moderateur or sujet
-    rag_context = search_corpus_cached(
-        candidat["id"], 
-        query, 
-        top_k=top_k, 
-        window=RAG_WINDOW_DEBAT, 
-        cache=cache_rag
-    )
+    blocs = search_blocs_cached(candidat["id"], query, top_k=top_k, cache=cache_rag)
+    rag_context = _preuves.formater_contexte(blocs, window=RAG_WINDOW_DEBAT)
+    liste_preuves = _preuves.vers_preuves(blocs, candidat["id"])
     
     # Remplir le template
     prompt = template.format(
@@ -201,7 +200,35 @@ def construire_prompt_debat(
         reponses_autres_note=reponses_autres_note,
     )
     
-    # [parlement] mode arene : injection citation assemblee
+    # A.1 — matière sur les ADVERSAIRES présents : leur programme officiel + faits structurés.
+    # Sans cela, « attaque un adversaire nommé » ne peut se satisfaire qu'en inventant.
+    adversaires = [a for a in (adversaires or []) if a.get("id") != candidat["id"]]
+    if adversaires:
+        faits = charger_faits()
+        lignes = []
+        for adv in adversaires:
+            blocs_adv = search_blocs_cached(adv["id"], query, top_k=(2 if mode == "arene" else 1), cache=cache_rag)
+            nom_adv = f"{adv['nom']} ({adv.get('parti_court') or adv.get('parti', '')})"
+            if blocs_adv:
+                for b in blocs_adv:
+                    txt = b.get("text", "")
+                    txt = txt[:300] + "..." if len(txt) > 300 else txt
+                    lignes.append(f"— {nom_adv} [Source: {b.get('source', '?')}, page {b.get('page', 'N/A')}] : « {txt} »")
+                liste_preuves.extend(_preuves.vers_preuves(blocs_adv, adv["id"], type_defaut="adversaire", extrait_max=200))
+            else:
+                lignes.append(f"— {nom_adv} : son programme ne contient AUCUN extrait sur ce sujet. Tu peux le lui reprocher, rien d'autre.")
+            f = faits.get(adv["id"]) or {}
+            if f:
+                statut = "a été membre d'un gouvernement (" + ", ".join(f.get("fonctions_passees") or []) + ")" if f.get("a_gouverne") else "n'a JAMAIS été membre d'un gouvernement — aucun « bilan gouvernemental », aucun « votre ministère », aucune « année au pouvoir » ne peut lui être reproché"
+                depute = "député(e) en exercice" if f.get("depute") else "n'est PAS député(e) — ne lui attribue aucun vote à l'Assemblée"
+                lignes.append(f"  FAIT : {adv['nom']} {statut} ; {depute}.")
+        prompt += (
+            "\n\nPIÈCES SUR TES ADVERSAIRES (leur programme officiel et des faits vérifiés — SEULE matière autorisée pour parler d'eux) :\n"
+            + "\n".join(lignes)
+            + "\nRÈGLE : toute affirmation sur le programme, le bilan, les votes ou les fonctions d'un adversaire doit s'appuyer sur une de ces pièces. Sinon, tu ne la fais pas."
+        )
+
+    # [parlement] mode arene : consigne + pièce Assemblée (verbatim officiel)
     if mode == "arene":
         try:
             import parlement as _p
@@ -209,19 +236,42 @@ def construire_prompt_debat(
             if consigne_path.exists():
                 consigne = consigne_path.read_text(encoding="utf-8")
                 prompt += "\n\n" + consigne
+                if type_tour == "ouverture":
+                    prompt += "\n\nOUVERTURE : personne n'a encore parlé. Tu n'attaques donc pas des propos tenus ici — tu attaques le PROGRAMME d'un adversaire présent à partir de ses pièces, ou tu poses ta ligne."
                 seqs = _p.sequences_pour_sujet(sujet, n=1)
                 if seqs:
-                    s = seqs[0]
+                    sq = seqs[0]
                     prompt += (
                         "\n\nPIÈCE AU DOSSIER — verbatim officiel de l'Assemblée nationale, sur « "
-                        + s["titre"] + " » :\n"
-                        + "« " + s["texte"] + " »\n"
-                        + "— " + s["orateur"] + ", séance du " + s["date_lisible"] + "\n"
+                        + (sq.get("libelle") or sq["titre"]) + " » :\n"
+                        + "« " + sq["texte"] + " »\n"
+                        + "— " + sq["orateur"] + ", séance du " + sq["date_lisible"] + "\n"
                         + "Tu peux la citer TELLE QUELLE. Tu n'inventes JAMAIS une autre citation."
                     )
+                    liste_preuves.append({
+                        "type": "piece", "candidat_id": candidat["id"],
+                        "titre": sq.get("libelle") or sq["titre"], "page": sq["titre"], "theme": "",
+                        "extrait": (sq["texte"][:280].rsplit(" ", 1)[0] + "…") if len(sq["texte"]) > 280 else sq["texte"],
+                        "orateur": sq["orateur"], "date_lisible": sq["date_lisible"], "url": sq.get("url", ""),
+                    })
         except Exception:
             pass
-    return prompt
+    return prompt, liste_preuves
+
+
+_FAITS = None
+
+
+def charger_faits() -> dict:
+    """faits.json -> {candidat_id: {a_gouverne, depute, mandats, fonctions_passees}}."""
+    global _FAITS
+    if _FAITS is None:
+        path = BASE_DIR / "faits.json"
+        try:
+            _FAITS = json.loads(path.read_text(encoding="utf-8")).get("candidats", {}) if path.exists() else {}
+        except Exception:
+            _FAITS = {}
+    return _FAITS
 
 
 def valider_requete_debat(payload: dict) -> tuple[bool, str]:
