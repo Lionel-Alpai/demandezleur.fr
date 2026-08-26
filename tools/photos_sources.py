@@ -63,9 +63,12 @@ def recadrer_visage(im):
     if not faces: return None
     x, y, w, h = max(faces, key=lambda f: f[2] * f[3])
     cx, cy, cote = x + w / 2, y + h * 0.55, int(max(w, h) * 2.6)
-    W, H = im.size; cote = min(cote, W, H)
+    W, H = im.size; cote = int(min(cote, W, H))
+    if cote < 200: return None
     g0, h0 = int(min(max(cx - cote / 2, 0), W - cote)), int(min(max(cy - cote / 2, 0), H - cote))
-    return im.crop((g0, h0, g0 + cote, h0 + cote)), int(w)
+    crop = im.crop((g0, h0, g0 + cote, h0 + cote))
+    if crop.size[0] < 100 or crop.size[1] < 100: return None
+    return crop, int(w)
 
 
 def collecter(c, n):
@@ -83,7 +86,8 @@ def collecter(c, n):
         if len(gardees) >= n: break
         im = telecharger(r["url"])
         if im is None: continue
-        rc = recadrer_visage(im)
+        try: rc = recadrer_visage(im)
+        except Exception: rc = None
         if rc is None: continue
         crop, taille_visage = rc
         if taille_visage < 150: continue
