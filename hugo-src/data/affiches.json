@@ -58,32 +58,32 @@
  {
   "a": "jean-luc-melenchon",
   "b": "marine-le-pen",
-  "sujet": "l'immigration",
-  "accroche": "Fermer ou ouvrir",
+  "sujet": "@assemblee",
+  "accroche": "Cette semaine à l'Assemblée",
   "registre": "ennemi_principal",
   "motif": "poids"
  },
  {
   "a": "gabriel-attal",
   "b": "jean-luc-melenchon",
-  "sujet": "les banlieues",
-  "accroche": "Qui les abandonne ?",
+  "sujet": "@assemblee",
+  "accroche": "Cette semaine à l'Assemblée",
   "registre": "concurrent_meme_electorat",
   "motif": "poids"
  },
  {
   "a": "edouard-philippe",
   "b": "jean-luc-melenchon",
-  "sujet": "les banlieues",
-  "accroche": "Même combat ?",
+  "sujet": "@assemblee",
+  "accroche": "Cette semaine à l'Assemblée",
   "registre": "concurrent_meme_electorat",
   "motif": "poids"
  },
  {
   "a": "jean-luc-melenchon",
   "b": "bruno-retailleau",
-  "sujet": "la dette publique",
-  "accroche": "Qui paie la facture ?",
+  "sujet": "@assemblee",
+  "accroche": "Cette semaine à l'Assemblée",
   "registre": "neutre",
   "motif": "poids"
  },
