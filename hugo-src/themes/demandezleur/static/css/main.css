@@ -384,3 +384,8 @@ pre { background: var(--bg-2); border: 1px solid var(--border); border-radius: v
 .chat-input { flex: 1; min-width: 0; padding: 12px 14px; border-radius: var(--r-1); border: 1px solid var(--border-2); background: var(--bg-3); color: var(--fg); font: inherit; }
 .chat-input::placeholder { color: var(--fg-3); }
 .chat-input:focus { outline: none; border-color: var(--accent-2); }
+.etat-bandeau { margin: 0 0 var(--sp-4); padding: var(--sp-3) var(--sp-4); border-radius: var(--r-2); font-size: var(--fs-14); color: var(--fg-2); border: 1px solid var(--border); background: var(--bg-2); }
+.etat-bandeau strong { color: var(--fg); }
+.etat-bandeau a { color: var(--accent-2); }
+.etat-pointe { border-left: 4px solid #f2a93b; }
+.etat-ferme { border-left: 4px solid var(--accent); }

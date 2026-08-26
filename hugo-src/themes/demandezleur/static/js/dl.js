@@ -80,6 +80,24 @@
     });
     return html + DL.rendreNotes(annotations) + '</details>';
   };
+  /* Bandeau d'état : heure de pointe (honnête : coût ×2, un débat par personne) ou plateau complet (budget). */
+  (function () {
+    var cible = document.querySelector('main.conteneur'); if (!cible || !window.fetch) return;
+    fetch(DL.api('/etat')).then(function (r) { return r.ok ? r.json() : null; }).then(function (e) {
+      if (!e) return;
+      var html = '';
+      if (e.palier === 'ferme' || e.palier === 'ferme_total') {
+        html = '<div class="etat-bandeau etat-ferme"><strong>Plateau complet pour aujourd’hui.</strong> Le budget quotidien de l’IA — fixé à l’avance, site financé bénévolement — est atteint. Les débats rouvrent demain ; ' + (e.palier === 'ferme' ? 'le chat reste ouvert, ' : '') + 'les débats partagés se lisent librement. <a href="/soutenir/">Soutenir le projet</a></div>';
+      } else if (e.pointe) {
+        var fin = e.fin_pointe ? new Date(e.fin_pointe) : null, reste = fin ? Math.max(0, Math.round((fin - Date.now()) / 60000)) : 0;
+        var quand = fin ? (reste >= 60 ? Math.floor(reste / 60) + ' h ' + String(reste % 60).padStart(2, '0') : reste + ' min') : '';
+        html = '<div class="etat-bandeau etat-pointe"><strong>Heure de pointe.</strong> Ce site est gratuit et financé bénévolement ; à cette heure, l’IA que nous utilisons coûte le double. L’Arène est limitée à <strong>' + (e.limites && e.limites.debat) + ' débat par personne</strong>' + (quand ? ' — heures creuses dans <strong>' + quand + '</strong>' : '') + '. Le chat reste ouvert. <a href="/soutenir/">Pourquoi ?</a></div>';
+      } else if (e.palier === 'degrade') {
+        html = '<div class="etat-bandeau etat-pointe"><strong>Forte affluence.</strong> Pour tenir le budget du jour, l’Arène tourne sans son juge : les affirmations non vérifiées ne sont plus marquées. <a href="/transparence/">En savoir plus</a></div>';
+      }
+      if (html) cible.insertAdjacentHTML('afterbegin', html);
+    }).catch(function () {});
+  })();
   /* Menu mobile */
   var btn = document.getElementById('menu-btn'), entete = document.getElementById('entete');
   if (btn && entete) {

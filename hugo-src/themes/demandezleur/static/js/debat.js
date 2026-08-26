@@ -257,7 +257,7 @@
   }
   function blocage(detail) {
     $arena.hidden = true; $setup.hidden = true; $recap.hidden = false;
-    $recapSujet.textContent = 'Quota quotidien atteint';
+    $recapSujet.textContent = detail.pointe ? 'Heure de pointe : un débat par personne' : 'Quota quotidien atteint';
     $recapContainer.innerHTML = '<div class="rate-limit-blocage"><p>' + DL.echapper(detail.message || '') + '</p><p class="limite-info">Limite : ' + DL.echapper(String(detail.limite || '')) + ' ' + (detail.action === 'debat_long' ? 'débats longs' : 'débats courts') + ' par jour et par adresse IP.</p><p class="petit">Ce site citoyen est développé bénévolement ; l’IA a un coût. <a href="/soutenir/">Soutenir le projet</a> — sans accès prioritaire pour personne.</p></div>';
     $recapPartage.innerHTML = '';
   }

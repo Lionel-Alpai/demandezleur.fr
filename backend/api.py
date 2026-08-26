@@ -93,6 +93,9 @@ import preuves
 import budget
 import time as _time
 
+MESSAGE_POINTE = ("Ce site est gratuit et financé bénévolement. En heure de pointe (8h-12h et 3h-6h, heure de Paris), l'IA que nous utilisons coûte le double : "
+                  "l'Arène est limitée à un débat par personne jusqu'à la fin du pic. Le chat reste ouvert, et les débats partagés se lisent librement.")
+
 # ---------- Anti-script (sans captcha) : en-tête client, un débat à la fois par IP, cadence du chat ----------
 ENTETE_CLIENT = "plateau"
 _debats_en_cours = set()
@@ -238,8 +241,9 @@ async def debat_stream(request: Request):
                         "action": type_debat,
                         "usage": usage,
                         "limite": limite,
-                        "message": "Vous avez atteint votre quota quotidien de débats. "
-                                   "Revenez demain, le compteur se réinitialise à minuit."
+                        "pointe": en_pointe(),
+                        "message": (MESSAGE_POINTE if en_pointe() else
+                                    "Vous avez atteint votre quota quotidien de débats. Revenez demain, le compteur se réinitialise à minuit.")
                     }
                 )
         else:
@@ -729,7 +733,14 @@ async def admin_dossiers_decider(request: Request, id: str = Form(...), statut: 
 async def etat_public():
     """Palier du jour (sans montants) : le front adapte son message."""
     e = budget.etat()
-    return {"palier": e["palier"], "pointe": en_pointe(), "juge": budget.juge_actif()}
+    from datetime import datetime, timezone
+    from rate_limiter import LIMITES_POINTE, LIMITE_CHAT_PAR_JOUR, LIMITE_DEBAT_COURT_PAR_JOUR
+    maintenant = datetime.now(timezone.utc); h = maintenant.hour; fin = None
+    if 1 <= h < 4: fin = maintenant.replace(hour=4, minute=0, second=0, microsecond=0)
+    elif 6 <= h < 10: fin = maintenant.replace(hour=10, minute=0, second=0, microsecond=0)
+    return {"palier": e["palier"], "pointe": en_pointe(), "juge": budget.juge_actif(),
+            "fin_pointe": fin.isoformat() if fin else None,
+            "limites": ({"chat": LIMITES_POINTE["chat"], "debat": LIMITES_POINTE["debat_court"]} if en_pointe() else {"chat": LIMITE_CHAT_PAR_JOUR, "debat": LIMITE_DEBAT_COURT_PAR_JOUR})}
 
 
 @app.get("/api/parlement/etat")  # [parlement]

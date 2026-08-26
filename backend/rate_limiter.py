@@ -24,6 +24,8 @@ LIMITES_POINTE = {"chat": 10, "debat_court": 1, "debat_long": 0, "partage": 20}
 
 
 def en_pointe(maintenant=None) -> bool:
+    if os.environ.get("DL_FORCER_POINTE") == "1":  # test local du bandeau et des quotas de pointe
+        return True
     from datetime import datetime, timezone
     h = (maintenant or datetime.now(timezone.utc)).hour
     return 1 <= h < 4 or 6 <= h < 10
