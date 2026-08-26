@@ -67,6 +67,14 @@
     $bandeau.hidden = false;
   }).catch(function () {});
 
+  /* Ça chauffe cette semaine (tiroir Actu) */
+  var $chaud = $('actu-bandeau'), $chaudChips = $('actu-sujets');
+  if ($chaud) fetch(DL.api('/actu/sujets?n=8')).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+    var sujets = d && d.sujets ? d.sujets : []; if (!sujets.length) return;
+    $chaudChips.innerHTML = sujets.map(function (s) { return '<button type="button" class="chip" data-sujet="' + DL.echapper(s.theme) + '">' + DL.echapper(s.theme.charAt(0).toUpperCase() + s.theme.slice(1)) + '</button>'; }).join('');
+    $chaudChips.addEventListener('click', function (e) { var b = e.target.closest('.chip'); if (!b) return; $chaudChips.querySelectorAll('.chip').forEach(function (c) { c.classList.toggle('selectionne', c === b); }); $sujet.value = b.getAttribute('data-sujet'); $sujet.dispatchEvent(new Event('input')); $sujet.focus(); });
+    $chaud.hidden = false;
+  }).catch(function () {});
   $btnLaunch.addEventListener('click', function () {
     if ($barre) $barre.hidden = true;
     state.sujet = $sujet.value.trim(); state.tour = 1; state.historique = [];
@@ -159,7 +167,7 @@
       c.revisions[id].map(function (r) { return '<li>« ' + DL.echapper(r.phrase) + ' » — ' + DL.echapper(r.raison || r.type) + '</li>'; }).join('') + '</ul></details>');
   }
   function libellePreuves(p, annotations) {
-    var n = { programme: 0, piece: 0, adversaire: 0, dossier: 0, reproche: 0 }; p.forEach(function (x) { n[x.type] = (n[x.type] || 0) + 1; });
+    var n = { programme: 0, piece: 0, adversaire: 0, dossier: 0, reproche: 0, actu: 0 }; p.forEach(function (x) { n[x.type] = (n[x.type] || 0) + 1; });
     var parts = [];
     if (annotations && annotations.length) parts.push(annotations.length + ' note' + (annotations.length > 1 ? 's' : '') + ' *');
     if (n.programme) parts.push(n.programme + ' extrait' + (n.programme > 1 ? 's' : '') + ' de son programme');
@@ -167,6 +175,7 @@
     if (n.adversaire) parts.push(n.adversaire + ' extrait' + (n.adversaire > 1 ? 's' : '') + ' du programme adverse');
     if (n.dossier) parts.push(n.dossier + ' fait' + (n.dossier > 1 ? 's' : '') + ' du dossier');
     if (n.reproche) parts.push(n.reproche + ' reproche' + (n.reproche > 1 ? 's' : '') + ' documenté' + (n.reproche > 1 ? 's' : ''));
+    if (n.actu) parts.push(n.actu + ' pièce' + (n.actu > 1 ? 's' : '') + ' d’actualité');
     return 'Sur quoi il s’appuie : ' + (parts.join(' · ') || 'rien de précis');
   }
   function finDeTour(ev) {

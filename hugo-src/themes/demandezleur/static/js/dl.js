@@ -69,7 +69,7 @@
   DL.rendrePreuves = function (preuves, titre, annotations) {
     if ((!preuves || !preuves.length) && !(annotations && annotations.length)) return '<p class="meta preuves-vide">Aucun extrait du programme ne correspondait précisément à cette question.</p>';
     preuves = preuves || [];
-    var n = preuves.length, lib = { programme: 'Programme', piece: 'Assemblée', adversaire: 'Programme adverse', dossier: 'Dossier · fait vérifié', reproche: 'Reproche · ce que son camp dit de lui' };
+    var n = preuves.length, lib = { programme: 'Programme', piece: 'Assemblée', adversaire: 'Programme adverse', dossier: 'Dossier · fait vérifié', reproche: 'Reproche · ce que son camp dit de lui', actu: 'Actualité · vérifiée' };
     var html = '<details class="bloc-preuves"><summary>' + DL.echapper(titre || ('Sur quoi il s’appuie : ' + n + ' extrait' + (n > 1 ? 's' : ''))) + '</summary>';
     preuves.forEach(function (p) {
       html += '<div class="preuve preuve-' + DL.echapper(p.type || '') + '"><span class="preuve-type">' + DL.echapper(lib[p.type] || p.type) + '</span><span class="preuve-titre">' + DL.echapper(p.titre || '') + '</span>' +

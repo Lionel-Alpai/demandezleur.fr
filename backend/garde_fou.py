@@ -108,6 +108,8 @@ def _formater_pieces(preuves: list) -> str:
             lignes.append(f"[{p.get('candidat_id')}] PROGRAMME {p.get('titre', '')} {('(' + str(p.get('page')) + ')') if p.get('page') else ''} : « {p.get('texte_integral') or p.get('extrait', '')} »")
         elif p.get("type") == "dossier":
             lignes.append(f"[{p.get('candidat_id')}] FAIT VÉRIFIÉ ({p.get('titre', '')}, {p.get('date_lisible', '')}) : {p.get('texte_integral') or p.get('extrait', '')}")
+        elif p.get("type") == "actu":
+            lignes.append(f"[{p.get('candidat_id')}] ACTUALITÉ VÉRIFIÉE ({p.get('titre', '')}, {p.get('date_lisible', '')}, {p.get('orateur', '')}) : « {p.get('texte_integral') or p.get('extrait', '')} »")
         elif p.get("type") == "reproche":
             lignes.append(f"[{p.get('candidat_id')}] REPROCHE DOCUMENTÉ (ce que le camp de l'orateur dit publiquement de lui, pas un fait) : {p.get('texte_integral') or p.get('extrait', '')}")
     return "\n".join(lignes) or "(aucune pièce sur les adversaires)"
@@ -169,7 +171,11 @@ async def juger(texte: str, orateur: dict, adversaires: list, preuves: list, fai
                                     extra={"response_format": {"type": "json_object"}})
     d = _extraire_json(txt)
     out = []
+    ids_adv = {x["id"] for x in adversaires}
     for a in d.get("affirmations", []) if isinstance(d, dict) else []:
+        cible = str(a.get("cible", "")).strip().lower() if isinstance(a, dict) else ""
+        if cible in (str(orateur.get("id", "")).lower(), "orateur", "moi", "soi", "lui-meme", "lui-même", "self") or (cible and cible not in ids_adv and cible != "sujet"):
+            continue  # jamais ce que l'orateur dit de lui-même ; cibles inconnues ignorées
         if isinstance(a, dict) and a.get("ancree") is False and a.get("phrase"):
             out.append({"type": "juge", "phrase": str(a["phrase"]), "cible": str(a.get("cible", "")), "raison": str(a.get("raison", ""))[:200]})
     logger.info("juge arène : %d non ancrée(s) en %.1fs", len(out), time.time() - debut)

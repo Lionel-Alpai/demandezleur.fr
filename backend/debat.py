@@ -310,6 +310,19 @@ def construire_prompt_debat(
                   "Tu ne dis jamais « vous nous ressortez » ni « encore » à propos d'un argument que tu n'as pas toi-même déjà réfuté."
             )
 
+    # ARÈNE — pièces d'ACTUALITÉ (déclarations verbatim des adversaires présents, faits datés), pertinentes au sujet
+    if mode == "arene" and adversaires:
+        try:
+            import actu as _a
+            ids_adv = {a["id"] for a in adversaires}
+            dernieres = [i.get("texte", "") for t in (historique or [])[-1:] for i in t.get("interventions", []) if i.get("candidat_id") in ids_adv]
+            texte_actu, preuves_actu = _a.pieces_pour(sujet if not question_moderateur else sujet + " " + question_moderateur, candidat, adversaires, " ".join(dernieres))
+            if texte_actu:
+                prompt += texte_actu
+                liste_preuves.extend(preuves_actu)
+        except Exception:
+            pass
+
     # ARÈNE — le DOSSIER (faits vérifiés + reproches documentés), en fin de prompt : c'est la dernière chose lue
     if mode == "arene" and adversaires:
         try:

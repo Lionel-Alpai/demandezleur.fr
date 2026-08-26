@@ -43,3 +43,4 @@ hugo-src/photos-originales/
 *.bak
 backend/budget/
 hugo-src/photos-sources/
+backend/actu/*.json

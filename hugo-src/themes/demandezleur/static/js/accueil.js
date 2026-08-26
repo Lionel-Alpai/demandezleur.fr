@@ -72,6 +72,7 @@
   function montrer() {
     var x = affiches[i % affiches.length]; i++;
     if (x.sujet === '@assemblee') { var chip = document.querySelector('#assemblee-themes .chip'); x = { a: x.a, b: x.b, accroche: x.accroche, sujet: chip ? chip.textContent : 'ce qui s’est dit à l’Assemblée' }; }
+    if (x.sujet === '@actu') { x = { a: x.a, b: x.b, accroche: x.accroche, sujet: (window.DL_actu && window.DL_actu[i % Math.max(1, window.DL_actu.length)]) || 'l’actualité de la semaine' }; }
     document.getElementById('duel-img-a').src = x.a.photo; document.getElementById('duel-img-b').src = x.b.photo;
     document.getElementById('duel-nom-a').textContent = x.a.nom.split(' ').slice(-1)[0] === 'Pen' ? 'Le Pen' : x.a.nom.split(' ').slice(-1)[0];
     document.getElementById('duel-nom-b').textContent = x.b.nom.split(' ').slice(-1)[0] === 'Pen' ? 'Le Pen' : x.b.nom.split(' ').slice(-1)[0];
@@ -79,5 +80,6 @@
     document.getElementById('duel-sujet').textContent = 'Sujet : ' + x.sujet;
     duel.href = '/debat/?arene=1&candidats=' + encodeURIComponent(x.a.id + ',' + x.b.id) + '&sujet=' + encodeURIComponent(x.sujet);
   }
+  fetch(DL.api('/actu/sujets?n=6')).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) { window.DL_actu = (d && d.sujets || []).map(function (s) { return s.theme; }); }).catch(function () {});
   montrer(); if (!reduit) setInterval(montrer, 8000);
 })();

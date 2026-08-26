@@ -743,6 +743,13 @@ async def etat_public():
             "limites": ({"chat": LIMITES_POINTE["chat"], "debat": LIMITES_POINTE["debat_court"]} if en_pointe() else {"chat": LIMITE_CHAT_PAR_JOUR, "debat": LIMITE_DEBAT_COURT_PAR_JOUR})}
 
 
+@app.get("/api/actu/sujets")
+async def actu_sujets(n: int = 6):
+    """Thèmes les plus présents dans l'actualité récente (tiroir Actu) → « Ça chauffe cette semaine »."""
+    import actu
+    return {"sujets": actu.sujets_chauds(max(1, min(int(n), 12))), "fenetre_jours": actu.FENETRE_JOURS, "n_pieces": len(actu.charger())}
+
+
 @app.get("/api/parlement/etat")  # [parlement]
 async def parlement_etat():
     return parlement.etat()

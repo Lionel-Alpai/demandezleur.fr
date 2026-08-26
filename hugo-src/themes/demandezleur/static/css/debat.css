@@ -86,3 +86,6 @@
 .mode-arene { background: linear-gradient(135deg, rgba(229, 57, 70, 0.14), var(--bg-2)); }
 .mode-carte:has(input:checked) { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(229, 57, 70, 0.18); }
 .fiche-actions { margin: var(--sp-2) 0; }
+.bandeau-actu { border-left-color: #f2a93b; margin-top: var(--sp-3); }
+.bandeau-actu .point-direct { background: #f2a93b; box-shadow: 0 0 0 4px rgba(242, 169, 59, 0.25); }
+.preuve-actu .preuve-type { color: #f2a93b; }
