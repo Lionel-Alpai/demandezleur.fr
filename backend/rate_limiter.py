@@ -19,6 +19,14 @@ LIMITE_CHAT_PAR_JOUR = 20
 LIMITE_DEBAT_COURT_PAR_JOUR = 3
 LIMITE_DEBAT_LONG_PAR_JOUR = 2
 LIMITE_PARTAGE_PAR_JOUR = 20
+# Heures de pointe DeepSeek (tarif ×2) : 01h-04h et 06h-10h UTC = 03h-06h et 08h-12h à Paris
+LIMITES_POINTE = {"chat": 10, "debat_court": 1, "debat_long": 0, "partage": 20}
+
+
+def en_pointe(maintenant=None) -> bool:
+    from datetime import datetime, timezone
+    h = (maintenant or datetime.now(timezone.utc)).hour
+    return 1 <= h < 4 or 6 <= h < 10
 
 # Seuils de catégorisation des débats
 SEUIL_DEBAT_LONG_CANDIDATS = 4  # 4 candidats ou plus = débat long
@@ -52,6 +60,8 @@ def verifier_et_incrementer(ip: str, action: ActionType) -> tuple[bool, int, int
         "partage": LIMITE_PARTAGE_PAR_JOUR,
     }
     limite = limites[action]
+    if en_pointe():  # tarif DeepSeek ×2 : 03h-06h et 08h-12h Paris → quotas resserrés
+        limite = LIMITES_POINTE.get(action, limite)
     if os.environ.get("DL_SANS_QUOTA") == "1":  # développement local / banc : pas de quota
         return (True, 0, limite)
     

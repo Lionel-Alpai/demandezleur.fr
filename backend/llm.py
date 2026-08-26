@@ -69,6 +69,20 @@ def _decouper(texte: str) -> list:
     return re.findall(r"\S+\s*", texte)
 
 
+def _compter(u, usage_nom: str):
+    """Enregistre l'appel au budget (cache hit/miss/sortie) ; jamais bloquant."""
+    try:
+        import budget, rate_limiter
+        hit = int(getattr(u, "prompt_cache_hit_tokens", 0) or 0)
+        p_tok = int(getattr(u, "prompt_tokens", 0) or 0)
+        miss = int(getattr(u, "prompt_cache_miss_tokens", None) or max(0, p_tok - hit))
+        out = int(getattr(u, "completion_tokens", 0) or 0)
+        budget.enregistrer(hit, miss, out, usage_nom, pointe=rate_limiter.en_pointe())
+        logger.info("[COUT] %s hit=%d miss=%d out=%d", usage_nom, hit, miss, out)
+    except Exception:
+        logger.debug("budget non enregistré", exc_info=True)
+
+
 async def completer(messages: list, *, cle_demo, max_tokens: int, temperature: float,
                     usage_cb: Optional[Callable[[int, int], None]] = None,
                     extra: Optional[dict] = None) -> AsyncIterator[str]:
@@ -95,6 +109,7 @@ async def completer(messages: list, *, cle_demo, max_tokens: int, temperature: f
     async for chunk in stream:
         if getattr(chunk, "usage", None) is not None:
             p_tok, c_tok = chunk.usage.prompt_tokens, chunk.usage.completion_tokens
+            _compter(chunk.usage, str(cle_demo[0]) if cle_demo else "autre")
         if chunk.choices and chunk.choices[0].delta.content:
             d = chunk.choices[0].delta.content
             deltas.append(d)
@@ -120,6 +135,8 @@ async def completer_texte(messages: list, *, cle_demo, max_tokens: int, temperat
     if extra:
         params.update(extra)
     rep = await client().chat.completions.create(**params)
+    if getattr(rep, "usage", None) is not None:
+        _compter(rep.usage, str(cle_demo[0]) if cle_demo else "autre")
     texte = (rep.choices[0].message.content or "") if rep.choices else ""
     if MODE == "record":
         DEMO_DIR.mkdir(exist_ok=True)

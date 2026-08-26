@@ -3,6 +3,8 @@
   'use strict';
   var DL = window.DL = window.DL || {};
   DL.api = function (chemin) { return (window.DL_API || '/api') + chemin; };
+  /* Toute requête vers l'API porte l'en-tête client (anti-script sans captcha, côté serveur). */
+  DL.entetes = function (h) { h = h || {}; h['X-DL-Client'] = 'plateau'; return h; };
   DL.echapper = function (s) {
     return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];

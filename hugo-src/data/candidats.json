@@ -52,32 +52,6 @@
     "resume_statut": "brouillon"
   },
   {
-    "id": "jerome-guedj",
-    "slug": "jerome-guedj",
-    "nom": "Jérôme Guedj",
-    "initiales": "JG",
-    "parti": "Parti Socialiste",
-    "parti_court": "PS",
-    "famille": "gauche",
-    "couleur_fond": "#331a1a",
-    "date_declaration": "Février 2026",
-    "photo": "/img/candidats/jerome-guedj.webp",
-    "photo_credit": "Wikimedia Commons — CC BY-SA 3.0 (2010)",
-    "note": null,
-    "sources": [
-      "Programme Jérôme Guedj — Candidature Présidentielle 2027 (PS)"
-    ],
-    "photo_type": "affiche",
-    "resume": "Son programme repose sur trois piliers : le partage des richesses par la justice fiscale, le partage du savoir par la réforme de l'éducation, et le partage du pouvoir par une participation citoyenne accrue. Il propose une taxation exceptionnelle des grandes fortunes, le maintien de l'âge légal de départ à la retraite à 62 ans et 9 mois, l'extension de la Sécurité sociale pour lutter contre les déserts médicaux, et l'introduction d'une dose de proportionnelle pour renforcer la légitimité parlementaire. Il défend également une transition écologique juste et un renforcement des services publics.",
-    "questions_suggerees": [
-      "Comment financerez-vous la taxation des grandes fortunes ?",
-      "Quelles mesures pour résorber les déserts médicaux ?",
-      "Comment rétablirez-vous le dialogue social sur les retraites ?",
-      "Quel calendrier pour la proportionnelle aux législatives ?"
-    ],
-    "resume_statut": "brouillon"
-  },
-  {
     "id": "edouard-philippe",
     "slug": "edouard-philippe",
     "nom": "Édouard Philippe",

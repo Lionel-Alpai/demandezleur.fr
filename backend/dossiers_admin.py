@@ -62,6 +62,19 @@ def _carte(d, e, k, jeton):
 </article>"""
 
 
+def _budget_html() -> str:
+    try:
+        import budget, rate_limiter
+        e = budget.etat(); pct = int(100 * e["ratio"]); coul = {"normal": "#3fa66b", "degrade": "#f2a93b", "ferme": "#e53946", "ferme_total": "#e53946"}[e["palier"]]
+        details = " · ".join(f"{k} {v['eur']:.3f} € ({v['appels']})" for k, v in sorted(e["par_usage"].items(), key=lambda kv: -kv[1]["eur"]))
+        return (f"<div class='budget' style='border-left:4px solid {coul};background:rgba(255,255,255,.04);padding:10px 14px;border-radius:8px;margin:12px 0 4px;font-size:14px'>"
+                f"<strong>Budget IA du jour</strong> : {e['eur']:.3f} € / {e['plafond_eur']:.2f} € ({pct} %) — palier <strong style='color:{coul}'>{e['palier']}</strong>"
+                f"{' · heure de pointe (tarif ×2)' if rate_limiter.en_pointe() else ''} · {e['appels']} appels · cache {e['hit']:,} hit / {e['miss']:,} miss / {e['out']:,} sortie"
+                f"<br><span class='meta'>{html.escape(details) or 'aucun appel'}</span></div>")
+    except Exception as ex:
+        return f"<p class='meta'>budget indisponible : {html.escape(str(ex))}</p>"
+
+
 def page(jeton: str = "") -> str:
     attente = [(d, e, k) for p, d, e, k in _entrees() if e.get("statut") == "a_valider"]
     recents = []
@@ -86,6 +99,7 @@ button{{padding:9px 16px;border-radius:6px;border:0;font-weight:600;cursor:point
 .bandeau{{background:rgba(242,169,59,.12);border-left:4px solid #f2a93b;padding:10px 14px;border-radius:8px;margin:16px 0 24px;font-size:14px}}
 </style></head><body><div class='c'>
 <h1>Dossier de l'Arène — à valider</h1>
+{_budget_html()}
 <p class='meta'>{len(attente)} entrée(s) en attente. Valider = servie dans l'Arène (avec sa qualification exacte). Refuser = jamais servie. Tout est journalisé et réversible.</p>
 <div class='bandeau'>Règle : un fait se valide s'il est établi et sourcé ; une procédure en cours se valide seulement si sa qualification est exacte (« en appel », « mis en examen ») ; un reproche se valide comme <em>reproche documenté</em> (ce que le camp dit), jamais comme fait. Vie privée, santé, famille : refuser.</div>
 {cartes}

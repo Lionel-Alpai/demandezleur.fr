@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     try {
-      const resp = await fetch((window.DL_API || '/api') + '/suggerer-document', {
+      const resp = await fetch((window.DL_API || '/api') + '/suggerer-document', { headers: DL.entetes({}),
         method: 'POST',
         body: data,
       });

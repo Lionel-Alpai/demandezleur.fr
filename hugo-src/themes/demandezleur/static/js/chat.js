@@ -31,7 +31,7 @@
     var complet = '', preuvesHTML = '';
 
     fetch(DL.api('/ask'), {
-      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      method: 'POST', headers: DL.entetes({ 'Content-Type': 'application/json' }),
       body: JSON.stringify({ candidat_id: candidatId, question: texte, history: historique })
     }).then(function (r) {
       if (r.status === 429) return r.json().then(function (d) { rep.remove(); blocage(d.detail); occupe(false); });

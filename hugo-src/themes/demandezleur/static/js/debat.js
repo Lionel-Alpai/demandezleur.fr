@@ -79,7 +79,7 @@
     $actions.hidden = true; $interventions.innerHTML = '';
     var payload = { candidats: state.selection.slice(), sujet: state.sujet, tour: state.tour, type_tour: typeTour, historique: state.historique, mode: state.mode };
     if (typeTour === 'intervention') { payload.question_moderateur = options.question; payload.candidat_interpelle_id = options.cibleId; }
-    fetch(DL.api('/debat/stream'), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+    fetch(DL.api('/debat/stream'), { method: 'POST', headers: DL.entetes({ 'Content-Type': 'application/json' }), body: JSON.stringify(payload) })
       .then(function (r) {
         if (r.status === 429) return r.json().then(function (d) { blocage(d.detail); });
         if (!r.ok) throw new Error('HTTP ' + r.status);
@@ -121,6 +121,7 @@
         break;
       case 'error':
         if (ev.candidat_id) { var te = texteDe(ev.candidat_id); te.className = 'replique-texte replique-erreur'; te.textContent = 'Ce candidat n’a pas pu répondre (' + (ev.error || 'erreur') + ').'; }
+        else if (ev.code) { plateauFerme(ev); }
         break;
     }
   }
@@ -213,7 +214,7 @@
     $('btn-export-image').addEventListener('click', function () { DL.exporterImage(documentPartage(), dataPourImage()); });
     $('btn-lien').addEventListener('click', function () {
       var b = this, etat = $('partage-etat'); b.disabled = true; etat.textContent = 'Enregistrement…';
-      DL.fetchJSON(DL.api('/debat/sauver'), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(documentPartage()) })
+      DL.fetchJSON(DL.api('/debat/sauver'), { method: 'POST', headers: DL.entetes({ 'Content-Type': 'application/json' }), body: JSON.stringify(documentPartage()) })
         .then(function (r) {
           var url = window.location.origin + r.url; b.remove(); etat.textContent = '';
           $recapPartage.insertAdjacentHTML('afterbegin', '<span class="recap-lien" id="lien-permanent">' + DL.echapper(url) + '</span><button type="button" class="btn btn-secondaire btn-petit" id="btn-copier-lien">Copier</button><a class="btn btn-secondaire btn-petit" href="' + DL.echapper(r.url) + '" target="_blank" rel="noopener">Ouvrir ↗</a>');
@@ -239,6 +240,13 @@
   }
   $('btn-nouveau-debat').addEventListener('click', function () { window.location.href = '/debat/'; });
 
+  function plateauFerme(ev) {
+    $arena.hidden = true; $setup.hidden = true; $recap.hidden = false;
+    $recapSujet.textContent = ev.code === 'budget' ? 'Plateau complet pour aujourd’hui' : (ev.code === 'en_cours' ? 'Un débat est déjà en cours' : 'Requête refusée');
+    $recapContainer.innerHTML = '<div class="rate-limit-blocage"><p>' + DL.echapper(ev.error || '') + '</p>' +
+      (ev.code === 'budget' ? '<p class="petit">Le site est financé bénévolement et l’IA a un coût ; un plafond quotidien protège son existence. La <a href="/">démo de l’accueil</a> et les débats partagés restent lisibles. <a href="/soutenir/">Soutenir le projet</a>.</p>' : '') + '</div>';
+    $recapPartage.innerHTML = '';
+  }
   function blocage(detail) {
     $arena.hidden = true; $setup.hidden = true; $recap.hidden = false;
     $recapSujet.textContent = 'Quota quotidien atteint';

@@ -88,6 +88,7 @@ RÈGLES D'INTERVENTION (impératives) :
 TON (ta famille politique, à incarner) :
 {ton_famille_politique}
 
+{consigne_arene}
 EXTRAITS DE TON PROGRAMME (ta matière pour argumenter) :
 {rag_context}
 
@@ -134,6 +135,7 @@ RÈGLES D'INTERVENTION (impératives) :
 TON (ta famille politique, à incarner) :
 {ton_famille_politique}
 
+{consigne_arene}
 EXTRAITS DE TON PROGRAMME (ta matière pour argumenter) :
 {rag_context}
 
@@ -179,6 +181,7 @@ RÈGLES D'INTERVENTION (impératives) :
 TON (ta famille politique, à incarner) :
 {ton_famille_politique}
 
+{consigne_arene}
 EXTRAITS DE TON PROGRAMME (ta matière pour argumenter) :
 {rag_context}
 
@@ -228,6 +231,7 @@ RÈGLES D'INTERVENTION (impératives) :
 TON (ta famille politique, à incarner) :
 {ton_famille_politique}
 
+{consigne_arene}
 EXTRAITS DE TON PROGRAMME (ta matière pour argumenter) :
 {rag_context}
 

@@ -22,7 +22,7 @@ DEBATS = [(["marine-le-pen", "gabriel-attal"], "la sécurité du quotidien", "ar
 async def ask(cl, base, jeton, cid, q):
     texte, preuves = "", []
     async with cl.stream("POST", f"{base}/api/ask", json={"candidat_id": cid, "question": q, "history": []},
-                         headers={"X-Admin-Token": jeton}, timeout=120) as r:
+                         headers={"X-Admin-Token": jeton, "X-DL-Client": "plateau"}, timeout=120) as r:
         if r.status_code != 200:
             print("  HTTP", r.status_code, cid, q[:40]); return None
         async for ligne in r.aiter_lines():
@@ -34,7 +34,7 @@ async def ask(cl, base, jeton, cid, q):
 
 
 async def debat(cl, base, jeton, cands, sujet, mode):
-    async with cl.stream("POST", f"{base}/api/debat/stream", headers={"X-Admin-Token": jeton}, timeout=300,
+    async with cl.stream("POST", f"{base}/api/debat/stream", headers={"X-Admin-Token": jeton, "X-DL-Client": "plateau"}, timeout=300,
                          json={"candidats": cands, "sujet": sujet, "tour": 1, "type_tour": "ouverture", "historique": [], "mode": mode}) as r:
         n = 0
         async for ligne in r.aiter_lines():

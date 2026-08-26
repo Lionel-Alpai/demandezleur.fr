@@ -20,6 +20,7 @@ from openai import AsyncOpenAI
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from rate_limiter import (
+    en_pointe,
     verifier_et_incrementer,
     categoriser_debat,
     demarrer_tache_reset,
@@ -89,6 +90,23 @@ def is_admin_bypass(request: Request) -> bool:
 # Accès au modèle : voir llm.py (DL_MODE = live | demo | record)
 import llm
 import preuves
+import budget
+import time as _time
+
+# ---------- Anti-script (sans captcha) : en-tête client, un débat à la fois par IP, cadence du chat ----------
+ENTETE_CLIENT = "plateau"
+_debats_en_cours = set()
+_dernier_chat = {}
+CADENCE_CHAT_S = 10.0
+
+
+def client_legitime(request: Request) -> bool:
+    """Le front pose X-DL-Client: plateau (force un preflight CORS, coupe les boucles bêtes). Admin : passe."""
+    return request.headers.get("X-DL-Client") == ENTETE_CLIENT or is_admin_bypass(request)
+
+
+def erreur_sse(code: str, message: str, **extra):
+    return StreamingResponse(iter([format_sse("error", {"code": code, "error": message, **extra})]), media_type="text/event-stream")
 
 
 class Message(BaseModel):
@@ -185,9 +203,16 @@ async def debat_stream(request: Request):
     valide, erreur = valider_requete_debat(payload)
     if not valide:
         return StreamingResponse(iter([format_sse("error", {"error": erreur})]), media_type="text/event-stream")
+    if not client_legitime(request):
+        return erreur_sse("client", "Requête refusée : le plateau ne répond qu'à ses propres pages.")
+    etat_budget = budget.etat()
+    if etat_budget["palier"] in ("ferme", "ferme_total") and not is_admin_bypass(request):
+        return erreur_sse("budget", "Plateau complet pour aujourd'hui : le budget quotidien de l'IA est atteint. Revenez demain — ou relisez un débat partagé.", palier=etat_budget["palier"])
     
     # === NOUVEAU : Rate limit ===
     ip = extraire_ip_reelle(request)
+    if ip in _debats_en_cours and not is_admin_bypass(request):
+        return erreur_sse("en_cours", "Un débat est déjà en cours depuis votre adresse. Attendez la fin du tour.")
     nb_candidats = len(payload["candidats"])
     
     # On estime le nombre de tours prévus à partir du tour actuel
@@ -247,7 +272,14 @@ async def debat_stream(request: Request):
 
     async def generate():
         """Générateur SSE : émet les événements au fil de la génération."""
-        
+        _debats_en_cours.add(ip)
+        try:
+            async for ev in _generer_tour():
+                yield ev
+        finally:
+            _debats_en_cours.discard(ip)
+
+    async def _generer_tour():
         # Événement : début du tour
         yield format_sse("turn_start", {
             "tour": payload.get("tour", 1),
@@ -338,7 +370,7 @@ async def debat_stream(request: Request):
                     full_text, revisions, annotations, meta_garde = await generer_replique_validee(
                         messages_locuteur, params=params_llm, orateur=candidat, adversaires=adversaires_presents,
                         preuves=preuves_locuteur, faits=faits_tous, historique=historique_pour_ce_candidat,
-                        cle_demo=cle_demo, juger_actif=True,
+                        cle_demo=cle_demo, juger_actif=budget.juge_actif(),
                         cible_par_defaut=(adversaires_presents[0]["id"] if len(adversaires_presents) == 1 else None),
                     )
                     usage["in"], usage["out"] = meta_garde["usage"]["in"], meta_garde["usage"]["out"]
@@ -558,9 +590,19 @@ async def suggerer_document(
 @app.post("/api/ask")
 async def ask_candidat(request: Request, ask_request: AskRequest):
     ip = extraire_ip_reelle(request)
+    if not client_legitime(request):
+        raise HTTPException(status_code=403, detail={"error": "client", "message": "Requête refusée : le plateau ne répond qu'à ses propres pages."})
+    if not budget.chat_ouvert() and not is_admin_bypass(request):
+        raise HTTPException(status_code=429, detail={"error": "budget", "action": "chat", "usage": 0, "limite": 0,
+                                                     "message": "Le budget quotidien de l'IA est épuisé. Revenez demain."})
     if is_admin_bypass(request):
         autorise, usage, limite = True, 0, 0
     else:
+        maintenant = _time.monotonic()
+        if maintenant - _dernier_chat.get(ip, 0) < CADENCE_CHAT_S:
+            raise HTTPException(status_code=429, detail={"error": "cadence", "action": "chat", "usage": 0, "limite": 0,
+                                                         "message": f"Une question toutes les {int(CADENCE_CHAT_S)} secondes, le temps de lire la réponse."})
+        _dernier_chat[ip] = maintenant
         autorise, usage, limite = verifier_et_incrementer(ip, "chat")
     
     if not autorise:
@@ -628,6 +670,8 @@ import debats_store
 @app.post("/api/debat/sauver")
 async def debat_sauver(request: Request):
     ip = extraire_ip_reelle(request)
+    if not client_legitime(request):
+        raise HTTPException(status_code=403, detail="Requête refusée : le plateau ne répond qu'à ses propres pages.")
     if not is_admin_bypass(request):
         autorise, usage, limite = verifier_et_incrementer(ip, "partage")
         if not autorise:
@@ -679,6 +723,13 @@ async def admin_dossiers_decider(request: Request, id: str = Form(...), statut: 
     if not dossiers_admin.decider(id, statut, motif):
         raise HTTPException(status_code=404, detail="entrée inconnue ou statut invalide")
     return RedirectResponse(url="/admin/dossiers" + (f"?jeton={jeton}" if jeton else ""), status_code=303)
+
+
+@app.get("/api/etat")
+async def etat_public():
+    """Palier du jour (sans montants) : le front adapte son message."""
+    e = budget.etat()
+    return {"palier": e["palier"], "pointe": en_pointe(), "juge": budget.juge_actif()}
 
 
 @app.get("/api/parlement/etat")  # [parlement]

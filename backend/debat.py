@@ -186,8 +186,18 @@ def construire_prompt_debat(
     rag_context = _preuves.formater_contexte(blocs, window=RAG_WINDOW_DEBAT)
     liste_preuves = _preuves.vers_preuves(blocs, candidat["id"])
     
+    # Consigne d'Arène : partie STABLE, placée avant les extraits pour rester dans le préfixe mis en cache
+    consigne_arene = ""
+    if mode == "arene":
+        consigne_path = PROMPTS_DIR / "debat" / "consigne_arene.txt"
+        if consigne_path.exists():
+            consigne_arene = "\n" + consigne_path.read_text(encoding="utf-8").strip() + "\n"
+            if type_tour == "ouverture":
+                consigne_arene += "\nOUVERTURE : personne n'a encore parlé. Tu n'attaques donc pas des propos tenus ici — tu attaques le PROGRAMME d'un adversaire présent à partir de ses pièces, ou tu poses ta ligne.\n"
+
     # Remplir le template
     prompt = template.format(
+        consigne_arene=consigne_arene,
         candidat_nom=candidat["nom"],
         candidat_parti=candidat["parti"],
         ton_famille_politique=ton,
@@ -232,12 +242,7 @@ def construire_prompt_debat(
     if mode == "arene":
         try:
             import parlement as _p
-            consigne_path = PROMPTS_DIR / "debat" / "consigne_arene.txt"
-            if consigne_path.exists():
-                consigne = consigne_path.read_text(encoding="utf-8")
-                prompt += "\n\n" + consigne
-                if type_tour == "ouverture":
-                    prompt += "\n\nOUVERTURE : personne n'a encore parlé. Tu n'attaques donc pas des propos tenus ici — tu attaques le PROGRAMME d'un adversaire présent à partir de ses pièces, ou tu poses ta ligne."
+            if True:
                 seqs = _p.sequences_pour_sujet(sujet, n=1)
                 if seqs:
                     sq = seqs[0]
