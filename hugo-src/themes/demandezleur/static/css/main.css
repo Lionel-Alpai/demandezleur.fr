@@ -307,9 +307,13 @@ pre { background: var(--bg-2); border: 1px solid var(--border); border-radius: v
 .affiche { display: block; max-width: 520px; width: 100%; justify-self: end; text-decoration: none; color: var(--fg); border-radius: var(--r-3); overflow: hidden; background: #060d1c; border: 1px solid var(--border); box-shadow: var(--ombre); transition: transform 0.2s, border-color 0.2s; }
 .affiche:hover { transform: translateY(-2px) scale(1.01); border-color: var(--accent); }
 .affiche-visuel { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #060d1c; }
-.affiche-visuel img { position: absolute; top: 0; height: 100%; width: 62%; object-fit: cover; object-position: center 15%; }
-.affiche-a { left: 0; clip-path: polygon(0 0, 100% 0, 78% 100%, 0 100%); }
-.affiche-b { right: 0; clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%); transform: scaleX(-1); }
+/* Deux cadres de 62 % qui se chevauchent ; la DÉCOUPE est sur le cadre, le MIROIR sur l'image :
+   la diagonale (58 % en haut → 42 % en bas du conteneur) est la même des deux côtés et suit la barre rouge. */
+.affiche-face { position: absolute; top: 0; height: 100%; width: 62%; overflow: hidden; }
+.affiche-face img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; display: block; }
+.affiche-a { left: 0; clip-path: polygon(0 0, 93.5% 0, 67.7% 100%, 0 100%); }
+.affiche-b { right: 0; clip-path: polygon(32.3% 0, 100% 0, 100% 100%, 6.5% 100%); }
+.affiche-b img { transform: scaleX(-1); }
 .affiche-barre { position: absolute; left: 50%; top: -10%; height: 120%; width: 14px; background: var(--accent); transform: translateX(-50%) skewX(-14deg); box-shadow: 0 0 24px rgba(229, 57, 70, 0.6); }
 .affiche-vs { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(-6deg); font-weight: 900; font-size: clamp(2rem, 6vw, 3.4rem); letter-spacing: -0.04em; color: #fff; text-shadow: 0 4px 0 var(--accent), 0 0 30px rgba(0, 0, 0, 0.8); z-index: 2; }
 .affiche-kicker { position: absolute; left: 12px; top: 10px; padding: 3px 10px; background: var(--accent); color: #fff; font-size: var(--fs-12); font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; border-radius: 3px; z-index: 2; }

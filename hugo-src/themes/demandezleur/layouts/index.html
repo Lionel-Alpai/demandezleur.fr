@@ -12,8 +12,8 @@
   </div>
   <a href="/debat/?arene=1" class="affiche" id="duel" aria-label="Ouvrir ce débat en mode Arène">
     <div class="affiche-visuel">
-      <img class="affiche-a" id="duel-img-a" src="{{ (index $cands 0).photo }}" alt="" width="640" height="640">
-      <img class="affiche-b" id="duel-img-b" src="{{ (index $cands 1).photo }}" alt="" width="640" height="640">
+      <span class="affiche-face affiche-a"><img id="duel-img-a" src="{{ (index $cands 0).photo }}" alt="" width="640" height="640"></span>
+      <span class="affiche-face affiche-b"><img id="duel-img-b" src="{{ (index $cands 1).photo }}" alt="" width="640" height="640"></span>
       <span class="affiche-barre"></span>
       <span class="affiche-vs">VS</span>
       <span class="affiche-kicker" id="duel-accroche">Arène</span>
