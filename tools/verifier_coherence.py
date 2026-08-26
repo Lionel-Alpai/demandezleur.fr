@@ -20,7 +20,7 @@ for c in hugo:
     if not photo.exists(): erreurs.append(f"{cid} : photo absente {c.get('photo')}")
     else:
         w, h = Image.open(photo).size
-        if (w, h) != (512, 512): erreurs.append(f"{cid} : photo {w}x{h} (attendu 512x512)")
+        if w != h or w < 512: erreurs.append(f"{cid} : photo {w}x{h} (attendu carré ≥ 512)")
     if not c.get("questions_suggerees"): erreurs.append(f"{cid} : questions_suggerees manquantes")
     if c.get("photo_type") == "affiche": print(f"note : {cid} photo de type affiche, à remplacer")
 faits = R / "backend/faits.json"

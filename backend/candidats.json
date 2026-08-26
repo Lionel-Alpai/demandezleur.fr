@@ -9,7 +9,7 @@
     "famille": "extreme_gauche",
     "couleur_fond": "#2a1a2a",
     "date_declaration": "Décembre 2025",
-    "photo": "/img/candidats/nathalie-arthaud.webp",
+    "photo": "/img/portraits/nathalie-arthaud.webp",
     "photo_credit": "Wikimedia Commons — CC BY-SA 4.0",
     "note": null,
     "sources": [
@@ -23,7 +23,9 @@
       "Comment assurerez-vous la transition écologique sans nucléaire ?",
       "Quel est votre plan pour résoudre la crise du logement ?"
     ],
-    "resume_statut": "brouillon"
+    "resume_statut": "brouillon",
+    "photo_source": "/img/candidats/nathalie-arthaud.webp",
+    "portrait": true
   },
   {
     "id": "delphine-batho",
@@ -35,7 +37,7 @@
     "famille": "ecologistes",
     "couleur_fond": "#1a3320",
     "date_declaration": "2025",
-    "photo": "/img/candidats/delphine-batho.webp",
+    "photo": "/img/portraits/delphine-batho.webp",
     "photo_credit": "Wikimedia Commons — CC BY-SA 4.0",
     "note": null,
     "sources": [
@@ -49,7 +51,9 @@
       "Comment financerez-vous la renationalisation d'EDF ?",
       "Quel est votre plan pour renforcer la démocratie participative ?"
     ],
-    "resume_statut": "brouillon"
+    "resume_statut": "brouillon",
+    "photo_source": "/img/candidats/delphine-batho.webp",
+    "portrait": true
   },
   {
     "id": "edouard-philippe",
@@ -61,7 +65,7 @@
     "famille": "centre",
     "couleur_fond": "#1a2744",
     "date_declaration": "Septembre 2024",
-    "photo": "/img/candidats/edouard-philippe.webp",
+    "photo": "/img/portraits/edouard-philippe.webp",
     "photo_credit": "Wikimedia Commons — CC BY-SA 4.0",
     "note": null,
     "sources": [
@@ -75,7 +79,9 @@
       "Comment allez-vous garantir l'équilibre budgétaire avec la règle d'or ?",
       "Quels critères pour l'immigration choisie et les quotas annuels ?"
     ],
-    "resume_statut": "brouillon"
+    "resume_statut": "brouillon",
+    "photo_source": "/img/candidats/edouard-philippe.webp",
+    "portrait": true
   },
   {
     "id": "bruno-retailleau",
@@ -87,7 +93,7 @@
     "famille": "droite",
     "couleur_fond": "#1a2744",
     "date_declaration": "Février 2026",
-    "photo": "/img/candidats/bruno-retailleau.webp",
+    "photo": "/img/portraits/bruno-retailleau.webp",
     "photo_credit": "Wikimedia Commons — CC BY-SA 4.0 (portrait ministériel 2024)",
     "note": null,
     "sources": [
@@ -101,7 +107,9 @@
       "Comment financer la transition vers un système de retraite par capitalisation ?",
       "Quel impact de la primauté du droit national sur les engagements européens ?"
     ],
-    "resume_statut": "brouillon"
+    "resume_statut": "brouillon",
+    "photo_source": "/img/candidats/bruno-retailleau.webp",
+    "portrait": true
   },
   {
     "id": "xavier-bertrand",
@@ -113,7 +121,7 @@
     "famille": "droite",
     "couleur_fond": "#1a2744",
     "date_declaration": "2024",
-    "photo": "/img/candidats/xavier-bertrand.webp",
+    "photo": "/img/portraits/xavier-bertrand.webp",
     "photo_credit": "Wikimedia Commons — CC BY-SA 4.0 (2025)",
     "note": null,
     "sources": [
@@ -127,7 +135,9 @@
       "Comment concilier décentralisation et égalité des territoires ?",
       "Quelles mesures concrètes pour réduire l'immigration tout en respectant les droits ?"
     ],
-    "resume_statut": "brouillon"
+    "resume_statut": "brouillon",
+    "photo_source": "/img/candidats/xavier-bertrand.webp",
+    "portrait": true
   },
   {
     "id": "nicolas-dupont-aignan",
@@ -139,7 +149,7 @@
     "famille": "souverainistes",
     "couleur_fond": "#1a1a33",
     "date_declaration": "Mars 2025",
-    "photo": "/img/candidats/nicolas-dupont-aignan.webp",
+    "photo": "/img/portraits/nicolas-dupont-aignan.webp",
     "photo_credit": "Wikimedia Commons — CC BY-SA 4.0",
     "note": null,
     "sources": [
@@ -153,7 +163,9 @@
       "Comment comptez-vous concrètement sortir de l'OTAN ?",
       "Quelles mesures pour renforcer la souveraineté alimentaire ?"
     ],
-    "resume_statut": "brouillon"
+    "resume_statut": "brouillon",
+    "photo_source": "/img/candidats/nicolas-dupont-aignan.webp",
+    "portrait": true
   },
   {
     "id": "francois-asselineau",
@@ -165,7 +177,7 @@
     "famille": "souverainistes",
     "couleur_fond": "#1a1a33",
     "date_declaration": "Déclaré",
-    "photo": "/img/candidats/francois-asselineau.webp",
+    "photo": "/img/portraits/francois-asselineau.webp",
     "photo_credit": "Wikimedia Commons — CC BY-SA 4.0 (Haute Résolution)",
     "note": null,
     "sources": [
@@ -179,7 +191,9 @@
       "Quelles mesures concrètes pour lutter contre la fraude fiscale ?",
       "Comment garantirez-vous la qualité des services publics après renationalisation ?"
     ],
-    "resume_statut": "brouillon"
+    "resume_statut": "brouillon",
+    "photo_source": "/img/candidats/francois-asselineau.webp",
+    "portrait": true
   },
   {
     "id": "marine-le-pen",
@@ -191,7 +205,7 @@
     "famille": "extreme_droite",
     "couleur_fond": "#3a1a1a",
     "date_declaration": "Déclarée",
-    "photo": "/img/candidats/marine-le-pen.webp",
+    "photo": "/img/portraits/marine-le-pen.webp",
     "photo_credit": "Wikimedia Commons — CC BY-SA 4.0 (2025)",
     "note": "Inéligibilité en appel — jugement 7 juillet 2026",
     "sources": [
@@ -205,7 +219,9 @@
       "Comment garantir l'accès aux soins dans les déserts médicaux ?",
       "Quel est votre plan pour relancer la filière nucléaire française ?"
     ],
-    "resume_statut": "brouillon"
+    "resume_statut": "brouillon",
+    "photo_source": "/img/candidats/marine-le-pen.webp",
+    "portrait": true
   },
   {
     "id": "gabriel-attal",
@@ -217,7 +233,7 @@
     "famille": "centre",
     "couleur_fond": "#1a2744",
     "date_declaration": "Mai 2026",
-    "photo": "/img/candidats/gabriel-attal.webp",
+    "photo": "/img/portraits/gabriel-attal.webp",
     "photo_credit": "Wikimedia Commons — CC BY 4.0 (2025)",
     "note": null,
     "sources": [
@@ -234,7 +250,9 @@
       "Comment réduirez-vous la dette écologique sans pénaliser les ménages ?",
       "Quel est votre plan pour redresser les finances publiques ?"
     ],
-    "resume_statut": "brouillon"
+    "resume_statut": "brouillon",
+    "photo_source": "/img/candidats/gabriel-attal.webp",
+    "portrait": true
   },
   {
     "id": "bernard-cazeneuve",
@@ -246,7 +264,7 @@
     "famille": "gauche",
     "couleur_fond": "#331a1a",
     "date_declaration": "16 juillet 2026",
-    "photo": "/img/candidats/bernard-cazeneuve.webp",
+    "photo": "/img/portraits/bernard-cazeneuve.webp",
     "photo_credit": "Jérémy Barande / Ecole polytechnique Université Paris-Saclay — Wikimedia Commons, CC BY-SA 2.0 (2018)",
     "note": null,
     "sources": [
@@ -260,7 +278,9 @@
       "Comment conciliez-vous réindustrialisation et transition écologique ?",
       "Quel est votre calendrier pour la réforme des retraites et la pénibilité ?"
     ],
-    "resume_statut": "brouillon"
+    "resume_statut": "brouillon",
+    "photo_source": "/img/candidats/bernard-cazeneuve.webp",
+    "portrait": true
   },
   {
     "id": "anasse-kazib",
@@ -272,7 +292,7 @@
     "famille": "extreme_gauche",
     "couleur_fond": "#2a1a2a",
     "date_declaration": "1er juin 2026",
-    "photo": "/img/candidats/anasse-kazib.webp",
+    "photo": "/img/portraits/anasse-kazib.webp",
     "photo_credit": "PabloMorao27 — Wikimedia Commons, CC BY-SA 4.0 (2021)",
     "note": null,
     "sources": [
@@ -289,7 +309,9 @@
       "Comment assurer la transition écologique sans les entreprises privées ?",
       "Quel serait le fonctionnement de l'assemblée unique proposée ?"
     ],
-    "resume_statut": "brouillon"
+    "resume_statut": "brouillon",
+    "photo_source": "/img/candidats/anasse-kazib.webp",
+    "portrait": true
   },
   {
     "id": "jean-luc-melenchon",
@@ -301,7 +323,7 @@
     "famille": "gauche",
     "couleur_fond": "#331a1a",
     "date_declaration": "3 mai 2026",
-    "photo": "/img/candidats/jean-luc-melenchon.webp",
+    "photo": "/img/portraits/jean-luc-melenchon.webp",
     "photo_credit": "Wikimedia Commons — CC BY 3.0",
     "note": null,
     "sources": [
@@ -322,7 +344,9 @@
       "Comment concrètement mettre en œuvre la retraite à 60 ans ?",
       "Quelles actions de désobéissance envisagez-vous face à l'UE ?"
     ],
-    "resume_statut": "brouillon"
+    "resume_statut": "brouillon",
+    "photo_source": "/img/candidats/jean-luc-melenchon.webp",
+    "portrait": true
   },
   {
     "id": "karim-bouamrane",
@@ -334,7 +358,7 @@
     "famille": "gauche",
     "couleur_fond": "#331a1a",
     "date_declaration": "9 juin 2026",
-    "photo": "/img/candidats/karim-bouamrane.webp",
+    "photo": "/img/portraits/karim-bouamrane.webp",
     "photo_credit": null,
     "note": null,
     "sources": [
@@ -351,7 +375,9 @@
       "Comment assurez-vous une transition écologique juste ?",
       "Quel est votre plan pour protéger les enfants ?"
     ],
-    "resume_statut": "brouillon"
+    "resume_statut": "brouillon",
+    "photo_source": "/img/candidats/karim-bouamrane.webp",
+    "portrait": true
   },
   {
     "id": "florian-philippot",
@@ -363,7 +389,7 @@
     "famille": "souverainistes",
     "couleur_fond": "#1a1a33",
     "date_declaration": "9 mai 2026",
-    "photo": "/img/candidats/florian-philippot.webp",
+    "photo": "/img/portraits/florian-philippot.webp",
     "photo_credit": "Films et documetnaires — Wikimedia Commons, CC BY 4.0 (2024)",
     "note": null,
     "sources": [
@@ -381,7 +407,9 @@
       "Quel est votre plan pour renégocier les accords de libre-échange ?",
       "Comment assurez-vous la sécurité énergétique en quittant le marché européen ?"
     ],
-    "resume_statut": "brouillon"
+    "resume_statut": "brouillon",
+    "photo_source": "/img/candidats/florian-philippot.webp",
+    "portrait": true
   },
   {
     "id": "selma-labib",
@@ -393,7 +421,7 @@
     "famille": "extreme_gauche",
     "couleur_fond": "#2a1a2a",
     "date_declaration": "17 juin 2026",
-    "photo": "/img/candidats/selma-labib.webp",
+    "photo": "/img/portraits/selma-labib.webp",
     "photo_credit": "Wikimedia Commons — CC BY 3.0",
     "note": null,
     "sources": [
@@ -407,7 +435,9 @@
       "Comment comptez-vous réduire les bases militaires françaises ?",
       "Quelle est votre position sur le conflit au Moyen-Orient ?"
     ],
-    "resume_statut": "brouillon"
+    "resume_statut": "brouillon",
+    "photo_source": "/img/candidats/selma-labib.webp",
+    "portrait": true
   },
   {
     "id": "francis-lalanne",
@@ -419,7 +449,7 @@
     "famille": "souverainistes",
     "couleur_fond": "#1a1a33",
     "date_declaration": "19 août 2026",
-    "photo": "/img/candidats/francis-lalanne.webp",
+    "photo": "/img/portraits/francis-lalanne.webp",
     "photo_credit": "Thomas Bresson — Wikimedia Commons, CC BY 4.0 (2021)",
     "note": "Aucun parti politique enregistré (DIV) : étiquette de campagne « France Libre ». Famille souverainiste (Frexit, sortie de l'OTAN, souveraineté monétaire, RIC). Couvrir en ENTIER le programme de campagne (9 propositions) + les thèmes du mouvement France Libre.",
     "sources": [
@@ -455,6 +485,8 @@
       "Comment allez-vous associer les parents aux programmes scolaires ?",
       "Quel est votre plan pour le retour au franc et la Banque de France ?"
     ],
-    "resume_statut": "brouillon"
+    "resume_statut": "brouillon",
+    "photo_source": "/img/candidats/francis-lalanne.webp",
+    "portrait": true
   }
 ]

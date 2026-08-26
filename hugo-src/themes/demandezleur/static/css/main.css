@@ -167,7 +167,7 @@ pre { background: var(--bg-2); border: 1px solid var(--border); border-radius: v
 .carte-photo { position: relative; aspect-ratio: 1 / 1; border-radius: var(--r-2); overflow: hidden; background: var(--bg-3); display: flex; align-items: center; justify-content: center; }
 .carte-photo img { width: 100%; height: 100%; object-fit: cover; }
 .carte-initiales { font-size: var(--fs-28); font-weight: 700; color: var(--fg-2); }
-.carte-texte { display: flex; flex-direction: column; gap: 2px; padding: 0 var(--sp-1); }
+.carte-texte { display: none; }
 .carte-nom { font-weight: 600; font-size: var(--fs-16); line-height: 1.25; }
 .carte-parti { font-size: var(--fs-14); color: var(--fg-2); }
 .carte-cta { font-size: var(--fs-14); font-weight: 600; color: var(--accent-2); margin-top: var(--sp-1); }
@@ -259,3 +259,45 @@ pre { background: var(--bg-2); border: 1px solid var(--border); border-radius: v
 .demo-entete .demo-suivant { margin-left: auto; }
 .demo-cta { margin: var(--sp-1) 0 0; }
 @media (min-width: 900px) { .plateau-2col { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-5); align-items: start; } }
+
+/* ---------- Le plateau : bandeaux lower-third, duel, cartes portrait ---------- */
+.bandeau-nom { display: flex; flex-direction: column; gap: 1px; padding: 8px 12px 8px 14px; background: linear-gradient(90deg, rgba(10, 20, 40, 0.96), rgba(10, 20, 40, 0.82)); border-left: 4px solid var(--accent); color: var(--fg); line-height: 1.15; }
+.bandeau-nom strong { font-size: var(--fs-16); font-weight: 700; letter-spacing: -0.01em; }
+.bandeau-nom span { font-size: var(--fs-12); text-transform: uppercase; letter-spacing: 0.08em; color: var(--fg-2); }
+.bandeau-carte { position: absolute; left: 0; right: 0; bottom: 0; margin: 0; padding: 6px 10px 7px 12px; }
+.bandeau-carte strong { font-size: var(--fs-14); }
+.bandeau-carte span { font-size: 11px; }
+.carte-candidat .carte-photo { border-radius: var(--r-2); background: #0d1a36; }
+.carte-candidat .carte-cta { display: block; text-align: center; font-size: var(--fs-14); font-weight: 600; color: var(--accent-2); padding: 2px 0 4px; }
+.carte-candidat:hover .carte-photo img { transform: scale(1.03); }
+.carte-photo img { transition: transform 0.25s; }
+.grille-compacte .carte-cta { display: none; }
+
+.hero-plateau { display: grid; gap: var(--sp-6); max-width: none; align-items: center; padding: var(--sp-5) 0 var(--sp-7); }
+@media (min-width: 900px) { .hero-plateau { grid-template-columns: 1.05fr 1fr; } }
+.hero-texte-col .sur-titre { display: flex; align-items: center; }
+
+.duel { display: block; text-decoration: none; color: var(--fg); border: 1px solid var(--border); border-radius: var(--r-3); overflow: hidden; background: #060d1c; box-shadow: var(--ombre); transition: transform 0.2s, border-color 0.2s; }
+.duel:hover { transform: translateY(-2px); border-color: var(--accent); }
+.duel-ecran { position: relative; display: grid; grid-template-columns: 1fr 1fr; aspect-ratio: 16 / 9; background: radial-gradient(ellipse at 50% 0%, rgba(229, 57, 70, 0.18), transparent 55%), #060d1c; }
+.duel-face { position: relative; margin: 0; overflow: hidden; }
+.duel-face img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+.duel-gauche img { transform: scaleX(-1); }
+.duel-face .bandeau-nom { position: absolute; left: 0; right: 0; bottom: 0; }
+.duel-droite .bandeau-nom { border-left: 0; border-right: 4px solid var(--accent); align-items: flex-end; text-align: right; background: linear-gradient(270deg, rgba(10, 20, 40, 0.96), rgba(10, 20, 40, 0.82)); }
+.duel-vs { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: 4px; z-index: 2; }
+.duel-arene { padding: 3px 10px; border-radius: var(--r-round); background: var(--accent); color: #fff; font-size: var(--fs-12); font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; }
+.duel-v { width: 54px; height: 54px; border-radius: 50%; background: var(--bg); border: 2px solid var(--fg); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: var(--fs-18); text-transform: uppercase; box-shadow: 0 0 0 6px rgba(10, 20, 40, 0.6); }
+.duel-pied { display: flex; align-items: center; gap: var(--sp-2); padding: 10px 14px; font-size: var(--fs-14); color: var(--fg-2); border-top: 1px solid var(--border); background: var(--bg-2); }
+.duel-cta { margin-left: auto; color: var(--accent-2); font-weight: 600; white-space: nowrap; }
+#duel-sujet { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+@media (max-width: 480px) { .duel-v { width: 40px; height: 40px; font-size: var(--fs-14); } .bandeau-nom strong { font-size: var(--fs-14); } }
+
+/* Arène : le plateau des candidats en jeu */
+.plateau-strip { display: flex; gap: var(--sp-2); flex-wrap: wrap; margin: var(--sp-3) 0 var(--sp-4); }
+.plateau-strip figure { margin: 0; width: 132px; border-radius: var(--r-2); overflow: hidden; position: relative; background: var(--bg-3); border: 1px solid var(--border); opacity: 0.75; transition: opacity 0.2s, box-shadow 0.2s; }
+.plateau-strip figure.parle { opacity: 1; box-shadow: 0 0 0 2px var(--accent); }
+.plateau-strip img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; }
+.plateau-strip .bandeau-nom { position: absolute; left: 0; right: 0; bottom: 0; padding: 4px 8px 5px 10px; }
+.plateau-strip .bandeau-nom strong { font-size: 12px; } .plateau-strip .bandeau-nom span { font-size: 10px; }
+.replique-avatar { border-radius: var(--r-1); }

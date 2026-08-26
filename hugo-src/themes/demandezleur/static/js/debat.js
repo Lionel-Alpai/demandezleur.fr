@@ -97,11 +97,14 @@
       case 'turn_start':
         $ordre.textContent = ev.candidats_meta.map(function (m, i) { return (i + 1) + '. ' + m.nom; }).join('  →  ');
         ev.candidats_meta.forEach(function (m) { if (m.photo) state.data[m.id].photo = m.photo; if (m.famille) state.data[m.id].famille = m.famille; });
+        var strip = document.getElementById('plateau-strip');
+        if (strip) strip.innerHTML = ev.candidats_ordre.map(function (id) { var d = state.data[id]; return '<figure id="strip-' + id + '">' + (d.photo ? '<img src="' + DL.echapper(d.photo) + '" alt="">' : '') + '<figcaption class="bandeau-nom"><strong>' + DL.echapper(d.nom) + '</strong><span>' + DL.echapper(d.parti) + '</span></figcaption></figure>'; }).join('');
         ev.candidats_ordre.forEach(function (id) { $interventions.appendChild(carteReplique(id, c.cibleId === id)); });
         break;
       case 'speaker_start':
         c.textes[ev.candidat_id] = '';
         var carte = $('replique-' + ev.candidat_id); if (carte) { carte.classList.add('parle'); carte.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+        document.querySelectorAll('.plateau-strip figure').forEach(function (f) { f.classList.toggle('parle', f.id === 'strip-' + ev.candidat_id); });
         texteDe(ev.candidat_id).className = 'replique-texte attente';
         texteDe(ev.candidat_id).textContent = state.mode === 'arene' ? 'Vérifie ses pièces…' : 'Consulte son programme…';
         break;

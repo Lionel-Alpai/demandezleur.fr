@@ -54,3 +54,29 @@
     }, 700);
   }
 })();
+
+/* Duel de l'accueil : deux candidats tirés au sort, changement toutes les 9 s ; sujet = 1er thème Assemblée si disponible. */
+(function () {
+  'use strict';
+  var src = document.getElementById('duel-data'), duel = document.getElementById('duel'); if (!src || !duel) return;
+  var cands = src.textContent.split('\n').map(function (l) { var p = l.trim().split('|'); return p.length >= 4 ? { id: p[0], nom: p[1], parti: p[2], photo: p[3] } : null; }).filter(Boolean);
+  if (cands.length < 2) return;
+  var reduit = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function tirer() {
+    var a = cands[Math.floor(Math.random() * cands.length)], b; do { b = cands[Math.floor(Math.random() * cands.length)]; } while (b === a);
+    [['a', a], ['b', b]].forEach(function (x) {
+      document.getElementById('duel-img-' + x[0]).src = x[1].photo; document.getElementById('duel-nom-' + x[0]).textContent = x[1].nom; document.getElementById('duel-parti-' + x[0]).textContent = x[1].parti;
+    });
+    var sujet = duel.getAttribute('data-sujet') || '';
+    duel.href = '/debat/?arene=1&candidats=' + encodeURIComponent(a.id + ',' + b.id) + (sujet ? '&sujet=' + encodeURIComponent(sujet) : '');
+  }
+  tirer(); if (!reduit) setInterval(tirer, 9000);
+  /* sujet du jour : premier thème Assemblée chargé par le bandeau */
+  var obs = new MutationObserver(function () {
+    var chip = document.querySelector('#assemblee-themes .chip'); if (!chip) return;
+    var q = decodeURIComponent((chip.getAttribute('href') || '').split('sujet=')[1] || '').split('&')[0];
+    if (q) { duel.setAttribute('data-sujet', q); document.getElementById('duel-sujet').textContent = 'Sujet du jour : ' + chip.textContent; tirer(); }
+    obs.disconnect();
+  });
+  var zone = document.getElementById('assemblee-themes'); if (zone) obs.observe(zone, { childList: true });
+})();

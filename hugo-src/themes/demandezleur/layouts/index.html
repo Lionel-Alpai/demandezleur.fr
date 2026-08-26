@@ -1,12 +1,23 @@
 {{ define "main" }}
-<section class="hero">
-  <p class="sur-titre">Présidentielle 2027 · {{ len site.Data.candidats }} candidats déclarés</p>
-  <h1>Vous êtes dans le fauteuil du journaliste.</h1>
-  <p class="hero-texte">Posez vos questions aux programmes officiels des candidats. Puis faites-les débattre entre eux — c'est vous qui menez.</p>
-  <div class="hero-actions">
-    <a href="/debat/" class="btn btn-accent btn-grand">Ouvrir un débat</a>
-    <a href="#candidats" class="btn btn-secondaire btn-grand">Interroger un candidat</a>
+{{ $cands := site.Data.candidats }}
+<section class="hero hero-plateau">
+  <div class="hero-texte-col">
+    <p class="sur-titre"><span class="point-direct"></span> Présidentielle 2027 · {{ len $cands }} candidats déclarés</p>
+    <h1>Vous êtes dans le fauteuil du journaliste.</h1>
+    <p class="hero-texte">Posez vos questions aux programmes officiels des candidats. Puis faites-les débattre entre eux — c'est vous qui menez, et chaque coup porte sa preuve.</p>
+    <div class="hero-actions">
+      <a href="/debat/" class="btn btn-accent btn-grand">Ouvrir un débat</a>
+      <a href="#candidats" class="btn btn-secondaire btn-grand">Interroger un candidat</a>
+    </div>
   </div>
+  <a href="/debat/?arene=1" class="duel" id="duel" aria-label="Ouvrir un débat en mode Arène">
+    <div class="duel-ecran">
+      <figure class="duel-face duel-gauche"><img id="duel-img-a" src="{{ (index $cands 0).photo }}" alt="" width="640" height="640"><figcaption class="bandeau-nom"><strong id="duel-nom-a">{{ (index $cands 0).nom }}</strong><span id="duel-parti-a">{{ (index $cands 0).parti_court }}</span></figcaption></figure>
+      <div class="duel-vs"><span class="duel-arene">Arène</span><span class="duel-v">vs</span></div>
+      <figure class="duel-face duel-droite"><img id="duel-img-b" src="{{ (index $cands 1).photo }}" alt="" width="640" height="640"><figcaption class="bandeau-nom"><strong id="duel-nom-b">{{ (index $cands 1).nom }}</strong><span id="duel-parti-b">{{ (index $cands 1).parti_court }}</span></figcaption></figure>
+    </div>
+    <div class="duel-pied"><span class="point-direct"></span><span id="duel-sujet">Sujet du jour : ce qui s'est dit à l'Assemblée</span><span class="duel-cta">Ouvrir le plateau →</span></div>
+  </a>
 </section>
 
 <section class="bandeau-assemblee" id="bandeau-assemblee" hidden>
@@ -27,20 +38,22 @@
     <a href="/candidats/" class="lien-discret">Tous les candidats et filtres →</a>
   </div>
   <div class="grille-candidats">
-    {{ range site.Data.candidats }}{{ partial "candidat-carte.html" (dict "c" . "mode" "lien") }}{{ end }}
+    {{ range $cands }}{{ partial "candidat-carte.html" (dict "c" . "mode" "lien") }}{{ end }}
   </div>
 </section>
 
 <section class="cta-plateau">
   <div class="cta-plateau-texte">
     <h2>Faites débattre les programmes.</h2>
-    <p>Choisissez 2 à 5 candidats, lancez un sujet, distribuez la parole, interpellez. En mode <strong>Arène</strong>, les candidats se voient opposer ce qui s'est vraiment dit à l'Assemblée — et le programme officiel de leurs adversaires.</p>
+    <p>Choisissez 2 à 5 candidats, lancez un sujet, distribuez la parole, interpellez. En mode <strong>Arène</strong>, les candidats se voient opposer ce qui s'est vraiment dit à l'Assemblée, le programme de leurs adversaires et leur dossier vérifié — chaque affirmation est vérifiée, ce qui n'est pas étayé est marqué.</p>
     <a href="/debat/" class="btn btn-accent">Ouvrir le plateau</a>
   </div>
 </section>
 
 <section class="ligne-honnete">
-  <span>Programmes officiels seulement</span><span>Chaque réponse sourcée</span><span>Prompts publics</span><span>Code ouvert</span><span>Aucun traceur</span>
+  <span>Programmes officiels seulement</span><span>Chaque réponse sourcée</span><span>Dossier vérifié à la main</span><span>Prompts publics</span><span>Code ouvert</span><span>Aucun traceur</span>
 </section>
+<script type="text/plain" id="duel-data" hidden>{{ range $cands }}{{ .id }}|{{ .nom }}|{{ .parti_court }}|{{ .photo }}
+{{ end }}</script>
 {{ end }}
 {{ define "scripts" }}<script src="/js/accueil.js?v={{ now.Unix }}"></script>{{ end }}
