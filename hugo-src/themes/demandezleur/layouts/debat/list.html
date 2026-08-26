@@ -4,13 +4,30 @@
   {{/* ÉTAT 1 — préparation du plateau */}}
   <section id="debat-setup" class="debat-section">
     <div class="page-entete">
-      <p class="sur-titre">Le plateau</p>
-      <h1>Faites débattre les programmes.</h1>
+      <p class="sur-titre">L'Arène</p>
+      <h1>Faites s'affronter les programmes.</h1>
       <p class="hero-texte">Choisissez un sujet, 2 à 5 candidats, et menez le débat : vous distribuez la parole, vous interpellez, vous clôturez.</p>
     </div>
 
     <div class="etape">
-      <h2 class="etape-titre"><span class="etape-num">1</span> Le sujet</h2>
+      <h2 class="etape-titre"><span class="etape-num">1</span> Le plateau</h2>
+      <div class="modes" role="radiogroup" aria-label="Mode du débat">
+        <label class="mode-carte mode-arene">
+          <input type="radio" name="mode" value="arene" id="mode-arene" checked>
+          <span class="mode-badge">Recommandé</span>
+          <strong>L'Arène</strong>
+          <span class="mode-desc">Les candidats se voient opposer <em>ce qui s'est vraiment dit à l'Assemblée</em>, le programme de leurs adversaires et leur <em>dossier vérifié</em>. Ton vif, coups portés — et chaque affirmation vérifiée : ce qui n'est pas étayé est marqué, ce qui est faux est retiré.</span>
+        </label>
+        <label class="mode-carte mode-calme">
+          <input type="radio" name="mode" value="standard" id="mode-standard">
+          <strong>Le plateau calme</strong>
+          <span class="mode-desc">Programmes officiels seulement, échanges courtois. Pour comparer sans étincelles.</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="etape">
+      <h2 class="etape-titre"><span class="etape-num">2</span> Le sujet</h2>
       <section class="bandeau-assemblee" id="parlement-bandeau" hidden>
         <div class="bandeau-titre"><span class="point-direct"></span> Ce qui s'est dit à l'Assemblée</div>
         <p class="bandeau-sous">Reprenez un sujet réellement débattu au Palais-Bourbon <span id="parlement-maj" class="meta"></span></p>
@@ -22,26 +39,15 @@
     </div>
 
     <div class="etape">
-      <h2 class="etape-titre"><span class="etape-num">2</span> Les candidats <span class="meta" id="compteur-selection"><span id="counter-selected">0</span> / 5 sélectionnés (2 minimum)</span></h2>
+      <h2 class="etape-titre"><span class="etape-num">3</span> Les candidats <span class="meta" id="compteur-selection"><span id="counter-selected">0</span> / 5 sélectionnés (2 minimum)</span></h2>
       <div class="grille-candidats grille-selection" id="candidats-grid">
         {{ range site.Data.candidats }}{{ partial "candidat-carte.html" (dict "c" . "mode" "selection") }}{{ end }}
       </div>
     </div>
 
-    <div class="etape">
-      <h2 class="etape-titre"><span class="etape-num">3</span> Le ton</h2>
-      <label class="carte-arene" for="mode-arene">
-        <input type="checkbox" id="mode-arene" role="switch">
-        <span class="carte-arene-texte">
-          <strong>Mode Arène</strong>
-          <span>Les candidats se voient opposer des propos réellement tenus à l'Assemblée et le programme officiel de leurs adversaires. Ton plus vif, échanges plus directs. Chaque affirmation sur un adversaire est vérifiée contre les pièces : ce qui n'est pas étayé reste dans le texte, marqué d'un astérisque et expliqué ; ce qui est faux (un bilan ou un vote prêté à qui ne peut pas l'avoir) est retiré, et conservé replié sous « Ce qui a été retiré ».</span>
-        </span>
-      </label>
-    </div>
-
-    <div class="barre-mobile" id="barre-mobile" hidden><span id="barre-compteur">0 / 5</span><button type="button" class="btn btn-accent" id="btn-launch-mobile" disabled>Ouvrir le plateau</button></div>
+    <div class="barre-mobile" id="barre-mobile" hidden><span id="barre-compteur">0 / 5</span><button type="button" class="btn btn-accent" id="btn-launch-mobile" disabled>Ouvrir l'Arène</button></div>
     <div class="lancement">
-      <button id="btn-launch" class="btn btn-accent btn-grand" disabled>Ouvrir le plateau</button>
+      <button id="btn-launch" class="btn btn-accent btn-grand" disabled>Ouvrir l'Arène</button>
       <p class="meta">Ordre de parole tiré au sort · 5 tours maximum · prompts publics</p>
     </div>
   </section>

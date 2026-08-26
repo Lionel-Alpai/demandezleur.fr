@@ -9,6 +9,7 @@
       <h1>{{ $c.nom }}</h1>
       <p class="fiche-parti">{{ $c.parti }}{{ with $fam }} <span class="badge-famille"><span class="pastille famille-{{ $c.famille }}"></span>{{ .libelle }}</span>{{ end }}</p>
       {{ with $c.resume }}<p class="fiche-resume">{{ . }}</p>{{ end }}
+      <p class="fiche-actions"><a class="btn btn-accent btn-petit" href="/debat/?candidats={{ $c.id }}">Défier {{ $c.nom }} dans l'Arène →</a></p>
       {{ with $c.photo_credit }}<p class="meta">Portrait : illustration d'après une photo {{ . }}</p>{{ end }}
     </div>
   </header>

@@ -10,10 +10,10 @@
   var $panel = $('intervention-panel'), $panelInput = $('intervention-input'), $panelCibles = $('intervention-target-buttons');
   var $panelOk = $('btn-intervention-submit'), $panelNon = $('btn-intervention-cancel');
   var $recapSujet = $('recap-sujet'), $recapContainer = $('recap-container'), $recapPartage = $('recap-partage');
-  var $arene = $('mode-arene'), $bandeau = $('parlement-bandeau'), $sujetsParlement = $('parlement-sujets'), $parlementMaj = $('parlement-maj');
+  var $arene = $('mode-arene'), $standard = $('mode-standard'), $bandeau = $('parlement-bandeau'), $sujetsParlement = $('parlement-sujets'), $parlementMaj = $('parlement-maj');
 
   var MAX_TOURS = window.DL_MAX_TOURS || 5;
-  var state = { phase: 'setup', selection: [], data: {}, sujet: '', mode: 'standard', tour: 0, historique: [], enCours: null, cible: null };
+  var state = { phase: 'setup', selection: [], data: {}, sujet: '', mode: 'arene', tour: 0, historique: [], enCours: null, cible: null };
 
   /* ---------- Préparation ---------- */
   $grid.querySelectorAll('.carte-selection').forEach(function (carte) {
@@ -40,12 +40,13 @@
   }
   if ($barreBtn) $barreBtn.addEventListener('click', function () { $btnLaunch.click(); });
   $sujet.addEventListener('input', function () { $sujetChars.textContent = $sujet.value.length; majLancement(); });
-  if ($arene) $arene.addEventListener('change', function () { state.mode = $arene.checked ? 'arene' : 'standard'; });
+  function majMode() { state.mode = ($standard && $standard.checked) ? 'standard' : 'arene'; var lib = state.mode === 'arene' ? "Ouvrir l'Arène" : 'Ouvrir le plateau'; $btnLaunch.textContent = lib; if ($barreBtn) $barreBtn.textContent = lib; }
+  if ($arene) $arene.addEventListener('change', majMode); if ($standard) $standard.addEventListener('change', majMode);
 
   /* Préremplissage par l'URL : /debat/?sujet=…&candidats=a,b&arene=1 */
   var params = new URLSearchParams(window.location.search);
   if (params.get('sujet')) { $sujet.value = params.get('sujet').slice(0, 500); $sujetChars.textContent = $sujet.value.length; }
-  if (params.get('arene') === '1' && $arene) { $arene.checked = true; state.mode = 'arene'; }
+  if (params.get('arene') === '0' && $standard) { $standard.checked = true; } if ($arene) majMode();
   (params.get('candidats') || '').split(',').filter(Boolean).forEach(function (id) {
     var carte = $grid.querySelector('.carte-selection[data-candidat-id="' + id + '"]'); if (carte) basculer(id, carte);
   });
