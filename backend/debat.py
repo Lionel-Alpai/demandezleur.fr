@@ -217,7 +217,11 @@ def construire_prompt_debat(
         faits = charger_faits()
         lignes = []
         for adv in adversaires:
-            blocs_adv = search_blocs_cached(adv["id"], query, top_k=(2 if mode == "arene" else 1), cache=cache_rag)
+            k_adv = 2 if mode == "arene" else 1
+            tous_adv = search_blocs_cached(adv["id"], query, top_k=k_adv * 3, cache=cache_rag)
+            # rotation par position dans le tour : les orateurs successifs ne reçoivent pas les mêmes extraits adverses
+            dec = (position_dans_tour * k_adv) % max(1, len(tous_adv)) if tous_adv else 0
+            blocs_adv = (tous_adv[dec:] + tous_adv[:dec])[:k_adv]
             nom_adv = f"{adv['nom']} ({adv.get('parti_court') or adv.get('parti', '')})"
             if blocs_adv:
                 for b in blocs_adv:
@@ -243,9 +247,13 @@ def construire_prompt_debat(
         try:
             import parlement as _p
             if True:
-                seqs = _p.sequences_pour_sujet(sujet, n=1)
+                seqs = _p.sequences_pour_sujet(sujet, n=6)
                 if seqs:
-                    sq = seqs[0]
+                    # Une pièce DIFFÉRENTE par orateur : on écarte celles déjà citées dans le débat, puis rotation par position
+                    import dossiers as _dd
+                    textes_deb = [i.get("texte", "") for t in (historique or []) for i in t.get("interventions", [])]
+                    libres = [q for q in seqs if not _dd.deja_cite(q.get("texte", "")[:400], textes_deb, seuil=4)] or seqs
+                    sq = libres[position_dans_tour % len(libres)]
                     prompt += (
                         "\n\nPIÈCE AU DOSSIER — verbatim officiel de l'Assemblée nationale, sur « "
                         + (sq.get("libelle") or sq["titre"]) + " » :\n"
@@ -262,6 +270,31 @@ def construire_prompt_debat(
                     })
         except Exception:
             pass
+
+    # DANS CE TOUR — qui a déjà été interpellé, avec quel argument : on impose la diversité
+    if adversaires and historique:
+        courant = [t for t in historique if t.get("tour") == tour]
+        interventions = courant[-1].get("interventions", []) if courant else []
+        if interventions:
+            noms = {a["id"]: a["nom"] for a in adversaires}
+            noms[candidat["id"]] = candidat["nom"]
+            lignes, compte = [], {}
+            for i in interventions:
+                txt = i.get("texte", "")
+                vises = [n for cid, n in noms.items() if cid != i.get("candidat_id") and n.split()[-1] in txt]
+                for v in vises:
+                    compte[v] = compte.get(v, 0) + 1
+                premiere = txt.split(". ")[0][:160]
+                lignes.append(f"— {i.get('candidat_nom', i.get('candidat_id'))} a interpellé {', '.join(vises) or 'personne'} ; son angle : « {premiere}… »")
+            jamais = [n for cid, n in noms.items() if cid != candidat["id"] and n not in compte]
+            prompt += (
+                "\n\nDANS CE TOUR, AVANT TOI :\n" + "\n".join(lignes)
+                + ("\nPersonne n'a encore interpellé : " + ", ".join(jamais) + "." if jamais else "")
+                + "\nRÈGLE DE DIVERSITÉ (bloquante) : ne reprends NI l'argument NI la formule d'un candidat qui a parlé avant toi dans ce tour. "
+                + (f"INTERDIT d'interpeller {', '.join(n for n, c in compte.items() if c >= 1)} une nouvelle fois dans ce tour tant que {', '.join(jamais)} n'ont pas été interpellés : ton adversaire nommé est l'un d'eux. " if jamais and compte else "")
+                + "Si tu reviens malgré tout sur un adversaire déjà visé, prends un angle que personne n'a pris (ton programme, une autre pièce, un autre fait). "
+                  "Tu ne dis jamais « vous nous ressortez » ni « encore » à propos d'un argument que tu n'as pas toi-même déjà réfuté."
+            )
 
     # ARÈNE — le DOSSIER (faits vérifiés + reproches documentés), en fin de prompt : c'est la dernière chose lue
     if mode == "arene" and adversaires:
