@@ -321,3 +321,18 @@ pre { background: var(--bg-2); border: 1px solid var(--border); border-radius: v
 .affiche-nom-a { left: 12px; } .affiche-nom-b { right: 12px; text-align: right; }
 .affiche .duel-pied { background: var(--bg-2); }
 @media (max-width: 899px) { .affiche { max-width: none; justify-self: stretch; } }
+
+/* ---------- Bandeaux des cartes : dégradé transparent, texte ombré, visage préservé ---------- */
+.carte-photo > .bandeau-carte {
+  background: linear-gradient(to top, rgba(10, 20, 40, 0.86) 0%, rgba(10, 20, 40, 0.62) 45%, rgba(10, 20, 40, 0.18) 78%, rgba(10, 20, 40, 0) 100%);
+  border-left: 3px solid var(--accent); padding: 26px 8px 7px 10px; gap: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.carte-photo > .bandeau-carte strong { font-size: 13px; line-height: 1.12; letter-spacing: -0.01em; }
+.carte-photo > .bandeau-carte span { font-size: 10px; letter-spacing: 0.06em; opacity: 0.9; }
+.carte-photo img { object-position: center 18%; }
+.grille-selection { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+@media (min-width: 1200px) { .grille-selection { grid-template-columns: repeat(8, 1fr); } }
+.section-candidats .grille-candidats { grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); }
+.carte-selection .carte-coche { top: 6px; right: 6px; width: 24px; height: 24px; font-size: 13px; }
+.carte-candidat .pastille { top: 8px; left: 8px; width: 10px; height: 10px; }
