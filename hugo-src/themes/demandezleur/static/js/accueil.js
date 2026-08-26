@@ -63,9 +63,15 @@
   var ta = document.createElement('textarea'), dec = function (t) { ta.innerHTML = t; return ta.value; };  /* Hugo encode les apostrophes (&#39;) dans ce bloc */
   var affiches = aff.textContent.split('\n').map(function (l) { var p = l.trim().split('|'); return p.length >= 4 && cands[p[0]] && cands[p[1]] ? { a: cands[p[0]], b: cands[p[1]], sujet: dec(p[2]), accroche: dec(p[3]) } : null; }).filter(Boolean);
   if (!affiches.length) return;
+  /* Ordre : une affiche manuelle (poids lourds) d'abord, puis mélange aléatoire ; on évite le même candidat deux fois de suite. */
+  var ordre = affiches.slice(1); for (var k = ordre.length - 1; k > 0; k--) { var j = Math.floor(Math.random() * (k + 1)); var t = ordre[k]; ordre[k] = ordre[j]; ordre[j] = t; }
+  ordre.unshift(affiches[0]);
+  for (var m = 1; m < ordre.length - 1; m++) { var prev = ordre[m - 1], cur = ordre[m]; if (cur.a === prev.a || cur.b === prev.b || cur.a === prev.b || cur.b === prev.a) { var n = m + 1; while (n < ordre.length && (ordre[n].a === prev.a || ordre[n].b === prev.b || ordre[n].a === prev.b || ordre[n].b === prev.a)) n++; if (n < ordre.length) { var tmp = ordre[m]; ordre[m] = ordre[n]; ordre[n] = tmp; } } }
+  affiches = ordre;
   var i = 0, reduit = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function montrer() {
     var x = affiches[i % affiches.length]; i++;
+    if (x.sujet === '@assemblee') { var chip = document.querySelector('#assemblee-themes .chip'); x = { a: x.a, b: x.b, accroche: x.accroche, sujet: chip ? chip.textContent : 'ce qui s’est dit à l’Assemblée' }; }
     document.getElementById('duel-img-a').src = x.a.photo; document.getElementById('duel-img-b').src = x.b.photo;
     document.getElementById('duel-nom-a').textContent = x.a.nom.split(' ').slice(-1)[0] === 'Pen' ? 'Le Pen' : x.a.nom.split(' ').slice(-1)[0];
     document.getElementById('duel-nom-b').textContent = x.b.nom.split(' ').slice(-1)[0] === 'Pen' ? 'Le Pen' : x.b.nom.split(' ').slice(-1)[0];

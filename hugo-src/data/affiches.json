@@ -1,10 +1,378 @@
 [
-  {"a": "jean-luc-melenchon", "b": "marine-le-pen",   "sujet": "l'immigration",             "accroche": "Le choc"},
-  {"a": "marine-le-pen",      "b": "gabriel-attal",   "sujet": "la sécurité du quotidien",   "accroche": "Ordre contre ordre"},
-  {"a": "jean-luc-melenchon", "b": "edouard-philippe","sujet": "les retraites",              "accroche": "64 ans ou 60 ans"},
-  {"a": "bruno-retailleau",   "b": "marine-le-pen",   "sujet": "l'immigration",             "accroche": "Le même électorat"},
-  {"a": "gabriel-attal",      "b": "jean-luc-melenchon","sujet": "l'école",                  "accroche": "Autorité ou égalité"},
-  {"a": "delphine-batho",     "b": "bruno-retailleau","sujet": "le nucléaire",               "accroche": "Sortir ou relancer"},
-  {"a": "marine-le-pen",      "b": "edouard-philippe","sujet": "la probité en politique",    "accroche": "Sur le dossier"},
-  {"a": "nathalie-arthaud",   "b": "xavier-bertrand", "sujet": "les salaires et le pouvoir d'achat", "accroche": "Patrons contre ouvriers"}
+ {
+  "a": "jean-luc-melenchon",
+  "b": "marine-le-pen",
+  "sujet": "l'immigration",
+  "accroche": "Le choc",
+  "manuel": true
+ },
+ {
+  "a": "marine-le-pen",
+  "b": "gabriel-attal",
+  "sujet": "la sécurité du quotidien",
+  "accroche": "Ordre contre ordre",
+  "manuel": true
+ },
+ {
+  "a": "jean-luc-melenchon",
+  "b": "edouard-philippe",
+  "sujet": "les retraites",
+  "accroche": "64 ans ou 60 ans",
+  "manuel": true
+ },
+ {
+  "a": "bruno-retailleau",
+  "b": "marine-le-pen",
+  "sujet": "l'immigration",
+  "accroche": "Le même électorat",
+  "manuel": true
+ },
+ {
+  "a": "gabriel-attal",
+  "b": "jean-luc-melenchon",
+  "sujet": "l'école",
+  "accroche": "Autorité ou égalité",
+  "manuel": true
+ },
+ {
+  "a": "delphine-batho",
+  "b": "bruno-retailleau",
+  "sujet": "le nucléaire",
+  "accroche": "Sortir ou relancer",
+  "manuel": true
+ },
+ {
+  "a": "marine-le-pen",
+  "b": "edouard-philippe",
+  "sujet": "la probité en politique",
+  "accroche": "Sur le dossier",
+  "manuel": true
+ },
+ {
+  "a": "nathalie-arthaud",
+  "b": "xavier-bertrand",
+  "sujet": "les salaires et le pouvoir d'achat",
+  "accroche": "Patrons contre ouvriers",
+  "manuel": true
+ },
+ {
+  "a": "jean-luc-melenchon",
+  "b": "marine-le-pen",
+  "sujet": "l'immigration",
+  "accroche": "Fermer ou ouvrir",
+  "registre": "ennemi_principal",
+  "motif": "poids"
+ },
+ {
+  "a": "gabriel-attal",
+  "b": "jean-luc-melenchon",
+  "sujet": "les banlieues",
+  "accroche": "Qui les abandonne ?",
+  "registre": "concurrent_meme_electorat",
+  "motif": "poids"
+ },
+ {
+  "a": "edouard-philippe",
+  "b": "jean-luc-melenchon",
+  "sujet": "les banlieues",
+  "accroche": "Même combat ?",
+  "registre": "concurrent_meme_electorat",
+  "motif": "poids"
+ },
+ {
+  "a": "jean-luc-melenchon",
+  "b": "bruno-retailleau",
+  "sujet": "la dette publique",
+  "accroche": "Qui paie la facture ?",
+  "registre": "neutre",
+  "motif": "poids"
+ },
+ {
+  "a": "xavier-bertrand",
+  "b": "jean-luc-melenchon",
+  "sujet": "sécurité du quotidien : moyens pour forces de l'ordre et justice",
+  "accroche": "Sécurité sans stigmate ?",
+  "registre": "neutre",
+  "motif": "poids"
+ },
+ {
+  "a": "bernard-cazeneuve",
+  "b": "jean-luc-melenchon",
+  "sujet": "la justice",
+  "accroche": "Justice pour tous ?",
+  "registre": "neutre",
+  "motif": "poids"
+ },
+ {
+  "a": "gabriel-attal",
+  "b": "marine-le-pen",
+  "sujet": "le pouvoir d'achat",
+  "accroche": "Plein les poches ?",
+  "registre": "concurrent_meme_electorat",
+  "motif": "poids"
+ },
+ {
+  "a": "marine-le-pen",
+  "b": "edouard-philippe",
+  "sujet": "le travail et les salaires",
+  "accroche": "Travailler plus, gagner plus ?",
+  "registre": "concurrent_meme_electorat",
+  "motif": "poids"
+ },
+ {
+  "a": "marine-le-pen",
+  "b": "bruno-retailleau",
+  "sujet": "les impôts",
+  "accroche": "Moins d'impôts ?",
+  "registre": "concurrent_meme_electorat",
+  "motif": "poids"
+ },
+ {
+  "a": "marine-le-pen",
+  "b": "xavier-bertrand",
+  "sujet": "la sécurité du quotidien",
+  "accroche": "Protéger ou surveiller ?",
+  "registre": "concurrent_meme_electorat",
+  "motif": "poids"
+ },
+ {
+  "a": "bernard-cazeneuve",
+  "b": "marine-le-pen",
+  "sujet": "le nucléaire",
+  "accroche": "Atome ou risque ?",
+  "registre": "ennemi_principal",
+  "motif": "poids"
+ },
+ {
+  "a": "gabriel-attal",
+  "b": "edouard-philippe",
+  "sujet": "les impôts",
+  "accroche": "Fiscalité juste ?",
+  "registre": "neutre",
+  "motif": "poids"
+ },
+ {
+  "a": "gabriel-attal",
+  "b": "bruno-retailleau",
+  "sujet": "le travail et les salaires",
+  "accroche": "Salaires en hausse ?",
+  "registre": "neutre",
+  "motif": "poids"
+ },
+ {
+  "a": "gabriel-attal",
+  "b": "xavier-bertrand",
+  "sujet": "la sécurité du quotidien",
+  "accroche": "Sécurité ou liberté ?",
+  "registre": "neutre",
+  "motif": "poids"
+ },
+ {
+  "a": "gabriel-attal",
+  "b": "bernard-cazeneuve",
+  "sujet": "le nucléaire",
+  "accroche": "Nucleaire sans tabou ?",
+  "registre": "concurrent_meme_electorat",
+  "motif": "poids"
+ },
+ {
+  "a": "bruno-retailleau",
+  "b": "edouard-philippe",
+  "sujet": "les institutions et la VIe République",
+  "accroche": "Vie république ?",
+  "registre": "concurrent_meme_electorat",
+  "motif": "poids"
+ },
+ {
+  "a": "edouard-philippe",
+  "b": "xavier-bertrand",
+  "sujet": "l'intelligence artificielle et l'emploi",
+  "accroche": "Robots ou emplois ?",
+  "registre": "neutre",
+  "motif": "poids"
+ },
+ {
+  "a": "bernard-cazeneuve",
+  "b": "edouard-philippe",
+  "sujet": "le nucléaire",
+  "accroche": "Énergie d'avenir ?",
+  "registre": "concurrent_meme_electorat",
+  "motif": "poids"
+ },
+ {
+  "a": "bruno-retailleau",
+  "b": "xavier-bertrand",
+  "sujet": "l'école",
+  "accroche": "École égale ?",
+  "registre": "neutre",
+  "motif": "poids"
+ },
+ {
+  "a": "bernard-cazeneuve",
+  "b": "bruno-retailleau",
+  "sujet": "l'hôpital",
+  "accroche": "Hôpital en détresse ?",
+  "registre": "neutre",
+  "motif": "poids"
+ },
+ {
+  "a": "xavier-bertrand",
+  "b": "bernard-cazeneuve",
+  "sujet": "le pouvoir d'achat",
+  "accroche": "Pouvoir d'achat ?",
+  "registre": "neutre",
+  "motif": "poids"
+ },
+ {
+  "a": "delphine-batho",
+  "b": "nathalie-arthaud",
+  "sujet": "l'école",
+  "accroche": "Éducation priorité ?",
+  "registre": "neutre",
+  "motif": "concurrent_meme_electorat"
+ },
+ {
+  "a": "edouard-philippe",
+  "b": "nathalie-arthaud",
+  "sujet": "les banlieues",
+  "accroche": "Banlieues oubliées ?",
+  "registre": "neutre",
+  "motif": "concurrent_meme_electorat"
+ },
+ {
+  "a": "gabriel-attal",
+  "b": "nathalie-arthaud",
+  "sujet": "gestion du patrimoine immobilier de l'État",
+  "accroche": "État moderne ?",
+  "registre": "neutre",
+  "motif": "concurrent_meme_electorat"
+ },
+ {
+  "a": "nathalie-arthaud",
+  "b": "bernard-cazeneuve",
+  "sujet": "l'agriculture",
+  "accroche": "Agriculture paysanne ?",
+  "registre": "concurrent_meme_electorat",
+  "motif": "concurrent_meme_electorat"
+ },
+ {
+  "a": "jean-luc-melenchon",
+  "b": "nathalie-arthaud",
+  "sujet": "le logement",
+  "accroche": "Logement pour tous ?",
+  "registre": "neutre",
+  "motif": "concurrent_meme_electorat"
+ },
+ {
+  "a": "nathalie-arthaud",
+  "b": "karim-bouamrane",
+  "sujet": "l'intelligence artificielle et l'emploi",
+  "accroche": "Ia et emploi ?",
+  "registre": "concurrent_meme_electorat",
+  "motif": "concurrent_meme_electorat"
+ },
+ {
+  "a": "delphine-batho",
+  "b": "edouard-philippe",
+  "sujet": "les retraites",
+  "accroche": "Retraite à 60 ?",
+  "registre": "concurrent_meme_electorat",
+  "motif": "concurrent_meme_electorat"
+ },
+ {
+  "a": "delphine-batho",
+  "b": "gabriel-attal",
+  "sujet": "les institutions et la VIe République",
+  "accroche": "Institutions à refaire ?",
+  "registre": "concurrent_meme_electorat",
+  "motif": "concurrent_meme_electorat"
+ },
+ {
+  "a": "edouard-philippe",
+  "b": "karim-bouamrane",
+  "sujet": "le nucléaire",
+  "accroche": "Nucléaire, oui ou non ?",
+  "registre": "concurrent_meme_electorat",
+  "motif": "concurrent_meme_electorat"
+ },
+ {
+  "a": "delphine-batho",
+  "b": "bruno-retailleau",
+  "sujet": "l'hôpital",
+  "accroche": "Santé gratuite ?",
+  "registre": "neutre",
+  "motif": "concurrent_meme_electorat"
+ },
+ {
+  "a": "bruno-retailleau",
+  "b": "nicolas-dupont-aignan",
+  "sujet": "le pouvoir d'achat",
+  "accroche": "Fin du mois ?",
+  "registre": "concurrent_meme_electorat",
+  "motif": "concurrent_meme_electorat"
+ },
+ {
+  "a": "francois-asselineau",
+  "b": "bruno-retailleau",
+  "sujet": "les banlieues",
+  "accroche": "Quartiers abandonnés ?",
+  "registre": "concurrent_meme_electorat",
+  "motif": "concurrent_meme_electorat"
+ },
+ {
+  "a": "bruno-retailleau",
+  "b": "florian-philippot",
+  "sujet": "l'intelligence artificielle et l'emploi",
+  "accroche": "Travail dématérialisé ?",
+  "registre": "concurrent_meme_electorat",
+  "motif": "concurrent_meme_electorat"
+ },
+ {
+  "a": "bruno-retailleau",
+  "b": "francis-lalanne",
+  "sujet": "le logement",
+  "accroche": "Toit pour chacun ?",
+  "registre": "concurrent_meme_electorat",
+  "motif": "concurrent_meme_electorat"
+ },
+ {
+  "a": "xavier-bertrand",
+  "b": "delphine-batho",
+  "sujet": "les banlieues",
+  "accroche": "Mixité sociale ?",
+  "registre": "concurrent_meme_electorat",
+  "motif": "concurrent_meme_electorat"
+ },
+ {
+  "a": "xavier-bertrand",
+  "b": "nicolas-dupont-aignan",
+  "sujet": "politique migratoire et relations franco-algériennes",
+  "accroche": "Visas pour qui ?",
+  "registre": "concurrent_meme_electorat",
+  "motif": "concurrent_meme_electorat"
+ },
+ {
+  "a": "francois-asselineau",
+  "b": "xavier-bertrand",
+  "sujet": "le nucléaire",
+  "accroche": "Électricité sans risque ?",
+  "registre": "concurrent_meme_electorat",
+  "motif": "concurrent_meme_electorat"
+ },
+ {
+  "a": "florian-philippot",
+  "b": "xavier-bertrand",
+  "sujet": "les banlieues",
+  "accroche": "Sécurité urbaine ?",
+  "registre": "concurrent_meme_electorat",
+  "motif": "concurrent_meme_electorat"
+ },
+ {
+  "a": "xavier-bertrand",
+  "b": "francis-lalanne",
+  "sujet": "les institutions et la VIe République",
+  "accroche": "Réforme institutionnelle ?",
+  "registre": "concurrent_meme_electorat",
+  "motif": "concurrent_meme_electorat"
+ }
 ]
