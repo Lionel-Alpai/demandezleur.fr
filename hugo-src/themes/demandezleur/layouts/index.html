@@ -10,13 +10,17 @@
       <a href="#candidats" class="btn btn-secondaire btn-grand">Interroger un candidat</a>
     </div>
   </div>
-  <a href="/debat/?arene=1" class="duel" id="duel" aria-label="Ouvrir un débat en mode Arène">
-    <div class="duel-ecran">
-      <figure class="duel-face duel-gauche"><img id="duel-img-a" src="{{ (index $cands 0).photo }}" alt="" width="640" height="640"><figcaption class="bandeau-nom"><strong id="duel-nom-a">{{ (index $cands 0).nom }}</strong><span id="duel-parti-a">{{ (index $cands 0).parti_court }}</span></figcaption></figure>
-      <div class="duel-vs"><span class="duel-arene">Arène</span><span class="duel-v">vs</span></div>
-      <figure class="duel-face duel-droite"><img id="duel-img-b" src="{{ (index $cands 1).photo }}" alt="" width="640" height="640"><figcaption class="bandeau-nom"><strong id="duel-nom-b">{{ (index $cands 1).nom }}</strong><span id="duel-parti-b">{{ (index $cands 1).parti_court }}</span></figcaption></figure>
+  <a href="/debat/?arene=1" class="affiche" id="duel" aria-label="Ouvrir ce débat en mode Arène">
+    <div class="affiche-visuel">
+      <img class="affiche-a" id="duel-img-a" src="{{ (index $cands 0).photo }}" alt="" width="640" height="640">
+      <img class="affiche-b" id="duel-img-b" src="{{ (index $cands 1).photo }}" alt="" width="640" height="640">
+      <span class="affiche-barre"></span>
+      <span class="affiche-vs">VS</span>
+      <span class="affiche-kicker" id="duel-accroche">Arène</span>
+      <span class="affiche-nom affiche-nom-a" id="duel-nom-a">{{ (index $cands 0).nom }}</span>
+      <span class="affiche-nom affiche-nom-b" id="duel-nom-b">{{ (index $cands 1).nom }}</span>
     </div>
-    <div class="duel-pied"><span class="point-direct"></span><span id="duel-sujet">Sujet du jour : ce qui s'est dit à l'Assemblée</span><span class="duel-cta">Ouvrir le plateau →</span></div>
+    <div class="duel-pied"><span class="point-direct"></span><span id="duel-sujet">Sujet : à vous de choisir</span><span class="duel-cta">Ouvrir l'Arène →</span></div>
   </a>
 </section>
 
@@ -54,6 +58,8 @@
   <span>Programmes officiels seulement</span><span>Chaque réponse sourcée</span><span>Dossier vérifié à la main</span><span>Prompts publics</span><span>Code ouvert</span><span>Aucun traceur</span>
 </section>
 <script type="text/plain" id="duel-data" hidden>{{ range $cands }}{{ .id }}|{{ .nom }}|{{ .parti_court }}|{{ .photo }}
+{{ end }}</script>
+<script type="text/plain" id="affiches-data" hidden>{{ range site.Data.affiches }}{{ .a }}|{{ .b }}|{{ .sujet }}|{{ .accroche }}
 {{ end }}</script>
 {{ end }}
 {{ define "scripts" }}<script src="/js/accueil.js?v={{ now.Unix }}"></script>{{ end }}

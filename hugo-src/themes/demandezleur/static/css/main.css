@@ -301,3 +301,19 @@ pre { background: var(--bg-2); border: 1px solid var(--border); border-radius: v
 .plateau-strip .bandeau-nom { position: absolute; left: 0; right: 0; bottom: 0; padding: 4px 8px 5px 10px; }
 .plateau-strip .bandeau-nom strong { font-size: 12px; } .plateau-strip .bandeau-nom span { font-size: 10px; }
 .replique-avatar { border-radius: var(--r-1); }
+
+/* ---------- Affiche d'accroche (façon vignette de clip) ---------- */
+.carte-photo > .bandeau-carte { position: absolute; left: 0; right: 0; bottom: 0; top: auto; width: auto; height: auto; }
+.affiche { display: block; max-width: 520px; width: 100%; justify-self: end; text-decoration: none; color: var(--fg); border-radius: var(--r-3); overflow: hidden; background: #060d1c; border: 1px solid var(--border); box-shadow: var(--ombre); transition: transform 0.2s, border-color 0.2s; }
+.affiche:hover { transform: translateY(-2px) scale(1.01); border-color: var(--accent); }
+.affiche-visuel { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #060d1c; }
+.affiche-visuel img { position: absolute; top: 0; height: 100%; width: 62%; object-fit: cover; object-position: center 15%; }
+.affiche-a { left: 0; clip-path: polygon(0 0, 100% 0, 78% 100%, 0 100%); }
+.affiche-b { right: 0; clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%); transform: scaleX(-1); }
+.affiche-barre { position: absolute; left: 50%; top: -10%; height: 120%; width: 14px; background: var(--accent); transform: translateX(-50%) skewX(-14deg); box-shadow: 0 0 24px rgba(229, 57, 70, 0.6); }
+.affiche-vs { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(-6deg); font-weight: 900; font-size: clamp(2rem, 6vw, 3.4rem); letter-spacing: -0.04em; color: #fff; text-shadow: 0 4px 0 var(--accent), 0 0 30px rgba(0, 0, 0, 0.8); z-index: 2; }
+.affiche-kicker { position: absolute; left: 12px; top: 10px; padding: 3px 10px; background: var(--accent); color: #fff; font-size: var(--fs-12); font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; border-radius: 3px; z-index: 2; }
+.affiche-nom { position: absolute; bottom: 10px; font-weight: 900; font-size: clamp(1.3rem, 3.6vw, 2.1rem); text-transform: uppercase; letter-spacing: -0.02em; line-height: 1; color: #fff; text-shadow: 0 2px 0 #0a1428, 0 0 18px rgba(0, 0, 0, 0.9); z-index: 2; max-width: 46%; }
+.affiche-nom-a { left: 12px; } .affiche-nom-b { right: 12px; text-align: right; }
+.affiche .duel-pied { background: var(--bg-2); }
+@media (max-width: 899px) { .affiche { max-width: none; justify-self: stretch; } }

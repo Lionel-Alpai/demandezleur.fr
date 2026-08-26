@@ -1,0 +1,10 @@
+[
+  {"a": "jean-luc-melenchon", "b": "marine-le-pen",   "sujet": "l'immigration",             "accroche": "Le choc"},
+  {"a": "marine-le-pen",      "b": "gabriel-attal",   "sujet": "la sécurité du quotidien",   "accroche": "Ordre contre ordre"},
+  {"a": "jean-luc-melenchon", "b": "edouard-philippe","sujet": "les retraites",              "accroche": "64 ans ou 60 ans"},
+  {"a": "bruno-retailleau",   "b": "marine-le-pen",   "sujet": "l'immigration",             "accroche": "Le même électorat"},
+  {"a": "gabriel-attal",      "b": "jean-luc-melenchon","sujet": "l'école",                  "accroche": "Autorité ou égalité"},
+  {"a": "delphine-batho",     "b": "bruno-retailleau","sujet": "le nucléaire",               "accroche": "Sortir ou relancer"},
+  {"a": "marine-le-pen",      "b": "edouard-philippe","sujet": "la probité en politique",    "accroche": "Sur le dossier"},
+  {"a": "nathalie-arthaud",   "b": "xavier-bertrand", "sujet": "les salaires et le pouvoir d'achat", "accroche": "Patrons contre ouvriers"}
+]
