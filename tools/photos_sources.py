@@ -9,6 +9,12 @@ from pathlib import Path
 import cv2, numpy as np
 from PIL import Image, ImageDraw, ImageFont
 R = Path(__file__).resolve().parent.parent
+
+
+def date_iso(s):
+    """Date normalisée AAAA-MM-JJ (les dates Commons non ISO, ex. « Taken on 2 … », sont ignorées)."""
+    import re as _re
+    m = _re.search(r"(\d{4})-(\d{2})-(\d{2})", str(s or "")); return m.group(0) if m else ""
 OUT = R / "hugo-src/photos-sources"; OUT.mkdir(exist_ok=True)
 UA = {"User-Agent": "demandezleur.fr/portraits (site citoyen ; contact via le site)"}
 YUNET = "/home/lionel/trio/orchestre/tools/fabrique/juge_visage/yunet.onnx"  # OpenCV 5 : plus de Haar, on prend YuNet (même détecteur que le juge)
@@ -37,7 +43,7 @@ def commons(q, n=25):
     for pg in d.get("query", {}).get("pages", {}).values():
         ii = (pg.get("imageinfo") or [{}])[0]; em = ii.get("extmetadata", {})
         if not ii.get("mime", "").startswith("image/") or ii.get("width", 0) < 600: continue
-        date = (em.get("DateTimeOriginal", {}).get("value") or ii.get("timestamp", ""))[:10]
+        date = date_iso(em.get("DateTimeOriginal", {}).get("value")) or ii.get("timestamp", "")[:10]
         out.append({"titre": pg["title"], "w": ii["width"], "h": ii["height"], "date": date, "date_upload": ii.get("timestamp", "")[:10],
                     "licence": re.sub(r"<[^>]+>", "", em.get("LicenseShortName", {}).get("value", "")), "auteur": re.sub(r"<[^>]+>", "", em.get("Artist", {}).get("value", ""))[:60],
                     "url": ii.get("thumburl") or ii["url"], "page": ii.get("descriptionurl", "")})
