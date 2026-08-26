@@ -121,7 +121,7 @@ if __name__ == "__main__":
         if g: planche(c, g)
     # planche générale : la source retenue (la plus récente) par candidat
     ok = [c for c in cands if bilan.get(c["id"])]
-    T = 240; cols = 6; rows = (len(ok) + cols - 1) // cols; im = Image.new("RGB", (T * cols, (T + 40) * rows), "#0a1428"); dr = ImageDraw.Draw(im)
+    T = 240; cols = 6; rows = max(1, (len(ok) + cols - 1) // cols); im = Image.new("RGB", (T * cols, (T + 40) * rows), "#0a1428"); dr = ImageDraw.Draw(im)
     f = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 15)
     for i, c in enumerate(ok):
         g = bilan[c["id"]][0]; x, y = (i % cols) * T, (i // cols) * (T + 40)
