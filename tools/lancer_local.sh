@@ -9,16 +9,16 @@ R="$(cd "$(dirname "$0")/.." && pwd)"
 VENV=/home/lionel/AI/demandezleur/venv/bin
 LOG=/tmp/demandezleur-local; mkdir -p "$LOG"
 if [ "${1:-}" = "stop" ]; then
-  tourne -k 'uvicorn api:app --host 127.0.0.1 --port 8001' >/dev/null 2>&1 || true
+  tourne -k 'uvicorn api:app' >/dev/null 2>&1 || true
   tourne -k 'hugo server --config hugo.toml,hugo.dev.toml' >/dev/null 2>&1 || true
   echo "arrêté"; exit 0
 fi
 MODE="${1:-}"
-tourne -q 'uvicorn api:app --host 127.0.0.1 --port 8001' 2>/dev/null && echo "backend déjà lancé" || {
-  ( cd "$R/backend" && ${MODE:+DL_MODE=$MODE} setsid nohup "$VENV/uvicorn" api:app --host 127.0.0.1 --port 8001 > "$LOG/uvicorn.log" 2>&1 < /dev/null & )
+tourne -q 'uvicorn api:app' 2>/dev/null && echo "backend déjà lancé" || {
+  ( cd "$R/backend" && ${MODE:+DL_MODE=$MODE} setsid nohup "$VENV/uvicorn" api:app --host 0.0.0.0 --port 8001 > "$LOG/uvicorn.log" 2>&1 < /dev/null & )
   echo "backend :8001 lancé (${MODE:-mode du .env}) — log $LOG/uvicorn.log"; }
 tourne -q 'hugo server --config hugo.toml,hugo.dev.toml' 2>/dev/null && echo "hugo déjà lancé" || {
-  ( cd "$R/hugo-src" && setsid nohup /home/lionel/bin/hugo server --config hugo.toml,hugo.dev.toml --port 1313 --bind 127.0.0.1 --disableFastRender > "$LOG/hugo.log" 2>&1 < /dev/null & )
+  ( cd "$R/hugo-src" && setsid nohup /home/lionel/bin/hugo server --config hugo.toml,hugo.dev.toml --port 1313 --bind 0.0.0.0 --baseURL "http://${DL_HOTE:-192.168.1.13}:1313/" --appendPort=false --disableFastRender > "$LOG/hugo.log" 2>&1 < /dev/null & )
   echo "hugo :1313 lancé — log $LOG/hugo.log"; }
 sleep 3; curl -s -o /dev/null -w "backend %{http_code}\n" http://127.0.0.1:8001/api/parlement/etat; curl -s -o /dev/null -w "site    %{http_code}\n" http://127.0.0.1:1313/
-echo "→ http://localhost:1313/"
+echo "→ http://localhost:1313/  ·  LAN http://192.168.1.13:1313/  ·  WireGuard http://10.0.0.3:1313/"

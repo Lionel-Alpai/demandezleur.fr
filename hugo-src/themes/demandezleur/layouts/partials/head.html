@@ -14,7 +14,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="dl-api" content="{{ site.Params.apiBase | default "/api" }}">
   <meta name="dl-max-tours" content="{{ site.Params.maxDebatTours | default 5 }}">
-  <script>(function(){var m=function(n){var e=document.querySelector('meta[name="'+n+'"]');return e?e.content:''};window.DL_API=m('dl-api')||'/api';window.DL_MAX_TOURS=parseInt(m('dl-max-tours'),10)||5;})();</script>
+  <script>(function(){var m=function(n){var e=document.querySelector('meta[name="'+n+'"]');return e?e.content:''};var a=m('dl-api')||'/api';window.DL_API=(a==='auto')?(location.protocol+'//'+location.hostname+':8001/api'):a;window.DL_MAX_TOURS=parseInt(m('dl-max-tours'),10)||5;})();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
