@@ -19,6 +19,10 @@ def _entrees():
         d = json.loads(p.read_text(encoding="utf-8"))
         for g in d.get("griefs", []):
             yield p, d, g, "grief"
+    for p in sorted((R.parent / "actu").glob("*.json")):
+        d = json.loads(p.read_text(encoding="utf-8"))
+        for e in d.get("entrees", []):
+            yield p, d, e, "actu"
 
 
 def decider(eid: str, statut: str, motif: str = "") -> bool:
@@ -28,7 +32,7 @@ def decider(eid: str, statut: str, motif: str = "") -> bool:
         if e.get("id") == eid:
             e["statut"], e["decide_le"], e["motif"] = statut, datetime.now().isoformat(timespec="minutes"), motif
             p.write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
-            resume = f"{d.get('candidat_id') or (d.get('de') + '→' + d.get('vers'))} : {(e.get('fait') or e.get('grief'))[:140]}"
+            resume = f"{d.get('candidat_id') or (d.get('de') + '→' + d.get('vers') if d.get('de') else 'actu ' + (e.get('candidat_id') or ''))} : {(e.get('fait') or e.get('grief') or e.get('verbatim') or '')[:140]}"
             with open(JOURNAL, "a", encoding="utf-8") as j:
                 j.write(json.dumps({"quand": e["decide_le"], "id": eid, "type": k, "statut": statut, "motif": motif, "resume": resume, "par": "pupitre"}, ensure_ascii=False) + "\n")
             return True
@@ -42,6 +46,11 @@ def _carte(d, e, k, jeton):
         corps = f"<p class='fait'>{h(e.get('fait', ''))}</p><p class='meta'>{h(e.get('instance', ''))}</p>"
         srcs = "".join(f"<li><a href='{h(s.get('url', ''))}' target='_blank' rel='noopener'>{h(s.get('media') or s.get('url', ''))}</a> {h(s.get('titre', '')[:90])}</li>" for s in e.get("sources", []))
         notes = h(e.get("notes", ""))
+    elif k == "actu":
+        titre = f"ACTU · {e.get('type')} · {e.get('candidat_id') or ''} · {e.get('date', '')}"
+        corps = (f"<blockquote>« {h(e.get('verbatim', ''))} »<br><span class='meta'>{h(e.get('ou', ''))}</span></blockquote>" if e.get("verbatim") else f"<p class='fait'>{h(e.get('fait', ''))}</p>")
+        srcs = "".join(f"<li><a href='{h(s.get('url', ''))}' target='_blank' rel='noopener'>{h(s.get('media') or s.get('url', ''))}</a> {h(s.get('titre', '')[:90])}</li>" for s in e.get("sources", []))
+        notes = h(e.get("preuve", ""))
     else:
         titre = f"{d['de']} → {d['vers']} · registre {d.get('registre', '')}"
         corps = f"<p class='fait'>{h(e.get('grief', ''))}</p>" + "".join(
