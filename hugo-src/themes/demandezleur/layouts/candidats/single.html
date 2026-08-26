@@ -5,11 +5,11 @@
   <header class="fiche-entete">
     <div class="fiche-photo carte-photo">{{ if $c.photo }}<img src="{{ $c.photo }}" alt="Portrait de {{ $c.nom }}" width="512" height="512">{{ else }}<span class="carte-initiales">{{ $c.initiales }}</span>{{ end }}</div>
     <div class="fiche-identite">
-      <p class="sur-titre">Candidat déclaré{{ with $c.date_declaration }} · {{ . }}{{ end }}</p>
+      <p class="sur-titre">Candidat déclaré{{ with $c.date_declaration }}{{ if findRE "[0-9]{4}" . }} · {{ . }}{{ end }}{{ end }}</p>
       <h1>{{ $c.nom }}</h1>
       <p class="fiche-parti">{{ $c.parti }}{{ with $fam }} <span class="badge-famille"><span class="pastille famille-{{ $c.famille }}"></span>{{ .libelle }}</span>{{ end }}</p>
       {{ with $c.resume }}<p class="fiche-resume">{{ . }}</p>{{ end }}
-      {{ with $c.photo_credit }}<p class="meta">Photo : {{ . }}</p>{{ end }}
+      {{ with $c.photo_credit }}<p class="meta">Portrait : illustration d'après une photo {{ . }}</p>{{ end }}
     </div>
   </header>
 

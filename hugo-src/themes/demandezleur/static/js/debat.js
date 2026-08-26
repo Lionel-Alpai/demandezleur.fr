@@ -32,10 +32,13 @@
     $grid.querySelectorAll('.carte-selection').forEach(function (c) { c.classList.toggle('disabled', plein && c.getAttribute('aria-checked') !== 'true'); });
     majLancement();
   }
+  var $barre = $('barre-mobile'), $barreBtn = $('btn-launch-mobile'), $barreN = $('barre-compteur');
   function majLancement() {
-    var n = state.selection.length;
-    $btnLaunch.disabled = !(n >= 2 && n <= 5 && $sujet.value.trim().length > 0);
+    var n = state.selection.length, ok = (n >= 2 && n <= 5 && $sujet.value.trim().length > 0);
+    $btnLaunch.disabled = !ok;
+    if ($barre) { $barre.hidden = n === 0; $barreBtn.disabled = !ok; $barreN.textContent = n + ' / 5' + (ok ? '' : (n < 2 ? ' · 2 minimum' : ($sujet.value.trim() ? '' : ' · sujet manquant'))); }
   }
+  if ($barreBtn) $barreBtn.addEventListener('click', function () { $btnLaunch.click(); });
   $sujet.addEventListener('input', function () { $sujetChars.textContent = $sujet.value.length; majLancement(); });
   if ($arene) $arene.addEventListener('change', function () { state.mode = $arene.checked ? 'arene' : 'standard'; });
 
@@ -64,6 +67,7 @@
   }).catch(function () {});
 
   $btnLaunch.addEventListener('click', function () {
+    if ($barre) $barre.hidden = true;
     state.sujet = $sujet.value.trim(); state.tour = 1; state.historique = [];
     $setup.hidden = true; $arena.hidden = false;
     $sujetDisplay.textContent = state.sujet; $tourDisplay.textContent = state.tour + '/' + MAX_TOURS;

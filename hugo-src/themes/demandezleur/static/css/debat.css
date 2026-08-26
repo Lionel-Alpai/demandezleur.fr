@@ -71,3 +71,5 @@
 .preuve-dossier .preuve-type { color: #f2a93b; }
 .preuve-reproche .preuve-type { color: #8b7bd8; }
 .preuve-reproche .preuve-extrait { font-style: normal; }
+@media (max-width: 899px) { .grille-selection { grid-template-columns: repeat(3, 1fr); gap: var(--sp-2); } }
+@media (max-width: 359px) { .grille-selection { grid-template-columns: repeat(2, 1fr); } }

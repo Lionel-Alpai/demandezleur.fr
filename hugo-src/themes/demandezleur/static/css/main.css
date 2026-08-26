@@ -336,3 +336,48 @@ pre { background: var(--bg-2); border: 1px solid var(--border); border-radius: v
 .section-candidats .grille-candidats { grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); }
 .carte-selection .carte-coche { top: 6px; right: 6px; width: 24px; height: 24px; font-size: 13px; }
 .carte-candidat .pastille { top: 8px; left: 8px; width: 10px; height: 10px; }
+
+/* ---------- Mobile d'abord ---------- */
+@media (max-width: 899px) {
+  .hero-plateau { gap: var(--sp-4); padding: var(--sp-3) 0 var(--sp-5); }
+  .hero-plateau .affiche { order: -1; }                       /* l'affiche en premier sur mobile */
+  .hero-plateau h1 { font-size: clamp(1.8rem, 8vw, 2.4rem); margin-bottom: var(--sp-3); }
+  .hero-texte { font-size: var(--fs-16); }
+  .hero-actions { margin-top: var(--sp-4); }
+  .sur-titre { font-size: var(--fs-12); letter-spacing: 0.04em; margin-bottom: var(--sp-2); }
+  .sur-titre-long { display: none; }                           /* « 16 candidats déclarés » suffit */
+  .conteneur { padding: var(--sp-4) var(--sp-3) var(--sp-7); }
+  .bandeau-assemblee, .demo-live, .cta-plateau { padding: var(--sp-4); margin-bottom: var(--sp-4); }
+  .chat-chips { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: var(--sp-2); }
+  .chat-chips::-webkit-scrollbar { display: none; }
+  .chat-chips .chip { flex: none; max-width: 78vw; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+  .chat-saisie .btn { padding-left: 14px; padding-right: 14px; }
+  .section-candidats .grille-candidats, .grille-large { grid-template-columns: repeat(2, 1fr); gap: var(--sp-3); }
+  .grille-selection { grid-template-columns: repeat(3, 1fr); gap: var(--sp-2); }
+  .grille-compacte { grid-template-columns: repeat(3, 1fr); }
+  .chip { min-height: 40px; }
+}
+/* Barre d'action collante (sélection du débat) — mobile seulement */
+.barre-mobile { display: none; }
+@media (max-width: 899px) {
+  .barre-mobile { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 90; align-items: center; justify-content: space-between; gap: var(--sp-3); padding: 10px var(--sp-4) calc(10px + env(safe-area-inset-bottom)); background: rgba(10, 20, 40, 0.94); backdrop-filter: blur(12px); border-top: 1px solid var(--border-2); box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.35); font-weight: 600; }
+  .barre-mobile[hidden] { display: none; }
+  .page-debat .conteneur { padding-bottom: 96px; }
+}
+@media (max-width: 599px) {
+  .fiche-entete { grid-template-columns: 1fr; gap: var(--sp-3); margin-bottom: var(--sp-4); }
+  .fiche-photo { width: 96px; float: left; margin: 0 var(--sp-3) var(--sp-2) 0; }
+  .fiche-identite { display: contents; }
+  .fiche-identite .sur-titre { order: 1; } .fiche-identite h1 { order: 2; font-size: var(--fs-22); margin-bottom: 2px; } .fiche-parti { order: 3; font-size: var(--fs-16); }
+  .fiche-resume { order: 4; clear: both; font-size: var(--fs-14); padding-top: var(--sp-2); }
+  .fiche-identite .meta { order: 5; font-size: var(--fs-12); }
+  .chat { padding: var(--sp-3); }
+  .chat-fenetre { max-height: 52vh; }
+}
+@media (max-width: 599px) {
+  .fiche-entete { grid-template-columns: 96px 1fr; column-gap: var(--sp-3); row-gap: 2px; align-items: center; }
+  .fiche-photo { float: none; margin: 0; grid-row: 1 / span 3; }
+  .fiche-resume, .fiche-identite .meta { grid-column: 1 / -1; }
+  .fiche-resume { padding-top: var(--sp-3); }
+  .chat-fenetre { min-height: 120px; }
+}
