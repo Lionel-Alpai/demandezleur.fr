@@ -706,8 +706,12 @@ from fastapi.responses import HTMLResponse, RedirectResponse
 import dossiers_admin
 
 
+RESEAUX_DE_CONFIANCE = ("127.0.0.1", "::1", "192.168.1.", "10.0.0.")  # station, LAN maison, WireGuard
+
+
 def _acces_admin(request: Request, jeton: str = "") -> bool:
-    if extraire_ip_reelle(request) in ("127.0.0.1", "::1", "unknown") and (request.client and request.client.host in ("127.0.0.1", "::1")):
+    hote = request.client.host if request.client else ""
+    if any(hote == r or hote.startswith(r) for r in RESEAUX_DE_CONFIANCE):
         return True
     attendu = os.environ.get("ADMIN_BYPASS_TOKEN", "")
     return bool(attendu) and jeton == attendu
