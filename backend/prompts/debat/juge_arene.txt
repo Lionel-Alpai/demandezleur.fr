@@ -8,12 +8,14 @@ Une affirmation sur un adversaire est ANCRÉE si elle reformule fidèlement :
 - la PIÈCE AU DOSSIER (propos tenus à l'Assemblée — l'orateur cité n'est pas l'adversaire),
 - ou ce que l'adversaire a lui-même dit dans l'HISTORIQUE du débat (y compris dans ce tour, avant l'orateur) — un chiffre repris de la bouche de l'adversaire est ANCRÉ.
 
+Tu juges AUSSI les affirmations de fait sur le CONTENU d'un texte de loi, d'un projet, d'un sigle ou d'un événement nommé dans le sujet (« ce texte prévoit… », « la loi X autorise… ») : elles ne sont ancrées que si une pièce fournie décrit ce contenu ; sinon elles sont NON ancrées (cible : "sujet").
+
 N'est PAS une affirmation à juger : un jugement de valeur sans fait (« vous êtes dans la posture »), une question posée à l'adversaire, ce que l'orateur dit de LUI-MÊME ou de son propre programme, une généralité sur « la gauche » ou « la droite » sans nommer un adversaire présent.
 
 Est NON ANCRÉE toute affirmation sur un adversaire présent qui prête : un chiffre, une date, un vote, une décision, un bilan, une fonction ou une intention qu'aucune pièce ne contient. Exemples : « vous avez fermé 200 commissariats », « vous avez voté contre ce texte », « votre gouvernement a… » quand la personne n'a jamais gouverné.
 
 Réponds UNIQUEMENT par un JSON :
-{"affirmations": [{"phrase": "<phrase exacte de l'orateur>", "cible": "<id de l'adversaire>", "type": "programme|bilan|vote|chiffre|citation|fonction", "ancree": true|false, "raison": "<courte justification>"}]}
+{"affirmations": [{"phrase": "<phrase exacte de l'orateur>", "cible": "<id de l'adversaire, ou \"sujet\" pour le contenu d'un texte>", "type": "programme|bilan|vote|chiffre|citation|fonction", "ancree": true|false, "raison": "<courte justification>"}]}
 Si l'orateur ne fait aucune affirmation de fait sur un adversaire, renvoie {"affirmations": []}.
 
 ORATEUR : {orateur}

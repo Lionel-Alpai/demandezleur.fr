@@ -191,10 +191,8 @@ def sequences_pour_sujet(sujet, n=1):
         if score > meilleur_score:
             meilleur_score = score
             meilleur_sujet = s
-    if meilleur_score == 0:
-        meilleur_sujet = sujets_data[-1]
-    if meilleur_sujet is None:
-        return []
+    if meilleur_score <= 0 or meilleur_sujet is None:
+        return []  # aucune séance ne parle de ce sujet : on ne sert PAS une pièce hors sujet
     sequences = meilleur_sujet.get("sequences", [])
     if not isinstance(sequences, list):
         return []
@@ -213,6 +211,18 @@ def sequences_pour_sujet(sujet, n=1):
             "segment": meilleur_sujet.get("segment", ""),
         })
     return resultats
+
+
+def sequences_de(cr_uid, segment, n=6):
+    """Séquences d'un sujet identifié (cr_uid + segment), même forme que sequences_pour_sujet."""
+    if not actif():
+        return []
+    for s in _charger().get("sujets", []):
+        if isinstance(s, dict) and s.get("cr_uid") == cr_uid and str(s.get("segment")) == str(segment):
+            return [{"orateur": q.get("orateur", ""), "texte": q.get("texte", ""), "date_lisible": s.get("date_lisible", ""),
+                     "titre": s.get("titre", ""), "libelle": s.get("libelle", s.get("section", "")), "url": s.get("url", ""),
+                     "cr_uid": s.get("cr_uid", ""), "segment": s.get("segment", "")} for q in s.get("sequences", [])[:n] if isinstance(q, dict)]
+    return []
 
 
 def etat():

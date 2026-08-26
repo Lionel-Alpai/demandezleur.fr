@@ -247,7 +247,21 @@ def construire_prompt_debat(
         try:
             import parlement as _p
             if True:
-                seqs = _p.sequences_pour_sujet(sujet, n=6)
+                seqs = []
+                try:
+                    import themes_parlement as _tp
+                    bruts = _p.sujets(n=64).get("sujets", [])
+                    trouve = _tp.trouver_sujet(sujet, bruts)
+                    if trouve:
+                        seqs = _p.sequences_de(trouve.get("cr_uid"), trouve.get("segment"), n=6)
+                except Exception:
+                    seqs = []
+                if not seqs:
+                    seqs = _p.sequences_pour_sujet(sujet, n=6)
+                if not seqs:
+                    prompt += ("\n\nPIÈCE AU DOSSIER : aucune — aucune séance de l'Assemblée dans nos archives ne traite de ce sujet précis. "
+                               "Si le sujet nomme un texte de loi, un projet, un événement ou un sigle que ni tes extraits de programme ni les pièces ne décrivent, "
+                               "tu ne fais AUCUNE affirmation sur son contenu : tu dis que tu n'as pas ce texte sous les yeux, et tu débats du PRINCIPE que le sujet pose, à partir de ton programme.")
                 if seqs:
                     # Une pièce DIFFÉRENTE par orateur : on écarte celles déjà citées dans le débat, puis rotation par position
                     import dossiers as _dd

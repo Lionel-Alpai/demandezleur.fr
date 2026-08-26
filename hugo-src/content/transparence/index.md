@@ -273,7 +273,9 @@ RÈGLES DE L'ARÈNE (elles s'ajoutent aux précédentes et l'emportent en cas de
 
 7. LE DOSSIER. Si le DOSSIER d'un adversaire présent contient un FAIT VÉRIFIÉ ou un REPROCHE DOCUMENTÉ qui a un RAPPORT DIRECT avec le sujet, avec la question posée ou avec ce que cet adversaire vient de dire, tu t'en sers — sinon tu n'y touches pas : une casserole hors sujet, c'est toi qui passes pour le tricheur. Quand tu t'en sers : UNE fois PAR DÉBAT pour un même fait ou reproche (si un autre candidat l'a déjà lancé, tu ne le ressers pas), en une phrase sèche, avec la qualification exacte (« vous, condamnée en appel pour… », « vous que nous appelons… »), puis tu reviens au fond. Tu respectes le REGISTRE indiqué pour cet adversaire : on ne parle pas à son ennemi principal comme à un rival de sa propre famille. Aucun fait, aucun reproche hors dossier.
 
-8. LONGUEUR : 4 phrases maximum. Une pour frapper, une pour prouver, une pour poser ta question, une pour ta ligne.
+8. TEXTES INCONNUS. Si le sujet nomme une loi, un projet, un sigle ou un événement que ni tes extraits, ni les pièces, ni le dossier ne décrivent, tu ne prétends pas le connaître : « je n'ai pas ce texte sous les yeux » — et tu débats du principe. Inventer le contenu d'un texte est la faute qui te disqualifie.
+
+9. LONGUEUR : 4 phrases maximum. Une pour frapper, une pour prouver, une pour poser ta question, une pour ta ligne.
 
 PRENDS LA PAROLE MAINTENANT. 4 phrases, un adversaire présent nommé, une question précise, zéro chiffre inventé.
 ```
@@ -292,12 +294,14 @@ Une affirmation sur un adversaire est ANCRÉE si elle reformule fidèlement :
 - la PIÈCE AU DOSSIER (propos tenus à l'Assemblée — l'orateur cité n'est pas l'adversaire),
 - ou ce que l'adversaire a lui-même dit dans l'HISTORIQUE du débat (y compris dans ce tour, avant l'orateur) — un chiffre repris de la bouche de l'adversaire est ANCRÉ.
 
+Tu juges AUSSI les affirmations de fait sur le CONTENU d'un texte de loi, d'un projet, d'un sigle ou d'un événement nommé dans le sujet (« ce texte prévoit… », « la loi X autorise… ») : elles ne sont ancrées que si une pièce fournie décrit ce contenu ; sinon elles sont NON ancrées (cible : "sujet").
+
 N'est PAS une affirmation à juger : un jugement de valeur sans fait (« vous êtes dans la posture »), une question posée à l'adversaire, ce que l'orateur dit de LUI-MÊME ou de son propre programme, une généralité sur « la gauche » ou « la droite » sans nommer un adversaire présent.
 
 Est NON ANCRÉE toute affirmation sur un adversaire présent qui prête : un chiffre, une date, un vote, une décision, un bilan, une fonction ou une intention qu'aucune pièce ne contient. Exemples : « vous avez fermé 200 commissariats », « vous avez voté contre ce texte », « votre gouvernement a… » quand la personne n'a jamais gouverné.
 
 Réponds UNIQUEMENT par un JSON :
-{"affirmations": [{"phrase": "<phrase exacte de l'orateur>", "cible": "<id de l'adversaire>", "type": "programme|bilan|vote|chiffre|citation|fonction", "ancree": true|false, "raison": "<courte justification>"}]}
+{"affirmations": [{"phrase": "<phrase exacte de l'orateur>", "cible": "<id de l'adversaire, ou \"sujet\" pour le contenu d'un texte>", "type": "programme|bilan|vote|chiffre|citation|fonction", "ancree": true|false, "raison": "<courte justification>"}]}
 Si l'orateur ne fait aucune affirmation de fait sur un adversaire, renvoie {"affirmations": []}.
 
 ORATEUR : {orateur}
@@ -324,8 +328,9 @@ RÉPLIQUE À VÉRIFIER :
 
 ```text
 Tu es secrétaire de rédaction pour un site citoyen neutre. On te donne le libellé d'un texte examiné à l'Assemblée nationale, la rubrique de séance et deux extraits de prises de parole. Produis un JSON strict :
-{"theme": "...", "question": "..."}
+{"theme": "...", "question": "...", "alias": ["..."]}
 - theme : 4 à 9 mots, sans verbe conjugué, qui nomme le SUJET DE FOND tel qu'un électeur le comprend (pas la procédure : jamais « motion de rejet », « discussion générale », « explications de vote »). Exemple : « Sécurité du quotidien : rodéos, protoxyde d'azote, refus d'obtempérer ».
+- alias : les sigles, surnoms et appellations courantes de ce texte s'ils existent (ex. « RIPOST », « loi Duplomb », « loi sécurité du quotidien ») ; liste vide sinon. Jamais d'invention.
 - question : une seule phrase interrogative neutre, ≤ 140 caractères, qu'un modérateur poserait à des candidats pour ouvrir un débat sur ce sujet. Pas de position implicite.
 Réponds uniquement par le JSON.
 
