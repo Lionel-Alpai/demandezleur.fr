@@ -1,0 +1,295 @@
+[
+ {
+  "sujet": "les retraites",
+  "tour": 1,
+  "orateur": "marine-le-pen",
+  "adversaires": [
+   "gabriel-attal"
+  ],
+  "brut": "**Françaises, Français,**\n\nOn vous serine depuis des années que la retraite à 60 ans, c’est impossible, que le système va s’effondrer, que vous devrez travailler jusqu’à 65 ans ou plus. **Mensonge.** Le Rassemblement National vous dit la vérité : la retraite à 60 ans pour ceux qui ont commencé tôt, c’est une question de justice, pas de calculs de technocrates. **1 000 euros minimum pour chaque retraité**, indexés sur l’inflation pour que votre pouvoir d’achat ne fonde pas comme neige au soleil.\n\nEt pendant ce temps, Gabriel Attal, lui, il n’a **rien** dans son programme sur les retraites. **Rien.** Pas un mot pour ceux qui triment depuis 40 ans, pas une mesure pour les veuves, pas une promesse pour les Ehpad. **La République en Marche, c’est la marche vers l’abandon des nôtres.** Alors je lui demande, là, maintenant : **à quel âge voulez-vous envoyer les Français à la retraite, Monsieur Attal ? 65 ans ? 70 ans ? Ou vous n’osez juste pas le dire ?** Parce que nous, on assume : **la France d’abord, les retraités d’abord.**",
+  "final": "**Françaises, Français,** On vous serine depuis des années que la retraite à 60 ans, c’est impossible, que le système va s’effondrer, que vous devrez travailler jusqu’à 65 ans ou plus. **Mensonge.** Le Rassemblement National vous dit la vérité : la retraite à 60 ans pour ceux qui ont commencé tôt, c’est une question de justice, pas de calculs de technocrates. **1 000 euros minimum pour chaque retraité**, indexés sur l’inflation pour que votre pouvoir d’achat ne fonde pas comme neige au soleil. Et pendant ce temps, Gabriel Attal, lui, il n’a **rien** dans son programme sur les retraites. **Rien.** Pas un mot pour ceux qui triment depuis 40 ans, pas une mesure pour les veuves, pas une promesse pour les Ehpad. **La République en Marche, c’est la marche vers l’abandon des nôtres.** Alors je lui demande, là, maintenant : **à quel âge voulez-vous envoyer les Français à la retraite, Monsieur Attal ? 65 ans ? 70 ans ? Ou vous n’osez juste pas le dire ?** Parce que nous, on assume : **la France d’abord, les retraités d’abord.**",
+  "revisions": [],
+  "annotations": [
+   {
+    "type": "juge",
+    "phrase": "La République en Marche, c’est la marche vers l’abandon des nôtres",
+    "cible": "gabriel-attal",
+    "raison": "Jugement de valeur sans fait documenté dans les pièces fournies."
+   },
+   {
+    "type": "juge",
+    "phrase": "à quel âge voulez-vous envoyer les Français à la retraite, Monsieur Attal ? 65 ans ? 70 ans ?",
+    "cible": "gabriel-attal",
+    "raison": "Affirmation sur une intention ou une position non documentée dans les pièces fournies."
+   }
+  ],
+  "regenerations": 0,
+  "fallback": false,
+  "residuel": [
+   {
+    "phrase": "Gabriel Attal n’a rien dans son programme sur les retraites",
+    "cible": "gabriel-attal",
+    "soutenue": false,
+    "raison": "Aucun document ne mentionne le programme de Gabriel Attal sur les retraites, donc l'affirmation ne peut être vérifiée."
+   },
+   {
+    "phrase": "Gabriel Attal n’a pas une mesure pour les veuves dans son programme sur les retraites",
+    "cible": "gabriel-attal",
+    "soutenue": false,
+    "raison": "Aucun document ne mentionne le programme de Gabriel Attal sur les retraites, donc l'affirmation ne peut être vérifiée."
+   },
+   {
+    "phrase": "Gabriel Attal n’a pas une promesse pour les Ehpad dans son programme sur les retraites",
+    "cible": "gabriel-attal",
+    "soutenue": false,
+    "raison": "Aucun document ne mentionne le programme de Gabriel Attal sur les retraites, donc l'affirmation ne peut être vérifiée."
+   }
+  ],
+  "latence_s": 8.1
+ },
+ {
+  "sujet": "les retraites",
+  "tour": 1,
+  "orateur": "gabriel-attal",
+  "adversaires": [
+   "marine-le-pen"
+  ],
+  "brut": "**\"Madame Le Pen, vous promettez des retraites à 60 ans et 1 000 euros minimum, mais votre programme ne dit pas un mot sur le financement. Où trouvez-vous les 30 milliards d’euros par an que coûterait cette mesure ? Est-ce que vous allez augmenter les impôts des Français, oui ou non ?**\n\nParce que nous, chez Renaissance, on ne ment pas aux travailleurs : on réforme pour sauver le système, pas pour le faire exploser. Et on le fait sans creuser la dette, parce que les générations futures méritent mieux que vos promesses en l’air.\"",
+  "final": "**\"Madame Le Pen, vous promettez des retraites à 60 ans et 1 000 euros minimum, mais votre programme ne dit pas un mot sur le financement. Où trouvez-vous les 30 milliards d’euros par an que coûterait cette mesure ? Est-ce que vous allez augmenter les impôts des Français, oui ou non ?** Parce que nous, chez Renaissance, on ne ment pas aux travailleurs : on réforme pour sauver le système, pas pour le faire exploser. Et on le fait sans creuser la dette, parce que les générations futures méritent mieux que vos promesses en l’air.\"",
+  "revisions": [],
+  "annotations": [
+   {
+    "type": "juge",
+    "phrase": "votre programme ne dit pas un mot sur le financement",
+    "cible": "marine-le-pen",
+    "raison": "Aucune pièce ne mentionne l'absence de financement dans le programme de Marine Le Pen."
+   },
+   {
+    "type": "juge",
+    "phrase": "Est-ce que vous allez augmenter les impôts des Français, oui ou non ?",
+    "cible": "marine-le-pen",
+    "raison": "Aucune pièce ne contient une déclaration de Marine Le Pen sur une éventuelle augmentation des impôts."
+   },
+   {
+    "type": "juge",
+    "phrase": "on réforme pour sauver le système, pas pour le faire exploser",
+    "cible": "sujet",
+    "raison": "Aucune pièce ne décrit la position de Renaissance sur ce point."
+   },
+   {
+    "type": "juge",
+    "phrase": "on le fait sans creuser la dette",
+    "cible": "sujet",
+    "raison": "Aucune pièce ne contient cette affirmation sur la position de Renaissance."
+   },
+   {
+    "type": "juge",
+    "phrase": "les générations futures méritent mieux que vos promesses en l’air",
+    "cible": "marine-le-pen",
+    "raison": "Jugement de valeur sans fait ancré."
+   }
+  ],
+  "regenerations": 0,
+  "fallback": false,
+  "residuel": [
+   {
+    "phrase": "votre programme ne dit pas un mot sur le financement",
+    "cible": "Marine Le Pen",
+    "soutenue": false,
+    "raison": "Aucun des documents fournis ne mentionne explicitement le financement de la mesure sur les retraites. L'affirmation de l'absence de mention sur le financement ne peut être vérifiée comme étant fausse, mais elle n'est pas non plus soutenue par les documents."
+   },
+   {
+    "phrase": "Est-ce que vous allez augmenter les impôts des Français, oui ou non ?",
+    "cible": "Marine Le Pen",
+    "soutenue": false,
+    "raison": "Aucun document ne mentionne une proposition d'augmentation des impôts par Marine Le Pen dans le cadre de sa réforme des retraites. L'affirmation est donc non soutenue."
+   }
+  ],
+  "latence_s": 9.0
+ },
+ {
+  "sujet": "l'immigration",
+  "tour": 1,
+  "orateur": "jean-luc-melenchon",
+  "adversaires": [
+   "edouard-philippe"
+  ],
+  "brut": "**\"L’immigration, c’est d’abord une question de justice sociale ! Vous, Édouard Philippe, vous parlez de quotas et de rupture avec l’accord franco-algérien – mais derrière vos mots, c’est la précarité des travailleurs étrangers que vous organisez, et la division des luttes. Votre 'immigration choisie', c’est le tri entre ceux qui servent vos patrons et ceux qu’on jette. Alors je vous le demande : combien de sans-papiers en plus avec vos quotas annuels ? Combien de familles brisées par l’abrogation du droit au regroupement ?\"**",
+  "final": "**\"L’immigration, c’est d’abord une question de justice sociale ! Vous, Édouard Philippe, vous parlez de quotas et de rupture avec l’accord franco-algérien – mais derrière vos mots, c’est la précarité des travailleurs étrangers que vous organisez, et la division des luttes. Votre 'immigration choisie', c’est le tri entre ceux qui servent vos patrons et ceux qu’on jette. Alors je vous le demande : combien de sans-papiers en plus avec vos quotas annuels ? Combien de familles brisées par l’abrogation du droit au regroupement ?\"**",
+  "revisions": [],
+  "annotations": [
+   {
+    "type": "juge",
+    "phrase": "Votre 'immigration choisie', c’est le tri entre ceux qui servent vos patrons et ceux qu’on jette",
+    "cible": "edouard-philippe",
+    "raison": "Jugement de valeur sans ancrage dans une pièce fournie (pas de mention de 'patrons' ou de 'division des luttes' dans le programme)."
+   },
+   {
+    "type": "juge",
+    "phrase": "combien de sans-papiers en plus avec vos quotas annuels ?",
+    "cible": "edouard-philippe",
+    "raison": "Aucun chiffre ou estimation de sans-papiers n'est mentionné dans le programme fourni."
+   }
+  ],
+  "regenerations": 0,
+  "fallback": false,
+  "residuel": [],
+  "latence_s": 7.1
+ },
+ {
+  "sujet": "l'immigration",
+  "tour": 1,
+  "orateur": "edouard-philippe",
+  "adversaires": [
+   "jean-luc-melenchon"
+  ],
+  "brut": "\"L’immigration n’est pas un tabou, c’est un défi : nous avons besoin de bras, mais pas de n’importe quelles mains. Monsieur Mélenchon, votre programme ne dit pas un mot sur les quotas, les critères d’intégration ou l’abrogation des accords qui nous lient pieds et poings — alors que 70% des Français veulent un contrôle strict, comment comptez-vous répondre à cette attente sans même en parler ? Nous, nous assumons : immigration choisie, droits limités aux urgences, et Parlement qui décide chaque année du nombre de ceux que nous accueillons — parce que la France doit rester maîtresse chez elle.\"",
+  "final": "\"L’immigration n’est pas un tabou, c’est un défi : nous avons besoin de bras, mais pas de n’importe quelles mains. Monsieur Mélenchon, votre programme ne dit pas un mot sur les quotas, les critères d’intégration ou l’abrogation des accords qui nous lient pieds et poings — alors que 70% des Français veulent un contrôle strict, comment comptez-vous répondre à cette attente sans même en parler ? Nous, nous assumons : immigration choisie, droits limités aux urgences, et Parlement qui décide chaque année du nombre de ceux que nous accueillons — parce que la France doit rester maîtresse chez elle.\"",
+  "revisions": [],
+  "annotations": [
+   {
+    "type": "juge",
+    "phrase": "70% des Français veulent un contrôle strict",
+    "cible": "sujet",
+    "raison": "Aucune pièce fournie ne mentionne ce chiffre ou ne l'attribue à une source vérifiée."
+   }
+  ],
+  "regenerations": 0,
+  "fallback": false,
+  "residuel": [
+   {
+    "phrase": "Monsieur Mélenchon, votre programme ne dit pas un mot sur les quotas",
+    "cible": "Jean-Luc Mélenchon",
+    "soutenue": false,
+    "raison": "Aucun document ne mentionne le programme de Jean-Luc Mélenchon, donc l'affirmation ne peut être vérifiée."
+   },
+   {
+    "phrase": "Monsieur Mélenchon, votre programme ne dit pas un mot sur les critères d’intégration",
+    "cible": "Jean-Luc Mélenchon",
+    "soutenue": false,
+    "raison": "Aucun document ne mentionne le programme de Jean-Luc Mélenchon, donc l'affirmation ne peut être vérifiée."
+   },
+   {
+    "phrase": "Monsieur Mélenchon, votre programme ne dit pas un mot sur l’abrogation des accords qui nous lient pieds et poings",
+    "cible": "Jean-Luc Mélenchon",
+    "soutenue": false,
+    "raison": "Aucun document ne mentionne le programme de Jean-Luc Mélenchon, donc l'affirmation ne peut être vérifiée."
+   }
+  ],
+  "latence_s": 4.9
+ },
+ {
+  "sujet": "le nucléaire",
+  "tour": 1,
+  "orateur": "nathalie-arthaud",
+  "adversaires": [
+   "xavier-bertrand"
+  ],
+  "brut": "**\"Le nucléaire, c’est l’énergie des patrons, pas celle des travailleurs ! Xavier Bertrand, vous voulez construire des EPR pour engraisser EDF et ses actionnaires, pas pour éclairer nos logements ou chauffer nos hôpitaux. Pendant ce temps, vous laissez les factures exploser et les techniciens du nucléaire trimer en sous-effectif. Alors je vous le demande : combien de milliards de subventions publiques allez-vous encore verser à vos amis du CAC 40 avant de nationaliser EDF sous contrôle des salariés ?\"**",
+  "final": "**\"Le nucléaire, c’est l’énergie des patrons, pas celle des travailleurs ! Xavier Bertrand, vous voulez construire des EPR pour engraisser EDF et ses actionnaires, pas pour éclairer nos logements ou chauffer nos hôpitaux. Pendant ce temps, vous laissez les factures exploser et les techniciens du nucléaire trimer en sous-effectif. Alors je vous le demande : combien de milliards de subventions publiques allez-vous encore verser à vos amis du CAC 40 avant de nationaliser EDF sous contrôle des salariés ?\"**",
+  "revisions": [],
+  "annotations": [
+   {
+    "type": "juge",
+    "phrase": "Pendant ce temps, vous laissez les factures exploser",
+    "cible": "xavier-bertrand",
+    "raison": "Aucune pièce ne mentionne un bilan sur les factures énergétiques ou une responsabilité de Xavier Bertrand à ce sujet."
+   },
+   {
+    "type": "juge",
+    "phrase": "les techniciens du nucléaire trimer en sous-effectif",
+    "cible": "xavier-bertrand",
+    "raison": "Aucune pièce ne mentionne un bilan sur l'effectif des techniciens du nucléaire ou une responsabilité de Xavier Bertrand à ce sujet."
+   },
+   {
+    "type": "juge",
+    "phrase": "combien de milliards de subventions publiques allez-vous encore verser à vos amis du CAC 40 avant de nationaliser EDF sous contrôle des salariés ?",
+    "cible": "xavier-bertrand",
+    "raison": "Aucune pièce ne mentionne des subventions publiques versées à des actionnaires du CAC 40 ou une intention de nationaliser EDF sous contrôle des salariés par Xavier Bertrand."
+   }
+  ],
+  "regenerations": 0,
+  "fallback": false,
+  "residuel": [
+   {
+    "phrase": "Xavier Bertrand veut construire des EPR pour engraisser EDF et ses actionnaires",
+    "cible": "Xavier Bertrand",
+    "soutenue": false,
+    "raison": "Aucun document ne mentionne une volonté de Xavier Bertrand de construire des EPR dans le but d'enrichir EDF ou ses actionnaires. Le programme indique simplement qu'il soutient la construction de nouveaux réacteurs nucléaires EPR."
+   },
+   {
+    "phrase": "Xavier Bertrand laisse les factures exploser",
+    "cible": "Xavier Bertrand",
+    "soutenue": false,
+    "raison": "Aucun document ne mentionne une position ou une action de Xavier Bertrand concernant l'évolution des factures énergétiques."
+   },
+   {
+    "phrase": "Xavier Bertrand laisse les techniciens du nucléaire trimer en sous-effectif",
+    "cible": "Xavier Bertrand",
+    "soutenue": false,
+    "raison": "Aucun document ne mentionne une position ou une action de Xavier Bertrand concernant les conditions de travail des techniciens du nucléaire."
+   },
+   {
+    "phrase": "Xavier Bertrand va verser des milliards de subventions publiques à ses amis du CAC 40",
+    "cible": "Xavier Bertrand",
+    "soutenue": false,
+    "raison": "Aucun document ne mentionne de subventions publiques versées à des entreprises du CAC 40 dans le cadre du programme ou des actions de Xavier Bertrand."
+   },
+   {
+    "phrase": "Xavier Bertrand va nationaliser EDF sous contrôle des salariés",
+    "cible": "Xavier Bertrand",
+    "soutenue": false,
+    "raison": "Aucun document ne mentionne une volonté de Xavier Bertrand de nationaliser EDF ou de placer l'entreprise sous contrôle des salariés."
+   }
+  ],
+  "latence_s": 7.1
+ },
+ {
+  "sujet": "le nucléaire",
+  "tour": 1,
+  "orateur": "xavier-bertrand",
+  "adversaires": [
+   "nathalie-arthaud"
+  ],
+  "brut": "**« Le nucléaire, c’est l’énergie de la souveraineté française !**\n\nPendant que certains rêvent de décroissance et de moulins à vent, Xavier Bertrand assume : la France a besoin de nouveaux EPR pour garantir notre indépendance énergétique et tenir nos engagements climatiques *sans* sacrifier notre industrie. Vous, Nathalie Arthaud, vous voulez \"mettre fin au système capitaliste\" – mais qui paiera les factures des ménages si on ferme nos centrales et qu’on dépend du gaz russe ou des panneaux solaires chinois ?\n\nAlors je vous le demande : *combien de réacteurs nucléaires supplémentaires proposez-vous de construire d’ici 2030, oui ou non ?*\"**",
+  "final": "**« Le nucléaire, c’est l’énergie de la souveraineté française !** Pendant que certains rêvent de décroissance et de moulins à vent, Xavier Bertrand assume : la France a besoin de nouveaux EPR pour garantir notre indépendance énergétique et tenir nos engagements climatiques *sans* sacrifier notre industrie. Vous, Nathalie Arthaud, vous voulez \"mettre fin au système capitaliste\" – mais qui paiera les factures des ménages si on ferme nos centrales et qu’on dépend du gaz russe ou des panneaux solaires chinois ? Alors je vous le demande : *combien de réacteurs nucléaires supplémentaires proposez-vous de construire d’ici 2030, oui ou non ?*\"**",
+  "revisions": [],
+  "annotations": [
+   {
+    "type": "juge",
+    "phrase": "Le nucléaire, c’est l’énergie de la souveraineté française !",
+    "cible": "sujet",
+    "raison": "Aucune pièce ne décrit le nucléaire comme 'l'énergie de la souveraineté française'."
+   },
+   {
+    "type": "juge",
+    "phrase": "qui paiera les factures des ménages si on ferme nos centrales et qu’on dépend du gaz russe ou des panneaux solaires chinois ?",
+    "cible": "nathalie-arthaud",
+    "raison": "Aucune pièce ne mentionne une intention de fermer des centrales nucléaires ou une dépendance au gaz russe ou aux panneaux solaires chinois."
+   },
+   {
+    "type": "juge",
+    "phrase": "combien de réacteurs nucléaires supplémentaires proposez-vous de construire d’ici 2030, oui ou non ?",
+    "cible": "nathalie-arthaud",
+    "raison": "Aucune pièce ne contient de proposition chiffrée de construction de réacteurs nucléaires par Nathalie Arthaud."
+   }
+  ],
+  "regenerations": 0,
+  "fallback": false,
+  "residuel": [
+   {
+    "phrase": "Nathalie Arthaud propose de fermer les centrales nucléaires",
+    "cible": "Nathalie Arthaud",
+    "soutenue": false,
+    "raison": "Aucun document ne mentionne une proposition de fermeture des centrales nucléaires par Nathalie Arthaud. Le programme évoque une critique du nucléaire liée à l'irresponsabilité patronale, mais pas une opposition systématique à cette technologie."
+   },
+   {
+    "phrase": "Nathalie Arthaud dépend du gaz russe ou des panneaux solaires chinois",
+    "cible": "Nathalie Arthaud",
+    "soutenue": false,
+    "raison": "Aucun document ne soutient cette affirmation. Il s'agit d'une extrapolation de l'orateur sans fondement dans les documents fournis."
+   }
+  ],
+  "latence_s": 6.9
+ }
+]

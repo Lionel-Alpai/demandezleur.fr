@@ -358,6 +358,22 @@ async def debat_stream(request: Request):
                     rappel = "Prends la parole maintenant. Le dossier a DÉJÀ SERVI dans ce débat : ne le répète pas, pas même en passant — joue le fond, le programme et la pièce au dossier."
                 else:
                     rappel = "Prends la parole maintenant."
+                # Quand le modérateur interpelle QUELQU'UN, sa question doit être
+                # le tour de parole auquel le modèle répond — pas une ligne perdue
+                # au fond d'un prompt système de plus de 5 000 jetons, entre
+                # plusieurs kilo-octets de consignes d'attaque et un « MAINTENANT,
+                # RÉPONDS ET ATTAQUE » final. Sous l'ancienne forme, l'interpellé
+                # attaquait ses contradicteurs et ignorait la question posée
+                # (constaté le 28/08/2026, tour 2 sur la sécurité du quotidien).
+                # Un modèle répond à ce qu'on lui adresse en DERNIER : on le lui
+                # adresse donc là, et on ordonne explicitement les deux temps.
+                if est_interpelle and (payload.get("question_moderateur") or "").strip():
+                    q = payload["question_moderateur"].strip()
+                    rappel = (f"Le modérateur t'interpelle DIRECTEMENT : « {q} »\n\n"
+                              "Premier temps : réponds à CETTE question, explicitement, dès ta "
+                              "première phrase, avec ta position et ce que tu proposes. Second "
+                              "temps seulement : attaque tes contradicteurs. Une réplique qui "
+                              "n'a pas répondu à la question a manqué son tour.\n\n" + rappel)
                 messages_locuteur = [
                     {"role": "system", "content": prompt_system},
                     {"role": "user", "content": rappel},
@@ -627,10 +643,15 @@ async def ask_candidat(request: Request, ask_request: AskRequest):
     # 1. Vérification du candidat
     base_prompt, ton_content, meta = load_prompts(candidat_id)
     if not meta:
-        # Fallback pour permettre de tester n'importe quel candidat même sans fichier ton_*.txt
-        meta = {"nom": candidat_id.replace('-', ' ').title(), "parti": "Indépendant"}
-        base_prompt = "Tu es un militant politique. Réponds sur la base des extraits." if not base_prompt else base_prompt
-        ton_content = "Sois convaincant et poli."
+        # Un identifiant absent de candidats.json est REFUSÉ, jamais rattrapé.
+        # Le repli d'avant fabriquait une identité (nom déduit de l'identifiant,
+        # parti « Indépendant ») puis load_corpus servait le corpus s'il restait
+        # sur le disque : le site pouvait encore faire parler quelqu'un qu'on
+        # avait retiré, sur ses propres documents. Un retrait doit fermer la
+        # porte, pas seulement enlever la page.
+        raise HTTPException(status_code=404, detail={
+            "error": "candidat_inconnu",
+            "message": "Ce candidat ne figure pas sur le site."})
         
     # 2. RAG structuré : blocs -> contexte pour le modèle + preuves pour le visiteur
     corpus = load_corpus(candidat_id)

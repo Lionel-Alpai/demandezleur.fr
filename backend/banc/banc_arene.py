@@ -18,7 +18,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import llm, garde_fou, debat, parlement  # noqa: E402
 from debat import construire_prompt_debat, charger_candidat, charger_faits, MAX_TOKENS_ARENE, TEMPERATURE_ARENE  # noqa: E402
 
-PAIRES = [("marine-le-pen", "gabriel-attal"), ("jean-luc-melenchon", "edouard-philippe"), ("jerome-guedj", "bruno-retailleau"),
+PAIRES = [("marine-le-pen", "gabriel-attal"), ("jean-luc-melenchon", "edouard-philippe"), 
           ("nathalie-arthaud", "xavier-bertrand"), ("florian-philippot", "bernard-cazeneuve"), ("delphine-batho", "nicolas-dupont-aignan"),
           ("francois-asselineau", "gabriel-attal"), ("anasse-kazib", "marine-le-pen")]
 SUJETS_FIXES = ["les retraites", "l'immigration", "le nucléaire", "l'école", "la sécurité du quotidien"]

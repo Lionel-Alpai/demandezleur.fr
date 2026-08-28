@@ -71,9 +71,90 @@ MOTIFS_GOUVERNEMENT = re.compile(
 )
 MOTIFS_VOTE = re.compile(r"\bvous avez vote\b|\bvotre vote\b|\bvous n'?avez pas vote\b|\bvous avez refuse de voter\b|\bvous refusez de voter\b|\ba l'assemblee,? vous\b")
 
+# ── Acte parlementaire prêté à un adversaire ────────────────────────────────
+# MOTIFS_VOTE ci-dessus énumère des tournures EXACTES : « vous n'avez même pas
+# daigné voter » ne matche aucune (les mots ne sont pas collés), et quand une
+# tournure matche, être député(e) suffisait à laisser passer — on vérifiait que
+# le vote était POSSIBLE, jamais qu'il avait EU LIEU. Le 28/08/2026 une réplique
+# a ainsi reproché à Marine Le Pen de n'avoir pas voté une résolution du RN,
+# alors qu'aucune des 8 pièces fournies ne mentionnait ni cette résolution ni
+# 1968 : le fait était inventé de bout en bout.
+#
+# On détecte donc l'acte par un VERBE d'acte + un OBJET parlementaire dans la
+# même phrase, et on exige que l'objet soit ANCRÉ dans une pièce réellement
+# fournie au modèle. Un acte parlementaire est un fait vérifiable : s'il n'est
+# dans aucune pièce, il n'est pas « non étayé », il est fabriqué — donc retiré,
+# pas annoté.
+VERBES_ACTE = re.compile(
+    r"\b(?:vote|voter|votez|votent|votait|voterez|abstenu|abstenue|abstention|"
+    r"depose|deposee|cosigne|cosignee|soutenu|soutenue|rejete|rejetee|adopte|adoptee|"
+    r"ratifie|ratifiee|censure|censuree|approuve|approuvee|bloque|bloquee)\b")
+OBJETS_PARLEMENTAIRES = re.compile(
+    r"\b(resolution|resolutions|proposition de loi|projet de loi|amendement|amendements|"
+    r"motion|motions|texte|textes|loi|lois|budget|budgets|scrutin|scrutins|"
+    r"hemicycle|assemblee|senat|niche parlementaire)\b")
+_MOTS_VIDES = {
+    "vous", "votre", "vos", "nous", "notre", "avez", "avoir", "etes", "etre", "meme",
+    "cette", "cettes", "leurs", "leur", "dans", "pour", "avec", "sans", "mais", "donc",
+    "alors", "quand", "parce", "aujourd", "hui", "jamais", "toujours", "encore", "plus",
+    "moins", "tout", "tous", "toute", "toutes", "faire", "fait", "dire", "pretendez",
+    "pretend", "souvenez", "souvenir", "daigne", "daignez",
+}
 
-def verifier_faits(texte: str, adversaires: list, faits: dict, cible_par_defaut: str = None) -> tuple:
-    """Retire les phrases qui prêtent à un adversaire un bilan gouvernemental ou un vote qu'il ne peut pas avoir.
+
+def _tokens_utiles(texte: str) -> set:
+    """Mots distinctifs d'une phrase : ≥ 5 lettres, hors mots vides, hors verbes d'acte."""
+    mots = re.findall(r"[a-z0-9]{5,}", sans_accents(texte))
+    return {m for m in mots if m not in _MOTS_VIDES and not VERBES_ACTE.fullmatch(m)}
+
+
+def acte_parlementaire_ancre(phrase: str, preuves: list, cible: dict) -> tuple:
+    """(est_un_acte, est_ancre, objet). Un acte est ancré si l'objet parlementaire
+    dont il parle se retrouve dans une pièce fournie : le nom de l'objet ET au moins
+    un de ses qualificatifs distinctifs. Sinon la phrase affirme un fait que rien ne
+    porte."""
+    p = sans_accents(phrase)
+    if not (VERBES_ACTE.search(p) and OBJETS_PARLEMENTAIRES.search(p)):
+        return False, True, None
+    objet = OBJETS_PARLEMENTAIRES.search(p).group(0)
+    pieces = sans_accents(" ".join(
+        (x.get("texte_integral") or x.get("extrait") or "") + " " + (x.get("titre") or "")
+        for x in (preuves or [])))
+    # Le nom de la cible et de son parti ne sont pas des qualificatifs de l'objet.
+    bruit = _tokens_utiles((cible.get("nom") or "") + " " + (cible.get("parti") or ""))
+    qualificatifs = _tokens_utiles(phrase) - bruit - {objet}
+    if not qualificatifs:
+        return True, False, objet
+    ancres = {q for q in qualificatifs if q in pieces}
+    return True, (objet in pieces and len(ancres) >= 1), objet
+
+
+def reproche_a_son_propre_camp(phrase: str, cible: dict) -> bool:
+    """Reprocher à quelqu'un de n'avoir pas soutenu un texte de SON PROPRE parti est
+    incohérent par construction — et la donnée est dans candidats.json, sous les yeux
+    du modèle. Cas du 28/08 : « Madame Le Pen, vous n'avez pas voté la résolution RN »."""
+    p = sans_accents(phrase)
+    if not re.search(r"\bn'?(?:avez|a|ont|aviez)\b|\brefus|\bpas\b", p):
+        return False
+    parti = cible.get("parti") or ""
+    # Le sigle est rarement écrit tel quel dans candidats.json : le parti y figure
+    # en toutes lettres (« Rassemblement National »), alors qu'une réplique dit
+    # « la résolution RN ». On accepte donc les deux formes — le sigle écrit
+    # explicitement, ET celui reconstruit à partir des initiales.
+    sigles = set(re.findall(r"[A-Z]{2,}", parti))
+    initiales = "".join(m[0] for m in re.findall(r"\b[A-ZÀ-Ý][\w'-]*", parti))
+    if len(initiales) >= 2:
+        sigles.add(initiales)
+    mots = _tokens_utiles(parti)                                    # rassemblement, national…
+    dit_son_parti = any(re.search(r"\b" + re.escape(sans_accents(s)) + r"\b", p) for s in sigles) \
+        or (len(mots) > 0 and all(m in p for m in mots))
+    return dit_son_parti and bool(OBJETS_PARLEMENTAIRES.search(p))
+
+
+def verifier_faits(texte: str, adversaires: list, faits: dict, cible_par_defaut: str = None,
+                   preuves: list = None) -> tuple:
+    """Retire les phrases qui prêtent à un adversaire un bilan gouvernemental, un vote
+    qu'il ne peut pas avoir, ou un ACTE PARLEMENTAIRE que rien dans les pièces ne porte.
     Retourne (texte_nettoye, revisions[{type:'faits', phrase, cible, raison}])."""
     phrases = decouper_phrases(texte)
     gardees, revisions = [], []
@@ -93,6 +174,18 @@ def verifier_faits(texte: str, adversaires: list, faits: dict, cible_par_defaut:
                 break
             if MOTIFS_VOTE.search(p) and not f.get("depute", False):
                 revisions.append({"type": "faits", "phrase": ph, "cible": cid, "raison": f"{nom} n’est pas député(e) : aucun vote à l’Assemblée ne peut lui être prêté."})
+                retiree = True
+                break
+            adv = next((a for a in adversaires if a["id"] == cid), {})
+            if reproche_a_son_propre_camp(ph, adv):
+                revisions.append({"type": "faits", "phrase": ph, "cible": cid,
+                                  "raison": f"Incohérent : on reproche à {nom} de n’avoir pas soutenu un texte de son propre parti ({adv.get('parti', '')})."})
+                retiree = True
+                break
+            est_acte, ancre, objet = acte_parlementaire_ancre(ph, preuves, adv)
+            if est_acte and not ancre:
+                revisions.append({"type": "faits", "phrase": ph, "cible": cid,
+                                  "raison": f"Acte parlementaire prêté à {nom} ({objet}) qu’aucune pièce fournie ne mentionne : un vote est un fait vérifiable, il ne s’affirme pas sans pièce."})
                 retiree = True
                 break
         if not retiree:
@@ -216,7 +309,7 @@ async def generer_replique_validee(messages: list, *, params: dict, orateur: dic
     async for d in llm.completer(messages, cle_demo=cle_demo, usage_cb=_cb, **params):
         morceaux.append(d)
     brut = "".join(morceaux)
-    texte_final, revisions = verifier_faits(brut, adversaires, faits, cible_par_defaut)
+    texte_final, revisions = verifier_faits(brut, adversaires, faits, cible_par_defaut, preuves)
     annotations = []
     if juger_actif and llm.MODE != "demo":
         try:

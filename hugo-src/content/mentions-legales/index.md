@@ -42,14 +42,14 @@ Les programmes politiques cités ou utilisés sur ce site appartiennent à leurs
 
 ## Contact, signalement, droit de réponse
 
-**Contact :** `[À COMPLÉTER — adresse e-mail dédiée, ex. contact@demandezleur.fr]`. Le [formulaire de feedback](/feedback/) reste disponible pour les retours anonymes.
+**Contact :** [lionel.denis@alpai.eu](mailto:lionel.denis@alpai.eu). Le [formulaire de feedback](/feedback/) reste disponible pour les retours anonymes.
 
-**Signaler un contenu.** Toute personne, et en particulier un candidat ou son équipe, peut signaler une réponse ou une réplique qu'elle estime inexacte, en indiquant le candidat, la question posée et le passage contesté. Le signalement est examiné et traité dans un délai indicatif de `[À COMPLÉTER — ex. 48 heures]` : correction du corpus, retrait du passage, ou explication motivée.
+**Signaler un contenu.** Toute personne, et en particulier un candidat ou son équipe, peut signaler une réponse ou une réplique qu'elle estime inexacte, en indiquant le candidat, la question posée et le passage contesté. Le signalement est examiné et traité dans un délai indicatif de **48 heures** : correction du corpus, retrait du passage, ou explication motivée.
 
-**Droit de réponse.** Conformément à l'article 6-IV de la loi pour la confiance dans l'économie numérique, toute personne nommée ou désignée sur ce site peut exercer un droit de réponse, en adressant sa demande au contact ci-dessus avec la référence du contenu concerné et le texte de la réponse souhaitée. `[À COMPLÉTER — modalités et délai de publication]`.
+**Droit de réponse.** Conformément à l'article 6-IV de la loi pour la confiance dans l'économie numérique, toute personne nommée ou désignée sur ce site peut exercer un droit de réponse, en adressant sa demande au contact ci-dessus avec la référence du contenu concerné et le texte de la réponse souhaitée. La demande est recevable pendant **trois mois** à compter de la mise à disposition du contenu. La réponse est publiée **dans les trois jours** suivant sa réception, au même emplacement et dans la même présentation que le contenu visé, et y reste accessible aussi longtemps que lui. Un refus de publication est motivé par écrit.
 
 **Retrait.** Un candidat déclaré peut demander le retrait de sa fiche ; la demande est traitée par le même canal et tracée.
 
 ## Données transmises par les formulaires
 
-Les formulaires de feedback et de suggestion ne collectent aucune donnée personnelle obligatoire. Les messages sont conservés `[À COMPLÉTER — durée, ex. 12 mois]` puis supprimés. Base légale : intérêt légitime de l'éditeur à améliorer le service (art. 6-1-f du RGPD). Aucun cookie, aucun traceur, aucune mesure d'audience individualisée.
+Les formulaires de feedback et de suggestion ne collectent aucune donnée personnelle obligatoire. Les messages sont conservés **12 mois** puis supprimés. Base légale : intérêt légitime de l'éditeur à améliorer le service (art. 6-1-f du RGPD). Aucun cookie, aucun traceur, aucune mesure d'audience individualisée.

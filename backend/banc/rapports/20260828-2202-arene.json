@@ -1,0 +1,240 @@
+[
+ {
+  "sujet": "les retraites",
+  "tour": 1,
+  "orateur": "marine-le-pen",
+  "adversaires": [
+   "gabriel-attal"
+  ],
+  "brut": "*\"Les retraités français ne sont pas une variable d’ajustement pour les technocrates de Paris ! Chez nous, on ne touche pas à l’âge légal, on protège les pensions avec l’inflation, on porte la retraite minimale à 1000 euros, et on permet à ceux qui ont trimé toute leur vie de partir à 60 ans ! Pendant ce temps, des jeunots comme Attal, qui n’a même pas eu le courage de défendre une ligne claire sur les retraites, nous parlent d’équilibres budgétaires… mais jamais de solidarité réelle avec nos anciens !\"*\n\n*(Ton : direct, sans concession – attaque le programme d’Attal par son absence de propositions claires, tout en martelant les mesures RN sans jargon.)*",
+  "final": "*\"Les retraités français ne sont pas une variable d’ajustement pour les technocrates de Paris ! Chez nous, on ne touche pas à l’âge légal, on protège les pensions avec l’inflation, on porte la retraite minimale à 1000 euros, et on permet à ceux qui ont trimé toute leur vie de partir à 60 ans ! Pendant ce temps, des jeunots comme Attal, qui n’a même pas eu le courage de défendre une ligne claire sur les retraites, nous parlent d’équilibres budgétaires… mais jamais de solidarité réelle avec nos anciens !\"* *(Ton : direct, sans concession – attaque le programme d’Attal par son absence de propositions claires, tout en martelant les mesures RN sans jargon.)*",
+  "revisions": [],
+  "annotations": [
+   {
+    "type": "juge",
+    "phrase": "des jeunots comme Attal, qui n’a même pas eu le courage de défendre une ligne claire sur les retraites",
+    "cible": "gabriel-attal",
+    "raison": "Aucune pièce ne mentionne l'absence de ligne claire d'Attal sur les retraites."
+   },
+   {
+    "type": "juge",
+    "phrase": "on porte la retraite minimale à 1000 euros",
+    "cible": "sujet",
+    "raison": "Aucune pièce ne contient cette mesure."
+   },
+   {
+    "type": "juge",
+    "phrase": "on permet à ceux qui ont trimé toute leur vie de partir à 60 ans",
+    "cible": "sujet",
+    "raison": "Aucune pièce ne contient cette mesure."
+   }
+  ],
+  "regenerations": 0,
+  "fallback": false,
+  "residuel": [
+   {
+    "phrase": "Gabriel Attal n’a même pas eu le courage de défendre une ligne claire sur les retraites",
+    "cible": "gabriel-attal",
+    "soutenue": false,
+    "raison": "Aucun document ne mentionne les positions ou actions de Gabriel Attal sur les retraites, ni ne permet d'évaluer sa 'ligne claire' ou son 'courage' à ce sujet."
+   },
+   {
+    "phrase": "Gabriel Attal nous parle d’équilibres budgétaires",
+    "cible": "gabriel-attal",
+    "soutenue": false,
+    "raison": "Aucun document ne contient de citation ou de référence aux propos de Gabriel Attal sur les équilibres budgétaires."
+   }
+  ],
+  "latence_s": 4.3
+ },
+ {
+  "sujet": "les retraites",
+  "tour": 1,
+  "orateur": "gabriel-attal",
+  "adversaires": [
+   "marine-le-pen"
+  ],
+  "brut": "Mesdames et Messieurs, regardons les faits en face : les retraites ne se financent pas avec des promesses démagogiques comme celle de la retraite à 60 ans, mais avec des réformes courageuses et réalistes. Tandis que certains veulent faire croire qu’on peut tout avoir sans effort, nous, nous assumons la responsabilité de moderniser notre système pour qu’il reste équitable et pérenne. La solution ? Report progressif de l’âge légal de départ, en contrepartie d’un allègement des cotisations pour les métiers pénibles et d’un renforcement des dispositifs de transition vers la retraite.",
+  "final": "Mesdames et Messieurs, regardons les faits en face : les retraites ne se financent pas avec des promesses démagogiques comme celle de la retraite à 60 ans, mais avec des réformes courageuses et réalistes. Tandis que certains veulent faire croire qu’on peut tout avoir sans effort, nous, nous assumons la responsabilité de moderniser notre système pour qu’il reste équitable et pérenne. La solution ? Report progressif de l’âge légal de départ, en contrepartie d’un allègement des cotisations pour les métiers pénibles et d’un renforcement des dispositifs de transition vers la retraite.",
+  "revisions": [],
+  "annotations": [],
+  "regenerations": 0,
+  "fallback": false,
+  "residuel": [
+   {
+    "phrase": "certains veulent faire croire qu’on peut tout avoir sans effort",
+    "cible": "Marine Le Pen",
+    "soutenue": false,
+    "raison": "Aucun document ne mentionne une telle affirmation de la part de Marine Le Pen ou de son programme."
+   }
+  ],
+  "latence_s": 2.0
+ },
+ {
+  "sujet": "l'immigration",
+  "tour": 1,
+  "orateur": "jean-luc-melenchon",
+  "adversaires": [
+   "edouard-philippe"
+  ],
+  "brut": "L’immigration, c’est d’abord une question de dignité et de justice ! Nous, La France insoumise, on ne choisit pas entre des gens comme vous le faites, on les accueille avec des droits, des papiers, et un toit parce que c’est humain et que c’est notre histoire ! Édouard Philippe, vous voulez des quotas et l’abrogation des accords franco-algériens ? Alors je vous demande : combien de familles allez-vous séparer avec ça, et pour quel bénéfice pour les travailleurs français ?",
+  "final": "L’immigration, c’est d’abord une question de dignité et de justice ! Nous, La France insoumise, on ne choisit pas entre des gens comme vous le faites, on les accueille avec des droits, des papiers, et un toit parce que c’est humain et que c’est notre histoire ! Édouard Philippe, vous voulez des quotas et l’abrogation des accords franco-algériens ? Alors je vous demande : combien de familles allez-vous séparer avec ça, et pour quel bénéfice pour les travailleurs français ?",
+  "revisions": [],
+  "annotations": [
+   {
+    "type": "juge",
+    "phrase": "combien de familles allez-vous séparer avec ça",
+    "cible": "edouard-philippe",
+    "raison": "Aucun chiffre ou estimation de familles séparées n'est contenu dans les pièces fournies."
+   },
+   {
+    "type": "juge",
+    "phrase": "pour quel bénéfice pour les travailleurs français",
+    "cible": "edouard-philippe",
+    "raison": "Aucun bénéfice chiffré pour les travailleurs français n'est contenu dans les pièces fournies."
+   }
+  ],
+  "regenerations": 0,
+  "fallback": false,
+  "residuel": [
+   {
+    "phrase": "Édouard Philippe va séparer des familles avec ses mesures sur les quotas et l'abrogation des accords franco-algériens",
+    "cible": "Édouard Philippe",
+    "soutenue": false,
+    "raison": "Aucun document ne mentionne explicitement le nombre de familles qui seraient séparées par ces mesures. L'affirmation est une interprétation ou une extrapolation des mesures proposées, non une donnée factuelle présente dans les documents."
+   }
+  ],
+  "latence_s": 3.1
+ },
+ {
+  "sujet": "l'immigration",
+  "tour": 1,
+  "orateur": "edouard-philippe",
+  "adversaires": [
+   "jean-luc-melenchon"
+  ],
+  "brut": "L'immigration n'est pas une fatalité, c'est un choix que nous devons reprendre en main. Monsieur Mélenchon, vous nous parlez d'ouverture sans jamais nous dire comment nous paierons les emplois que vous promettez, vos 32 heures pas les 35 ? Alors que nous, avec Horizons, nous assumons : immigration oui, mais choisie, utile, et sous contrôle parlementaire avec des quotas votés chaque année.\n\nVotre accord franco-algérien de 1968, vous le maintenez contre toute raison, alors que notre population active baisse et que nos entreprises peinent à recruter dans les métiers en tension. Nous, nous abrogeons cet accord anachronique et nous recentrons l'Aide Médicale d'État sur l'urgence vitale.\n\nMélenchon, expliquez aux Français comment vous conciliez votre dogme de l'accueil inconditionnel avec la réalité des budgets sociaux ?",
+  "final": "L'immigration n'est pas une fatalité, c'est un choix que nous devons reprendre en main. Monsieur Mélenchon, vous nous parlez d'ouverture sans jamais nous dire comment nous paierons les emplois que vous promettez, vos 32 heures pas les 35 ? Alors que nous, avec Horizons, nous assumons : immigration oui, mais choisie, utile, et sous contrôle parlementaire avec des quotas votés chaque année. Votre accord franco-algérien de 1968, vous le maintenez contre toute raison, alors que notre population active baisse et que nos entreprises peinent à recruter dans les métiers en tension. Nous, nous abrogeons cet accord anachronique et nous recentrons l'Aide Médicale d'État sur l'urgence vitale. Mélenchon, expliquez aux Français comment vous conciliez votre dogme de l'accueil inconditionnel avec la réalité des budgets sociaux ?",
+  "revisions": [],
+  "annotations": [
+   {
+    "type": "juge",
+    "phrase": "vous nous parlez d'ouverture sans jamais nous dire comment nous paierons les emplois que vous promettez, vos 32 heures pas les 35 ?",
+    "cible": "jean-luc-melenchon",
+    "raison": "Aucune pièce ne contient de référence à un programme de Jean-Luc Mélenchon mentionnant des promesses d'emplois ou une durée de travail de 32 heures."
+   },
+   {
+    "type": "juge",
+    "phrase": "Votre accord franco-algérien de 1968, vous le maintenez contre toute raison",
+    "cible": "jean-luc-melenchon",
+    "raison": "Aucune pièce ne mentionne que Jean-Luc Mélenchon maintient ou propose de maintenir l'accord franco-algérien de 1968."
+   },
+   {
+    "type": "juge",
+    "phrase": "nous abrogeons cet accord anachronique",
+    "cible": "sujet",
+    "raison": "Aucune pièce ne décrit le contenu d'un projet ou d'une proposition d'abrogation de l'accord franco-algérien de 1968 par le camp de l'orateur."
+   },
+   {
+    "type": "juge",
+    "phrase": "nous recentrons l'Aide Médicale d'État sur l'urgence vitale",
+    "cible": "sujet",
+    "raison": "Aucune pièce ne décrit une proposition de recentrage de l'Aide Médicale d'État sur l'urgence vitale par le camp de l'orateur."
+   }
+  ],
+  "regenerations": 0,
+  "fallback": false,
+  "residuel": [
+   {
+    "phrase": "vos 32 heures pas les 35",
+    "cible": "Jean-Luc Mélenchon",
+    "soutenue": false,
+    "raison": "Aucun document ne mentionne une proposition de Jean-Luc Mélenchon concernant les 32 heures de travail hebdomadaire."
+   },
+   {
+    "phrase": "Votre accord franco-algérien de 1968, vous le maintenez contre toute raison",
+    "cible": "Jean-Luc Mélenchon",
+    "soutenue": false,
+    "raison": "Aucun document ne mentionne un accord franco-algérien de 1968 lié à Jean-Luc Mélenchon ou à une position qu'il aurait prise sur ce sujet."
+   }
+  ],
+  "latence_s": 8.7
+ },
+ {
+  "sujet": "le nucléaire",
+  "tour": 1,
+  "orateur": "nathalie-arthaud",
+  "adversaires": [
+   "xavier-bertrand"
+  ],
+  "brut": "Chers alliés, toujours exploités par ce système et toujours en lutte pour nos vies, écoutons bien ce que M. Bertrand propose : *construire de nouveaux réacteurs EPR*. Sous couvert de \"transition\", c’est un cadeau aux actionnaires d’EDF et d’Orano, avec notre argent à nous ! Le nucléaire, c’est l’énergie des grands groupes, pas la nôtre – et face à la catastrophe climatique, leur \"pragmatisme\" bourré de dettes et de risques, c’est une fumisterie !",
+  "final": "Chers alliés, toujours exploités par ce système et toujours en lutte pour nos vies, écoutons bien ce que M. Bertrand propose : *construire de nouveaux réacteurs EPR*. Sous couvert de \"transition\", c’est un cadeau aux actionnaires d’EDF et d’Orano, avec notre argent à nous ! Le nucléaire, c’est l’énergie des grands groupes, pas la nôtre – et face à la catastrophe climatique, leur \"pragmatisme\" bourré de dettes et de risques, c’est une fumisterie !",
+  "revisions": [],
+  "annotations": [
+   {
+    "type": "juge",
+    "phrase": "Le nucléaire, c’est l’énergie des grands groupes, pas la nôtre",
+    "cible": "xavier-bertrand",
+    "raison": "Affirmation sans fondement factuel dans les pièces fournies."
+   },
+   {
+    "type": "juge",
+    "phrase": "leur \"pragmatisme\" bourré de dettes et de risques",
+    "cible": "xavier-bertrand",
+    "raison": "Affirmation sans fondement factuel dans les pièces fournies."
+   }
+  ],
+  "regenerations": 0,
+  "fallback": false,
+  "residuel": [],
+  "latence_s": 3.3
+ },
+ {
+  "sujet": "le nucléaire",
+  "tour": 1,
+  "orateur": "xavier-bertrand",
+  "adversaires": [
+   "nathalie-arthaud"
+  ],
+  "brut": "Le nucléaire, c'est l'indépendance énergétique de la France, pas un débat doctrinal ! Xavier Bertrand l'a dit clairement : pas de décroissance punitive, mais des **EPR partout où c'est nécessaire** et une filière qui assure notre souveraineté. Pendant ce temps, certains ici veulent encore démanteler nos centrales au nom d'une écologie punitive – **Madame Arthaud**, combien de Français perdraient leur emploi si vous mettiez fin au nucléaire comme vous le proposez ? Vous parlez de justice sociale, mais vous ignorez que le nucléaire, c'est 200 000 emplois stables et 70% de notre électricité souveraine. **Alors oui ou non, sacrifierez-vous les emplois de la France au nom de votre dogme ?**",
+  "final": "Le nucléaire, c'est l'indépendance énergétique de la France, pas un débat doctrinal ! Xavier Bertrand l'a dit clairement : pas de décroissance punitive, mais des **EPR partout où c'est nécessaire** et une filière qui assure notre souveraineté. Pendant ce temps, certains ici veulent encore démanteler nos centrales au nom d'une écologie punitive – **Madame Arthaud**, combien de Français perdraient leur emploi si vous mettiez fin au nucléaire comme vous le proposez ? Vous parlez de justice sociale, mais vous ignorez que le nucléaire, c'est 200 000 emplois stables et 70% de notre électricité souveraine. **Alors oui ou non, sacrifierez-vous les emplois de la France au nom de votre dogme ?**",
+  "revisions": [],
+  "annotations": [
+   {
+    "type": "juge",
+    "phrase": "combien de Français perdraient leur emploi si vous mettiez fin au nucléaire comme vous le proposez ?",
+    "cible": "nathalie-arthaud",
+    "raison": "Aucune pièce ne mentionne un chiffre sur les emplois liés au nucléaire dans le programme de Nathalie Arthaud ou dans les faits documentés."
+   },
+   {
+    "type": "juge",
+    "phrase": "Vous parlez de justice sociale, mais vous ignorez que le nucléaire, c'est 200 000 emplois stables et 70% de notre électricité souveraine.",
+    "cible": "nathalie-arthaud",
+    "raison": "Aucune pièce ne contient ces chiffres (200 000 emplois, 70% d'électricité) dans le programme de Nathalie Arthaud ou dans les faits documentés."
+   },
+   {
+    "type": "juge",
+    "phrase": "sacrifierez-vous les emplois de la France au nom de votre dogme ?",
+    "cible": "nathalie-arthaud",
+    "raison": "Le reproche est formulé comme une vérité sur la personne (affirmation de fait non documentée), et non comme un reproche porté par le camp de l'orateur."
+   }
+  ],
+  "regenerations": 0,
+  "fallback": false,
+  "residuel": [
+   {
+    "phrase": "combien de Français perdraient leur emploi si vous mettiez fin au nucléaire comme vous le proposez ?",
+    "cible": "Nathalie Arthaud",
+    "soutenue": false,
+    "raison": "Aucun document ne mentionne un projet ou une proposition de Nathalie Arthaud pour mettre fin au nucléaire, ni ne quantifie un impact sur l'emploi en cas de suppression de cette filière."
+   },
+   {
+    "phrase": "Vous parlez de justice sociale, mais vous ignorez que le nucléaire, c'est 200 000 emplois stables et 70% de notre électricité souveraine.",
+    "cible": "Nathalie Arthaud",
+    "soutenue": false,
+    "raison": "Aucun document ne soutient l'affirmation selon laquelle Nathalie Arthaud ignore ces chiffres ou qu'elle propose de sacrifier ces emplois. Les documents ne contiennent pas non plus ces données chiffrées (200 000 emplois, 70% d'électricité)."
+   }
+  ],
+  "latence_s": 7.8
+ }
+]

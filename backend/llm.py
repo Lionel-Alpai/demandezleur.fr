@@ -27,6 +27,28 @@ MODE = os.environ.get("DL_MODE", "live").strip().lower()
 if MODE not in ("live", "demo", "record"):
     MODE = "live"
 MODELE = os.environ.get("DL_MODELE", "deepseek-v4-flash")
+# Le chemin STREAMÉ (completer) est l'orateur ; le chemin non streamé
+# (completer_texte) est le juge du garde-fou et les analyses. Les deux n'ont pas
+# besoin du même modèle : mesuré le 28/08/2026, un juge économique attrape les
+# mêmes affirmations qu'un gros. DL_MODELE_JUGE permet donc (a) de payer le gros
+# modèle là où la qualité se voit, (b) de tenir le juge CONSTANT quand on compare
+# deux orateurs — sans quoi on change l'instrument en même temps que la mesure.
+MODELE_JUGE = os.environ.get("DL_MODELE_JUGE", "").strip() or MODELE
+
+# Fournisseur du modèle. Tout endpoint compatible OpenAI convient — DeepSeek par
+# défaut, Mistral (https://api.mistral.ai/v1) vérifié le 28/08/2026 : streaming
+# et response_format json_object acceptés, usage remonté dans le flux.
+#   DL_CLE_VAR = le NOM de la variable d'environnement qui porte la clé, jamais
+#   la clé elle-même : on ne met pas de secret dans un .env que le paquet côtoie.
+BASE_URL = os.environ.get("DL_BASE_URL", "https://api.deepseek.com").rstrip("/")
+CLE_VAR = os.environ.get("DL_CLE_VAR", "DEEPSEEK_API_KEY")
+
+# `thinking: disabled` n'existe que chez DeepSeek — sans lui, v4-flash raisonne
+# jusqu'à épuiser max_tokens et rend un contenu vide, facturé plein pot (leçon du
+# 27/08). Mistral, lui, REFUSE le champ (422 extra_forbidden). Le paramètre suit
+# donc le fournisseur, il n'est jamais envoyé à l'aveugle.
+EXTRA_FOURNISSEUR = {"thinking": {"type": "disabled"}} if "deepseek" in BASE_URL else {}
+
 BASE_DIR = Path(__file__).resolve().parent
 DEMO_DIR = BASE_DIR / "demo"
 DELAI_DEMO = 0.015  # secondes entre deux deltas rejoués
@@ -38,7 +60,7 @@ def client():
     global _client
     if _client is None:
         from openai import AsyncOpenAI
-        _client = AsyncOpenAI(api_key=os.environ.get("DEEPSEEK_API_KEY", ""), base_url="https://api.deepseek.com")
+        _client = AsyncOpenAI(api_key=os.environ.get(CLE_VAR, ""), base_url=BASE_URL)
     return _client
 
 
@@ -101,7 +123,7 @@ async def completer(messages: list, *, cle_demo, max_tokens: int, temperature: f
 
     params = dict(model=MODELE, messages=messages, max_tokens=max_tokens, temperature=temperature,
                   stream=True, stream_options={"include_usage": True},
-                  extra_body={"thinking": {"type": "disabled"}})
+                  extra_body=EXTRA_FOURNISSEUR)
     if extra:
         params.update(extra)
     stream = await client().chat.completions.create(**params)
@@ -130,8 +152,8 @@ async def completer_texte(messages: list, *, cle_demo, max_tokens: int, temperat
     if MODE == "demo" or (MODE == "record" and _chemin_fixture(cle_demo).exists()):
         fx = _lire_fixture(cle_demo)
         return (fx or {}).get("texte", "") if fx and _chemin_fixture(cle_demo).exists() else ""
-    params = dict(model=MODELE, messages=messages, max_tokens=max_tokens, temperature=temperature,
-                  extra_body={"thinking": {"type": "disabled"}})
+    params = dict(model=MODELE_JUGE, messages=messages, max_tokens=max_tokens, temperature=temperature,
+                  extra_body=EXTRA_FOURNISSEUR)
     if extra:
         params.update(extra)
     rep = await client().chat.completions.create(**params)
@@ -142,5 +164,5 @@ async def completer_texte(messages: list, *, cle_demo, max_tokens: int, temperat
         DEMO_DIR.mkdir(exist_ok=True)
         _chemin_fixture(cle_demo).write_text(json.dumps({"cle": list(cle_demo), "texte": texte, "deltas": _decouper(texte),
             "usage": {"prompt_tokens": getattr(rep.usage, "prompt_tokens", 0), "completion_tokens": getattr(rep.usage, "completion_tokens", 0)},
-            "modele": MODELE}, ensure_ascii=False, indent=1), encoding="utf-8")
+            "modele": MODELE_JUGE}, ensure_ascii=False, indent=1), encoding="utf-8")
     return texte

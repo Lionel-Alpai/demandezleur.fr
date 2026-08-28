@@ -6,8 +6,10 @@ secrets/
 
 # Backend runtime
 backend/venv/
-backend/__pycache__/
-backend/*.pyc
+# Artefacts compilés, où qu'ils soient : les deux règles d'avant ne couvraient
+# que la racine du backend, et 4 .pyc étaient suivis (banc/, tests/, tools/).
+__pycache__/
+*.pyc
 backend/corpus/
 
 # Hugo build output

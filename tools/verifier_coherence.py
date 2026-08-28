@@ -22,7 +22,12 @@ for c in hugo:
         w, h = Image.open(photo).size
         if w != h or w < 512: erreurs.append(f"{cid} : photo {w}x{h} (attendu carré ≥ 512)")
     if not c.get("questions_suggerees"): erreurs.append(f"{cid} : questions_suggerees manquantes")
-    if c.get("photo_type") == "affiche": print(f"note : {cid} photo de type affiche, à remplacer")
+    # photo_type décrit la SOURCE (photo_source), pas ce qui est servi : depuis la
+    # chaîne de portraits, `photo` pointe un portrait généré et `portrait: true`.
+    # L'ancienne note « photo de type affiche » alertait sur la source et criait
+    # donc au loup sur un candidat dont le portrait était fait. On n'alerte plus
+    # que sur ce qui manque vraiment : un candidat sans portrait généré.
+    if not c.get("portrait"): print(f"note : {cid} sans portrait généré (source {c.get('photo_type')}), à produire")
 faits = R / "backend/faits.json"
 if faits.exists():
     f = json.loads(faits.read_text(encoding="utf-8")).get("candidats", {})

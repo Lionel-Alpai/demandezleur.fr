@@ -26,10 +26,12 @@ Pendant une campagne, on entend beaucoup les candidats et on lit peu leurs progr
 
 ## Comment c'est fabriqué
 
-Les prompts donnés à l'IA sont [publics](/transparence/), le [code est ouvert](https://github.com/Lionel-Alpai/demandezleur.fr). Le modèle de langage est `[À COMPLÉTER — modèle et hébergement]`. Les corpus sont constitués à partir des sources officielles de chaque candidat, listées sur sa fiche ; tout document manquant peut être [suggéré](/suggerer/).
+Les prompts donnés à l'IA sont [publics](/transparence/), le [code est ouvert](https://github.com/Lionel-Alpai/demandezleur.fr). Le modèle de langage est **DeepSeek V4** (DeepSeek, Hangzhou, Chine), interrogé par API depuis un serveur situé au Canada : aucune donnée de visiteur ne lui est transmise — seuls lui parviennent la question posée et les extraits de documents publics du candidat. Ce choix est technique et économique, non éditorial, et il est susceptible de changer ; la page le dira. Les corpus sont constitués à partir des sources officielles de chaque candidat, listées sur sa fiche ; tout document manquant peut être [suggéré](/suggerer/).
 
 ## Qui
 
-`[À COMPLÉTER — Lionel Denis, restaurateur en Maurienne, qui fabrique ce site le soir et le lundi, avec une machine d'agents ; pourquoi lui, pourquoi maintenant.]`
+Lionel Denis. Restaurateur en Maurienne, pas journaliste, pas encarté. Je fabrique ce site le soir et le lundi — mon jour de fermeture — avec une machine d'agents que j'ai montée moi-même et dont le code est ouvert.
+
+Pourquoi : parce qu'on nous demande de choisir entre des gens dont nous ne lisons jamais les programmes, et que ces programmes sont pourtant publics, en ligne, gratuits. Ce site ne fait qu'une chose : les rendre interrogeables. Si vous y trouvez une erreur, elle est de moi, et le [formulaire de feedback](/feedback/) est là pour ça.
 
 Le projet est indépendant, bénévole, sans affiliation avec un parti, un candidat ou une institution. [Soutenir le projet](/soutenir/).
