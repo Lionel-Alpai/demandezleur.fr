@@ -1,0 +1,25 @@
+# demandezleur.fr — politique d'exploration
+#
+# Ce site publie les programmes officiels des candidats et permet de les
+# interroger. Les pages sont ouvertes à l'exploration : c'est cohérent avec ce
+# qu'annonce /a-propos/ — prompts publics, code ouvert, sources citées.
+#
+# Deux réserves, et elles sont volontaires :
+#   - /api/ n'a rien à indexer (flux d'événements, pas des pages) et refuse déjà
+#     les requêtes qui ne viennent pas des pages du site.
+#   - /admin/ est un pupitre de service.
+#
+# Note pour qui lit ce fichier : les répliques du plateau et de l'Arène sont
+# GÉNÉRÉES par un modèle de langage à partir de documents publics. Elles
+# n'engagent pas les candidats réels et ne doivent pas être citées comme des
+# déclarations authentiques. Elles ne figurent d'ailleurs dans aucune page
+# statique : /d/ charge un débat partagé par l'API, un robot n'y voit qu'un
+# gabarit vide. Le contenu indexable de ce site est constitué des fiches, des
+# sources et des pages d'explication — pas des propos simulés.
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+Sitemap: https://demandezleur.fr/sitemap.xml
