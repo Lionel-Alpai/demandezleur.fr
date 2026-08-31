@@ -14,9 +14,18 @@
     </div>
   </header>
 
+  {{ if .Params.sans_source_officielle }}
+  <section class="avertissement-sans-programme" role="note" aria-label="Avertissement : pas de programme consultable">
+    {{ if .Content }}{{ .Content }}{{ else }}<p class="avertissement-texte">Ce candidat n'a publié aucun programme consultable.</p>{{ end }}
+  </section>
+  {{ end }}
   <section class="chat" id="chat" aria-label="Interroger le programme de {{ $c.nom }}">
     <div class="chat-fenetre" id="chatWindow">
+      {{ if .Params.sans_source_officielle }}
+      <p class="chat-systeme">Vous interrogez les déclarations publiques de <strong>{{ $c.nom }}</strong> — ce candidat n'a publié aucun programme consultable. L'IA répond uniquement à partir des documents listés plus bas, et cite ses sources.</p>
+      {{ else }}
       <p class="chat-systeme">Vous interrogez le programme officiel de <strong>{{ $c.nom }}</strong>. L'IA répond uniquement à partir des documents listés plus bas, et cite ses sources.</p>
+      {{ end }}
     </div>
     {{ with $c.questions_suggerees }}
     <div class="chips chat-chips" id="chat-chips" aria-label="Questions suggérées">
