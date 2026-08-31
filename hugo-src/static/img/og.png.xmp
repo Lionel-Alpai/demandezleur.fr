@@ -6,13 +6,13 @@
       xmlns:xmp="http://ns.adobe.com/xap/1.0/">
       <dc:subject>
         <rdf:Bag>
+          <rdf:li>Format/1200x630</rdf:li>
           <rdf:li>Statut/INCONNU</rdf:li>
           <rdf:li>Type/Image</rdf:li>
-          <rdf:li>Format/1200x630</rdf:li>
         </rdf:Bag>
       </dc:subject>
       <dc:description>og.png (1200x630) — inconnu</dc:description>
-      <xmp:CreateDate>2026-08-25</xmp:CreateDate>
+      <xmp:CreateDate>2026-08-28</xmp:CreateDate>
     </rdf:Description>
   </rdf:RDF>
 </x:xmpmeta>

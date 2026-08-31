@@ -6,13 +6,13 @@
       xmlns:xmp="http://ns.adobe.com/xap/1.0/">
       <dc:subject>
         <rdf:Bag>
+          <rdf:li>Format/640x640</rdf:li>
           <rdf:li>Statut/INCONNU</rdf:li>
           <rdf:li>Type/Image</rdf:li>
-          <rdf:li>Format/640x640</rdf:li>
         </rdf:Bag>
       </dc:subject>
       <dc:description>bruno-retailleau.webp (640x640) — inconnu</dc:description>
-      <xmp:CreateDate>2026-08-26</xmp:CreateDate>
+      <xmp:CreateDate>2026-08-28</xmp:CreateDate>
     </rdf:Description>
   </rdf:RDF>
 </x:xmpmeta>

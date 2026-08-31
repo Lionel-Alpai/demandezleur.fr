@@ -6,13 +6,13 @@
       xmlns:xmp="http://ns.adobe.com/xap/1.0/">
       <dc:subject>
         <rdf:Bag>
+          <rdf:li>Format/64x64</rdf:li>
           <rdf:li>Statut/JETABLE</rdf:li>
           <rdf:li>Type/Image</rdf:li>
-          <rdf:li>Format/64x64</rdf:li>
         </rdf:Bag>
       </dc:subject>
       <dc:description>favicon.svg (64x64) — jetable</dc:description>
-      <xmp:CreateDate>2026-08-25</xmp:CreateDate>
+      <xmp:CreateDate>2026-08-28</xmp:CreateDate>
     </rdf:Description>
   </rdf:RDF>
 </x:xmpmeta>

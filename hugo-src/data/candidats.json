@@ -488,5 +488,42 @@
     "resume_statut": "valide",
     "photo_source": "/img/candidats/francis-lalanne.webp",
     "portrait": true
+  },
+  {
+    "id": "sylvain-durif",
+    "slug": "sylvain-durif",
+    "nom": "Sylvain Durif",
+    "initiales": "SD",
+    "parti": "Elvita",
+    "parti_court": "Elvita",
+    "famille": "sans-source-officielle",
+    "couleur_fond": "#2a2a2a",
+    "date_declaration": "23 août 2026",
+    "photo": "/img/candidats/sylvain-durif.webp",
+    "photo_credit": "chatzefratz — Wikimedia Commons, CC BY 3.0 (2013)",
+    "note": "AUCUN PROGRAMME CONSULTABLE — 8e famille sans-source-officielle (moule 2.18.0, arbitrage casse-couilles 26/08, Q2 tranchée 27/08). Vérifié en live le 30/08/2026 : sylvaindurif2027.fr se déclare lui-même « site parodique, non officiel » (créé par @vargy__), elvita.fr est une page de parking OVHcloud « site en construction », et l'article Wikipédia ne recense aucun site officiel. Aucune formation politique (case parti = « Aucune », modèle DIV) : « Elvita » est l'étiquette de campagne, slogan « L'union du ciel et de la terre ». LA FICHE DOIT LE DIRE À L'ÉLECTEUR : ce candidat n'a publié aucun programme consultable — ce n'est pas un trou à masquer, c'est une information. Les URL ci-dessus sont INDICATIVES (relevées dans les références de l'article Wikipédia, PAS ouvertes par le rédacteur) : la collecte S21/S22 doit ouvrir chaque page elle-même — une page non ouverte n'existe pas. Chercher en priorité ce qu'il PROPOSE (« instaurer le paradis », « paix sur Terre et dans le cosmos », cité de lumière, Grand Monarque), pas seulement sa biographie.",
+    "sources": [
+      "Wikipédia - Biographie du candidat (sources/01-wikipedia-bio.txt)",
+      "RTL - Déclaration de candidature (sources/03-declaration-rtl.txt)",
+      "Le Figaro - Annonce présidentielle (sources/02-declaration-lefigaro.txt)",
+      "Vice - Portrait de candidature (sources/programme-tiers-08-vice-portrait.txt)",
+      "Nice-Matin - Propositions du candidat (sources/programme-tiers-07-nicematin-presidentielle.txt)",
+      "TF1 Info - Portrait et propositions (sources/programme-tiers-10-tf1-portrait.txt)",
+      "20 Minutes - Annonce 2027 (sources/programme-tiers-04-vingtminutes-candidature.txt)",
+      "Wikipédia - Positions politiques (sources/programme-tiers-01-wikipedia-positions.txt)",
+      "Vice - Mesures d'urgence (sources/programme-tiers-08-vice-portrait.txt)",
+      "RTL - Déclaration de candidature (sources/programme-tiers-03-rtl-candidature.txt)",
+      "Wikipédia - Controverses (sources/programme-tiers-01-wikipedia-positions.txt)",
+      "Le Figaro - Analyse de la candidature (sources/programme-tiers-11-lefigaro-candidature.txt)",
+      "Midi Libre - Projet urbain à Bugarach (sources/programme-tiers-09-midilibre-bugarach.txt)",
+      "Midi Libre - Financement du projet (sources/programme-tiers-09-midilibre-bugarach.txt)",
+      "TF1 Info - Promesses de campagne (sources/programme-tiers-10-tf1-portrait.txt)",
+      "Vice - Orientations programmatiques (sources/programme-tiers-08-vice-portrait.txt)",
+      "Le Figaro - Politiques sanitaires (sources/programme-tiers-11-lefigaro-candidature.txt)",
+      "Yahoo Actualités - Annonce 2027 (sources/programme-tiers-12-yahoo-candidature.txt)",
+      "Wikipédia - Projet politique (sources/programme-tiers-01-wikipedia-positions.txt)",
+      "TF1 Info - Vision politique du candidat (sources/programme-tiers-10-tf1-portrait.txt)"
+    ],
+    "sans_source_officielle": true
   }
 ]

@@ -808,6 +808,23 @@ async def parlement_ingest(request: Request):
     asyncio.create_task(_precalculer_themes())
     return {"ok": True, **parlement.ecrire(obj)}
 
+@app.post("/api/actu/ingest")  # [actu-cadence]
+async def actu_ingest_route(request: Request):
+    import actu_ingest as ai
+    token = request.headers.get("X-Actu-Token")
+    if not ai.verifier_token(token):
+        raise HTTPException(status_code=401, detail="token invalide")
+    if ai.OFF.exists():
+        raise HTTPException(status_code=503, detail="tiroir desactive")
+    try:
+        obj = await request.json()
+    except Exception:
+        raise HTTPException(status_code=400, detail="JSON invalide")
+    ok, raison = ai.valider_payload(obj)
+    if not ok:
+        raise HTTPException(status_code=422, detail=raison)
+    return {"ok": True, **ai.ecrire_merge(obj)}
+
 if __name__ == "__main__":
     import uvicorn
     # Le serveur écoute sur 0.0.0.0 pour être joignable depuis votre téléphone via l'IP locale (192.168.1.x)
