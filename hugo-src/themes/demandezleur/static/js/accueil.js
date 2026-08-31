@@ -33,11 +33,15 @@
     bloc.hidden = false; i = Math.floor(Math.random() * sequences.length); jouer();
   }).catch(function () {});
 
+  /* Portrait lu depuis les données (#duel-data rendu depuis candidats.json) — plus jamais de chemin d'image en dur. */
+  var photos = {}, srcPhotos = document.getElementById('duel-data');
+  if (srcPhotos) srcPhotos.textContent.split('\n').forEach(function (l) { var p = l.trim().split('|'); if (p.length >= 4) photos[p[0]] = p[3]; });
   function jouer() {
     clearTimeout(minuterie); clearTimeout(frappe);
     var s = sequences[i % sequences.length]; i++;
+    var photo = photos[s.candidat_id] ? '<img src="' + photos[s.candidat_id] + '" alt="" width="40" height="40">' : '';
     fenetre.innerHTML =
-      '<div class="demo-entete"><img src="/img/candidats/' + DL.echapper(s.candidat_id) + '.webp" alt="" width="40" height="40"><div><strong>' + DL.echapper(s.nom) + '</strong><span class="meta"> · ' + DL.echapper(s.parti) + '</span></div>' +
+      '<div class="demo-entete">' + photo + '<div><strong>' + DL.echapper(s.nom) + '</strong><span class="meta"> · ' + DL.echapper(s.parti) + '</span></div>' +
       '<button type="button" class="lien-bouton demo-suivant">Autre exemple →</button></div>' +
       '<div class="msg msg-visiteur"><p>' + DL.echapper(s.question) + '</p></div>' +
       '<div class="msg msg-candidat"><div class="msg-corps"><p class="msg-attente">Consulte son programme…</p></div></div>' +
