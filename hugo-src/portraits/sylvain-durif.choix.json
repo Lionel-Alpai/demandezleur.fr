@@ -1,7 +1,10 @@
 {
- "variante": "sylvain-durif.png",
- "rouge": 0.0513458251953125,
- "bleute": 0.7333526611328125,
- "mediane_temoins": 0.020538330078125,
- "sface_info": "0.135"
+  "variante": "sylvain-durif_v2.png",
+  "decideur": "lionel",
+  "verdict_style": "passe-outre",
+  "motif": "Choix Lionel prime sur verdict de style mécanisé (v2 recalée rouge=0.1052)",
+  "date_decision": "2026-08-31T20:10:00+02:00",
+  "rouge": 0.1052,
+  "bleute": 0.733,
+  "timestamp_pose": "20260831-212148"
 }
