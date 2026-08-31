@@ -499,7 +499,7 @@
     "famille": "sans-source-officielle",
     "couleur_fond": "#2a2a2a",
     "date_declaration": "23 août 2026",
-    "photo": "/img/candidats/sylvain-durif.webp",
+    "photo": "/img/portraits/sylvain-durif.webp",
     "photo_credit": "chatzefratz — Wikimedia Commons, CC BY 3.0 (2013)",
     "note": "AUCUN PROGRAMME CONSULTABLE — 8e famille sans-source-officielle (moule 2.18.0, arbitrage casse-couilles 26/08, Q2 tranchée 27/08). Vérifié en live le 30/08/2026 : sylvaindurif2027.fr se déclare lui-même « site parodique, non officiel » (créé par @vargy__), elvita.fr est une page de parking OVHcloud « site en construction », et l'article Wikipédia ne recense aucun site officiel. Aucune formation politique (case parti = « Aucune », modèle DIV) : « Elvita » est l'étiquette de campagne, slogan « L'union du ciel et de la terre ». LA FICHE DOIT LE DIRE À L'ÉLECTEUR : ce candidat n'a publié aucun programme consultable — ce n'est pas un trou à masquer, c'est une information. Les URL ci-dessus sont INDICATIVES (relevées dans les références de l'article Wikipédia, PAS ouvertes par le rédacteur) : la collecte S21/S22 doit ouvrir chaque page elle-même — une page non ouverte n'existe pas. Chercher en priorité ce qu'il PROPOSE (« instaurer le paradis », « paix sur Terre et dans le cosmos », cité de lumière, Grand Monarque), pas seulement sa biographie.",
     "sources": [
@@ -524,6 +524,9 @@
       "Wikipédia - Projet politique (sources/programme-tiers-01-wikipedia-positions.txt)",
       "TF1 Info - Vision politique du candidat (sources/programme-tiers-10-tf1-portrait.txt)"
     ],
-    "sans_source_officielle": true
+    "sans_source_officielle": true,
+    "photo_source": "/img/candidats/sylvain-durif.webp",
+    "portrait": true,
+    "photo_type": "portrait"
   }
 ]
