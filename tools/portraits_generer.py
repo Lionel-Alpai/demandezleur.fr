@@ -14,11 +14,14 @@ STYLE = ("Turn this photo into a bold graphic poster portrait for a televised po
          "PRESERVE THE EXACT IDENTITY of the person: same face, same facial proportions, same hair, same glasses, same age, same expression — a viewer must recognize them instantly. Realistic proportions, dignified, not a caricature. "
          "Head and shoulders, centered, square framing with generous margin, no text, no logo.")
 
-def generer(cl, cid, k, qualite):
-    p = json.loads((SRC / cid / "provenance.json").read_text(encoding="utf-8")); src = SRC / cid / p["choix"]
+# PORTRAIT_AUTO_SOURCE_EXPLICITE (brique dl-fiche-portrait-plateau-auto, 31/08/2026) :
+# src/out_dir explicites pour la chaîne dl-fiche (worktree) ; sans eux, comportement dépôt inchangé.
+def generer(cl, cid, k, qualite, src=None, out_dir=None):
+    if src is None:
+        p = json.loads((SRC / cid / "provenance.json").read_text(encoding="utf-8")); src = SRC / cid / p["choix"]
     im = Image.open(src).convert("RGB"); im.thumbnail((1024, 1024)); buf = io.BytesIO(); im.save(buf, "PNG"); buf.seek(0); buf.name = "src.png"
     r = cl.images.edit(model="gpt-image-1", image=buf, prompt=STYLE, size="1024x1024", quality=qualite)
-    out = OUT / (f"{cid}.png" if k == 0 else f"{cid}_v{k+1}.png"); out.write_bytes(base64.b64decode(r.data[0].b64_json)); return out
+    out = (out_dir or OUT) / (f"{cid}.png" if k == 0 else f"{cid}_v{k+1}.png"); out.write_bytes(base64.b64decode(r.data[0].b64_json)); return out
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(); ap.add_argument("--ids", default=""); ap.add_argument("--variantes", type=int, default=1); ap.add_argument("--qualite", default="medium"); a = ap.parse_args()
