@@ -46,3 +46,7 @@ hugo-src/photos-originales/
 backend/budget/
 hugo-src/photos-sources/
 backend/actu/*.json
+
+# Métadonnées graphiques & scories d'édition
+*.xmp
+.hidden
