@@ -22,9 +22,21 @@ _DET = cv2.FaceDetectorYN.create(YUNET, "", (320, 320), 0.6, 0.3, 5000)
 
 
 def detecter_visages(im_rgb):
+    """[yunet-1600] YuNet décroche au-delà de ~2000 px (un portrait Commons en
+    pleine définition, visage à ~40 % du cadre, sort de son domaine d'échelle) :
+    on détecte sur une image réduite à 1600 px de côté long, puis on REMET les
+    boîtes dans le repère de l'image reçue — recadrer_visage() couperait sinon
+    à côté. En deçà de 1600 px, le chemin est celui d'avant, au pixel près."""
     bgr = cv2.cvtColor(np.array(im_rgb), cv2.COLOR_RGB2BGR); H, W = bgr.shape[:2]
-    _DET.setInputSize((W, H)); _, faces = _DET.detect(bgr)
-    return [tuple(int(v) for v in f[:4]) for f in (faces if faces is not None else [])]
+    e = 1600.0 / max(W, H)
+    if e < 1.0:
+        bgr = cv2.resize(bgr, (int(W * e), int(H * e)), interpolation=cv2.INTER_AREA)
+        _DET.setInputSize((int(W * e), int(H * e)))
+    else:
+        e = 1.0
+        _DET.setInputSize((W, H))
+    _, faces = _DET.detect(bgr)
+    return [tuple(int(v / e) for v in f[:4]) for f in (faces if faces is not None else [])]
 
 
 def commons(q, n=25):
