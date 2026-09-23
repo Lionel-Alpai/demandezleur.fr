@@ -7,7 +7,7 @@ candidat_id: "sylvain-durif"
 initiales: "SD"
 parti: "Elvita"
 parti_court: "Elvita"
-famille: "sans-source-officielle"
+famille: "non_classe"
 couleur_fond: "#2a2a2a"
 date_declaration: "23 août 2026"
 sans_source_officielle: true

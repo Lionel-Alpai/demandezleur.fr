@@ -34,9 +34,16 @@
     "couleur": "#2f4fa8",
     "ton": "ton_extreme_droite"
   },
+  "non_classe": {
+    "libelle": "Non classé",
+    "couleur": "#8a8a8a",
+    "ton": null
+  },
   "sans-source-officielle": {
-    "libelle": "Sans programme publié",
-    "couleur": "#2a2a2a",
-    "ton": "ton_sans-source-officielle"
+    "libelle": "Non classé",
+    "couleur": "#8a8a8a",
+    "ton": null,
+    "herite": true,
+    "note": "Valeur héritée (avant le 23/09/2026) : lue comme non_classe + sans_source_officielle. Le sourçage vit dans le booléen sans_source_officielle, plus dans famille."
   }
 }

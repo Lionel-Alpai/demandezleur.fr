@@ -6,7 +6,9 @@
 </section>
 <div class="chips filtres" id="filtres-famille" role="group" aria-label="Filtrer par famille politique">
   <button class="chip selectionne" data-famille="">Tous</button>
-  {{ range $k, $f := site.Data.familles }}<button class="chip" data-famille="{{ $k }}"><span class="pastille famille-{{ $k }}"></span>{{ $f.libelle }}</button>{{ end }}
+  {{ range $k, $f := site.Data.familles }}{{ if not $f.herite }}<button class="chip" data-famille="{{ $k }}"><span class="pastille famille-{{ $k }}"></span>{{ $f.libelle }}</button>{{ end }}{{ end }}
+  {{- /* Le sourçage est une dimension À PART de la famille politique (booléen sans_source_officielle) */ -}}
+  {{ if where site.Data.candidats "sans_source_officielle" true }}<button class="chip" data-sans-source="1">Sans programme publié</button>{{ end }}
 </div>
 <div class="grille-candidats grille-large" id="grille-candidats">
   {{ range site.Data.candidats }}{{ partial "candidat-carte.html" (dict "c" . "mode" "lien") }}{{ end }}
