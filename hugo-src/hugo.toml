@@ -12,8 +12,8 @@ disableKinds = ["taxonomy", "term", "RSS"]
 
 # Mesure d'audience sans cookie (Umami). Vide = rien n'est chargé.
 [params.umami]
-  url = ""
-  siteId = ""
+  url = "https://stats.cassandria.space/script.js"
+  siteId = "bd40a63e-cce8-4f60-9a07-01c1f682fbe4"
 
 [markup.goldmark.renderer]
   unsafe = true
