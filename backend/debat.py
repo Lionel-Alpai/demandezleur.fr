@@ -77,17 +77,50 @@ TON_PAR_FAMILLE = {
     "droite": "ton_droite",
     "souverainistes": "ton_souverainiste",
     "extreme_droite": "ton_extreme_droite",
-    "sans-source-officielle": "ton_sans-source-officielle",
+    "non_classe": None,  # famille politique indéterminée : ton générique
 }
+
+# Brique demandez-leur-le-champ-famille-fait-double-emploi (23/09/2026) : `famille` ne porte
+# plus que l'APPARTENANCE POLITIQUE ; le MODE DE SOURÇAGE vit dans le seul booléen
+# `sans_source_officielle`. Ancienne valeur tolérée en lecture (fiches produites avant la
+# dissociation) : famille "sans-source-officielle" => famille "non_classe" + booléen vrai.
+FAMILLE_HERITEE_SANS_SOURCE = "sans-source-officielle"
+TON_SANS_SOURCE = "ton_sans-source-officielle"
+
+
+def normaliser_candidat(c: dict) -> dict:
+    """Rend un candidat à la forme dissociée (famille politique + booléen de sourçage)."""
+    c = dict(c)
+    if c.get("famille") == FAMILLE_HERITEE_SANS_SOURCE:
+        c["famille"] = "non_classe"
+        c["sans_source_officielle"] = True
+    c["sans_source_officielle"] = bool(c.get("sans_source_officielle"))
+    return c
+
+
+TON_GENERIQUE = "Sois convaincant, poli et fidèle à tes convictions."
+
+
+def _lire_ton(nom) -> str:
+    if not nom:
+        return ""
+    path = PROMPTS_DIR / f"{nom}.txt"
+    return path.read_text(encoding="utf-8") if path.exists() else ""
 
 
 def load_ton_famille(famille: str) -> str:
     """Charge le prompt de ton militant pour une famille politique."""
-    path = PROMPTS_DIR / f"{TON_PAR_FAMILLE.get(famille, 'ton_' + str(famille))}.txt"
-    # Fallback si le fichier spécifique à la famille n'existe pas
-    if not path.exists():
-        return "Sois convaincant, poli et fidèle à tes convictions."
-    return path.read_text(encoding="utf-8")
+    return _lire_ton(TON_PAR_FAMILLE.get(famille, "ton_" + str(famille))) or TON_GENERIQUE
+
+
+def ton_candidat(c: dict) -> str:
+    """Ton complet d'un candidat : ton de sa famille politique, puis, s'il n'a publié aucun
+    programme consultable, la consigne d'absence (les deux dimensions se composent)."""
+    c = normaliser_candidat(c)
+    ton = load_ton_famille(c.get("famille", ""))
+    if c["sans_source_officielle"]:
+        ton = ton.rstrip() + "\n\n" + _lire_ton(TON_SANS_SOURCE)
+    return ton
 
 
 def randomiser_ordre(candidats_ids: list[str]) -> list[str]:
@@ -155,7 +188,7 @@ def construire_prompt_debat(
         template = load_prompt("base_ouverture")
     
     # Charger le ton de la famille politique
-    ton = load_ton_famille(candidat["famille"])
+    ton = ton_candidat(candidat)
     
     # Formater l'historique (en excluant le candidat lui-même s'il a déjà parlé)
     historique_txt = formater_historique(historique, exclure_candidat=candidat["id"])
@@ -405,5 +438,5 @@ def charger_candidat(candidat_id: str) -> dict:
         tous = json.load(f)
     for c in tous:
         if c["id"] == candidat_id:
-            return c
+            return normaliser_candidat(c)
     raise ValueError(f"Candidat inconnu : {candidat_id}")

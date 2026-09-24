@@ -112,9 +112,11 @@
     filtres.addEventListener('click', function (ev) {
       var chip = ev.target.closest('.chip'); if (!chip) return;
       var fam = chip.getAttribute('data-famille') || '';
+      var sansSource = chip.hasAttribute('data-sans-source');
       filtres.querySelectorAll('.chip').forEach(function (c) { c.classList.toggle('selectionne', c === chip); });
       document.querySelectorAll('#grille-candidats .carte-candidat').forEach(function (carte) {
-        carte.hidden = !!fam && carte.getAttribute('data-famille') !== fam;
+        carte.hidden = sansSource ? !carte.hasAttribute('data-sans-source')
+                                  : (!!fam && carte.getAttribute('data-famille') !== fam);
       });
     });
   }

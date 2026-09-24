@@ -151,25 +151,22 @@ def search_corpus(candidat_id: str, query: str, top_k: int = 3, window: int = No
 
 def load_prompts(candidat_id: str):
     """Charge le prompt de base et le ton politique du candidat (source : candidats.json)."""
-    from debat import charger_candidat, TON_PAR_FAMILLE
+    from debat import charger_candidat, ton_candidat
     try:
         c = charger_candidat(candidat_id)
     except (ValueError, FileNotFoundError):
         return None, None, None
     meta = {"nom": c["nom"], "parti": c.get("parti", ""), "famille": c.get("famille", ""),
-            "ton_file": TON_PAR_FAMILLE.get(c.get("famille"), "ton_" + str(c.get("famille"))) + ".txt"}
+            "sans_source_officielle": c.get("sans_source_officielle", False)}
     
     base_prompt = ""
     if os.path.exists(BASE_DIR / "prompts" / "base.txt"):
         with open(BASE_DIR / "prompts" / "base.txt", "r", encoding="utf-8") as f:
             base_prompt = f.read()
     
-    ton_content = ""
-    ton_path = str(BASE_DIR / "prompts" / meta['ton_file'])
-    if os.path.exists(ton_path):
-        with open(ton_path, "r", encoding="utf-8") as f:
-            ton_content = f.read()
-            
+    # Ton = famille politique + consigne d'absence de programme si besoin (debat.ton_candidat)
+    ton_content = ton_candidat(c)
+
     return base_prompt, ton_content, meta
 
 from fastapi import Request
