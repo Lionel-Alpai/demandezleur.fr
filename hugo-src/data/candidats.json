@@ -528,5 +528,38 @@
     "photo_source": "/img/candidats/sylvain-durif.webp",
     "portrait": true,
     "photo_type": "portrait"
+  },
+  {
+    "id": "gilles-platret",
+    "slug": "gilles-platret",
+    "nom": "Gilles Platret",
+    "initiales": "GP",
+    "parti": "Divers droite",
+    "parti_court": "DVD",
+    "famille": "droite",
+    "couleur_fond": "#1a2744",
+    "date_declaration": "8 octobre 2026",
+    "photo": "/img/portraits/gilles-platret.webp",
+    "photo_credit": "Mpmpmp — Wikimedia Commons, CC BY-SA 4.0 (2014)",
+    "note": "Maire divers droite de Chalon-sur-Saône ; candidature annoncée lors d'un meeting le 8 octobre 2026.",
+    "sources": [
+      "Gilles Platret - Wikipedia",
+      "Présidentielle 2027 : « La guerre civile a déjà commencé », le maire divers droite de Chalon-sur-Saône Gilles Platret annonce sa candidature",
+      "Présidentielle 2027 : le maire de Chalon-sur-Saône Gilles Platret annonce sa candidature - CNEWS",
+      "Présidentielle 2027 : il n’y avait pas assez de candidats à droite, en voilà un de plus !",
+      "Gilles Platret mise sur la présidentielle de 2027 : ses propositions pourraient changer le travail et les libertés",
+      "Gilles Platret, maire (LR) de Chalon-sur-Saône : la laïcité en bandoulière et adepte du buzz médiatique",
+      "Présidentielle 2027 : Gilles Platret, maire de Chalon-sur-Saône, annonce sa candidature devant plusieurs centaines de partisans et affirme que \"la guerre civile a déjà commencé en France\"",
+      "PRÉSIDENTIELLES 2027: Gilles PLATRET lance sa candidature aux Présidentielles",
+      "Présidentielles 2027 – Gilles Platret : une candidature de combat, de vérité",
+      "Présidentielle 2027 : Gilles Platret, maire de Chalon-sur-Saône, annonce sa candidature",
+      "Présidentielle 2027 : Gilles Platret, le maire de Chalon, se lance dans la course nationale",
+      "Présidentielle 2027 : le maire de Chalon-sur-Saône Gilles Platret s’est lancé dans la course à l’Élysée",
+      "Éric Zemmour et la candidature de Gilles Platret : enjeux et perspectives pour 2027"
+    ],
+    "sans_source_officielle": true,
+    "photo_source": null,
+    "portrait": true,
+    "photo_type": "portrait"
   }
 ]

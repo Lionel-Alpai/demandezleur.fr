@@ -19,12 +19,17 @@ EXCLUS = ("wikipedia.org", "facebook.com", "x.com", "twitter.com", "youtube.com"
 def norm(t): return re.sub(r"\s+", " ", unicodedata.normalize("NFKD", t or "").encode("ascii", "ignore").decode().lower()).strip()
 
 
+DERNIER_KO = ""  # derniere erreur SearXNG vue (detail du motif de sortie)
+
+
 def chercher(q, n):
+    global DERNIER_KO
     try:
-        out = subprocess.run(["searxng", q, "--json", "--n", str(n * 2), "--language", "fr"], capture_output=True, text=True, timeout=90).stdout
-        res = json.loads(out); res = res if isinstance(res, list) else res.get("results", [])
+        p = subprocess.run(["searxng", q, "--json", "--n", str(n * 2), "--language", "fr"], capture_output=True, text=True, timeout=90)
+        if p.returncode != 0: raise RuntimeError(f"rc {p.returncode} {(p.stderr or '').strip()[:120]}")
+        res = json.loads(p.stdout); res = res if isinstance(res, list) else res.get("results", [])
     except Exception as e:
-        print("  searxng KO", str(e)[:60]); return []
+        DERNIER_KO = str(e)[:160]; print("  searxng KO", str(e)[:60]); return None
     vus, ok = set(), []
     for r in res:
         u = r.get("url", "")
@@ -70,14 +75,25 @@ async def main():
     requetes = ([f"{par_id[i]['nom']} {m_now} 2026" for i in ids] + [f"{par_id[i]['nom']} {m_prev} 2026 déclaration" for i in ids]
                 + [f"{par_id[i]['nom']} a déclaré" for i in ids] + [f"{t.strip()} {m_now} 2026" for t in a.themes.split(",") if t.strip()])
     arts, vus = [], set()
+    searxng_ok, searxng_ko = 0, 0
     for q in requetes:
-        for r in chercher(q, a.n):
+        res = chercher(q, a.n)
+        if res is None:
+            searxng_ko += 1; continue
+        searxng_ok += 1
+        for r in res:
             if r["url"] in vus: continue
             vus.add(r["url"]); pg = lire(r["url"])
             if pg and len(pg["texte"]) > 500:
                 arts.append({"url": r["url"], "media": media(r["url"]), "titre": pg["titre"] or r.get("title", ""), "date": pg["date"], "texte": pg["texte"]})
     print(f"{len(arts)} articles lus ({sum(1 for x in arts if any(m in x['media'] for m in REFERENCE))} de référence)")
-    if not arts: return
+    print(f"searxng : {searxng_ok} requete(s) OK, {searxng_ko} KO sur {len(requetes)}")
+    if not arts:
+        if searxng_ko and not searxng_ok:
+            print(f"SEARXNG_INJOIGNABLE : {searxng_ko}/{len(requetes)} requetes KO, derniere erreur : {DERNIER_KO}")
+            sys.exit(3)
+        print(f"RIEN_DE_NEUF : SearXNG repond ({searxng_ok} requete(s) OK), aucun article retenu")
+        return
     liste = ", ".join(f"{c['id']} ({c['nom']})" for c in cands)
     jour = OUT / f"{date.today().isoformat()}.json"; doc = json.loads(jour.read_text(encoding="utf-8")) if jour.exists() else {"jour": date.today().isoformat(), "entrees": []}
     existants = {e["id"]: e for e in doc["entrees"]}
