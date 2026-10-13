@@ -1,7 +1,9 @@
 # demandezleur.fr — politique d'exploration
 #
 # Ce site publie les programmes officiels des candidats et permet de les
-# interroger. Les pages sont ouvertes à l'exploration : c'est cohérent avec ce
+# interroger. Les pages sont ouvertes à l'exploration, moteurs de recherche
+# comme assistants IA (Googlebot, Bingbot, GPTBot, OAI-SearchBot, ClaudeBot,
+# PerplexityBot, Google-Extended, Applebot…) : c'est cohérent avec ce
 # qu'annonce /a-propos/ — prompts publics, code ouvert, sources citées.
 #
 # Deux réserves, et elles sont volontaires :
@@ -14,12 +16,16 @@
 # n'engagent pas les candidats réels et ne doivent pas être citées comme des
 # déclarations authentiques. Elles ne figurent d'ailleurs dans aucune page
 # statique : /d/ charge un débat partagé par l'API, un robot n'y voit qu'un
-# gabarit vide. Le contenu indexable de ce site est constitué des fiches, des
-# sources et des pages d'explication — pas des propos simulés.
+# gabarit vide (la page est en noindex). Le contenu indexable de ce site est
+# constitué des fiches, des sources et des pages d'explication — pas des
+# propos simulés.
+#
+# Résumé pensé pour les modèles de langage : {{ .Site.BaseURL }}llms.txt
+# (texte complet : {{ .Site.BaseURL }}llms-full.txt)
 
 User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /admin/
 
-Sitemap: https://demandezleur.fr/sitemap.xml
+Sitemap: {{ .Site.BaseURL }}sitemap.xml

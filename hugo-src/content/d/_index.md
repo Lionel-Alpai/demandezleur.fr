@@ -4,4 +4,5 @@ description: "Un débat entre candidats à la présidentielle 2027, mené sur de
 type: "debat"
 layout: "partage"
 css: ["debat"]
+noindex: true   # [dl-seo 13/10/2026] gabarit vide sans JS (le debat est charge par l API) : hors index, hors sitemap
 ---

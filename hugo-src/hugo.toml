@@ -3,6 +3,8 @@ languageCode = "fr"
 title = "demandezleur.fr — Interrogez leurs programmes"
 theme = "demandezleur"
 disableKinds = ["taxonomy", "term", "RSS"]
+# [dl-seo 13/10/2026] robots.txt rendu par le gabarit layouts/robots.txt (cite llms.txt) — plus de static/robots.txt.
+enableRobotsTXT = true
 
 [params]
   description = "Posez vos questions aux programmes officiels des candidats à la présidentielle 2027, et faites-les débattre. Réponses sourcées, prompts publics, code ouvert, aucun traceur."
@@ -22,3 +24,28 @@ disableKinds = ["taxonomy", "term", "RSS"]
 [markup.highlight]
   noClasses = false
   codeFences = true
+
+# ── [dl-seo 13/10/2026] ────────────────────────────────────────────────────
+# lastmod du sitemap : date de modification du fichier source (sinon aucune
+# page n'en portait), puis lastmod/date du front matter.
+[frontmatter]
+  lastmod = [":fileModTime", "lastmod", "date", "publishDate"]
+
+# llms.txt (convention llmstxt.org) : la carte du site pour les assistants IA,
+# et llms-full.txt le texte integral — generes par Hugo a chaque build, donc
+# toujours alignes sur les pages publiees (gabarits index.llms.txt / index.llmsfull.txt).
+# RSS reste desactive (disableKinds) : la liste des sorties de l'accueil ne le cite pas.
+[outputs]
+  home = ["HTML", "llms", "llmsfull"]
+
+[outputFormats.llms]
+  mediaType = "text/plain"
+  baseName = "llms"
+  isPlainText = true
+  notAlternative = true
+
+[outputFormats.llmsfull]
+  mediaType = "text/plain"
+  baseName = "llms-full"
+  isPlainText = true
+  notAlternative = true

@@ -2,6 +2,7 @@
 title: "Mentions légales"
 type: "page"
 layout: "single"
+description: "Éditeur, hébergeur, localisation des données, données personnelles et contact du site demandezleur.fr."
 ---
 
 ## Éditeur du site

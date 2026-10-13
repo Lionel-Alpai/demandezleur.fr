@@ -1,0 +1,19 @@
+# demandezleur.fr — Interrogez leurs programmes
+
+> {{ .Site.Params.description }}
+
+demandezleur.fr est un site citoyen indépendant (éditeur : Lionel Denis, personne physique, à titre non professionnel — voir {{ "mentions-legales/" | absURL }}). Il représente chaque candidat déclaré à la présidentielle française de 2027 par une IA qui répond UNIQUEMENT à partir de ses documents officiels (programme, site de campagne, déclaration de candidature) et cite ses sources. Les candidats sans programme consultable sont signalés comme tels et répondent à partir de sources tierces listées. Le site ne conseille pas un vote, ne classe pas les candidats, ne trace pas ses visiteurs. Les réponses et débats sont GÉNÉRÉS automatiquement : ils n'engagent pas les candidats réels et ne doivent pas être cités comme des déclarations authentiques. Site en français.
+
+Ce fichier suit la convention llms.txt : une liste des pages du site avec, pour chacune, ce qu'elle dit. Le texte intégral des pages est dans {{ "llms-full.txt" | absURL }}.
+
+## Les candidats ({{ len .Site.Data.candidats }} déclarés, ordre de déclaration)
+{{ range .Site.Data.candidats }}- [{{ .nom }}]({{ printf "candidats/%s/" .slug | absURL }}){{ with .parti }} — {{ . }}{{ end }}{{ if .sans_source_officielle }} — aucun programme consultable (sources tierces){{ else }}{{ if eq .resume_statut "valide" }}{{ with .resume }} : {{ . }}{{ end }}{{ end }}{{ end }}
+{{ end }}
+## Le site
+- [Tous les candidats]({{ "candidats/" | absURL }}) : la liste des candidats déclarés, filtrable par famille politique ; chaque fiche permet d'interroger le programme.
+- [Lancer un débat]({{ "debat/" | absURL }}) : faire débattre 2 à 5 candidats sur un sujet, l'internaute mène le débat ; mode Arène avec garde-fou (affirmations sur un adversaire vérifiées, non étayées marquées, fausses retirées).
+{{ range where .Site.RegularPages "Section" "ne" "candidats" }}{{ if and (not .Params.noindex) (ne .Section "d") }}- [{{ .Title }}]({{ .Permalink }}){{ with .Description }} : {{ . }}{{ end }}
+{{ end }}{{ end }}
+## Optional
+- [Plan du site]({{ "sitemap.xml" | absURL }})
+- [Code source du site](https://github.com/Lionel-Alpai/demandezleur.fr) : code ouvert, prompts publics.

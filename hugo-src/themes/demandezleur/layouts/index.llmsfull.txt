@@ -1,0 +1,27 @@
+# demandezleur.fr — texte intégral du site ({{ .Site.BaseURL }})
+
+> {{ .Site.Params.description }}
+
+Éditeur : Lionel Denis, personne physique, à titre non professionnel ({{ "mentions-legales/" | absURL }}). Généré par le site lui-même à chaque publication ; la version courte est {{ "llms.txt" | absURL }}. Les réponses et débats produits par le site sont générés automatiquement par un modèle de langage à partir de documents publics : ils n'engagent pas les candidats réels.
+{{ range .Site.Data.candidats }}
+
+---
+
+# {{ .nom }}
+URL : {{ printf "candidats/%s/" .slug | absURL }}
+{{ with .parti }}Parti ou étiquette : {{ . }}{{ end }}
+{{ with index $.Site.Data.familles .famille }}Famille politique : {{ .libelle }}{{ end }}
+{{ if .sans_source_officielle }}Ce candidat n'a publié aucun programme consultable : la fiche est construite à partir de sources tierces vérifiables, listées ci-dessous. Elle ne présente pas un programme officiel.{{ else }}{{ if eq .resume_statut "valide" }}{{ with .resume }}Résumé du programme (rédigé par le site, validé par l'éditeur) : {{ . }}{{ end }}{{ end }}{{ end }}
+{{ with .sources }}Documents à partir desquels l'IA répond :
+{{ range . }}- {{ . }}
+{{ end }}{{ end }}{{ end }}
+{{ range where .Site.Pages "Kind" "in" (slice "section" "page" "home") }}{{ if and (not .Params.noindex) (ne .Section "candidats") (ne .Section "d") }}
+
+---
+
+# {{ .Title }}
+URL : {{ .Permalink }}
+{{ with .Description }}Résumé : {{ . }}{{ end }}
+
+{{ .Plain | replaceRE "\n{3,}" "\n\n" }}
+{{ end }}{{ end }}
