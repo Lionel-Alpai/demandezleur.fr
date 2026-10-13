@@ -594,5 +594,38 @@
     "photo_source": null,
     "portrait": true,
     "photo_type": "portrait"
+  },
+  {
+    "id": "francois-ruffin",
+    "slug": "francois-ruffin",
+    "nom": "François Ruffin",
+    "initiales": "FR",
+    "parti": "Debout !",
+    "parti_court": "Debout !",
+    "famille": "gauche",
+    "couleur_fond": "#331a1a",
+    "date_declaration": "1 avril 2025",
+    "photo": "/img/portraits/francois-ruffin.webp",
+    "photo_credit": "Thinkerview — Wikimedia Commons, CC BY-SA 4.0 (2022)",
+    "note": "Député de la Somme depuis 2017, président de Debout ! (anciennement Picardie debout !, renommé en 2025). Annonce sa candidature le 1er avril 2025 lors d'un meeting à Montreuil (Ouest-France 1er avril 2025, HuffPost 2 avril 2025), dans le cadre d'une candidature unique à gauche ; le 12 mai 2026 il précise « s'il n'y a pas de primaire, moi j'y vais » (LCP). La primaire de la gauche unitaire est de facto abandonnée à partir de juillet 2026 (Le Monde, 11 juillet 2026 : Clémentine Autain prend acte de son échec ; Wikipédia « Primaire de la gauche unitaire de 2026 ») : sa condition est donc remplie et sa candidature est ferme, hors primaire — Wikipédia « Candidatures à l'élection présidentielle française de 2027 » (relu le 13/10/2026) le classe parmi les candidats déclarés hors primaire, et la presse d'octobre 2026 le nomme « candidat Debout à l'élection présidentielle » (Libération 05/10/2026, BFMTV 09/10/2026, L'Obs 12/10/2026). La primaire socialiste du 11/10/2026 (gagnée par Raphaël Glucksmann) est un autre scrutin, auquel il n'a pas participé.",
+    "sources": [
+      "Wikipédia (01-wikipedia-bio.txt)",
+      "LCP (02-declaration-lcp.txt)",
+      "Wikipédia (programme-tiers-01-wikipedia-positions.txt)",
+      "L'Obs (programme-tiers-04-nouvelobs-moratoire-centres-donnees.txt)",
+      "Franceinfo (programme-tiers-05-franceinfo-resolution-souverainete-numerique.txt)",
+      "Le HuffPost (programme-tiers-03-huffpost-lancement-campagne-montreuil.txt)",
+      "TF1 Info (programme-tiers-08-tf1-parcours-candidature.txt)",
+      "L'Humanité (programme-tiers-09-humanite-rassemblement-derailleurs.txt)",
+      "Le Télégramme (programme-tiers-12-letelegramme-lyceens-education-parcoursup.txt)",
+      "CNews (programme-tiers-06-cnews-propositions-retraites-penibilite.txt)",
+      "Wikipédia (programme-tiers-02-wikipedia-candidature.txt)",
+      "BFMTV (programme-tiers-07-bfmtv-initiatives-villepin.txt)",
+      "Le Parisien (programme-tiers-10-leparisien-primaire-regrets.txt)"
+    ],
+    "sans_source_officielle": true,
+    "photo_source": null,
+    "portrait": true,
+    "photo_type": "portrait"
   }
 ]
