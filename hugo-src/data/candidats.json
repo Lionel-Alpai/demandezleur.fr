@@ -561,5 +561,38 @@
     "photo_source": null,
     "portrait": true,
     "photo_type": "portrait"
+  },
+  {
+    "id": "marine-tondelier",
+    "slug": "marine-tondelier",
+    "nom": "Marine Tondelier",
+    "initiales": "MT",
+    "parti": "Les Écologistes",
+    "parti_court": "LE",
+    "famille": "ecologistes",
+    "couleur_fond": "#1a3320",
+    "date_declaration": "22 octobre 2025",
+    "photo": "/img/portraits/marine-tondelier.webp",
+    "photo_credit": "Selbymay — Wikimedia Commons, CC BY 4.0 (2023)",
+    "note": "Candidature annoncée le 22 octobre 2025 (franceinfo) dans le cadre d'une primaire de la gauche ; la primaire ayant avorté, Les Écologistes l'ont désignée candidate à l'élection présidentielle le 21 septembre 2026 (Le Monde, 23 septembre 2026)",
+    "sources": [
+      "Wikipédia — 01-wikipedia-bio.txt",
+      "Le Nouvel Obs — 04-declaration-nouvelobs.txt",
+      "France Bleu Nord — programme-tiers-04-francebleu-littoraux.txt",
+      "Brut — programme-tiers-05-brut-sante-environnementale.txt",
+      "Wikipédia (Prises de position) — programme-tiers-01-wikipedia-positions.txt",
+      "Huffington Post — programme-tiers-10-huffingtonpost-conge-climatique.txt",
+      "Révolution Permanente — programme-tiers-09-revolutionpermanente-candidature-critique.txt",
+      "Midi Libre — programme-tiers-06-midilibre-sanctionner-mensonges.txt",
+      "franceinfo — programme-tiers-03-franceinfo-declaration.txt",
+      "BFMTV — programme-tiers-07-bfmtv-primaire-responsabilites.txt",
+      "Orange Actualités — programme-tiers-08-orange-primaire-gauche.txt",
+      "Huffington Post — programme-tiers-11-huffingtonpost-candidature-alternative.txt",
+      "Orange Actualités — programme-tiers-12-orange-reaction-primaire.txt"
+    ],
+    "sans_source_officielle": true,
+    "photo_source": null,
+    "portrait": true,
+    "photo_type": "portrait"
   }
 ]
