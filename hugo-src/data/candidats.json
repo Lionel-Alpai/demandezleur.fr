@@ -627,5 +627,38 @@
     "photo_source": null,
     "portrait": true,
     "photo_type": "portrait"
+  },
+  {
+    "id": "raphael-glucksmann",
+    "slug": "raphael-glucksmann",
+    "nom": "Raphaël Glucksmann",
+    "initiales": "RG",
+    "parti": "Place publique",
+    "parti_court": "PP",
+    "famille": "gauche",
+    "couleur_fond": "#331a1a",
+    "date_declaration": "23 août 2026",
+    "photo": "/img/portraits/raphael-glucksmann.webp",
+    "photo_credit": "Mathieu Delmestre / Wikimedia Commons — Domaine public (2024)",
+    "note": "Co-président de Place publique, député européen. Candidature à la présidentielle annoncée le 23 août 2026 (TF1, Le Monde) dans le cadre de la primaire socialiste ; élu dès le premier tour de cette primaire le 11 octobre 2026 (Libération, 11 octobre 2026), cités par Wikipédia « Candidatures à l'élection présidentielle française de 2027 » — candidature FERME.",
+    "sources": [
+      "Wikipédia (01-wikipedia-bio.txt)",
+      "TF1 Info (02-declaration-tf1.txt)",
+      "Wikipédia (programme-tiers-01-wikipedia-positions.txt)",
+      "TF1 Info (programme-tiers-03-tf1-candidature-primaire.txt)",
+      "Public Sénat (programme-tiers-07-publicsenat-primaire-debat.txt)",
+      "France 24 (programme-tiers-11-france24-candidat-investi-programme.txt)",
+      "HuffPost (programme-tiers-04-huffpost-candidature-primaire.txt)",
+      "BFMTV (programme-tiers-06-bfmtv-economie-guerre.txt)",
+      "Sud Ouest (programme-tiers-12-sudouest-scrutin-gagnants-perdants.txt)",
+      "France Inter (programme-tiers-08-franceinter-victoire-primaire.txt)",
+      "Orange Actualités (programme-tiers-09-orange-incident-paris.txt)",
+      "La Dépêche (programme-tiers-10-ladepeche-primaire-vainqueur.txt)",
+      "franceinfo (programme-tiers-05-franceinfo-fonds-defense.txt)"
+    ],
+    "sans_source_officielle": true,
+    "photo_source": null,
+    "portrait": true,
+    "photo_type": "portrait"
   }
 ]
