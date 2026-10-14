@@ -692,5 +692,36 @@
     "photo_source": null,
     "portrait": false,
     "photo_type": null
+  },
+  {
+    "id": "manolo-mlekuz",
+    "slug": "manolo-mlekuz",
+    "nom": "Manolo Mlekuz",
+    "initiales": "MM",
+    "parti": "Trajectoire",
+    "parti_court": "TRAJ",
+    "famille": "non_classe",
+    "couleur_fond": "#2a2a2a",
+    "date_declaration": "début 2026",
+    "photo": null,
+    "photo_credit": null,
+    "note": "Candidat de 20 ans du mouvement citoyen non partisan Trajectoire (trajectoire2027.fr) ; candidature présentée début 2026, tour de France en van pour réunir les 500 parrainages (Wikipédia « Candidatures à l'élection présidentielle française de 2027 », refs VL Média 11/08/2026, Valeurs actuelles 28/05/2026, RMC BFM 03/07/2026). Programme : assemblée constituante tirée au sort puis référendum, président « sans pouvoir ». Aucune étiquette gauche/droite : famille non_classe.",
+    "sources": [
+      "Trajectoire — L'équipe, trajectoire2027.fr/equipe (05-declaration-trajectoire-equipe.txt, programme-03-equipe.txt) et RMC BFM (02-declaration-rmc.txt)",
+      "Trajectoire — L'équipe, trajectoire2027.fr/equipe (05-declaration-trajectoire-equipe.txt, programme-03-equipe.txt)",
+      "Wikipédia — Candidatures à l'élection présidentielle française de 2027 (01-wikipedia-bio.txt), RMC BFM (02-declaration-rmc.txt) et Valeurs actuelles (03-declaration-valeursactuelles.txt)",
+      "Trajectoire — Programme officiel, trajectoire2027.fr/programme (programme-00-programme.txt) et RMC BFM (02-declaration-rmc.txt)",
+      "Trajectoire — Programme officiel, trajectoire2027.fr/programme (programme-00-programme.txt, 06-declaration-trajectoire-programme.txt)",
+      "Trajectoire — Programme officiel, trajectoire2027.fr/programme (programme-00-programme.txt, programme-01-index.txt) et RMC BFM (02-declaration-rmc.txt)",
+      "Trajectoire — Accueil, trajectoire2027.fr (programme-01-index.txt) et RMC BFM (02-declaration-rmc.txt)",
+      "Trajectoire — Programme officiel, trajectoire2027.fr/programme (programme-00-programme.txt, programme-01-index.txt)",
+      "Trajectoire — Le tour de France, trajectoire2027.fr/le-tour-de-france (programme-02-le-tour-de-france.txt)",
+      "Trajectoire — Accueil, trajectoire2027.fr (programme-01-index.txt) et Valeurs actuelles (03-declaration-valeursactuelles.txt)",
+      "RMC BFM — Les Grandes Gueules, 3 juillet 2026 (02-declaration-rmc.txt) et Trajectoire — L'équipe (programme-03-equipe.txt)"
+    ],
+    "sans_source_officielle": false,
+    "photo_source": null,
+    "portrait": false,
+    "photo_type": null
   }
 ]
