@@ -660,5 +660,37 @@
     "photo_source": null,
     "portrait": true,
     "photo_type": "portrait"
+  },
+  {
+    "id": "mira-markovic",
+    "slug": "mira-markovic",
+    "nom": "Mira Markovic",
+    "initiales": "MM",
+    "parti": "Parti animaliste",
+    "parti_court": "PA",
+    "famille": "non_classe",
+    "couleur_fond": "#2a2a2a",
+    "date_declaration": "2 octobre 2026",
+    "photo": null,
+    "photo_credit": null,
+    "note": "Candidature annoncée par le Parti animaliste le 2 octobre 2026.",
+    "sources": [
+      "Le bureau — Parti animaliste (sources/05-biographie-parti-animaliste.txt)",
+      "Présidentielle 2027 : qui est Mira Markovic, candidate du Parti animaliste ? — Le Parisien (sources/02-declaration-leparisien.txt)",
+      "Parti animaliste — Wikipédia (sources/programme-tiers-01-wikipedia-positions.txt)",
+      "Mira Markovic, des « surmulots » à l’Élysée — Chasses Éternelles (sources/programme-tiers-06-chasseseternelles-candidature-chasse-elevage.txt)",
+      "Présidentielle 2027 : «Si nous ne sommes pas là, personne ne parle des animaux», déplore Mira Markovic, la candidate du Parti animaliste — CNews (sources/programme-tiers-03-cnews-animaux-oublies-campagne.txt)",
+      "Douchka Markovic - Parti animaliste (sources/programme-tiers-09-partianimaliste-parcours-mesures-conseil-paris.txt)",
+      "Présidentielle 2027 : la candidate des « surmulots » veut interdire la chasse — SoChasse (sources/programme-tiers-05-sochasse-interdiction-chasse-programme.txt)",
+      "A chacun ses soucis, le sort des rats divise les élus parisiens — Quid.ma (sources/programme-tiers-11-quidma-debat-methodes-non-letales-rats-paris.txt)",
+      "Mira Markovic représentera le Parti animaliste à la présidentielle — Parti animaliste (sources/programme-tiers-08-partianimaliste-designation-candidate-presidentielle.txt)",
+      "Mira Markovic 2027 - Parti animaliste (sources/programme-tiers-10-partianimaliste-campagne-parrainages-animaux.txt)",
+      "Rats in Paris? No, just ‘big field mice’: Councillor sparks mirth — The Connexion (sources/programme-tiers-12-connexionfrance-conseil-paris-gestion-surmulots.txt)",
+      "Candidatures à l'élection présidentielle française de 2027 — Wikipédia (sources/programme-tiers-02-wikipedia-candidature.txt)"
+    ],
+    "sans_source_officielle": true,
+    "photo_source": null,
+    "portrait": false,
+    "photo_type": null
   }
 ]
