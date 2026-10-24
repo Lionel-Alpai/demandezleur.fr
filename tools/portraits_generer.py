@@ -7,6 +7,7 @@ from pathlib import Path
 from openai import OpenAI
 from PIL import Image, ImageDraw, ImageFont
 R = Path(__file__).resolve().parent.parent
+MODELE_IMAGE_EDIT = "gpt-image-1.5"  # point unique du modele images.edit (brique dl-fiche-candidat-s27-openai-refuse-images-edit-mo)
 SRC = R / "hugo-src/photos-sources"; OUT = R / "hugo-src/portraits"; OUT.mkdir(exist_ok=True)
 STYLE = ("Turn this photo into a bold graphic poster portrait for a televised political debate set, two-tone screen-print / risograph style. "
          "Face, hair and clothes rendered ONLY in navy blue (#0a1428) and off-white (#f4f6fb) halftone dots and ink; the ONLY red (#e53946) is a single flat rim light on one side of the face and shoulder — no red in the hair, no red background. "
@@ -20,7 +21,7 @@ def generer(cl, cid, k, qualite, src=None, out_dir=None):
     if src is None:
         p = json.loads((SRC / cid / "provenance.json").read_text(encoding="utf-8")); src = SRC / cid / p["choix"]
     im = Image.open(src).convert("RGB"); im.thumbnail((1024, 1024)); buf = io.BytesIO(); im.save(buf, "PNG"); buf.seek(0); buf.name = "src.png"
-    r = cl.images.edit(model="gpt-image-1", image=buf, prompt=STYLE, size="1024x1024", quality=qualite)
+    r = cl.images.edit(model=MODELE_IMAGE_EDIT, image=buf, prompt=STYLE, size="1024x1024", quality=qualite)
     out = (out_dir or OUT) / (f"{cid}.png" if k == 0 else f"{cid}_v{k+1}.png"); out.write_bytes(base64.b64decode(r.data[0].b64_json)); return out
 
 if __name__ == "__main__":

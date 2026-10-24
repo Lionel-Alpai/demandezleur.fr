@@ -49,6 +49,30 @@ CLE_VAR = os.environ.get("DL_CLE_VAR", "DEEPSEEK_API_KEY")
 # donc le fournisseur, il n'est jamais envoyé à l'aveugle.
 EXTRA_FOURNISSEUR = {"thinking": {"type": "disabled"}} if "deepseek" in BASE_URL else {}
 
+# Anthropic (endpoint compatible OpenAI, https://api.anthropic.com/v1) : sondes du 23/10/2026.
+#   - `temperature` REFUSÉ par claude-sonnet-5-5 (400) -> retiré ;
+#   - `thinking: disabled` refusé par Sonnet (400), accepté par Haiku ; Sonnet se coupe
+#     avec `between_tools` (sans quoi la réflexion avale max_tokens : contenu vide facturé) ;
+#   - response_format json_object REFUSÉ -> retiré, la consigne JSON passe dans le prompt
+#     (les appelants extraient le JSON de façon tolérante).
+ANTHROPIC = "anthropic.com" in BASE_URL
+CONSIGNE_JSON = "\n\nRéponds UNIQUEMENT par un objet JSON valide, sans texte ni balises autour."
+
+
+def _adapter_fournisseur(params: dict) -> dict:
+    """Ajuste les paramètres d'appel au fournisseur ; identité hors Anthropic."""
+    if not ANTHROPIC:
+        return params
+    params.pop("temperature", None)
+    mode = "disabled" if "haiku" in str(params.get("model", "")) else "between_tools"
+    params["extra_body"] = {**(params.get("extra_body") or {}), "thinking": {"type": mode}}
+    rf = params.pop("response_format", None)
+    if isinstance(rf, dict) and rf.get("type") == "json_object":
+        msgs = [dict(m) for m in params["messages"]]
+        msgs[-1]["content"] = str(msgs[-1]["content"]) + CONSIGNE_JSON
+        params["messages"] = msgs
+    return params
+
 BASE_DIR = Path(__file__).resolve().parent
 DEMO_DIR = BASE_DIR / "demo"
 DELAI_DEMO = 0.015  # secondes entre deux deltas rejoués
@@ -126,6 +150,7 @@ async def completer(messages: list, *, cle_demo, max_tokens: int, temperature: f
                   extra_body=EXTRA_FOURNISSEUR)
     if extra:
         params.update(extra)
+    params = _adapter_fournisseur(params)
     stream = await client().chat.completions.create(**params)
     deltas, p_tok, c_tok = [], 0, 0
     async for chunk in stream:
@@ -156,6 +181,7 @@ async def completer_texte(messages: list, *, cle_demo, max_tokens: int, temperat
                   extra_body=EXTRA_FOURNISSEUR)
     if extra:
         params.update(extra)
+    params = _adapter_fournisseur(params)
     rep = await client().chat.completions.create(**params)
     if getattr(rep, "usage", None) is not None:
         _compter(rep.usage, str(cle_demo[0]) if cle_demo else "autre")

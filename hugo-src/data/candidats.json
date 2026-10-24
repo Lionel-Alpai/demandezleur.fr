@@ -723,5 +723,41 @@
     "photo_source": null,
     "portrait": false,
     "photo_type": null
+  },
+  {
+    "id": "fabien-roussel",
+    "slug": "fabien-roussel",
+    "nom": "Fabien Roussel",
+    "initiales": "FR",
+    "parti": "Parti communiste français",
+    "parti_court": "PCF",
+    "famille": "gauche",
+    "couleur_fond": "#331a1a",
+    "date_declaration": "6 septembre 2026",
+    "photo": "/img/portraits/fabien-roussel.webp",
+    "photo_credit": "Zouhaïr Nakara — Wikimedia Commons, CC BY-SA 4.0 (2021)",
+    "note": "Secrétaire national du PCF depuis 2018, maire de Saint-Amand-les-Eaux, candidat en 2022 (2,28 %). Désigné candidat par le PCF lors d'une consultation interne le 6 septembre 2026 (Le Figaro, Libération, Ouest-France) ; le 4 octobre 2026, il déclare qu'il ne se retirera « jamais » au profit d'une autre formation (BFMTV). Slogan « Vivre ! ». Son site de campagne fabienroussel2027.fr ne publie pas de programme détaillé ; le 6 octobre 2026, il a présenté un plan pour la jeunesse (5 milliards d'euros pour les lycées, fin de Parcoursup).",
+    "sources": [
+      "Fabien Roussel — Wikipédia (sources/01-wikipedia-bio.txt)",
+      "Élection présidentielle : Fabien Roussel désigné candidat à 72% par les communistes — PCF, 6 septembre 2026 (sources/03-declaration-pcf.txt)",
+      "Fabien Roussel officiellement candidat du PCF à l'élection présidentielle de 2027 — LCP, 6 septembre 2026 (sources/02-declaration-lcp.txt)",
+      "Présidentielle : la candidature du communiste Fabien Roussel, une épine dans le pied de Jean-Luc Mélenchon ? — Public Sénat, 6 septembre 2026 (sources/04-declaration-publicsenat.txt)",
+      "Fabien Roussel — Wikipédia, 24 octobre 2026 (sources/programme-tiers-01-wikipedia-positions.txt)",
+      "Présidentielle 2027 : Fabien Roussel repart en campagne — Libération, 6 septembre 2026 (sources/programme-tiers-04-liberation-campagne-travail.txt)",
+      "Candidatures à l'élection présidentielle française de 2027 — Wikipédia, 24 octobre 2026 (sources/programme-tiers-02-wikipedia-candidature.txt)",
+      "Les communistes repartent à la conquête du pays derrière Fabien Roussel — L'Avant-Garde, 17 septembre 2026 (sources/programme-tiers-08-lavantgarde-totalenergies-souverainete.txt)",
+      "À la Fête de l’Humanité, Mélenchon et Roussel se livrent un duel de popularité — LCP, 12 septembre 2026 (sources/programme-tiers-09-lcp-fete-humanite-meeting.txt)",
+      "Présidentielle 2027 : adoubé par ses militants, le communiste Fabien Roussel officialise sa candidature en solitaire — Le Figaro, 6 septembre 2026 (sources/programme-tiers-03-lefigaro-candidature-solitaire.txt)",
+      "Présidentielle 2027 : Fabien Roussel déclare qu'il ne se retirera « jamais » au profit d'une autre formation politique — BFMTV, 4 octobre 2026 (sources/programme-tiers-05-bfmtv-maintien-candidature.txt)",
+      "Les ingrédients de Fabien Roussel pour se démarquer de Mélenchon et Glucksmann — La Lettre, 29 juin 2026 (sources/programme-tiers-07-lalettre-industrie-nucleaire-otan.txt)",
+      "Violences du 17 octobre : les couvre-feux sont un « aveu d’échec » du gouvernement, juge Fabien Roussel — Le Parisien, 20 octobre 2026 (sources/programme-tiers-06-leparisien-couvre-feux-social.txt)",
+      "Rapport de force à gauche — PCF, 14 octobre 2026 (sources/programme-tiers-10-pcf-plan-jeunesse-education.txt)",
+      "Fabien Roussel : \"Je mets en parallèle le gouvernement israélien de M. Netanyahu et le groupe terroriste du Hamas\" — The Times of Israel, 7 octobre 2026 (sources/programme-tiers-11-timesofisrael-diplomatie-proche-orient.txt)",
+      "Réunion des partis politiques à Matignon : « De qui se moque-t-on ? On a assisté à une réunion technique » déplore la gauche — Public Sénat, 22 octobre 2026 (sources/programme-tiers-12-publicsenat-matignon-urgences-sociales.txt)"
+    ],
+    "sans_source_officielle": true,
+    "photo_source": null,
+    "portrait": true,
+    "photo_type": "portrait"
   }
 ]
