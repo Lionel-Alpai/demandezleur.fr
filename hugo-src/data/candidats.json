@@ -759,5 +759,30 @@
     "photo_source": null,
     "portrait": true,
     "photo_type": "portrait"
+  },
+  {
+    "id": "benoit-mathieu",
+    "slug": "benoit-mathieu",
+    "nom": "Benoît Mathieu",
+    "initiales": "BM",
+    "parti": "Sans étiquette",
+    "parti_court": "SE",
+    "famille": "non_classe",
+    "couleur_fond": "#2a2a2a",
+    "date_declaration": "30 mars 2026",
+    "photo": null,
+    "photo_credit": null,
+    "note": "Candidat sans étiquette déclaré le 30 mars 2026, sillonnant les routes à vélo pour ses 500 parrainages. Programme écrit sur mathieu.wiki/programme : UNIQUEMENT démocratique (tirage au sort, RIC, nouvelle Constitution) — le candidat déclare explicitement n'avoir aucun programme partisan sur l'économie, le social, la santé ou la sécurité ; voir aussi /le-candidat pour la biographie.",
+    "sources": [
+      "Le Monde — Présidentielle 2027 : à vélo sur les routes de France (02-declaration-lemonde.txt)",
+      "RMC / BFMTV — Présidentielle 2027: à 27 ans, il sillonne la France à vélo (03-declaration-rmc-bfmtv.txt)",
+      "Radio France / ICI Bourgogne — Benoît Mathieu veut se présenter aux élections Présidentielles (04-declaration-radiofrance.txt)",
+      "Site officiel mathieu.wiki/programme — Programme 2027 (programme-00-programme.txt)",
+      "Site officiel mathieu.wiki/le-candidat — Le candidat (programme-01-le-candidat.txt)"
+    ],
+    "sans_source_officielle": false,
+    "photo_source": null,
+    "portrait": false,
+    "photo_type": null
   }
 ]
