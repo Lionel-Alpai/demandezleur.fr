@@ -1,4 +1,4 @@
-# llm.py — seul point d'accès au modèle (DeepSeek via SDK OpenAI).
+# llm.py — seul point d'accès au modèle (SDK Anthropic natif si DL_BASE_URL=anthropic.com, sinon SDK OpenAI : DeepSeek, Mistral).
 """
 Trois modes, choisis par la variable d'environnement DL_MODE :
   live    (défaut) : appel réseau, streaming.
@@ -16,6 +16,7 @@ import os
 import re
 import unicodedata
 from pathlib import Path
+from types import SimpleNamespace
 from typing import AsyncIterator, Callable, Optional
 
 from dotenv import load_dotenv
@@ -115,18 +116,85 @@ def _decouper(texte: str) -> list:
     return re.findall(r"\S+\s*", texte)
 
 
+_client_natif = None
+
+
+def client_natif():
+    """Client du SDK Anthropic natif (cache du prefixe) ; base_url par defaut du SDK."""
+    global _client_natif
+    if _client_natif is None:
+        from anthropic import AsyncAnthropic
+        _client_natif = AsyncAnthropic(api_key=os.environ.get(CLE_VAR, ""))
+    return _client_natif
+
+
+def _params_natifs(params: dict) -> dict:
+    """Traduit les parametres deja adaptes (_adapter_fournisseur) en appel Messages natif :
+    le(s) message(s) system deviennent UN bloc `system` marque cache_control ephemeral
+    (le prefixe stable de l'orateur est mis en cache) ; stream/stream_options disparaissent."""
+    msgs = [dict(m) for m in params["messages"]]
+    systeme = "\n\n".join(str(m["content"]) for m in msgs if m.get("role") == "system")
+    p = {"model": params["model"], "max_tokens": params["max_tokens"],
+         "messages": [m for m in msgs if m.get("role") != "system"]}
+    if systeme:
+        p["system"] = [{"type": "text", "text": systeme, "cache_control": {"type": "ephemeral"}}]
+    if params.get("extra_body"):
+        p["extra_body"] = params["extra_body"]
+    return p
+
+
+def _usage_natif(u):
+    """Usage natif -> forme lue par _compter (hit = lu du cache, miss = non cache)."""
+    lu = int(getattr(u, "cache_read_input_tokens", 0) or 0)
+    cree = int(getattr(u, "cache_creation_input_tokens", 0) or 0)
+    ent = int(getattr(u, "input_tokens", 0) or 0)
+    return SimpleNamespace(prompt_tokens=ent + lu + cree, completion_tokens=int(getattr(u, "output_tokens", 0) or 0),
+                           prompt_cache_hit_tokens=lu, prompt_cache_miss_tokens=ent,
+                           cache_creation_input_tokens=cree)
+
+
 def _compter(u, usage_nom: str):
-    """Enregistre l'appel au budget (cache hit/miss/sortie) ; jamais bloquant."""
+    """Enregistre l'appel au budget (cache hit/miss/creation/sortie) ; jamais bloquant."""
     try:
         import budget, rate_limiter
         hit = int(getattr(u, "prompt_cache_hit_tokens", 0) or 0)
+        cree = int(getattr(u, "cache_creation_input_tokens", 0) or 0)
         p_tok = int(getattr(u, "prompt_tokens", 0) or 0)
-        miss = int(getattr(u, "prompt_cache_miss_tokens", None) or max(0, p_tok - hit))
+        miss = getattr(u, "prompt_cache_miss_tokens", None)
+        miss = max(0, p_tok - hit - cree) if miss is None else int(miss)
         out = int(getattr(u, "completion_tokens", 0) or 0)
-        budget.enregistrer(hit, miss, out, usage_nom, pointe=rate_limiter.en_pointe())
-        logger.info("[COUT] %s hit=%d miss=%d out=%d", usage_nom, hit, miss, out)
+        budget.enregistrer(hit, miss, out, usage_nom, pointe=rate_limiter.en_pointe(), creation=cree)
+        logger.info("[COUT] %s hit=%d miss=%d creation=%d out=%d", usage_nom, hit, miss, cree, out)
     except Exception:
-        logger.debug("budget non enregistré", exc_info=True)
+        logger.debug("budget non enregistre", exc_info=True)
+
+
+async def _flux(params: dict):
+    """Flux unifie (delta, usage) : SDK natif si Anthropic, SDK OpenAI sinon (DeepSeek, Mistral)."""
+    if ANTHROPIC:
+        async with client_natif().messages.stream(**_params_natifs(params)) as flux:
+            async for d in flux.text_stream:
+                yield d, None
+            final = await flux.get_final_message()
+        yield "", _usage_natif(final.usage)
+        return
+    stream = await client().chat.completions.create(**params)
+    async for chunk in stream:
+        if getattr(chunk, "usage", None) is not None:
+            yield "", chunk.usage
+        if chunk.choices and chunk.choices[0].delta.content:
+            yield chunk.choices[0].delta.content, None
+
+
+async def _appel(params: dict):
+    """Appel non streame unifie -> (texte, usage)."""
+    if ANTHROPIC:
+        rep = await client_natif().messages.create(**_params_natifs(params))
+        texte = "".join(b.text for b in rep.content if getattr(b, "type", "") == "text")
+        return texte, _usage_natif(rep.usage)
+    rep = await client().chat.completions.create(**params)
+    texte = (rep.choices[0].message.content or "") if rep.choices else ""
+    return texte, getattr(rep, "usage", None)
 
 
 async def completer(messages: list, *, cle_demo, max_tokens: int, temperature: float,
@@ -151,14 +219,12 @@ async def completer(messages: list, *, cle_demo, max_tokens: int, temperature: f
     if extra:
         params.update(extra)
     params = _adapter_fournisseur(params)
-    stream = await client().chat.completions.create(**params)
     deltas, p_tok, c_tok = [], 0, 0
-    async for chunk in stream:
-        if getattr(chunk, "usage", None) is not None:
-            p_tok, c_tok = chunk.usage.prompt_tokens, chunk.usage.completion_tokens
-            _compter(chunk.usage, str(cle_demo[0]) if cle_demo else "autre")
-        if chunk.choices and chunk.choices[0].delta.content:
-            d = chunk.choices[0].delta.content
+    async for d, u in _flux(params):
+        if u is not None:
+            p_tok, c_tok = u.prompt_tokens, u.completion_tokens
+            _compter(u, str(cle_demo[0]) if cle_demo else "autre")
+        if d:
             deltas.append(d)
             yield d
     if usage_cb:
@@ -182,13 +248,12 @@ async def completer_texte(messages: list, *, cle_demo, max_tokens: int, temperat
     if extra:
         params.update(extra)
     params = _adapter_fournisseur(params)
-    rep = await client().chat.completions.create(**params)
-    if getattr(rep, "usage", None) is not None:
-        _compter(rep.usage, str(cle_demo[0]) if cle_demo else "autre")
-    texte = (rep.choices[0].message.content or "") if rep.choices else ""
+    texte, usage = await _appel(params)
+    if usage is not None:
+        _compter(usage, str(cle_demo[0]) if cle_demo else "autre")
     if MODE == "record":
         DEMO_DIR.mkdir(exist_ok=True)
         _chemin_fixture(cle_demo).write_text(json.dumps({"cle": list(cle_demo), "texte": texte, "deltas": _decouper(texte),
-            "usage": {"prompt_tokens": getattr(rep.usage, "prompt_tokens", 0), "completion_tokens": getattr(rep.usage, "completion_tokens", 0)},
+            "usage": {"prompt_tokens": getattr(usage, "prompt_tokens", 0), "completion_tokens": getattr(usage, "completion_tokens", 0)},
             "modele": MODELE_JUGE}, ensure_ascii=False, indent=1), encoding="utf-8")
     return texte

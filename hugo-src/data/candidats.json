@@ -784,5 +784,37 @@
     "photo_source": null,
     "portrait": false,
     "photo_type": null
+  },
+  {
+    "id": "olivier-becht",
+    "slug": "olivier-becht",
+    "nom": "Olivier Becht",
+    "initiales": "OB",
+    "parti": "Sans étiquette (apparenté groupe EPR)",
+    "parti_court": "SE",
+    "famille": "centre",
+    "couleur_fond": "#1a2744",
+    "date_declaration": "24 septembre 2026",
+    "photo": null,
+    "photo_credit": null,
+    "note": "Ancien ministre délégué chargé du Commerce extérieur (2022-2024), député du Haut-Rhin apparenté au groupe Ensemble pour la République (EPR). Se déclare candidat le 24 septembre 2026 dans Paris Match (« Le projet France »), cité par Wikipédia « Candidatures à l'élection présidentielle française de 2027 » (relu le 13/10/2026) — candidature ferme. Aucun programme officiel publié. Rédaction des blocs : n'attribuer au candidat AUCUNE motivation ou intention que la source ne dit pas (NOGO R3 du 25/09) ; une analyse de journaliste se cite comme telle. Collecte tierce : chercher ses PROPOSITIONS (entretiens Paris Match, ICI Alsace, France 3 Grand Est), ne jamais reprendre une URL déjà moissonnée par l'autre lot.",
+    "sources": [
+      "Wikipédia — Notice biographique d'Olivier Becht — sources/01-bio-fr-wikipedia-org.txt",
+      "Paris Match — Entretien exclusif de déclaration de candidature (24 septembre 2026) — sources/02-declaration-parismatch.txt",
+      "ICI Alsace — « Il faut refonder notre modèle » (24 septembre 2026) — sources/programme-tiers-04-ici-refondation-modele.txt",
+      "ICI Alsace — L'invité d'ICI Matin sur le prix des carburants (21 septembre 2026) — sources/programme-tiers-11-ici-carburants-energie.txt",
+      "Entrevue — « Olivier Becht se lance au nom de l'extrême centre » (27 septembre 2026) — sources/programme-tiers-08-entrevue-positionnement-centre.txt",
+      "Sud Radio — « Qui est Olivier Becht, cet ancien ministre qui se lance dans la course à la Présidentielle ? » (8 octobre 2026) — sources/programme-tiers-06-sudradio-propositions-campagne.txt",
+      "Paris Match — Annonce de candidature d'Olivier Becht (24 septembre 2026) — sources/programme-tiers-03-parismatch-annonce-candidature.txt",
+      "Vie publique — Déclaration d'Olivier Becht à l'Assemblée nationale sur la révision des traités de l'UE (28 novembre 2023) — sources/programme-tiers-12-viepublique-institutions-europeennes.txt",
+      "Valeurs actuelles — Entretien avec Olivier Becht sur la sécurité, l'immigration et la laïcité (19 octobre 2026) — sources/programme-tiers-05-valeursactuelles-securite-immigration.txt",
+      "Bluewin — « L'Alsacien Olivier Becht déclare sa candidature à la présidentielle » (24 septembre 2026) — sources/programme-tiers-09-bluewin-projet-france-territoires.txt",
+      "Infos-Dijon — « Le Mouvement Franche-Comté soutient Olivier Becht, candidat à la présidentielle » (4 octobre 2026) — sources/programme-tiers-10-infosdijon-federalisme-regions.txt",
+      "France 3 Grand Est / France Info — Déclaration de candidature d'Olivier Becht (24 septembre 2026) — sources/programme-tiers-07-france3-declaration-candidature.txt"
+    ],
+    "sans_source_officielle": true,
+    "photo_source": null,
+    "portrait": false,
+    "photo_type": null
   }
 ]

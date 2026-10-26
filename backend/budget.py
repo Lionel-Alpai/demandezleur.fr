@@ -15,6 +15,8 @@ from pathlib import Path
 
 DOSSIER = Path(__file__).resolve().parent / "budget"
 PRIX_USD_PAR_M = {"hit": 0.007, "miss": 0.22, "out": 0.66}
+# Sonnet 5.5 ($/M, lu le 25/10/2026) : lecture cache 0,20 · entree 2 · ecriture cache 2,5 (1,25x) · sortie 10.
+PRIX_ANTHROPIC = {"hit": 0.20, "miss": 2.0, "creation": 2.5, "out": 10.0}
 USD_EUR = float(os.environ.get("DL_USD_EUR", "0.92"))
 _verrou = threading.Lock()
 
@@ -41,10 +43,17 @@ def lire(jour=None) -> dict:
     return {"jour": p.stem, "eur": 0.0, "hit": 0, "miss": 0, "out": 0, "appels": 0, "par_usage": {}}
 
 
-def enregistrer(hit: int, miss: int, out: int, usage: str = "", pointe: bool = False) -> dict:
+def _anthropic() -> bool:
+    return "anthropic.com" in os.environ.get("DL_BASE_URL", "")
+
+
+def enregistrer(hit: int, miss: int, out: int, usage: str = "", pointe: bool = False, creation: int = 0) -> dict:
     """Ajoute un appel au compteur du jour ; retourne l'état."""
-    coef = 2.0 if pointe else 1.0
-    eur = coef * USD_EUR * (hit * PRIX_USD_PAR_M["hit"] + miss * PRIX_USD_PAR_M["miss"] + out * PRIX_USD_PAR_M["out"]) / 1_000_000
+    if _anthropic():  # tarif Anthropic : pas de majoration de pointe, ecriture de cache facturee a part
+        coef, t = 1.0, PRIX_ANTHROPIC
+    else:
+        coef, t = (2.0 if pointe else 1.0), {**PRIX_USD_PAR_M, "creation": PRIX_USD_PAR_M["miss"]}
+    eur = coef * USD_EUR * (hit * t["hit"] + miss * t["miss"] + creation * t["creation"] + out * t["out"]) / 1_000_000
     with _verrou:
         d = lire()
         d["eur"] = round(d["eur"] + eur, 6); d["hit"] += hit; d["miss"] += miss; d["out"] += out; d["appels"] += 1
