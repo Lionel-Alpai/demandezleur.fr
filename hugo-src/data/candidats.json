@@ -816,5 +816,42 @@
     "photo_source": null,
     "portrait": false,
     "photo_type": null
+  },
+  {
+    "id": "eric-zemmour",
+    "slug": "eric-zemmour",
+    "nom": "Éric Zemmour",
+    "initiales": "ÉZ",
+    "parti": "Reconquête",
+    "parti_court": "REC",
+    "famille": "extreme_droite",
+    "couleur_fond": "#3a1a1a",
+    "date_declaration": "17 septembre 2026",
+    "photo": "/img/portraits/eric-zemmour.webp",
+    "photo_credit": "Wikimedia Commons — CC0 1.0 (2022)",
+    "note": "Président de Reconquête depuis 2021, candidat en 2022 (4e, 7,07 %). Candidature 2027 annoncée sur BFM TV le 17 septembre 2026 (BFMTV, franceinfo). Reconquête ne publie pas de programme consultable en ligne. Depuis sa déclaration, il a notamment proposé de remplacer des travailleurs immigrés par des robots, proposition jugée irréaliste par La Dépêche du Midi et Le Dauphiné libéré (septembre 2026).",
+    "sources": [
+      "Wikipédia — Éric Zemmour (sources/01-wikipedia-bio.txt)",
+      "franceinfo — Éric Zemmour annonce qu'il sera candidat à l'élection présidentielle, 17 septembre 2026 (sources/02-declaration-franceinfo.txt)",
+      "BFMTV — « Je serai candidat » : Éric Zemmour annonce sur BFMTV qu'il se présentera à l'élection présidentielle, 17 septembre 2026 (sources/03-declaration-bfmtv.txt)",
+      "Attac France — Les Possibles n° 31, synthèse des propositions de Reconquête, 14 avril 2022 (sources/programme-tiers-11-attac-decryptage-economie-social-ecole-armees.txt)",
+      "Académie des technologies — Éric Zemmour, transition énergétique, numérique et industrie, 8 mars 2022 (sources/programme-tiers-10-academietechnologies-energie-nucleaire-numerique-industrie.txt)",
+      "TF1 Info — Présidentielle 2027 : Éric Zemmour ouvre la voie à une candidature, 13 septembre 2026 (sources/programme-tiers-03-tf1-discours-rentree-ia-nucleaire.txt)",
+      "La Dépêche du Midi — Présidentielle 2027 : « Des robots à la place des immigrés », 19 septembre 2026 (sources/programme-tiers-06-ladepeche-robots-travailleurs-immigres.txt)",
+      "Le Dauphiné libéré — Présidentielle 2027 : « Des robots à la place des immigrés », 21 septembre 2026 (sources/programme-tiers-08-ledauphine-robots-remplacement-immigres-ehpad.txt)",
+      "Europe 1 — Ce qu'il faut retenir de l'interview d'Éric Zemmour dans La France en face (sources/programme-tiers-09-europe1-france-en-face-retraites-depenses.txt)",
+      "La Nouvelle Tribune — Immigration : Zemmour veut des robots pour remplacer les étrangers, septembre 2026 (sources/programme-tiers-12-lanouvelletribune-discours-port-marly-robots.txt)",
+      "Public Sénat — Présidentielle 2022 : Éric Zemmour détaille ses mesures et assume le terme « remigration », 23 mars 2022 (sources/programme-tiers-09-publicsenat-programme-institutions-securite-defense.txt)",
+      "Sgen-CFDT Normandie — Les propositions « éducation » du candidat Éric Zemmour, 26 mars 2022 (sources/programme-tiers-12-sgencfdt-programme-education-instruction-publique.txt)",
+      "franceinfo — Éric Zemmour annonce qu'il sera candidat à l'élection présidentielle, 17 septembre 2026 (sources/programme-tiers-04-franceinfo-annonce-candidature-remigration.txt)",
+      "Le Figaro — Présidentielle 2027 : Éric Zemmour confirme qu'il sera candidat, 17 septembre 2026 (sources/programme-tiers-07-lefigaro-candidature-expulsion-chomeurs-etrangers.txt)",
+      "Public Sénat — Éric Zemmour officialise sa candidature à la présidentielle 2027, 18 septembre 2026 (sources/programme-tiers-08-publicsenat-remigration-chomeurs-robots.txt)",
+      "Wikipédia — Éric Zemmour, parcours et positions politiques (sources/programme-tiers-01-wikipedia-positions.txt)",
+      "BFMTV — « Je serai candidat » : Éric Zemmour annonce sur BFMTV qu'il se présentera à l'élection présidentielle, 17 septembre 2026 (sources/programme-tiers-05-bfmtv-candidature-grand-remplacement.txt)"
+    ],
+    "sans_source_officielle": true,
+    "photo_source": null,
+    "portrait": true,
+    "photo_type": "portrait"
   }
 ]
