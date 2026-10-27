@@ -853,5 +853,36 @@
     "photo_source": null,
     "portrait": true,
     "photo_type": "portrait"
+  },
+  {
+    "id": "natacha-polony",
+    "slug": "natacha-polony",
+    "nom": "Natacha Polony",
+    "initiales": "NP",
+    "parti": "Sans étiquette",
+    "parti_court": "SE",
+    "famille": "non_classe",
+    "couleur_fond": "#2a2a2a",
+    "date_declaration": "14 octobre 2026",
+    "photo": null,
+    "photo_credit": null,
+    "note": "Journaliste, déclarée candidate le 14 octobre 2026 sur France Inter, sans étiquette (candidature soutenue par République Souveraine). Slogan indiqué par Wikipédia : « Nous sommes la France ».",
+    "sources": [
+      "Wikipédia — Natacha Polony (article biographique)",
+      "Le Figaro — Présidentielle 2027 : «Je suis candidate», annonce la journaliste Natacha Polony (14/10/2026)",
+      "Le Parisien — « La situation m'oblige » : l'essayiste Natacha Polony annonce sa candidature à la présidentielle (14/10/2026)",
+      "Wikipédia — Natacha Polony (candidature et ligne politique)",
+      "PleinChamp — Natacha Polony candidate : son projet pour l'agriculture",
+      "LCP — « Oui, je suis candidate à la présidentielle », annonce Natacha Polony (14/10/2026)",
+      "La Télé (ATS) — Natacha Polony candidate à la présidentielle 2027 en France (14/10/2026)",
+      "Euronews — France : Natacha Polony officialise sa candidature à la présidentielle (14/10/2026)",
+      "Le Tribunal du Net — Natacha Polony se lance en politique : « je n'exclus rien » pour 2027 (31/08/2026)",
+      "Sud Radio — Présidentielle 2027 : les propositions chocs de Natacha Polony pour sortir de la crise lycéenne et étudiante (14/10/2026)",
+      "Brut (AFP) — L'essayiste Natacha Polony candidate à la présidentielle (16/10/2026)"
+    ],
+    "sans_source_officielle": true,
+    "photo_source": null,
+    "portrait": false,
+    "photo_type": null
   }
 ]

@@ -378,6 +378,7 @@ async def debat_stream(request: Request):
                 params_llm = dict(
                     max_tokens=(MAX_TOKENS_ARENE if mode_debat == "arene" else MAX_TOKENS_DEBAT),  # [parlement]
                     temperature=(TEMPERATURE_ARENE if mode_debat == "arene" else TEMPERATURE_DEBAT),  # [parlement]
+                    par_phrase=True,  # phrases completes seulement (coupe length jetee)
                 )
                 adversaires_presents = [candidats_by_id[cid] for cid in ordre_ids if cid != candidat_id]
                 faits_tous = charger_faits()
@@ -547,11 +548,6 @@ async def suggerer_document(
 ):
     """Reçoit une suggestion de document RAG et la transmet via Telegram."""
     ip = extraire_ip_reelle(request)
-    TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
-    TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_FEEDBACK_CHAT_ID")
-
-    if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
-        raise HTTPException(status_code=500, detail="Configuration Telegram manquante")
 
     # Validation basique
     if not candidat.strip() or not titre.strip():
@@ -577,29 +573,10 @@ async def suggerer_document(
     lignes.append("━━━━━━━━━━━━━━━")
     texte = "\n".join(lignes)
 
-    import httpx
-    try:
-        async with httpx.AsyncClient(timeout=30.0) as client:
-            if fichier and fichier.filename:
-                # Envoi avec pièce jointe
-                contenu = await fichier.read()
-                if len(contenu) > 20 * 1024 * 1024:
-                    raise HTTPException(status_code=400, detail="Fichier trop volumineux (max 20 Mo)")
-                resp = await client.post(
-                    f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendDocument",
-                    data={"chat_id": TELEGRAM_CHAT_ID, "caption": texte[:1024]},
-                    files={"document": (fichier.filename, contenu, fichier.content_type or "application/octet-stream")},
-                )
-            else:
-                # Envoi texte seul
-                resp = await client.post(
-                    f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage",
-                    json={"chat_id": TELEGRAM_CHAT_ID, "text": texte},
-                )
-            resp.raise_for_status()
-    except httpx.HTTPError as e:
-        logger.error(f"[SUGGESTION] Erreur Telegram : {e}")
-        raise HTTPException(status_code=500, detail="Erreur lors de l'envoi")
+    if fichier and fichier.filename:
+        print(f"[SUGGESTION_SANS_TELEGRAM] fichier joint non conserve : {fichier.filename}", flush=True)
+    print(f"[SUGGESTION_SANS_TELEGRAM] ip={ip}", flush=True)
+    print(texte, flush=True)
 
     return {"success": True, "message_utilisateur": "Suggestion transmise avec succès."}
 
@@ -676,7 +653,7 @@ async def ask_candidat(request: Request, ask_request: AskRequest):
         try:
             yield format_sse("preuves", {"candidat_id": candidat_id, "preuves": preuves_visiteur})
             cle_demo = ("ask", candidat_id, llm.normaliser(ask_request.question))
-            async for delta in llm.completer(messages, cle_demo=cle_demo, max_tokens=700, temperature=0.65):
+            async for delta in llm.completer(messages, cle_demo=cle_demo, max_tokens=1000, temperature=0.65, par_phrase=True):
                 yield format_sse("token", {"candidat_id": candidat_id, "text": delta})
             yield format_sse("done", {"candidat_id": candidat_id})
         except Exception as e:

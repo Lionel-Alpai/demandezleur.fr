@@ -169,19 +169,45 @@ def _compter(u, usage_nom: str):
         logger.debug("budget non enregistre", exc_info=True)
 
 
-async def _flux(params: dict):
-    """Flux unifie (delta, usage) : SDK natif si Anthropic, SDK OpenAI sinon (DeepSeek, Mistral)."""
+_FRONTIERE = re.compile(r"[.!?…»][\"»”)’]*\s")
+_FIN_PHRASE = re.compile(r"[.!?…»][\"»”)’]*\s*$")
+
+
+def _derniere_frontiere(tampon: str) -> int:
+    """Index de fin de la derniere phrase COMPLETE (ponctuation finale + espace) ; 0 si aucune."""
+    fin = 0
+    for m in _FRONTIERE.finditer(tampon):
+        fin = m.end()
+    return fin
+
+
+def _reste_a_emettre(reste: str, emis: bool, raison) -> str:
+    """Fin de flux : que faire du tampon non terminé. Coupe par max_tokens (length) -> on le JETTE,
+    sauf s'il se termine par une ponctuation finale ou si rien n'a jamais été émis (jamais de réponse vide)."""
+    if raison != "length" or not emis or _FIN_PHRASE.search(reste):
+        return reste
+    return ""
+
+
+async def _flux(params: dict, fin: Optional[dict] = None):
+    """Flux unifie (delta, usage) : SDK natif si Anthropic, SDK OpenAI sinon (DeepSeek, Mistral).
+    `fin`, si fourni, reçoit {"raison": "length"|...} : la raison d'arrêt du dernier chunk."""
     if ANTHROPIC:
         async with client_natif().messages.stream(**_params_natifs(params)) as flux:
             async for d in flux.text_stream:
                 yield d, None
             final = await flux.get_final_message()
+        if fin is not None:
+            sr = str(getattr(final, "stop_reason", "") or "")
+            fin["raison"] = "length" if sr == "max_tokens" else sr
         yield "", _usage_natif(final.usage)
         return
     stream = await client().chat.completions.create(**params)
     async for chunk in stream:
         if getattr(chunk, "usage", None) is not None:
             yield "", chunk.usage
+        if fin is not None and chunk.choices and getattr(chunk.choices[0], "finish_reason", None):
+            fin["raison"] = chunk.choices[0].finish_reason
         if chunk.choices and chunk.choices[0].delta.content:
             yield chunk.choices[0].delta.content, None
 
@@ -199,8 +225,10 @@ async def _appel(params: dict):
 
 async def completer(messages: list, *, cle_demo, max_tokens: int, temperature: float,
                     usage_cb: Optional[Callable[[int, int], None]] = None,
-                    extra: Optional[dict] = None) -> AsyncIterator[str]:
-    """Génère la réponse en streaming (yield des morceaux de texte)."""
+                    extra: Optional[dict] = None, par_phrase: bool = False) -> AsyncIterator[str]:
+    """Génère la réponse en streaming (yield des morceaux de texte).
+    par_phrase=True : ne yield que des phrases complètes ; un tampon non terminé est jeté si le modèle
+    a été coupé par max_tokens (finish_reason length), vidé sinon."""
     if MODE == "demo" or (MODE == "record" and _chemin_fixture(cle_demo).exists()):
         fx = _lire_fixture(cle_demo)
         deltas = (fx or {}).get("deltas") or _decouper((fx or {}).get("texte", "") or
@@ -220,13 +248,29 @@ async def completer(messages: list, *, cle_demo, max_tokens: int, temperature: f
         params.update(extra)
     params = _adapter_fournisseur(params)
     deltas, p_tok, c_tok = [], 0, 0
-    async for d, u in _flux(params):
+    fin, tampon, emis = {}, "", False
+    async for d, u in _flux(params, fin):
         if u is not None:
             p_tok, c_tok = u.prompt_tokens, u.completion_tokens
             _compter(u, str(cle_demo[0]) if cle_demo else "autre")
-        if d:
+        if d and not par_phrase:
             deltas.append(d)
             yield d
+        elif d:
+            tampon += d
+            cran = _derniere_frontiere(tampon)
+            if cran:
+                sortie, tampon, emis = tampon[:cran], tampon[cran:], True
+                deltas.append(sortie)
+                yield sortie
+    if par_phrase and tampon:
+        garde = _reste_a_emettre(tampon, emis, fin.get("raison"))
+        if garde:
+            deltas.append(garde)
+            yield garde
+        else:
+            logger.warning("[COUPURE] replique coupee par max_tokens (length) : %d car. jetes, out=%d tokens, cle=%s, fin=%r",
+                           len(tampon), c_tok, str(cle_demo)[:120], tampon[-60:])
     if usage_cb:
         usage_cb(p_tok, c_tok)
     if MODE == "record":
