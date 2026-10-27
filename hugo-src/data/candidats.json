@@ -884,5 +884,37 @@
     "photo_source": null,
     "portrait": false,
     "photo_type": null
+  },
+  {
+    "id": "antoine-mikolajczak",
+    "slug": "antoine-mikolajczak",
+    "nom": "Antoine Mikolajczak",
+    "initiales": "AM",
+    "parti": "Équinoxe",
+    "parti_court": "EQX",
+    "famille": "non_classe",
+    "couleur_fond": "#2a2a2a",
+    "date_declaration": "27 juin 2026",
+    "photo": null,
+    "photo_credit": null,
+    "note": "Candidat de 28 ans, ingénieur originaire de l'Oise, désigné le 27 juin 2026 par le parti Équinoxe, en trinôme avec Alexia de Montgolfier et Louis Brémaud ; tour de France (parfois à vélo) pour réunir les 500 parrainages (Wikipédia « Candidatures à l'élection présidentielle française de 2027 », refs Le Parisien 12/08/2026, Le Figaro 05/08/2026, L'Alsace 03/10/2026). Positions : décider collectivement, produire en France, vivre en bonne santé ; programme dévoilé à Mulhouse (université d'automne du parti). Aucune étiquette gauche/droite : famille non_classe.",
+    "sources": [
+      "Équinoxe — Qui est Antoine Mikolajczak ? (programme-01-qui-est-antoine-mikolajczak.txt)",
+      "Wikipédia — Candidatures à l’élection présidentielle française de 2027 (01-bio-fr-wikipedia-org.txt)",
+      "Équinoxe — Présidentielle 2027 (programme-00-presidentielle-2027.txt)",
+      "Le Figaro, 5 août 2026 — tour de France des candidats de moins de 30 ans (04-declaration-lefigaro.txt)",
+      "L’Alsace, 3 octobre 2026 — Antoine Mikolajczak de passage à Mulhouse (03-declaration-lalsace.txt)",
+      "Équinoxe — Notre méthode (programme-06-notre-methode.txt)",
+      "Équinoxe — Notre histoire (programme-02-notre-histoire.txt)",
+      "Équinoxe — « Clarté, moyens et confiance pour nos territoires » (programme-04-clarte-moyens-et-confiance-pour-nos-territoires.txt)",
+      "Équinoxe — Antoine Mikolajczak dans Le Parisien (programme-03-antoine-mikolajczak-dans-le-parisien.txt)",
+      "Équinoxe — Passage d’Antoine Mikolajczak sur Nopopol (programme-05-passage-dantoine-mikolajczak-sur-nopopol.txt)",
+      "Équinoxe — Nos instances (programme-13-nos-instances.txt)",
+      "Le Parisien, 12 août 2026 — portrait d’Antoine Mikolajczak (02-declaration-leparisien.txt)"
+    ],
+    "sans_source_officielle": false,
+    "photo_source": null,
+    "portrait": false,
+    "photo_type": null
   }
 ]
