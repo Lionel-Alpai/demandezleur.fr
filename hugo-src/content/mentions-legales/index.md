@@ -7,13 +7,16 @@ description: "Éditeur, hébergeur, localisation des données, données personne
 
 ## Éditeur du site
 
-Le site **demandezleur.fr** est un projet indépendant, sans affiliation avec un parti politique, un candidat ou une institution.
+Le site **demandezleur.fr** est édité sous la marque **ALPAI** par :
 
-**Éditeur et directeur de la publication :** Lionel Denis, personne physique, à titre non professionnel.
+- **Lionel Denis**, entrepreneur individuel
+- **Immatriculation :** RCS Chambéry 409 776 861 (SIREN 409 776 861)
+- **Siège / établissement :** 55 Grande Rue, 73220 Val-d'Arc, France
+- **TVA :** non applicable, article 293 B du CGI
+- **Directeur de la publication :** Lionel Denis
+- **Contact :** [lionel.denis@alpai.eu](mailto:lionel.denis@alpai.eu), et la section [Contact, signalement, droit de réponse](#contact-signalement-droit-de-réponse) ci-dessous.
 
-**Adresse de l'éditeur :** non publiée, en application de l'article 6 III 2 de la loi pour la confiance dans l'économie numérique (LCEN). Ce texte autorise un éditeur non professionnel à ne pas rendre son adresse publique, dès lors que l'hébergeur détient son identité complète. Il ne s'agit pas d'un oubli, mais d'un droit exercé.
-
-**Contact :** voir la section [Contact, signalement, droit de réponse](#contact-signalement-droit-de-réponse) ci-dessous.
+Le site n'est affilié à aucun parti politique, candidat ou institution. Ni ALPAI ni son éditeur ne soutiennent un candidat : tous les candidats y sont traités selon les mêmes règles.
 
 ## Hébergement
 

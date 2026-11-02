@@ -2,7 +2,7 @@
 
 > {{ .Site.Params.description }}
 
-Éditeur : Lionel Denis, personne physique, à titre non professionnel ({{ "mentions-legales/" | absURL }}). Généré par le site lui-même à chaque publication ; la version courte est {{ "llms.txt" | absURL }}. Les réponses et débats produits par le site sont générés automatiquement par un modèle de langage à partir de documents publics : ils n'engagent pas les candidats réels.
+Éditeur : ALPAI — Lionel Denis, entrepreneur individuel, RCS Chambéry 409 776 861 ({{ "mentions-legales/" | absURL }}). Généré par le site lui-même à chaque publication ; la version courte est {{ "llms.txt" | absURL }}. Les réponses et débats produits par le site sont générés automatiquement par un modèle de langage à partir de documents publics : ils n'engagent pas les candidats réels.
 {{ range .Site.Data.candidats }}
 
 ---

@@ -1,0 +1,31 @@
+{
+  "id": "gabriel-attal",
+  "slug": "gabriel-attal",
+  "nom": "Gabriel Attal",
+  "initiales": "GA",
+  "parti": "Renaissance",
+  "parti_court": "RE",
+  "famille": "centre",
+  "couleur_fond": "#1a2744",
+  "date_declaration": "Mai 2026",
+  "photo": "/img/portraits/gabriel-attal.webp",
+  "photo_credit": "Wikimedia Commons — CC BY 4.0 (2025)",
+  "note": null,
+  "sources": [
+    "Données biographiques vérifiées (sources publiques)",
+    "Le Monde, 22 mai 2026 ; RTS, 22 mai 2026",
+    "Le Monde, 22 mai 2026",
+    "attalpresident.fr — rubrique « Mes chantiers capitaux »"
+  ],
+  "photo_type": "portrait",
+  "resume": "Son programme, intitulé 'LA FORCE D'AGIR', est structuré autour de cinq 'chantiers capitaux' : l'éducation, présentée comme priorité absolue ; la revalorisation du travail, avec l'objectif de faire monter les salaires ; la protection des frontières ; le redressement des finances publiques ; et la prise en charge de la dette écologique. Il inclut également une déclaration sur l'intelligence artificielle, souhaitant que cette révolution technologique bénéficie à tous.",
+  "questions_suggerees": [
+    "Comment comptez-vous faire monter les salaires concrètement ?",
+    "Quelles mesures pour protéger les frontières sans nuire à l'Europe ?",
+    "Comment réduirez-vous la dette écologique sans pénaliser les ménages ?",
+    "Quel est votre plan pour redresser les finances publiques ?"
+  ],
+  "resume_statut": "valide",
+  "photo_source": "/img/candidats/gabriel-attal.webp",
+  "portrait": true
+}

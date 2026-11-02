@@ -22,10 +22,13 @@
   <section class="chat" id="chat" aria-label="Interroger le programme de {{ $c.nom }}">
     <div class="chat-fenetre" id="chatWindow">
       {{ if .Params.sans_source_officielle }}
-      <p class="chat-systeme">Vous interrogez les déclarations publiques de <strong>{{ $c.nom }}</strong> — ce candidat n'a publié aucun programme consultable. L'IA répond uniquement à partir des documents listés plus bas, et cite ses sources.</p>
+      {{ partial "avertissement-projection.html" $c.nom }}
+      <p class="chat-systeme">Ce candidat n'a publié aucun programme consultable : l'IA s'appuie sur ses déclarations publiques, listées plus bas, et cite ses sources.</p>
       {{ else }}
-      <p class="chat-systeme">Vous interrogez le programme officiel de <strong>{{ $c.nom }}</strong>. L'IA répond uniquement à partir des documents listés plus bas, et cite ses sources.</p>
+      {{ partial "avertissement-projection.html" $c.nom }}
+      <p class="chat-systeme">L'IA répond uniquement à partir des documents listés plus bas, et cite ses sources.</p>
       {{ end }}
+      {{ partial "fraicheur-corpus.html" $c.id }}
     </div>
     {{ with $c.questions_suggerees }}
     <div class="chips chat-chips" id="chat-chips" aria-label="Questions suggérées">
@@ -37,7 +40,7 @@
       <input type="text" id="chatInputFull" class="chat-input" placeholder="Posez votre question à {{ $c.nom }}…" required maxlength="500">
       <button type="submit" id="chatSendFull" class="btn btn-accent" aria-label="Envoyer">Envoyer</button>
     </form>
-    <p class="meta chat-note">Réponse générée automatiquement. <a href="/transparence/">Comment ça marche</a> · <a href="/feedback/">Signaler une erreur</a></p>
+    <p class="meta chat-note">Projection générée par IA, sans engagement du candidat. <a href="/transparence/">Comment ça marche</a> · <a href="/feedback/">Signaler une erreur</a></p>
   </section>
 
   {{ if $c.sources }}

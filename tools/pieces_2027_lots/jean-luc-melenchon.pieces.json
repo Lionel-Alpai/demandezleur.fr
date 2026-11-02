@@ -1,0 +1,167 @@
+{
+ "intitule": "Programme de Jean-Luc Mélenchon et de La France insoumise (L'Avenir en commun, 4e version, et documents de campagne 2026)",
+ "pieces": [
+  {
+   "url": "https://melenchon2027.fr/wp-content/uploads/2026/10/Comment-nous-allons-remettre-de-l-ordre-dans-les-comptes-publics.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/pdf-comptes-publics.txt",
+   "theme": "economie-travail",
+   "titre": "Comment nous allons remettre de l'ordre dans les comptes publics (oct. 2026)"
+  },
+  {
+   "url": "https://melenchon2027.fr/wp-content/uploads/2026/10/DP-POLE-PUBLIC-BANCAIRE_ST.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/pdf-pole-public-bancaire.txt",
+   "theme": "economie-travail",
+   "titre": "Pour un pôle public bancaire au service des besoins (oct. 2026)"
+  },
+  {
+   "url": "https://lafranceinsoumise.fr/wp-content/uploads/2026/09/Plan-ClimatAgri-Sept-2026-WEB-V4.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/lfi-plan-climat-agri.txt",
+   "theme": "agriculture",
+   "titre": "Plan d'urgence agriculture : 10 mesures pour la souveraineté alimentaire (sept. 2026)"
+  },
+  {
+   "url": "https://lafranceinsoumise.fr/wp-content/uploads/2026/09/1.-LIVRET-PlanFeu-D-Site.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/lfi-plan-securite-civile.txt",
+   "theme": "securite-protection",
+   "titre": "Plan d'urgence 2026 : reconstruire la sécurité civile"
+  },
+  {
+   "url": "https://lafranceinsoumise.fr/wp-content/uploads/2026/06/1.-LIVRET-AdaptationCanicule-C3-Page-Site.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/lfi-plan-canicule.txt",
+   "theme": "ecologie-energie",
+   "titre": "Plan d'urgence d'adaptation à la canicule (juin 2026)"
+  },
+  {
+   "url": "https://lafranceinsoumise.fr/wp-content/uploads/2026/03/Mal-logement_LFI_Export-HD_Web-RVB_Pages.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/lfi-mal-logement.txt",
+   "theme": "logement",
+   "titre": "Une décennie de guerre sociale contre les mal-logé·es (mars 2026)"
+  },
+  {
+   "url": "https://lafranceinsoumise.fr/wp-content/uploads/2026/03/1.-LIVRET-PlanUrgenceEnergie-A-Site.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/lfi-plan-urgence-energie.txt",
+   "theme": "ecologie-energie",
+   "titre": "Flambée des prix de l'énergie : plan d'urgence (mars 2026)"
+  },
+  {
+   "url": "https://lafranceinsoumise.fr/wp-content/uploads/2026/08/Rentree-scolaire_LFI_RVB_Pages-1.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/lfi-plan-rentree-scolaire.txt",
+   "theme": "education",
+   "titre": "Plan d'urgence rentrée scolaire (août 2026)"
+  },
+  {
+   "url": "https://melenchon2027.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/aec2025-00-intro.txt",
+   "theme": "vision-generale",
+   "titre": "L'Avenir en commun 2025 — Introduction — Vers une nouvelle France"
+  },
+  {
+   "url": "https://melenchon2027.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/aec2025-01.txt",
+   "theme": "institutions",
+   "titre": "L'Avenir en commun 2025 — Chapitre 1 — Le pouvoir au peuple"
+  },
+  {
+   "url": "https://melenchon2027.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/aec2025-02.txt",
+   "theme": "economie-travail",
+   "titre": "L'Avenir en commun 2025 — Chapitre 2 — Par-delà la propriété privée"
+  },
+  {
+   "url": "https://melenchon2027.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/aec2025-03.txt",
+   "theme": "economie-travail",
+   "titre": "L'Avenir en commun 2025 — Chapitre 3 — Citoyens dans l'entreprise et dans la ville"
+  },
+  {
+   "url": "https://melenchon2027.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/aec2025-04.txt",
+   "theme": "institutions",
+   "titre": "L'Avenir en commun 2025 — Chapitre 4 — Étendre le domaine de la liberté"
+  },
+  {
+   "url": "https://melenchon2027.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/aec2025-05.txt",
+   "theme": "education",
+   "titre": "L'Avenir en commun 2025 — Chapitre 5 — Élever le niveau d'instruction"
+  },
+  {
+   "url": "https://melenchon2027.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/aec2025-06.txt",
+   "theme": "economie-travail",
+   "titre": "L'Avenir en commun 2025 — Chapitre 6 — Partage des richesses"
+  },
+  {
+   "url": "https://melenchon2027.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/aec2025-07.txt",
+   "theme": "services-publics",
+   "titre": "L'Avenir en commun 2025 — Chapitre 7 — La force de l'entraide"
+  },
+  {
+   "url": "https://melenchon2027.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/aec2025-08.txt",
+   "theme": "economie-travail",
+   "titre": "L'Avenir en commun 2025 — Chapitre 8 — Travailler tous, travailler moins, travailler mieux"
+  },
+  {
+   "url": "https://melenchon2027.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/aec2025-09.txt",
+   "theme": "economie-travail",
+   "titre": "L'Avenir en commun 2025 — Chapitre 9 — Produire nous-mêmes pour répondre aux besoins"
+  },
+  {
+   "url": "https://melenchon2027.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/aec2025-10.txt",
+   "theme": "social-sante",
+   "titre": "L'Avenir en commun 2025 — Chapitre 10 — Faire place à la nouvelle France"
+  },
+  {
+   "url": "https://melenchon2027.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/aec2025-11.txt",
+   "theme": "culture-numerique",
+   "titre": "L'Avenir en commun 2025 — Chapitre 11 — Humaniser par la culture et le sport"
+  },
+  {
+   "url": "https://melenchon2027.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/aec2025-12.txt",
+   "theme": "ecologie-energie",
+   "titre": "L'Avenir en commun 2025 — Chapitre 12 — Planification écologique"
+  },
+  {
+   "url": "https://melenchon2027.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/aec2025-13.txt",
+   "theme": "ecologie-energie",
+   "titre": "L'Avenir en commun 2025 — Chapitre 13 — Les grands chantiers de la bifurcation écologique"
+  },
+  {
+   "url": "https://melenchon2027.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/aec2025-14.txt",
+   "theme": "ecologie-energie",
+   "titre": "L'Avenir en commun 2025 — Chapitre 14 — Protection des biens communs et des droits de l'espèce"
+  },
+  {
+   "url": "https://melenchon2027.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/aec2025-15.txt",
+   "theme": "social-sante",
+   "titre": "L'Avenir en commun 2025 — Chapitre 15 — Une approche de santé globale"
+  },
+  {
+   "url": "https://melenchon2027.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/aec2025-16.txt",
+   "theme": "europe-international",
+   "titre": "L'Avenir en commun 2025 — Chapitre 16 — Une diplomatie altermondialiste pour la paix"
+  },
+  {
+   "url": "https://melenchon2027.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/aec2025-17.txt",
+   "theme": "europe-international",
+   "titre": "L'Avenir en commun 2025 — Chapitre 17 — Europe"
+  },
+  {
+   "url": "https://melenchon2027.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/jean-luc-melenchon/aec2025-18.txt",
+   "theme": "culture-numerique",
+   "titre": "L'Avenir en commun 2025 — Chapitre 18 — Nouvelles frontières de l'humanité"
+  }
+ ]
+}

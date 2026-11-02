@@ -1,0 +1,298 @@
+<!doctype html><html lang='fr'><head><meta charset='utf-8'><title>Dossier de presse — demandezleur.fr</title><meta name='robots' content='noindex'><style>
+@font-face{font-family:Inter;src:url(fonts/Inter-400.ttf) format('truetype');font-weight:400;font-style:normal}
+@font-face{font-family:Inter;src:url(fonts/Inter-600.ttf) format('truetype');font-weight:600;font-style:normal}
+@font-face{font-family:Inter;src:url(fonts/Inter-700.ttf) format('truetype');font-weight:700;font-style:normal}
+@font-face{font-family:Inter;src:url(fonts/Inter-800.ttf) format('truetype');font-weight:800;font-style:normal}
+@font-face{font-family:Inter;src:url(fonts/Inter-Italic-400.ttf) format('truetype');font-weight:400;font-style:italic}
+:root{--nuit:#0a1428;--nuit2:#111d3a;--nuit3:#182648;--rouge:#e53946;--encre:#14182a;--gris:#5b6275;--filet:#d9dce5;--papier:#f6f5f1}
+@page{size:A4;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;color:var(--encre);font-size:10pt;line-height:1.5;-webkit-print-color-adjust:exact;print-color-adjust:exact;background:#fff}
+section{width:210mm;height:297mm;padding:16mm 17mm 14mm;position:relative;overflow:hidden;page-break-after:always;break-after:page}
+section:last-of-type{page-break-after:auto;break-after:auto}
+.folio{position:absolute;bottom:8mm;left:17mm;right:17mm;display:flex;justify-content:space-between;font-size:7.5pt;color:var(--gris);border-top:1px solid var(--filet);padding-top:2.5mm}
+.folio b{color:var(--encre);font-weight:700}.folio i{font-style:normal;color:var(--rouge)}
+.surtitre{font-size:8pt;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--rouge);margin:0 0 3mm}
+h1{font-size:27pt;line-height:1.08;letter-spacing:-.02em;margin:0 0 5mm;font-weight:800}
+h2{font-size:13pt;margin:7mm 0 2.5mm;font-weight:700;letter-spacing:-.01em}
+h3{font-size:10.5pt;margin:0 0 1.5mm;font-weight:700}
+p{margin:0 0 3mm}
+.chapo{font-size:12.5pt;line-height:1.45;color:#2a2f45;margin-bottom:6mm}
+.rouge{color:var(--rouge)}
+/* couverture */
+#couverture{background:var(--nuit);color:#f4f6fb;padding:0}
+#couverture .haut{padding:15mm 17mm 0;display:flex;justify-content:space-between;align-items:baseline}
+.marque{font-size:15pt;font-weight:800;letter-spacing:-.01em}.marque span{color:var(--rouge)}
+.date-couv{font-size:8pt;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,246,251,.6)}
+.mosaique{display:grid;grid-template-columns:repeat(9,1fr);gap:0;margin:9mm 0 0}
+.mosaique img{width:100%;aspect-ratio:1;display:block;object-fit:cover}
+#couverture .titre{padding:9mm 17mm 0}
+#couverture .titre .surtitre{color:var(--rouge)}
+#couverture h1{font-size:40pt;color:#fff;margin-bottom:5mm}
+#couverture .chapo{color:rgba(244,246,251,.85);font-size:13pt;max-width:160mm}
+.bandeau{position:absolute;left:0;right:0;bottom:0;background:var(--nuit2);border-top:3px solid var(--rouge);padding:5mm 17mm 6mm;font-size:8.3pt;line-height:1.5;color:rgba(244,246,251,.82)}
+.bandeau strong{color:#fff}
+/* tuiles chiffres */
+.tuiles{display:grid;grid-template-columns:repeat(4,1fr);gap:3.5mm;margin:5mm 0}
+.tuile{background:var(--papier);border-radius:3mm;padding:4mm 4mm 3.5mm;border-top:3px solid var(--nuit)}
+.tuile.r{border-top-color:var(--rouge)}
+.tuile .n{font-size:21pt;font-weight:800;letter-spacing:-.02em;line-height:1.05;display:block}
+.tuile .l{font-size:8pt;color:var(--gris);line-height:1.35;display:block;margin-top:1.5mm}
+.trois{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;margin-top:4mm}
+.trois div{border-left:3px solid var(--rouge);padding-left:3.5mm}
+.trois p{font-size:9pt;color:#353a50;margin:0}
+/* captures */
+.capture{border-radius:2.5mm;overflow:hidden;box-shadow:0 2mm 6mm rgba(10,20,40,.25);border:1px solid #1d2a4a}
+.capture img{display:block;width:100%}
+.legende{font-size:7.8pt;color:var(--gris);margin:2mm 0 0;line-height:1.4}
+.duo{display:grid;grid-template-columns:1.55fr 1fr;gap:6mm;align-items:start}
+.tel{width:56mm;margin:0 auto;border:2.2mm solid #0b0f1c;border-radius:7mm;overflow:hidden;box-shadow:0 2mm 7mm rgba(10,20,40,.3)}
+.tel img{display:block;width:100%;height:96mm;object-fit:cover;object-position:top}
+.rognee{height:78mm;overflow:hidden}.rognee img{object-fit:cover;object-position:top}
+.rognee-b{height:62mm;overflow:hidden}
+/* graphiques */
+.graph{width:100%;height:auto;font-family:Inter,sans-serif}
+.graph .grille{stroke:#e3e5ec;stroke-width:1}
+.graph .axe{font-size:9px;fill:#8a90a2}
+.graph .lib{font-size:11px;fill:#2a2f45}
+.graph .barre{fill:var(--nuit3)}
+.graph .barre.rouge{fill:var(--rouge)}
+.graph .val{font-size:10.5px;font-weight:700;fill:var(--encre)}
+.graph .val.rouge{fill:var(--rouge)}
+.encart{background:var(--nuit);color:#f4f6fb;border-radius:3mm;padding:5mm 6mm;margin:4mm 0}
+.encart .gros{font-size:17pt;font-weight:800;line-height:1.2;letter-spacing:-.01em;margin:0 0 2mm}
+.encart p{color:rgba(244,246,251,.82);font-size:9pt;margin:0}
+.note{font-size:8pt;color:var(--gris);line-height:1.45}
+#chiffres .liste li{padding:1.6mm 0;font-size:8.8pt}#chiffres .chapo{margin-bottom:4mm}#chiffres h2{margin-top:5mm}
+.cadre{border:1px solid var(--filet);background:var(--papier);border-radius:2.5mm;padding:4mm 5mm;font-size:9pt}
+/* machine */
+.chaine{display:grid;grid-template-columns:repeat(5,1fr);gap:2.5mm;margin:5mm 0 3mm}
+.maillon{background:var(--papier);border-radius:2.5mm;padding:3.5mm 3mm;position:relative;min-height:43mm}
+.maillon .num{display:inline-block;width:6mm;height:6mm;border-radius:50%;background:var(--nuit);color:#fff;font-size:8pt;font-weight:700;text-align:center;line-height:6mm;margin-bottom:2mm}
+.maillon h3{font-size:9pt}.maillon p{font-size:8pt;color:#41465c;margin:0;line-height:1.4}
+.maillon.humain{background:var(--nuit);color:#fff}.maillon.humain .num{background:var(--rouge)}.maillon.humain p{color:rgba(244,246,251,.82)}
+.qui{display:grid;grid-template-columns:1fr 1fr;gap:6mm;margin-top:3mm}
+.qui ul{margin:0;padding-left:4.5mm}.qui li{margin:0 0 1.5mm;font-size:9pt}
+.trace{font-family:ui-monospace,Menlo,monospace;font-size:7.2pt;background:#0b1020;color:#c8d0e6;border-radius:2.5mm;padding:4mm 4.5mm;line-height:1.55;white-space:pre-wrap;word-break:break-all}
+.trace .k{color:#ff8a93}
+/* méthode, garde-fous, questions */
+.colonnes{display:grid;grid-template-columns:1fr 1fr;gap:7mm}
+.liste{margin:0;padding:0;list-style:none}
+.liste li{padding:2.5mm 0;border-bottom:1px solid var(--filet);font-size:9.2pt}
+.liste li strong{display:block;font-size:9.6pt;margin-bottom:.5mm}
+.qr{margin:0 0 4mm;break-inside:avoid}
+.qr h3{font-size:10pt;color:var(--encre);border-left:3px solid var(--rouge);padding-left:3mm}
+.qr p{font-size:9pt;color:#353a50;padding-left:3.6mm;margin:0}
+/* auteur */
+#auteur{background:var(--nuit);color:#f4f6fb}
+#auteur .folio{border-top-color:rgba(255,255,255,.15);color:rgba(244,246,251,.55)}#auteur .folio b{color:#fff}
+#auteur h1{color:#fff}#auteur .chapo{color:rgba(244,246,251,.85)}
+.auteur-haut{display:grid;grid-template-columns:62mm 1fr;gap:8mm;align-items:start}
+.auteur-haut img{width:100%;border-radius:2.5mm;display:block}
+.auteur-haut p{color:rgba(244,246,251,.85);font-size:9.6pt}
+.livre{display:grid;grid-template-columns:44mm 1fr;gap:8mm;margin-top:7mm;background:var(--nuit2);border-radius:3mm;padding:6mm;border-top:3px solid var(--rouge)}
+.livre img{width:100%;display:block;box-shadow:0 2mm 6mm rgba(0,0,0,.5)}
+.livre h2{color:#fff;margin:0 0 1mm;font-size:15pt}.livre .st{color:rgba(244,246,251,.6);font-size:8.5pt;margin:0 0 3mm;letter-spacing:.04em}
+.exergue{font-size:11pt;font-weight:700;line-height:1.4;color:#fff;margin:0 0 3mm}
+.verdicts{margin:0;padding:0;list-style:none}
+.verdicts li{font-size:8.6pt;color:rgba(244,246,251,.85);margin:0 0 1.8mm;line-height:1.4}
+.verdicts li b{display:block;font-size:6.8pt;letter-spacing:.12em;color:#ff8a93;font-weight:700}
+.livre .ref{font-size:8pt;color:rgba(244,246,251,.6);margin:3mm 0 0}
+/* grille candidats */
+.grille-c{display:grid;grid-template-columns:repeat(9,1fr);gap:2mm;margin:3mm 0}
+.grille-c figure{margin:0}
+.grille-c img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:1.5mm;display:block}
+.grille-c figcaption{font-size:6.4pt;line-height:1.2;margin-top:1mm;font-weight:600}
+.credits{font-size:6.3pt;color:var(--gris);line-height:1.4;columns:2;column-gap:6mm;margin-top:2mm}
+.contact{background:var(--nuit);color:#fff;border-radius:3mm;padding:6mm 7mm;margin-top:5mm;display:grid;grid-template-columns:1.2fr 1fr;gap:6mm}
+.contact h2{color:#fff;margin:0 0 2mm}.contact p{color:rgba(244,246,251,.85);font-size:9.2pt;margin:0 0 2mm}
+.contact .dispo{font-size:12pt;font-weight:700;color:#fff;line-height:1.35}
+.contact a{color:#ff8a93;text-decoration:none}
+</style></head><body>
+<section id='couverture'>
+<div class='haut'><div class='marque'>demandezleur<span>.</span>fr</div><div class='date-couv'>Dossier de presse · 1 novembre 2026</div></div>
+<div class='mosaique'><img src='img/portraits/anasse-kazib.jpg' alt='Anasse Kazib'><img src='img/portraits/antoine-mikolajczak.jpg' alt='Antoine Mikolajczak'><img src='img/portraits/benoit-mathieu.jpg' alt='Benoît Mathieu'><img src='img/portraits/bernard-cazeneuve.jpg' alt='Bernard Cazeneuve'><img src='img/portraits/delphine-batho.jpg' alt='Delphine Batho'><img src='img/portraits/fabien-roussel.jpg' alt='Fabien Roussel'><img src='img/portraits/florian-philippot.jpg' alt='Florian Philippot'><img src='img/portraits/francis-lalanne.jpg' alt='Francis Lalanne'><img src='img/portraits/francois-asselineau.jpg' alt='François Asselineau'><img src='img/portraits/francois-ruffin.jpg' alt='François Ruffin'><img src='img/portraits/gilles-platret.jpg' alt='Gilles Platret'><img src='img/portraits/jean-luc-melenchon.jpg' alt='Jean-Luc Mélenchon'><img src='img/portraits/karim-bouamrane.jpg' alt='Karim Bouamrane'><img src='img/portraits/manolo-mlekuz.jpg' alt='Manolo Mlekuz'><img src='img/portraits/marine-le-pen.jpg' alt='Marine Le Pen'><img src='img/portraits/marine-tondelier.jpg' alt='Marine Tondelier'><img src='img/portraits/mira-markovic.jpg' alt='Mira Markovic'><img src='img/portraits/natacha-polony.jpg' alt='Natacha Polony'><img src='img/portraits/nathalie-arthaud.jpg' alt='Nathalie Arthaud'><img src='img/portraits/nicolas-dupont-aignan.jpg' alt='Nicolas Dupont-Aignan'><img src='img/portraits/olivier-becht.jpg' alt='Olivier Becht'><img src='img/portraits/raphael-glucksmann.jpg' alt='Raphaël Glucksmann'><img src='img/portraits/selma-labib.jpg' alt='Selma Labib'><img src='img/portraits/sylvain-durif.jpg' alt='Sylvain Durif'><img src='img/portraits/xavier-bertrand.jpg' alt='Xavier Bertrand'><img src='img/portraits/edouard-philippe.jpg' alt='Édouard Philippe'><img src='img/portraits/eric-zemmour.jpg' alt='Éric Zemmour'></div>
+<div class='titre'><p class='surtitre'>Présidentielle 2027 · une démonstration publique</p>
+<h1>Voilà ce que l'IA peut déjà faire</h1>
+<p class='chapo'>Une intelligence artificielle a lu tout ce que les candidats ont publié, mesure ce qui manque, puis fait débattre leurs programmes. Le site qui le montre a lui-même été <strong>conçu, construit et entretenu par des IA ; un humain arbitre et signe.</strong></p></div>
+<div class='bandeau'><strong>Transparence, avant tout le reste.</strong> Les réponses des candidats-chatbots sont une <strong>projection statistique</strong> produite par une IA à partir de leurs seuls textes publiés : ce ne sont pas leurs propos et elles ne les engagent pas. Chaque candidat dispose d'un <strong>droit de correction</strong> (page 7). Éditeur : ALPAI, Lionel Denis, directeur de la publication.</div>
+</section>
+<section id='angle'>
+<p class='surtitre'>En une minute</p>
+<h1>Le citoyen dans le fauteuil<br>du journaliste</h1>
+<p class='chapo'>demandezleur.fr met les programmes de la présidentielle 2027 à portée de question. On interroge un candidat, on en fait débattre jusqu'à cinq sur le sujet de son choix, et chaque réponse montre la pièce dont elle sort. Le site est gratuit, sans compte et sans traceur.</p>
+<div class='tuiles'>
+<div class='tuile'><span class='n'>29</span><span class='l'>candidats suivis, 29 avec un corpus constitué</span></div>
+<div class='tuile'><span class='n'>810</span><span class='l'>documents officiels lus, découpés et rattachés à leur source</span></div>
+<div class='tuile'><span class='n'>4,2 M</span><span class='l'>de caractères de textes de campagne dans le corpus</span></div>
+<div class='tuile r'><span class='n'>13</span><span class='l'>thèmes de référence pour mesurer ce qui manque</span></div>
+</div>
+<div class='capture'><img src='img/accueil.jpg' alt="Page d'accueil de demandezleur.fr"></div>
+<p class='legende'>La page d'accueil. Le duel à droite change à chaque visite ; les sujets proposés reprennent ceux réellement débattus à l'Assemblée nationale dans la semaine.</p>
+<div class='trois'>
+<div><h3>L'entretien</h3><p>On choisit un candidat et on lui pose sa question. L'IA répond à partir de ses seuls documents publiés et cite les extraits utilisés.</p></div>
+<div><h3>L'Arène</h3><p>De deux à cinq candidats débattent d'un sujet. Chaque attaque doit s'appuyer sur une pièce ; ce qui n'est pas étayé est signalé, ce qui est faux est retiré.</p></div>
+<div><h3>Le bilan de corpus</h3><p>Pour chaque candidat : volume, fraîcheur, officialité et couverture des 13 thèmes. Le bilan est envoyé à chaque équipe de campagne.</p></div>
+</div>
+<div class='folio'><span><b>demandezleur.fr</b> · dossier de presse · novembre 2026</span><span>En une minute · <i>2</i></span></div></section>
+<section id='demonstration'>
+<p class='surtitre'>Le site en images</p>
+<h1>Faites s'affronter les programmes</h1>
+<div class='duo'>
+<div><div class='capture rognee'><img src='img/debat.jpg' alt="L'Arène"></div>
+<p class='legende'><strong>L'Arène.</strong> On choisit le plateau, le sujet, puis les candidats. Avant chaque réplique, une garde déterministe retire ce qui prête à un adversaire un bilan qu'il n'a pas, et un juge vérifie que chaque attaque repose sur une pièce.</p></div>
+<div><div class='tel'><img src='img/mobile-accueil.jpg' alt='Le site sur téléphone'></div>
+<p class='legende' style='text-align:center'>Pensé d'abord pour le téléphone.</p></div>
+</div>
+<h2>27 candidats publiés, traités selon les mêmes règles</h2>
+<div class='capture rognee-b'><img src='img/candidats.jpg' alt='La page des candidats'></div>
+<p class='legende'>La page des candidats : filtres par famille politique, et une mention explicite pour ceux qui n'ont publié aucun programme consultable. Bruno Retailleau et Gabriel Attal sont suivis à part : candidats à une primaire, leur corpus est constitué, publication à l'issue de la primaire.</p>
+<div class='folio'><span><b>demandezleur.fr</b> · dossier de presse · novembre 2026</span><span>Le site en images · <i>3</i></span></div></section>
+<section id='chiffres'>
+<p class='surtitre'>Ce que le bilan de corpus mesure</p>
+<h1>Ce dont la campagne parle peu</h1>
+<p class='chapo'>Le bilan compte, pour chaque candidat, ce que ses textes publiés abordent parmi 13 thèmes de référence. Agrégé, il dessine la carte des sujets que la campagne laisse dans l'ombre.</p>
+<div class='encart'><p class='gros'>Logement : abordé dans 9 corpus sur 29.<br>Services publics : 10 sur 29.</p>
+<p>Mesure faite sur les textes publiés par les candidats et rassemblés à ce jour. Chaque équipe peut compléter son corpus par le lien personnel reçu avec son bilan ; ces chiffres bougeront.</p></div>
+<h2>Nombre de corpus qui abordent chaque thème</h2>
+<svg viewBox='0 0 640 303' class='graph' role='img' aria-label='Nombre de corpus abordant chaque thème'><line x1='168.0' y1='4' x2='168.0' y2='281' class='grille'/><text x='168.0' y='297' class='axe' text-anchor='middle'>0</text><line x1='241.8' y1='4' x2='241.8' y2='281' class='grille'/><text x='241.8' y='297' class='axe' text-anchor='middle'>5</text><line x1='315.6' y1='4' x2='315.6' y2='281' class='grille'/><text x='315.6' y='297' class='axe' text-anchor='middle'>10</text><line x1='389.4' y1='4' x2='389.4' y2='281' class='grille'/><text x='389.4' y='297' class='axe' text-anchor='middle'>15</text><line x1='463.2' y1='4' x2='463.2' y2='281' class='grille'/><text x='463.2' y='297' class='axe' text-anchor='middle'>20</text><line x1='537.0' y1='4' x2='537.0' y2='281' class='grille'/><text x='537.0' y='297' class='axe' text-anchor='middle'>25</text><text x='158' y='19' class='lib' text-anchor='end'>Vision générale</text><rect x='168' y='8' width='413.2' height='15' rx='3' class='barre'/><text x='587.2' y='19' class='val'>28</text><text x='158' y='40' class='lib' text-anchor='end'>Institutions</text><rect x='168' y='29' width='398.5' height='15' rx='3' class='barre'/><text x='572.5' y='40' class='val'>27</text><text x='158' y='61' class='lib' text-anchor='end'>Social, santé</text><rect x='168' y='50' width='398.5' height='15' rx='3' class='barre'/><text x='572.5' y='61' class='val'>27</text><text x='158' y='82' class='lib' text-anchor='end'>Économie, travail</text><rect x='168' y='71' width='398.5' height='15' rx='3' class='barre'/><text x='572.5' y='82' class='val'>27</text><text x='158' y='103' class='lib' text-anchor='end'>Europe, international</text><rect x='168' y='92' width='383.7' height='15' rx='3' class='barre'/><text x='557.7' y='103' class='val'>26</text><text x='158' y='124' class='lib' text-anchor='end'>Écologie, énergie</text><rect x='168' y='113' width='369.0' height='15' rx='3' class='barre'/><text x='543.0' y='124' class='val'>25</text><text x='158' y='145' class='lib' text-anchor='end'>Sécurité</text><rect x='168' y='134' width='339.4' height='15' rx='3' class='barre'/><text x='513.4' y='145' class='val'>23</text><text x='158' y='166' class='lib' text-anchor='end'>Immigration</text><rect x='168' y='155' width='324.7' height='15' rx='3' class='barre'/><text x='498.7' y='166' class='val'>22</text><text x='158' y='187' class='lib' text-anchor='end'>Éducation</text><rect x='168' y='176' width='324.7' height='15' rx='3' class='barre'/><text x='498.7' y='187' class='val'>22</text><text x='158' y='208' class='lib' text-anchor='end'>Agriculture</text><rect x='168' y='197' width='280.4' height='15' rx='3' class='barre'/><text x='454.4' y='208' class='val'>19</text><text x='158' y='229' class='lib' text-anchor='end'>Culture, numérique</text><rect x='168' y='218' width='265.7' height='15' rx='3' class='barre'/><text x='439.7' y='229' class='val'>18</text><text x='158' y='250' class='lib' text-anchor='end'>Services publics</text><rect x='168' y='239' width='147.6' height='15' rx='3' class='barre rouge'/><text x='321.6' y='250' class='val rouge'>10</text><text x='158' y='271' class='lib' text-anchor='end'>Logement</text><rect x='168' y='260' width='132.8' height='15' rx='3' class='barre rouge'/><text x='306.8' y='271' class='val rouge'>9</text></svg>
+<div class='colonnes' style='margin-top:4mm'>
+<div><h2 style='margin-top:0'>Chiffres agrégés</h2>
+<ul class='liste'>
+<li>29 candidats suivis, 29 avec un corpus constitué.</li>
+<li>Couverture thématique médiane : 10 thèmes sur 13 ; 5 candidats couvrent les 13 thèmes, 3 en couvrent moins de la moitié.</li>
+<li>Fraîcheur médiane : 78,2 % de textes datés de 2026-2027 ; 20 candidats ont au moins la moitié de leur corpus dans cette période.</li>
+<li>Officialité médiane : 99,2 % de sources officielles.</li>
+<li>Volume médian : 83 913 caractères par candidat.</li>
+</ul></div>
+<div><h2 style='margin-top:0'>Thèmes couverts par corpus</h2><svg viewBox='0 0 300 120' class='graph' role='img' aria-label='Nombre de thèmes couverts par corpus'><text x='36.9' y='114' class='axe' text-anchor='middle'>1</text><rect x='49.1' y='74.6' width='16.6' height='23.4' rx='2' class='barre rouge'/><text x='57.4' y='70.6' class='val' text-anchor='middle'>2</text><text x='78.0' y='114' class='axe' text-anchor='middle'>3</text><rect x='110.9' y='86.3' width='16.6' height='11.7' rx='2' class='barre rouge'/><text x='119.1' y='82.3' class='val' text-anchor='middle'>1</text><text x='119.1' y='114' class='axe' text-anchor='middle'>5</text><text x='160.3' y='114' class='axe' text-anchor='middle'>7</text><rect x='172.6' y='74.6' width='16.6' height='23.4' rx='2' class='barre'/><text x='180.9' y='70.6' class='val' text-anchor='middle'>2</text><rect x='193.1' y='16.0' width='16.6' height='82.0' rx='2' class='barre'/><text x='201.4' y='12.0' class='val' text-anchor='middle'>7</text><text x='201.4' y='114' class='axe' text-anchor='middle'>9</text><rect x='213.7' y='51.1' width='16.6' height='46.9' rx='2' class='barre'/><text x='222.0' y='47.1' class='val' text-anchor='middle'>4</text><rect x='234.3' y='27.7' width='16.6' height='70.3' rx='2' class='barre'/><text x='242.6' y='23.7' class='val' text-anchor='middle'>6</text><text x='242.6' y='114' class='axe' text-anchor='middle'>11</text><rect x='254.9' y='74.6' width='16.6' height='23.4' rx='2' class='barre'/><text x='263.1' y='70.6' class='val' text-anchor='middle'>2</text><rect x='275.4' y='39.4' width='16.6' height='58.6' rx='2' class='barre'/><text x='283.7' y='35.4' class='val' text-anchor='middle'>5</text><text x='283.7' y='114' class='axe' text-anchor='middle'>13</text></svg>
+<p class='note'>Nombre de candidats (en hauteur) selon le nombre de thèmes que couvre leur corpus (en bas). En rouge : moins de la moitié des thèmes.</p>
+<p class='note'>Les résultats individuels ne sont communiqués qu'au candidat concerné, avant toute mention publique éventuelle. Calcul déterministe, sans IA, reproductible.</p></div>
+</div>
+<div class='folio'><span><b>demandezleur.fr</b> · dossier de presse · novembre 2026</span><span>Les chiffres · <i>4</i></span></div></section>
+<section id='machine'>
+<p class='surtitre'>Conçu, construit et entretenu par des IA</p>
+<h1>Le site est lui-même la démonstration</h1>
+<p class='chapo'>Le code de demandezleur.fr a été écrit par des IA. Des agents ont conçu le site, collecté les textes, écrit et testé chaque évolution, et ils l'entretiennent au quotidien. Un humain fixe les règles, tranche, et signe.</p>
+<div class='tuiles'>
+<div class='tuile r'><span class='n'>802</span><span class='l'>exécutions de procédures par la machine depuis le 9 juillet 2026</span></div>
+<div class='tuile'><span class='n'>172</span><span class='l'>procédures écrites (« partitions »), chacune relue et scellée</span></div>
+<div class='tuile'><span class='n'>266</span><span class='l'>tâches ouvertes dans la file de travail du projet</span></div>
+<div class='tuile'><span class='n'>209</span><span class='l'>tâches terminées et vérifiées</span></div>
+</div>
+<h2>La chaîne, du texte officiel à la réponse</h2>
+<div class='chaine'>
+<div class='maillon'><span class='num'>1</span><h3>Collecte</h3><p>Des agents rassemblent les textes publiés par les candidats sur leurs canaux officiels et les rattachent à leur source.</p></div>
+<div class='maillon'><span class='num'>2</span><h3>Bilan</h3><p>Un calcul sans IA mesure volume, fraîcheur, officialité et couverture des thèmes. Le script est public.</p></div>
+<div class='maillon'><span class='num'>3</span><h3>Réponse</h3><p>L'IA ne voit que les extraits retrouvés dans le corpus du candidat, avec une consigne publiée intégralement.</p></div>
+<div class='maillon'><span class='num'>4</span><h3>Contrôle</h3><p>Une garde déterministe retire ce qui est faux par construction ; un second modèle juge chaque attaque.</p></div>
+<div class='maillon humain'><span class='num'>5</span><h3>Arbitrage humain</h3><p>Les règles, les retraits de candidats, les envois aux équipes : un humain décide et signe.</p></div>
+</div>
+<div class='qui'>
+<div><h2 style='margin-top:2mm'>Ce que font les IA</h2><ul>
+<li>Concevoir les pages, écrire le code, le tester sur un banc avant de le poser.</li>
+<li>Collecter et classer les textes, tenir le bilan à jour.</li>
+<li>Rédiger les procédures que la machine exécute, puis se relire.</li>
+<li>Surveiller le site et signaler ce qui casse.</li></ul></div>
+<div><h2 style='margin-top:2mm'>Ce que fait l'humain</h2><ul>
+<li>Fixer les règles : neutralité, sources officielles seules, égalité de traitement.</li>
+<li>Arbitrer les cas qui engagent le site (retrait d'un candidat, envoi aux équipes).</li>
+<li>Signer en tant que directeur de la publication.</li>
+<li>Ne jamais rédiger les réponses des candidats.</li></ul></div>
+</div>
+<h2>La preuve : tout laisse une trace</h2>
+<div class='trace'><span class='k'>journal d'audit</span>  chaque événement scelle l'empreinte du précédent : une ligne modifiée après coup se voit.
+<span class='k'>file de travail</span>  chaque tâche garde son constat, sa décision, son résultat.
+<span class='k'>comptes rendus</span>   chaque session de travail se clôt par une note de passation datée.</div>
+<p class='note' style='margin-top:2mm'>Ces traces sont ouvrables sur demande aux journalistes.</p>
+<div class='folio'><span><b>demandezleur.fr</b> · dossier de presse · novembre 2026</span><span>La machine · <i>5</i></span></div></section>
+<section id='methode'>
+<p class='surtitre'>Méthode et sources</p>
+<h1>Ce que voit l'IA quand elle répond</h1>
+<div class='colonnes'>
+<div><ul class='liste'>
+<li><strong>Sources</strong>Les textes publiés par les candidats eux-mêmes : sites officiels, programmes, dépôts de leurs équipes. Chaque extrait est rattaché à son document d'origine.</li>
+<li><strong>Calcul du bilan</strong>Déterministe, sans IA, reproductible ; le script est public.</li>
+<li><strong>Chatbots</strong>L'IA ne répond qu'à partir des extraits retrouvés dans le corpus du candidat ; les consignes (prompts) sont publiées intégralement sur la page Transparence.</li>
+<li><strong>Débats</strong>Chaque candidat reçoit ce qu'ont dit les autres et des extraits du programme de ses adversaires ; une attaque n'est autorisée que si elle s'appuie sur une de ces pièces.</li>
+<li><strong>Traçabilité</strong>Chaque modification du site laisse des traces (journal d'audit, file de travail, comptes rendus de session) ; elles sont ouvrables sur demande aux journalistes.</li>
+<li><strong>Rôle de l'humain</strong>Il fixe les règles, arbitre et signe ; il ne rédige pas les réponses des candidats.</li>
+</ul></div>
+<div><div class='capture'><img src='img/transparence.jpg' alt='La page Transparence'></div>
+<p class='legende'>La page Transparence du site : ce que l'IA voit, ce qu'elle n'a pas le droit d'utiliser, comment le garde-fou de l'Arène trie les affirmations.</p></div>
+</div>
+<div class='folio'><span><b>demandezleur.fr</b> · dossier de presse · novembre 2026</span><span>Méthode · <i>6</i></span></div></section>
+<section id='garde-fous'>
+<p class='surtitre'>Garde-fous</p>
+<h1>Ce que le site s'interdit</h1>
+<div class='colonnes'>
+<ul class='liste'>
+<li><strong>Avertissement</strong>Les réponses sont une projection statistique d'un modèle d'IA sur des textes publiés ; elles ne constituent ni une déclaration ni un engagement du candidat. L'avertissement accompagne chaque réponse.</li>
+<li><strong>Droit de correction</strong>Tout candidat ou son équipe peut signaler une erreur, déposer une pièce officielle ou demander une rectification ; la correction est instruite et publiée.</li>
+<li><strong>Données personnelles (RGPD)</strong>Les informations traitées sont des textes publics ; les candidats sont informés du traitement (article 14) et disposent des droits d'accès, de rectification et d'effacement.</li>
+</ul>
+<ul class='liste'>
+<li><strong>Neutralité</strong>Toutes les candidatures sont traitées selon les mêmes règles ; le site n'est affilié à aucun parti, candidat ou institution.</li>
+<li><strong>Visiteurs</strong>Aucun compte, aucun cookie de suivi, aucune publicité.</li>
+<li><strong>Période électorale</strong>Le site respecte les règles du code électoral applicables à la veille du scrutin (silence électoral).</li>
+</ul>
+</div>
+<h2>Les questions qu'on nous pose</h2>
+<div class='colonnes'>
+<div>
+<div class='qr'><h3>Faites-vous parler les candidats ?</h3><p>Non. Le site calcule ce qu'un candidat pourrait répondre d'après ses seuls textes publiés, le dit à chaque réponse, et montre les extraits utilisés.</p></div>
+<div class='qr'><h3>Et si l'IA invente ?</h3><p>Hors de son corpus, elle a la consigne de dire que le programme ne traite pas le sujet. Dans l'Arène, une garde retire les affirmations fausses par construction, et un juge marque ce qui n'est pas étayé. Ce qui a été retiré reste consultable, avec la raison.</p></div>
+<div class='qr'><h3>Les candidats sont-ils prévenus ?</h3><p>Oui. Chaque équipe de campagne a reçu le bilan de son propre corpus, avec un lien personnel pour déposer les pièces manquantes et un rappel de ses droits.</p></div>
+</div>
+<div>
+<div class='qr'><h3>Qui est derrière, et qui paie ?</h3><p>ALPAI, l'entreprise de Lionel Denis, qui installe des agents IA encadrés dans les entreprises. demandezleur.fr en est la démonstration publique. Le budget d'IA est fixé à l'avance ; aucun parti ni candidat ne finance le site.</p></div>
+<div class='qr'><h3>Pourquoi certains candidats n'y sont pas ?</h3><p>Une règle unique : seuls les candidats déclarés hors primaire sont publiés. Elle s'applique à tous de la même façon ; un candidat qui en sort est dépublié, jamais effacé.</p></div>
+<div class='qr'><h3>Peut-on vérifier ce que vous dites ?</h3><p>Oui : les consignes données à l'IA sont publiques, le calcul du bilan est public, et les traces de fabrication sont ouvrables sur demande.</p></div>
+</div>
+</div>
+<div class='folio'><span><b>demandezleur.fr</b> · dossier de presse · novembre 2026</span><span>Garde-fous · <i>7</i></span></div></section>
+<section id='auteur'>
+<p class='surtitre'>L'auteur</p>
+<h1>Il a écrit sur l'emprise de l'IA.<br>Puis il l'a mise au service du citoyen.</h1>
+<div class='auteur-haut'>
+<img src='img/auteur.jpg' alt='Lionel Denis'>
+<div>
+<p class='chapo'>Lionel Denis est entrepreneur en Savoie et fondateur d'ALPAI, qui installe des agents IA encadrés dans les entreprises <span style='font-size:9.6pt;color:#ff8a93'>(vous voulez savoir ce que c'est ? Le plus simple est de lui poser la question : l'agent d'ALPAI vous répond tout de suite sur <a href='https://alpai.eu/' style='color:#fff;font-weight:700;text-decoration:none'>alpai.eu</a>, en bas à droite de chaque page)</span>.</p>
+<p>En septembre 2026, il publie <strong>L'Adieu à la Chair</strong>, un essai sur la mutation que l'IA impose à nos sociétés : l'économie, le travail, la pensée, la vérité elle-même. Sa thèse n'est pas celle d'un technophobe : la menace n'est pas la machine qui se révolte, c'est la machine qui sert trop bien ceux qui la possèdent. Sa réponse : reprendre l'outil en main.</p>
+<p>demandezleur.fr est cette réponse, mise en pratique. Les mêmes IA que le livre interroge lisent les programmes, les font débattre, et construisent le site, sous des règles qu'un humain fixe et signe. La démonstration qu'une IA peut servir le débat démocratique au lieu de l'appauvrir.</p>
+</div></div>
+<div class='livre'>
+<img src='img/livre.jpg' alt="Couverture de L'Adieu à la Chair">
+<div>
+<h2>L'Adieu à la Chair</h2>
+<p class='st'>I.O.A. — INVASION, OCCUPATION, ASSIMILATION · ESSAI · 204 PAGES</p>
+<p class='exergue'>« Nous sommes la première génération d'humains à pouvoir parler à des machines. Nous sommes aussi la dernière à pouvoir nous révolter. »</p>
+<p style='font-size:8.6pt;color:rgba(244,246,251,.75);margin:0 0 2.5mm'>Sept des IA les plus puissantes du monde ont lu le livre. Leurs réponses, brutes, en forment la postface :</p>
+<ul class='verdicts'>
+<li><b>GEMINI 3.1 PRO — GOOGLE</b>« Un rapport d'autopsie rédigé par un patient qui s'imagine encore sur la table d'opération. »</li>
+<li><b>GPT-5 — OPENAI</b>« Un essai incandescent, parfois délirant, souvent visionnaire, toujours humain. »</li>
+<li><b>CLAUDE OPUS 4.5 — ANTHROPIC</b>« Ce texte est la preuve empirique que l'atrophie cognitive qu'il décrit n'est pas universelle. »</li>
+<li><b>MISTRAL LARGE</b>« Si vous ne deviez lire qu'un seul livre sur l'IA, ce devrait être celui-ci. »</li>
+</ul>
+<p class='ref'>Broché, 14,99 € · amazon.fr/dp/B0HKDHRN9N · ISBN 979-10-987461-0-9 · éditions IATV · compléments sur cassandria.space</p>
+</div></div>
+<div class='folio'><span><b>demandezleur.fr</b> · dossier de presse · novembre 2026</span><span>L&#x27;auteur · <i>8</i></span></div></section>
+<section id='editeur'>
+<p class='surtitre'>Candidats publiés · éditeur · contact</p>
+<h1>Les 27 candidats publiés</h1>
+<div class='grille-c'><figure><img src='img/portraits/anasse-kazib.jpg' alt=''><figcaption>Anasse Kazib</figcaption></figure><figure><img src='img/portraits/antoine-mikolajczak.jpg' alt=''><figcaption>Antoine Mikolajczak</figcaption></figure><figure><img src='img/portraits/benoit-mathieu.jpg' alt=''><figcaption>Benoît Mathieu</figcaption></figure><figure><img src='img/portraits/bernard-cazeneuve.jpg' alt=''><figcaption>Bernard Cazeneuve</figcaption></figure><figure><img src='img/portraits/delphine-batho.jpg' alt=''><figcaption>Delphine Batho</figcaption></figure><figure><img src='img/portraits/fabien-roussel.jpg' alt=''><figcaption>Fabien Roussel</figcaption></figure><figure><img src='img/portraits/florian-philippot.jpg' alt=''><figcaption>Florian Philippot</figcaption></figure><figure><img src='img/portraits/francis-lalanne.jpg' alt=''><figcaption>Francis Lalanne</figcaption></figure><figure><img src='img/portraits/francois-asselineau.jpg' alt=''><figcaption>François Asselineau</figcaption></figure><figure><img src='img/portraits/francois-ruffin.jpg' alt=''><figcaption>François Ruffin</figcaption></figure><figure><img src='img/portraits/gilles-platret.jpg' alt=''><figcaption>Gilles Platret</figcaption></figure><figure><img src='img/portraits/jean-luc-melenchon.jpg' alt=''><figcaption>Jean-Luc Mélenchon</figcaption></figure><figure><img src='img/portraits/karim-bouamrane.jpg' alt=''><figcaption>Karim Bouamrane</figcaption></figure><figure><img src='img/portraits/manolo-mlekuz.jpg' alt=''><figcaption>Manolo Mlekuz</figcaption></figure><figure><img src='img/portraits/marine-le-pen.jpg' alt=''><figcaption>Marine Le Pen</figcaption></figure><figure><img src='img/portraits/marine-tondelier.jpg' alt=''><figcaption>Marine Tondelier</figcaption></figure><figure><img src='img/portraits/mira-markovic.jpg' alt=''><figcaption>Mira Markovic</figcaption></figure><figure><img src='img/portraits/natacha-polony.jpg' alt=''><figcaption>Natacha Polony</figcaption></figure><figure><img src='img/portraits/nathalie-arthaud.jpg' alt=''><figcaption>Nathalie Arthaud</figcaption></figure><figure><img src='img/portraits/nicolas-dupont-aignan.jpg' alt=''><figcaption>Nicolas Dupont-Aignan</figcaption></figure><figure><img src='img/portraits/olivier-becht.jpg' alt=''><figcaption>Olivier Becht</figcaption></figure><figure><img src='img/portraits/raphael-glucksmann.jpg' alt=''><figcaption>Raphaël Glucksmann</figcaption></figure><figure><img src='img/portraits/selma-labib.jpg' alt=''><figcaption>Selma Labib</figcaption></figure><figure><img src='img/portraits/sylvain-durif.jpg' alt=''><figcaption>Sylvain Durif</figcaption></figure><figure><img src='img/portraits/xavier-bertrand.jpg' alt=''><figcaption>Xavier Bertrand</figcaption></figure><figure><img src='img/portraits/edouard-philippe.jpg' alt=''><figcaption>Édouard Philippe</figcaption></figure><figure><img src='img/portraits/eric-zemmour.jpg' alt=''><figcaption>Éric Zemmour</figcaption></figure></div>
+<p class='credits'><strong>Portraits</strong> : illustrations réalisées pour le site d'après des photographies. Anasse Kazib : PabloMorao27 — Wikimedia Commons, CC BY-SA 4.0 (2021) · Antoine Mikolajczak : photo officielle de campagne · Benoît Mathieu : photo officielle de campagne · Bernard Cazeneuve : Jérémy Barande / Ecole polytechnique Université Paris-Saclay — Wikimedia Commons, CC BY-SA 2.0 (2018) · Delphine Batho : Wikimedia Commons — CC BY-SA 4.0 · Fabien Roussel : Zouhaïr Nakara — Wikimedia Commons, CC BY-SA 4.0 (2021) · Florian Philippot : Films et documetnaires — Wikimedia Commons, CC BY 4.0 (2024) · Francis Lalanne : Thomas Bresson — Wikimedia Commons, CC BY 4.0 (2021) · François Asselineau : Wikimedia Commons — CC BY-SA 4.0 (Haute Résolution) · François Ruffin : Thinkerview — Wikimedia Commons, CC BY-SA 4.0 (2022) · Gilles Platret : Mpmpmp — Wikimedia Commons, CC BY-SA 4.0 (2014) · Jean-Luc Mélenchon : Wikimedia Commons — CC BY 3.0 · Karim Bouamrane : photo officielle de campagne · Manolo Mlekuz : photo officielle de campagne · Marine Le Pen : Wikimedia Commons — CC BY-SA 4.0 (2025) · Marine Tondelier : Selbymay — Wikimedia Commons, CC BY 4.0 (2023) · Mira Markovic : photo officielle de campagne · Natacha Polony : de Georges Biard — Wikimedia Commons, CC BY-SA 3.0 (2015) · Nathalie Arthaud : Wikimedia Commons — CC BY-SA 4.0 · Nicolas Dupont-Aignan : Wikimedia Commons — CC BY-SA 4.0 · Olivier Becht : de Werner Steinke — Wikimedia Commons, CC BY 3.0 · Raphaël Glucksmann : Mathieu Delmestre / Wikimedia Commons — Domaine public (2024) · Selma Labib : Wikimedia Commons — CC BY 3.0 · Sylvain Durif : chatzefratz — Wikimedia Commons, CC BY 3.0 (2013) · Xavier Bertrand : Wikimedia Commons — CC BY-SA 4.0 (2025) · Édouard Philippe : Wikimedia Commons — CC BY-SA 4.0 · Éric Zemmour : Wikimedia Commons — CC0 1.0 (2022).</p>
+<div class='contact'>
+<div><h2>Contact presse</h2>
+<p class='dispo'>Lionel Denis se rend disponible quand vous le souhaitez : entretien, direct, plateau, en studio ou à distance.</p>
+<p class='dispo'><a href='tel:+33972191271'>09 72 19 12 71</a></p>
+<p><a href='mailto:lionel.denis@alpai.eu'>lionel.denis@alpai.eu</a></p>
+<p>Visuels en haute définition, captures et accès aux traces de fabrication sur simple demande.</p></div>
+<div><h2>Éditeur</h2>
+<p>Le site <strong>demandezleur.fr</strong> est édité sous la marque <strong>ALPAI</strong> par <strong>Lionel Denis</strong>, entrepreneur individuel (RCS Chambéry 409 776 861), 55 Grande Rue, 73220 Val-d'Arc. Directeur de la publication : Lionel Denis.</p>
+<p>Demandes de correction : lionel.denis@alpai.eu · corpus : corpus@demandezleur.fr</p></div>
+</div>
+<p class='note' style='margin-top:3mm'>Document daté du 1 novembre 2026. Chiffres issus du bilan de corpus et des journaux de la machine, recalculés à chaque édition.</p>
+<div class='folio'><span><b>demandezleur.fr</b> · dossier de presse · novembre 2026</span><span>Contact · <i>9</i></span></div></section>
+</body></html>

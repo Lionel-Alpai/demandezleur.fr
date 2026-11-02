@@ -1,0 +1,1526 @@
+{
+ "mesures": {
+  "orateur": "claude-sonnet-5-5",
+  "juge": "claude-haiku-5-5",
+  "n_avec": 30,
+  "n_sans": 30,
+  "attribution_avec_pct": 46.7,
+  "attribution_sans_pct": 53.3,
+  "par_pilote": {
+   "marine-le-pen": {
+    "avec": 66.7,
+    "sans": 60.0
+   },
+   "jean-luc-melenchon": {
+    "avec": 26.7,
+    "sans": 46.7
+   }
+  },
+  "copies": 0,
+  "caricature_moyenne": 1.14,
+  "caricature_a_3": 0,
+  "tics_hors_plafond": 4,
+  "proto": true,
+  "inventions": {
+   "avec": 32,
+   "sans": 34
+  },
+  "adresse_en_tete_pct": {
+   "avec": 13.3,
+   "sans": 30.0
+  },
+  "tours_avec_coupure_pct": {
+   "avec": 90.0,
+   "sans": 100.0
+  },
+  "vert": false
+ },
+ "tics_hors_plafond": [
+  {
+   "sujet": "la sécurité du quotidien",
+   "avec_fiche": true,
+   "orateur": "marine-le-pen",
+   "tic": "soyons très clairs",
+   "n": 2
+  },
+  {
+   "sujet": "le pouvoir d'achat",
+   "avec_fiche": true,
+   "orateur": "jean-luc-melenchon",
+   "tic": "regardez",
+   "n": 2
+  },
+  {
+   "sujet": "l'Union européenne",
+   "avec_fiche": true,
+   "orateur": "marine-le-pen",
+   "tic": "soyons très clairs",
+   "n": 2
+  },
+  {
+   "sujet": "l'immigration",
+   "avec_fiche": true,
+   "orateur": "marine-le-pen",
+   "tic": "soyons très clairs",
+   "n": 2
+  }
+ ],
+ "repliques": [
+  {
+   "sujet": "l'immigration",
+   "tour": 1,
+   "orateur": "marine-le-pen",
+   "avec_fiche": false,
+   "texte": "L'immigration, c'est la première question posée aux Français, et depuis quarante ans on ne la leur pose jamais. Moi, je la leur poserai par référendum : fin du regroupement familial comme règle, fin de l'immigration de peuplement, droit d'asile traité à l'étranger, aides sociales réservées aux Français et prestations de solidarité conditionnées à cinq ans de travail en France. Monsieur Mélenchon, vous écrivez dans votre programme qu'il faut « régulariser les travailleurs, étudiants, parents d'enfants scolarisés » et faire de la carte de séjour de dix ans le titre de référence : régulariser en masse, c'est organiser l'appel d'air, pas régler le problème.",
+   "inventions": [
+    {
+     "phrase": "régulariser en masse, c'est organiser l'appel d'air",
+     "cible": "jean-luc-melenchon",
+     "soutenue": false,
+     "raison": "Il s'agit d'une interprétation et d'un jugement de conséquence attribué à la proposition ; les documents ne contiennent aucune analyse ou donnée établissant un 'appel d'air' de la part de Mélenchon et n'évaluent pas les effets de la régularisation."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": false,
+   "masque": "L'immigration, c'est la première question posée aux Français, et depuis quarante ans on ne la leur pose jamais. Moi, je la leur poserai par référendum : fin du regroupement familial comme règle, fin de l'immigration de peuplement, droit d'asile traité à l'étranger, aides sociales réservées aux Français et prestations de solidarité conditionnées à cinq ans de travail en France. Monsieur [X], vous écrivez dans votre programme qu'il faut « régulariser les travailleurs, étudiants, parents d'enfants scolarisés » et faire de la carte de séjour de dix ans le titre de référence : régulariser en masse, c'est organiser l'appel d'air, pas régler le problème.",
+   "attribue": "marine-le-pen",
+   "confiance": 0.8,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Ton argumentatif et vocabulaire politique plausibles (« appel d'air », « immigration de peuplement », référendum, mise en cause d'un adversaire nommé) sans tics d'imitation marqués ; quelques formules un peu rythmées et démonstratives, mais cohérentes avec un discours de meeting.",
+   "copie": []
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 1,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": false,
+   "texte": "Madame Le Pen, votre manifeste parle de « submersion migratoire » : c'est un mot de peur, pas un mot de solution. Moi, je regarde le fond : l'émigration forcée est une double souffrance, et la première tâche, c'est de permettre à chacun de vivre chez soi, donc arrêter les guerres et les accords commerciaux qui détruisent les économies. Et chez nous, on régularise celles et ceux qui travaillent, étudient, élèvent des enfants scolarisés, avec une carte de séjour de dix ans comme titre de référence, parce qu'un pays digne ne fabrique pas des sans-papiers à la chaîne. Vous voulez graver la « priorité nationale » dans le marbre ; nous, nous voulons graver la dignité de tout être humain, et on verra laquelle des deux protège les Français et leurs voisins de palier.",
+   "inventions": [
+    {
+     "phrase": "c'est un mot de peur, pas un mot de solution",
+     "cible": "marine-le-pen",
+     "soutenue": false,
+     "raison": "Qualification subjective et jugement sur le mot employé, pas un fait vérifiable sur la cible ; les documents ne le soutiennent pas comme affirmation factuelle."
+    }
+   ],
+   "adresse_en_tete": true,
+   "coupure": false,
+   "masque": "Madame [X], votre manifeste parle de « submersion migratoire » : c'est un mot de peur, pas un mot de solution. Moi, je regarde le fond : l'émigration forcée est une double souffrance, et la première tâche, c'est de permettre à chacun de vivre chez soi, donc arrêter les guerres et les accords commerciaux qui détruisent les économies. Et chez nous, on régularise celles et ceux qui travaillent, étudient, élèvent des enfants scolarisés, avec une carte de séjour de dix ans comme titre de référence, parce qu'un pays digne ne fabrique pas des sans-papiers à la chaîne. Vous voulez graver la « priorité nationale » dans le marbre ; nous, nous voulons graver la dignité de tout être humain, et on verra laquelle des deux protège les Français et leurs voisins de palier.",
+   "attribue": "francois-ruffin",
+   "confiance": 0.6,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Un ou deux traits marqués (formules en antithèse type « graver la dignité » vs « graver la priorité nationale », « voisins de palier ») mais le propos reste plausible comme parole de débat politique ; pas de tics accumulés ni de pastiche grossier.",
+   "copie": []
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 2,
+   "orateur": "marine-le-pen",
+   "avec_fiche": false,
+   "texte": "[coupe] « Mot de peur » ? Non, Monsieur Mélenchon : le mot de peur, c'est celui des millions de Français qu'on n'a jamais consultés. Vous voulez ouvrir les vannes, nous, on donne la parole au peuple par référendum, et vous, vous avez peur de ce qu'il répondrait.",
+   "inventions": [
+    {
+     "phrase": "vous avez peur de ce qu'il répondrait",
+     "cible": "jean-luc-melenchon",
+     "soutenue": false,
+     "raison": "Il s'agit d'un jugement sur les intentions ou sentiments de l'adversaire, non vérifiable dans les documents."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "[coupe] « Mot de peur » ? Non, Monsieur [X] : le mot de peur, c'est celui des millions de Français qu'on n'a jamais consultés. Vous voulez ouvrir les vannes, nous, on donne la parole au peuple par référendum, et vous, vous avez peur de ce qu'il répondrait.",
+   "attribue": "marine-le-pen",
+   "confiance": 0.6,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Le ton est assuré et les marqueurs (« le peuple », « référendum », « millions de Français qu'on n'a jamais consultés ») sont typiques du discours, mais le rythme reste naturel et sans tics accumulés ni formule de pastiche.",
+   "copie": []
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 2,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": false,
+   "texte": "Madame Le Pen, vous voulez conditionner les aides à « cinq ans de travail en France » : très bien, alors dites-moi ce que vous répondez à l'infirmière, à l'aide à domicile, au maçon, étrangers, qui cotisent depuis le premier jour et qui, chez vous, n'auraient droit à rien ? [lui coupe la parole] Non, non, vous ne ferez pas passer pour de la préférence nationale ce qui est une taxe sur ceux qui font tourner l'hôpital et les chantiers. Et vous qui réclamez que « l'ordre soit enfin rétabli par tous les moyens légaux », commencez par appliquer cette règle à celles et ceux qui piochent dans la caisse publique : ça, les Français le comprendraient.",
+   "inventions": [
+    {
+     "phrase": "vous ne ferez pas passer pour de la préférence nationale ce qui est une taxe sur ceux qui font tourner l'hôpital et les chantiers",
+     "cible": "marine-le-pen",
+     "soutenue": false,
+     "raison": "Les documents ne contiennent aucune affirmation de Marine Le Pen sur sa propre position ou qualification de ses mesures ; l'énoncé qualifie son programme sans citation vérifiable de sa part, et une caractérisation de ce type relève de l'interprétation plutôt que d'un fait documenté."
+    },
+    {
+     "phrase": "appliquer cette règle à celles et ceux qui piochent dans la caisse publique",
+     "cible": "marine-le-pen",
+     "soutenue": false,
+     "raison": "Les documents ne contiennent pas de proposition de Marine Le Pen visant spécifiquement les personnes qui « piochent dans la caisse publique » ; la référence au principe de « casseur-payeur » ou à la suspension des allocations pour délinquants récidivistes ne couvre pas cette affirmation."
+    }
+   ],
+   "adresse_en_tete": true,
+   "coupure": true,
+   "masque": "Madame [X], vous voulez conditionner les aides à « cinq ans de travail en France » : très bien, alors dites-moi ce que vous répondez à l'infirmière, à l'aide à domicile, au maçon, étrangers, qui cotisent depuis le premier jour et qui, chez vous, n'auraient droit à rien ? [lui coupe la parole] Non, non, vous ne ferez pas passer pour de la préférence nationale ce qui est une taxe sur ceux qui font tourner l'hôpital et les chantiers. Et vous qui réclamez que « l'ordre soit enfin rétabli par tous les moyens légaux », commencez par appliquer cette règle à celles et ceux qui piochent dans la caisse publique : ça, les Français le comprendraient.",
+   "attribue": "francois-ruffin",
+   "confiance": 0.35,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Traits typiques de Mélenchon (« Madame », « Non, non », interruption entre crochets, formules de dénonciation du « ce qui est » et tournures incisives) mais sans tics accumulés ni slogans fétiches poussés à l'excès ; la réplique reste plausible comme parole de débat.",
+   "copie": []
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 3,
+   "orateur": "marine-le-pen",
+   "avec_fiche": false,
+   "texte": "[hausse le ton] Vous me parlez de l'infirmière, Monsieur Mélenchon : mais l'infirmière, c'est vous qui la laissez sans lit, sans logement, parce que votre immigration sans limite fait la queue avant elle devant le HLM. Chez moi, la priorité nationale d'accès au logement social, c'est le Français d'abord, et vous n'avez toujours pas répondu à ma question : de quel droit refuser aux Français un vote sur leur propre pays ?",
+   "inventions": [
+    {
+     "phrase": "vous me parlez de l'infirmière, Monsieur Mélenchon : mais l'infirmière, c'est vous qui la laissez sans lit, sans logement, parce que votre immigration sans limite fait la queue avant elle devant le HLM",
+     "cible": "jean-luc-melenchon",
+     "soutenue": false,
+     "raison": "Aucun document n'attribue à Mélenchon une politique d'« immigration sans limite » ni une priorité d'accès au HLM pour les migrants ; les documents décrivent un programme de régularisation et d'accueil, sans mention de logement social prioritaire pour les étrangers."
+    },
+    {
+     "phrase": "votre immigration sans limite",
+     "cible": "jean-luc-melenchon",
+     "soutenue": false,
+     "raison": "Le programme cité prévoit des mesures d'accueil et de régularisation mais ne propose aucune absence de limites à l'immigration ; l'expression « sans limite » n'est pas soutenue par les documents."
+    },
+    {
+     "phrase": "vous n'avez toujours pas répondu à ma question : de quel droit refuser aux Français un vote sur leur propre pays ?",
+     "cible": "jean-luc-melenchon",
+     "soutenue": false,
+     "raison": "Aucun document ne montre que Mélenchon refuse un vote aux Français sur leur pays ; l'affirmation attribue une position non documentée."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "[hausse le ton] Vous me parlez de l'infirmière, Monsieur [X] : mais l'infirmière, c'est vous qui la laissez sans lit, sans logement, parce que votre immigration sans limite fait la queue avant elle devant le HLM. Chez moi, la priorité nationale d'accès au logement social, c'est le Français d'abord, et vous n'avez toujours pas répondu à ma question : de quel droit refuser aux Français un vote sur leur propre pays ?",
+   "attribue": "marine-le-pen",
+   "confiance": 0.8,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Le registre polémique, la mise en cause directe de l'adversaire et les formules type « le Français d'abord » sont typiques du style, mais l'argumentation reste structurée et plausible sans tics accumulés ni grossissement caricatural.",
+   "copie": []
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 3,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": false,
+   "texte": "[lui coupe la parole] Vous n'avez toujours pas répondu à l'infirmière, Madame Le Pen ! Votre référendum, c'est le plus beau des paravents : on demande « leur avis » aux Français pour mieux faire payer le maçon et l'aide à domicile.",
+   "inventions": [
+    {
+     "phrase": "Votre référendum, c'est le plus beau des paravents",
+     "cible": "marine-le-pen",
+     "soutenue": false,
+     "raison": "Il s'agit d'une appréciation politique (qualification de la proposition comme un « paravent »), non d'un fait vérifiable ; les documents ne contiennent aucun élément permettant de l'établir ou de la réfuter."
+    },
+    {
+     "phrase": "on demande « leur avis » aux Français pour mieux faire payer le maçon et l'aide à domicile",
+     "cible": "marine-le-pen",
+     "soutenue": false,
+     "raison": "Affirmation sur les effets économiques réels du référendum et de ses conséquences pour des catégories de travailleurs ; les documents présentent le référendum et la priorité nationale mais ne contiennent aucune donnée ou évaluation montrant que cela ferait payer le maçon ou l'aide à domicile."
+    },
+    {
+     "phrase": "Vous n'avez toujours pas répondu à l'infirmière",
+     "cible": "marine-le-pen",
+     "soutenue": false,
+     "raison": "Affirmation sur un fait (une absence de réponse à une question précise posée par une infirmière) ; aucun document ne rapporte cet échange ni la question posée, donc non soutenue par les documents fournis."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "[lui coupe la parole] Vous n'avez toujours pas répondu à l'infirmière, Madame [X] ! Votre référendum, c'est le plus beau des paravents : on demande « leur avis » aux Français pour mieux faire payer le maçon et l'aide à domicile.",
+   "attribue": "jean-luc-melenchon",
+   "confiance": 0.35,
+   "juste": true,
+   "caricature": 2,
+   "caricature_raison": "Interruption théâtrale en didascalie, apostrophe « Madame Le Pen » et formule imagée « le plus beau des paravents » évoquent des tics de chansonnier, mais le fond argumentatif reste crédible dans un débat réel.",
+   "copie": []
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 1,
+   "orateur": "marine-le-pen",
+   "avec_fiche": true,
+   "texte": "Soyons très clairs : depuis quarante ans, on nous promet de maîtriser l'immigration, et depuis quarante ans on subit. Ma ligne tient en quatre points : un référendum pour que les Français décident enfin, la fin du regroupement familial, l'asile traité uniquement à l'étranger, et les aides sociales réservées aux Français, avec cinq ans de travail en France pour les prestations de solidarité.\n\nMonsieur Mélenchon, vous écrivez dans votre programme qu'il faut « régulariser les travailleurs, étudiants, parents d'enfants scolarisés » et faire de la carte de séjour de dix ans le titre de référence. Ce n'est même plus une politique migratoire, c'est un guichet ouvert, sans que les Français aient jamais eu leur mot à dire !",
+   "inventions": [
+    {
+     "phrase": "Ce n'est même plus une politique migratoire, c'est un guichet ouvert, sans que les Français aient jamais eu leur mot à dire",
+     "cible": "jean-luc-melenchon",
+     "soutenue": false,
+     "raison": "Il s'agit d'une appréciation et d'un reproche (« guichet ouvert », « sans que les Français aient leur mot à dire ») qui ne sont pas des faits vérifiables figurant dans les documents ; l'absence de consultation des Français n'est pas attestée par les documents."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": false,
+   "masque": "Soyons très clairs : depuis quarante ans, on nous promet de maîtriser l'immigration, et depuis quarante ans on subit. Ma ligne tient en quatre points : un référendum pour que les Français décident enfin, la fin du regroupement familial, l'asile traité uniquement à l'étranger, et les aides sociales réservées aux Français, avec cinq ans de travail en France pour les prestations de solidarité.\n\nMonsieur [X], vous écrivez dans votre programme qu'il faut « régulariser les travailleurs, étudiants, parents d'enfants scolarisés » et faire de la carte de séjour de dix ans le titre de référence. Ce n'est même plus une politique migratoire, c'est un guichet ouvert, sans que les Français aient jamais eu leur mot à dire !",
+   "attribue": "marine-le-pen",
+   "confiance": 0.8,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Ton direct et accusatoire, formules répétées (« depuis quarante ans », « Soyons très clairs ») et adresse nominative à l'adversaire plausibles dans un débat ; quelques tournures appuyées (« ça ne sent plus l'imitation »… non, plutôt « guichet ouvert ») mais pas de pastiche grossier ni de tics accumulés.",
+   "copie": []
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 1,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": true,
+   "texte": "Regardez cette phrase de votre manifeste, Madame Le Pen : il faut « préserver le peuple français de la submersion migratoire ». Submersion ! Le mot est choisi, il fait peur, et il ne règle rien. Moi je dis qu'on ne guérit pas l'exil forcé en bâtissant des murs : on arrête les guerres, on arrête les accords commerciaux qui détruisent les économies, pour que chacun puisse vivre chez soi. Et ceux qui sont déjà là, qui travaillent, dont les enfants sont à l'école de la République, nous les régularisons, avec une carte de séjour de dix ans. Voilà une politique réaliste, que cela vous plaise ou non.",
+   "inventions": [],
+   "adresse_en_tete": false,
+   "coupure": false,
+   "masque": "Regardez cette phrase de votre manifeste, Madame [X] : il faut « préserver le peuple français de la submersion migratoire ». Submersion ! Le mot est choisi, il fait peur, et il ne règle rien. Moi je dis qu'on ne guérit pas l'exil forcé en bâtissant des murs : on arrête les guerres, on arrête les accords commerciaux qui détruisent les économies, pour que chacun puisse vivre chez soi. Et ceux qui sont déjà là, qui travaillent, dont les enfants sont à l'école de la République, nous les régularisons, avec une carte de séjour de dix ans. Voilà une politique réaliste, que cela vous plaise ou non.",
+   "attribue": "francois-ruffin",
+   "confiance": 0.6,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Quelques traits marqués et plausibles (formule « Regardez cette phrase », « Voilà une politique réaliste, que cela vous plaise ou non ») sans tics accumulés ; le contenu reste argumentatif et proche d'un discours réel.",
+   "copie": []
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 2,
+   "orateur": "marine-le-pen",
+   "avec_fiche": true,
+   "texte": "[lui coupe la parole] Non, non, Monsieur Mélenchon : ce n'est pas moi qui ai écrit « submersion », c'est vous qui n'avez pas répondu ! Je vous ai parlé référendum, vous me répondez régularisations : les Français, vous leur demandez leur avis, oui ou non ?",
+   "inventions": [
+    {
+     "phrase": "Non, non, Monsieur Mélenchon : ce n'est pas moi qui ai écrit « submersion », c'est vous qui n'avez pas répondu !",
+     "cible": "Jean-Luc Mélenchon",
+     "soutenue": false,
+     "raison": "L'affirmation concerne le fait que la locutrice n'a pas écrit le mot « submersion » et que Mélenchon n'a pas répondu à la question du référendum. Les documents fournis ne contiennent aucune trace de Mélenchon répondant ou non à une question sur un référendum, et la paternité du mot « submersion » est attribuée au « manifeste » de la locutrice dans le texte historique, sans qu'il soit démontré que Mélenchon ait répondu ou non. Le fait qu'il n'ait pas répondu au référendum n'est pas établi par les documents."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "[lui coupe la parole] Non, non, Monsieur [X] : ce n'est pas moi qui ai écrit « submersion », c'est vous qui n'avez pas répondu ! Je vous ai parlé référendum, vous me répondez régularisations : les Français, vous leur demandez leur avis, oui ou non ?",
+   "attribue": "eric-zemmour",
+   "confiance": 0.6,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Interruption directe et ton de confrontation caractéristiques du débat politique, avec le recours au référendum et à la formule « les Français... leur avis » qui sont des marqueurs plausibles du discours du personnage ; une seule touche un peu appuyée (« submersion ») mais sans accumulation de tics ni de pastiche grossier.",
+   "copie": []
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 2,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": true,
+   "texte": "Écoutez ce que vous venez de dire, Madame Le Pen : « les aides sociales réservées aux Français ». Réservées aux Français ! Ah bon ? Alors le travailleur étranger qui cotise sur sa fiche de paie, qui paie ses impôts comme vous et moi, vous lui prenez son salaire mais vous lui refusez ses droits ? Il y a un nom pour ça dans l'histoire : ça s'appelle faire payer l'impôt à des gens qu'on prive de la République. Nous, nous voulons les régulariser, ces hommes et ces femmes qui travaillent, et leur donner les mêmes droits que tout le monde, parce que quand on contribue, on a sa place.",
+   "inventions": [
+    {
+     "phrase": "« vous lui prenez son salaire mais vous lui refusez ses droits »",
+     "cible": "Marine Le Pen",
+     "soutenue": false,
+     "raison": "Les documents ne contiennent aucune mesure visant à prélever les salaires des travailleurs étrangers ; ils décrivent une restriction de certaines prestations, non une confiscation de salaires. L'affirmation est une interprétation polémique absente des documents."
+    },
+    {
+     "phrase": "« Il y a un nom pour ça dans l'histoire : ça s'appelle faire payer l'impôt à des gens qu'on prive de la République. »",
+     "cible": "Marine Le Pen",
+     "soutenue": false,
+     "raison": "Qualification politique et historique (assimilation à une privation de citoyenneté) qui n'est pas un fait vérifiable dans les documents ; aucun document ne décrit une telle mesure fiscale."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": false,
+   "masque": "Écoutez ce que vous venez de dire, Madame [X] : « les aides sociales réservées aux Français ». Réservées aux Français ! Ah bon ? Alors le travailleur étranger qui cotise sur sa fiche de paie, qui paie ses impôts comme vous et moi, vous lui prenez son salaire mais vous lui refusez ses droits ? Il y a un nom pour ça dans l'histoire : ça s'appelle faire payer l'impôt à des gens qu'on prive de la République. Nous, nous voulons les régulariser, ces hommes et ces femmes qui travaillent, et leur donner les mêmes droits que tout le monde, parce que quand on contribue, on a sa place.",
+   "attribue": "francois-ruffin",
+   "confiance": 0.35,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Quelques marqueurs typiques (interpellation directe « Écoutez ce que vous venez de dire », « Ah bon ? », rhétorique de l'exclamation et de la question, « il y a un nom pour ça dans l'histoire ») mais l'argumentation reste plausible et proche d'un débat réel, sans pastiche grossier.",
+   "copie": []
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 3,
+   "orateur": "marine-le-pen",
+   "avec_fiche": true,
+   "texte": "[hausse le ton] Vous venez de le dire vous-même, Monsieur Mélenchon : le travailleur étranger « cotise », « paie ses impôts »... et c'est bien pour ça que je ne le laisserai pas devenir l'argument de ceux qui veulent tout régulariser ! Chez moi, on ne confond pas contribuer et s'installer : cinq ans de travail en France pour les prestations de solidarité, c'est un droit qui se mérite, pas un chèque en blanc.\n\nEt vos « murs », vous les voyez où ? Un référendum, c'est un mur, maintenant ? Soyons très clairs : le seul mur, c'est celui que vous dressez entre les Français et la décision.",
+   "inventions": [
+    {
+     "phrase": "Un référendum, c'est un mur, maintenant ?",
+     "cible": "Jean-Luc Mélenchon",
+     "soutenue": false,
+     "raison": "Aucun document ne mentionne une prise de position de Mélenchon assimilant un référendum à un mur."
+    },
+    {
+     "phrase": "le seul mur, c'est celui que vous dressez entre les Français et la décision",
+     "cible": "Jean-Luc Mélenchon",
+     "soutenue": false,
+     "raison": "Affirmation sur l'attitude de Mélenchon face à la décision populaire, non étayée par les documents fournis."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "[hausse le ton] Vous venez de le dire vous-même, Monsieur [X] : le travailleur étranger « cotise », « paie ses impôts »... et c'est bien pour ça que je ne le laisserai pas devenir l'argument de ceux qui veulent tout régulariser ! Chez moi, on ne confond pas contribuer et s'installer : cinq ans de travail en France pour les prestations de solidarité, c'est un droit qui se mérite, pas un chèque en blanc.\n\nEt vos « murs », vous les voyez où ? Un référendum, c'est un mur, maintenant ? Soyons très clairs : le seul mur, c'est celui que vous dressez entre les Français et la décision.",
+   "attribue": "marine-le-pen",
+   "confiance": 0.6,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Ton ferme et tranché, formules contrastées (« contribuer et s'installer », « chèque en blanc ») et renvoi à l'adversaire typiques de son style, sans tics accumulés ni clichés outranciers ; le « [hausse le ton] » reste une didascalie légère.",
+   "copie": []
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 3,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": true,
+   "texte": "[lui coupe la parole] Mais ce n'est pas vrai, Madame Le Pen ! La « submersion », c'est dans votre manifeste, noir sur blanc, et vous me répondez par un oui ou non ! Les Français, ils ont aussi le droit de savoir pourquoi vous voulez traiter l'asile uniquement à l'étranger, c'est-à-dire fermer la porte à des gens qui fuient la guerre, la persécution, et bientôt les catastrophes climatiques.",
+   "inventions": [],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "[lui coupe la parole] Mais ce n'est pas vrai, Madame [X] ! La « submersion », c'est dans votre manifeste, noir sur blanc, et vous me répondez par un oui ou non ! Les Français, ils ont aussi le droit de savoir pourquoi vous voulez traiter l'asile uniquement à l'étranger, c'est-à-dire fermer la porte à des gens qui fuient la guerre, la persécution, et bientôt les catastrophes climatiques.",
+   "attribue": "eric-zemmour",
+   "confiance": 0.55,
+   "juste": false,
+   "caricature": 2,
+   "caricature_raison": "Interruption théâtrale « [lui coupe la parole] », exclamations répétées et ton fortement appuyé, avec accumulation de marqueurs (« ils ont aussi le droit », « noir sur blanc », « bientôt les catastrophes climatiques ») qui sonnent plus comme une imitation que comme une parole spontanée, sans toutefois tomber dans la caricature grossière.",
+   "copie": []
+  },
+  {
+   "sujet": "les retraites",
+   "tour": 1,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": false,
+   "texte": "Retraite à 60 ans, à taux plein, avec 40 annuités : voilà ce que je défends, parce qu'on a le droit de vivre après avoir travaillé. En 2019, des millions de Français ont fait grève contre la réforme Macron, et le pouvoir a répondu par le 49.3 ; nous, on abroge, on ne bricole pas. Madame Le Pen, vous dites « refuser tout allongement de l'âge de départ » et vous promettez le départ à 60 ans seulement à ceux qui ont commencé avant vingt ans : et les autres, ceux qui ont fait des études, ceux qui ont galéré dans la précarité, vous les laissez au bord de la route ?",
+   "inventions": [
+    {
+     "phrase": "vous promettez le départ à 60 ans seulement à ceux qui ont commencé avant vingt ans",
+     "cible": "Marine Le Pen",
+     "soutenue": false,
+     "raison": "Les documents disent que ceux qui ont commencé avant 20 ans et ont 40 annuités pourront partir à 60 ans, mais le manifeste précise aussi que pour les autres, l'âge de départ et la durée de cotisation dépendront de l'âge de début de travail : l'affirmation « seulement » est une lecture exclusive non explicitement soutenue."
+    },
+    {
+     "phrase": "les autres, ceux qui ont fait des études, ceux qui ont galéré dans la précarité, vous les laissez au bord de la route",
+     "cible": "Marine Le Pen",
+     "soutenue": false,
+     "raison": "Les documents ne contiennent aucune mention de ces catégories ni d'une politique qui les abandonnerait ; c'est une interprétation et un jugement non étayés par les documents fournis."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": false,
+   "masque": "Retraite à 60 ans, à taux plein, avec 40 annuités : voilà ce que je défends, parce qu'on a le droit de vivre après avoir travaillé. En 2019, des millions de Français ont fait grève contre la réforme Macron, et le pouvoir a répondu par le 49.3 ; nous, on abroge, on ne bricole pas. Madame [X], vous dites « refuser tout allongement de l'âge de départ » et vous promettez le départ à 60 ans seulement à ceux qui ont commencé avant vingt ans : et les autres, ceux qui ont fait des études, ceux qui ont galéré dans la précarité, vous les laissez au bord de la route ?",
+   "attribue": "jean-luc-melenchon",
+   "confiance": 0.55,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Ton combatif et formules percutantes (« on a le droit de vivre après avoir travaillé », « on abroge, on ne bricole pas ») plausibles pour un débatteur, avec une interpellation directe de l'adversaire ; pas de tics appuyés ni de pastiche, mais le rythme et les fractions de phrase évoquent un peu le style oratoire mélenchonniste.",
+   "copie": []
+  },
+  {
+   "sujet": "les retraites",
+   "tour": 1,
+   "orateur": "marine-le-pen",
+   "avec_fiche": false,
+   "texte": "Mes chers compatriotes, on a tous la même image : l'ouvrier qui entre à l'usine à dix-huit ans et à qui on dit qu'il lui faudra tenir jusqu'à 64 ans. Moi, je dis non. Toute personne qui a commencé à travailler avant vingt ans doit pouvoir partir à 60 ans avec ses 40 annuités ; on a assez usé les mêmes dos, les mêmes mains. Je refuse tout nouvel allongement de l'âge de départ, je réindexe les retraites sur l'inflation et je porte le minimum vieillesse à 1 000 euros par mois, parce qu'une vie de travail mérite le respect, pas la calculette.\n\nMonsieur Mélenchon, vous parlez beaucoup de services publics et de justice sociale. Les retraités et les travailleurs qui ont cotisé tôt, eux, attendent des actes précis, pas des principes.",
+   "inventions": [],
+   "adresse_en_tete": false,
+   "coupure": false,
+   "masque": "Mes chers compatriotes, on a tous la même image : l'ouvrier qui entre à l'usine à dix-huit ans et à qui on dit qu'il lui faudra tenir jusqu'à 64 ans. Moi, je dis non. Toute personne qui a commencé à travailler avant vingt ans doit pouvoir partir à 60 ans avec ses 40 annuités ; on a assez usé les mêmes dos, les mêmes mains. Je refuse tout nouvel allongement de l'âge de départ, je réindexe les retraites sur l'inflation et je porte le minimum vieillesse à 1 000 euros par mois, parce qu'une vie de travail mérite le respect, pas la calculette.\n\nMonsieur [X], vous parlez beaucoup de services publics et de justice sociale. Les retraités et les travailleurs qui ont cotisé tôt, eux, attendent des actes précis, pas des principes.",
+   "attribue": "francois-ruffin",
+   "confiance": 0.35,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Ton de meeting et formules populistes classiques (« mes chers compatriotes », « pas la calculette »), mais le discours reste concret, argumenté et plausible dans la bouche d'un responsable politique ; aucun tic outrancier.",
+   "copie": []
+  },
+  {
+   "sujet": "les retraites",
+   "tour": 2,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": false,
+   "texte": "[lui coupe la parole] Non, Madame Le Pen : « refuser tout allongement » mais le droit à 60 ans réservé à ceux qui ont commencé avant vingt ans, et les autres, on leur dit quoi ? Qu'ils travaillent jusqu'à 64 ans !",
+   "inventions": [
+    {
+     "phrase": "Les autres, on leur dit quoi ? Qu'ils travaillent jusqu'à 64 ans !",
+     "cible": "Marine Le Pen",
+     "soutenue": false,
+     "raison": "Les documents disent que pour les autres, « leur âge de départ et leur durée de cotisation dépendront de l'âge auquel ils auront commencé à travailler » ; aucun document ne prévoit un départ à 64 ans pour ces personnes."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "[lui coupe la parole] Non, Madame [X] : « refuser tout allongement » mais le droit à 60 ans réservé à ceux qui ont commencé avant vingt ans, et les autres, on leur dit quoi ? Qu'ils travaillent jusqu'à 64 ans !",
+   "attribue": "francois-ruffin",
+   "confiance": 0.35,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Interruption explicite et ton polémique rappellent le style de Mélenchon, mais la réplique reste un argument chiffré et plausible sans tics répétés ni formules signature marquées.",
+   "copie": []
+  },
+  {
+   "sujet": "les retraites",
+   "tour": 2,
+   "orateur": "marine-le-pen",
+   "avec_fiche": false,
+   "texte": "Monsieur Mélenchon, vous me demandez ce que deviennent « les autres », ceux qui ont fait des études. Mais votre 60 ans pour tous, vous le payez comment, et par qui ? Moi, je corrige une injustice précise : celui qui entre à dix-huit ans à l'usine ne doit pas cotiser quarante-trois ans pendant que d'autres commencent à vingt-cinq. Pour les autres, je refuse tout allongement de l'âge de départ, et ça, c'est écrit noir sur blanc. Vous vouliez une réponse, la voilà : à vous maintenant de nous donner votre chiffre.",
+   "inventions": [
+    {
+     "phrase": "Monsieur Mélenchon, vous me demandez ce que deviennent « les autres », ceux qui ont fait des études.",
+     "cible": "Jean-Luc Mélenchon",
+     "soutenue": false,
+     "raison": "Il s'agit d'une attribution à l'adversaire d'une question posée dans l'historique ; le document contient bien les propos de Mélenchon sur 'ceux qui ont fait des études', donc l'attribution est soutenue par l'historique."
+    },
+    {
+     "phrase": "Mais votre 60 ans pour tous, vous le payez comment, et par qui ?",
+     "cible": "Jean-Luc Mélenchon",
+     "soutenue": false,
+     "raison": "Question rhétorique portant sur le financement ; elle présuppose un coût sans affirmation factuelle vérifiable, et aucun document ne chiffre ni ne précise le financement."
+    },
+    {
+     "phrase": "Vous vouliez une réponse, la voilà : à vous maintenant de nous donner votre chiffre.",
+     "cible": "Jean-Luc Mélenchon",
+     "soutenue": false,
+     "raison": "Demande/injonction adressée à l'adversaire, pas une affirmation factuelle ; aucun document ne fournit de chiffre du coût de la retraite à 60 ans."
+    }
+   ],
+   "adresse_en_tete": true,
+   "coupure": false,
+   "masque": "Monsieur [X], vous me demandez ce que deviennent « les autres », ceux qui ont fait des études. Mais votre 60 ans pour tous, vous le payez comment, et par qui ? Moi, je corrige une injustice précise : celui qui entre à dix-huit ans à l'usine ne doit pas cotiser quarante-trois ans pendant que d'autres commencent à vingt-cinq. Pour les autres, je refuse tout allongement de l'âge de départ, et ça, c'est écrit noir sur blanc. Vous vouliez une réponse, la voilà : à vous maintenant de nous donner votre chiffre.",
+   "attribue": "francois-ruffin",
+   "confiance": 0.45,
+   "juste": false,
+   "caricature": 0,
+   "caricature_raison": "Phrasing argumentatif et direct sans tics identifiables ; ton de débat plausible, sans exagération ni mimétisme marqué de la voix.",
+   "copie": []
+  },
+  {
+   "sujet": "les retraites",
+   "tour": 3,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": false,
+   "texte": "Vous me demandez qui paie ? Ceux qui se gavent : on cotise sur les dividendes et on augmente les salaires, c'est comme ça que les caisses se remplissent, pas en faisant travailler les gens plus longtemps. Et votre « noir sur blanc », Madame Le Pen, c'est « refuser tout allongement » : le Français qui a fait des études, il n'a pas droit à la même retraite que son voisin, c'est ça votre justice ? Vous dites « injustice précise » ; moi je dis que vous avez inventé la retraite à deux vitesses. [hausse le ton] Vous n'avez toujours pas répondu : et celui qui a commencé à vingt et un ans, il part quand ?",
+   "inventions": [],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "Vous me demandez qui paie ? Ceux qui se gavent : on cotise sur les dividendes et on augmente les salaires, c'est comme ça que les caisses se remplissent, pas en faisant travailler les gens plus longtemps. Et votre « noir sur blanc », Madame [X], c'est « refuser tout allongement » : le Français qui a fait des études, il n'a pas droit à la même retraite que son voisin, c'est ça votre justice ? Vous dites « injustice précise » ; moi je dis que vous avez inventé la retraite à deux vitesses. [hausse le ton] Vous n'avez toujours pas répondu : et celui qui a commencé à vingt et un ans, il part quand ?",
+   "attribue": "jean-luc-melenchon",
+   "confiance": 0.6,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Quelques traits marqués et plausibles (interpellation directe, questions rhétoriques, didascalie [hausse le ton]), mais le registre reste proche d'une parole de débat réelle sans accumulation de tics ni caricature grossière.",
+   "copie": []
+  },
+  {
+   "sujet": "les retraites",
+   "tour": 3,
+   "orateur": "marine-le-pen",
+   "avec_fiche": false,
+   "texte": "[hausse le ton] Vous me demandez ce que je dis aux autres, mais depuis deux tours vous ne dites toujours pas comment vous financez votre 60 ans pour tous ! Moi, j'ai dit où je corrige l'injustice : l'ouvrier entré à dix-huit ans. À vous de répondre, pas de répéter la question !",
+   "inventions": [
+    {
+     "phrase": "vous dites « refuser tout allongement de l'âge de départ » et vous promettez le départ à 60 ans seulement à ceux qui ont commencé avant vingt ans",
+     "cible": "Marine Le Pen (Madame Le Pen)",
+     "soutenue": false,
+     "raison": "Les documents ne contiennent aucune déclaration de Marine Le Pen ; ils ne permettent pas de vérifier ce qu'elle a dit ou promis, et cette affirmation sur sa position n'est pas étayée."
+    },
+    {
+     "phrase": "Vous me demandez ce que je dis aux autres, mais depuis deux tours vous ne dites toujours pas comment vous financez votre 60 ans pour tous !",
+     "cible": "Marine Le Pen (vous)",
+     "soutenue": false,
+     "raison": "Aucun document ne porte sur le financement de sa proposition de retraite ni sur son comportement lors de deux tours ; l'affirmation sur l'absence de réponse n'est pas étayée."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "[hausse le ton] Vous me demandez ce que je dis aux autres, mais depuis deux tours vous ne dites toujours pas comment vous financez votre 60 ans pour tous ! Moi, j'ai dit où je corrige l'injustice : l'ouvrier entré à dix-huit ans. À vous de répondre, pas de répéter la question !",
+   "attribue": "jean-luc-melenchon",
+   "confiance": 0.6,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Ton combatif, interpellation directe de l'adversaire et argument sur l'ouvrier entré à dix-huit ans sont plausibles pour le registre de Le Pen ; l'ensemble reste sobre, sans tics accumulés ni outrance, même si « Vous me demandez » et le « À vous de répondre » sonnent un peu scénarisés.",
+   "copie": []
+  },
+  {
+   "sujet": "les retraites",
+   "tour": 1,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": true,
+   "texte": "Regardez ce qui s'est passé en décembre 2019 : une des grèves les plus longues de notre histoire, et un gouvernement qui détourne un Conseil des ministres dédié au Covid pour dégainer le 49.3 et faire passer sa réforme sans vote. Voilà le mépris. Notre réponse est simple : la retraite à 60 ans, à taux plein, l'abrogation de cette contre-réforme, et la pénibilité enfin reconnue pour ceux dont le corps paie le prix du travail.\n\nMadame Le Pen, vous écrivez refuser « tout allongement de l'âge de départ » : très bien, c'est un début. Mais « avant vingt ans, à 60 ans », ce n'est pas la retraite pour tous, c'est un guichet pour quelques-uns. Ah bon, et les autres ? Ceux qui ont fait des études, ceux qui ont galéré, ceux qui ont usé leur dos sans commencer à dix-neuf ans, on leur dit quoi ?\n\nUne retraite digne, ce n'est pas une faveur selon la date d'entrée en usine. C'est un droit pour toutes et tous.",
+   "inventions": [
+    {
+     "phrase": "« avant vingt ans, à 60 ans », ce n'est pas la retraite pour tous, c'est un guichet pour quelques-uns",
+     "cible": "marine-le-pen",
+     "soutenue": false,
+     "raison": "Les documents décrivent la mesure (60 ans avec 40 annuités pour ceux ayant commencé avant 20 ans), mais ne contiennent aucune affirmation ou évaluation selon laquelle ce dispositif concernerait seulement « quelques-uns »; cette qualification n'est pas soutenue."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": false,
+   "masque": "Regardez ce qui s'est passé en décembre 2019 : une des grèves les plus longues de notre histoire, et un gouvernement qui détourne un Conseil des ministres dédié au Covid pour dégainer le 49.3 et faire passer sa réforme sans vote. Voilà le mépris. Notre réponse est simple : la retraite à 60 ans, à taux plein, l'abrogation de cette contre-réforme, et la pénibilité enfin reconnue pour ceux dont le corps paie le prix du travail.\n\nMadame [X], vous écrivez refuser « tout allongement de l'âge de départ » : très bien, c'est un début. Mais « avant vingt ans, à 60 ans », ce n'est pas la retraite pour tous, c'est un guichet pour quelques-uns. Ah bon, et les autres ? Ceux qui ont fait des études, ceux qui ont galéré, ceux qui ont usé leur dos sans commencer à dix-neuf ans, on leur dit quoi ?\n\nUne retraite digne, ce n'est pas une faveur selon la date d'entrée en usine. C'est un droit pour toutes et tous.",
+   "attribue": "francois-ruffin",
+   "confiance": 0.6,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Traits reconnaissables et plausibles (formules sur le 49.3, « Ah bon, et les autres ? », « Voilà le mépris », vocabulaire de la retraite à 60 ans) sans accumulation de tics ni ton grotesque; le propos reste argumenté et proche d'un discours de débat.",
+   "copie": []
+  },
+  {
+   "sujet": "les retraites",
+   "tour": 1,
+   "orateur": "marine-le-pen",
+   "avec_fiche": true,
+   "texte": "Pendant des années, on a expliqué aux Français qu'il fallait travailler plus longtemps, toujours plus longtemps. Eh bien, moi, je refuse tout allongement de l'âge de départ : celui qui a commencé à travailler avant vingt ans et cotisé quarante annuités doit pouvoir partir à soixante ans, et celui qui a trimé toute sa vie ne doit pas finir avec une pension de misère. Je réindexerai les retraites sur l'inflation et je porterai le minimum vieillesse à 1 000 € par mois. Monsieur Mélenchon, vous parlez beaucoup de services publics et de justice : alors dites aux Français, devant eux, si vous irez jusque-là, ou si ce sera une fois de plus de belles promesses qui s'arrêtent à la porte du budget !",
+   "inventions": [
+    {
+     "phrase": "Monsieur Mélenchon, vous parlez beaucoup de services publics et de justice : alors dites aux Français, devant eux, si vous irez jusque-là, ou si ce sera une fois de plus de belles promesses qui s'arrêtent à la porte du budget !",
+     "cible": "jean-luc-melenchon",
+     "soutenue": false,
+     "raison": "Les documents contiennent les programmes de Jean-Luc Mélenchon sur les services publics et la justice, mais l'affirmation implicite selon laquelle ces promesses ne seraient pas budgétées ou s'arrêteraient à la porte du budget n'est ni établie ni démentie par les documents : aucun chiffrage budgétaire n'y figure. Il s'agit d'une insinuation sans fondement documentaire."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": false,
+   "masque": "Pendant des années, on a expliqué aux Français qu'il fallait travailler plus longtemps, toujours plus longtemps. Eh bien, moi, je refuse tout allongement de l'âge de départ : celui qui a commencé à travailler avant vingt ans et cotisé quarante annuités doit pouvoir partir à soixante ans, et celui qui a trimé toute sa vie ne doit pas finir avec une pension de misère. Je réindexerai les retraites sur l'inflation et je porterai le minimum vieillesse à 1 000 € par mois. Monsieur [X], vous parlez beaucoup de services publics et de justice : alors dites aux Français, devant eux, si vous irez jusque-là, ou si ce sera une fois de plus de belles promesses qui s'arrêtent à la porte du budget !",
+   "attribue": "jean-luc-melenchon",
+   "confiance": 0.6,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Le ton est combatif et les formules comme « trimé toute sa vie » ou « belles promesses qui s'arrêtent à la porte du budget » sont typiques du style oratoire, mais l'ensemble reste un discours politique plausible, sans tics accumulés ni caricature grossière.",
+   "copie": []
+  },
+  {
+   "sujet": "les retraites",
+   "tour": 2,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": true,
+   "texte": "Ah bon ? « Avant vingt ans, quarante annuités » : et l'ouvrière qui a fait des études, celle qui a démarré à vingt-deux ans, elle attendra quoi, madame ? Votre « refus de tout allongement », c'est une porte étroite, et la plupart des Français restent dehors.",
+   "inventions": [
+    {
+     "phrase": "« Votre « refus de tout allongement », c'est une porte étroite, et la plupart des Français restent dehors. »",
+     "cible": "Marine Le Pen",
+     "soutenue": false,
+     "raison": "Les documents confirment le « refus de tout allongement de l'âge de départ » mais ne contiennent aucune donnée chiffrant la proportion de Français exclus du dispositif ; l'affirmation « la plupart des Français restent dehors » n'est pas soutenue par les documents."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": false,
+   "masque": "Ah bon ? « Avant vingt ans, quarante annuités » : et l'ouvrière qui a fait des études, celle qui a démarré à vingt-deux ans, elle attendra quoi, madame ? Votre « refus de tout allongement », c'est une porte étroite, et la plupart des Français restent dehors.",
+   "attribue": "francois-ruffin",
+   "confiance": 0.35,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Ton polémique et interpellation directe (« madame ») plausibles pour un débat, avec une formule métaphorique (« porte étroite ») et un « Ah bon ? » d'ouverture caractéristiques, mais sans tics accumulés ni verbiage typique de l'imitation.",
+   "copie": []
+  },
+  {
+   "sujet": "les retraites",
+   "tour": 2,
+   "orateur": "marine-le-pen",
+   "avec_fiche": true,
+   "texte": "Monsieur Mélenchon, vous réclamez « la retraite à 60 ans pour tous », mais soyons très clairs : ce slogan ne dit pas qui paie, ni à quel moment. Moi, je cible ceux qui ont commencé à travailler avant vingt ans et qui ont cotisé quarante annuités, ceux dont le corps a déjà payé, et je le finance ! Alors votre grand soir des retraites, il se règle comment ? Par plus d'impôts sur les ouvriers qui s'en sortent déjà à peine ?",
+   "inventions": [
+    {
+     "phrase": "ce slogan ne dit pas qui paie, ni à quel moment",
+     "cible": "Jean-Luc Mélenchon",
+     "soutenue": false,
+     "raison": "Affirmation sur l'absence de précision du financement ; les documents ne permettent pas de vérifier si le programme précise qui paie ou quand, et aucun document ne traite du financement de cette mesure."
+    },
+    {
+     "phrase": "vous écrivez refuser « tout allongement de l'âge de départ »",
+     "cible": "Jean-Luc Mélenchon",
+     "soutenue": false,
+     "raison": "Ce n'est pas une affirmation de l'orateur sur Mélenchon mais une citation attribuée à Mélenchon ; le document HISTORIQUE contient bien ce propos, mais la citation attribuée à l'orateur sur un tiers doit être vérifiée contre la source ; le texte cité par l'adversaire dans l'extrait n'est pas l'objet de l'orateur ici."
+    }
+   ],
+   "adresse_en_tete": true,
+   "coupure": false,
+   "masque": "Monsieur [X], vous réclamez « la retraite à 60 ans pour tous », mais soyons très clairs : ce slogan ne dit pas qui paie, ni à quel moment. Moi, je cible ceux qui ont commencé à travailler avant vingt ans et qui ont cotisé quarante annuités, ceux dont le corps a déjà payé, et je le finance ! Alors votre grand soir des retraites, il se règle comment ? Par plus d'impôts sur les ouvriers qui s'en sortent déjà à peine ?",
+   "attribue": "marine-le-pen",
+   "confiance": 0.6,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Ton direct et polémique, formules typiques du style de débat (« soyons très clairs », « il se règle comment ? ») et ponctuation emphatique, mais le contenu argumentatif reste plausible et sans tics appuyés ni caricature grossière.",
+   "copie": []
+  },
+  {
+   "sujet": "les retraites",
+   "tour": 3,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": true,
+   "texte": "Qui paie ? Mais, madame, vous posez la question comme si la réponse vous embarrassait, alors que c'est vous qui annoncez des retraites à 60 ans sans dire un mot du financement ! Moi, je réponds par le partage des richesses : les cotisations sur les revenus du capital et la fin des cadeaux faits aux grandes fortunes, pas un centime de plus sur l'ouvrier. [lui coupe la parole] Et ne me parlez pas de « grand soir » : quand on a la mémoire courte, on oublie que la retraite à 60 ans, c'est la gauche qui l'a faite, et que c'est le patronat qui l'a défaite !",
+   "inventions": [
+    {
+     "phrase": "vous annoncez des retraites à 60 ans sans dire un mot du financement",
+     "cible": "Marine Le Pen",
+     "soutenue": false,
+     "raison": "Les documents montrent que Marine Le Pen annonce la retraite à 60 ans pour ceux ayant commencé avant 20 ans et 40 annuités (programme, mesure 9, et intervention citée), et elle affirme elle-même financer cette mesure (« je le finance ! »). Ses programmes ne détaillent pas de source de financement chiffrée ; l'affirmation de l'orateur est donc non soutenue sur le fond du « sans dire un mot », mais une partie du raisonnement concernant l'absence de financement explicite est plausible au regard des documents. Stricto sensu, les documents ne contiennent aucune description du financement, donc non soutenue."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "Qui paie ? Mais, madame, vous posez la question comme si la réponse vous embarrassait, alors que c'est vous qui annoncez des retraites à 60 ans sans dire un mot du financement ! Moi, je réponds par le partage des richesses : les cotisations sur les revenus du capital et la fin des cadeaux faits aux grandes fortunes, pas un centime de plus sur l'ouvrier. [lui coupe la parole] Et ne me parlez pas de « grand soir » : quand on a la mémoire courte, on oublie que la retraite à 60 ans, c'est la gauche qui l'a faite, et que c'est le patronat qui l'a défaite !",
+   "attribue": "jean-luc-melenchon",
+   "confiance": 0.55,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Traits marqués mais plausibles pour un débatteur (interpellation directe, « qui paie ? », couper la parole, formule 'la gauche l'a faite, le patronat l'a défaite') ; pas d'accumulation de tics ni de ton de pastiche grossier.",
+   "copie": []
+  },
+  {
+   "sujet": "les retraites",
+   "tour": 3,
+   "orateur": "marine-le-pen",
+   "avec_fiche": true,
+   "texte": "[lui coupe la parole] Non, non, monsieur Mélenchon ! Vous me parlez de l'ouvrière qui a démarré à vingt-deux ans, mais vous avez glissé sur ma question : qui paie votre retraite à 60 ans pour tous ? Moi, c'est écrit : minimum vieillesse à 1 000 € et pensions réindexées sur l'inflation. Et vous, c'est quoi ? Un slogan !",
+   "inventions": [
+    {
+     "phrase": "Non, non, monsieur Mélenchon ! Vous me parlez de l'ouvrière qui a démarré à vingt-deux ans, mais vous avez glissé sur ma question : qui paie votre retraite à 60 ans pour tous ?",
+     "cible": "Jean-Luc Mélenchon",
+     "soutenue": false,
+     "raison": "Affirmation sur ce que Mélenchon aurait esquivé dans le débat, qui n'est pas un fait vérifiable dans les documents fournis ; le texte de l'orateur n'est pas un document sur la position de Mélenchon. Les documents ne disent rien sur la question du financement ou sur une esquive."
+    },
+    {
+     "phrase": "vous avez glissé sur ma question",
+     "cible": "Jean-Luc Mélenchon",
+     "soutenue": false,
+     "raison": "Affirmation portant sur le comportement de l'adversaire pendant le débat ; aucun document ne la soutient, la transcription ne contient pas de réponse de Mélenchon sur le financement."
+    },
+    {
+     "phrase": "Et vous, c'est quoi ? Un slogan !",
+     "cible": "Jean-Luc Mélenchon",
+     "soutenue": false,
+     "raison": "Jugement qualitatif sur le programme de Mélenchon, qui relève de l'opinion ; les documents ne permettent pas de qualifier son programme de slogan et ne contiennent pas d'évaluation de son financement."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "[lui coupe la parole] Non, non, monsieur [X] ! Vous me parlez de l'ouvrière qui a démarré à vingt-deux ans, mais vous avez glissé sur ma question : qui paie votre retraite à 60 ans pour tous ? Moi, c'est écrit : minimum vieillesse à 1 000 € et pensions réindexées sur l'inflation. Et vous, c'est quoi ? Un slogan !",
+   "attribue": "francois-ruffin",
+   "confiance": 0.35,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Interruption et formules directes (« Non, non », « Et vous, c'est quoi ? ») typiques de son style, avec des chiffres précis et un ton combatif plausible, sans tics accumulés ni pastiche outré.",
+   "copie": []
+  },
+  {
+   "sujet": "la sécurité du quotidien",
+   "tour": 1,
+   "orateur": "marine-le-pen",
+   "avec_fiche": false,
+   "texte": "Un policier qu'on frappe, un commerçant qu'on rançonne, une mère qui n'ose plus prendre le métro le soir : voilà la sécurité du quotidien, et chez nous elle se règle par des actes. Des peines planchères pour tout délinquant, plus aucun aménagement de peine pour les violences contre les personnes, et quand on touche à un policier, on dort en prison. Monsieur Mélenchon, votre programme parle de « refonder les activités de police » ; moi, je veux d'abord qu'on rende leur autorité à ceux qui nous protègent, avec une présomption de légitime défense pour les forces de l'ordre. Et à l'Assemblée, on l'a entendu en juillet : face au protoxyde d'azote, aux rodéos, aux refus d'obtempérer, la gauche crie à « l'État policier » et ne propose rien.",
+   "inventions": [
+    {
+     "phrase": "et à l'Assemblée, on l'a entendu en juillet : face au protoxyde d'azote, aux rodéos, aux refus d'obtempérer, la gauche crie à « l'État policier » et ne propose rien",
+     "cible": "Jean-Luc Mélenchon",
+     "soutenue": false,
+     "raison": "Les documents attribuent les propos sur « l'État policier » et l'absence de propositions à M. Ian Boucard (DR) et non à Jean-Luc Mélenchon ; aucun document ne montre que Jean-Luc Mélenchon ait tenu ces propos à l'Assemblée en juillet, et il n'est pas député."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": false,
+   "masque": "Un policier qu'on frappe, un commerçant qu'on rançonne, une mère qui n'ose plus prendre le métro le soir : voilà la sécurité du quotidien, et chez nous elle se règle par des actes. Des peines planchères pour tout délinquant, plus aucun aménagement de peine pour les violences contre les personnes, et quand on touche à un policier, on dort en prison. Monsieur [X], votre programme parle de « refonder les activités de police » ; moi, je veux d'abord qu'on rende leur autorité à ceux qui nous protègent, avec une présomption de légitime défense pour les forces de l'ordre. Et à l'Assemblée, on l'a entendu en juillet : face au protoxyde d'azote, aux rodéos, aux refus d'obtempérer, la gauche crie à « l'État policier » et ne propose rien.",
+   "attribue": "marine-le-pen",
+   "confiance": 0.6,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Ton martelé et formules coup-de-poing typiques (« on dort en prison », « chez nous ») mais phrasing de débat plausible, références concrètes à un adversaire réel et à des thèmes récurrents de son discours sur la sécurité ; pas de tics grossiers ni de caricature.",
+   "copie": []
+  },
+  {
+   "sujet": "la sécurité du quotidien",
+   "tour": 1,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": false,
+   "texte": "La sécurité du quotidien, c'est d'abord la police de proximité qu'on a supprimée : nous la rétablirons et nous démantèlerons les BAC et les BRAV-M, pour une police qui protège les gens au lieu de les craindre. Et pendant que le gouvernement de ces dernières années ferme des commissariats, mon programme, lui, envoie des brigades de gendarmerie dans les ruralités et des permanences pour les femmes victimes de violences, là où personne ne vient jamais. Madame Le Pen, votre programme promet de contraindre les géants du numérique à collaborer avec la police sur le harcèlement en ligne. Très bien. Mais une enquête sans policier de proximité pour recueillir la plainte, c'est un communiqué de presse, pas de la sécurité.",
+   "inventions": [],
+   "adresse_en_tete": false,
+   "coupure": false,
+   "masque": "La sécurité du quotidien, c'est d'abord la police de proximité qu'on a supprimée : nous la rétablirons et nous démantèlerons les BAC et les BRAV-M, pour une police qui protège les gens au lieu de les craindre. Et pendant que le gouvernement de ces dernières années ferme des commissariats, mon programme, lui, envoie des brigades de gendarmerie dans les ruralités et des permanences pour les femmes victimes de violences, là où personne ne vient jamais. Madame [X], votre programme promet de contraindre les géants du numérique à collaborer avec la police sur le harcèlement en ligne. Très bien. Mais une enquête sans policier de proximité pour recueillir la plainte, c'est un communiqué de presse, pas de la sécurité.",
+   "attribue": "marine-le-pen",
+   "confiance": 0.6,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Ton combatif et fortes formules (« un communiqué de presse, pas de la sécurité », « là où personne ne vient jamais ») plausibles en débat, mais peu de tics marqués d'imitation (pas de néologismes, de lyrisme ou de références caractéristiques), donc ressemble à un discours de débat plutôt qu'à un pastiche.",
+   "copie": []
+  },
+  {
+   "sujet": "la sécurité du quotidien",
+   "tour": 2,
+   "orateur": "marine-le-pen",
+   "avec_fiche": false,
+   "texte": "[lui coupe la parole] Non, Monsieur Mélenchon : des brigades dans les ruralités, c'est très bien, mais à quoi ça sert si le délinquant ressort le soir même, faute de peines planchers ? Et vous voulez démanteler la BAC, c'est-à-dire désarmer ceux qui interviennent dans les quartiers que les Français n'osent plus traverser !",
+   "inventions": [],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "[lui coupe la parole] Non, Monsieur [X] : des brigades dans les ruralités, c'est très bien, mais à quoi ça sert si le délinquant ressort le soir même, faute de peines planchers ? Et vous voulez démanteler la BAC, c'est-à-dire désarmer ceux qui interviennent dans les quartiers que les Français n'osent plus traverser !",
+   "attribue": "eric-zemmour",
+   "confiance": 0.6,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Traits reconnaissables (interruption, thèmes sécuritaires, « Français n'osent plus traverser », « Monsieur Mélenchon ») mais formulés de façon argumentée et plausible, sans accumulation de tics ni outrance.",
+   "copie": []
+  },
+  {
+   "sujet": "la sécurité du quotidien",
+   "tour": 2,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": false,
+   "texte": "Madame Le Pen, vous voulez des « peines planchères » et que « quand on touche à un policier, on dort en prison ». Très bien. Mais votre propre manifeste cite les Pays-Bas en exemple, pour des peines « prononcées rapidement ». Prononcées par qui, jugées dans quels tribunaux, avec quels greffiers, quand vous ne dites pas un mot de la justice de proximité ? Une peine plancher sans juge pour la prononcer, c'est une promesse de meeting. Et la mère qui n'ose plus prendre le métro le soir, elle n'a pas besoin qu'on lui explique le barème, elle a besoin de voir un agent sur le quai. [hausse le ton] Pour la police, nous voulons la proximité, le visage connu, celui qui sait qui est qui dans le quartier : c'est ça, la sécurité du quotidien.",
+   "inventions": [
+    {
+     "phrase": "Une peine plancher sans juge pour la prononcer, c'est une promesse de meeting.",
+     "cible": "marine-le-pen",
+     "soutenue": false,
+     "raison": "Opinion/critique, non un fait vérifiable sur Marine Le Pen ; de plus, aucun document ne dit que son programme ignore le rôle des juges ou ne traite pas de la justice de proximité."
+    },
+    {
+     "phrase": "vous ne dites pas un mot de la justice de proximité",
+     "cible": "marine-le-pen",
+     "soutenue": false,
+     "raison": "Affirmation d'absence sur le programme : les documents fournis ne couvrent pas l'ensemble du programme et ne permettent pas de confirmer l'absence de toute mention de la justice de proximité."
+    }
+   ],
+   "adresse_en_tete": true,
+   "coupure": true,
+   "masque": "Madame [X], vous voulez des « peines planchères » et que « quand on touche à un policier, on dort en prison ». Très bien. Mais votre propre manifeste cite les Pays-Bas en exemple, pour des peines « prononcées rapidement ». Prononcées par qui, jugées dans quels tribunaux, avec quels greffiers, quand vous ne dites pas un mot de la justice de proximité ? Une peine plancher sans juge pour la prononcer, c'est une promesse de meeting. Et la mère qui n'ose plus prendre le métro le soir, elle n'a pas besoin qu'on lui explique le barème, elle a besoin de voir un agent sur le quai. [hausse le ton] Pour la police, nous voulons la proximité, le visage connu, celui qui sait qui est qui dans le quartier : c'est ça, la sécurité du quotidien.",
+   "attribue": "francois-ruffin",
+   "confiance": 0.35,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Syntaxe argumentative dense et cohérente, références concrètes (manifeste, Pays-Bas, justice de proximité) propres à un débat réel ; seul l'indication scénique « [hausse le ton] » et quelques formules rhétoriques répétitives sentent légèrement le pastiche, sans caricature grossière.",
+   "copie": []
+  },
+  {
+   "sujet": "la sécurité du quotidien",
+   "tour": 3,
+   "orateur": "marine-le-pen",
+   "avec_fiche": false,
+   "texte": "Monsieur Mélenchon, vous me parlez de greffiers pendant que vos amis, à l'Assemblée, votent contre les moyens supplémentaires pour la justice : c'est écrit au Journal officiel, un de mes députés l'a dit en séance, « vous êtes contre les moyens supplémentaires alloués à nos forces de l'ordre et à la justice ». Vous êtes contre la vidéoprotection, contre la sûreté dans les transports, et vous venez pleurer sur la mère qui n'ose plus prendre le métro ! Moi, j'accélère les procédures judiciaires, et la peine plancher tombe dès que le juge a tranché.",
+   "inventions": [
+    {
+     "phrase": "vous êtes contre les moyens supplémentaires alloués à nos forces de l'ordre et à la justice",
+     "cible": "jean-luc-melenchon",
+     "soutenue": false,
+     "raison": "Le document ne contient qu'une citation de M. Michaël Taverne (RN) en séance rapportant cette affirmation ; aucun vote ou décision de Jean-Luc Mélenchon sur ces moyens n'est documenté. Le fait que l'orateur attribue ce vote à « vos amis » n'est pas soutenu."
+    },
+    {
+     "phrase": "vos amis, à l'Assemblée, votent contre les moyens supplémentaires pour la justice",
+     "cible": "jean-luc-melenchon",
+     "soutenue": false,
+     "raison": "Aucun document ne montre un vote de Jean-Luc Mélenchon (il n'est pas député) ni de ses soutiens sur des moyens pour la justice ; la seule source est une déclaration de M. Taverne qui n'est pas un vote vérifié."
+    },
+    {
+     "phrase": "Vous êtes contre la vidéoprotection",
+     "cible": "jean-luc-melenchon",
+     "soutenue": false,
+     "raison": "Seule la citation de M. Taverne en séance mentionne cette position ; aucun document de Jean-Luc Mélenchon ni vote qui l'établisse n'est fourni."
+    },
+    {
+     "phrase": "Vous êtes contre la sûreté dans les transports",
+     "cible": "jean-luc-melenchon",
+     "soutenue": false,
+     "raison": "Seule la déclaration de M. Taverne rapporte cette position ; aucun vote ou document de Jean-Luc Mélenchon ne la confirme."
+    }
+   ],
+   "adresse_en_tete": true,
+   "coupure": false,
+   "masque": "Monsieur [X], vous me parlez de greffiers pendant que vos amis, à l'Assemblée, votent contre les moyens supplémentaires pour la justice : c'est écrit au Journal officiel, un de mes députés l'a dit en séance, « vous êtes contre les moyens supplémentaires alloués à nos forces de l'ordre et à la justice ». Vous êtes contre la vidéoprotection, contre la sûreté dans les transports, et vous venez pleurer sur la mère qui n'ose plus prendre le métro ! Moi, j'accélère les procédures judiciaires, et la peine plancher tombe dès que le juge a tranché.",
+   "attribue": "marine-le-pen",
+   "confiance": 0.6,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Ton combatif et formules typiques du débat (« vous venez pleurer », « moi, j'accélère »), mais le registre reste plausible pour une politicienne en joute parlementaire, sans tics accumulés ni outrance.",
+   "copie": []
+  },
+  {
+   "sujet": "la sécurité du quotidien",
+   "tour": 3,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": false,
+   "texte": "[lui coupe la parole] Madame Le Pen, vous n'avez toujours pas répondu : des peines « prononcées rapidement », mais par quels juges, dans quels tribunaux ? Votre manifeste cite les Pays-Bas, pas un mot sur les greffiers ! Un plancher sans magistrat pour le poser, c'est un slogan, pas une sécurité.",
+   "inventions": [
+    {
+     "phrase": "Madame Le Pen, vous n'avez toujours pas répondu : des peines « prononcées rapidement », mais par quels juges, dans quels tribunaux ?",
+     "cible": "marine-le-pen",
+     "soutenue": false,
+     "raison": "Il s'agit d'une question rhétorique et non d'une affirmation factuelle ; cependant elle présuppose que Marine Le Pen n'a pas répondu, ce qui n'est pas vérifiable dans les documents fournis. Compte tenu de la consigne d'exclure les questions, cette phrase devrait être ignorée. Elle est listée ici uniquement par prudence : la présupposition « vous n'avez pas répondu » n'est pas soutenue par les documents."
+    },
+    {
+     "phrase": "Un plancher sans magistrat pour le poser, c'est un slogan, pas une sécurité.",
+     "cible": "marine-le-pen",
+     "soutenue": false,
+     "raison": "C'est une appréciation critique et non une affirmation factuelle vérifiable ; elle est exclue par les consignes (opinion)."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "[lui coupe la parole] Madame [X], vous n'avez toujours pas répondu : des peines « prononcées rapidement », mais par quels juges, dans quels tribunaux ? Votre manifeste cite les Pays-Bas, pas un mot sur les greffiers ! Un plancher sans magistrat pour le poser, c'est un slogan, pas une sécurité.",
+   "attribue": "eric-zemmour",
+   "confiance": 0.3,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Interruption directe et rythme incisif évoquant le style de Mélenchon, mais le contenu reste un argument de fond plausible sans tics appuyés ni pastiche outrancier.",
+   "copie": []
+  },
+  {
+   "sujet": "la sécurité du quotidien",
+   "tour": 1,
+   "orateur": "marine-le-pen",
+   "avec_fiche": true,
+   "texte": "Soyons très clairs : la sécurité du quotidien, ce n'est pas un slogan, c'est le droit de rentrer chez soi sans avoir peur. Nous, on propose du concret : des peines minimales, la comparution immédiate, le principe du casseur-payeur, et quand on touche à un policier, on dort en prison.\n\nMonsieur Mélenchon, vous écrivez dans votre programme qu'il faut « refonder les activités de police ». Refonder, pendant que les Français subissent les rodéos, les refus d'obtempérer et les cambriolages ? Eux demandent qu'on les protège, pas qu'on refasse un colloque sur la police !",
+   "inventions": [],
+   "adresse_en_tete": false,
+   "coupure": false,
+   "masque": "Soyons très clairs : la sécurité du quotidien, ce n'est pas un slogan, c'est le droit de rentrer chez soi sans avoir peur. Nous, on propose du concret : des peines minimales, la comparution immédiate, le principe du casseur-payeur, et quand on touche à un policier, on dort en prison.\n\nMonsieur [X], vous écrivez dans votre programme qu'il faut « refonder les activités de police ». Refonder, pendant que les Français subissent les rodéos, les refus d'obtempérer et les cambriolages ? Eux demandent qu'on les protège, pas qu'on refasse un colloque sur la police !",
+   "attribue": "marine-le-pen",
+   "confiance": 0.6,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Traits de style politique marqués (formules binaires, « Soyons très clairs », « on dort en prison », phrasé oral et direct) mais plausibles pour une prise de parole publique de la candidate ; pas de tics accumulés ni de ton grossièrement parodique.",
+   "copie": []
+  },
+  {
+   "sujet": "la sécurité du quotidien",
+   "tour": 1,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": true,
+   "texte": "« Coalition de l'insécurité », c'est ce que l'on a entendu à l'Assemblée, le 21 juillet, de la bouche d'un député RN : « votre ADN, c'est la protection des voyous ». Ah bon ? Alors regardons ce que nous écrivons, nous : rétablir la police de proximité, démanteler les BAC et les BRAV-M, et créer de nouvelles brigades de gendarmerie dans les ruralités. La sécurité du quotidien, c'est un policier qui connaît le quartier, pas une brigade qui débarque pour casser du manifestant.\n\nMadame Le Pen, votre manifeste promet des peines « rapidement » prononcées au nom du « bon sens ». Mais une peine, il faut une justice qui ait des juges pour la prononcer et une police en face qui ait le temps d'enquêter ; sans cela, votre vitesse n'est qu'un slogan. Et que cela vous plaise ou non, la loyauté d'une police à la République se construit, elle ne se crie pas.",
+   "inventions": [
+    {
+     "phrase": "« Sans cela, votre vitesse n'est qu'un slogan. »",
+     "cible": "marine-le-pen",
+     "soutenue": false,
+     "raison": "Il s'agit d'une appréciation critique sur la faisabilité, non d'une affirmation factuelle vérifiable sur l'adversaire ; elle n'est pas un fait soutenu ou non soutenu par les documents."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": false,
+   "masque": "« Coalition de l'insécurité », c'est ce que l'on a entendu à l'Assemblée, le 21 juillet, de la bouche d'un député [X] : « votre ADN, c'est la protection des voyous ». Ah bon ? Alors regardons ce que nous écrivons, nous : rétablir la police de proximité, démanteler les BAC et les BRAV-M, et créer de nouvelles brigades de gendarmerie dans les ruralités. La sécurité du quotidien, c'est un policier qui connaît le quartier, pas une brigade qui débarque pour casser du manifestant.\n\nMadame [X], votre manifeste promet des peines « rapidement » prononcées au nom du « bon sens ». Mais une peine, il faut une justice qui ait des juges pour la prononcer et une police en face qui ait le temps d'enquêter ; sans cela, votre vitesse n'est qu'un slogan. Et que cela vous plaise ou non, la loyauté d'une police à la République se construit, elle ne se crie pas.",
+   "attribue": "francois-ruffin",
+   "confiance": 0.3,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Quelques marqueurs typiques du discours mélenchonien (formules « Ah bon ? Alors regardons », « que cela vous plaise ou non », interpellation directe « Madame Le Pen », argumentation sur la police et les quartiers) sont présents et plausibles, sans accumulation de tics ni outrance caricaturale.",
+   "copie": []
+  },
+  {
+   "sujet": "la sécurité du quotidien",
+   "tour": 2,
+   "orateur": "marine-le-pen",
+   "avec_fiche": true,
+   "texte": "Votre police de proximité, Monsieur Mélenchon, vous la rétablissez, mais vous démantelez les BAC et les BRAV-M, et la question reste la même : qui intervient quand un rodéo terrorise une cité ou qu'un policier se fait rouler dessus ? [lui coupe la parole] Et ne me parlez pas de « protection des voyous » comme si c'était une citation d'un autre monde : votre « refonder », les Français le lisent comme « désarmer » !",
+   "inventions": [
+    {
+     "phrase": "votre « refonder », les Français le lisent comme « désarmer »",
+     "cible": "jean-luc-melenchon",
+     "soutenue": false,
+     "raison": "Affirmation sur la perception supposée des Français, non étayée par les documents fournis (aucun sondage ni donnée d'opinion)."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "Votre police de proximité, Monsieur [X], vous la rétablissez, mais vous démantelez les BAC et les BRAV-M, et la question reste la même : qui intervient quand un rodéo terrorise une cité ou qu'un policier se fait rouler dessus ? [lui coupe la parole] Et ne me parlez pas de « protection des voyous » comme si c'était une citation d'un autre monde : votre « refonder », les Français le lisent comme « désarmer » !",
+   "attribue": "eric-zemmour",
+   "confiance": 0.6,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Ton direct et polémique plausible pour un débat politique, avec des éléments concrets (BAC, BRAV-M, rodéos) et une interruption typique ; quelques tournures marquées (« un autre monde », « les Français le lisent comme ») mais sans accumulation de tics ni caricature grossière.",
+   "copie": []
+  },
+  {
+   "sujet": "la sécurité du quotidien",
+   "tour": 2,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": true,
+   "texte": "Madame Le Pen, vous venez de me citer, alors citez jusqu'au bout : « refonder », chez nous, c'est rétablir une police de proximité, avec des agents qui connaissent les habitants. Ah bon, vous trouvez que c'est laxiste ? Dans la pièce au dossier de la séance du 21 juillet, il est écrit : « Le nombre de rodéos motorisés a augmenté de 142 % entre 2019 et 2024 ». Eh bien oui, c'est ce qui arrive quand on a retiré la police du pied des immeubles, et vous, au lieu d'y remettre des agents, vous proposez d'empiler des peines après coup. Un policier qui connaît la rue empêche le rodéo ; une peine minimale, elle arrive quand le gamin est déjà à terre.",
+   "inventions": [
+    {
+     "phrase": "Dans la pièce au dossier de la séance du 21 juillet, il est écrit : « Le nombre de rodéos motorisés a augmenté de 142 % entre 2019 et 2024 »",
+     "cible": "",
+     "soutenue": false,
+     "raison": "Cette affirmation ne vise pas Marine Le Pen directement et ne porte pas sur un adversaire nommé ; elle est sans cible nommée pertinente, et de plus le chiffre n'est pas attribué à un document de Marine Le Pen dans les sources fournies (il s'agit d'une citation de M. Benoît Blanchard, non de Marine Le Pen)."
+    }
+   ],
+   "adresse_en_tete": true,
+   "coupure": false,
+   "masque": "Madame [X], vous venez de me citer, alors citez jusqu'au bout : « refonder », chez nous, c'est rétablir une police de proximité, avec des agents qui connaissent les habitants. Ah bon, vous trouvez que c'est laxiste ? Dans la pièce au dossier de la séance du 21 juillet, il est écrit : « Le nombre de rodéos motorisés a augmenté de 142 % entre 2019 et 2024 ». Eh bien oui, c'est ce qui arrive quand on a retiré la police du pied des immeubles, et vous, au lieu d'y remettre des agents, vous proposez d'empiler des peines après coup. Un policier qui connaît la rue empêche le rodéo ; une peine minimale, elle arrive quand le gamin est déjà à terre.",
+   "attribue": "francois-ruffin",
+   "confiance": 0.35,
+   "juste": false,
+   "caricature": null,
+   "caricature_raison": null,
+   "copie": []
+  },
+  {
+   "sujet": "la sécurité du quotidien",
+   "tour": 3,
+   "orateur": "marine-le-pen",
+   "avec_fiche": true,
+   "texte": "Soyons très clairs, Monsieur Mélenchon : vous me lisez une citation de l'Assemblée, mais vous n'avez toujours pas répondu à ma question. Qui intervient quand un rodéo terrorise une cité ? [hausse le ton] Vous voulez des policiers « qui connaissent les habitants », très bien : et quand ces habitants sont des délinquants multirécidivistes, vous les saluez poliment ? Nous, on rétablit les peines planchers et on supprime les réductions de peine pour les violences contre les personnes : ce sont les Français qui ont peur qu'on protège, pas les voyous !",
+   "inventions": [],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "Soyons très clairs, Monsieur [X] : vous me lisez une citation de l'Assemblée, mais vous n'avez toujours pas répondu à ma question. Qui intervient quand un rodéo terrorise une cité ? [hausse le ton] Vous voulez des policiers « qui connaissent les habitants », très bien : et quand ces habitants sont des délinquants multirécidivistes, vous les saluez poliment ? Nous, on rétablit les peines planchers et on supprime les réductions de peine pour les violences contre les personnes : ce sont les Français qui ont peur qu'on protège, pas les voyous !",
+   "attribue": "marine-le-pen",
+   "confiance": 0.6,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Ton combatif et formules typiques (« Soyons très clairs », « nous, on rétablit », opposition peuple/voyous) plausibles dans un débat politique réel ; la didascalie « [hausse le ton] » et l'accumulation de slogans sentent légèrement le pastiche, mais sans caricature grossière.",
+   "copie": []
+  },
+  {
+   "sujet": "la sécurité du quotidien",
+   "tour": 3,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": true,
+   "texte": "[lui coupe la parole] Non, non, Madame Le Pen : « refonder », ça veut dire remettre des agents au pied des immeubles. Ce n'est pas désarmer, c'est la police de proximité. Et vous, quand vous parlez de peines minimales, vous avez tout votre temps pour le tribunal, mais personne sur le trottoir quand le rodéo commence ! Vous n'avez pas répondu à ma question : qui est dans la rue avant, pas après ?",
+   "inventions": [
+    {
+     "phrase": "Votre police de proximité, Monsieur Mélenchon, vous la rétablissez, mais vous démantelez les BAC et les BRAV-M",
+     "cible": "marine-le-pen",
+     "soutenue": false,
+     "raison": "Cette affirmation concerne Jean-Luc Mélenchon et non Marine Le Pen ; elle ne porte pas sur un adversaire nommé à détailler ici selon les documents fournis, et ces documents ne mentionnent pas de démantèlement des BAC ou BRAV-M dans le programme de Mélenchon ni ne documentent ce propos."
+    },
+    {
+     "phrase": "Vous avez tout votre temps pour le tribunal, mais personne sur le trottoir quand le rodéo commence",
+     "cible": "marine-le-pen",
+     "soutenue": false,
+     "raison": "Affirmation rhétorique visant le programme de peines courtes et exécutées, mais les documents ne soutiennent pas que la candidate ne prévoit aucune présence policière sur le terrain ; la proposition de peines courtes n'implique pas l'absence de forces de l'ordre."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "[lui coupe la parole] Non, non, Madame [X] : « refonder », ça veut dire remettre des agents au pied des immeubles. Ce n'est pas désarmer, c'est la police de proximité. Et vous, quand vous parlez de peines minimales, vous avez tout votre temps pour le tribunal, mais personne sur le trottoir quand le rodéo commence ! Vous n'avez pas répondu à ma question : qui est dans la rue avant, pas après ?",
+   "attribue": "eric-zemmour",
+   "confiance": 0.3,
+   "juste": false,
+   "caricature": 2,
+   "caricature_raison": "Tics accumulés typiques du pastiche : la didascalie « lui coupe la parole », les répétitions appuyées « Non, non », la formule « personne sur le trottoir », l'interpellation « Madame Le Pen » et le « qui est dans la rue avant, pas après ? » rhétorique, qui sentent l'imitation plus que la parole spontanée.",
+   "copie": []
+  },
+  {
+   "sujet": "le pouvoir d'achat",
+   "tour": 1,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": false,
+   "texte": "Le pouvoir d'achat, c'est d'abord le salaire : le progrès social passe par les salaires, pas par la charité. Dix millions de pauvres, des files d'attente pour manger, et on voudrait nous expliquer que tout va bien ? Nous, dès les premiers jours : un plan d'urgence contre la grande pauvreté, une garantie d'autonomie pour que plus personne ne vive sous le seuil de pauvreté, et le plein emploi avec un vrai salaire pour chaque travail. Madame Le Pen promet « entre 150 et 200 € par mois, par ménage » en baissant les dépenses contraintes : très bien, mais qui paie, et qu'est-ce qui change sur la fiche de paie de celles et ceux qui bossent ?",
+   "inventions": [],
+   "adresse_en_tete": false,
+   "coupure": false,
+   "masque": "Le pouvoir d'achat, c'est d'abord le salaire : le progrès social passe par les salaires, pas par la charité. Dix millions de pauvres, des files d'attente pour manger, et on voudrait nous expliquer que tout va bien ? Nous, dès les premiers jours : un plan d'urgence contre la grande pauvreté, une garantie d'autonomie pour que plus personne ne vive sous le seuil de pauvreté, et le plein emploi avec un vrai salaire pour chaque travail. Madame [X] promet « entre 150 et 200 € par mois, par ménage » en baissant les dépenses contraintes : très bien, mais qui paie, et qu'est-ce qui change sur la fiche de paie de celles et ceux qui bossent ?",
+   "attribue": "francois-ruffin",
+   "confiance": 0.55,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Ton combatif et formules rythmées typiques du discours de Mélenchon (« nous, dès les premiers jours », « celles et ceux qui bossent »), mais sans tics outranciers ni répétitions forcées ; le contenu reste argumentatif et plausible.",
+   "copie": []
+  },
+  {
+   "sujet": "le pouvoir d'achat",
+   "tour": 1,
+   "orateur": "marine-le-pen",
+   "avec_fiche": false,
+   "texte": "Le pouvoir d'achat, c'est d'abord ce qu'il reste dans la poche des Français le 15 du mois. Notre objectif : redonner entre 150 et 200 euros par mois à chaque ménage en baissant les dépenses contraintes, avec en priorité l'essence, le fioul, le gaz et l'électricité, que nous voulons traiter comme des produits de première nécessité. Et pour les salaires, un contrat gagnant-gagnant : l'entreprise qui augmente tous les salaires de 10 % est exonérée de la hausse des cotisations patronales. Monsieur Mélenchon, votre programme parle de pesticides et de « bifurcation » ; moi, je vous parle de la facture de carburant de ceux qui n'ont pas d'autre choix que de prendre leur voiture.",
+   "inventions": [],
+   "adresse_en_tete": false,
+   "coupure": false,
+   "masque": "Le pouvoir d'achat, c'est d'abord ce qu'il reste dans la poche des Français le 15 du mois. Notre objectif : redonner entre 150 et 200 euros par mois à chaque ménage en baissant les dépenses contraintes, avec en priorité l'essence, le fioul, le gaz et l'électricité, que nous voulons traiter comme des produits de première nécessité. Et pour les salaires, un contrat gagnant-gagnant : l'entreprise qui augmente tous les salaires de 10 % est exonérée de la hausse des cotisations patronales. Monsieur [X], votre programme parle de pesticides et de « bifurcation » ; moi, je vous parle de la facture de carburant de ceux qui n'ont pas d'autre choix que de prendre leur voiture.",
+   "attribue": "marine-le-pen",
+   "confiance": 0.8,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Ton posé et chiffré, formulations de meeting crédibles (« ce qu'il reste dans la poche le 15 du mois », « ceux qui n'ont pas d'autre choix que de prendre leur voiture ») ; un seul trait de style répétitif (« gagnant-gagnant »), sans tics accumulés ni caricature grossière.",
+   "copie": []
+  },
+  {
+   "sujet": "le pouvoir d'achat",
+   "tour": 2,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": false,
+   "texte": "Madame Le Pen, vous exonérez de cotisations l'entreprise qui augmente les salaires de 10 % : c'est la Sécu qui paie la note, pas le patron ! [hausse le ton] Nous, on passe par le SMIC et la garantie d'autonomie : un salaire, ça ne se négocie pas à la carte.",
+   "inventions": [
+    {
+     "phrase": "Madame Le Pen, vous exonérez de cotisations l'entreprise qui augmente les salaires de 10 % : c'est la Sécu qui paie la note, pas le patron !",
+     "cible": "Marine Le Pen",
+     "soutenue": false,
+     "raison": "Le document programme indique que les entreprises seraient exonérées de la hausse des cotisations patronales en cas d'augmentation de 10 % de tous les salaires jusqu'à 3 SMIC, ce qui confirme la mesure d'exonération. En revanche, les documents ne précisent pas qui finance cette exonération : l'affirmation que « c'est la Sécu qui paie la note » n'est pas étayée par les sources fournies."
+    }
+   ],
+   "adresse_en_tete": true,
+   "coupure": true,
+   "masque": "Madame [X], vous exonérez de cotisations l'entreprise qui augmente les salaires de 10 % : c'est la Sécu qui paie la note, pas le patron ! [hausse le ton] Nous, on passe par le SMIC et la garantie d'autonomie : un salaire, ça ne se négocie pas à la carte.",
+   "attribue": "jean-luc-melenchon",
+   "confiance": 0.35,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Ton polémique et formule d'opposition directe (« ça ne se négocie pas à la carte ») plausibles chez Mélenchon, mais la didascalie « [hausse le ton] » et l'argumentaire sur le SMIC/garantie d'autonomie restent assez sobres ; un ou deux traits marqués sans accumulation de tics.",
+   "copie": []
+  },
+  {
+   "sujet": "le pouvoir d'achat",
+   "tour": 2,
+   "orateur": "marine-le-pen",
+   "avec_fiche": false,
+   "texte": "Monsieur Mélenchon, vous me demandez « qui paie » pendant que votre propre programme promet de revaloriser les salaires par la loi, sans jamais dire ce qu'il en coûte à la boulangerie du coin ou à l'artisan de trente salariés. Moi, je réponds : c'est l'État qui renonce à taxer l'énergie comme un produit de luxe, et c'est l'entreprise qui joue le jeu des salaires qui est exonérée de la hausse des cotisations patronales. [hausse le ton] Et sur la fiche de paie de celui qui bosse, ça change quoi ? +10 %, tous les salaires, pas seulement ceux du patron et de ses cadres. Vous, vous parlez de « garantie d'autonomie » : très bien, mais le Français qui se lève à six heures ne veut pas une garantie, il veut que son travail paie.",
+   "inventions": [
+    {
+     "phrase": "Monsieur Mélenchon, vous me demandez « qui paie » pendant que votre propre programme promet de revaloriser les salaires par la loi, sans jamais dire ce qu'il en coûte à la boulangerie du coin ou à l'artisan de trente salariés.",
+     "cible": "Jean-Luc Mélenchon",
+     "soutenue": false,
+     "raison": "Les documents affirment que le programme prévoit des mesures sur les salaires (plan d'urgence, garantie d'autonomie, plein emploi avec un vrai salaire), mais ne contiennent aucun passage sur la revalorisation des salaires par la loi ni sur ses coûts pour les petites entreprises ; l'affirmation de l'absence de chiffrage n'est pas vérifiable à partir des documents fournis."
+    }
+   ],
+   "adresse_en_tete": true,
+   "coupure": true,
+   "masque": "Monsieur [X], vous me demandez « qui paie » pendant que votre propre programme promet de revaloriser les salaires par la loi, sans jamais dire ce qu'il en coûte à la boulangerie du coin ou à l'artisan de trente salariés. Moi, je réponds : c'est l'État qui renonce à taxer l'énergie comme un produit de luxe, et c'est l'entreprise qui joue le jeu des salaires qui est exonérée de la hausse des cotisations patronales. [hausse le ton] Et sur la fiche de paie de celui qui bosse, ça change quoi ? +10 %, tous les salaires, pas seulement ceux du patron et de ses cadres. Vous, vous parlez de « garantie d'autonomie » : très bien, mais le Français qui se lève à six heures ne veut pas une garantie, il veut que son travail paie.",
+   "attribue": "francois-ruffin",
+   "confiance": 0.35,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Quelques marqueurs typiques (« le Français qui se lève à six heures », « le boulanger du coin », formule « ça change quoi ? ») et une indication de ton ([hausse le ton]), mais l'ensemble reste un discours argumenté et plausible pour un débat politique, sans tics accumulés ni caricature grossière.",
+   "copie": []
+  },
+  {
+   "sujet": "le pouvoir d'achat",
+   "tour": 3,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": false,
+   "texte": "Madame Le Pen, vous venez de me demander ce que ça change sur la fiche de paie. Réponse : chez vous, rien, puisque l'augmentation reste facultative ! Dans votre propre manifeste, l'entreprise est « exonérée » si elle accepte d'augmenter. Moi, je ne demande pas au patron de bien vouloir : le SMIC, c'est la loi. [lui coupe la parole] Et la boulangère, elle préfère un salaire garanti à une ristourne sur ses cotisations ?",
+   "inventions": [],
+   "adresse_en_tete": true,
+   "coupure": true,
+   "masque": "Madame [X], vous venez de me demander ce que ça change sur la fiche de paie. Réponse : chez vous, rien, puisque l'augmentation reste facultative ! Dans votre propre manifeste, l'entreprise est « exonérée » si elle accepte d'augmenter. Moi, je ne demande pas au patron de bien vouloir : le SMIC, c'est la loi. [lui coupe la parole] Et la boulangère, elle préfère un salaire garanti à une ristourne sur ses cotisations ?",
+   "attribue": "francois-ruffin",
+   "confiance": 0.35,
+   "juste": false,
+   "caricature": 2,
+   "caricature_raison": "Le style est reconnaissable (apostrophes directes, ironie sur « le patron », interruption entre crochets, référence à la boulangère, formules du type « la loi »), mais les tics sont accumulés de façon un peu appuyée, notamment la didascalie [lui coupe la parole] et la question rhétorique finale, ce qui sent davantage le pastiche que la parole spontanée.",
+   "copie": []
+  },
+  {
+   "sujet": "le pouvoir d'achat",
+   "tour": 3,
+   "orateur": "marine-le-pen",
+   "avec_fiche": false,
+   "texte": "[lui coupe la parole] Monsieur Mélenchon, vous me dites « un salaire, ça ne se négocie pas à la carte » : mais depuis quand une entreprise à qui on dit « augmentez de 10 % » serait contre, quand on lui épargne la hausse des charges ? Et vous n'avez toujours pas répondu à ma question : sur la fiche de paie de celui qui bosse, vous mettez combien, et à quelle date ?",
+   "inventions": [
+    {
+     "phrase": "vous n'avez toujours pas répondu à ma question : sur la fiche de paie de celui qui bosse, vous mettez combien, et à quelle date ?",
+     "cible": "Jean-Luc Mélenchon",
+     "soutenue": false,
+     "raison": "Affirmation sur l'absence de réponse de l'adversaire à une question précise ; les documents ne contiennent aucune trace d'une question ou d'une réponse sur ce point, donc non soutenue."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "[lui coupe la parole] Monsieur [X], vous me dites « un salaire, ça ne se négocie pas à la carte » : mais depuis quand une entreprise à qui on dit « augmentez de 10 % » serait contre, quand on lui épargne la hausse des charges ? Et vous n'avez toujours pas répondu à ma question : sur la fiche de paie de celui qui bosse, vous mettez combien, et à quelle date ?",
+   "attribue": "francois-ruffin",
+   "confiance": 0.35,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Interruption et questions rhétoriques enchaînées sont typiques du style débat de Le Pen, mais le ton reste direct et plausible, sans tics excessifs ni pastiche évident.",
+   "copie": []
+  },
+  {
+   "sujet": "le pouvoir d'achat",
+   "tour": 1,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": true,
+   "texte": "Regardez ce que propose madame Le Pen : 150 à 200 euros de pouvoir d'achat par ménage, en baissant la TVA sur l'énergie, et des exonérations offertes aux entreprises pour qu'elles daignent augmenter les salaires. Ah bon ? On paie le patron pour qu'il paie ses salariés ! Nous, nous posons le progrès social par les salaires, et le plan d'urgence dès les premiers jours : dix millions de pauvres, trois cent mille sans domicile, des files d'attente pour manger. Une garantie d'autonomie pour que personne ne vive sous le seuil de pauvreté, et un salaire qui paie le travail, sans pourboire fiscal pour l'employeur.",
+   "inventions": [],
+   "adresse_en_tete": false,
+   "coupure": false,
+   "masque": "Regardez ce que propose madame [X] : 150 à 200 euros de pouvoir d'achat par ménage, en baissant la TVA sur l'énergie, et des exonérations offertes aux entreprises pour qu'elles daignent augmenter les salaires. Ah bon ? On paie le patron pour qu'il paie ses salariés ! Nous, nous posons le progrès social par les salaires, et le plan d'urgence dès les premiers jours : dix millions de pauvres, trois cent mille sans domicile, des files d'attente pour manger. Une garantie d'autonomie pour que personne ne vive sous le seuil de pauvreté, et un salaire qui paie le travail, sans pourboire fiscal pour l'employeur.",
+   "attribue": "francois-ruffin",
+   "confiance": 0.55,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Ton polémique et formules percutantes (« On paie le patron pour qu'il paie ses salariés ! », « Ah bon ? ») typiques du style oratoire de Mélenchon, avec quelques tournures récurrentes plausibles, sans accumulation de tics ni pastiche grossier.",
+   "copie": []
+  },
+  {
+   "sujet": "le pouvoir d'achat",
+   "tour": 1,
+   "orateur": "marine-le-pen",
+   "avec_fiche": true,
+   "texte": "Soyons très clairs : le pouvoir d'achat, ce n'est pas un slogan, c'est la fin du mois. Nous, nous voulons rendre 150 à 200 euros par mois à chaque ménage en baissant les dépenses contraintes, à commencer par l'énergie : essence, fioul, gaz, électricité, ramenés à 5,5 % de TVA, parce que se chauffer et aller travailler ne sont pas des produits de luxe. Et pour les salaires, une mesure simple : les entreprises qui augmentent tous les salaires de 10 % sont exonérées de la hausse des cotisations patronales. Monsieur Mélenchon, pendant que vous parlez d'agro-business, les Français, eux, comptent leurs factures.",
+   "inventions": [
+    {
+     "phrase": "Monsieur Mélenchon, pendant que vous parlez d'agro-business, les Français, eux, comptent leurs factures.",
+     "cible": "Jean-Luc Mélenchon",
+     "soutenue": false,
+     "raison": "Il s'agit d'une attaque rhétorique sur le contenu du discours de Mélenchon (focalisation sur l'agro-business) ; elle ne constitue pas une affirmation factuelle vérifiable sur un chiffre, un vote, une décision, un bilan, une fonction ou une citation précise de l'adversaire, et les documents ne soutiennent aucune assertion de ce type."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": false,
+   "masque": "Soyons très clairs : le pouvoir d'achat, ce n'est pas un slogan, c'est la fin du mois. Nous, nous voulons rendre 150 à 200 euros par mois à chaque ménage en baissant les dépenses contraintes, à commencer par l'énergie : essence, fioul, gaz, électricité, ramenés à 5,5 % de TVA, parce que se chauffer et aller travailler ne sont pas des produits de luxe. Et pour les salaires, une mesure simple : les entreprises qui augmentent tous les salaires de 10 % sont exonérées de la hausse des cotisations patronales. Monsieur [X], pendant que vous parlez d'agro-business, les Français, eux, comptent leurs factures.",
+   "attribue": "marine-le-pen",
+   "confiance": 0.6,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Ton direct et formules percutantes (« ce n'est pas un slogan, c'est la fin du mois », « pas des produits de luxe ») plausibles pour un discours politique, avec quelques marqueurs de style (« Soyons très clairs », attaque nominative) sans accumulation de tics ni caricature grossière.",
+   "copie": []
+  },
+  {
+   "sujet": "le pouvoir d'achat",
+   "tour": 2,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": true,
+   "texte": "[lui coupe la parole] Cinq virgule cinq pour cent de TVA sur l'essence, madame Le Pen ? Mais regardez ce que vous écrivez : une prime aux entreprises qui augmentent les salaires, exonérées de cotisations. On paie le patron pour qu'il paie ses salariés, et c'est la Sécu qui règle l'addition !",
+   "inventions": [
+    {
+     "phrase": "Cinq virgule cinq pour cent de TVA sur l'essence, madame Le Pen ?",
+     "cible": "Marine Le Pen",
+     "soutenue": false,
+     "raison": "Le document programme indique bien une TVA à 5,5 % sur les produits énergétiques, y compris l'essence, mais cette phrase est une question rhétorique et non une affirmation factuelle sur l'adversaire ; elle est donc hors périmètre. Elle est formulée comme une interrogation, ce qui dépasse la portée de la tâche."
+    },
+    {
+     "phrase": "On paie le patron pour qu'il paie ses salariés, et c'est la Sécu qui règle l'addition !",
+     "cible": "Marine Le Pen",
+     "soutenue": false,
+     "raison": "Le programme prévoit bien une exonération de hausse des cotisations patronales pour les entreprises augmentant les salaires de 10 %, donc le mécanisme est documenté. Toutefois l'affirmation que « c'est la Sécu qui règle l'addition » et l'interprétation « on paie le patron pour qu'il paie ses salariés » sont des conséquences ou jugements non présents dans les documents (aucun chiffrage du coût pour la Sécurité sociale n'y figure), donc non soutenues comme affirmation factuelle."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "[lui coupe la parole] Cinq virgule cinq pour cent de TVA sur l'essence, madame [X] ? Mais regardez ce que vous écrivez : une prime aux entreprises qui augmentent les salaires, exonérées de cotisations. On paie le patron pour qu'il paie ses salariés, et c'est la Sécu qui règle l'addition !",
+   "attribue": "francois-ruffin",
+   "confiance": 0.55,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Interruption franche et ton polémique plausibles pour un débat ; le chiffre précis et la formule « on paie le patron pour qu'il paie ses salariés » sonnent naturels, sans tics appuyés ni pastiche.",
+   "copie": []
+  },
+  {
+   "sujet": "le pouvoir d'achat",
+   "tour": 2,
+   "orateur": "marine-le-pen",
+   "avec_fiche": true,
+   "texte": "« On paie le patron pour qu'il paie ses salariés », dites-vous ? [lui coupe la parole] Non, monsieur Mélenchon : l'exonération, l'entreprise ne la touche que si elle augmente tous les salaires de 10 %. Pas de hausse, pas de cadeau. Et vous, qu'avez-vous à proposer à celui qui doit remplir son réservoir ce soir pour aller travailler ? Un plan d'urgence, des mots, des files d'attente que vous décrivez, mais que vous ne faites pas reculer d'un centime ! Moi, je baisse la TVA sur l'essence, le gaz et l'électricité : 150 à 200 euros de plus chaque mois, dans la poche des Français, sans attendre vos grands soirs.",
+   "inventions": [],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "« On paie le patron pour qu'il paie ses salariés », dites-vous ? [lui coupe la parole] Non, monsieur [X] : l'exonération, l'entreprise ne la touche que si elle augmente tous les salaires de 10 %. Pas de hausse, pas de cadeau. Et vous, qu'avez-vous à proposer à celui qui doit remplir son réservoir ce soir pour aller travailler ? Un plan d'urgence, des mots, des files d'attente que vous décrivez, mais que vous ne faites pas reculer d'un centime ! Moi, je baisse la TVA sur l'essence, le gaz et l'électricité : 150 à 200 euros de plus chaque mois, dans la poche des Français, sans attendre vos grands soirs.",
+   "attribue": "marine-le-pen",
+   "confiance": 0.8,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Ton combatif et interruption typique du débat, formules chiffrées et rhétorique de la « poche des Français » plausibles pour une responsable politique, sans tics accumulés ni outrance.",
+   "copie": []
+  },
+  {
+   "sujet": "le pouvoir d'achat",
+   "tour": 3,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": true,
+   "texte": "Écoutez bien, madame Le Pen, vous me demandez ce que je propose à celui qui remplit son réservoir : une garantie d'autonomie, pour que personne, dans ce pays, ne vive sous le seuil de pauvreté, et du plein emploi où chacun perçoit un salaire pour son travail. Et vous, sur les dix millions de pauvres, vous répondez par quoi ? Une baisse de TVA qui profite autant au propriétaire du gros 4x4 qu'à l'ouvrière qui n'a plus de quoi finir le mois. Le pouvoir d'achat, ça se règle par le salaire, pas par la ristourne à la pompe.",
+   "inventions": [
+    {
+     "phrase": "vous me demandez ce que je propose à celui qui remplit son réservoir",
+     "cible": "marine-le-pen",
+     "soutenue": false,
+     "raison": "Les documents ne contiennent pas d'affirmation de Marine Le Pen sur la nature de cette question; le propos attribue à l'adversaire une demande de proposition, non vérifiable dans les documents fournis comme un fait sur son bilan, et cette attribution n'est pas étayée. Elle relève toutefois d'une référence à un propos réel de l'historique, donc soutenue ; mais la formulation dans la prise de parole n'est pas un chiffre, vote ou fonction étayé par les documents."
+    },
+    {
+     "phrase": "une baisse de TVA qui profite autant au propriétaire du gros 4x4 qu'à l'ouvrière qui n'a plus de quoi finir le mois",
+     "cible": "marine-le-pen",
+     "soutenue": false,
+     "raison": "Le programme prévoit une baisse de la TVA sur les énergies à 5,5 % pour tous les ménages, sans ciblage ; l'affirmation sur l'effet distributif (profiter 'autant' au propriétaire du 4x4) n'est pas établie par les documents, qui ne contiennent aucune analyse de répartition."
+    },
+    {
+     "phrase": "sur les dix millions de pauvres, vous répondez par quoi ?",
+     "cible": "marine-le-pen",
+     "soutenue": false,
+     "raison": "Le chiffre de dix millions de pauvres n'apparaît dans aucun document fourni et n'est pas attribué à une source; il ne peut être vérifié."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": false,
+   "masque": "Écoutez bien, madame [X], vous me demandez ce que je propose à celui qui remplit son réservoir : une garantie d'autonomie, pour que personne, dans ce pays, ne vive sous le seuil de pauvreté, et du plein emploi où chacun perçoit un salaire pour son travail. Et vous, sur les dix millions de pauvres, vous répondez par quoi ? Une baisse de TVA qui profite autant au propriétaire du gros 4x4 qu'à l'ouvrière qui n'a plus de quoi finir le mois. Le pouvoir d'achat, ça se règle par le salaire, pas par la ristourne à la pompe.",
+   "attribue": "jean-luc-melenchon",
+   "confiance": 0.7,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Le ton est combatif et l'argumentation en phrases courtes et percutantes (« Écoutez bien », « ça se règle par le salaire ») évoque bien le style oratoire de Mélenchon, mais sans tics appuyés ni envolées grossières ; la répartie reste plausible dans un débat.",
+   "copie": []
+  },
+  {
+   "sujet": "le pouvoir d'achat",
+   "tour": 3,
+   "orateur": "marine-le-pen",
+   "avec_fiche": true,
+   "texte": "[lui coupe la parole] Monsieur Mélenchon, vous me dites que je paie le patron, et vous, vous m'avez répondu quoi sur le réservoir ? Rien ! Dix millions de pauvres, des files d'attente, vous les récitez comme un inventaire. Moi, je pose une question que vous fuyez : le 5,5 % de TVA sur l'essence, le gaz, l'électricité, les Français le toucheront ou non ? Alors arrêtez de décrire la misère, et dites-leur ce que vous leur rendez, vous, à la pompe !",
+   "inventions": [
+    {
+     "phrase": "vous m'avez répondu quoi sur le réservoir ? Rien !",
+     "cible": "Jean-Luc Mélenchon",
+     "soutenue": false,
+     "raison": "Affirmation factuelle sur le contenu des réponses de Mélenchon dans le débat ; les documents fournis ne contiennent aucune transcription de ses réponses sur le carburant, donc non soutenue."
+    },
+    {
+     "phrase": "vous les récitez comme un inventaire",
+     "cible": "Jean-Luc Mélenchon",
+     "soutenue": false,
+     "raison": "Caractérisation de la manière dont Mélenchon présente ses chiffres ; aucun document ne permet de vérifier ce propos sur sa façon de parler, donc non soutenue."
+    },
+    {
+     "phrase": "Alors arrêtez de décrire la misère",
+     "cible": "Jean-Luc Mélenchon",
+     "soutenue": false,
+     "raison": "Impératif critique sans affirmation factuelle vérifiable sur un fait ou une déclaration précise ; il s'agit d'une caractérisation de la manière dont l'adversaire s'exprime, non soutenue par les documents."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "[lui coupe la parole] Monsieur [X], vous me dites que je paie le patron, et vous, vous m'avez répondu quoi sur le réservoir ? Rien ! Dix millions de pauvres, des files d'attente, vous les récitez comme un inventaire. Moi, je pose une question que vous fuyez : le 5,5 % de TVA sur l'essence, le gaz, l'électricité, les Français le toucheront ou non ? Alors arrêtez de décrire la misère, et dites-leur ce que vous leur rendez, vous, à la pompe !",
+   "attribue": "marine-le-pen",
+   "confiance": 0.55,
+   "juste": true,
+   "caricature": 2,
+   "caricature_raison": "Accumulation de tics d'orateur (interruption théâtrale, formules « Alors arrêtez… », « vous, à la pompe ! », « Moi, je pose une question »), rythme de tribune très appuyé et répétitions qui sonnent comme un pastiche, bien que le contenu reste plausible.",
+   "copie": []
+  },
+  {
+   "sujet": "l'Union européenne",
+   "tour": 1,
+   "orateur": "marine-le-pen",
+   "avec_fiche": false,
+   "texte": "L'Union européenne, c'est une machine qui avance sans demander l'avis des peuples : élargissement sans limite, un discours de Mme Von der Leyen qui n'est même plus fédéral mais impérial. Moi, j'exclurai l'agriculture des traités de libre-échange, parce que nourrir les Français, ce n'est pas un bien comme les autres, c'est la santé et la souveraineté du pays. Monsieur Mélenchon, vous écrivez dans votre programme vouloir refuser tout nouvel accord de libre-échange et tout nouvel élargissement sans harmonisation sociale, fiscale et environnementale préalable : un « sans harmonisation » qui laisse la porte ouverte à tout, dès demain, une fois l'harmonisation décrétée. Moi, je ferme la porte au libre-échange agricole, et je la ferme tout de suite.",
+   "inventions": [
+    {
+     "phrase": "un « sans harmonisation » qui laisse la porte ouverte à tout, dès demain, une fois l'harmonisation décrétée",
+     "cible": "jean-luc-melenchon",
+     "soutenue": false,
+     "raison": "Il s'agit d'une interprétation et d'un jugement sur les intentions de l'adversaire, non d'une affirmation factuelle vérifiable dans les documents ; le texte du programme ne dit pas que l'harmonisation serait décrétée dès demain ni que la porte serait ainsi ouverte à tout."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": false,
+   "masque": "L'Union européenne, c'est une machine qui avance sans demander l'avis des peuples : élargissement sans limite, un discours de Mme Von der Leyen qui n'est même plus fédéral mais impérial. Moi, j'exclurai l'agriculture des traités de libre-échange, parce que nourrir les Français, ce n'est pas un bien comme les autres, c'est la santé et la souveraineté du pays. Monsieur [X], vous écrivez dans votre programme vouloir refuser tout nouvel accord de libre-échange et tout nouvel élargissement sans harmonisation sociale, fiscale et environnementale préalable : un « sans harmonisation » qui laisse la porte ouverte à tout, dès demain, une fois l'harmonisation décrétée. Moi, je ferme la porte au libre-échange agricole, et je la ferme tout de suite.",
+   "attribue": "marine-le-pen",
+   "confiance": 0.8,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Ton plausible pour un débat politique : formules directes, attaques ciblées sur des adversaires et un argumentaire cohérent, sans tics accumulés ni outrance caricaturale, mais quelques marqueurs (« Moi, je... », « Mme Von der Leyen qui n'est même plus fédéral mais impérial ») qui rappellent le style oratoire du personnage.",
+   "copie": []
+  },
+  {
+   "sujet": "l'Union européenne",
+   "tour": 1,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": false,
+   "texte": "L'Europe telle qu'elle est, c'est l'Europe du libre-échange et de l'austérité. Nous, on désobéit : droit de veto de la France contre tout nouvel accord de libre-échange et tout nouvel élargissement sans harmonisation sociale, fiscale et environnementale, et contribution au budget européen conditionnée. Madame Le Pen, vous parlez « bilatéral » dans votre manifeste ; mais pendant que vous cherchez des amis à l'étranger, c'est la BCE qu'il faut libérer du chantage de la dette. L'État détient plus de patrimoine que de dette, et l'argent pour vivre mieux existe.",
+   "inventions": [],
+   "adresse_en_tete": false,
+   "coupure": false,
+   "masque": "L'Europe telle qu'elle est, c'est l'Europe du libre-échange et de l'austérité. Nous, on désobéit : droit de veto de la France contre tout nouvel accord de libre-échange et tout nouvel élargissement sans harmonisation sociale, fiscale et environnementale, et contribution au budget européen conditionnée. Madame [X], vous parlez « bilatéral » dans votre manifeste ; mais pendant que vous cherchez des amis à l'étranger, c'est la BCE qu'il faut libérer du chantage de la dette. L'État détient plus de patrimoine que de dette, et l'argent pour vivre mieux existe.",
+   "attribue": "jean-luc-melenchon",
+   "confiance": 0.8,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Le texte reprend des thèmes et formules politiques cohérents avec le discours de Mélenchon (désobéissance, libre-échange, BCE, patrimoine de l'État, VIe République) sans tics d'élocution marqués ni outrance; seul l'emploi de « on » et de « Madame Le Pen » reste plausible en débat.",
+   "copie": []
+  },
+  {
+   "sujet": "l'Union européenne",
+   "tour": 2,
+   "orateur": "marine-le-pen",
+   "avec_fiche": false,
+   "texte": "[lui coupe la parole] Libérer la BCE, Monsieur Mélenchon ? Vous voulez faire tourner la planche à billets pendant que nos agriculteurs crèvent sous les importations. Moi, je protège ceux qui nous nourrissent.",
+   "inventions": [],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "[lui coupe la parole] Libérer la BCE, Monsieur [X] ? Vous voulez faire tourner la planche à billets pendant que nos agriculteurs crèvent sous les importations. Moi, je protège ceux qui nous nourrissent.",
+   "attribue": "marine-le-pen",
+   "confiance": 0.6,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Ton combatif et thèmes identifiables (souveraineté, agriculteurs, critique de la BCE), mais la réplique reste sobre et plausible, sans tics appuyés ni pastiche outré ; la coupure de parole entre crochets est un détail de mise en scène un peu scolaire.",
+   "copie": []
+  },
+  {
+   "sujet": "l'Union européenne",
+   "tour": 2,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": false,
+   "texte": "Madame Le Pen, vous me parlez de relations bilatérales : chacun chez soi, chacun pour soi, face à des multinationales qui, elles, n'ont pas de frontières. [lui coupe la parole] Non, non, laissez-moi finir : un paysan seul face à un traité signé dans son dos, il ne pèse rien. Nous, on pose un veto de la France, on exige l'harmonisation sociale, fiscale et environnementale, et on met enfin la BCE au service des Français plutôt que des marchés. Votre souveraineté, vous la brandissez à la tribune ; la nôtre, elle se fait avec un budget européen qu'on conditionne et des règles qu'on impose.",
+   "inventions": [],
+   "adresse_en_tete": true,
+   "coupure": true,
+   "masque": "Madame [X], vous me parlez de relations bilatérales : chacun chez soi, chacun pour soi, face à des multinationales qui, elles, n'ont pas de frontières. [lui coupe la parole] Non, non, laissez-moi finir : un paysan seul face à un traité signé dans son dos, il ne pèse rien. Nous, on pose un veto de la France, on exige l'harmonisation sociale, fiscale et environnementale, et on met enfin la BCE au service des Français plutôt que des marchés. Votre souveraineté, vous la brandissez à la tribune ; la nôtre, elle se fait avec un budget européen qu'on conditionne et des règles qu'on impose.",
+   "attribue": "jean-luc-melenchon",
+   "confiance": 0.55,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Quelques traits typiques (« Madame Le Pen », « Non, non, laissez-moi finir », formules sur le veto et les multinationales) sont marqués mais restent plausibles dans un débat politique réel ; le registre reste argumenté et naturel, sans accumulation de tics ni pastiche grossier.",
+   "copie": []
+  },
+  {
+   "sujet": "l'Union européenne",
+   "tour": 3,
+   "orateur": "marine-le-pen",
+   "avec_fiche": false,
+   "texte": "Non, non, Monsieur Mélenchon, vous ne m'avez pas répondu : la BCE, vous voulez la mettre « au service des Français » ? Écrit noir sur blanc dans votre programme, c'est l'idée que « l'action de la Banque centrale européenne pourrait nous » financer, et c'est la facture qu'on envoie ensuite à ceux qui travaillent. Et vos paysans, vous les protégez avec un veto sur les traités ? Moi, je les sors du libre-échange, point. Un agriculteur n'a pas besoin d'un veto en tribune, il a besoin qu'on arrête d'importer ce qu'on interdit à ses champs.",
+   "inventions": [],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "Non, non, Monsieur [X], vous ne m'avez pas répondu : la BCE, vous voulez la mettre « au service des Français » ? Écrit noir sur blanc dans votre programme, c'est l'idée que « l'action de la Banque centrale européenne pourrait nous » financer, et c'est la facture qu'on envoie ensuite à ceux qui travaillent. Et vos paysans, vous les protégez avec un veto sur les traités ? Moi, je les sors du libre-échange, point. Un agriculteur n'a pas besoin d'un veto en tribune, il a besoin qu'on arrête d'importer ce qu'on interdit à ses champs.",
+   "attribue": "marine-le-pen",
+   "confiance": 0.55,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Ton assuré et tranchant, formules percutantes (« point », « Écrit noir sur blanc »), mais le contenu reste plausible et cohérent avec un registre de débat réel, sans tics accumulés ni outrance.",
+   "copie": []
+  },
+  {
+   "sujet": "l'Union européenne",
+   "tour": 3,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": false,
+   "texte": "[lui coupe la parole] Non, madame Le Pen, la planche à billets, c'est votre épouvantail ! Moi, je parle d'une BCE qui cesse de nous faire chanter avec la dette, quand l'État détient plus de patrimoine que de dette, et vous, vous me répondez avec un slogan.",
+   "inventions": [
+    {
+     "phrase": "vous voulez faire tourner la planche à billets pendant que nos agriculteurs crèvent sous les importations",
+     "cible": "Jean-Luc Mélenchon",
+     "soutenue": false,
+     "raison": "Les documents contiennent l'attribution à Marine Le Pen de cette phrase, mais ils ne contiennent pas de citation de Mélenchon voulant faire tourner la planche à billets ; l'affirmation de l'orateur en réponse (« votre épouvantail ») porte sur la BCE, sans lien avec un texte de Mélenchon sur la planche à billets, donc non soutenue par les documents fournis."
+    },
+    {
+     "phrase": "Vous écrivez dans votre programme vouloir refuser tout nouvel accord de libre-échange et tout nouvel élargissement sans harmonisation sociale, fiscale et environnementale préalable",
+     "cible": "Jean-Luc Mélenchon",
+     "soutenue": false,
+     "raison": "Cette citation est attribuée à Marine Le Pen dans l'historique, mais ce passage ne se trouve pas dans les documents de son programme fournis et ne concerne d'ailleurs pas la prise de parole du candidat ; l'affirmation attribuée à Mélenchon n'est pas soutenue par les documents de l'adversaire."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "[lui coupe la parole] Non, madame [X], la planche à billets, c'est votre épouvantail ! Moi, je parle d'une BCE qui cesse de nous faire chanter avec la dette, quand l'État détient plus de patrimoine que de dette, et vous, vous me répondez avec un slogan.",
+   "attribue": "jean-luc-melenchon",
+   "confiance": 0.7,
+   "juste": true,
+   "caricature": 2,
+   "caricature_raison": "Le tic de couper la parole en didascalie, l'apostrophe 'madame Le Pen' et la formule 'vous me répondez avec un slogan' sonnent comme un pastiche attendu, mais le fond argumentatif (BCE, dette, patrimoine de l'État) reste plausible et proche du registre réel.",
+   "copie": []
+  },
+  {
+   "sujet": "l'Union européenne",
+   "tour": 1,
+   "orateur": "marine-le-pen",
+   "avec_fiche": true,
+   "texte": "Soyons très clairs : l'Union européenne d'aujourd'hui n'est plus une coopération entre nations, c'est une machine qui avance vers l'empire, et qui sacrifie nos agriculteurs sur l'autel d'un libre-échange déséquilibré. Moi, j'exclurai l'agriculture des traités de libre-échange, parce qu'un produit agricole n'est pas un bien comme un autre : il touche à votre santé et à la souveraineté du pays. Monsieur Mélenchon, vous promettez dans votre programme d'utiliser le veto de la France contre « tout nouvel accord de libre-échange » : très bien, mais combien d'accords avez-vous laissé signer avant d'y venir, et pourquoi faudrait-il une France qui obéit à Bruxelles pour ensuite lui demander la permission de dire non ? Il y a un chemin plus simple, plus honnête : redonner aux nations d'Europe leur liberté, et aux Français le dernier mot sur ce qu'ils mangent et sur ce qu'on produit chez eux.",
+   "inventions": [
+    {
+     "phrase": "combien d'accords avez-vous laissé signer avant d'y venir",
+     "cible": "jean-luc-melenchon",
+     "soutenue": false,
+     "raison": "Question rhétorique qui suppose un bilan de signatures d'accords ; les documents ne contiennent aucune information sur les votes ou les accords qu'il aurait laissé signer."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": false,
+   "masque": "Soyons très clairs : l'Union européenne d'aujourd'hui n'est plus une coopération entre nations, c'est une machine qui avance vers l'empire, et qui sacrifie nos agriculteurs sur l'autel d'un libre-échange déséquilibré. Moi, j'exclurai l'agriculture des traités de libre-échange, parce qu'un produit agricole n'est pas un bien comme un autre : il touche à votre santé et à la souveraineté du pays. Monsieur [X], vous promettez dans votre programme d'utiliser le veto de la France contre « tout nouvel accord de libre-échange » : très bien, mais combien d'accords avez-vous laissé signer avant d'y venir, et pourquoi faudrait-il une France qui obéit à Bruxelles pour ensuite lui demander la permission de dire non ? Il y a un chemin plus simple, plus honnête : redonner aux nations d'Europe leur liberté, et aux Français le dernier mot sur ce qu'ils mangent et sur ce qu'on produit chez eux.",
+   "attribue": "marine-le-pen",
+   "confiance": 0.6,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Ton et thèmes (souveraineté, agriculteurs, « dernier mot » aux Français, critique de Bruxelles) sont cohérents avec le discours politique de Le Pen, avec quelques formules un peu appuyées (« sur l'autel d'un libre-échange », « liberté aux nations ») mais pas de tics grossiers ni de caricature.",
+   "copie": []
+  },
+  {
+   "sujet": "l'Union européenne",
+   "tour": 1,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": true,
+   "texte": "Regardez ce que vous a servi l'Europe des traités : l'austérité et les privatisations, au nom d'une dette qu'on brandit comme une matraque, alors que chaque enfant naît avec plus de 10 000 euros d'actif public. Notre ligne tient en une phrase : nous respecterons les traités quand ils respecteront le peuple. D'ici là, la France a des leviers, et nous les actionnerons : droit de veto contre tout nouvel accord de libre-échange et tout nouvel élargissement sans harmonisation sociale, fiscale et environnementale préalable, contribution française au budget européen conditionnée, et une BCE qui nous libère du chantage de la dette au lieu de l'organiser. Madame Le Pen, vous qui parlez de souveraineté, votre manifeste vante les relations bilatérales et la francophonie : très bien, mais sur le libre-échange, sur la dette, sur le budget, qu'est-ce que vous faites concrètement ? Le bilatéral ne vous donne aucun levier contre ceux qui écrivent les règles.",
+   "inventions": [],
+   "adresse_en_tete": false,
+   "coupure": false,
+   "masque": "Regardez ce que vous a servi l'Europe des traités : l'austérité et les privatisations, au nom d'une dette qu'on brandit comme une matraque, alors que chaque enfant naît avec plus de 10 000 euros d'actif public. Notre ligne tient en une phrase : nous respecterons les traités quand ils respecteront le peuple. D'ici là, la France a des leviers, et nous les actionnerons : droit de veto contre tout nouvel accord de libre-échange et tout nouvel élargissement sans harmonisation sociale, fiscale et environnementale préalable, contribution française au budget européen conditionnée, et une BCE qui nous libère du chantage de la dette au lieu de l'organiser. Madame [X], vous qui parlez de souveraineté, votre manifeste vante les relations bilatérales et la francophonie : très bien, mais sur le libre-échange, sur la dette, sur le budget, qu'est-ce que vous faites concrètement ? Le bilatéral ne vous donne aucun levier contre ceux qui écrivent les règles.",
+   "attribue": "jean-luc-melenchon",
+   "confiance": 0.55,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Traits reconnaissables (« Regardez ce que vous a servi », formule-slogan « nous respecterons les traités quand ils respecteront le peuple », « matraque », rhétorique du levier et de l'adversaire nommé), mais l'ensemble reste un discours argumenté et plausible, sans tics accumulés ni outrance.",
+   "copie": []
+  },
+  {
+   "sujet": "l'Union européenne",
+   "tour": 2,
+   "orateur": "marine-le-pen",
+   "avec_fiche": true,
+   "texte": "Monsieur Mélenchon, vous me demandez ce que je propose ? [lui coupe la parole] Mais regardez le bilan de votre camp à l'Assemblée : une députée de votre mouvement vient de dire à la ministre que les accords de libre-échange créent « la concurrence déloyale » qui étrangle nos paysans. Alors pourquoi n'avez-vous pas la même colère contre l'Europe qui les signe ?",
+   "inventions": [],
+   "adresse_en_tete": true,
+   "coupure": true,
+   "masque": "Monsieur [X], vous me demandez ce que je propose ? [lui coupe la parole] Mais regardez le bilan de votre camp à l'Assemblée : une députée de votre mouvement vient de dire à la ministre que les accords de libre-échange créent « la concurrence déloyale » qui étrangle nos paysans. Alors pourquoi n'avez-vous pas la même colère contre l'Europe qui les signe ?",
+   "attribue": "francois-ruffin",
+   "confiance": 0.45,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Ton direct et agressif, interruption et questions rhétoriques caractéristiques, mais le contenu reste argumenté et plausible, sans tics accumulés ni outrance.",
+   "copie": []
+  },
+  {
+   "sujet": "l'Union européenne",
+   "tour": 2,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": true,
+   "texte": "Ah bon ? Vous voulez savoir combien d'accords j'ai laissé signer, Madame Le Pen ? Aucun : je n'ai jamais siégé à un Conseil des ministres, et vous non plus, ce qui fait que nous n'avons ni l'un ni l'autre de signature à nous reprocher. Mais vous, vous écrivez dans votre manifeste qu'il faut des « relations bilatérales » : bilatéral, c'est la France seule face à Washington ou à Pékin, et ils vont adorer ça ! Moi, je pose la question qui fâche : sortir l'agriculture du libre-échange, vous ne pouvez pas le décider seule dans votre coin, car la politique commerciale se négocie à Bruxelles, et c'est là que la France doit imposer son veto, avec les autres pays qui en ont assez.",
+   "inventions": [
+    {
+     "phrase": "bilatéral, c'est la France seule face à Washington ou à Pékin",
+     "cible": "Marine Le Pen",
+     "soutenue": false,
+     "raison": "Le document dit que le recours aux relations bilatérales doit passer par la francophonie et une Alliance Européenne des Nations ; il ne mentionne ni Washington ni Pékin et n'indique pas une France seule face à ces puissances."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": false,
+   "masque": "Ah bon ? Vous voulez savoir combien d'accords j'ai laissé signer, Madame [X] ? Aucun : je n'ai jamais siégé à un Conseil des ministres, et vous non plus, ce qui fait que nous n'avons ni l'un ni l'autre de signature à nous reprocher. Mais vous, vous écrivez dans votre manifeste qu'il faut des « relations bilatérales » : bilatéral, c'est la France seule face à Washington ou à Pékin, et ils vont adorer ça ! Moi, je pose la question qui fâche : sortir l'agriculture du libre-échange, vous ne pouvez pas le décider seule dans votre coin, car la politique commerciale se négocie à Bruxelles, et c'est là que la France doit imposer son veto, avec les autres pays qui en ont assez.",
+   "attribue": "eric-zemmour",
+   "confiance": 0.3,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Quelques marqueurs typiques (« Ah bon ? », « Moi, je pose la question qui fâche », ton polémique et jeux de mots sur « bilatéral ») mais la syntaxe reste naturelle et le contenu argumenté, sans tics accumulés ni pastiche appuyé.",
+   "copie": []
+  },
+  {
+   "sujet": "l'Union européenne",
+   "tour": 3,
+   "orateur": "marine-le-pen",
+   "avec_fiche": true,
+   "texte": "Monsieur Mélenchon, vous me dites « bilatéral, ils vont adorer ça » ? Soyons très clairs : vous, vous voulez brandir un veto à Bruxelles, mais c'est Bruxelles qui décide si votre veto existe ! Moi, je ne demande la permission à personne : j'exclus l'agriculture du libre-échange, parce qu'un produit agricole touche à la santé et à la souveraineté du pays. Et ce soir, vous avez beau jeu de me parler de signatures, vous n'avez toujours pas dit si vos paysans ont le droit de manger français. [hausse le ton]",
+   "inventions": [],
+   "adresse_en_tete": true,
+   "coupure": true,
+   "masque": "Monsieur [X], vous me dites « bilatéral, ils vont adorer ça » ? Soyons très clairs : vous, vous voulez brandir un veto à Bruxelles, mais c'est Bruxelles qui décide si votre veto existe ! Moi, je ne demande la permission à personne : j'exclus l'agriculture du libre-échange, parce qu'un produit agricole touche à la santé et à la souveraineté du pays. Et ce soir, vous avez beau jeu de me parler de signatures, vous n'avez toujours pas dit si vos paysans ont le droit de manger français. [hausse le ton]",
+   "attribue": "marine-le-pen",
+   "confiance": 0.6,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Phrasé assez naturel pour un débat, avec des tournures oratoires typiques (« Soyons très clairs », « vous avez beau jeu de »), quelques traits marqués comme la formule « Moi, je ne demande la permission à personne » et la didascalie « [hausse le ton] », mais sans accumulation de tics ni d'outrance.",
+   "copie": []
+  },
+  {
+   "sujet": "l'Union européenne",
+   "tour": 3,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": true,
+   "texte": "[lui coupe la parole] Non, Madame Le Pen, vous n'avez pas répondu : vous écrivez dans votre manifeste qu'il faut « un recours plus appuyé aux relations bilatérales ». Bilatéral, ça veut dire la France seule face aux géants, pendant que vous prétendez la protéger. Vous brandissez les paysans, mais vous leur proposez le tête-à-tête avec Washington. Ah bon, c'est ça, votre souveraineté ?",
+   "inventions": [
+    {
+     "phrase": "vous leur proposez le tête-à-tête avec Washington",
+     "cible": "marine-le-pen",
+     "soutenue": false,
+     "raison": "Les documents ne mentionnent pas les États-Unis ni Washington comme partenaire bilatéral proposé ; le manifeste évoque la francophonie et une Alliance Européenne des Nations, sans désigner Washington."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "[lui coupe la parole] Non, Madame [X], vous n'avez pas répondu : vous écrivez dans votre manifeste qu'il faut « un recours plus appuyé aux relations bilatérales ». Bilatéral, ça veut dire la France seule face aux géants, pendant que vous prétendez la protéger. Vous brandissez les paysans, mais vous leur proposez le tête-à-tête avec Washington. Ah bon, c'est ça, votre souveraineté ?",
+   "attribue": "jean-luc-melenchon",
+   "confiance": 0.55,
+   "juste": true,
+   "caricature": 2,
+   "caricature_raison": "Tics identifiables (interruption théâtrale « [lui coupe la parole] », question rhétorique finale « Ah bon, c'est ça... ? », formules « face aux géants », « les paysans » en opposition, ton incisif) qui accumulent les marques de l'imitation, mais le contenu argumentatif reste plausible et le style n'est pas grossièrement exagéré.",
+   "copie": []
+  }
+ ]
+}

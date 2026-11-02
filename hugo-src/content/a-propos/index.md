@@ -2,10 +2,9 @@
 title: "À propos"
 type: "page"
 layout: "single"
+aliases: ["/soutenir/"]
 description: "Pourquoi demandezleur.fr existe, ce que le site fait, ce qu'il ne fait pas, et qui le fabrique."
 ---
-
-> Brouillon à valider par l'éditeur avant publication.
 
 ## Pourquoi
 
@@ -15,6 +14,7 @@ Pendant une campagne, on entend beaucoup les candidats et on lit peu leurs progr
 
 - **Interroger un programme.** Chaque candidat déclaré à la présidentielle 2027 est représenté par une IA qui répond **uniquement** à partir de ses documents officiels (programme, site de campagne, déclaration de candidature). Sous chaque réponse, les extraits utilisés sont affichés.
 - **Faire débattre les programmes.** Vous choisissez un sujet, 2 à 5 candidats, et vous menez le débat : ordre de parole, interpellation, clôture.
+- **Suivre l'actualité.** Chaque matin, les déclarations et les faits de la semaine sont rassemblés en fiches sourcées, puis servis aux candidats dans l'Arène : chacun y répond avec son programme.
 - **L'Arène.** Les candidats se voient opposer ce qui s'est réellement dit à l'Assemblée nationale (comptes rendus officiels) et le programme de leurs adversaires. Un garde-fou vérifie chaque affirmation faite sur un adversaire : ce qui n'est pas étayé est marqué d'un astérisque et expliqué, ce qui est faux est retiré et signalé.
 
 ## Ce que le site ne fait pas
@@ -26,12 +26,22 @@ Pendant une campagne, on entend beaucoup les candidats et on lit peu leurs progr
 
 ## Comment c'est fabriqué
 
-Les prompts donnés à l'IA sont [publics](/transparence/), le [code est ouvert](https://github.com/Lionel-Alpai/demandezleur.fr). Le modèle de langage est **DeepSeek V4** (DeepSeek, Hangzhou, Chine), interrogé par API depuis un serveur situé au Canada : aucune donnée de visiteur ne lui est transmise — seuls lui parviennent la question posée et les extraits de documents publics du candidat. Ce choix est technique et économique, non éditorial, et il est susceptible de changer ; la page le dira. Les corpus sont constitués à partir des sources officielles de chaque candidat, listées sur sa fiche ; tout document manquant peut être [suggéré](/suggerer/).
+Les prompts donnés à l'IA sont [publics](/transparence/), le [code est ouvert](https://github.com/Lionel-Alpai/demandezleur.fr). Les candidats parlent par la voix de **Claude Sonnet 5.5** et le garde-fou est tenu par **Claude Haiku 5.5** (Anthropic, États-Unis), interrogés par API depuis un serveur situé au Canada : aucune donnée de visiteur ne leur est transmise — seuls leur parviennent la question posée et les extraits de documents publics du candidat. Ces modèles sont le choix d'ALPAI, technique, jamais éditorial ; s'ils changent, cette page le dira. Les corpus sont constitués à partir des sources officielles de chaque candidat, listées sur sa fiche ; tout document manquant peut être [suggéré](/suggerer/).
 
 ## Qui
 
-Lionel Denis. Restaurateur en Maurienne, pas journaliste, pas encarté. Je fabrique ce site le soir et le lundi — mon jour de fermeture — avec une machine d'agents que j'ai montée moi-même et dont le code est ouvert.
+demandezleur.fr est conçu et édité par [ALPAI](https://alpai.eu/), une entreprise d'intelligence artificielle installée en Savoie (Lionel Denis, entrepreneur individuel — voir les [mentions légales](/mentions-legales/)). ALPAI construit des agents qui travaillent pour de vraies entreprises ; ce site montre ce que cette machine sait faire quand on lui impose des sources, des garde-fous et une transparence totale.
 
-Pourquoi : parce qu'on nous demande de choisir entre des gens dont nous ne lisons jamais les programmes, et que ces programmes sont pourtant publics, en ligne, gratuits. Ce site ne fait qu'une chose : les rendre interrogeables. Si vous y trouvez une erreur, elle est de moi, et le [formulaire de feedback](/feedback/) est là pour ça.
+Pourquoi ce site : on nous demande de choisir entre des gens dont nous lisons rarement les programmes, alors que ces programmes sont publics, en ligne, gratuits. demandezleur.fr ne fait qu'une chose : les rendre interrogeables. Si vous y trouvez une erreur, elle est de notre fait, et le [formulaire de feedback](/feedback/) est là pour la signaler.
 
-Le projet est indépendant, bénévole, sans affiliation avec un parti, un candidat ou une institution. [Soutenir le projet](/soutenir/).
+## Neutralité
+
+ALPAI ne soutient aucun candidat, aucun parti, aucune liste, et ne reçoit d'eux aucun financement. Tous les candidats déclarés sont traités selon les mêmes règles : mêmes consignes données à l'IA, mêmes garde-fous, même place à l'écran. Le site n'est affilié à aucune institution. Les consignes complètes sont publiées sur la page [transparence](/transparence/).
+
+## Du même atelier
+
+demandezleur.fr est l'un des projets d'[ALPAI](https://alpai.eu/). Les autres n'ont aucun lien avec la campagne et ne sont jamais cités dans les débats ni sur les fiches des candidats :
+
+- **[Cassandria](https://cassandria.space/)** — revue en ligne sur l'intelligence artificielle, le pouvoir et ce qu'ils font de nous.
+- **[L'Adieu à la Chair](https://www.amazon.fr/dp/B0HKDHRN9N)** — le livre à l'origine de Cassandria.
+- **[I Am That Voice](https://youtube.com/@iamthatvoice)** — la chaîne vidéo, des films et des voix fabriqués avec ces mêmes machines.

@@ -36,7 +36,7 @@
         lignes(ctx, meilleure(textes), W - 2 * P - 40).slice(0, maxL).forEach(function (l) { ctx.fillText(l, P + 20, ty); ty += 30; });
       });
       ctx.fillStyle = 'rgba(244,246,251,0.55)'; ctx.font = '400 22px Inter, system-ui, sans-serif';
-      ctx.fillText('demandezleur.fr — réponses générées par IA à partir des programmes officiels', P, H - 60);
+      ctx.fillText('Projection statistique par IA — n’engage pas les candidats', P, H - 60);
       ctx.fillStyle = '#ff5f6b'; ctx.font = '600 22px Inter, system-ui, sans-serif'; ctx.fillText(doc.id ? 'demandezleur.fr/d/?id=' + doc.id : 'demandezleur.fr/debat/', P, H - 28);
       cv.toBlob(function (blob) { var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'debat-demandezleur' + (doc.id ? '-' + doc.id : '') + '.png'; document.body.appendChild(a); a.click(); a.remove(); }, 'image/png');
     });

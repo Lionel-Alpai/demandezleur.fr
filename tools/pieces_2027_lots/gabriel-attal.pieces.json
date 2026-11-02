@@ -1,0 +1,797 @@
+{
+ "intitule": "Projet de Gabriel Attal (attalpresident.fr, campagne 2027)",
+ "pieces": [
+  {
+   "url": "https://attalpresident.fr/programme/mesures/aide-professionnels-vehicule",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-aide-professionnels-vehicule.txt",
+   "theme": "economie-travail",
+   "titre": "Aide aux professionnels dépendants de leur véhicule"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/aides-directes-plutot-que-baisses-de-taxes",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-aides-directes-plutot-que-baisses-de-taxes.txt",
+   "theme": "economie-travail",
+   "titre": "Aides directes ciblées pour le pouvoir d'achat"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/amende-des-le-premier-acte-maltraitance",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-amende-des-le-premier-acte-maltraitance.txt",
+   "theme": "securite-protection",
+   "titre": "Maltraitance animale : amende dès le premier acte"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/amendes-majorees-saisie-vehicules",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-amendes-majorees-saisie-vehicules.txt",
+   "theme": "securite-protection",
+   "titre": "Occupation illégale : amendes et saisies de véhicules"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/annee-passerelle",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-annee-passerelle.txt",
+   "theme": "education",
+   "titre": "L'année passerelle pour les élèves de CM2"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/assistant-medical-ia",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-assistant-medical-ia.txt",
+   "theme": "social-sante",
+   "titre": "Un assistant médical IA pour chaque Français"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/attestation-honorabilite-mineurs",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-attestation-honorabilite-mineurs.txt",
+   "theme": "securite-protection",
+   "titre": "Attestation d'honorabilité pour tous les encadrants"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/aucune-hausse-impots",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-aucune-hausse-impots.txt",
+   "theme": "economie-travail",
+   "titre": "Aucune hausse d'impôts pendant le quinquennat"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/audit-programmes-armement",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-audit-programmes-armement.txt",
+   "theme": "europe-international",
+   "titre": "Audit des programmes d'armement"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/bareme-national-sanctions",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-bareme-national-sanctions.txt",
+   "theme": "education",
+   "titre": "Barème national des sanctions scolaires"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/big-bang-territorial",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-big-bang-territorial.txt",
+   "theme": "institutions",
+   "titre": "Réforme territoriale : supprimer un échelon"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/bouclier-tarifaire-eau",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-bouclier-tarifaire-eau.txt",
+   "theme": "ecologie-energie",
+   "titre": "Bouclier tarifaire sur l'eau : la proposition d'Attal"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/brevet-obligatoire-entree-lycee",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-brevet-obligatoire-entree-lycee.txt",
+   "theme": "education",
+   "titre": "Le brevet obligatoire pour entrer au lycée"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/capitalisation-startups",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-capitalisation-startups.txt",
+   "theme": "economie-travail",
+   "titre": "Retraite : capitalisation et innovation selon Attal"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/carte-famille-monoparentale",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-carte-famille-monoparentale.txt",
+   "theme": "social-sante",
+   "titre": "Carte famille monoparentale : la proposition d'Attal"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/cent-mille-postes-en-moins",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-cent-mille-postes-en-moins.txt",
+   "theme": "services-publics",
+   "titre": "Supprimer 100 000 postes sans licencier personne"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/certificat-etudes-cm2",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-certificat-etudes-cm2.txt",
+   "theme": "education",
+   "titre": "Certificat d'études en CM2 : la proposition d'Attal"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/clauses-miroir-systematiques",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-clauses-miroir-systematiques.txt",
+   "theme": "agriculture",
+   "titre": "Clauses miroir dans les accords commerciaux"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/climatisation-etablissements",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-climatisation-etablissements.txt",
+   "theme": "education",
+   "titre": "Plan d'urgence de climatisation des établissements"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/commande-publique-defense",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-commande-publique-defense.txt",
+   "theme": "europe-international",
+   "titre": "Commande publique défense : la réforme pour les PME"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/comparution-immediate-mineurs",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-comparution-immediate-mineurs.txt",
+   "theme": "securite-protection",
+   "titre": "Comparution immédiate pour les mineurs récidivistes"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/conseil-discipline-primaire",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-conseil-discipline-primaire.txt",
+   "theme": "education",
+   "titre": "Conseil de discipline dès l'école primaire"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/constitution-du-travail",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-constitution-du-travail.txt",
+   "theme": "economie-travail",
+   "titre": "Une Constitution du travail de 50 pages au maximum"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/contractualisation-pluriannuelle",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-contractualisation-pluriannuelle.txt",
+   "theme": "agriculture",
+   "titre": "Contrats pluriannuels agricoles : la proposition d'Attal"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/deficit-sous-trois-pour-cent",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-deficit-sous-trois-pour-cent.txt",
+   "theme": "economie-travail",
+   "titre": "Déficit sous 3 % du PIB avant 2032 : le plan Attal"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/defiscaliser-pensions-alimentaires",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-defiscaliser-pensions-alimentaires.txt",
+   "theme": "social-sante",
+   "titre": "Défiscaliser les pensions alimentaires"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/delai-deux-mois-porteurs-projets",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-delai-deux-mois-porteurs-projets.txt",
+   "theme": "economie-travail",
+   "titre": "Délai de 2 mois pour les porteurs de projets"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/delit-maintien-illicite",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-delit-maintien-illicite.txt",
+   "theme": "securite-protection",
+   "titre": "Gens du voyage : un délit de maintien illicite"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/depistage-pfas-captages",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-depistage-pfas-captages.txt",
+   "theme": "social-sante",
+   "titre": "PFAS dans l'eau potable : le plan de Gabriel Attal"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/diviser-par-deux-dependance-militaire",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-diviser-par-deux-dependance-militaire.txt",
+   "theme": "europe-international",
+   "titre": "Souveraineté européenne sur les équipements militaires"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/dome-de-fer-europeen",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-dome-de-fer-europeen.txt",
+   "theme": "europe-international",
+   "titre": "Un dôme de fer européen contre missiles et drones"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/dossier-administratif-par-convoi",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-dossier-administratif-par-convoi.txt",
+   "theme": "securite-protection",
+   "titre": "Convois de caravanes : un dossier obligatoire"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/doubler-subventions-geoenergie",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-doubler-subventions-geoenergie.txt",
+   "theme": "ecologie-energie",
+   "titre": "Géoénergie : 160 millions d'euros par an"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/droit-a-la-climatisation",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-droit-a-la-climatisation.txt",
+   "theme": "social-sante",
+   "titre": "Droit à la climatisation : la proposition d'Attal"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/droit-au-brut",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-droit-au-brut.txt",
+   "theme": "economie-travail",
+   "titre": "Droit au brut : 250 € nets de plus par mois"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/droit-au-repit",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-droit-au-repit.txt",
+   "theme": "social-sante",
+   "titre": "Droit au répit pour les familles monoparentales"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/durcir-regroupement-familial",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-durcir-regroupement-familial.txt",
+   "theme": "immigration",
+   "titre": "Regroupement familial : la réforme d'Attal"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/encadrer-ventes-animaux-en-ligne",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-encadrer-ventes-animaux-en-ligne.txt",
+   "theme": "securite-protection",
+   "titre": "Ventes d'animaux en ligne : la proposition d'Attal"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/equilibre-securite-sociale",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-equilibre-securite-sociale.txt",
+   "theme": "social-sante",
+   "titre": "Équilibrer la Sécurité sociale d'ici 2032"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/extension-batiments-elevage",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-extension-batiments-elevage.txt",
+   "theme": "agriculture",
+   "titre": "Bâtiments d'élevage : simplifier les extensions"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/facturation-tarif-camping",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-facturation-tarif-camping.txt",
+   "theme": "securite-protection",
+   "titre": "Occupation illégale : facturer au tarif camping"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/fichier-interdits-de-detention",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-fichier-interdits-de-detention.txt",
+   "theme": "securite-protection",
+   "titre": "Fichier national des interdits de détenir un animal"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/fiscalite-portage-foncier",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-fiscalite-portage-foncier.txt",
+   "theme": "agriculture",
+   "titre": "Fiscalité du foncier agricole : la proposition d'Attal"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/fonds-investissement-defense",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-fonds-investissement-defense.txt",
+   "theme": "europe-international",
+   "titre": "Fonds d'investissement pour les PME de la défense"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/former-tous-enseignants-ia",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-former-tous-enseignants-ia.txt",
+   "theme": "education",
+   "titre": "Former tous les enseignants à l'IA"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/fusion-nucleaire-europe",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-fusion-nucleaire-europe.txt",
+   "theme": "ecologie-energie",
+   "titre": "Fusion nucléaire : le projet européen d'Attal"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/groupes-de-niveau-college",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-groupes-de-niveau-college.txt",
+   "theme": "education",
+   "titre": "Groupes de niveau au collège : le projet d'Attal"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/ia-savoirs-fondamentaux",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-ia-savoirs-fondamentaux.txt",
+   "theme": "education",
+   "titre": "L'IA au socle des savoirs fondamentaux"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/ia-traitement-judiciaire",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-ia-traitement-judiciaire.txt",
+   "theme": "securite-protection",
+   "titre": "Justice et IA : accélérer les délais de jugement"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/immigration-systeme-a-points",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-immigration-systeme-a-points.txt",
+   "theme": "immigration",
+   "titre": "Immigration à points : la proposition d'Attal"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/imprescriptibilite-crimes-sexuels-mineurs",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-imprescriptibilite-crimes-sexuels-mineurs.txt",
+   "theme": "securite-protection",
+   "titre": "Crimes sexuels sur mineurs : l'imprescriptibilité"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/interconnecter-fichiers",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-interconnecter-fichiers.txt",
+   "theme": "securite-protection",
+   "titre": "Interconnecter les fichiers police, justice et Éducation"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/interessement-petites-structures",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-interessement-petites-structures.txt",
+   "theme": "economie-travail",
+   "titre": "Intéressement étendu aux petites entreprises"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/interessement-vers-epargne-retraite",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-interessement-vers-epargne-retraite.txt",
+   "theme": "economie-travail",
+   "titre": "Intéressement et épargne retraite : la proposition Attal"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/journee-referendaire-annuelle",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-journee-referendaire-annuelle.txt",
+   "theme": "institutions",
+   "titre": "Une journée référendaire par an selon Attal"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/livre-blanc-defense-2027",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-livre-blanc-defense-2027.txt",
+   "theme": "europe-international",
+   "titre": "Défense nationale : la doctrine d'Attal pour 2027"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/loi-de-stabilite-fiscale",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-loi-de-stabilite-fiscale.txt",
+   "theme": "economie-travail",
+   "titre": "Loi de programmation fiscale sur dix ans"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/maire-elu-le-plus-puissant",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-maire-elu-le-plus-puissant.txt",
+   "theme": "institutions",
+   "titre": "Attal veut faire du maire l'élu le plus puissant"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/methode-singapour",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-methode-singapour.txt",
+   "theme": "education",
+   "titre": "La méthode de Singapour en maths pour tous"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/ministere-de-l-eau",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-ministere-de-l-eau.txt",
+   "theme": "ecologie-energie",
+   "titre": "Ministère de l'Eau : la proposition d'Attal"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/pac-moyens-renforces",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-pac-moyens-renforces.txt",
+   "theme": "agriculture",
+   "titre": "Gabriel Attal et la PAC : défendre le budget agricole"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/parcours-separation-simplifie",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-parcours-separation-simplifie.txt",
+   "theme": "social-sante",
+   "titre": "Séparation : un parcours simplifié en CAF"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/parquet-national-pedocriminalite",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-parquet-national-pedocriminalite.txt",
+   "theme": "securite-protection",
+   "titre": "Parquet national contre la pédocriminalité"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/perpetuite-reelle-predateurs",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-perpetuite-reelle-predateurs.txt",
+   "theme": "securite-protection",
+   "titre": "Perpétuité réelle pour les prédateurs sexuels en série"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/plafond-dix-huit-mois-procedures",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-plafond-dix-huit-mois-procedures.txt",
+   "theme": "securite-protection",
+   "titre": "Procédures bloquées : un recours, 18 mois max"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/plan-eau-a-euro-constant",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-plan-eau-a-euro-constant.txt",
+   "theme": "ecologie-energie",
+   "titre": "Plan Eau d'Attal : sept chantiers sans impôt nouveau"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/plan-france-2040",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-plan-france-2040.txt",
+   "theme": "economie-travail",
+   "titre": "Plan IA : 200 milliards d'euros pour la France"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/plan-messmer-2",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-plan-messmer-2.txt",
+   "theme": "ecologie-energie",
+   "titre": "Plan Messmer II : réduire la dépendance énergétique"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/plan-voltaire-esprit-critique",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-plan-voltaire-esprit-critique.txt",
+   "theme": "education",
+   "titre": "Plan Voltaire : 30 minutes d'esprit critique par jour"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/politique-ia-europeenne-commune",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-politique-ia-europeenne-commune.txt",
+   "theme": "europe-international",
+   "titre": "PIAC : la politique européenne de l'IA selon Attal"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/preference-europeenne-defense",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-preference-europeenne-defense.txt",
+   "theme": "europe-international",
+   "titre": "Préférence européenne dans les achats de défense"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/premiers-actes-quarante-huit-heures",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-premiers-actes-quarante-huit-heures.txt",
+   "theme": "securite-protection",
+   "titre": "Crimes sur mineurs : enquête sous 48h dès la plainte"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/prix-planchers-agricoles",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-prix-planchers-agricoles.txt",
+   "theme": "agriculture",
+   "titre": "Prix planchers agricoles indexés sur les coûts"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/procedures-mineurs-trois-mois",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-procedures-mineurs-trois-mois.txt",
+   "theme": "securite-protection",
+   "titre": "Crimes sur mineurs jugés en moins de trois mois"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/puissance-de-calcul-europeenne",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-puissance-de-calcul-europeenne.txt",
+   "theme": "europe-international",
+   "titre": "L'Europe à 20 % de la puissance de calcul mondiale"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/quintupler-capacites-geoenergie",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-quintupler-capacites-geoenergie.txt",
+   "theme": "ecologie-energie",
+   "titre": "Géoénergie : multiplier par cinq d'ici 2035"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/quotas-migratoires-revises",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-quotas-migratoires-revises.txt",
+   "theme": "immigration",
+   "titre": "Quotas migratoires votés par le Parlement"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/referendums-locaux-facilites",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-referendums-locaux-facilites.txt",
+   "theme": "institutions",
+   "titre": "Référendums locaux : la réforme proposée par Attal"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/reforme-assurance-chomage-cinq-milliards",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-reforme-assurance-chomage-cinq-milliards.txt",
+   "theme": "economie-travail",
+   "titre": "Réforme chômage : 5 milliards et 100 000 emplois"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/reforme-nominations-hautes-fonctions",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-reforme-nominations-hautes-fonctions.txt",
+   "theme": "institutions",
+   "titre": "Réformer les nominations aux hautes fonctions de l'État"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/refuser-mercosur",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-refuser-mercosur.txt",
+   "theme": "agriculture",
+   "titre": "Gabriel Attal contre le traité Mercosur"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/remplacement-enseignants-absents",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-remplacement-enseignants-absents.txt",
+   "theme": "education",
+   "titre": "Remplacement des enseignants absents : la proposition Attal"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/renseignement-ofmin",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-renseignement-ofmin.txt",
+   "theme": "securite-protection",
+   "titre": "Renseignement anti-pédocriminel : la proposition d'Attal"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/reparer-cinq-cents-reseaux-eau",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-reparer-cinq-cents-reseaux-eau.txt",
+   "theme": "ecologie-energie",
+   "titre": "Réparer les 500 réseaux d'eau les plus vétustes"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/reponse-subvention-quatre-vingt-dix-jours",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-reponse-subvention-quatre-vingt-dix-jours.txt",
+   "theme": "economie-travail",
+   "titre": "Géoénergie : réponse aux subventions en 90 jours"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/retablir-redoublement",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-retablir-redoublement.txt",
+   "theme": "education",
+   "titre": "Rétablir le redoublement scolaire"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/revalorisation-salaires-professeurs",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-revalorisation-salaires-professeurs.txt",
+   "theme": "education",
+   "titre": "Revalorisation des enseignants : +200 à +500 €/mois"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/simplifier-forages-geothermiques",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-simplifier-forages-geothermiques.txt",
+   "theme": "ecologie-energie",
+   "titre": "Forages géothermiques : simplifier les règles"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/stabilite-prix-electricite",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-stabilite-prix-electricite.txt",
+   "theme": "ecologie-energie",
+   "titre": "Prix de l'électricité stables pendant cinq ans"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/statut-auto-tpe",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-statut-auto-tpe.txt",
+   "theme": "economie-travail",
+   "titre": "Statut Auto-TPE : embaucher son premier salarié"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/test-pme-avant-chaque-loi",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-test-pme-avant-chaque-loi.txt",
+   "theme": "economie-travail",
+   "titre": "Test PME obligatoire avant chaque loi : la proposition Attal"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/trois-mille-magistrats-greffiers",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-trois-mille-magistrats-greffiers.txt",
+   "theme": "securite-protection",
+   "titre": "3 000 magistrats et greffiers recrutés"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/tu-casses-tu-repares",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-tu-casses-tu-repares.txt",
+   "theme": "securite-protection",
+   "titre": "Dégradations : casseurs et mineurs face à leurs actes"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/tuteur-numerique-souverain",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-tuteur-numerique-souverain.txt",
+   "theme": "education",
+   "titre": "Un tuteur IA gratuit et souverain pour chaque élève"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/un-seul-ministre-education",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-un-seul-ministre-education.txt",
+   "theme": "education",
+   "titre": "Un seul ministre de l'Éducation pendant cinq ans"
+  },
+  {
+   "url": "https://attalpresident.fr/programme/mesures/vingt-millions-salaries-ia",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/txt/mesure-vingt-millions-salaries-ia.txt",
+   "theme": "culture-numerique",
+   "titre": "Former 20 millions de salariés à l'IA d'ici 2030"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/gabriel-attal-20h-tf1-quatre-chantiers-capitaux-pour-la-france",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-gabriel-attal-20h-tf1-quatre-chantiers-capitaux-pour-la-france.txt",
+   "theme": "vision-generale",
+   "titre": "Gabriel Attal ses 4 chantiers capitaux pour la France"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/meeting-de-gabriel-attal-a-paris-l-elan-d-une-france-qui-choisit-l-avenir",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-meeting-de-gabriel-attal-a-paris-l-elan-d-une-france-qui-choisit-l-avenir.txt",
+   "theme": "vision-generale",
+   "titre": "Meeting Gabriel Attal à Paris : le choix de l'avenir"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/gabriel-attal-dans-le-figaro-appelle-a-une-nouvelle-justice",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-gabriel-attal-dans-le-figaro-appelle-a-une-nouvelle-justice.txt",
+   "theme": "securite-protection",
+   "titre": "Gabriel Attal appelle à une « Nouvelle Justice » - Le Figaro"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/eurosatory-gabriel-attal-presente-sa-strategie-de-souverainete-technologique-et-d-independance-europeenne-au-salon",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-eurosatory-gabriel-attal-presente-sa-strategie-de-souverainete-technologique-et-d-independance-europeenne-au-salon.txt",
+   "theme": "europe-international",
+   "titre": "Attal à Eurosatory : défense et souveraineté"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/gabriel-attal-appelle-a-une-rupture-economique-dans-les-echos",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-gabriel-attal-appelle-a-une-rupture-economique-dans-les-echos.txt",
+   "theme": "economie-travail",
+   "titre": "Gabriel Attal son plan de rupture économique dans Les Echos"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/vivatech-gabriel-attal-place-l-intelligence-artificielle-et-la-souverainete-au-coeur-de-son-projet",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-vivatech-gabriel-attal-place-l-intelligence-artificielle-et-la-souverainete-au-coeur-de-son-projet.txt",
+   "theme": "culture-numerique",
+   "titre": "Gabriel Attal : l'IA pour faire de la France le leader"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/gabriel-attal-pour-le-retour-du-royaume-uni-dans-l-union-europeenne-dans-le-figaro",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-gabriel-attal-pour-le-retour-du-royaume-uni-dans-l-union-europeenne-dans-le-figaro.txt",
+   "theme": "europe-international",
+   "titre": "Gabriel Attal : « Pour le retour du Royaume-Uni dans l’UE"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/face-aux-canicules-gabriel-attal-veut-faire-de-la-geoenergie-le-grand-projet-energetique-de-la-france-du-xxie-siecle",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-face-aux-canicules-gabriel-attal-veut-faire-de-la-geoenergie-le-grand-projet-energetique-de-la-france-du-xxie-siecle.txt",
+   "theme": "ecologie-energie",
+   "titre": "Gabriel Attal veut faire de la géoénergie un grand projet"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/dans-le-parisien-gabriel-attal-vise-le-zero-deficit-en-2037",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-dans-le-parisien-gabriel-attal-vise-le-zero-deficit-en-2037.txt",
+   "theme": "economie-travail",
+   "titre": "Interview de Gabriel Attal dans Le Parisien sur les FIPU"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/aux-rencontres-economiques-d-aix-en-provence-gabriel-attal-appelle-la-france-a-preparer-les-guerres-de-demain",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-aux-rencontres-economiques-d-aix-en-provence-gabriel-attal-appelle-la-france-a-preparer-les-guerres-de-demain.txt",
+   "theme": "europe-international",
+   "titre": "Gabriel Attal : la France doit préparer les guerres de demain"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/gabriel-attal-fin-de-vie-l-aboutissement-d-un-long-chemin-et-la-consecration-d-un-droit-nouveau",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-gabriel-attal-fin-de-vie-l-aboutissement-d-un-long-chemin-et-la-consecration-d-un-droit-nouveau.txt",
+   "theme": "social-sante",
+   "titre": "Loi fin de vie : la consécration d'un droit nouveau"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/dans-le-telegramme-gabriel-attal-veut-un-choc-de-salaires-et-instaurer-le-droit-au-brut",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-dans-le-telegramme-gabriel-attal-veut-un-choc-de-salaires-et-instaurer-le-droit-au-brut.txt",
+   "theme": "economie-travail",
+   "titre": "Gabriel Attal veut un « choc de salaires » pour les Français"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/dans-le-jdd-gabriel-attal-veut-proposer-la-plus-grande-reforme-institutionnelle-depuis-1958",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-dans-le-jdd-gabriel-attal-veut-proposer-la-plus-grande-reforme-institutionnelle-depuis-1958.txt",
+   "theme": "institutions",
+   "titre": "Gabriel Attal propose une grande réforme institutionnelle"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/dans-la-tribune-dimanche-gabriel-attal-veut-un-referendum-pour-interdire-les-reseaux-sociaux-aux-moins-de-15-ans",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-dans-la-tribune-dimanche-gabriel-attal-veut-un-referendum-pour-interdire-les-reseaux-sociaux-aux-moins-de-15-ans.txt",
+   "theme": "culture-numerique",
+   "titre": "Gabriel Attal veut un référendum pour interdire les réseaux sociaux aux moins de 15 ans"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/gabriel-attal-plan-eau-argeles-sur-mer",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-gabriel-attal-plan-eau-argeles-sur-mer.txt",
+   "theme": "ecologie-energie",
+   "titre": "Gabriel Attal fait de l’eau une priorité nationale"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/dans-le-monde-gabriel-attal-devoile-son-projet-pour-faire-notre-ecole-la-meilleure-d-europe",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-dans-le-monde-gabriel-attal-devoile-son-projet-pour-faire-notre-ecole-la-meilleure-d-europe.txt",
+   "theme": "education",
+   "titre": "Gabriel Attal dévoile son projet pour faire notre École la meilleure d’Europe"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/lci-gabriel-attal-defend-un-projet-de-rupture-pour-repondre-aux-grands-defis-du-pays",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-lci-gabriel-attal-defend-un-projet-de-rupture-pour-repondre-aux-grands-defis-du-pays.txt",
+   "theme": "vision-generale",
+   "titre": "Gabriel Attal : un projet de rupture pour la France"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/gabriel-attal-annonce-ses-premieres-mesures-pour-les-familles-monoparentales-a-la-premiere-universite-d-ete",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-gabriel-attal-annonce-ses-premieres-mesures-pour-les-familles-monoparentales-a-la-premiere-universite-d-ete.txt",
+   "theme": "social-sante",
+   "titre": "Attal : ses mesures pour les familles monoparentales"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/france-2-gabriel-attal-fait-de-l-ecole-une-priorite-pour-preparer-l-avenir-du-pays",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-france-2-gabriel-attal-fait-de-l-ecole-une-priorite-pour-preparer-l-avenir-du-pays.txt",
+   "theme": "education",
+   "titre": "Gabriel Attal dévoile ses priorités pour 2027 au JT de 20H"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/bfm-tv-gabriel-attal-veut-changer-de-modele-pour-redonner-de-la-puissance-a-la-france",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-bfm-tv-gabriel-attal-veut-changer-de-modele-pour-redonner-de-la-puissance-a-la-france.txt",
+   "theme": "vision-generale",
+   "titre": "Gabriel Attal veut changer de modèle pour redonner de la puissance à la France"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/metz-magny-gabriel-attal-veut-preparer-l-avenir-de-l-agriculture-francaise",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-metz-magny-gabriel-attal-veut-preparer-l-avenir-de-l-agriculture-francaise.txt",
+   "theme": "agriculture",
+   "titre": "Gabriel Attal veut préparer l’avenir de l’agriculture française"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/gabriel-attal-a-reims-batir-les-etats-unis-d-europe-pour-retrouver-notre-puissance",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-gabriel-attal-a-reims-batir-les-etats-unis-d-europe-pour-retrouver-notre-puissance.txt",
+   "theme": "europe-international",
+   "titre": "Gabriel Attal à Reims : bâtir les États-Unis d’Europe pour retrouver notre puissance"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/gabriel-attal-sur-france-2-gerer-l-urgence-et-preparer-l-avenir",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-gabriel-attal-sur-france-2-gerer-l-urgence-et-preparer-l-avenir.txt",
+   "theme": "vision-generale",
+   "titre": "Gabriel Attal sur France 2 : « Gérer l’urgence et préparer l’avenir »"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/gabriel-attal-sur-bfm-tv-le-plus-juste-c-est-d-accompagner-ceux-qui-travaillent",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-gabriel-attal-sur-bfm-tv-le-plus-juste-c-est-d-accompagner-ceux-qui-travaillent.txt",
+   "theme": "economie-travail",
+   "titre": "Gabriel Attal sur BFM TV : « Le plus juste, c’est d’accompagner ceux qui travaillent »"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/gabriel-attal-presente-un-plan-de-desendettement-et-un-messmer-ii-pour-sortir-des-dependances-francaises",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-gabriel-attal-presente-un-plan-de-desendettement-et-un-messmer-ii-pour-sortir-des-dependances-francaises.txt",
+   "theme": "economie-travail",
+   "titre": "Gabriel Attal : un plan de désendettement et un Messmer II"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/gabriel-attal-dans-politico-europe-ukraine-ia-et-finances-publiques-quatre-priorites-pour-preparer-la-france-de-demain",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-gabriel-attal-dans-politico-europe-ukraine-ia-et-finances-publiques-quatre-priorites-pour-preparer-la-france-de-demain.txt",
+   "theme": "europe-international",
+   "titre": "Gabriel Attal : Europe, Ukraine, IA et finances publiques"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/aux-assises-de-l-afer-gabriel-attal-defend-une-epargne-qui-finance-l-economie-francaise",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-aux-assises-de-l-afer-gabriel-attal-defend-une-epargne-qui-finance-l-economie-francaise.txt",
+   "theme": "economie-travail",
+   "titre": "Aux Assises de l’AFER, Gabriel Attal défend une épargne qui finance l’économie française"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/gabriel-attal-veut-liberer-l-acces-au-logement-et-relancer-le-secteur-du-batiment",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-gabriel-attal-veut-liberer-l-acces-au-logement-et-relancer-le-secteur-du-batiment.txt",
+   "theme": "logement",
+   "titre": "Gabriel Attal veut libérer l’accès au logement et relancer le secteur du bâtiment"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/gabriel-attal-sur-cnews-et-europe-1-il-faut-proposer-aux-francais-un-projet-d-espoir",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-gabriel-attal-sur-cnews-et-europe-1-il-faut-proposer-aux-francais-un-projet-d-espoir.txt",
+   "theme": "vision-generale",
+   "titre": "Gabriel Attal sur CNEWS : « Il faut proposer aux Français un projet d’espoir »"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/gabriel-attal-dans-le-parisien-rassemblement-jeunesse-et-dette",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-gabriel-attal-dans-le-parisien-rassemblement-jeunesse-et-dette.txt",
+   "theme": "vision-generale",
+   "titre": "Gabriel Attal dans Le Parisien : rassemblement, jeunesse"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/gabriel-attal-retablir-ordre-pacte-avenir-jeunesse",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-gabriel-attal-retablir-ordre-pacte-avenir-jeunesse.txt",
+   "theme": "securite-protection",
+   "titre": "Gabriel Attal : rétablir l'ordre, bâtir un pacte jeunesse"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/gabriel-attal-responsabilite-generation-etats-unis-europe",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-gabriel-attal-responsabilite-generation-etats-unis-europe.txt",
+   "theme": "europe-international",
+   "titre": "Gabriel Attal : pourquoi construire les États-Unis d’Europe"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/gabriel-attal-grande-primaire-rassembler-democrates-face-extremes",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-gabriel-attal-grande-primaire-rassembler-democrates-face-extremes.txt",
+   "theme": "institutions",
+   "titre": "Gabriel Attal appelle à une grande primaire sur TF1"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/gabriel-attal-recu-chez-mistral-ai-arthur-mensch-intelligence-artificielle",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-gabriel-attal-recu-chez-mistral-ai-arthur-mensch-intelligence-artificielle.txt",
+   "theme": "culture-numerique",
+   "titre": "Gabriel Attal chez Mistral AI : l’IA au cœur de son projet"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/gabriel-attal-vision-economique-liberer-innover-independance-france",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-gabriel-attal-vision-economique-liberer-innover-independance-france.txt",
+   "theme": "economie-travail",
+   "titre": "Gabriel Attal : sa vision économique pour libérer la France"
+  },
+  {
+   "url": "https://attalpresident.fr/actualites/gabriel-attal-primaire-grand-rassemblement-risque-second-tour-rn-lfi",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/gabriel-attal/act/actu-gabriel-attal-primaire-grand-rassemblement-risque-second-tour-rn-lfi.txt",
+   "theme": "institutions",
+   "titre": "Gabriel Attal appelle à une primaire pour rassembler"
+  }
+ ]
+}

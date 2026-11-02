@@ -39,13 +39,18 @@ DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY")
 
 # --- App FastAPI ---
 app = FastAPI(title="DemandezLeur API", version="1.0")
+from silence_electoral import SilenceElectoralMiddleware  # [silence-electoral]
+app.add_middleware(SilenceElectoralMiddleware)  # [silence-electoral]
 
+ORIGINES_AUTORISEES = [o.strip() for o in os.environ.get(  # [durcir] plus de joker CORS
+    "DL_ORIGINES", "https://demandezleur.fr,https://www.demandezleur.fr,http://localhost:1313,http://127.0.0.1:1313"
+).split(",") if o.strip()]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], # Accepte les requêtes de tous les domaines (local ou remote)
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_origins=ORIGINES_AUTORISEES,  # un site tiers ne fait plus tourner l'API depuis les navigateurs de ses visiteurs
+    allow_credentials=False,
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["Content-Type", "X-DL-Client", "X-Admin-Token"],
 )
 
 @app.on_event("startup")
@@ -63,19 +68,25 @@ async def _precalculer_themes():
     except Exception:
         logger.warning("précalcul des thèmes parlementaires en échec", exc_info=True)
 
+_LOOPBACK = ("127.0.0.1", "::1")  # [durcir] seul nginx, en local, est cru sur l'adresse du visiteur
+
+
 def extraire_ip_reelle(request: Request) -> str:
     """
-    Extrait l'IP réelle du visiteur en tenant compte du reverse proxy Nginx.
+    IP réelle du visiteur. [durcir] Derrière nginx (connexion depuis 127.0.0.1), X-Real-IP est POSÉ par nginx
+    ($remote_addr) et X-Forwarded-For se termine par l'adresse qu'il AJOUTE : on lit ces deux-là, jamais le
+    premier X-Forwarded-For, que le visiteur écrit lui-même (usurpation des quotas constatée le 01/11/2026).
+    Hors proxy (lancement local direct), l'adresse de la connexion fait foi.
     """
-    forwarded_for = request.headers.get("X-Forwarded-For")
-    if forwarded_for:
-        return forwarded_for.split(",")[0].strip()
-    
-    real_ip = request.headers.get("X-Real-IP")
-    if real_ip:
-        return real_ip.strip()
-    
-    return request.client.host if request.client else "unknown"
+    hote = request.client.host if request.client else ""
+    if hote in _LOOPBACK:
+        real_ip = request.headers.get("X-Real-IP")
+        if real_ip:
+            return real_ip.strip()
+        forwarded_for = request.headers.get("X-Forwarded-For")
+        if forwarded_for:
+            return forwarded_for.split(",")[-1].strip()
+    return hote or "unknown"
 
 
 def is_admin_bypass(request: Request) -> bool:
@@ -410,6 +421,7 @@ async def debat_stream(request: Request):
                         full_text = texte_nettoye
                 tokens_in, tokens_out = usage.get("in", 0), usage.get("out", 0)
                 
+                emis.enregistrer_intervention(full_text, revisions, annotations, preuves_locuteur)  # [durcir]
                 yield format_sse("speaker_end", {
                     "candidat_id": candidat_id,
                     "full_text": full_text,
@@ -506,7 +518,9 @@ async def debat_stream(request: Request):
     )
 
 @app.get("/api/admin/rate_limit_stats")
-async def rate_limit_stats():
+async def rate_limit_stats(request: Request):
+    if not is_admin_bypass(request):  # [durcir] pupitre de service : jeton admin obligatoire
+        raise HTTPException(status_code=403, detail="accès réservé")
     return get_stats_actuelles()
 
 @app.post("/api/feedback")
@@ -545,6 +559,7 @@ async def suggerer_document(
     url: str = Form(""),
     notes: str = Form(""),
     fichier: Optional[UploadFile] = File(None),
+    jeton: str = Form(""),
 ):
     """Reçoit une suggestion de document RAG et la transmet via Telegram."""
     ip = extraire_ip_reelle(request)
@@ -572,6 +587,9 @@ async def suggerer_document(
         lignes.append(f"📝 Notes : {notes}")
     lignes.append("━━━━━━━━━━━━━━━")
     texte = "\n".join(lignes)
+
+    import qg_depot  # [qg-depot] page 3/4 du QG : depot conserve, lie au jeton
+    await qg_depot.deposer(candidat, titre, url, notes, fichier, jeton, ip)
 
     if fichier and fichier.filename:
         print(f"[SUGGESTION_SANS_TELEGRAM] fichier joint non conserve : {fichier.filename}", flush=True)
@@ -639,6 +657,13 @@ async def ask_candidat(request: Request, ask_request: AskRequest):
                                .replace("{ton_famille_politique}", ton_content) \
                                .replace("{rag_context}", rag_context)
 
+    # ÉTAT DU MONDE (fiches validées par la machine) : situation en tête, fiches des événements touchés par la question
+    try:
+        import actu_fiches as _af
+        _tete, _corps, _ = _af.bloc_etat_du_monde(ask_request.question)
+        system_prompt = _tete + system_prompt + _corps
+    except Exception:
+        pass
     messages = [{"role": "system", "content": system_prompt}]
     
     # Ajout de l'historique (limité aux 6 derniers messages)
@@ -665,6 +690,7 @@ async def ask_candidat(request: Request, ask_request: AskRequest):
 
 # ---------- Débats permanents (/d/?id=…) ----------
 import debats_store
+import emis  # [durcir] registre des textes émis par le plateau : un débat partagé n'en contient pas d'autres
 
 @app.post("/api/debat/sauver")
 async def debat_sauver(request: Request):
@@ -680,7 +706,7 @@ async def debat_sauver(request: Request):
         doc = await request.json()
     except Exception:
         raise HTTPException(status_code=400, detail="JSON invalide")
-    motif = debats_store.valider(doc, max_tours=MAX_TOURS)
+    motif = debats_store.valider(doc, max_tours=MAX_TOURS) or emis.verifier_document(doc)  # [durcir]
     if motif:
         raise HTTPException(status_code=422, detail=motif)
     did = debats_store.sauver(doc, moteur=llm.MODELE)
@@ -742,6 +768,13 @@ async def etat_public():
             "limites": ({"chat": LIMITES_POINTE["chat"], "debat": LIMITES_POINTE["debat_court"]} if en_pointe() else {"chat": LIMITE_CHAT_PAR_JOUR, "debat": LIMITE_DEBAT_COURT_PAR_JOUR})}
 
 
+@app.get("/api/actu/candidats")  # [actu-candidats]
+async def actu_candidats():
+    """Candidats declares {id, nom} : source du collecteur ACTU (babahargadon), publique, cache 1 h."""
+    import actu
+    return {"candidats": actu.candidats_publics()}
+
+
 @app.get("/api/actu/sujets")
 async def actu_sujets(n: int = 6):
     """Thèmes les plus présents dans l'actualité récente (tiroir Actu) → « Ça chauffe cette semaine »."""
@@ -798,6 +831,10 @@ async def actu_ingest_route(request: Request):
     if not ok:
         raise HTTPException(status_code=422, detail=raison)
     return {"ok": True, **ai.ecrire_merge(obj)}
+
+# [qg-bilan] page 1/4 du QG : GET /api/qg/bilan?j=<jeton>
+import qg_bilan
+qg_bilan.monter(app, extraire_ip_reelle)
 
 if __name__ == "__main__":
     import uvicorn

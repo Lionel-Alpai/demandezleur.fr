@@ -1,0 +1,1145 @@
+# Annuaire des QG de campagne - source de verite (JSON = YAML valide)
+{
+ "genere_le": "2026-10-30",
+ "regle": "adresse lue sur une page officielle, jamais devinee",
+ "qg": [
+  {
+   "slug": "nathalie-arthaud",
+   "nom": "Nathalie Arthaud",
+   "parti": "Lutte Ouvrière",
+   "pages_consultees": [
+    "https://lutte-ouvriere.org/",
+    "https://lutte-ouvriere.org/contact",
+    "https://lutte-ouvriere.org/mentions-legales",
+    "https://nathalie-arthaud.info/",
+    "https://nathalie-arthaud.info/contact",
+    "https://nathalie-arthaud.info/mentions-legales"
+   ],
+   "statut": "introuvable",
+   "contact": null,
+   "autres": [],
+   "note": "aucune adresse lue sur une page officielle du 2026-10-30",
+   "canal": {
+    "type": "formulaire",
+    "url": "https://lutte-ouvriere.org/contact"
+   },
+   "canal_secours": {
+    "postal": {
+     "adresse": "Lutte Ouvrière, BP 20029, 93501 Pantin Cedex (tél. 01 48 10 86 20)",
+     "preuve_url": "https://lutte-ouvriere.org/contact"
+    },
+    "formulaire_url": "https://contact.lutte-ouvriere.org/",
+    "reseaux": [
+     {
+      "reseau": "Facebook",
+      "url": "https://www.facebook.com/nathaliearthaud",
+      "preuve_officiel_url": "https://www.nathalie-arthaud.info/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "X",
+      "url": "https://twitter.com/n_arthaud",
+      "preuve_officiel_url": "https://www.nathalie-arthaud.info/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "Instagram",
+      "url": "https://www.instagram.com/nathalie_arthaud_lo/",
+      "preuve_officiel_url": "https://www.nathalie-arthaud.info/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "TikTok",
+      "url": "https://www.tiktok.com/@nathaliearthaud",
+      "preuve_officiel_url": "https://www.nathalie-arthaud.info/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "YouTube",
+      "url": "https://www.youtube.com/channel/UCZsh-MrJftAOP_-ZgRgLScw",
+      "preuve_officiel_url": "https://www.nathalie-arthaud.info/",
+      "messagerie": "inconnu"
+     }
+    ]
+   },
+   "canal_recommande": "formulaire https://contact.lutte-ouvriere.org/ (catégorie 'Contacter Lutte Ouvrière'), courrier BP 20029 Pantin en doublon",
+   "note_20261101": "Aucune adresse mail publiée sur lutte-ouvriere.org ni nathalie-arthaud.info (le lien Contact du site de campagne pointe vers le même formulaire). Réseaux lus via rendu de nathalie-arthaud.info (page JS)."
+  },
+  {
+   "slug": "delphine-batho",
+   "nom": "Delphine Batho",
+   "parti": "Génération Écologie",
+   "pages_consultees": [
+    "https://alice-ecologie.fr/",
+    "https://generation-ecologie.fr/contact",
+    "https://generation-ecologie.fr/contact/",
+    "https://generation-ecologie.fr/contactez-nous",
+    "https://generation-ecologie.fr/nous-contacter",
+    "https://generation-ecologie.fr/presse",
+    "https://generation-ecologie.fr/presse/",
+    "https://generation-ecologie.fr/espace-presse",
+    "https://generation-ecologie.fr/mentions-legales"
+   ],
+   "statut": "trouve",
+   "contact": {
+    "email": "contact@generationecologie.fr",
+    "role": "contact",
+    "preuve_url": "https://www.generationecologie.fr/agir-avec-nous/echanger/nous-contacter/",
+    "releve_le": "2026-11-01"
+   },
+   "autres": [],
+   "note": "aucune adresse lue sur une page officielle du 2026-10-30",
+   "canal": {
+    "type": "aucun canal public"
+   },
+   "canal_secours": {
+    "postal": {
+     "adresse": "Génération Écologie, BP 40037, 79500 Melle",
+     "preuve_url": "https://www.generationecologie.fr/agir-avec-nous/echanger/nous-contacter/"
+    },
+    "formulaire_url": "https://www.delphinebatho.fr/contact/",
+    "reseaux": [
+     {
+      "reseau": "Instagram",
+      "url": "https://www.instagram.com/delphine_batho/",
+      "preuve_officiel_url": "https://www.delphinebatho.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "LinkedIn",
+      "url": "https://www.linkedin.com/in/delphine-batho/",
+      "preuve_officiel_url": "https://www.delphinebatho.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "Bluesky",
+      "url": "https://bsky.app/profile/delphinebatho.bsky.social",
+      "preuve_officiel_url": "https://www.delphinebatho.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "Facebook",
+      "url": "https://www.facebook.com/GenerationEcologieOfficiel",
+      "preuve_officiel_url": "https://www.generationecologie.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "Instagram",
+      "url": "https://www.instagram.com/generationecologieofficiel",
+      "preuve_officiel_url": "https://www.generationecologie.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "Telegram",
+      "url": "https://t.me/GenerationEcologie",
+      "preuve_officiel_url": "https://www.generationecologie.fr/",
+      "messagerie": "inconnu"
+     }
+    ]
+   },
+   "canal_recommande": "email contact@generationecologie.fr",
+   "note_20261101": "ALERTE domaine épinglé : generation-ecologie.fr (avec tiret) redirige vers alice-ecologie.fr, site SANS RAPPORT (édité par Shantipol Interactive) -> ne pas utiliser alice@alice-ecologie.fr. Les vrais domaines sont generationecologie.fr (sans tiret) et delphinebatho.fr (mentions légales : site officiel de D. Batho, siège BP 40037 Melle). À corriger dans domaines_officiels.json."
+  },
+  {
+   "slug": "edouard-philippe",
+   "nom": "Édouard Philippe",
+   "parti": "Horizons",
+   "pages_consultees": [
+    "https://horizonsleparti.fr/",
+    "https://horizonsleparti.fr/wp-content/plugins/wp-media-folder/assets/css/display-gallery/magnific-popup.css?ver=6.3.0",
+    "https://horizonsleparti.fr/contact/",
+    "https://horizonsleparti.fr/mentions-legales/",
+    "https://horizonsleparti.fr/contact"
+   ],
+   "statut": "trouve",
+   "contact": {
+    "email": "contact@horizonsleparti.fr",
+    "role": "contact",
+    "preuve_url": "https://horizonsleparti.fr/politique-de-confidentialite/",
+    "releve_le": "2026-11-01"
+   },
+   "autres": [],
+   "note": "aucune adresse lue sur une page officielle du 2026-10-30",
+   "canal": {
+    "type": "formulaire",
+    "url": "https://horizonsleparti.fr/contact/"
+   },
+   "canal_secours": {
+    "postal": {
+     "adresse": "Horizons, 30 avenue d'Iéna, 75116 Paris",
+     "preuve_url": "https://horizonsleparti.fr/mentions-legales/"
+    },
+    "formulaire_url": "https://horizonsleparti.fr/contact/",
+    "reseaux": [
+     {
+      "reseau": "Facebook",
+      "url": "https://www.facebook.com/AvecEdouard/",
+      "preuve_officiel_url": "https://horizonsleparti.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "Instagram",
+      "url": "https://www.instagram.com/avecedouard/",
+      "preuve_officiel_url": "https://horizonsleparti.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "X",
+      "url": "https://x.com/Avec_Edouard",
+      "preuve_officiel_url": "https://horizonsleparti.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "YouTube",
+      "url": "https://www.youtube.com/@EdouardPhilippe",
+      "preuve_officiel_url": "https://horizonsleparti.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "Facebook",
+      "url": "https://www.facebook.com/HorizonsLeParti/",
+      "preuve_officiel_url": "https://horizonsleparti.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "X",
+      "url": "https://twitter.com/horizonsleparti",
+      "preuve_officiel_url": "https://horizonsleparti.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "LinkedIn",
+      "url": "https://www.linkedin.com/company/horizonsleparti/",
+      "preuve_officiel_url": "https://horizonsleparti.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "Telegram",
+      "url": "https://t.me/HorizonsOff",
+      "preuve_officiel_url": "https://horizonsleparti.fr/",
+      "messagerie": "inconnu"
+     }
+    ]
+   },
+   "canal_recommande": "email contact@horizonsleparti.fr",
+   "note_20261101": "Adresse donnée dans la politique de confidentialité comme contact général de l'association (pas seulement RGPD). Tél. 01 89 16 16 75 sur /contact/. Comptes 'Avec Edouard' = campagne, liés depuis horizonsleparti.fr."
+  },
+  {
+   "slug": "xavier-bertrand",
+   "nom": "Xavier Bertrand",
+   "parti": "Nous France",
+   "pages_consultees": [
+    "https://www.nousfrance.fr/",
+    "https://www.nousfrance.fr/contact/",
+    "https://www.nousfrance.fr/mentions-legales/",
+    "https://nousfrance.fr/contact",
+    "https://nousfrance.fr/contact/",
+    "https://xavierbertrand.fr/",
+    "https://xavierbertrand.fr/contact",
+    "https://xavierbertrand.fr/contact/",
+    "https://xavierbertrand.fr/contactez-nous",
+    "https://xavierbertrand.fr/nous-contacter",
+    "https://xavierbertrand.fr/presse",
+    "https://xavierbertrand.fr/presse/"
+   ],
+   "statut": "trouve",
+   "contact": {
+    "email": "contact@nousfrance.fr",
+    "role": "contact",
+    "preuve_url": "https://www.nousfrance.fr/politique-de-confidentialite/",
+    "releve_le": "2026-11-01"
+   },
+   "autres": [],
+   "note": "aucune adresse lue sur une page officielle du 2026-10-30",
+   "canal": {
+    "type": "formulaire",
+    "url": "https://www.nousfrance.fr/contact/"
+   },
+   "canal_secours": {
+    "postal": {
+     "adresse": "Xavier BERTRAND / Association Nous France, BP 83, 02102 Saint-Quentin",
+     "preuve_url": "https://www.nousfrance.fr/mentions-legales/"
+    },
+    "formulaire_url": "https://www.nousfrance.fr/contact/",
+    "reseaux": [
+     {
+      "reseau": "Facebook",
+      "url": "https://www.facebook.com/nousfrancefr",
+      "preuve_officiel_url": "https://www.nousfrance.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "X",
+      "url": "https://twitter.com/NousFrance_fr",
+      "preuve_officiel_url": "https://www.nousfrance.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "LinkedIn",
+      "url": "https://www.linkedin.com/company/nous-france/",
+      "preuve_officiel_url": "https://www.nousfrance.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "Telegram",
+      "url": "https://t.me/nousfrance",
+      "preuve_officiel_url": "https://www.nousfrance.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "Facebook",
+      "url": "http://facebook.com/xavierbertrand02",
+      "preuve_officiel_url": "https://www.nousfrance.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "Instagram",
+      "url": "https://www.instagram.com/xavier.bertrand/",
+      "preuve_officiel_url": "https://www.nousfrance.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "X",
+      "url": "http://twitter.com/xavierbertrand",
+      "preuve_officiel_url": "https://www.nousfrance.fr/",
+      "messagerie": "inconnu"
+     }
+    ]
+   },
+   "canal_recommande": "email contact@nousfrance.fr",
+   "note_20261101": "xavierbertrand.fr (épinglé) est un domaine À VENDRE (Dovendi) -> à retirer des domaines officiels. contact@nousfrance.fr figure dans la politique de confidentialité (exercice des droits)."
+  },
+  {
+   "slug": "nicolas-dupont-aignan",
+   "nom": "Nicolas Dupont-Aignan",
+   "parti": "Debout la France",
+   "pages_consultees": [
+    "https://www.debout-la-france.fr/",
+    "https://www.debout-la-france.fr/wp-content/uploads/the7-css/media.css?ver=7b42fcb858b8",
+    "https://www.debout-la-france.fr/nous-contacter/",
+    "https://www.debout-la-france.fr/mentions-legales-conditions-generales-dutilisation/",
+    "https://debout-la-france.fr/contact",
+    "https://debout-la-france.fr/contact/",
+    "https://debout-la-france.fr/nous-contacter",
+    "https://www.dupontaignan.fr/",
+    "https://www.dupontaignan.fr/",
+    "https://www.dupontaignan.fr/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17",
+    "https://www.dupontaignan.fr/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=7.1.2",
+    "https://www.dupontaignan.fr/contact"
+   ],
+   "statut": "introuvable",
+   "contact": null,
+   "autres": [],
+   "note": "aucune adresse lue sur une page officielle du 2026-10-30",
+   "canal": {
+    "type": "formulaire",
+    "url": "https://www.debout-la-france.fr/nous-contacter/"
+   },
+   "canal_secours": {
+    "postal": {
+     "adresse": "AFE NDA 2027, 2 place du Président Mithouard, 75007 Paris (tél. 01 84 16 02 26)",
+     "preuve_url": "https://www.dupontaignan.fr/mentions-legales-cgu/"
+    },
+    "formulaire_url": "https://www.dupontaignan.fr/contact/",
+    "reseaux": [
+     {
+      "reseau": "X",
+      "url": "https://twitter.com/dupontaignan",
+      "preuve_officiel_url": "https://www.debout-la-france.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "Telegram",
+      "url": "https://t.me/s/dupontaignan",
+      "preuve_officiel_url": "https://www.dupontaignan.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "Facebook",
+      "url": "https://facebook.com/90458392990",
+      "preuve_officiel_url": "https://www.dupontaignan.fr/",
+      "messagerie": "inconnu"
+     }
+    ]
+   },
+   "canal_recommande": "formulaire https://www.dupontaignan.fr/contact/ + courrier AFE NDA 2027 ; email afe2027@ en doublon",
+   "note_20261101": "afe2027@dupontaignan.fr n'est PAS affiché : il est écrit dans les données structurées (JSON-LD Yoast, nom de l'éditeur) du code source de dupontaignan.fr -> adresse réelle de l'association de financement, mais canal faible. Seules adresses affichées : rgpd@dupontaignan.fr et rgpd@debout-la-france.fr (réservées RGPD, déconseillées). Parti DLF : BP 80479, 75327 Paris Cedex 07, tél. 01 84 16 02 24.",
+   "contact_doublon": {
+    "email": "afe2027@dupontaignan.fr",
+    "role": "contact",
+    "preuve_url": "https://www.dupontaignan.fr/",
+    "releve_le": "2026-11-01",
+    "note": "présente seulement dans les données structurées de la page, jamais affichée"
+   }
+  },
+  {
+   "slug": "francois-asselineau",
+   "nom": "François Asselineau",
+   "parti": "Union Populaire Républicaine",
+   "pages_consultees": [
+    "https://upr.fr/",
+    "https://upr.fr/contact",
+    "https://upr.fr/thematique?category=medias",
+    "https://upr.fr/thematique?category=communiques-de-presse",
+    "https://upr.fr/relation-presse",
+    "https://upr.fr/mentions-legales",
+    "https://upr.fr/contact/",
+    "https://upr.fr/nous-contacter"
+   ],
+   "statut": "trouve",
+   "contact": {
+    "email": "presse@upr.fr",
+    "role": "presse",
+    "preuve_url": "https://upr.fr/relation-presse",
+    "extrait": "astro-cid-lvv6qeu5>Conseiller médiatique <a href=\"mailto:presse@upr.fr\" class=\"RelationPresseContactCard__mail\" data-astro-cid-lvv",
+    "releve_le": "2026-10-30"
+   },
+   "autres": [
+    {
+     "email": "attache.de.presse@upr.fr",
+     "role": "presse",
+     "preuve_url": "https://upr.fr/relation-presse",
+     "extrait": "ata-astro-cid-lvv6qeu5>Attaché de presse <a href=\"mailto:attache.de.presse@upr.fr\" class=\"RelationPresseContactCard__mail\" data-astro-cid-lvv",
+     "releve_le": "2026-10-30"
+    },
+    {
+     "email": "contact@upr.fr",
+     "role": "contact",
+     "preuve_url": "https://upr.fr/",
+     "extrait": "contact@upr.fr",
+     "releve_le": "2026-10-30"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "slug": "marine-le-pen",
+   "nom": "Marine Le Pen",
+   "parti": "Rassemblement National",
+   "pages_consultees": [
+    "https://rassemblementnational.fr/",
+    "https://rassemblementnational.fr/conferences-de-presse",
+    "https://rassemblementnational.fr/communiques/communique-de-presse-de-julien-sanchezdirecteur-de-campagne-de-marine-le-pen",
+    "https://rassemblementnational.fr/formulaire-contact",
+    "https://rassemblementnational.fr/mentions-legales"
+   ],
+   "statut": "trouve",
+   "contact": {
+    "email": "contact@rassemblementnational.fr",
+    "role": "contact",
+    "preuve_url": "https://rassemblementnational.fr/mentions-legales",
+    "extrait": "p> E-mail : contact@rassemblementnational.fr &nbsp;/ Télépho",
+    "releve_le": "2026-10-30"
+   },
+   "autres": [],
+   "note": ""
+  },
+  {
+   "slug": "bernard-cazeneuve",
+   "nom": "Bernard Cazeneuve",
+   "parti": "La Convention",
+   "pages_consultees": [
+    "https://bc2027.fr/",
+    "https://bc2027.fr/mentions-legales"
+   ],
+   "statut": "trouve",
+   "contact": {
+    "email": "presse@bc2027.fr",
+    "role": "presse",
+    "preuve_url": "https://bc2027.fr/",
+    "extrait": "presse@bc2027.fr",
+    "releve_le": "2026-10-30"
+   },
+   "autres": [
+    {
+     "email": "contact@bc2027.fr",
+     "role": "contact",
+     "preuve_url": "https://bc2027.fr/",
+     "extrait": "rance ensemble ! <a href=\"mailto:contact@bc2027.fr\" class=\"cta-btn inline-flex items-center justify-center gap",
+     "releve_le": "2026-10-30"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "slug": "anasse-kazib",
+   "nom": "Anasse Kazib",
+   "parti": "Révolution permanente",
+   "pages_consultees": [
+    "https://anasse2027.fr/",
+    "https://anasse2027.fr/nous-contacter",
+    "https://www.revolutionpermanente.fr/",
+    "https://www.revolutionpermanente.fr/Interdictions-de-manifester-les-organisations-doivent-FAIRE-FRONT-Elsa-Marcel-sur-Mediapart",
+    "https://www.revolutionpermanente.fr/Multimedia",
+    "https://www.revolutionpermanente.fr/Mentions-Legales",
+    "https://revolutionpermanente.fr/nous-contacter"
+   ],
+   "statut": "trouve",
+   "contact": {
+    "email": "contact@anasse2027.fr",
+    "role": "contact",
+    "preuve_url": "https://anasse2027.fr/cgu",
+    "releve_le": "2026-11-01"
+   },
+   "autres": [],
+   "note": "aucune adresse lue sur une page officielle du 2026-10-30",
+   "canal": {
+    "type": "formulaire",
+    "url": "https://anasse2027.fr/"
+   },
+   "canal_secours": {
+    "postal": null,
+    "formulaire_url": "https://anasse2027.fr/nous-contacter",
+    "reseaux": [
+     {
+      "reseau": "Instagram",
+      "url": "https://www.instagram.com/anassekazib/",
+      "preuve_officiel_url": "https://anasse2027.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "X",
+      "url": "https://x.com/AnasseKazib",
+      "preuve_officiel_url": "https://anasse2027.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "Facebook",
+      "url": "https://www.facebook.com/anasse.kazib/",
+      "preuve_officiel_url": "https://anasse2027.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "TikTok",
+      "url": "https://www.tiktok.com/@anasserp",
+      "preuve_officiel_url": "https://anasse2027.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "YouTube",
+      "url": "https://www.youtube.com/@anassekazib1258",
+      "preuve_officiel_url": "https://anasse2027.fr/",
+      "messagerie": "inconnu"
+     }
+    ]
+   },
+   "canal_recommande": "email contact@anasse2027.fr",
+   "note_20261101": "Adresse masquée Cloudflare dans les mentions légales (/cgu, 'comité de la campagne Anasse Kazib 2027'), décodée ; donnée pour l'exercice des droits mais c'est le contact général du domaine. Le formulaire /nous-contacter vise explicitement 'équipe de campagne ou presse' : bon doublon. revolutionpermanente.fr renvoie 403 au curl."
+  },
+  {
+   "slug": "jean-luc-melenchon",
+   "nom": "Jean-Luc Mélenchon",
+   "parti": "La France insoumise",
+   "pages_consultees": [
+    "https://melenchon2027.fr/",
+    "https://melenchon2027.fr/espace-presse/",
+    "https://melenchon2027.fr/mentions-legales/"
+   ],
+   "statut": "trouve",
+   "contact": {
+    "email": "presse@melenchon2027.fr",
+    "role": "presse",
+    "preuve_url": "https://melenchon2027.fr/espace-presse/",
+    "extrait": "ions pour la campagne de Jean-Luc Mélenchon. SERVICE PRESSE presse@melenchon2027.fr Contacter le service presse Demandes d&rsquo;interview, d&r",
+    "releve_le": "2026-10-30"
+   },
+   "autres": [
+    {
+     "email": "contact@melenchon2027.fr",
+     "role": "contact",
+     "preuve_url": "https://melenchon2027.fr/mentions-legales/",
+     "extrait": "e3eae3e8e5eee9e8b4b6b4b1a8e0f4\"> contact@melenchon2027.fr<>[email&#160;protected] Pa",
+     "releve_le": "2026-10-30"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "slug": "karim-bouamrane",
+   "nom": "Karim Bouamrane",
+   "parti": "Parti socialiste",
+   "pages_consultees": [
+    "https://www.karimbouamrane2027.org/",
+    "https://www.karimbouamrane2027.org/mentions-legales.html",
+    "https://karimbouamrane2027.org/espace-presse",
+    "https://parti-socialiste.fr/",
+    "https://parti-socialiste.fr/le-service-presse/",
+    "https://parti-socialiste.fr/communiques-de-presse/violences-dextreme-droite-prevenir-les-menaces-proteger-le-droit-de-manifester/",
+    "https://parti-socialiste.fr/category/communiques-de-presse/",
+    "https://parti-socialiste.fr/communiques-de-presse/reelection-de-lula-la-democratie-bresilienne-lemporte/",
+    "https://parti-socialiste.fr/communiques-de-presse/serbie-la-defaite-du-pouvoir-nationaliste-une-victoire-pour-la-democratie/",
+    "https://parti-socialiste.fr/communiques-de-presse/avec-la-disparition-de-jean-paul-huchon-la-gauche-perd-un-compagnon-de-longue-route/",
+    "https://parti-socialiste.fr/contact"
+   ],
+   "statut": "trouve",
+   "contact": {
+    "email": "parti-socialiste@parti-socialiste.fr",
+    "role": "autre",
+    "preuve_url": "https://parti-socialiste.fr/le-service-presse/",
+    "extrait": "parti-socialiste@parti-socialiste.fr",
+    "releve_le": "2026-10-30"
+   },
+   "autres": [],
+   "note": ""
+  },
+  {
+   "slug": "florian-philippot",
+   "nom": "Florian Philippot",
+   "parti": "Les Patriotes",
+   "pages_consultees": [
+    "https://les-patriotes.fr/",
+    "https://les-patriotes.fr/contact/",
+    "https://les-patriotes.fr/mentions-legales/",
+    "https://les-patriotes.fr/contact"
+   ],
+   "statut": "trouve",
+   "contact": {
+    "email": "contact@les-patriotes.fr",
+    "role": "contact",
+    "preuve_url": "https://les-patriotes.fr/contact/",
+    "extrait": "ding\" id=\"contact-les-patriotes-fr\"> contact@les-patriotes.fr <p class=\"wp-blo",
+    "releve_le": "2026-10-30"
+   },
+   "autres": [
+    {
+     "email": "informatique@les-patriotes.fr",
+     "role": "contact",
+     "preuve_url": "https://les-patriotes.fr/contact/",
+     "extrait": "conditions générales de vente, vous pouvez nous contacter à informatique@les-patriotes.fr. Adresse postale : <p c",
+     "releve_le": "2026-10-30"
+    },
+    {
+     "email": "referent55@les-patriotes.fr",
+     "role": "autre",
+     "preuve_url": "https://les-patriotes.fr/",
+     "extrait": "📧 E-mail : referent55@les-patriotes.fr 📞 Téléphone",
+     "releve_le": "2026-10-30"
+    },
+    {
+     "email": "referent86@les-patriotes.fr",
+     "role": "autre",
+     "preuve_url": "https://les-patriotes.fr/",
+     "extrait": "📧 E-mail : referent86@les-patriotes.fr 📞 Téléphone",
+     "releve_le": "2026-10-30"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "slug": "selma-labib",
+   "nom": "Selma Labib",
+   "parti": "NPA – Révolutionnaires",
+   "pages_consultees": [
+    "https://npa-revolutionnaires.org/",
+    "https://npa-revolutionnaires.org/contact",
+    "https://npa-revolutionnaires.org/rubriques/dans-les-medias",
+    "https://npa-revolutionnaires.org/rubriques/communique-de-presse",
+    "https://npa-revolutionnaires.org/mentions-legales",
+    "https://npa-revolutionnaires.org/contact/"
+   ],
+   "statut": "trouve",
+   "contact": {
+    "email": "presse@npa-revolutionnaires.org",
+    "role": "presse",
+    "preuve_url": "https://npa-revolutionnaires.org/contact",
+    "extrait": "presse@npa-revolutionnaires.org",
+    "releve_le": "2026-10-30"
+   },
+   "autres": [
+    {
+     "email": "contact@npa-revolutionnaires.org",
+     "role": "contact",
+     "preuve_url": "https://npa-revolutionnaires.org/contact",
+     "extrait": "contact@npa-revolutionnaires.org",
+     "releve_le": "2026-10-30"
+    },
+    {
+     "email": "souscription@npa-revolutionnaires.org",
+     "role": "autre",
+     "preuve_url": "https://npa-revolutionnaires.org/contact",
+     "extrait": "souscription@npa-revolutionnaires.org",
+     "releve_le": "2026-10-30"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "slug": "francis-lalanne",
+   "nom": "Francis Lalanne",
+   "parti": "France Libre",
+   "pages_consultees": [
+    "https://france-libre.fr/",
+    "https://france-libre.fr/contactez-nous/",
+    "https://france-libre.fr/mentions-legales/",
+    "https://france-libre.fr/contact",
+    "https://france-libre.fr/contact/",
+    "https://france-libre.fr/contactez-nous",
+    "https://france-libre.fr/nous-contacter",
+    "https://france-libre.fr/presse",
+    "https://france-libre.fr/presse/"
+   ],
+   "statut": "introuvable",
+   "contact": null,
+   "autres": [],
+   "note": "aucune adresse lue sur une page officielle du 2026-10-30",
+   "canal": {
+    "type": "formulaire",
+    "url": "https://france-libre.fr/contactez-nous/"
+   },
+   "canal_secours": {
+    "postal": null,
+    "formulaire_url": "https://france-libre.fr/contactez-nous/",
+    "reseaux": [
+     {
+      "reseau": "X",
+      "url": "https://twitter.com/FLFranceLibre",
+      "preuve_officiel_url": "https://france-libre.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "Facebook",
+      "url": "https://www.facebook.com/61557707414470",
+      "preuve_officiel_url": "https://france-libre.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "Instagram",
+      "url": "https://www.instagram.com/france_libre_2024",
+      "preuve_officiel_url": "https://france-libre.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "TikTok",
+      "url": "https://www.tiktok.com/@fl_france_libre_soutien",
+      "preuve_officiel_url": "https://france-libre.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "Telegram",
+      "url": "https://t.me/SOUTIEN_FL_FRANCE_LIBRE",
+      "preuve_officiel_url": "https://france-libre.fr/",
+      "messagerie": "inconnu"
+     }
+    ]
+   },
+   "canal_recommande": "formulaire https://france-libre.fr/contactez-nous/ (aussi 'Contact Presse')",
+   "note_20261101": "Mentions légales vides (ni éditeur ni adresse), aucun mail. lalanne2027.com (cité par la presse) = domaine parking 'may be for sale'. Les réseaux liés sont ceux du mouvement France Libre, pas des comptes personnels de F. Lalanne."
+  },
+  {
+   "slug": "sylvain-durif",
+   "nom": "Sylvain Durif",
+   "parti": "Elvita",
+   "pages_consultees": [],
+   "statut": "introuvable",
+   "contact": null,
+   "autres": [],
+   "note": "aucune adresse lue sur une page officielle du 2026-10-30",
+   "canal": {
+    "type": "aucun canal public"
+   },
+   "canal_secours": {
+    "postal": null,
+    "formulaire_url": null,
+    "reseaux": []
+   },
+   "canal_recommande": "aucun canal officiel vérifiable",
+   "note_20261101": "elvita.fr = page OVH 'site en construction', sylvaindurif.fr ne répond pas, sylvaindurif2027.fr = 'site supprimé', durif2027.fr = en construction. Il communique par Instagram/Facebook (presse), mais aucun domaine officiel n'y renvoie -> aucun compte retenu comme officiel. Ne pas écrire tant qu'un site ne publie pas de canal."
+  },
+  {
+   "slug": "gilles-platret",
+   "nom": "Gilles Platret",
+   "parti": "Divers droite",
+   "pages_consultees": [
+    "https://www.gillesplatret.fr/",
+    "https://gillesplatret.fr/contact",
+    "https://gillesplatret.fr/contact/"
+   ],
+   "statut": "introuvable",
+   "contact": null,
+   "autres": [],
+   "note": "aucune adresse lue sur une page officielle du 2026-10-30",
+   "canal": {
+    "type": "formulaire",
+    "url": "https://gillesplatret.fr/contact"
+   },
+   "canal_secours": {
+    "postal": null,
+    "formulaire_url": "https://www.gillesplatret.fr/contact",
+    "reseaux": []
+   },
+   "canal_recommande": "formulaire https://www.gillesplatret.fr/contact",
+   "note_20261101": "gillesplatret.fr = site d'historien (Wix, livres), aucune mention de la campagne 2027, aucun réseau ni mail, pas de mentions légales (404). Aucun site de campagne trouvé (platret2027.fr/.com, gillesplatret2027.fr inexistants). Seul autre canal officiel : la mairie de Chalon-sur-Saône (il est maire), inadapté à un courrier de campagne."
+  },
+  {
+   "slug": "marine-tondelier",
+   "nom": "Marine Tondelier",
+   "parti": "Les Écologistes",
+   "pages_consultees": [
+    "https://marinetondelier.fr/"
+   ],
+   "statut": "trouve",
+   "contact": {
+    "email": "contact@marinetondelier.fr",
+    "role": "contact",
+    "preuve_url": "https://marinetondelier.fr/",
+    "extrait": "contact@marinetondelier.fr",
+    "releve_le": "2026-10-30"
+   },
+   "autres": [],
+   "note": ""
+  },
+  {
+   "slug": "francois-ruffin",
+   "nom": "François Ruffin",
+   "parti": "Debout !",
+   "pages_consultees": [
+    "https://nouspresident.fr/",
+    "https://nouspresident.fr/mentions-legales/",
+    "https://nouspresident.fr/contact/",
+    "https://nouspresident.fr/contact"
+   ],
+   "statut": "trouve",
+   "contact": {
+    "email": "contact@debout.fr",
+    "role": "contact",
+    "preuve_url": "https://nouspresident.fr/mentions-legales/",
+    "extrait": "rue Rohaut, 80000 Amiens. 852 504 703 00020 François Ruffin contact@debout.fr Octopuce SARL, 25 rue Popincourt…\" /> <meta property=\"og:ur",
+    "releve_le": "2026-10-30"
+   },
+   "autres": [],
+   "note": ""
+  },
+  {
+   "slug": "raphael-glucksmann",
+   "nom": "Raphaël Glucksmann",
+   "parti": "Place publique",
+   "pages_consultees": [
+    "https://glucks2027.fr/",
+    "https://glucks2027.fr/mentions-legales"
+   ],
+   "statut": "trouve",
+   "contact": {
+    "email": "presse@glucks2027.fr",
+    "role": "presse",
+    "preuve_url": "https://glucks2027.fr/",
+    "extrait": "presse@glucks2027.fr",
+    "releve_le": "2026-10-30"
+   },
+   "autres": [
+    {
+     "email": "contact@glucks2027.fr",
+     "role": "contact",
+     "preuve_url": "https://glucks2027.fr/mentions-legales",
+     "extrait": "cksmann Contact contact@glucks2027.fr Contact pres",
+     "releve_le": "2026-10-30"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "slug": "mira-markovic",
+   "nom": "Mira Markovic",
+   "parti": "Parti animaliste",
+   "pages_consultees": [
+    "https://parti-animaliste.fr/",
+    "https://parti-animaliste.fr/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.2.3",
+    "https://parti-animaliste.fr/contact",
+    "https://parti-animaliste.fr/presse",
+    "https://parti-animaliste.fr/news/communique-de-presse/mira-markovic-representera-le-parti-animaliste-a-la-presidentielle",
+    "https://parti-animaliste.fr/news/communique-de-presse/esod-incendies-chasse-massacre",
+    "https://parti-animaliste.fr/news/communique-de-presse/lettre-ouverte-canicules-a-repetition-incendies-secheresses-la-chasse-doit-etre-suspendue",
+    "https://parti-animaliste.fr/contact/",
+    "https://parti-animaliste.fr/news/communique-de-presse/lettre-ouverte-au-premier-ministre-au-ministre-de-linterieur-a-la-ministre-de-lagriculture-et-de-la-souverainete-alimentaire-et-a-la-ministre-de-la-transition-ecologique"
+   ],
+   "statut": "trouve",
+   "contact": {
+    "email": "presse@parti-animaliste.fr",
+    "role": "presse",
+    "preuve_url": "https://parti-animaliste.fr/contact",
+    "extrait": "presse@parti-animaliste.fr",
+    "releve_le": "2026-10-30"
+   },
+   "autres": [
+    {
+     "email": "contact@parti-animaliste.fr",
+     "role": "contact",
+     "preuve_url": "https://parti-animaliste.fr/contact",
+     "extrait": "contact@parti-animaliste.fr",
+     "releve_le": "2026-10-30"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "slug": "manolo-mlekuz",
+   "nom": "Manolo Mlekuz",
+   "parti": "Trajectoire",
+   "pages_consultees": [
+    "https://trajectoire2027.fr/",
+    "https://trajectoire2027.fr/presse",
+    "https://trajectoire2027.fr/mentions-legales"
+   ],
+   "statut": "trouve",
+   "contact": {
+    "email": "trajectoire2027@gmail.com",
+    "role": "contact",
+    "preuve_url": "https://trajectoire2027.fr/mentions-legales",
+    "releve_le": "2026-11-01"
+   },
+   "autres": [],
+   "note": "aucune adresse lue sur une page officielle du 2026-10-30",
+   "canal": {
+    "type": "aucun canal public"
+   },
+   "canal_secours": {
+    "postal": null,
+    "formulaire_url": null,
+    "reseaux": [
+     {
+      "reseau": "Facebook",
+      "url": "https://www.facebook.com/people/Trajectoire/61589428632350/",
+      "preuve_officiel_url": "https://trajectoire2027.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "Instagram",
+      "url": "https://www.instagram.com/trajectoire.2027/",
+      "preuve_officiel_url": "https://trajectoire2027.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "TikTok",
+      "url": "https://www.tiktok.com/@trajectoire2027",
+      "preuve_officiel_url": "https://trajectoire2027.fr/",
+      "messagerie": "inconnu"
+     }
+    ]
+   },
+   "canal_recommande": "email trajectoire2027@gmail.com",
+   "note_20261101": "Adresse masquée par Cloudflare (data-cfemail) sur mentions légales, page presse ('Nous écrire') et accueil, décodée ; la page presse annonce une réponse sous 48 h. Gmail mais publiée par le site officiel. Aucune adresse postale publiée."
+  },
+  {
+   "slug": "fabien-roussel",
+   "nom": "Fabien Roussel",
+   "parti": "Parti communiste français",
+   "pages_consultees": [
+    "https://www.fabienroussel2027.fr/",
+    "https://www.fabienroussel2027.fr/contact",
+    "https://www.fabienroussel2027.fr/mentions_legales",
+    "https://fabienroussel2027.fr/contact",
+    "https://fabienroussel2027.fr/contact/"
+   ],
+   "statut": "trouve",
+   "contact": {
+    "email": "pcf@pcf.fr",
+    "role": "autre",
+    "preuve_url": "https://www.fabienroussel2027.fr/mentions_legales",
+    "extrait": "tection#bacad9dcfacad9dc94dcc8\"> pcf@pcf.fr<>[email&#160;protected] Dir",
+    "releve_le": "2026-10-30"
+   },
+   "autres": [],
+   "note": ""
+  },
+  {
+   "slug": "benoit-mathieu",
+   "nom": "Benoît Mathieu",
+   "parti": "Sans étiquette",
+   "pages_consultees": [
+    "https://benoitmathieu2027.fr/",
+    "https://mathieu.wiki/contact",
+    "https://mathieu.wiki/contact/",
+    "https://mathieu.wiki/presse",
+    "https://mathieu.wiki/presse/",
+    "https://mathieu.wiki/mentions-legales"
+   ],
+   "statut": "trouve",
+   "contact": {
+    "email": "contact@benoitmathieu2027.fr",
+    "role": "contact",
+    "preuve_url": "https://benoitmathieu2027.fr/mentions-legales",
+    "releve_le": "2026-11-01"
+   },
+   "autres": [],
+   "note": "aucune adresse lue sur une page officielle du 2026-10-30",
+   "canal": {
+    "type": "aucun canal public"
+   },
+   "canal_secours": {
+    "postal": null,
+    "formulaire_url": null,
+    "reseaux": []
+   },
+   "canal_recommande": "email contact@benoitmathieu2027.fr",
+   "note_20261101": "mathieu.wiki (épinglé) redirige vers benoitmathieu2027.fr ; adresse aussi sur https://benoitmathieu2027.fr/contact (mailto, 'Presse, citoyens, bénévoles'). L'annuaire le marque 'introuvable' à tort (cherché sans décodage/redirection ?). Aucun réseau lié sur la page d'accueil."
+  },
+  {
+   "slug": "olivier-becht",
+   "nom": "Olivier Becht",
+   "parti": "Sans étiquette (apparenté groupe EPR)",
+   "pages_consultees": [],
+   "statut": "trouve",
+   "contact": {
+    "email": "equipe@becht2027.fr",
+    "role": "contact",
+    "preuve_url": "https://becht2027.fr/mentions-legales/",
+    "releve_le": "2026-11-01"
+   },
+   "autres": [],
+   "note": "aucune adresse lue sur une page officielle du 2026-10-30",
+   "canal": {
+    "type": "aucun canal public"
+   },
+   "canal_secours": {
+    "postal": {
+     "adresse": "Projet France (association de campagne), 12 rue de Liège, 75009 Paris",
+     "preuve_url": "https://becht2027.fr/mentions-legales/"
+    },
+    "formulaire_url": null,
+    "reseaux": [
+     {
+      "reseau": "Facebook",
+      "url": "https://www.facebook.com/OlivierBecht68/",
+      "preuve_officiel_url": "https://becht2027.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "Instagram",
+      "url": "https://www.instagram.com/olivier.becht/",
+      "preuve_officiel_url": "https://becht2027.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "X",
+      "url": "https://x.com/becht_olivier",
+      "preuve_officiel_url": "https://becht2027.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "LinkedIn",
+      "url": "https://www.linkedin.com/in/olivier-becht-7b9b9a155/",
+      "preuve_officiel_url": "https://becht2027.fr/",
+      "messagerie": "inconnu"
+     },
+     {
+      "reseau": "YouTube",
+      "url": "https://www.youtube.com/@OlivierBecht68",
+      "preuve_officiel_url": "https://becht2027.fr/",
+      "messagerie": "inconnu"
+     }
+    ]
+   },
+   "canal_recommande": "email equipe@becht2027.fr",
+   "note_20261101": "Domaine épinglé olivierbecht.fr = page OVH en construction. Le vrai site de campagne est becht2027.fr ('Olivier BECHT Président 2027', éditeur Projet France, directeur de publication O. Becht) -> à ajouter à domaines_officiels.json. Secours institutionnel : olivier.becht@assemblee-nationale.fr sur https://www.assemblee-nationale.fr/dyn/deputes/PA642935 (député en cours, Haut-Rhin 5e)."
+  },
+  {
+   "slug": "eric-zemmour",
+   "nom": "Éric Zemmour",
+   "parti": "Reconquête",
+   "pages_consultees": [
+    "https://www.ericzemmour.fr/",
+    "https://www.parti-reconquete.fr:443/",
+    "https://parti-reconquete.fr/contact",
+    "https://parti-reconquete.fr/mentions-legales"
+   ],
+   "statut": "trouve",
+   "contact": {
+    "email": "contact@parti-reconquete.fr",
+    "role": "contact",
+    "preuve_url": "https://parti-reconquete.fr/mentions-legales",
+    "extrait": "venue Constant Coquelin 75007 Paris contact@parti-reconquete.fr Directeur de la pu",
+    "releve_le": "2026-10-30"
+   },
+   "autres": [],
+   "note": ""
+  },
+  {
+   "slug": "natacha-polony",
+   "nom": "Natacha Polony",
+   "parti": "Sans étiquette",
+   "pages_consultees": [
+    "https://natachapolony2027.fr/",
+    "https://natachapolony2027.fr/mentions-legales"
+   ],
+   "statut": "trouve",
+   "contact": {
+    "email": "presse@npolony.fr",
+    "role": "presse",
+    "preuve_url": "https://natachapolony2027.fr/",
+    "extrait": "pan> Presse : presse@npolony.fr Vos données : <a class=\"",
+    "releve_le": "2026-10-30"
+   },
+   "autres": [
+    {
+     "email": "contact@npolony.fr",
+     "role": "contact",
+     "preuve_url": "https://natachapolony2027.fr/",
+     "extrait": "pan>Une question ? contact@npolony.fr Presse : <a class=\"site",
+     "releve_le": "2026-10-30"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "slug": "antoine-mikolajczak",
+   "nom": "Antoine Mikolajczak",
+   "parti": "Équinoxe",
+   "pages_consultees": [
+    "https://parti-equinoxe.fr/",
+    "https://parti-equinoxe.fr/contact",
+    "https://parti-equinoxe.fr/contact/",
+    "https://parti-equinoxe.fr/presse",
+    "https://parti-equinoxe.fr/presse/",
+    "https://parti-equinoxe.fr/mentions-legales"
+   ],
+   "statut": "trouve",
+   "contact": {
+    "email": "contact@parti-equinoxe.fr",
+    "role": "contact",
+    "preuve_url": "https://parti-equinoxe.fr/contact",
+    "extrait": "block-paragraph\">Contactez-nous à l’adresse contact@parti-equinoxe.fr . Nous répondons généralement",
+    "releve_le": "2026-10-30"
+   },
+   "autres": [],
+   "note": ""
+  },
+  {
+   "slug": "gabriel-attal",
+   "nom": "Gabriel Attal",
+   "parti": "Renaissance",
+   "pages_consultees": [
+    "https://attalpresident.fr/",
+    "https://attalpresident.fr/mentions-legales"
+   ],
+   "statut": "trouve",
+   "contact": {
+    "email": "contact@attalpresident.fr",
+    "role": "contact",
+    "preuve_url": "https://attalpresident.fr/",
+    "releve_le": "2026-11-01"
+   },
+   "autres": [
+    "dpo@attalpresident.fr (mentions légales, RGPD)"
+   ],
+   "note": "ajouté 01/11 : absent de l'annuaire du 30/10"
+  },
+  {
+   "slug": "bruno-retailleau",
+   "nom": "Bruno Retailleau",
+   "parti": "Les Républicains",
+   "pages_consultees": [
+    "https://republicains.fr/mentions-legales/",
+    "https://republicains.fr/contact/"
+   ],
+   "statut": "introuvable",
+   "contact": null,
+   "autres": [
+    "dpo@republicains.fr, fichiers@republicains.fr (RGPD seulement, pas un contact de campagne)"
+   ],
+   "note": "ajouté 01/11 : absent de l'annuaire du 30/10 ; aucun mail de campagne lu",
+   "canal": {
+    "type": "formulaire",
+    "url": "https://republicains.fr/contact/"
+   }
+  }
+ ]
+}

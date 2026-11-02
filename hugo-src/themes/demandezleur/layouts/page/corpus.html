@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="page-formulaire page-corpus">
+  <section class="page-entete">
+    <p class="sur-titre">Corpus</p>
+    <h1 id="cp-titre">Le bilan de votre corpus</h1>
+    <p class="hero-texte" id="cp-intro">Cette page se lit avec le lien personnel reçu par courrier.</p>
+  </section>
+  <section id="cp-corps" hidden></section>
+  <section id="cp-envoi" class="cp-envoi" hidden></section>
+  <section id="cp-neutre" class="resultat" hidden>
+    <p>Cette page n'est pas disponible avec ce lien. Si vous pensez qu'il s'agit d'une erreur, répondez au courrier qui vous l'a transmis.</p>
+  </section>
+  <section class="garanties">
+    <div class="garantie"><span class="g-icon">🤖</span><span>Ce site est conçu, construit et entretenu par des IA ; un humain arbitre et signe.</span></div>
+  </section>
+</div>
+{{ end }}
+{{ define "scripts" }}<script src="/js/corpus-envoi.js?v={{ now.Unix }}"></script><script src="/js/corpus.js?v={{ now.Unix }}"></script>{{ end }}

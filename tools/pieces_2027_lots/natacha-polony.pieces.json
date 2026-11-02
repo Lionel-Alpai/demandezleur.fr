@@ -1,0 +1,53 @@
+{
+ "intitule": "Prises de parole de Natacha Polony (Nous sommes la France)",
+ "pieces": [
+  {
+   "url": "https://www.npolony.fr/videos",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/natacha-polony/np-videos-candidature-et-vision-2026-10.txt",
+   "theme": "vision-generale",
+   "titre": "Vidéos : déclaration de candidature et vision (juin-octobre 2026)"
+  },
+  {
+   "url": "https://www.npolony.fr/videos",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/natacha-polony/np-videos-europe-international-2026-10.txt",
+   "theme": "europe-international",
+   "titre": "Vidéos : Europe, paix, géopolitique (mai-octobre 2026)"
+  },
+  {
+   "url": "https://www.npolony.fr/videos",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/natacha-polony/np-videos-economie-production-2026-09.txt",
+   "theme": "economie-travail",
+   "titre": "Vidéos : production, économie, monnaie, carburant (mai-septembre 2026)"
+  },
+  {
+   "url": "https://www.npolony.fr/videos",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/natacha-polony/np-videos-ecole-jeunesse-2026-10.txt",
+   "theme": "education",
+   "titre": "Vidéos : école et jeunesse (septembre-octobre 2026)"
+  },
+  {
+   "url": "https://www.npolony.fr/videos",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/natacha-polony/np-videos-securite-protection-2026-10.txt",
+   "theme": "securite-protection",
+   "titre": "Vidéos : islamisme, protection de l'enfance, incendies (juin-octobre 2026)"
+  },
+  {
+   "url": "https://www.npolony.fr/videos",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/natacha-polony/np-videos-agriculture-2026-10.txt",
+   "theme": "agriculture",
+   "titre": "Vidéos : agriculture et élevage (mai-octobre 2026)"
+  },
+  {
+   "url": "https://www.npolony.fr/videos",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/natacha-polony/np-videos-immigration-ceuta-2026-08.txt",
+   "theme": "immigration",
+   "titre": "Vidéo : Ceuta et Melilla (août 2026)"
+  },
+  {
+   "url": "https://www.npolony.fr/videos",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/natacha-polony/np-videos-institutions-2026-07.txt",
+   "theme": "institutions",
+   "titre": "Vidéos : Corse et Constitution, candidature de Marine Le Pen (juin-juillet 2026)"
+  }
+ ]
+}

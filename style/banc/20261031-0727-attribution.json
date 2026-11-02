@@ -1,0 +1,84 @@
+{
+ "mesures": {
+  "orateur": "claude-sonnet-5-5",
+  "juge": "claude-haiku-5-5",
+  "n_avec": 2,
+  "n_sans": 2,
+  "attribution_avec_pct": 50.0,
+  "attribution_sans_pct": 50.0,
+  "par_pilote": {
+   "marine-le-pen": {
+    "avec": 100.0,
+    "sans": 100.0
+   },
+   "jean-luc-melenchon": {
+    "avec": 0.0,
+    "sans": 0.0
+   }
+  },
+  "copies": 0,
+  "caricature_moyenne": 1.0,
+  "caricature_a_3": 0,
+  "tics_hors_plafond": 0,
+  "vert": false
+ },
+ "tics_hors_plafond": [],
+ "repliques": [
+  {
+   "sujet": "l'immigration",
+   "tour": 1,
+   "orateur": "marine-le-pen",
+   "avec_fiche": false,
+   "texte": "Monsieur Mélenchon, vous écrivez dans votre programme qu'il faut « régulariser les travailleurs, étudiants, parents d'enfants scolarisés » et faire de la carte de dix ans le titre de séjour de référence : c'est la régularisation de masse, et c'est exactement ce que les Français refusent. Moi, je leur propose un référendum pour arrêter l'immigration incontrôlée, mettre fin au regroupement familial et réserver les aides sociales aux Français. Chez vous, on ouvre les portes en grand ; chez nous, c'est le peuple qui décide qui entre chez lui.",
+   "masque": "Monsieur [X], vous écrivez dans votre programme qu'il faut « régulariser les travailleurs, étudiants, parents d'enfants scolarisés » et faire de la carte de dix ans le titre de séjour de référence : c'est la régularisation de masse, et c'est exactement ce que les Français refusent. Moi, je leur propose un référendum pour arrêter l'immigration incontrôlée, mettre fin au regroupement familial et réserver les aides sociales aux Français. Chez vous, on ouvre les portes en grand ; chez nous, c'est le peuple qui décide qui entre chez lui.",
+   "attribue": "marine-le-pen",
+   "confiance": 0.8,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Registre de débat direct et vocabulaire politique plausibles (« le peuple qui décide », « chez nous »), avec une ou deux formules un peu appuyées mais sans accumulation de tics ni ton de pastiche.",
+   "copie": []
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 1,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": false,
+   "texte": "Marine Le Pen, vous écrivez dans votre programme qu'un référendum doit « graver dans le marbre » la nationalité et la « priorité nationale » : nous, on grave dans la loi la carte de séjour de dix ans et la régularisation des travailleurs et des parents d'enfants scolarisés, parce que ceux qui font tourner nos hôpitaux, nos chantiers et nos cuisines méritent des droits, pas une file d'attente.",
+   "masque": "[X] [X], vous écrivez dans votre programme qu'un référendum doit « graver dans le marbre » la nationalité et la « priorité nationale » : nous, on grave dans la loi la carte de séjour de dix ans et la régularisation des travailleurs et des parents d'enfants scolarisés, parce que ceux qui font tourner nos hôpitaux, nos chantiers et nos cuisines méritent des droits, pas une file d'attente.",
+   "attribue": "francois-ruffin",
+   "confiance": 0.35,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Le propos reprend des thèmes et une structure de phrase typiques de Mélenchon (« nous, on », énumération sociale, formule « méritent des droits, pas une file d'attente ») sans tics appuyés ni outrance ; le ton reste plausible pour un débat politique.",
+   "copie": []
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 1,
+   "orateur": "marine-le-pen",
+   "avec_fiche": true,
+   "texte": "Monsieur Mélenchon, votre programme promet la carte de séjour de dix ans comme titre de référence et la régularisation des travailleurs, des étudiants, des parents d'enfants scolarisés : soyons très clairs, ce n'est pas une politique migratoire, c'est la fin de toute politique migratoire. Moi, je veux arrêter l'immigration incontrôlée par référendum, mettre fin au regroupement familial, réserver les aides sociales aux Français et traiter l'asile uniquement à l'étranger. Alors dites aux Français, vous qui voulez régulariser sans compter, qui paiera le logement, l'école et l'hôpital, et dans quel pays les choisira-t-on encore le droit de décider ?",
+   "masque": "Monsieur [X], votre programme promet la carte de séjour de dix ans comme titre de référence et la régularisation des travailleurs, des étudiants, des parents d'enfants scolarisés : soyons très clairs, ce n'est pas une politique migratoire, c'est la fin de toute politique migratoire. Moi, je veux arrêter l'immigration incontrôlée par référendum, mettre fin au regroupement familial, réserver les aides sociales aux Français et traiter l'asile uniquement à l'étranger. Alors dites aux Français, vous qui voulez régulariser sans compter, qui paiera le logement, l'école et l'hôpital, et dans quel pays les choisira-t-on encore le droit de décider ?",
+   "attribue": "marine-le-pen",
+   "confiance": 0.8,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Ton de débat cohérent avec les positions publiques de Marine Le Pen (référendum, fin du regroupement familial, préférence nationale, asile à l'étranger) ; quelques formules rhétoriques marquées (« soyons très clairs », « dans quel pays les choisira-t-on encore ») mais aucune outrance ni tic accumulé.",
+   "copie": []
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 1,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": true,
+   "texte": "Madame Le Pen, vous qui voulez « graver dans le marbre » la priorité nationale, nous répondons que l'émigration forcée est une double souffrance, et que la seule vraie politique migratoire, c'est d'arrêter les guerres et les accords commerciaux qui détruisent les économies, pour que chacun puisse enfin vivre chez soi.",
+   "masque": "Madame [X], vous qui voulez « graver dans le marbre » la priorité nationale, nous répondons que l'émigration forcée est une double souffrance, et que la seule vraie politique migratoire, c'est d'arrêter les guerres et les accords commerciaux qui détruisent les économies, pour que chacun puisse enfin vivre chez soi.",
+   "attribue": "francois-ruffin",
+   "confiance": 0.55,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Le registre oratoire (vocatif « Madame », formules de nous/vous, idée de souffrance et de peuples qui doivent pouvoir vivre chez eux) évoque bien la voix de Mélenchon, mais sans tics marqués ni références signature (« la France insoumise », « révolution citoyenne », « l'Histoire est en marche »), et le propos reste plausible en débat réel.",
+   "copie": []
+  }
+ ]
+}

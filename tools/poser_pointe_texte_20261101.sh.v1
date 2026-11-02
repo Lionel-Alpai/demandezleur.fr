@@ -1,0 +1,28 @@
+#!/bin/bash
+# Pose prod 01/11/2026 : l'heure de pointe ne se justifie plus par « l'IA coûte le double » (fin de DeepSeek, passage au crédit API Claude).
+# Limite et horaires INCHANGÉS ; seul le texte change (bandeau dl.js + MESSAGE_POINTE de api.py).
+set -e
+D=/home/lionel/web/demandezleur.fr
+scp -q $D/hugo-src/themes/demandezleur/static/js/dl.js cabahargadon:/tmp/dl.js.neuf
+ssh cabahargadon bash -s <<'DIST'
+set -e
+D=/home/lionel/web/demandezleur.fr
+cp -p $D/public_html/js/dl.js $D/public_html/js/dl.js.bak-20261101
+install -m 644 /tmp/dl.js.neuf $D/public_html/js/dl.js && rm /tmp/dl.js.neuf
+cp -p $D/backend/api.py $D/backend/api.py.bak-20261101-pointe
+python3 - <<'PY'
+p='/home/lionel/web/demandezleur.fr/backend/api.py'; s=open(p).read()
+old=("MESSAGE_POINTE = (\"Ce site est gratuit et financé bénévolement. En heure de pointe (8h-12h et 3h-6h, heure de Paris), l'IA que nous utilisons coûte le double : \"\n"
+     "                  \"l'Arène est limitée à un débat par personne jusqu'à la fin du pic.")
+new=("MESSAGE_POINTE = (\"Ce site est gratuit et financé bénévolement, avec un budget d'IA fixé à l'avance. En heure de pointe (8h-12h et 3h-6h, heure de Paris), pour le partager entre tous, \"\n"
+     "                  \"l'Arène est limitée à un débat par personne jusqu'à la fin du pic.")
+assert s.count(old)==1, "texte prod inattendu : rien modifié"
+open(p,'w').write(s.replace(old,new))
+PY
+cd $D/backend && ./venv/bin/python -m py_compile api.py
+sudo systemctl restart demandezleur-backend.service
+sleep 3; systemctl is-active demandezleur-backend.service
+grep -c "coûte le double" api.py $D/public_html/js/dl.js || true
+DIST
+curl -s "https://demandezleur.fr/js/dl.js?x=$RANDOM" | grep -c "budget d’IA est fixé" | sed 's/^/bandeau en ligne: /'
+curl -s -o /dev/null -w "site: %{http_code}\n" https://demandezleur.fr/

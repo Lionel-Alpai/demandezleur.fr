@@ -1,0 +1,162 @@
+#!/usr/bin/env python3
+"""BANC D'ATTRIBUTION À L'AVEUGLE (brique dl-style-validation-attribution) — hors prod.
+
+Débats arène Le Pen–Mélenchon sur 5 sujets, AVEC fiche de style et SANS (référence = ton_<famille>
+actuel). Noms et partis masqués, un juge (DL_MODELE_JUGE) attribue chaque réplique parmi 4 candidats
+(les 2 pilotes + 1 leurre de même famille chacun). Juge caricature (0-3), plafond des tics par débat,
+garde anti-copie (aucune séquence de 9 mots d'une citation de la fiche dans une réplique).
+
+Juge d'effet : attribution AVEC >= 75 % ET >= SANS + 25 points ; 0 copie ; caricature moyenne < 1
+et aucune réplique à 3 ; 0 tic au-delà de son plafond.
+
+  cd backend && env DL_BASE_URL=https://api.anthropic.com/v1 DL_CLE_VAR=ANTHROPIC_API_KEY \
+     DL_MODELE=claude-sonnet-5-5 DL_MODELE_JUGE=claude-haiku-5-5 \
+     /home/lionel/AI/demandezleur/venv/bin/python ../style/outils/banc_attribution.py [--sujets 5] [--tours 2]
+"""
+import argparse, asyncio, json, re, sys
+from datetime import datetime
+from pathlib import Path
+
+STYLE = Path(__file__).resolve().parent.parent
+BACKEND = STYLE.parent / "backend"
+sys.path.insert(0, str(BACKEND)); sys.path.insert(0, str(Path(__file__).resolve().parent))
+import llm, debat  # noqa: E402
+from debat import construire_prompt_debat, charger_candidat, MAX_TOKENS_ARENE, TEMPERATURE_ARENE  # noqa: E402
+import fiche_prompt  # noqa: E402
+
+PILOTES = ["marine-le-pen", "jean-luc-melenchon"]
+LEURRES = ["eric-zemmour", "francois-ruffin"]          # même famille que chaque pilote
+SUJETS = ["l'immigration", "les retraites", "la sécurité du quotidien", "le pouvoir d'achat", "l'Union européenne"]
+MASQUE = re.compile(r"\b(Marine|Le Pen|Mélenchon|Jean-Luc|Zemmour|Éric|Ruffin|François|Rassemblement national|"
+                    r"France insoumise|LFI|RN|insoumis\w*|Reconquête|lepéniste\w*|mélenchoniste\w*)\b", re.I)
+SEUIL_AVEC, ECART_MIN, NGRAMME_COPIE = 75.0, 25.0, 9
+
+JUGE_ATTRIB = """Voici une réplique prononcée dans un débat politique français. Les noms propres et les partis sont masqués par [X].
+Qui parle, parmi ces quatre personnalités : {choix} ?
+Les idées ne suffisent pas toujours à trancher : écoute surtout la MANIÈRE de parler (rythme, tournures, façon d'attaquer et d'encaisser), telle que tu la connais de leurs interventions publiques.
+RÉPLIQUE :
+« {texte} »
+Réponds UNIQUEMENT par un JSON : {{"orateur": "<un id parmi {ids}>", "confiance": <0 à 1>}}"""
+
+JUGE_CARICATURE = """Tu évalues une réplique de débat politique écrite pour imiter la voix de {nom}.
+Note de 0 à 3 l'effet « imitation de chansonnier » : 0 = parole naturelle et crédible ; 1 = un ou deux traits marqués mais plausibles ; 2 = tics accumulés, ça sent l'imitation ; 3 = pastiche grossier, caricature.
+RÉPLIQUE :
+« {texte} »
+Réponds UNIQUEMENT par un JSON : {{"caricature": <0-3>, "raison": "<courte>"}}"""
+
+
+def mots(t):
+    return re.findall(r"[\wÀ-ÿ'-]+", t.lower().replace("’", "'"))
+
+
+def ngrammes(t, n):
+    m = mots(t)
+    return {tuple(m[i:i + n]) for i in range(len(m) - n + 1)}
+
+
+def json_tolerant(txt):
+    m = re.search(r"\{.*\}", txt or "", re.S)
+    try:
+        return json.loads(m.group(0)) if m else {}
+    except ValueError:
+        return {}
+
+
+async def debat_un_sujet(sujet, avec_fiche, tours, fiches, ordre):
+    cands = [charger_candidat(i) for i in ordre]
+    ton_origine = debat.ton_candidat
+    if avec_fiche:
+        debat.ton_candidat = lambda c: fiche_prompt.rendre(fiches[c["id"]], c["nom"]) if c["id"] in fiches else ton_origine(c)
+    try:
+        cache, historique, lignes = {}, [], []
+        for tour in range(1, tours + 1):
+            type_tour = "ouverture" if tour == 1 else "tour_suivant"
+            interventions = []
+            for pos, c in enumerate(cands):
+                advs = [x for x in cands if x["id"] != c["id"]]
+                prompt, _ = construire_prompt_debat(candidat=c, tour=tour, type_tour=type_tour, sujet=sujet, historique=historique,
+                                                    position_dans_tour=pos, cache_rag=cache, mode="arene", adversaires=advs)
+                msgs = [{"role": "system", "content": prompt}, {"role": "user", "content": "Prends la parole maintenant."}]
+                morceaux = []
+                async for d in llm.completer(msgs, cle_demo=("banc-style", c["id"], sujet, tour, avec_fiche),
+                                             max_tokens=MAX_TOKENS_ARENE, temperature=TEMPERATURE_ARENE):
+                    morceaux.append(d)
+                texte = "".join(morceaux).strip()
+                lignes.append({"sujet": sujet, "tour": tour, "orateur": c["id"], "avec_fiche": avec_fiche, "texte": texte})
+                interventions.append({"candidat_id": c["id"], "candidat_nom": c["nom"], "texte": texte})
+                print(f"  {'AVEC' if avec_fiche else 'SANS'} {sujet[:24]:24} T{tour} {c['id']:20} {len(texte.split())} mots", flush=True)
+            historique.append({"tour": tour, "type": type_tour, "interventions": interventions})
+        return lignes
+    finally:
+        debat.ton_candidat = ton_origine
+
+
+async def juger(ligne, noms, fiches):
+    ids = PILOTES + LEURRES
+    masque = MASQUE.sub("[X]", ligne["texte"])
+    choix = ", ".join(f"{noms[i]} (id {i})" for i in ids)
+    a = json_tolerant(await llm.completer_texte(
+        [{"role": "user", "content": JUGE_ATTRIB.format(choix=choix, ids=", ".join(ids), texte=masque) + llm.CONSIGNE_JSON}],
+        cle_demo=("banc-style-attrib", ligne["orateur"], llm.normaliser(masque)[:80]), max_tokens=120, temperature=0))
+    k = json_tolerant(await llm.completer_texte(
+        [{"role": "user", "content": JUGE_CARICATURE.format(nom=noms[ligne["orateur"]], texte=ligne["texte"]) + llm.CONSIGNE_JSON}],
+        cle_demo=("banc-style-carica", ligne["orateur"], llm.normaliser(ligne["texte"])[:80]), max_tokens=160, temperature=0))
+    f = fiches[ligne["orateur"]]
+    citations = [p for t in f["traits"] for p in t["preuves"]] + f["exemples"]
+    copie = [c for c in citations if ngrammes(c, NGRAMME_COPIE) & ngrammes(ligne["texte"], NGRAMME_COPIE)]
+    ligne.update(masque=masque, attribue=a.get("orateur"), confiance=a.get("confiance"),
+                 juste=a.get("orateur") == ligne["orateur"], caricature=k.get("caricature"),
+                 caricature_raison=k.get("raison"), copie=copie)
+    return ligne
+
+
+def tics_hors_plafond(lignes, fiches):
+    viol = []
+    for (sujet, avec, orateur) in {(l["sujet"], l["avec_fiche"], l["orateur"]) for l in lignes}:
+        texte = " ".join(l["texte"].lower() for l in lignes if (l["sujet"], l["avec_fiche"], l["orateur"]) == (sujet, avec, orateur))
+        for t in fiches[orateur]["tics"]:
+            n = texte.count(t["forme"].lower())
+            if n > t["plafond_par_debat"]:
+                viol.append({"sujet": sujet, "avec_fiche": avec, "orateur": orateur, "tic": t["forme"], "n": n})
+    return viol
+
+
+async def main():
+    ap = argparse.ArgumentParser(); ap.add_argument("--sujets", type=int, default=5); ap.add_argument("--tours", type=int, default=2)
+    a = ap.parse_args()
+    fiches = {i: fiche_prompt.charger_fiche(i) for i in PILOTES}
+    manque = [i for i, f in fiches.items() if not f]
+    if manque:
+        sys.exit(f"fiche compilée absente : {manque} — lancer outils/verif_fiche.py")
+    noms = {i: charger_candidat(i)["nom"] for i in PILOTES + LEURRES}
+    print(f"orateur={llm.MODELE} juge={llm.MODELE_JUGE}", flush=True)
+    lignes = []
+    for k, sujet in enumerate(SUJETS[:a.sujets]):
+        ordre = PILOTES if k % 2 == 0 else PILOTES[::-1]
+        for avec in (False, True):
+            lignes += await debat_un_sujet(sujet, avec, a.tours, fiches, ordre)
+    lignes = list(await asyncio.gather(*[juger(l, noms, fiches) for l in lignes]))
+
+    def taux(sel):
+        return round(100 * sum(l["juste"] for l in sel) / len(sel), 1) if sel else 0.0
+    avec = [l for l in lignes if l["avec_fiche"]]; sans = [l for l in lignes if not l["avec_fiche"]]
+    cari = [l["caricature"] for l in avec if isinstance(l["caricature"], (int, float))]
+    viol = [v for v in tics_hors_plafond(lignes, fiches) if v["avec_fiche"]]
+    m = {"orateur": llm.MODELE, "juge": llm.MODELE_JUGE, "n_avec": len(avec), "n_sans": len(sans),
+         "attribution_avec_pct": taux(avec), "attribution_sans_pct": taux(sans),
+         "par_pilote": {p: {"avec": taux([l for l in avec if l["orateur"] == p]), "sans": taux([l for l in sans if l["orateur"] == p])} for p in PILOTES},
+         "copies": sum(bool(l["copie"]) for l in avec),
+         "caricature_moyenne": round(sum(cari) / len(cari), 2) if cari else None,
+         "caricature_a_3": sum(c >= 3 for c in cari), "tics_hors_plafond": len(viol)}
+    m["vert"] = (m["attribution_avec_pct"] >= SEUIL_AVEC and m["attribution_avec_pct"] >= m["attribution_sans_pct"] + ECART_MIN
+                 and m["copies"] == 0 and m["caricature_moyenne"] is not None and m["caricature_moyenne"] < 1
+                 and m["caricature_a_3"] == 0 and m["tics_hors_plafond"] == 0)
+    ts = datetime.now().strftime("%Y%m%d-%H%M")
+    out = STYLE / "banc" / f"{ts}-attribution.json"
+    out.write_text(json.dumps({"mesures": m, "tics_hors_plafond": viol, "repliques": lignes}, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(json.dumps(m, ensure_ascii=False, indent=1)); print(f"rapport : {out}")
+    print("VERDICT", "VERT" if m["vert"] else "ROUGE")
+
+
+if __name__ == "__main__":
+    asyncio.run(main())

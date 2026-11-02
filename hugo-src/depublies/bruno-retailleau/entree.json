@@ -1,0 +1,28 @@
+{
+  "id": "bruno-retailleau",
+  "slug": "bruno-retailleau",
+  "nom": "Bruno Retailleau",
+  "initiales": "BR",
+  "parti": "Les Républicains",
+  "parti_court": "LR",
+  "famille": "droite",
+  "couleur_fond": "#1a2744",
+  "date_declaration": "Février 2026",
+  "photo": "/img/portraits/bruno-retailleau.webp",
+  "photo_credit": "Wikimedia Commons — CC BY-SA 4.0 (portrait ministériel 2024)",
+  "note": null,
+  "sources": [
+    "Programme Bruno Retailleau — Les Républicains 2027 (déclarations, pacte législatif, interviews)"
+  ],
+  "photo_type": "portrait",
+  "resume": "Son programme prône une politique de civilisation contre le multiculturalisme et le wokisme, avec une révolution pénale et un renforcement de l'ordre. Il propose de réduire drastiquement l'immigration par référendum, de restreindre le droit du sol et de durcir les conditions d'accès à la nationalité. En économie, il veut supprimer les 35 heures, plafonner les aides sociales et introduire une part de capitalisation dans les retraites, tout en renforçant la souveraineté nationale face à l'Europe.",
+  "questions_suggerees": [
+    "Comment concrètement réduire l'immigration sans nuire à l'économie ?",
+    "Quelles mesures pour garantir l'équité entre les citoyens et les étrangers ?",
+    "Comment financer la transition vers un système de retraite par capitalisation ?",
+    "Quel impact de la primauté du droit national sur les engagements européens ?"
+  ],
+  "resume_statut": "valide",
+  "photo_source": "/img/candidats/bruno-retailleau.webp",
+  "portrait": true
+}

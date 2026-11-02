@@ -1,0 +1,102 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{/* [dl-seo 13/10/2026] titre, description, image de partage, robots, graphe schema.org.
+       .Section est VIDE pour une feuille a la racine (content/a-propos/index.md) : on lit le dossier du fichier. */}}
+  {{ $base := site.BaseURL }}
+  {{ $leaf := .Section }}{{ with .File }}{{ $leaf = path.Base .Dir }}{{ end }}
+  {{ $cands := site.Data.candidats }}
+  {{ $c := dict }}
+  {{ if and (eq .Section "candidats") .IsPage .Params.candidat_id }}{{ with where $cands "id" .Params.candidat_id }}{{ $c = index . 0 }}{{ end }}{{ end }}
+  {{ $title := cond .IsHome site.Title (printf "%s · demandezleur.fr" .Title) }}
+  {{ $desc := .Description | default site.Params.description }}
+  {{ if $c }}
+    {{ $parti := $c.parti | default "" }}
+    {{ if $c.sans_source_officielle }}
+      {{ $desc = printf "Interrogez les déclarations publiques de %s%s, candidat déclaré à la présidentielle 2027 sans programme consultable : réponses générées par IA à partir de sources tierces listées, sources citées." $c.nom (cond (ne $parti "") (printf " (%s)" $parti) "") }}
+    {{ else }}
+      {{ $desc = printf "Interrogez le programme officiel de %s%s, candidat déclaré à la présidentielle 2027 : réponses générées par IA à partir de ses seuls documents officiels, sources citées." $c.nom (cond (ne $parti "") (printf " (%s)" $parti) "") }}
+    {{ end }}
+  {{ else if and (eq .Section "candidats") .IsSection }}
+    {{ $desc = printf "Les %d candidats déclarés à la présidentielle 2027 : interrogez le programme officiel de chacun. Réponses sourcées, générées par IA, prompts publics, code ouvert." (len $cands) }}
+  {{ end }}
+  {{ $imgRel := site.Params.ogImage | default "/img/og.png" }}
+  {{ $img := $imgRel | absURL }}
+  {{ $imgW := 0 }}{{ $imgH := 0 }}
+  {{ $imgFile := printf "static%s" $imgRel }}
+  {{ if fileExists $imgFile }}{{ with imageConfig $imgFile }}{{ $imgW = .Width }}{{ $imgH = .Height }}{{ end }}{{ end }}
+  <title>{{ $title }}</title>
+  <meta name="description" content="{{ $desc }}">
+  <meta name="author" content="Lionel Denis">
+  {{ if .Params.noindex }}<meta name="robots" content="noindex, follow">{{ else }}<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">{{ end }}
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="demandezleur.fr">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+  <meta property="og:description" content="{{ $desc }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:image" content="{{ $img }}">
+  {{ if gt $imgW 0 }}<meta property="og:image:width" content="{{ $imgW }}">
+  <meta property="og:image:height" content="{{ $imgH }}">
+  {{ end }}<meta property="og:image:alt" content="demandezleur.fr — Interrogez leurs programmes">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+  <meta name="twitter:description" content="{{ $desc }}">
+  <meta name="twitter:image" content="{{ $img }}">
+  <meta name="dl-api" content="{{ site.Params.apiBase | default "/api" }}">
+  <meta name="dl-max-tours" content="{{ site.Params.maxDebatTours | default 5 }}">
+  <script>(function(){var m=function(n){var e=document.querySelector('meta[name="'+n+'"]');return e?e.content:''};var a=m('dl-api')||'/api';window.DL_API=(a==='auto')?(location.protocol+'//'+location.hostname+':8001/api'):a;window.DL_MAX_TOURS=parseInt(m('dl-max-tours'),10)||5;})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/main.css?v={{ now.Unix }}">
+  <style>{{ range $k, $f := site.Data.familles }}.famille-{{ $k }}{--pastille:{{ $f.couleur | safeCSS }}}{{ end }}</style>
+  {{ range .Params.css }}<link rel="stylesheet" href="/css/{{ . }}.css?v={{ now.Unix }}">{{ end }}
+  {{ with site.Params.umami }}{{ if and .url .siteId }}<script defer src="{{ .url }}" data-website-id="{{ .siteId }}"></script>{{ end }}{{ end }}
+  {{/* ── Donnees structurees schema.org (graphe) — [dl-seo 13/10/2026] ────────────
+       Editeur = Lionel Denis, personne physique (tel qu'en /mentions-legales/) ; site ;
+       page + fil d'Ariane ; ProfilePage + Person sur chaque fiche candidat (nom, parti,
+       portrait, tels qu'en data/candidats.json, valides par l'editeur) ; ItemList des
+       candidats sur /candidats/. Aucune date, aucun chiffre qui ne soit deja dans la page. */}}
+  {{ $siteId := printf "%s#site" $base }}
+  {{ $editeurId := printf "%s#editeur" $base }}
+  {{ $editeur := dict "@type" "Person" "@id" $editeurId "name" "Lionel Denis" "url" "https://alpai.eu/a-propos/" "sameAs" (slice "https://alpai.eu/" "https://cassandria.space/auteur/lionel-denis/") }}
+  {{ $website := dict "@type" "WebSite" "@id" $siteId "url" $base "name" "demandezleur.fr" "alternateName" site.Title "description" site.Params.description "inLanguage" "fr-FR" "publisher" (dict "@id" $editeurId) }}
+  {{ $pageType := "WebPage" }}
+  {{ if $c }}{{ $pageType = "ProfilePage" }}{{ else if eq $leaf "a-propos" }}{{ $pageType = "AboutPage" }}{{ else if or (eq $leaf "feedback") (eq $leaf "suggerer") }}{{ $pageType = "ContactPage" }}{{ else if and .IsSection (eq .Section "candidats") }}{{ $pageType = "CollectionPage" }}{{ end }}
+  {{ $webpage := dict "@type" $pageType "@id" .Permalink "url" .Permalink "name" (cond .IsHome site.Title .Title) "description" $desc "inLanguage" "fr-FR" "isPartOf" (dict "@id" $siteId) "primaryImageOfPage" (dict "@type" "ImageObject" "url" $img) "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00") }}
+  {{ $graph := slice $editeur $website }}
+  {{ if not .IsHome }}
+    {{ $items := slice (dict "@type" "ListItem" "position" 1 "name" "Accueil" "item" $base) }}
+    {{ $pos := 2 }}
+    {{ if and $c (ne .Section "") }}
+      {{ with site.GetPage "/candidats" }}{{ $items = $items | append (dict "@type" "ListItem" "position" $pos "name" .Title "item" .Permalink) }}{{ $pos = add $pos 1 }}{{ end }}
+    {{ end }}
+    {{ $items = $items | append (dict "@type" "ListItem" "position" $pos "name" .Title "item" .Permalink) }}
+    {{ $crumbs := dict "@type" "BreadcrumbList" "@id" (printf "%s#fil" .Permalink) "itemListElement" $items }}
+    {{ $webpage = merge $webpage (dict "breadcrumb" (dict "@id" (printf "%s#fil" .Permalink))) }}
+    {{ $graph = $graph | append $crumbs }}
+  {{ end }}
+  {{ if $c }}
+    {{ $personId := printf "%s#candidat" .Permalink }}
+    {{ $person := dict "@type" "Person" "@id" $personId "name" $c.nom "url" .Permalink }}
+    {{ with $c.photo }}{{ $person = merge $person (dict "image" (. | absURL)) }}{{ end }}
+    {{ $parti := $c.parti | default "" }}
+    {{ if and (ne $parti "") (not (hasPrefix $parti "Divers")) (not (hasPrefix $parti "Sans")) }}{{ $person = merge $person (dict "affiliation" (dict "@type" "Organization" "name" $parti)) }}{{ end }}
+    {{ with $c.resume }}{{ if eq $c.resume_statut "valide" }}{{ $person = merge $person (dict "description" .) }}{{ end }}{{ end }}
+    {{ $webpage = merge $webpage (dict "mainEntity" (dict "@id" $personId) "about" (dict "@id" $personId)) }}
+    {{ $graph = $graph | append $person }}
+  {{ end }}
+  {{ if and .IsSection (eq .Section "candidats") }}
+    {{ $li := slice }}
+    {{ range $i, $cc := $cands }}{{ $li = $li | append (dict "@type" "ListItem" "position" (add $i 1) "name" $cc.nom "url" (printf "%scandidats/%s/" $base $cc.slug)) }}{{ end }}
+    {{ $liste := dict "@type" "ItemList" "@id" (printf "%s#liste" .Permalink) "name" "Candidats déclarés à la présidentielle 2027" "numberOfItems" (len $cands) "itemListElement" $li }}
+    {{ $webpage = merge $webpage (dict "mainEntity" (dict "@id" (printf "%s#liste" .Permalink))) }}
+    {{ $graph = $graph | append $liste }}
+  {{ end }}
+  {{ $graph = $graph | append $webpage }}
+  {{ $ld := dict "@context" "https://schema.org" "@graph" $graph }}
+  <script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
+</head>

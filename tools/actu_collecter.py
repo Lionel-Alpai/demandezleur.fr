@@ -25,7 +25,7 @@ DERNIER_KO = ""  # derniere erreur SearXNG vue (detail du motif de sortie)
 def chercher(q, n):
     global DERNIER_KO
     try:
-        p = subprocess.run(["searxng", q, "--json", "--n", str(n * 2), "--language", "fr"], capture_output=True, text=True, timeout=90)
+        p = subprocess.run(["searxng", q, "--json", "--n", str(n * 2), "--language", "fr", "--categories", "news"], capture_output=True, text=True, timeout=90)
         if p.returncode != 0: raise RuntimeError(f"rc {p.returncode} {(p.stderr or '').strip()[:120]}")
         res = json.loads(p.stdout); res = res if isinstance(res, list) else res.get("results", [])
     except Exception as e:
@@ -73,7 +73,8 @@ async def main():
     mois = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
     m_now, m_prev = mois[date.today().month - 1], mois[(date.today().month - 2) % 12]
     requetes = ([f"{par_id[i]['nom']} {m_now} 2026" for i in ids] + [f"{par_id[i]['nom']} {m_prev} 2026 déclaration" for i in ids]
-                + [f"{par_id[i]['nom']} a déclaré" for i in ids] + [f"{t.strip()} {m_now} 2026" for t in a.themes.split(",") if t.strip()])
+                + [f"{par_id[i]['nom']} a déclaré" for i in ids] + [f"{t.strip()} {m_now} 2026" for t in a.themes.split(",") if t.strip()]
+                + ([] if a.ids else [f"présidentielle 2027 {m_now} 2026", f"campagne présidentielle {m_now} 2026"]))
     arts, vus = [], set()
     searxng_ok, searxng_ko = 0, 0
     for q in requetes:
@@ -92,8 +93,8 @@ async def main():
         if searxng_ko and not searxng_ok:
             print(f"SEARXNG_INJOIGNABLE : {searxng_ko}/{len(requetes)} requetes KO, derniere erreur : {DERNIER_KO}")
             sys.exit(3)
-        print(f"RIEN_DE_NEUF : SearXNG repond ({searxng_ok} requete(s) OK), aucun article retenu")
-        return
+        print(f"SEARXNG_VIDE : {searxng_ok}/{len(requetes)} requete(s) OK mais 0 article lu (moteurs suspendus, proxy mort ?)")
+        sys.exit(3)
     liste = ", ".join(f"{c['id']} ({c['nom']})" for c in cands)
     jour = OUT / f"{date.today().isoformat()}.json"; doc = json.loads(jour.read_text(encoding="utf-8")) if jour.exists() else {"jour": date.today().isoformat(), "entrees": []}
     existants = {e["id"]: e for e in doc["entrees"]}
@@ -114,7 +115,7 @@ async def main():
             if cid not in par_id or len(vb.split()) < 6: continue
             pages = src(dcl.get("sources"))
             preuve = [p for p in pages if verbatim_present(vb, p["texte"])]
-            statut = "verifie_auto" if preuve and any(m in preuve[0]["media"] for m in REFERENCE) else ("a_valider" if pages else "refuse")
+            statut = "verifie_auto" if preuve else ("a_valider" if pages else "refuse")
             eid = hashlib.sha1(norm(vb).encode()).hexdigest()[:10]
             if eid in existants and existants[eid].get("statut") in ("valide", "refuse"): continue
             existants[eid] = {"id": eid, "type": "declaration", "candidat_id": cid, "verbatim": vb, "date": dcl.get("date") or (preuve[0]["date"] if preuve else ""), "ou": dcl.get("ou", ""),
@@ -126,7 +127,7 @@ async def main():
             ft = (f.get("fait") or "").strip()
             if len(ft.split()) < 5: continue
             pages = src(f.get("sources")); medias = {p["media"] for p in pages}
-            statut = "verifie_auto" if len(medias) >= 2 and any(any(m in x for m in REFERENCE) for x in medias) else ("a_valider" if pages else "refuse")
+            statut = "verifie_auto" if any(any(m in x for m in REFERENCE) for x in medias) else ("a_valider" if pages else "refuse")
             eid = hashlib.sha1(norm(ft).encode()).hexdigest()[:10]
             if eid in existants and existants[eid].get("statut") in ("valide", "refuse"): continue
             existants[eid] = {"id": eid, "type": "fait", "fait": ft, "date": f.get("date") or (pages[0]["date"] if pages else ""), "media": ", ".join(sorted(medias))[:80],

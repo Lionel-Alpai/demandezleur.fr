@@ -245,6 +245,9 @@ def _extraire_json(txt: str) -> dict:
         return {}
 
 
+_CATEGORIES_A_REVISER = ("evenement", "propos_public")
+
+
 async def juger(texte: str, orateur: dict, adversaires: list, preuves: list, faits: dict, historique: list, cle_demo) -> list:
     """Affirmations non ancrées : [{type:'juge', phrase, cible, raison}]. Vide en démo ou si le juge est muet."""
     if not adversaires or not texte.strip():
@@ -267,10 +270,11 @@ async def juger(texte: str, orateur: dict, adversaires: list, preuves: list, fai
     ids_adv = {x["id"] for x in adversaires}
     for a in d.get("affirmations", []) if isinstance(d, dict) else []:
         cible = str(a.get("cible", "")).strip().lower() if isinstance(a, dict) else ""
-        if cible in (str(orateur.get("id", "")).lower(), "orateur", "moi", "soi", "lui-meme", "lui-même", "self") or (cible and cible not in ids_adv and cible != "sujet"):
+        categorie = str(a.get("type", "")).strip().lower() if isinstance(a, dict) else ""
+        if categorie not in _CATEGORIES_A_REVISER and (cible in (str(orateur.get("id", "")).lower(), "orateur", "moi", "soi", "lui-meme", "lui-même", "self") or (cible and cible not in ids_adv and cible != "sujet")):
             continue  # jamais ce que l'orateur dit de lui-même ; cibles inconnues ignorées
         if isinstance(a, dict) and a.get("ancree") is False and a.get("phrase"):
-            out.append({"type": "juge", "phrase": str(a["phrase"]), "cible": str(a.get("cible", "")), "raison": str(a.get("raison", ""))[:200]})
+            out.append({"type": "juge", "categorie": categorie, "phrase": str(a["phrase"]), "cible": str(a.get("cible", "")), "raison": str(a.get("raison", ""))[:200]})
     logger.info("juge arène : %d non ancrée(s) en %.1fs", len(out), time.time() - debut)
     return out
 
@@ -282,10 +286,16 @@ def _retirer_phrases(texte: str, revisions: list) -> str:
     gardees = []
     for ph in phrases:
         p = sans_accents(ph)
-        if any(m and (m in p or p in m or _recouvrement(m, p) > 0.6) for m in mauvaises):
+        if any(m and (m in p or p in m or _recouvrement_phrase(m, p) >= 0.8) for m in mauvaises):
             continue
         gardees.append(ph)
     return " ".join(gardees)
+
+
+def _recouvrement_phrase(fautive: str, candidate: str) -> float:
+    """Part des mots (>= 4 lettres) de la phrase FAUTIVE retrouvés dans la candidate : dénominateur = la fautive, jamais la plus courte."""
+    wf, wc = set(re.findall(r"\w{4,}", fautive)), set(re.findall(r"\w{4,}", candidate))
+    return len(wf & wc) / max(1, len(wf))
 
 
 def _recouvrement(a: str, b: str) -> float:
@@ -316,4 +326,14 @@ async def generer_replique_validee(messages: list, *, params: dict, orateur: dic
             annotations = await juger(texte_final, orateur, adversaires, preuves, faits, historique, tuple(cle_demo) + ("juge",))
         except Exception:
             logger.warning("juge arène en échec — garde déterministe seule", exc_info=True)
+    a_reviser = [a for a in annotations if a.get("categorie") in _CATEGORIES_A_REVISER]
+    if a_reviser:
+        # garde-attribution-evenements : auteur/mobile inventé pour un événement, propos public inventé -> phrase RETIRÉE avant l'antenne
+        retenu = _retirer_phrases(texte_final, a_reviser)
+        avant, apres = len(decouper_phrases(texte_final)), len(decouper_phrases(retenu))
+        if retenu.strip() and (avant - apres) * 2 <= avant:
+            texte_final = retenu
+            revisions = list(revisions) + [dict(a, type="faits") for a in a_reviser]
+            annotations = [a for a in annotations if a not in a_reviser]
+        # sinon : le retrait viderait la réplique ou en ôterait plus de la moitié -> RÉTROGRADÉ en annotation (astérisque + explication), texte intact
     return texte_final, revisions, annotations, {"regenerations": 0, "fallback": False, "brut": brut, "usage": usage}

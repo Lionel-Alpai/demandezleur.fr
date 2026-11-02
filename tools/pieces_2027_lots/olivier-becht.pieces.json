@@ -1,0 +1,101 @@
+{
+ "intitule": "Le Projet France d'Olivier Becht (becht2027.fr)",
+ "pieces": [
+  {
+   "url": "https://becht2027.fr/chapitre/partie-1/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/olivier-becht/txt/chapitre-partie-1.txt",
+   "theme": "vision-generale",
+   "titre": "Le Projet France, partie 1 — Reprendre la route / La France est ce qui nous lie"
+  },
+  {
+   "url": "https://becht2027.fr/chapitre/partie-2/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/olivier-becht/txt/chapitre-partie-2.txt",
+   "theme": "vision-generale",
+   "titre": "Le Projet France, partie 2 — Regarde la France tomber / Refonder ou périr"
+  },
+  {
+   "url": "https://becht2027.fr/chapitre/partie-3/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/olivier-becht/txt/chapitre-partie-3.txt",
+   "theme": "vision-generale",
+   "titre": "Le Projet France, partie 3 — De l'espoir à l'action / Fixer le cap et redonner du sens"
+  },
+  {
+   "url": "https://becht2027.fr/chapitre/partie-4/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/olivier-becht/txt/chapitre-partie-4.txt",
+   "theme": "economie-travail",
+   "titre": "Le Projet France, partie 4 — Un nouveau modèle économique"
+  },
+  {
+   "url": "https://becht2027.fr/chapitre/partie-5/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/olivier-becht/txt/chapitre-partie-5.txt",
+   "theme": "social-sante",
+   "titre": "Le Projet France, partie 5 — Un nouveau modèle social"
+  },
+  {
+   "url": "https://becht2027.fr/chapitre/partie-6/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/olivier-becht/txt/chapitre-partie-6.txt",
+   "theme": "social-sante",
+   "titre": "Le Projet France, partie 6 — Un nouveau modèle de santé"
+  },
+  {
+   "url": "https://becht2027.fr/chapitre/partie-7/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/olivier-becht/txt/chapitre-partie-7.txt",
+   "theme": "securite-protection",
+   "titre": "Le Projet France, partie 7 — Un nouveau modèle de sécurité"
+  },
+  {
+   "url": "https://becht2027.fr/chapitre/partie-8/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/olivier-becht/txt/chapitre-partie-8.txt",
+   "theme": "institutions",
+   "titre": "Le Projet France, partie 8 — Un nouveau modèle d'organisation de la République et des Libertés"
+  },
+  {
+   "url": "https://becht2027.fr/projet-france/les-5-refondations/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/olivier-becht/txt/projet-france-les-5-refondations.txt",
+   "theme": "vision-generale",
+   "titre": "Les 5 refondations (synthèse)"
+  },
+  {
+   "url": "https://becht2027.fr/projet-france/les-5-refondations/refondation-energie/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/olivier-becht/txt/projet-france-les-5-refondations-refondation-energie.txt",
+   "theme": "ecologie-energie",
+   "titre": "Refondation 1 — L'énergie"
+  },
+  {
+   "url": "https://becht2027.fr/projet-france/les-5-refondations/refondation-sociale/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/olivier-becht/txt/projet-france-les-5-refondations-refondation-sociale.txt",
+   "theme": "social-sante",
+   "titre": "Refondation — Sociale"
+  },
+  {
+   "url": "https://becht2027.fr/projet-france/les-5-refondations/refondation-sante/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/olivier-becht/txt/projet-france-les-5-refondations-refondation-sante.txt",
+   "theme": "social-sante",
+   "titre": "Refondation — Santé"
+  },
+  {
+   "url": "https://becht2027.fr/projet-france/les-5-refondations/refondation-securite/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/olivier-becht/txt/projet-france-les-5-refondations-refondation-securite.txt",
+   "theme": "securite-protection",
+   "titre": "Refondation — Sécurité"
+  },
+  {
+   "url": "https://becht2027.fr/projet-france/les-5-refondations/refondation-democratique-territoriale/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/olivier-becht/txt/projet-france-les-5-refondations-refondation-democratique-territoriale.txt",
+   "theme": "institutions",
+   "titre": "Refondation — Démocratique et territoriale"
+  },
+  {
+   "url": "https://becht2027.fr/olivier-becht/ses-constats/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/olivier-becht/txt/olivier-becht-ses-constats.txt",
+   "theme": "vision-generale",
+   "titre": "Ses constats"
+  },
+  {
+   "url": "https://becht2027.fr/olivier-becht/ses-convictions/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/olivier-becht/txt/olivier-becht-ses-convictions.txt",
+   "theme": "vision-generale",
+   "titre": "Ses convictions"
+  }
+ ]
+}

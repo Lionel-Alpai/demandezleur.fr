@@ -1,0 +1,150 @@
+{
+ "juge": "claude-haiku-5-5",
+ "avec_gagne_pct": {
+  "marine-le-pen": 60.0,
+  "jean-luc-melenchon": 30.0
+ },
+ "vert": false,
+ "paires": [
+  {
+   "sujet": "l'Union européenne",
+   "tour": 1,
+   "orateur": "jean-luc-melenchon",
+   "avec_gagne": false,
+   "raison": "La réplique A reprend le rythme oratoire de Mélenchon : phrases longues à incises, apostrophe directe, formule 'on les met sur la table, et on les appliquera' qui rappelle son style de défi politique, sans la tournure plus lisse et sentencieuse de B."
+  },
+  {
+   "sujet": "l'Union européenne",
+   "tour": 1,
+   "orateur": "marine-le-pen",
+   "avec_gagne": false,
+   "raison": "B reprend le rythme oratoire réel de Le Pen (phrases d'attaque en « très bien, mais », anaphores, formules « moi j'exclurai », « la France de Bruxelles », vocabulaire de la souveraineté) et une manière de répondre directement à l'adversaire en le ramenant à son propre programme, sans les hésitations ni les répétitions de l'extrait authentique, donc plus proche de sa voix de débat tout en restant crédible."
+  },
+  {
+   "sujet": "l'Union européenne",
+   "tour": 2,
+   "orateur": "jean-luc-melenchon",
+   "avec_gagne": false,
+   "raison": "A reprend des tournures typiques de Mélenchon : interpellation directe au pluriel (« Vous voulez... »), enchaînement de propositions courtes et incisives, et une façon de retourner l'argument adverse (« l'État détient plus de patrimoine que de dette »). B, plus sèche et plus structurée en contre-attaque, s'éloigne davantage de son rythme oratoire."
+  },
+  {
+   "sujet": "l'Union européenne",
+   "tour": 2,
+   "orateur": "marine-le-pen",
+   "avec_gagne": false,
+   "raison": "La réplique B reprend la construction typique des interventions réelles : une attaque directe puis une opposition binaire « alors que moi », avec une cadence oratoire fluide et une formule de synthèse. La réplique A est plus technique et moins rythmée, moins proche de sa manière d'attaquer et d'encaisser."
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 1,
+   "orateur": "jean-luc-melenchon",
+   "avec_gagne": false,
+   "raison": "Phrases à rythme oratoire marqué, tournures ironiques et figures de style (« on ne règle pas la misère du monde en l'écrivant dans la Constitution »), attaque directe ad hominem, comme dans les extraits authentiques ; B est plus plat, plus didactique et moins incisif."
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 1,
+   "orateur": "marine-le-pen",
+   "avec_gagne": true,
+   "raison": "Le passage A reprend le rythme oral, les tournures directes et l'interpellation (« dites-leur franchement », « Alors ») proches des extraits authentiques, tandis que B est plus lisse, plus écrit et moins hésitant dans l'attaque."
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 2,
+   "orateur": "jean-luc-melenchon",
+   "avec_gagne": true,
+   "raison": "La réplique B reprend le rythme oral typique de Mélenchon : apostrophes ironiques (« Ah bon, vous parlez d'ordre »), questions rhétoriques, enchaînement de propositions longues et une attaque en retournant l'argument adverse plutôt que de le contrer frontalement, comme dans ses extraits."
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 2,
+   "orateur": "marine-le-pen",
+   "avec_gagne": true,
+   "raison": "A reprend le style oral et direct des extraits : phrase longue et chargée, formule d'ouverture « Monsieur [X], vous voulez que... », opposition simple « eux, veulent simplement », et conclusion sur le référendum comme la B, mais avec un rythme moins calqué sur la construction antithétique répétée de B, plus proche de l'improvisation parlementaire authentique."
+  },
+  {
+   "sujet": "la sécurité du quotidien",
+   "tour": 1,
+   "orateur": "jean-luc-melenchon",
+   "avec_gagne": true,
+   "raison": "A reprend le rythme oral et les tournures typiques de Mélenchon (énumération, interpellation directe, « nous proposons », registre argumentatif posé) et attaque sur le fond politique, alors que B est plus une attaque ad hominem chargée de rancœur, peu caractéristique de sa manière d'argumenter."
+  },
+  {
+   "sujet": "la sécurité du quotidien",
+   "tour": 1,
+   "orateur": "marine-le-pen",
+   "avec_gagne": false,
+   "raison": "A reprend les hésitations, les tournures orales et le rythme haché des extraits authentiques (« donc euh », « on retient que », « c'est bien gentil, mais »), alors que B est une phrase écrite, structurée en triples parallèles et en interpellations rhétoriques polies sans marques d'oralité."
+  },
+  {
+   "sujet": "la sécurité du quotidien",
+   "tour": 2,
+   "orateur": "jean-luc-melenchon",
+   "avec_gagne": false,
+   "raison": "La réplique B reprend le rythme oratoire de Mélenchon : enchaînement d'arguments au fil de la phrase, tournures comme « c'est pour ça que », et une pointe d'ironie cinglante (« la justice vient d'ailleurs de tomber sur vous en appel ») qui rappelle son style d'attaque. La réplique A est plus plate, plus slogan et moins ciselée."
+  },
+  {
+   "sujet": "la sécurité du quotidien",
+   "tour": 2,
+   "orateur": "marine-le-pen",
+   "avec_gagne": true,
+   "raison": "La réplique A reprend le rythme oral et les tournures hachées des extraits (incises, « donc », formulations longues puis tranchantes), avec une attaque directe fondée sur un fait et une conclusion ferme ; la réplique B, plus ciselée et symétrique (« gardez-la pour vous »), sonne davantage comme une construction littéraire."
+  },
+  {
+   "sujet": "le pouvoir d'achat",
+   "tour": 1,
+   "orateur": "jean-luc-melenchon",
+   "avec_gagne": false,
+   "raison": "La réplique B reprend le style oratoire mélenchonien : formules percutantes, opposition frontale (« une prime ne remplace pas un salaire »), chiffrage concret et registre populaire (« le plein et le caddie », « bas de fiche de paie »), avec une argumentation ramassée et un ton offensif. La réplique A est plus longue, plus métaphorique et didactique, avec une construction en relative et une ironie moins typique de son débit."
+  },
+  {
+   "sujet": "le pouvoir d'achat",
+   "tour": 1,
+   "orateur": "marine-le-pen",
+   "avec_gagne": true,
+   "raison": "La réplique A reprend le rythme oral et les tournures d'interpellation directe (« Monsieur [X], pendant que... moi je... ! ») qui ressemblent aux extraits authentiques, avec une chute en contraste personnel, tandis que la B est plus lisse, écrite et impersonnelle."
+  },
+  {
+   "sujet": "le pouvoir d'achat",
+   "tour": 2,
+   "orateur": "jean-luc-melenchon",
+   "avec_gagne": false,
+   "raison": "La réplique B reprend mieux le rythme et les tournures des extraits : une formule d'attaque sèche (« on n'achète pas sa dignité avec un rabais à la pompe ») et une chute morale, comme dans ses envolées sur la dignité et le dialogue. La réplique A est plus technique et interrogative, avec une question directe (« qui paie la facture ? ») moins caractéristique de sa manière oratoire."
+  },
+  {
+   "sujet": "le pouvoir d'achat",
+   "tour": 2,
+   "orateur": "marine-le-pen",
+   "avec_gagne": true,
+   "raison": "La réplique B reprend le style oral authentique de Le Pen : interpellation directe (« soyons très clairs »), chiffrage concret du pouvoir d'achat, questions rhétoriques adressées à l'adversaire et chute rythmée sur la dimension populaire (« pendant qu'ils attendent de pouvoir remplir le réservoir »). A est plus technocratique et sans l'élan oratoire, avec une fin en question de précision plutôt qu'en punch."
+  },
+  {
+   "sujet": "les retraites",
+   "tour": 1,
+   "orateur": "jean-luc-melenchon",
+   "avec_gagne": true,
+   "raison": "La réplique B reprend le rythme des phrases courtes et percutantes, les formules morales (« mourir à la tâche », « donner sa vie au travail ») et l'attaque directe en interpellant l'adversaire par son nom, comme le fait Mélenchon ; la réplique A est plus longue, plus administrative dans sa construction et moins incisive dans la manière d'encaisser."
+  },
+  {
+   "sujet": "les retraites",
+   "tour": 1,
+   "orateur": "marine-le-pen",
+   "avec_gagne": false,
+   "raison": "A reprend le rythme oral et les tournures spontanées des extraits (« moi je parle de », phrasing segmenté, appui sur le concret), tandis que B est une formulation trop lisse et écrite, typique d'un texte rédigé pour être lu."
+  },
+  {
+   "sujet": "les retraites",
+   "tour": 2,
+   "orateur": "jean-luc-melenchon",
+   "avec_gagne": false,
+   "raison": "Plus proche du rythme oral de Mélenchon : phrases d'attaque directes et répétitives (« nous, on l'abroge pour tout le monde »), ton accusateur et tranché sur un point de fond, sans la formulation administrative de la réplique A."
+  },
+  {
+   "sujet": "les retraites",
+   "tour": 2,
+   "orateur": "marine-le-pen",
+   "avec_gagne": true,
+   "raison": "B reprend le style oral des extraits (tournures comme « vous n'avez pas répondu », « vous qui avez eu des années », formulation directe et en une phrase), alors que A est plus lisse et structuré en formules écrites."
+  }
+ ]
+}

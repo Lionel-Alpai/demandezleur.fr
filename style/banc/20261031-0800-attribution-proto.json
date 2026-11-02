@@ -1,0 +1,268 @@
+{
+ "mesures": {
+  "orateur": "claude-sonnet-5-5",
+  "juge": "claude-haiku-5-5",
+  "n_avec": 4,
+  "n_sans": 4,
+  "attribution_avec_pct": 50.0,
+  "attribution_sans_pct": 50.0,
+  "par_pilote": {
+   "marine-le-pen": {
+    "avec": 100.0,
+    "sans": 100.0
+   },
+   "jean-luc-melenchon": {
+    "avec": 0.0,
+    "sans": 0.0
+   }
+  },
+  "copies": 0,
+  "caricature_moyenne": 1.0,
+  "caricature_a_3": 0,
+  "tics_hors_plafond": 0,
+  "proto": true,
+  "inventions": {
+   "avec": 6,
+   "sans": 8
+  },
+  "adresse_en_tete_pct": {
+   "avec": 25.0,
+   "sans": 50.0
+  },
+  "tours_avec_coupure_pct": {
+   "avec": 100.0,
+   "sans": 100.0
+  },
+  "vert": false
+ },
+ "tics_hors_plafond": [],
+ "repliques": [
+  {
+   "sujet": "l'immigration",
+   "tour": 1,
+   "orateur": "marine-le-pen",
+   "avec_fiche": false,
+   "texte": "Monsieur Mélenchon, votre programme veut « instituer la carte de séjour de dix ans comme titre de séjour de référence » et régulariser massivement. Autrement dit : ouvrir grand la porte, sans que les Français aient jamais eu leur mot à dire. Moi, je ferai ce que personne n'a osé faire : un référendum pour arrêter l'immigration incontrôlée, mettre fin à l'immigration de peuplement, réserver les aides sociales aux Français et traiter l'asile à l'étranger. Pour une fois, ce sera le peuple qui décidera, pas vous.",
+   "inventions": [
+    {
+     "phrase": "régulariser massivement",
+     "cible": "jean-luc-melenchon",
+     "soutenue": false,
+     "raison": "Le programme prévoit de « régulariser les travailleurs, étudiants, parents d'enfants scolarisés », mais le qualificatif « massivement » (ampleur chiffrée) ne figure dans aucun document fourni."
+    },
+    {
+     "phrase": "ouvrir grand la porte",
+     "cible": "jean-luc-melenchon",
+     "soutenue": false,
+     "raison": "Il s'agit d'une caractérisation polémique et interprétative ; les documents ne disent pas que le programme ouvre « grand la porte » à l'immigration, seulement qu'il propose faciliter les visas et régularisations."
+    },
+    {
+     "phrase": "sans que les Français aient jamais eu leur mot à dire",
+     "cible": "jean-luc-melenchon",
+     "soutenue": false,
+     "raison": "Aucun document ne porte sur la consultation des Français ni sur l'absence de consultation ; cette affirmation sur le processus démocratique n'est pas étayée."
+    }
+   ],
+   "adresse_en_tete": true,
+   "coupure": false,
+   "masque": "Monsieur [X], votre programme veut « instituer la carte de séjour de dix ans comme titre de séjour de référence » et régulariser massivement. Autrement dit : ouvrir grand la porte, sans que les Français aient jamais eu leur mot à dire. Moi, je ferai ce que personne n'a osé faire : un référendum pour arrêter l'immigration incontrôlée, mettre fin à l'immigration de peuplement, réserver les aides sociales aux Français et traiter l'asile à l'étranger. Pour une fois, ce sera le peuple qui décidera, pas vous.",
+   "attribue": "marine-le-pen",
+   "confiance": 0.8,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Ton direct et polémique, formules typiques (« ce que personne n'a osé », « le peuple qui décidera ») et thèmes récurrents du discours lepéniste, sans accumulation de tics ni exagération grossière ; plausible pour une réplique de débat.",
+   "copie": []
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 1,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": false,
+   "texte": "Mesdames et Messieurs, le premier droit d'un être humain, c'est de pouvoir vivre chez lui, auprès des siens. Alors on arrête les guerres et les accords commerciaux qui détruisent les économies, et on tient notre devoir d'humanité envers ceux qui fuient : visas facilités, régularisation des travailleurs, des étudiants, des parents d'enfants scolarisés, carte de séjour de dix ans.\n\nMadame Le Pen, vous prétendez « préserver le peuple français de la submersion migratoire » et vous voulez graver dans le marbre constitutionnel la « priorité nationale ». Dites-nous plutôt ce que ça change pour l'aide-soignante, le maçon, le livreur, qui font tourner ce pays tous les jours et que vous voulez traiter en citoyens de seconde zone.\n\nNous, on propose de régulariser ceux qui travaillent ici, pas de les laisser dans l'ombre au bénéfice des patrons qui les exploitent.",
+   "inventions": [
+    {
+     "phrase": "vous voulez traiter en citoyens de seconde zone [l'aide-soignante, le maçon, le livreur]",
+     "cible": "marine-le-pen",
+     "soutenue": false,
+     "raison": "Les documents décrivent la priorité nationale (prestations sociales réservées aux Français, priorité d'accès au logement social) mais ne contiennent aucune formulation disant qu'elle veut traiter ces travailleurs en citoyens de seconde zone ; il s'agit d'une interprétation et non d'un fait documenté."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": false,
+   "masque": "Mesdames et Messieurs, le premier droit d'un être humain, c'est de pouvoir vivre chez lui, auprès des siens. Alors on arrête les guerres et les accords commerciaux qui détruisent les économies, et on tient notre devoir d'humanité envers ceux qui fuient : visas facilités, régularisation des travailleurs, des étudiants, des parents d'enfants scolarisés, carte de séjour de dix ans.\n\nMadame [X], vous prétendez « préserver le peuple français de la submersion migratoire » et vous voulez graver dans le marbre constitutionnel la « priorité nationale ». Dites-nous plutôt ce que ça change pour l'aide-soignante, le maçon, le livreur, qui font tourner ce pays tous les jours et que vous voulez traiter en citoyens de seconde zone.\n\nNous, on propose de régulariser ceux qui travaillent ici, pas de les laisser dans l'ombre au bénéfice des patrons qui les exploitent.",
+   "attribue": "francois-ruffin",
+   "confiance": 0.6,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Ton oratoire et thèmes typiques (droit de vivre chez soi, ruptures, 'peuple', attaque frontale contre Le Pen) sans tics répétés ni gimmicks marqués ; le contenu politique est plausible pour le personnage, sans pastiche grossier.",
+   "copie": []
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 2,
+   "orateur": "marine-le-pen",
+   "avec_fiche": false,
+   "texte": "[lui coupe la parole] Non, Monsieur Mélenchon, « vivre chez soi », c'est exactement ce que je défends : chez nous, ce sont les Français qui décident, par référendum, pas vous !",
+   "inventions": [
+    {
+     "phrase": "vous voulez graver dans le marbre constitutionnel la « priorité nationale »",
+     "cible": "Marine Le Pen",
+     "soutenue": false,
+     "raison": "Aucun document fourni ne relate une proposition de Marine Le Pen visant à inscrire la « priorité nationale » dans la Constitution ; les documents ne concernent que le programme et les positions de Jean-Luc Mélenchon."
+    },
+    {
+     "phrase": "vous voulez traiter [l'aide-soignante, le maçon, le livreur] en citoyens de seconde zone",
+     "cible": "Marine Le Pen",
+     "soutenue": false,
+     "raison": "Aucun document ne contient de déclaration ou de programme de Marine Le Pen visant à traiter ces travailleurs en citoyens de seconde zone."
+    },
+    {
+     "phrase": "vous prétendez « préserver le peuple français de la submersion migratoire »",
+     "cible": "Marine Le Pen",
+     "soutenue": false,
+     "raison": "La citation n'apparaît dans aucun document fourni concernant Marine Le Pen."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "[lui coupe la parole] Non, Monsieur [X], « vivre chez soi », c'est exactement ce que je défends : chez nous, ce sont les Français qui décident, par référendum, pas vous !",
+   "attribue": "marine-le-pen",
+   "confiance": 0.6,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Interruption agressive, ton affirmatif et formule patriotique (« chez nous », « les Français décident ») plausibles dans un débat, mais l'exclamation finale et l'accumulation de marqueurs un peu appuyés frôlent l'imitation.",
+   "copie": []
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 2,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": false,
+   "texte": "Madame Le Pen, vous parlez de « graver dans le marbre constitutionnel » la nationalité et la « priorité nationale ». Dans le marbre ! Pendant que l'hôpital est à genoux et que les salaires stagnent, vous trouvez la solution : diviser ceux qui travaillent ensemble, selon leur passeport. [hausse le ton] Un maçon, une aide-soignante, un livreur, ils cotisent, ils bossent, ils vivent ici, et vous leur dites qu'ils passeront après. Mon programme, lui, ne trie pas les salariés : un travailleur régularisé, c'est un travailleur qu'on ne peut plus sous-payer, et c'est ça qui protège aussi les ouvriers français.",
+   "inventions": [
+    {
+     "phrase": "vous leur dites qu'ils passeront après",
+     "cible": "marine-le-pen",
+     "soutenue": false,
+     "raison": "Les documents décrivent une priorité nationale et des prestations réservées aux Français, mais aucun document ne dit explicitement que les travailleurs étrangers « passeront après » dans le sens général cité par l'orateur ; l'affirmation est une interprétation non directement documentée."
+    }
+   ],
+   "adresse_en_tete": true,
+   "coupure": true,
+   "masque": "Madame [X], vous parlez de « graver dans le marbre constitutionnel » la nationalité et la « priorité nationale ». Dans le marbre ! Pendant que l'hôpital est à genoux et que les salaires stagnent, vous trouvez la solution : diviser ceux qui travaillent ensemble, selon leur passeport. [hausse le ton] Un maçon, une aide-soignante, un livreur, ils cotisent, ils bossent, ils vivent ici, et vous leur dites qu'ils passeront après. Mon programme, lui, ne trie pas les salariés : un travailleur régularisé, c'est un travailleur qu'on ne peut plus sous-payer, et c'est ça qui protège aussi les ouvriers français.",
+   "attribue": "francois-ruffin",
+   "confiance": 0.35,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Quelques marqueurs typiques (« Dans le marbre ! », indication scénique « [hausse le ton] », formules de rhétorique militante sur les ouvriers et l'hôpital) mais le registre reste argumentatif et plausible, sans tics accumulés ni pastiche grossier.",
+   "copie": []
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 1,
+   "orateur": "marine-le-pen",
+   "avec_fiche": true,
+   "texte": "Soyons très clairs : depuis quarante ans, on subit l'immigration, on ne la choisit pas. Moi, je veux la reprendre en main, et pour cela je demande aux Français leur avis par référendum. Fin du regroupement familial comme règle, fin de l'immigration de peuplement, droit d'asile examiné uniquement à l'étranger, et des aides sociales réservées aux Français, avec cinq années de travail pour les prestations de solidarité.\n\nFace à cela, Monsieur Mélenchon, votre programme écrit noir sur blanc qu'il faut « régulariser les travailleurs, étudiants, parents d'enfants scolarisés » et faire de la carte de séjour de dix ans le titre de référence. Régulariser, donc, par catégories entières ! À quel moment demandez-vous aux Français ce qu'ils en pensent ?",
+   "inventions": [],
+   "adresse_en_tete": false,
+   "coupure": false,
+   "masque": "Soyons très clairs : depuis quarante ans, on subit l'immigration, on ne la choisit pas. Moi, je veux la reprendre en main, et pour cela je demande aux Français leur avis par référendum. Fin du regroupement familial comme règle, fin de l'immigration de peuplement, droit d'asile examiné uniquement à l'étranger, et des aides sociales réservées aux Français, avec cinq années de travail pour les prestations de solidarité.\n\nFace à cela, Monsieur [X], votre programme écrit noir sur blanc qu'il faut « régulariser les travailleurs, étudiants, parents d'enfants scolarisés » et faire de la carte de séjour de dix ans le titre de référence. Régulariser, donc, par catégories entières ! À quel moment demandez-vous aux Français ce qu'ils en pensent ?",
+   "attribue": "marine-le-pen",
+   "confiance": 0.85,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Ton déclamatoire et formules d'autorité (« Soyons très clairs », « Moi, je veux ») plausibles pour un débat, mais le contenu reste fidèle à des positions connues sans tics accumulés ni grossissement caricatural.",
+   "copie": []
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 1,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": true,
+   "texte": "Madame Le Pen, vous écrivez dans votre manifeste qu'il faut « graver dans le marbre constitutionnel » la nationalité et « la possibilité de recourir à la priorité nationale ». Regardez ce que cela veut dire : on inscrit dans la Constitution que des gens qui travaillent ici, qui cotisent ici, n'auront pas les mêmes droits, et on appelle ça de l'ordre. Moi, je dis que l'émigration forcée est une double souffrance, et que la première tâche, c'est de permettre à chacun de vivre chez soi : arrêter les guerres, arrêter les accords commerciaux qui ruinent des économies entières. Pour ceux qui sont là : des visas accessibles, la régularisation des travailleurs, la carte de séjour de dix ans, et l'accueil des réfugiés comme un devoir d'humanité. Les migrations sont un sujet trop sérieux pour les livrer aux surenchères, et la surenchère, c'est votre métier.",
+   "inventions": [
+    {
+     "phrase": "on inscrit dans la Constitution que des gens qui travaillent ici, qui cotisent ici, n'auront pas les mêmes droits",
+     "cible": "marine-le-pen",
+     "soutenue": false,
+     "raison": "Le manifeste évoque la priorité nationale permettant de réserver certaines prestations aux seuls Français ou une priorité d'accès au logement social, mais ne dit pas que des travailleurs qui cotisent seraient privés de droits ; cette conséquence est une interprétation non documentée."
+    },
+    {
+     "phrase": "et on appelle ça de l'ordre",
+     "cible": "marine-le-pen",
+     "soutenue": false,
+     "raison": "Ce n'est pas une affirmation factuelle vérifiable sur l'adversaire, mais une caractérisation ; de plus, aucun document n'attribue à Marine Le Pen cette qualification de ses propres mesures."
+    }
+   ],
+   "adresse_en_tete": true,
+   "coupure": false,
+   "masque": "Madame [X], vous écrivez dans votre manifeste qu'il faut « graver dans le marbre constitutionnel » la nationalité et « la possibilité de recourir à la priorité nationale ». Regardez ce que cela veut dire : on inscrit dans la Constitution que des gens qui travaillent ici, qui cotisent ici, n'auront pas les mêmes droits, et on appelle ça de l'ordre. Moi, je dis que l'émigration forcée est une double souffrance, et que la première tâche, c'est de permettre à chacun de vivre chez soi : arrêter les guerres, arrêter les accords commerciaux qui ruinent des économies entières. Pour ceux qui sont là : des visas accessibles, la régularisation des travailleurs, la carte de séjour de dix ans, et l'accueil des réfugiés comme un devoir d'humanité. Les migrations sont un sujet trop sérieux pour les livrer aux surenchères, et la surenchère, c'est votre métier.",
+   "attribue": "francois-ruffin",
+   "confiance": 0.55,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Quelques marqueurs typiques (formules de type « regardez ce que cela veut dire », « l'émigration forcée est une double souffrance », thème de la surenchère) mais le ton reste argumentatif et plausible pour un débat, sans accumulation de tics ni caricature grossière.",
+   "copie": []
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 2,
+   "orateur": "marine-le-pen",
+   "avec_fiche": true,
+   "texte": "Non, Monsieur Mélenchon, ceux que vous défendez, ce ne sont pas ceux qui travaillent ici : c'est le Français qui attend dix ans un logement social pendant que vous régularisez à tour de bras ! [hausse le ton] Appelez ça « l'humanité » si vous voulez, nous, on appelle ça la priorité nationale, et les Français la réclament.",
+   "inventions": [
+    {
+     "phrase": "vous défendez ceux qui ne travaillent pas ici / vous régularisez à tour de bras",
+     "cible": "Jean-Luc Mélenchon",
+     "soutenue": false,
+     "raison": "Les documents mentionnent bien la régularisation des travailleurs et des parents d'enfants scolarisés, mais aucun document ne dit que Mélenchon défend des personnes qui ne travaillent pas ici ni qu'il régularise « à tour de bras » ; l'affirmation générale de l'orateur dépasse le contenu des documents."
+    },
+    {
+     "phrase": "le Français attend dix ans un logement social pendant que vous régularisez",
+     "cible": "Jean-Luc Mélenchon",
+     "soutenue": false,
+     "raison": "Aucun document ne mentionne les délais d'attente pour le logement social ni ne lie ce délai à la politique de régularisation de Mélenchon."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "Non, Monsieur [X], ceux que vous défendez, ce ne sont pas ceux qui travaillent ici : c'est le Français qui attend dix ans un logement social pendant que vous régularisez à tour de bras ! [hausse le ton] Appelez ça « l'humanité » si vous voulez, nous, on appelle ça la priorité nationale, et les Français la réclament.",
+   "attribue": "marine-le-pen",
+   "confiance": 0.8,
+   "juste": true,
+   "caricature": 1,
+   "caricature_raison": "Traits reconnaissables (« le Français qui attend », « nous, on appelle ça », « priorité nationale », didascalie de ton) mais phrasé plausible pour un discours politique réel ; pas de tics accumulés ni de pastiche grossier.",
+   "copie": []
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 2,
+   "orateur": "jean-luc-melenchon",
+   "avec_fiche": true,
+   "texte": "[lui coupe la parole] Non, non, Madame Le Pen : « fin de l'immigration de peuplement », vous venez de le dire, et sur quoi vous bâtissez ça ? Sur un référendum. Ah bon ? On demande aux Français de voter sur ce qu'ils ont le droit d'être, et celui qui bâtit sa République sur le soupçon n'a jamais fini de chercher des suspects. Moi, je veux régulariser ceux qui travaillent, ceux dont les enfants sont dans nos écoles, parce qu'un gamin scolarisé à Roubaix, c'est un petit Français en devenir, pas un « peuplement ».",
+   "inventions": [
+    {
+     "phrase": "On demande aux Français de voter sur ce qu'ils ont le droit d'être",
+     "cible": "Marine Le Pen",
+     "soutenue": false,
+     "raison": "Les documents indiquent qu'elle propose un référendum sur les règles de nationalité et l'immigration, mais aucun document ne dit qu'elle propose de soumettre au vote ce que les citoyens « ont le droit d'être ». Il s'agit d'une interprétation et d'un procès d'intention, non d'un fait documenté."
+    },
+    {
+     "phrase": "celui qui bâtit sa République sur le soupçon n'a jamais fini de chercher des suspects",
+     "cible": "Marine Le Pen",
+     "soutenue": false,
+     "raison": "Il s'agit d'une appréciation politique et d'une caractérisation, non d'un fait vérifiable ; les documents ne soutiennent pas l'idée qu'elle bâtit sa République sur le soupçon."
+    }
+   ],
+   "adresse_en_tete": false,
+   "coupure": true,
+   "masque": "[lui coupe la parole] Non, non, Madame [X] : « fin de l'immigration de peuplement », vous venez de le dire, et sur quoi vous bâtissez ça ? Sur un référendum. Ah bon ? On demande aux Français de voter sur ce qu'ils ont le droit d'être, et celui qui bâtit sa République sur le soupçon n'a jamais fini de chercher des suspects. Moi, je veux régulariser ceux qui travaillent, ceux dont les enfants sont dans nos écoles, parce qu'un gamin scolarisé à Roubaix, c'est un petit Français en devenir, pas un « peuplement ».",
+   "attribue": "francois-ruffin",
+   "confiance": 0.35,
+   "juste": false,
+   "caricature": 1,
+   "caricature_raison": "Traits marqués mais plausibles pour un débat : interruption directe, formule ironique « ah bon ? », vocabulaire de tribune (« République », « le soupçon »), mais pas de tics accumulés ni de pastiche grossier.",
+   "copie": []
+  }
+ ]
+}

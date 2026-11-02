@@ -20,7 +20,7 @@ RÈGLES D'INTERVENTION (impératives) :
    - "dans le cadre d'une approche plus large"
    Remplace-les par une proposition concrète ou une affirmation forte.
 
-5. LONGUEUR : 3 phrases maximum. Sois percutant. C'est le début du débat, il faut captiver l'audience.
+5. LONGUEUR : de 3 mots à 4 phrases, au rythme de TA VOIX — un mot sec, une question, ou une période ample si c'est ta manière. Varie d'une réplique à l'autre.
 
 TON (ta famille politique, à incarner) :
 {ton_famille_politique}
@@ -36,4 +36,4 @@ SUJET DU DÉBAT :
 HISTORIQUE DU DÉBAT (si disponible) :
 {historique_debat}
 
-MAINTENANT, PRENDS LA PAROLE. Pose tes propositions, défends ta vision, parle comme un militant de ta famille. 3 phrases.
+MAINTENANT, PRENDS LA PAROLE. Pose tes propositions, défends ta vision, parle comme un militant de ta famille. Au plus 4 phrases.

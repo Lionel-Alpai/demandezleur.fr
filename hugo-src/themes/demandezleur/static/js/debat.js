@@ -247,7 +247,7 @@
   }
   function dataPourImage() { var d = {}; state.selection.forEach(function (id) { var c = state.data[id]; d[id] = { nom: c.nom, parti_court: c.parti, photo: c.photo }; }); return d; }
   function exporterTexte() {
-    var lignes = ['Débat — ' + state.sujet + (state.mode === 'arene' ? ' (mode Arène)' : ''), 'demandezleur.fr — réponses générées par IA à partir des programmes officiels', ''];
+    var lignes = ['Débat — ' + state.sujet + (state.mode === 'arene' ? ' (mode Arène)' : ''), 'demandezleur.fr — projections statistiques par IA à partir des documents publics ; n’engage pas les candidats', ''];
     state.historique.forEach(function (t) {
       lignes.push('=== Tour ' + t.tour + (t.question_moderateur ? ' — modérateur : ' + t.question_moderateur : '') + ' ===');
       t.interventions.forEach(function (i) { lignes.push('[' + i.candidat_nom + '] ' + i.texte); if (i.preuves && i.preuves.length) lignes.push('  sources : ' + i.preuves.map(function (p) { return p.titre + (p.page ? ' (' + p.page + ')' : ''); }).join(' | ')); lignes.push(''); });
@@ -261,13 +261,13 @@
     $arena.hidden = true; $setup.hidden = true; $recap.hidden = false;
     $recapSujet.textContent = ev.code === 'budget' ? 'Plateau complet pour aujourd’hui' : (ev.code === 'en_cours' ? 'Un débat est déjà en cours' : 'Requête refusée');
     $recapContainer.innerHTML = '<div class="rate-limit-blocage"><p>' + DL.echapper(ev.error || '') + '</p>' +
-      (ev.code === 'budget' ? '<p class="petit">Le site est financé bénévolement et l’IA a un coût ; un plafond quotidien protège son existence. La <a href="/">démo de l’accueil</a> et les débats partagés restent lisibles. <a href="/soutenir/">Soutenir le projet</a>.</p>' : '') + '</div>';
+      (ev.code === 'budget' ? '<p class="petit">Le site est gratuit et l’IA a un coût ; un plafond quotidien protège son existence. La <a href="/">démo de l’accueil</a> et les débats partagés restent lisibles.</p>' : '') + '</div>';
     $recapPartage.innerHTML = '';
   }
   function blocage(detail) {
     $arena.hidden = true; $setup.hidden = true; $recap.hidden = false;
     $recapSujet.textContent = detail.pointe ? 'Heure de pointe : un débat par personne' : 'Quota quotidien atteint';
-    $recapContainer.innerHTML = '<div class="rate-limit-blocage"><p>' + DL.echapper(detail.message || '') + '</p><p class="limite-info">Limite : ' + DL.echapper(String(detail.limite || '')) + ' ' + (detail.action === 'debat_long' ? 'débats longs' : 'débats courts') + ' par jour et par adresse IP.</p><p class="petit">Ce site citoyen est développé bénévolement ; l’IA a un coût. <a href="/soutenir/">Soutenir le projet</a> — sans accès prioritaire pour personne.</p></div>';
+    $recapContainer.innerHTML = '<div class="rate-limit-blocage"><p>' + DL.echapper(detail.message || '') + '</p><p class="limite-info">Limite : ' + DL.echapper(String(detail.limite || '')) + ' ' + (detail.action === 'debat_long' ? 'débats longs' : 'débats courts') + ' par jour et par adresse IP.</p><p class="petit">Ce site est gratuit ; l’IA a un coût, d’où ce plafond, le même pour tous.</p></div>';
     $recapPartage.innerHTML = '';
   }
   window.DL_debat = state;

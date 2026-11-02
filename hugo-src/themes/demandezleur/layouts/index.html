@@ -59,7 +59,8 @@
 </section>
 <script type="text/plain" id="duel-data" hidden>{{ range $cands }}{{ .id }}|{{ .nom }}|{{ .parti_court }}|{{ .photo }}
 {{ end }}</script>
-<script type="text/plain" id="affiches-data" hidden>{{ range site.Data.affiches }}{{ .a }}|{{ .b }}|{{ .sujet }}|{{ .accroche }}
-{{ end }}</script>
+{{ $ids := slice }}{{ range $cands }}{{ $ids = $ids | append .id }}{{ end }}
+<script type="text/plain" id="affiches-data" hidden>{{ range site.Data.affiches }}{{ if and (in $ids .a) (in $ids .b) }}{{ .a }}|{{ .b }}|{{ .sujet }}|{{ .accroche }}
+{{ end }}{{ end }}</script>
 {{ end }}
 {{ define "scripts" }}<script src="/js/accueil.js?v={{ now.Unix }}"></script>{{ end }}

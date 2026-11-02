@@ -1,0 +1,8 @@
+{{- /* Fraîcheur du corpus (brique dl-fiche-mention-programme-2022). Param : id du candidat.
+     Affichée seulement si < 50 % du corpus date de 2026-2027 ET qu'une part datée 2022 ou avant existe
+     (une part « indéterminée » n'est jamais présentée comme du 2022). Source : data/fraicheur.json. */ -}}
+{{- with index site.Data.fraicheur . -}}
+{{- if and (lt .p2027 50) (gt .p2022 0) -}}
+<p class="chat-systeme fraicheur-corpus">Programme complet 2027 pas encore publié : l'IA répond en partie avec des textes de 2022 ou d'avant ({{ .p2022 }} % du corpus).</p>
+{{- end -}}
+{{- end -}}

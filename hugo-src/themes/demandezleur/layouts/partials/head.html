@@ -56,13 +56,13 @@
   {{ range .Params.css }}<link rel="stylesheet" href="/css/{{ . }}.css?v={{ now.Unix }}">{{ end }}
   {{ with site.Params.umami }}{{ if and .url .siteId }}<script defer src="{{ .url }}" data-website-id="{{ .siteId }}"></script>{{ end }}{{ end }}
   {{/* ── Donnees structurees schema.org (graphe) — [dl-seo 13/10/2026] ────────────
-       Editeur = Lionel Denis, personne physique (tel qu'en /mentions-legales/) ; site ;
+       Editeur = Lionel Denis, entrepreneur individuel sous la marque ALPAI (tel qu'en /mentions-legales/) ; site ;
        page + fil d'Ariane ; ProfilePage + Person sur chaque fiche candidat (nom, parti,
        portrait, tels qu'en data/candidats.json, valides par l'editeur) ; ItemList des
        candidats sur /candidats/. Aucune date, aucun chiffre qui ne soit deja dans la page. */}}
   {{ $siteId := printf "%s#site" $base }}
   {{ $editeurId := printf "%s#editeur" $base }}
-  {{ $editeur := dict "@type" "Person" "@id" $editeurId "name" "Lionel Denis" "url" "https://alpai.eu/a-propos/" "sameAs" (slice "https://alpai.eu/" "https://cassandria.space/auteur/lionel-denis/") }}
+  {{ $editeur := dict "@type" "Person" "@id" $editeurId "name" "Lionel Denis" "url" "https://alpai.eu/a-propos/" "brand" (dict "@type" "Brand" "name" "ALPAI" "url" "https://alpai.eu/") "identifier" (dict "@type" "PropertyValue" "propertyID" "RCS" "value" "Chambéry 409 776 861") "sameAs" (slice "https://alpai.eu/" "https://cassandria.space/auteur/lionel-denis/") }}
   {{ $website := dict "@type" "WebSite" "@id" $siteId "url" $base "name" "demandezleur.fr" "alternateName" site.Title "description" site.Params.description "inLanguage" "fr-FR" "publisher" (dict "@id" $editeurId) }}
   {{ $pageType := "WebPage" }}
   {{ if $c }}{{ $pageType = "ProfilePage" }}{{ else if eq $leaf "a-propos" }}{{ $pageType = "AboutPage" }}{{ else if or (eq $leaf "feedback") (eq $leaf "suggerer") }}{{ $pageType = "ContactPage" }}{{ else if and .IsSection (eq .Section "candidats") }}{{ $pageType = "CollectionPage" }}{{ end }}

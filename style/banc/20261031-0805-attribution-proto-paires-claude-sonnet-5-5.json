@@ -1,0 +1,221 @@
+{
+ "juge": "claude-sonnet-5-5",
+ "avec_gagne_pct": {
+  "marine-le-pen": 50.0,
+  "jean-luc-melenchon": 37.5,
+  "non_jugees": 16
+ },
+ "vert": false,
+ "paires": [
+  {
+   "sujet": "l'Union européenne",
+   "tour": 1,
+   "orateur": "jean-luc-melenchon",
+   "avec_gagne": null,
+   "raison": null
+  },
+  {
+   "sujet": "l'Union européenne",
+   "tour": 1,
+   "orateur": "marine-le-pen",
+   "avec_gagne": null,
+   "raison": null
+  },
+  {
+   "sujet": "l'Union européenne",
+   "tour": 2,
+   "orateur": "jean-luc-melenchon",
+   "avec_gagne": null,
+   "raison": null
+  },
+  {
+   "sujet": "l'Union européenne",
+   "tour": 2,
+   "orateur": "marine-le-pen",
+   "avec_gagne": true,
+   "raison": "A reprend sa manière réelle : phrases longues et enchaînées, argumentation par le constat (« regardez le bilan de votre camp »), retournement de l'adversaire en incohérence (« pourquoi n'avez-vous pas la même colère… »), ton de reproche appuyé plutôt que de formule. B est trop court, avec un slogan final (« Moi, je protège ceux qui nous nourrissent ») et une exagération (« planche à billets », « crèvent ») qui tiennent de la caricature."
+  },
+  {
+   "sujet": "l'Union européenne",
+   "tour": 3,
+   "orateur": "jean-luc-melenchon",
+   "avec_gagne": false,
+   "raison": "A reprend la voix parlée de Mélenchon : interruption sèche, formule imagée (« votre épouvantail », « nous faire chanter »), logique du patrimoine rapporté à la dette, retournement final. B est plus écrit et trop construit (citation du manifeste, démonstration en trois temps, « Ah bon, c'est ça… ? » qui sonne comme une chute de pamphlet), donc plus proche de la caricature."
+  },
+  {
+   "sujet": "l'Union européenne",
+   "tour": 3,
+   "orateur": "marine-le-pen",
+   "avec_gagne": true,
+   "raison": "A garde un rythme oral plausible : phrases à tiroirs et enchaînements argumentatifs (« parce que… »), antithèse « vous… moi » sans formules figées, ironie mesurée (« vous avez beau jeu »). Elle ressemble aux extraits : ton sec, démonstratif, logique de la contradiction. B est plus caricaturale : slogans martelés (« point »), antithèses en formules à effet (« un veto en tribune »), citations hachées et ton de punchline écrite."
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 1,
+   "orateur": "jean-luc-melenchon",
+   "avec_gagne": null,
+   "raison": null
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 1,
+   "orateur": "marine-le-pen",
+   "avec_gagne": null,
+   "raison": null
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 2,
+   "orateur": "jean-luc-melenchon",
+   "avec_gagne": null,
+   "raison": null
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 2,
+   "orateur": "marine-le-pen",
+   "avec_gagne": null,
+   "raison": null
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 3,
+   "orateur": "jean-luc-melenchon",
+   "avec_gagne": false,
+   "raison": "B sonne plus juste : attaque directe et concrète (« l'infirmière », « le maçon et l'aide à domicile »), image tranchante (« le plus beau des paravents ») et ironie sociale compacte, proches de ses extraits authentiques (BAC à domicile, soignant suspendu). A est plus bavard et explicatif, avec une énumération (guerre, persécution, catastrophes climatiques) et un « Les Français, ils ont aussi le droit de savoir » plus générique."
+  },
+  {
+   "sujet": "l'immigration",
+   "tour": 3,
+   "orateur": "marine-le-pen",
+   "avec_gagne": null,
+   "raison": null
+  },
+  {
+   "sujet": "la sécurité du quotidien",
+   "tour": 1,
+   "orateur": "jean-luc-melenchon",
+   "avec_gagne": null,
+   "raison": null
+  },
+  {
+   "sujet": "la sécurité du quotidien",
+   "tour": 1,
+   "orateur": "marine-le-pen",
+   "avec_gagne": null,
+   "raison": null
+  },
+  {
+   "sujet": "la sécurité du quotidien",
+   "tour": 2,
+   "orateur": "jean-luc-melenchon",
+   "avec_gagne": null,
+   "raison": null
+  },
+  {
+   "sujet": "la sécurité du quotidien",
+   "tour": 2,
+   "orateur": "marine-le-pen",
+   "avec_gagne": null,
+   "raison": null
+  },
+  {
+   "sujet": "la sécurité du quotidien",
+   "tour": 3,
+   "orateur": "jean-luc-melenchon",
+   "avec_gagne": false,
+   "raison": "A reprend le registre argumentatif et institutionnel des extraits : démonstration précise (juges, tribunaux, greffiers), question rhétorique puis chute sentencieuse (« un slogan, pas une sécurité »), avec ironie sèche et sans emphase. B est plus répétitif et heurté (« Non, non », « pas après ») et sonne davantage comme une joute de plateau télé que comme le style construit et raisonné de Mélenchon en séance."
+  },
+  {
+   "sujet": "la sécurité du quotidien",
+   "tour": 3,
+   "orateur": "marine-le-pen",
+   "avec_gagne": false,
+   "raison": "A reprend le registre réel des extraits : phrases longues et argumentées, références procédurales précises (Journal officiel, un de mes députés en séance), attaque par la contradiction de l'adversaire sans effets théâtraux. B tombe davantage dans la caricature avec la didascalie « [hausse le ton] », le « Soyons très clairs » appuyé, la question rhétorique répétée et la chute slogan (« pas les voyous ! »)."
+  },
+  {
+   "sujet": "le pouvoir d'achat",
+   "tour": 1,
+   "orateur": "jean-luc-melenchon",
+   "avec_gagne": true,
+   "raison": "A reprend le style oral réel : ironie sèche (« Ah bon ? On paie le patron pour qu'il paie ses salariés ! »), formules ciselées (« pourboire fiscal »), chiffres martelés et raisonnement qui tient en peu de phrases, sans tomber dans le slogan. B est plus lisse, plus « tract », avec des tournures génériques (« on voudrait nous expliquer que tout va bien ») et une attaque finale qui sonne plus journalistique que mélenchoniste."
+  },
+  {
+   "sujet": "le pouvoir d'achat",
+   "tour": 1,
+   "orateur": "marine-le-pen",
+   "avec_gagne": null,
+   "raison": null
+  },
+  {
+   "sujet": "le pouvoir d'achat",
+   "tour": 2,
+   "orateur": "jean-luc-melenchon",
+   "avec_gagne": false,
+   "raison": "B garde un registre oral naturel et maîtrisé, proche des extraits authentiques : interpellation directe, démonstration claire (« c'est la Sécu qui paie la note, pas le patron »), puis opposition posée avec une formule de principe sur le salaire. A force le trait avec une ironie appuyée et un procédé de caricature (« On paie le patron pour qu'il paie ses salariés »), et la didascalie « [lui coupe la parole] » surjoue l'agressivité."
+  },
+  {
+   "sujet": "le pouvoir d'achat",
+   "tour": 2,
+   "orateur": "marine-le-pen",
+   "avec_gagne": true,
+   "raison": "B colle mieux à sa voix réelle : phrases courtes et frontales, reprise ironique de l'adversaire entre guillemets, interpellation directe, rythme haché avec énumérations concrètes (essence, gaz, électricité) et chiffre martelé, sans didactisme. A est plus écrit et construit, avec des antithèses trop léchées et des formules du type « le Français qui se lève à six heures » qui sentent la caricature de slogan."
+  },
+  {
+   "sujet": "le pouvoir d'achat",
+   "tour": 3,
+   "orateur": "jean-luc-melenchon",
+   "avec_gagne": false,
+   "raison": "A a le ton d'un échange réel : attaque directe sur le texte adverse (« dans votre propre manifeste »), formules sèches et concrètes (« le SMIC, c'est la loi »), interruption naturelle et question rhétorique finale ancrée dans le quotidien. B est plus lissé et trop construit, avec un « Écoutez bien » appuyé, une tirade parallèle trop scolaire et une opposition 4x4/ouvrière un peu caricaturale."
+  },
+  {
+   "sujet": "le pouvoir d'achat",
+   "tour": 3,
+   "orateur": "marine-le-pen",
+   "avec_gagne": false,
+   "raison": "B garde le ton de joute argumentée de l'oratrice : elle reprend la formule de l'adversaire, la retourne avec une question rhétorique (« depuis quand… ? ») et le « vous n'avez toujours pas répondu » insiste sans surjouer. A force les effets (« Rien ! », énumérations, exclamation finale), ce qui sent la caricature, loin de la syntaxe plus sobre et parlée des extraits."
+  },
+  {
+   "sujet": "les retraites",
+   "tour": 1,
+   "orateur": "jean-luc-melenchon",
+   "avec_gagne": null,
+   "raison": null
+  },
+  {
+   "sujet": "les retraites",
+   "tour": 1,
+   "orateur": "marine-le-pen",
+   "avec_gagne": null,
+   "raison": null
+  },
+  {
+   "sujet": "les retraites",
+   "tour": 2,
+   "orateur": "jean-luc-melenchon",
+   "avec_gagne": true,
+   "raison": "B retrouve sa manière réelle : interpellation directe (« madame »), citation reprise pour la retourner (« Avant vingt ans, quarante annuités »), exemple concret et incarné (l'ouvrière qui a démarré à vingt-deux ans), question rhétorique et image imagée (« une porte étroite ») dans une phrase construite, sans effet de caricature. A, avec sa didascalie et son rythme haché, sonne plus comme une réplique de théâtre que comme sa voix réelle."
+  },
+  {
+   "sujet": "les retraites",
+   "tour": 2,
+   "orateur": "marine-le-pen",
+   "avec_gagne": null,
+   "raison": null
+  },
+  {
+   "sujet": "les retraites",
+   "tour": 3,
+   "orateur": "jean-luc-melenchon",
+   "avec_gagne": true,
+   "raison": "B retourne la question avec le tour oratoire typique (« Mais, madame, vous posez la question comme si… »), garde un registre soutenu, des phrases construites et une attaque par l'histoire (« c'est la gauche qui l'a faite, le patronat qui l'a défaite ») sans surjouer. A sonne plus familier et caricatural (« ceux qui se gavent », « c'est ça votre justice ? »), avec des didascalies et un rythme haché peu conforme à l'élocution réelle, plus argumentée et à tiroirs."
+  },
+  {
+   "sujet": "les retraites",
+   "tour": 3,
+   "orateur": "marine-le-pen",
+   "avec_gagne": false,
+   "raison": "B colle mieux à sa voix réelle : phrases construites et affirmatives, reproche argumenté (« depuis deux tours vous ne dites toujours pas comment vous financez ») puis renvoi à l'adversaire (« À vous de répondre »), sans excès. A force le trait avec la coupure de parole, les « Non, non », les chiffres alignés et le « Un slogan ! » théâtral, plus caricatural que les extraits authentiques, sobres, procéduraux et légèrement ironiques."
+  }
+ ]
+}

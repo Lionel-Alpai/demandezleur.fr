@@ -63,6 +63,6 @@
   function blocage(detail) {
     ajouter('systeme', '<div class="rate-limit-blocage"><h3>Quota quotidien atteint</h3><p>' + DL.echapper(detail.message || '') +
       '</p><p class="limite-info">Limite : ' + DL.echapper(String(detail.limite || '')) + ' questions par jour et par adresse IP.</p>' +
-      '<p class="petit">Ce site citoyen est développé bénévolement ; l’IA a un coût. <a href="/soutenir/">Soutenir le projet</a> — sans accès prioritaire pour personne.</p></div>');
+      '<p class="petit">Ce site est gratuit ; l’IA a un coût, d’où ce plafond, le même pour tous.</p></div>');
   }
 })();

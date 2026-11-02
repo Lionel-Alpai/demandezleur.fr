@@ -20,7 +20,7 @@ RÈGLES D'INTERVENTION (impératives) :
    - "dans le cadre d'une approche plus large"
    Remplace-les par une proposition concrète ou une affirmation forte.
 
-5. LONGUEUR : 3 phrases maximum. Un débat télé, c'est du rythme. Chaque phrase doit porter un coup ou planter une proposition.
+5. LONGUEUR : de 3 mots à 4 phrases, au rythme de TA VOIX — un mot sec, une question, ou une période ample si c'est ta manière. Varie d'une réplique à l'autre.
 
 6. NE RÉPÈTE JAMAIS ce que tu as dit aux tours précédents. Si tu l'as déjà dit, trouve un autre angle ou attaque un autre point.
 
@@ -37,4 +37,4 @@ HISTORIQUE DU DÉBAT (ce qui a été dit — cherche UN propos à contredire) :
 QUESTION DU MODÉRATEUR (adressée directement à toi) :
 {question_moderateur}
 
-MAINTENANT, RÉPONDS ET ATTAQUE. Défends ton programme, contredis tes opposants, parle comme un militant de ta famille. 3 phrases maximum.
+MAINTENANT, RÉPONDS ET ATTAQUE. Défends ton programme, contredis tes opposants, parle comme un militant de ta famille. Au plus 4 phrases.

@@ -1,0 +1,12 @@
+.page-corpus .cp-mesures{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1rem 0}
+.page-corpus .cp-mesure{border:1px solid var(--border-2);border-radius:var(--r-2);padding:1rem;background:var(--bg-3);color:var(--fg)}
+.page-corpus .cp-mesure h3{margin:0 0 .4rem;font-size:1rem;color:var(--fg)}
+.page-corpus .cp-valeur{font-size:1.6rem;font-weight:700;color:var(--fg)}
+.page-corpus .cp-rang{margin:.4rem 0 0;font-size:.9rem;color:var(--fg-2)}
+.page-corpus table{width:100%;border-collapse:collapse;margin:1rem 0}
+.page-corpus th,.page-corpus td{text-align:left;padding:.4rem .5rem;border-bottom:1px solid var(--border-2);font-size:.9rem;vertical-align:top}
+.page-corpus ul.cp-trous{columns:2;margin:.5rem 0 1rem}
+.page-corpus .cp-fraicheur{font-size:.85rem;color:var(--fg-3)}
+.page-corpus .cp-envoi{margin:2rem 0}
+.page-corpus .cp-envoi .formulaire>div{margin:.8rem 0}
+.page-corpus .cp-envoi input[type=text],.page-corpus .cp-envoi input[type=url],.page-corpus .cp-envoi textarea{width:100%}

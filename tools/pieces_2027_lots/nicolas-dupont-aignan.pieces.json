@@ -1,0 +1,203 @@
+{
+ "intitule": "Projet de Nicolas Dupont-Aignan et Debout la France",
+ "pieces": [
+  {
+   "url": "https://www.debout-la-france.fr/projet/affaires-etrangeres/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_affaires-etrangeres.txt",
+   "theme": "europe-international",
+   "titre": "cahier « Affaires étrangères »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/affaires-europeennes/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_affaires-europeennes.txt",
+   "theme": "europe-international",
+   "titre": "cahier « Affaires européennes »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/agriculture/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_agriculture.txt",
+   "theme": "agriculture",
+   "titre": "cahier « Agriculture »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/bien-etre-animal/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_bien-etre-animal.txt",
+   "theme": "agriculture",
+   "titre": "cahier « Bien-être animal »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/combat-pour-les-femmes/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_combat-pour-les-femmes.txt",
+   "theme": "social-sante",
+   "titre": "cahier « Combat pour les femmes »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/culture-patrimoine/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_culture-patrimoine.txt",
+   "theme": "culture-numerique",
+   "titre": "cahier « Culture et patrimoine »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/defense/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_defense.txt",
+   "theme": "securite-protection",
+   "titre": "cahier « Défense nationale »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/dependance-fin-de-vie/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_dependance-fin-de-vie.txt",
+   "theme": "social-sante",
+   "titre": "cahier « Dépendance et fin de vie »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/economie-travail/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_economie-travail.txt",
+   "theme": "economie-travail",
+   "titre": "cahier « Économie »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/enseignement-superieur/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_enseignement-superieur.txt",
+   "theme": "education",
+   "titre": "cahier « Enseignement supérieur »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/environnement-energie/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_environnement-energie.txt",
+   "theme": "ecologie-energie",
+   "titre": "cahier « Environnement et Énergie »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/equilibre-territoire-monde-rural/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_equilibre-territoire-monde-rural.txt",
+   "theme": "services-publics",
+   "titre": "cahier « Équilibre du territoire »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/famille/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_famille.txt",
+   "theme": "social-sante",
+   "titre": "cahier « Famille »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/francais-de-l-etranger/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_francais-de-l-etranger.txt",
+   "theme": "europe-international",
+   "titre": "cahier « Français de l'étranger »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/grand-partenariat-entre-la-france-et-l-afrique/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_grand-partenariat-entre-la-france-et-l-afrique.txt",
+   "theme": "europe-international",
+   "titre": "cahier « Le grand partenariat entre la France et l'Afrique »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/handicap/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_handicap.txt",
+   "theme": "social-sante",
+   "titre": "cahier « Handicap »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/immigration-et-assimilation/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_immigration-et-assimilation.txt",
+   "theme": "immigration",
+   "titre": "cahier « Immigration et assimilation »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/instruction-publique/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_instruction-publique.txt",
+   "theme": "education",
+   "titre": "cahier « Éducation »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/intelligence-artificielle/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_intelligence-artificielle.txt",
+   "theme": "culture-numerique",
+   "titre": "cahier « Intelligence Artificielle »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/justice/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_justice.txt",
+   "theme": "securite-protection",
+   "titre": "cahier « Justice »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/logement/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_logement.txt",
+   "theme": "logement",
+   "titre": "cahier « Logement »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/outre-mer/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_outre-mer.txt",
+   "theme": "services-publics",
+   "titre": "cahier « Outre-mer »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/politique-mer/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_politique-mer.txt",
+   "theme": "europe-international",
+   "titre": "cahier « Politique de la mer »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/produire-en-france/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_produire-en-france.txt",
+   "theme": "economie-travail",
+   "titre": "cahier « Produire en France »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/refonder-et-moraliser-notre-democratie/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_refonder-et-moraliser-notre-democratie.txt",
+   "theme": "institutions",
+   "titre": "cahier « Refonder et moraliser notre démocratie »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/retraites/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_retraites.txt",
+   "theme": "social-sante",
+   "titre": "cahier « Retraites »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/sante/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_sante.txt",
+   "theme": "social-sante",
+   "titre": "cahier « Santé »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/sciences-souverainete-industrielle/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_sciences-souverainete-industrielle.txt",
+   "theme": "economie-travail",
+   "titre": "cahier « Sciences, souveraineté industrielle et numérique »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/securite/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_securite.txt",
+   "theme": "securite-protection",
+   "titre": "cahier « Sécurité »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/sport-associations/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_sport-associations.txt",
+   "theme": "culture-numerique",
+   "titre": "cahier « Sport et Associations »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/tourisme/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_tourisme.txt",
+   "theme": "economie-travail",
+   "titre": "cahier « Tourisme »"
+  },
+  {
+   "url": "https://www.debout-la-france.fr/projet/transport-automobilistes/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/ndaa/dlf_transport-automobilistes.txt",
+   "theme": "services-publics",
+   "titre": "cahier « Automobilistes et Motards »"
+  },
+  {
+   "url": "https://www.dupontaignan.fr/actualite/20-mesures-pour-retablir-lordre-et-defendre-la-justice-sociale/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/raw/www_dupontaignan_fr_actualite_20-mesures-pour-retablir-lordre-et-defendre-la-justice-sociale_.txt",
+   "theme": "vision-generale",
+   "titre": "« 20 mesures pour rétablir l'ordre et défendre la justice sociale » (Limoges, 23 octobre 2026)"
+  }
+ ]
+}

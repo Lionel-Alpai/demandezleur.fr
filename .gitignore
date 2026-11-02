@@ -50,3 +50,8 @@ backend/actu/*.json
 # Métadonnées graphiques & scories d'édition
 *.xmp
 .hidden
+
+backend/qg/
+
+# Aperçus de courriers QG (portent un jeton d essai) — jamais au dépôt public
+qg/apercus-courrier/

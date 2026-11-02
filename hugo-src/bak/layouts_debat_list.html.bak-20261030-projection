@@ -1,0 +1,102 @@
+{{ define "main" }}
+<div class="debat" id="debat">
+
+  {{/* ÉTAT 1 — préparation du plateau */}}
+  <section id="debat-setup" class="debat-section">
+    <div class="page-entete">
+      <p class="sur-titre">L'Arène</p>
+      <h1>Faites s'affronter les programmes.</h1>
+      <p class="hero-texte">Choisissez un sujet, 2 à 5 candidats, et menez le débat : vous distribuez la parole, vous interpellez, vous clôturez.</p>
+    </div>
+
+    <div class="etape">
+      <h2 class="etape-titre"><span class="etape-num">1</span> Le plateau</h2>
+      <div class="modes" role="radiogroup" aria-label="Mode du débat">
+        <label class="mode-carte mode-arene">
+          <input type="radio" name="mode" value="arene" id="mode-arene" checked>
+          <span class="mode-badge">Recommandé</span>
+          <strong>L'Arène</strong>
+          <span class="mode-desc">Les candidats se voient opposer <em>ce qui s'est vraiment dit à l'Assemblée</em>, le programme de leurs adversaires et leur <em>dossier vérifié</em>. Ton vif, coups portés — et chaque affirmation vérifiée : ce qui n'est pas étayé est marqué, ce qui est faux est retiré.</span>
+        </label>
+        <label class="mode-carte mode-calme">
+          <input type="radio" name="mode" value="standard" id="mode-standard">
+          <strong>Le plateau calme</strong>
+          <span class="mode-desc">Programmes officiels seulement, échanges courtois. Pour comparer sans étincelles.</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="etape">
+      <h2 class="etape-titre"><span class="etape-num">2</span> Le sujet</h2>
+      <section class="bandeau-assemblee" id="parlement-bandeau" hidden>
+        <div class="bandeau-titre"><span class="point-direct"></span> Ce qui s'est dit à l'Assemblée</div>
+        <p class="bandeau-sous">Reprenez un sujet réellement débattu au Palais-Bourbon <span id="parlement-maj" class="meta"></span></p>
+        <div class="chips" id="parlement-sujets"></div>
+      </section>
+      <section class="bandeau-assemblee bandeau-actu" id="actu-bandeau" hidden>
+        <div class="bandeau-titre"><span class="point-direct"></span> Ça chauffe cette semaine</div>
+        <p class="bandeau-sous">Les thèmes qui occupent l'actualité politique — déclarations et faits vérifiés, servis aux candidats dans l'Arène.</p>
+        <div class="chips" id="actu-sujets"></div>
+      </section>
+      <label for="sujet-input" class="etiquette">Sujet du débat</label>
+      <textarea id="sujet-input" class="champ" placeholder="Exemple : le pouvoir d'achat, le nucléaire, l'immigration, l'école…" maxlength="500" rows="2"></textarea>
+      <p class="meta compteur"><span id="sujet-chars">0</span>/500</p>
+    </div>
+
+    <div class="etape">
+      <h2 class="etape-titre"><span class="etape-num">3</span> Les candidats <span class="meta" id="compteur-selection"><span id="counter-selected">0</span> / 5 sélectionnés (2 minimum)</span></h2>
+      <div class="grille-candidats grille-selection" id="candidats-grid">
+        {{ range site.Data.candidats }}{{ partial "candidat-carte.html" (dict "c" . "mode" "selection") }}{{ end }}
+      </div>
+    </div>
+
+    <div class="barre-mobile" id="barre-mobile" hidden><span id="barre-compteur">0 / 5</span><button type="button" class="btn btn-accent" id="btn-launch-mobile" disabled>Ouvrir l'Arène</button></div>
+    <div class="lancement">
+      <button id="btn-launch" class="btn btn-accent btn-grand" disabled>Ouvrir l'Arène</button>
+      <p class="meta">Ordre de parole tiré au sort · 5 tours maximum · prompts publics</p>
+    </div>
+  </section>
+
+  {{/* ÉTAT 2 — débat en cours */}}
+  <section id="debat-arena" class="debat-section" hidden>
+    <header class="arene-entete">
+      <div><p class="sur-titre">Sujet</p><h1 class="arene-sujet" id="sujet-display"></h1></div>
+      <div class="arene-tour"><p class="sur-titre">Tour</p><strong id="tour-display">1/5</strong><span class="badge-mode" id="mode-display" hidden>Arène</span></div>
+    </header>
+    <div class="plateau-strip" id="plateau-strip"></div>
+    <p class="meta arene-ordre"><span>Ordre de parole :</span> <span id="ordre-liste"></span></p>
+    <div class="interventions" id="debat-interventions"></div>
+    <div class="arene-actions" id="debat-actions" hidden>
+      <button class="btn btn-secondaire" id="btn-tour-suivant">↻ Tour suivant</button>
+      <button class="btn btn-secondaire" id="btn-intervenir">✋ Intervenir</button>
+      <button class="btn btn-accent" id="btn-fin-debat">■ Clore le débat</button>
+    </div>
+    <div class="panneau" id="intervention-panel" hidden>
+      <label for="intervention-input" class="etiquette">Votre question, en tant que modérateur</label>
+      <textarea id="intervention-input" class="champ" placeholder="Posez votre question ou recadrez le débat…" maxlength="300" rows="2"></textarea>
+      <p class="etiquette">Qui doit répondre en premier ?</p>
+      <div class="chips" id="intervention-target-buttons"></div>
+      <div class="panneau-actions">
+        <button class="btn btn-secondaire" id="btn-intervention-cancel">Annuler</button>
+        <button class="btn btn-accent" id="btn-intervention-submit" disabled>Poser la question</button>
+      </div>
+    </div>
+  </section>
+
+  {{/* ÉTAT 3 — récapitulatif */}}
+  <section id="debat-recap" class="debat-section" hidden>
+    <div class="page-entete">
+      <p class="sur-titre">Fin du débat</p>
+      <h1 id="recap-sujet"></h1>
+      <p class="hero-texte">Ce que chaque candidat a défendu, et sur quoi il s'est appuyé.</p>
+    </div>
+    <div class="recap-partage" id="recap-partage"></div>
+    <div id="recap-container" class="recap"></div>
+    <div class="recap-actions">
+      <button class="btn btn-accent" id="btn-nouveau-debat">Lancer un nouveau débat</button>
+      <a href="/" class="btn btn-secondaire">Retour à l'accueil</a>
+    </div>
+  </section>
+</div>
+{{ end }}
+{{ define "scripts" }}<script src="/js/export-image.js?v={{ now.Unix }}"></script><script src="/js/debat.js?v={{ now.Unix }}"></script>{{ end }}

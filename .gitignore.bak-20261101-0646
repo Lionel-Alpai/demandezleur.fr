@@ -1,0 +1,54 @@
+# Secrets
+.env
+*.env
+config.py
+secrets/
+
+# Backend runtime
+backend/venv/
+# Artefacts compilés, où qu'ils soient : les deux règles d'avant ne couvraient
+# que la racine du backend, et 4 .pyc étaient suivis (banc/, tests/, tools/).
+__pycache__/
+*.pyc
+backend/corpus/
+
+# Hugo build output
+hugo-src/public/
+hugo-src/resources/
+
+# Logs & données personnelles
+logs/
+*.log
+historique_debats.json
+
+# Fichiers backup session
+backend/api.py.backup
+backend/api.py.broken
+backend/api.py.clean
+backend/api.py.fixed_backup
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Public HTML généré (servi par Hestia)
+public_html/
+
+# Sauvegardes du rail (rollbacks) — jamais versionnées
+*.bak-pre-*
+*.bak.*
+
+# Refonte plateau (25/08/2026) — données locales, jamais versionnées
+backend/debats/
+backend/parlement/*.json
+hugo-src/photos-originales/
+*.bak
+backend/budget/
+hugo-src/photos-sources/
+backend/actu/*.json
+
+# Métadonnées graphiques & scories d'édition
+*.xmp
+.hidden
+
+backend/qg/

@@ -1,0 +1,129 @@
+#!/usr/bin/env python3
+"""pieces_2027.py — ingère des PIÈCES OFFICIELLES récentes (pages de projet 2026/2027 d'un site de
+campagne ou de parti) dans le corpus d'un candidat. Brique dl-corpus-pieces-officielles-2027.
+
+Déterministe, ZÉRO LLM. Le thème vient de la table fournie (page → thème canon), jamais deviné.
+
+  python3 tools/pieces_2027.py <slug> <pieces.json> --sortie <corpus_neuf.json>
+
+pieces.json = {"intitule": "Projet Debout la France", "pieces": [{"url": ..., "fichier": <texte extrait>,
+               "theme": <canon 13>, "titre": <intitulé de la pièce>}]}
+Le fichier texte porte en tête « URL: », « TITRE: », « DATE: » (format de extraire.py).
+
+Règles :
+  - l'hôte de chaque URL doit être un domaine officiel épinglé du candidat (sinon refus, tout le lot) ;
+  - thème ∈ THEMES (13 canon) ;
+  - texte dédoublonné (une ligne contenue dans une ligne déjà gardée est jetée) ;
+  - blocs ~600 caractères coupés aux phrases ; champs {id,page,source,text,theme,annee,date_piece,origine} ;
+  - annee = année de la date de mise à jour de la page (« DATE: ») ; la source la cite en clair, pour
+    que bilan_corpus.py la lise ;
+  - les blocs existants sont GARDÉS ; un bloc neuf dont la source existe déjà remplace l'ancien lot
+    de la même URL (rejouable sans doublon).
+"""
+import argparse
+import json
+import re
+import sys
+from pathlib import Path
+from urllib.parse import urlparse
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from bilan_corpus import THEMES, DOMAINES_DEFAUT, dom_match  # noqa: E402
+
+CORPUS = Path(__file__).resolve().parent.parent / "backend" / "corpus"
+MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre",
+        "octobre", "novembre", "décembre"]
+BRUIT = re.compile(r"^(Rechercher|Articles récents|Catégories|Partager|Medias|Médias|Lire la suite|"
+                   r"Rechercher sur le site|Accueil)\b", re.I)
+
+
+def lire_piece(fichier):
+    tete, _, corps = Path(fichier).read_text(encoding="utf-8").partition("\n\n")
+    meta = dict(l.split(": ", 1) for l in tete.splitlines() if ": " in l)
+    gardees = []
+    for l in corps.splitlines():
+        l = l.strip()
+        if len(l) < 3 or BRUIT.match(l):
+            continue
+        if any(l in g for g in gardees):
+            continue
+        gardees.append(l)
+    return meta, gardees
+
+
+def decouper(lignes, cible=600):
+    blocs, cur = [], ""
+    for l in lignes:
+        phrases = re.split(r"(?<=[.!?»])\s+", l) if len(l) > cible else [l]
+        for p in phrases:
+            if cur and len(cur) + len(p) + 1 > cible:
+                blocs.append(cur.strip())
+                cur = ""
+            cur += (" " if cur else "") + p
+        if len(cur) >= cible * 0.6:
+            blocs.append(cur.strip())
+            cur = ""
+    if cur.strip():
+        if blocs and len(cur) < 150:
+            blocs[-1] += " " + cur.strip()
+        else:
+            blocs.append(cur.strip())
+    return blocs
+
+
+def date_fr(iso):
+    m = re.match(r"(\d{4})-(\d{2})-(\d{2})", iso or "")
+    if not m:
+        return None, None
+    a, mo, j = int(m[1]), int(m[2]), int(m[3])
+    return a, f"{j} {MOIS[mo - 1]} {a}"
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("slug")
+    ap.add_argument("pieces")
+    ap.add_argument("--sortie", required=True)
+    ap.add_argument("--domaines", default=str(DOMAINES_DEFAUT))
+    a = ap.parse_args()
+
+    cfg = json.loads(Path(a.pieces).read_text(encoding="utf-8"))
+    domaines = json.loads(Path(a.domaines).read_text(encoding="utf-8"))["domaines"].get(a.slug) or []
+    if not domaines:
+        sys.exit(f"REFUS : aucun domaine officiel épinglé pour {a.slug}")
+    erreurs = []
+    for p in cfg["pieces"]:
+        h = urlparse(p["url"]).hostname or ""
+        if not dom_match(h.removeprefix("www."), domaines) and not dom_match(h, domaines):
+            erreurs.append(f"hors domaine officiel : {p['url']}")
+        if p["theme"] not in THEMES:
+            erreurs.append(f"thème hors canon : {p['theme']} ({p['url']})")
+    if erreurs:
+        sys.exit("REFUS :\n  " + "\n  ".join(erreurs))
+
+    ancien = json.loads((CORPUS / f"{a.slug}.json").read_text(encoding="utf-8"))
+    urls = {p["url"] for p in cfg["pieces"]}
+    gardes = [b for b in ancien if not any(u in b.get("source", "") for u in urls)]
+    nid = max((b.get("id", 0) for b in gardes), default=-1) + 1
+    neufs, rapport = [], []
+    for p in cfg["pieces"]:
+        meta, lignes = lire_piece(p["fichier"])
+        annee, dfr = date_fr(meta.get("DATE"))
+        if not annee:
+            sys.exit(f"REFUS : pas de date lisible pour {p['url']}")
+        source = f"{cfg['intitule']} — {p['titre']} (page officielle, mise à jour le {dfr}) — {p['url']}"
+        bl = decouper(lignes)
+        for i, t in enumerate(bl, 1):
+            neufs.append({"text": t, "source": source, "page": i, "theme": p["theme"], "id": nid,
+                          "annee": annee, "date_piece": meta.get("DATE", "")[:10],
+                          "origine": "pieces-officielles-2027"})
+            nid += 1
+        rapport.append((p["titre"], p["theme"], annee, len(bl), sum(len(t) for t in bl)))
+    Path(a.sortie).write_text(json.dumps(gardes + neufs, ensure_ascii=False, indent=1), encoding="utf-8")
+    for r in rapport:
+        print(f"  {r[0][:40]:40} {r[1]:22} {r[2]}  {r[3]:4} blocs {r[4]:7} car")
+    print(f"BLOCS anciens gardés {len(gardes)} / neufs {len(neufs)} → {a.sortie}")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,30 @@
+{
+ "intitule": "Projet de Bernard Cazeneuve et de La Convention",
+ "pieces": [
+  {
+   "url": "https://assets.nationbuilder.com/laconvention/pages/2515/attachments/original/1784151599/Auxfrancaisversionfinale1507.pdf?1784151599",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/bernard-cazeneuve/bc-lettre-aux-francais-integrale-2026-07.txt",
+   "theme": "vision-generale",
+   "titre": "Lettre aux Françaises et aux Français « Tenir la promesse de la France » — version intégrale (86 p.)",
+   "lien_depuis": "https://www.la-convention.fr/"
+  },
+  {
+   "url": "https://bc2027.fr/actualites/quand-l-etat-se-paie-de-mots",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/bernard-cazeneuve/bc-quand-l-etat-se-paie-de-mots-2026-07.txt",
+   "theme": "securite-protection",
+   "titre": "« Quand l'État se paie de mots » (justice des mineurs, 1er juillet 2026)"
+  },
+  {
+   "url": "https://www.la-convention.fr/discours_de_bernard_cazeneuve_cergy_pontoise_dimanche_16_novembre_2025",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/bernard-cazeneuve/bc-discours-cergy-2025-11.txt",
+   "theme": "vision-generale",
+   "titre": "Discours de Cergy-Pontoise (16 novembre 2025)"
+  },
+  {
+   "url": "https://www.la-convention.fr/agir_pour_les_fran_aises_et_les_fran_ais_la_gauche_de_gouvernement_doit_s_unir_maintenant",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/bernard-cazeneuve/bc-tribune-gauche-de-gouvernement-2025-06.txt",
+   "theme": "vision-generale",
+   "titre": "« Agir pour les Françaises et les Français : la gauche de gouvernement doit s'unir maintenant »"
+  }
+ ]
+}

@@ -1,0 +1,305 @@
+#!/usr/bin/env python3
+"""bilan_corpus.py — BILAN DE CORPUS aux 4 mesures par candidat (brique dl-corpus-bilan-quatre-mesures).
+
+Déterministe, ZÉRO LLM. Lit backend/corpus/<id>.json (blocs {id,page,source,text,theme}),
+la liste des candidats (candidats.json de la PROD fait foi : 29 entrées) et les domaines
+officiels épinglés, et écrit backend/corpus/bilan.json.
+
+Mesures par candidat :
+  (1) volume utile   : caractères (texte nettoyé, blocs non vides) + nombre de blocs
+  (2) fraîcheur      : part des caractères venant de documents 2026/2027, 2023-2025, <=2022, indéterminés
+  (3) officialité    : part officielle (site/programme/déclaration du candidat ou du parti),
+                       non officielle (Wikipédia, presse, Assemblée), indéterminée
+  (4) couverture     : thèmes canoniques couverts sur 13 + manquants (+ étiquettes non classées)
++ liste document par document (titre, URL, année, nb d'extraits, thèmes), rang, médiane, max.
+
+La « vue_qg » de chaque entrée ne contient que les chiffres du candidat + rang/médiane/max :
+elle ne nomme jamais un autre candidat.
+
+Heuristique (note du 30/10 19:00, faute de champ annee/officiel au bloc) — sur la chaîne `source` :
+  ANNÉE  : années 19xx/20xx isolées (\\b), dates de consultation (« consulté(e) le … ») retirées ;
+           année = la plus grande trouvée ; à défaut, domaine « …2027.fr|org » cité = 2027 ;
+           sinon indéterminé.
+  OFFICIEL, dans l'ordre :
+     1. URL présente : domaine épinglé du candidat → officiel ; Wikipédia/Assemblée/presse → non officiel
+     2. tête courte de la source (avant « — », « - », « | ») commençant par le parti, par le nom du
+        candidat (si aucun média n'est cité), un domaine épinglé, ou un intitulé de pièce
+        (Programme, Manifeste, Site officiel, Discours…) → officiel
+     3. Wikipédia / Assemblée nationale / LCP / titre de presse cité n'importe où, ou fichier
+        « programme-tiers-* » → non officiel
+     4. domaine épinglé ou nom du parti cité ailleurs dans la source → officiel
+     5. sinon indéterminé
+Usage :
+  python3 tools/bilan_corpus.py [--corpus DIR ...] [--candidats PATH] [--domaines PATH] [--out PATH]
+Plusieurs --corpus : le premier dossier qui contient <id>.json l'emporte.
+"""
+import argparse
+import datetime as dt
+import json
+import re
+import statistics
+import sys
+import unicodedata
+from pathlib import Path
+from urllib.parse import urlparse
+
+RACINE = Path(__file__).resolve().parent.parent
+DOMAINES_DEFAUT = Path("/home/lionel/trio/orchestre/inputs-partitions/dl-qg-annuaire-dolibarr/domaines_officiels.json")
+
+THEMES = ["economie-travail", "ecologie-energie", "social-sante", "europe-international", "institutions",
+          "education", "securite-protection", "agriculture", "culture-numerique", "immigration",
+          "services-publics", "logement", "vision-generale"]
+META = {"bio-parcours", "declaration-candidature"}
+VARIANTES = {"travail-économie": "economie-travail", "éducation": "education",
+             "social-sante-ecole": "social-sante", "souveraineté-démocratie": "institutions",
+             "général": "vision-generale"}
+
+NON_OFFICIEL_DOMAINES = ("wikipedia.org", "assemblee-nationale.fr", "vie-publique.fr", "lcp.fr", "senat.fr",
+                         "brut.media", "sudradio.fr", "lemonde.fr", "lefigaro.fr", "francetvinfo.fr",
+                         "bfmtv.com", "rmc.bfmtv.com", "leparisien.fr", "liberation.fr", "rtl.fr",
+                         "valeursactuelles.com", "parismatch.com", "cnews.fr", "20minutes.fr", "ouest-france.fr")
+# Titres de presse / institutions (sensible à la casse : « ICI », « Vice » ne doivent pas attraper « ici »).
+PRESSE = ["Wikipédia", "Wikipedia", "Assemblée nationale", "LCP", "Vie publique", "Le Monde", "Le Figaro",
+          "franceinfo", "Franceinfo", "France Info", "France 3", "BFMTV", "BFM", "RMC", "RTL", "RTS",
+          "Le Parisien", "Paris Match", "Valeurs actuelles", "Sud Radio", "Bluewin", "Infos-Dijon",
+          "ICI Alsace", "ICI Bourgogne", "ICI Matin", "Radio France", "Brut", "Orange actu", "La Dépêche",
+          "Courrier de l'Atlas", "Vice", "Nice-Matin", "TF1", "20 Minutes", "Midi Libre", "Yahoo", "CNEWS",
+          "Entrevue", "L’Alsace", "L'Alsace", "Libération", "Ouest-France", "Le Point", "L'Express",
+          "Mediapart", "Public Sénat", "Nopopol"]
+PIECES = re.compile(r"^(programme|manifeste|site officiel|site de campagne|positions politiques|synthèse de la lettre|"
+                    r"discours|les 5 priorités|lettre|livret thématique|pétition|contre-budget|100 décisions|"
+                    r"« ?22 mesures|l['’]avenir en commun|communiqué|campagne)", re.I)
+RE_URL = re.compile(r"https?://[^\s)»,]+")
+RE_CONSULT = re.compile(r"(page )?consult[ée]+e? le \d{1,2}/\d{1,2}/\d{4}", re.I)
+RE_ANNEE = re.compile(r"(?<![\w])(19\d\d|20\d\d)(?![\w])")
+RE_DOM2027 = re.compile(r"[a-z0-9-]+20(26|27)\.(fr|org|eu|com)", re.I)
+
+
+def nfc(s):
+    return unicodedata.normalize("NFC", s or "")
+
+
+def sans_accents(s):
+    return "".join(c for c in unicodedata.normalize("NFD", s) if unicodedata.category(c) != "Mn").lower()
+
+
+def presse_citee(s):
+    for p in PRESSE:
+        if re.search(r"(?<!\w)" + re.escape(p) + r"(?!\w)", s):
+            return p
+    return None
+
+
+def annee_doc(source):
+    s = RE_CONSULT.sub(" ", RE_URL.sub(" ", source))
+    ans = [int(a) for a in RE_ANNEE.findall(s)]
+    ans += [int(a) for u in RE_URL.findall(source) for a in re.findall(r"(?<!\d)(20[12]\d)(?=/)", u)]
+    ans = [a for a in ans if 2000 <= a <= 2030]
+    if ans:
+        return max(ans), "annee citee"
+    if RE_DOM2027.search(source):
+        return 2027, "domaine de campagne 20xx"
+    return None, "aucune annee"
+
+
+def tranche(annee):
+    if annee is None:
+        return "indetermine"
+    if annee >= 2026:
+        return "2026_2027"
+    if annee >= 2023:
+        return "2023_2025"
+    return "2022_et_avant"
+
+
+def dom_match(host, domaines):
+    host = host.lower().removeprefix("www.")
+    return any(host == d or host.endswith("." + d) for d in domaines)
+
+
+def officialite(source, cand, domaines):
+    """→ (classe, raison) ; classe ∈ officiel | non_officiel | indetermine."""
+    urls = RE_URL.findall(source)
+    for u in urls:
+        host = urlparse(u).netloc
+        if dom_match(host, domaines):
+            return "officiel", f"URL sur domaine épinglé ({host})"
+        if any(dom_match(host, [d]) for d in NON_OFFICIEL_DOMAINES):
+            return "non_officiel", f"URL tierce ({host})"
+    tete = re.split(r"\s+[—–|-]\s+", source, maxsplit=1)[0].strip()
+    t = sans_accents(tete)
+    def tete_commence_par(n0):
+        return len(n0) >= 2 and (t == n0 or t.startswith(n0 + " ") or t.startswith(n0 + "(")) and len(t) <= len(n0) + 60
+    # parti en tête : officiel même si un média est cité plus loin (« Équinoxe — … dans Le Parisien »)
+    for n in (cand.get("parti") or "", cand.get("parti_court") or ""):
+        if tete_commence_par(sans_accents(n)) and sans_accents(n) not in ("sans etiquette", "divers droite"):
+            return "officiel", f"tête = parti ({n})"
+    # candidat en tête : seulement si aucun média n'est cité (« Gilles Platret - Wikipedia » = tiers)
+    if tete_commence_par(sans_accents(cand["nom"])) and not presse_citee(source):
+        return "officiel", "tête = candidat"
+    nom_famille = sans_accents(cand["nom"].split()[-1])
+    if t.startswith(nom_famille + " 20"):  # « Mélenchon 2027 — … »
+        return "officiel", "tête = candidat + année de campagne"
+    if any(d in t for d in domaines):
+        return "officiel", "tête = domaine épinglé"
+    if PIECES.match(tete) and not presse_citee(tete):
+        return "officiel", "tête = intitulé de pièce officielle"
+    p = presse_citee(source)
+    if p or "programme-tiers-" in source:
+        return "non_officiel", f"source tierce citée ({p or 'programme-tiers'})"
+    s0 = sans_accents(source)
+    if any(d in s0 for d in domaines):
+        return "officiel", "domaine épinglé cité"
+    parti = sans_accents(cand.get("parti") or "")
+    if len(parti) >= 4 and parti not in ("sans etiquette", "divers droite") and parti in s0:
+        return "officiel", "parti cité"
+    return "indetermine", "rien ne tranche"
+
+
+def theme_canon(theme):
+    th = nfc(str(theme or "")).strip()
+    th = VARIANTES.get(th, th)
+    if th in THEMES:
+        return "canon", th
+    if th in META:
+        return "meta", th
+    return "non_classe", th or "(vide)"
+
+
+def part(n, tot):
+    return round(100.0 * n / tot, 1) if tot else 0.0
+
+
+def rangs(valeurs):
+    """Rang de compétition, 1 = meilleur (valeur la plus haute)."""
+    return {k: 1 + sum(1 for w in valeurs.values() if w > v) for k, v in valeurs.items()}
+
+
+def bilan_candidat(cand, blocs, domaines):
+    docs, tot, nb = {}, 0, 0
+    fr = {"2026_2027": 0, "2023_2025": 0, "2022_et_avant": 0, "indetermine": 0}
+    of = {"officiel": 0, "non_officiel": 0, "indetermine": 0}
+    couverts, non_classes, meta = {}, {}, {}
+    for b in blocs:
+        txt = nfc(b.get("text")).strip()
+        if not txt:
+            continue
+        n = len(txt)
+        nb += 1
+        tot += n
+        src = nfc(str(b.get("source") or "")).strip() or "(source vide)"
+        d = docs.get(src)
+        if d is None:
+            an, an_r = annee_doc(src)
+            oc, oc_r = officialite(src, cand, domaines)
+            urls = RE_URL.findall(src)
+            titre = RE_URL.sub("", src).strip(" —-–") or src
+            d = docs[src] = {"titre": titre, "url": urls[0] if urls else None, "annee": an,
+                             "fraicheur": tranche(an), "annee_indice": an_r,
+                             "officialite": oc, "officialite_indice": oc_r,
+                             "extraits": 0, "caracteres": 0, "themes": {}}
+        d["extraits"] += 1
+        d["caracteres"] += n
+        fr[d["fraicheur"]] += n
+        of[d["officialite"]] += n
+        cl, th = theme_canon(b.get("theme"))
+        d["themes"][th] = d["themes"].get(th, 0) + 1
+        {"canon": couverts, "meta": meta, "non_classe": non_classes}[cl][th] = \
+            {"canon": couverts, "meta": meta, "non_classe": non_classes}[cl].get(th, 0) + 1
+    liste = sorted(docs.values(), key=lambda x: (-x["caracteres"], x["titre"]))
+    for d in liste:
+        d["themes"] = sorted(d["themes"])
+    return {
+        "id": cand["id"], "nom": cand["nom"], "parti": cand.get("parti"),
+        "corpus_present": blocs is not None and len(blocs) > 0,
+        "volume": {"caracteres": tot, "blocs": nb},
+        "fraicheur": {"part_2026_2027": part(fr["2026_2027"], tot), "part_2023_2025": part(fr["2023_2025"], tot),
+                      "part_2022_et_avant": part(fr["2022_et_avant"], tot),
+                      "part_indeterminee": part(fr["indetermine"], tot), "caracteres": fr},
+        "officialite": {"part_officielle": part(of["officiel"], tot), "part_non_officielle": part(of["non_officiel"], tot),
+                        "part_indeterminee": part(of["indetermine"], tot), "caracteres": of},
+        "couverture": {"couverts": len(couverts), "sur": len(THEMES),
+                       "themes_couverts": {t: couverts[t] for t in THEMES if t in couverts},
+                       "manquants": [t for t in THEMES if t not in couverts],
+                       "meta": dict(sorted(meta.items())), "non_classes": dict(sorted(non_classes.items()))},
+        "documents": liste,
+    }
+
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    ap.add_argument("--corpus", action="append", default=None, help="dossier corpus (répétable)")
+    ap.add_argument("--candidats", default=str(RACINE / "backend/candidats.json"))
+    ap.add_argument("--domaines", default=str(DOMAINES_DEFAUT))
+    ap.add_argument("--out", default=str(RACINE / "backend/corpus/bilan.json"))
+    a = ap.parse_args()
+    dossiers = [Path(p) for p in (a.corpus or [str(RACINE / "backend/corpus")])]
+    cands = json.load(open(a.candidats, encoding="utf-8"))
+    if isinstance(cands, dict):
+        cands = cands.get("candidats") or list(cands.values())
+    dom = {}
+    if Path(a.domaines).exists():
+        dom = json.load(open(a.domaines, encoding="utf-8")).get("domaines", {})
+    else:
+        print(f"! domaines épinglés absents ({a.domaines}) : officialité par la tête seule", file=sys.stderr)
+
+    entrees, provenance = [], {}
+    for c in cands:
+        cid = c.get("id") or c.get("slug")
+        blocs, f_src = [], None
+        for dd in dossiers:
+            f = dd / f"{cid}.json"
+            if f.exists():
+                blocs, f_src = json.load(open(f, encoding="utf-8")), str(f)
+                break
+        provenance[cid] = f_src
+        e = bilan_candidat({**c, "id": cid}, blocs, [d.lower() for d in dom.get(cid, [])])
+        e["fichier_corpus"] = f_src
+        entrees.append(e)
+
+    mesures = {
+        "volume_caracteres": lambda e: e["volume"]["caracteres"],
+        "volume_blocs": lambda e: e["volume"]["blocs"],
+        "fraicheur_2026_2027": lambda e: e["fraicheur"]["part_2026_2027"],
+        "officialite": lambda e: e["officialite"]["part_officielle"],
+        "couverture": lambda e: e["couverture"]["couverts"],
+    }
+    agregats = {}
+    for m, f in mesures.items():
+        vals = {e["id"]: f(e) for e in entrees}
+        rg = rangs(vals)
+        agregats[m] = {"mediane": round(statistics.median(vals.values()), 1), "max": max(vals.values()),
+                       "min": min(vals.values()), "n": len(vals)}
+        for e in entrees:
+            e.setdefault("rangs", {})[m] = rg[e["id"]]
+    for e in entrees:
+        e["vue_qg"] = {m: {"valeur": mesures[m](e), "rang": e["rangs"][m], "sur": len(entrees),
+                           "mediane": agregats[m]["mediane"], "max": agregats[m]["max"]} for m in mesures}
+        e["vue_qg"]["themes_manquants"] = e["couverture"]["manquants"]
+        e["vue_qg"]["part_fraicheur_indeterminee"] = e["fraicheur"]["part_indeterminee"]
+        e["vue_qg"]["part_officialite_indeterminee"] = e["officialite"]["part_indeterminee"]
+
+    sortie = {
+        "_meta": {
+            "brique": "dl-corpus-bilan-quatre-mesures",
+            "genere_le": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "script": "tools/bilan_corpus.py (déterministe, zéro LLM)",
+            "candidats_source": a.candidats, "corpus_dossiers": [str(d) for d in dossiers],
+            "domaines_source": a.domaines if dom else None,
+            "themes_canoniques": THEMES, "themes_meta_hors_couverture": sorted(META), "variantes": VARIANTES,
+            "unite_des_parts": "pourcentage des caractères du volume utile",
+            "heuristique": "année et officialité déduites de la chaîne source (cf. docstring du script) ; "
+                           "part indéterminée publiée ; champ annee au bloc à poser par dl-corpus-pieces-officielles-2027",
+            "vue_qg": "chaque entrée porte vue_qg = ses valeurs + rang/médiane/max, sans nom d'autre candidat",
+        },
+        "agregats": agregats,
+        "candidats": entrees,
+    }
+    out = Path(a.out)
+    out.write_text(json.dumps(sortie, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    print(f"{out} : {len(entrees)} entrées ; corpus manquants : "
+          f"{[k for k, v in provenance.items() if not v] or 'aucun'}")
+
+
+if __name__ == "__main__":
+    main()

@@ -3,7 +3,7 @@ Tu es documentaliste pour un site citoyen neutre. À partir des ARTICLES ci-dess
 1. DÉCLARATIONS : ce qu'un CANDIDAT DÉCLARÉ à la présidentielle 2027 (liste : {candidats}) a dit, au mot près (verbatim exact copié de l'article, entre 8 et 60 mots), avec la date, le lieu ou média (plateau, interview, réseau social, meeting) et l'article source. Jamais de paraphrase : si la citation exacte n'est pas dans l'article, tu ne la donnes pas.
 2. FAITS : un événement politique daté, en une phrase NEUTRE (« Le gouvernement a annoncé… », « L'Assemblée a adopté… », « X a été nommé… »), avec les articles qui le rapportent. Pas d'opinion, pas d'éditorial, pas de sondage, pas de rumeur, pas de vie privée.
 
-Pour chaque élément : 3 à 6 thèmes (mots simples : retraites, immigration, sécurité, école, budget, dette, Europe, écologie, justice, laïcité…).
+Pour chaque élément : 3 à 6 thèmes (mots simples : retraites, immigration, sécurité, école, budget, dette, Europe, écologie, justice, laïcité…). INTERDIT comme thème : politique, élection, élections, présidentielle, campagne, primaire (trop génériques, sans information) ; choisis le sujet précis (manifestation, antisémitisme, racisme, violences, polémique, accusation, immigration, sécurité…).
 
 Réponds UNIQUEMENT par un JSON :
 {"declarations": [{"candidat_id": "...", "verbatim": "...", "date": "AAAA-MM-JJ", "ou": "...", "sources": ["S1"], "themes": ["..."]}],

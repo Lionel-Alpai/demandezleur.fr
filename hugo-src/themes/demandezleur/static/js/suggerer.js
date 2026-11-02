@@ -55,9 +55,9 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   function afficherFichier(f) {
-    const maxMo = 20 * 1024 * 1024;
+    const maxMo = 10 * 1024 * 1024;
     if (f.size > maxMo) {
-      showResult('error', 'Fichier trop volumineux (maximum 20 Mo).');
+      showResult('error', 'Fichier trop volumineux (maximum 10 Mo).');
       fileInput.value = '';
       return;
     }
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
       const json = await resp.json();
       if (json.success) {
-        showResult('success', 'Merci ! Votre suggestion a bien été transmise. Elle sera examinée manuellement avant toute intégration.');
+        showResult('success', 'Merci ! Votre suggestion a bien été transmise. Elle sera vérifiée par la machine avant toute intégration.');
         form.reset();
         dropZone.classList.remove('has-file');
         fileName.hidden = true;
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('.file-icon').hidden = false;
         notesCount.textContent = '0';
       } else {
-        showResult('error', json.message_utilisateur || 'Une erreur est survenue.');
+        showResult('error', json.message_utilisateur || (json.detail && json.detail.message_utilisateur) || 'Une erreur est survenue.');
       }
     } catch (err) {
       showResult('error', 'Impossible de joindre le serveur. Vérifiez votre connexion.');

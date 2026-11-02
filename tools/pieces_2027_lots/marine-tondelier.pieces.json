@@ -1,0 +1,179 @@
+{
+ "intitule": "Projet de Marine Tondelier et des Écologistes pour 2027",
+ "pieces": [
+  {
+   "url": "https://marinetondelier.fr/s/Programme-2027.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/mt-programme2027-00-avant-propos.txt",
+   "theme": "vision-generale",
+   "titre": "Programme 2027 des Écologistes — Avant-propos"
+  },
+  {
+   "url": "https://marinetondelier.fr/s/Programme-2027.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/mt-programme2027-01-monde-habitable.txt",
+   "theme": "ecologie-energie",
+   "titre": "Programme 2027 des Écologistes — Partie I — Garantir un monde habitable"
+  },
+  {
+   "url": "https://marinetondelier.fr/s/Programme-2027.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/mt-programme2027-02-logement.txt",
+   "theme": "logement",
+   "titre": "Programme 2027 des Écologistes — Partie I, ch. 2 — Pouvoir se loger décemment"
+  },
+  {
+   "url": "https://marinetondelier.fr/s/Programme-2027.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/mt-programme2027-03-souverainete-alimentaire.txt",
+   "theme": "agriculture",
+   "titre": "Programme 2027 des Écologistes — Partie II — Préserver la souveraineté alimentaire"
+  },
+  {
+   "url": "https://marinetondelier.fr/s/Programme-2027.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/mt-programme2027-04-economie.txt",
+   "theme": "economie-travail",
+   "titre": "Programme 2027 des Écologistes — Partie III — Reprendre le contrôle de l'économie"
+  },
+  {
+   "url": "https://marinetondelier.fr/s/Programme-2027.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/mt-programme2027-05-numerique.txt",
+   "theme": "culture-numerique",
+   "titre": "Programme 2027 des Écologistes — Partie III, ch. 21 — Protéger nos techno-diversités numériques"
+  },
+  {
+   "url": "https://marinetondelier.fr/s/Programme-2027.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/mt-programme2027-06-services-publics.txt",
+   "theme": "services-publics",
+   "titre": "Programme 2027 des Écologistes — Partie IV — Redonner vie aux services publics"
+  },
+  {
+   "url": "https://marinetondelier.fr/s/Programme-2027.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/mt-programme2027-07-education-recherche.txt",
+   "theme": "education",
+   "titre": "Programme 2027 des Écologistes — Partie IV — École, enseignement supérieur, recherche (ch. 23-25)"
+  },
+  {
+   "url": "https://marinetondelier.fr/s/Programme-2027.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/mt-programme2027-08-culture-sport.txt",
+   "theme": "culture-numerique",
+   "titre": "Programme 2027 des Écologistes — Partie IV — Politique culturelle et sport (ch. 26-27)"
+  },
+  {
+   "url": "https://marinetondelier.fr/s/Programme-2027.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/mt-programme2027-09-securite-sociale-ecologique.txt",
+   "theme": "social-sante",
+   "titre": "Programme 2027 des Écologistes — Partie V — Passer à la sécurité sociale écologique"
+  },
+  {
+   "url": "https://marinetondelier.fr/s/Programme-2027.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/mt-programme2027-10-egalite.txt",
+   "theme": "social-sante",
+   "titre": "Programme 2027 des Écologistes — Partie VI — Égalité"
+  },
+  {
+   "url": "https://marinetondelier.fr/s/Programme-2027.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/mt-programme2027-11-institutions.txt",
+   "theme": "institutions",
+   "titre": "Programme 2027 des Écologistes — Partie VII — Institutions"
+  },
+  {
+   "url": "https://marinetondelier.fr/s/Programme-2027.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/mt-programme2027-12-securite-justice.txt",
+   "theme": "securite-protection",
+   "titre": "Programme 2027 des Écologistes — Partie VII — Police, justice, prison, terrorismes, narcotrafic (ch. 50-53, 57-58)"
+  },
+  {
+   "url": "https://marinetondelier.fr/s/Programme-2027.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/mt-programme2027-13-migrations.txt",
+   "theme": "immigration",
+   "titre": "Programme 2027 des Écologistes — Partie VII, ch. 56 — Garantir les libertés de migration"
+  },
+  {
+   "url": "https://marinetondelier.fr/s/Programme-2027.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/mt-programme2027-14-europe-international.txt",
+   "theme": "europe-international",
+   "titre": "Programme 2027 des Écologistes — Partie VIII — Europe fédérale, défense, Ukraine, diplomatie, Moyen-Orient, coopération (ch. 60-66)"
+  },
+  {
+   "url": "https://marinetondelier.fr/s/Cequenousvousdevons_avril2026.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/mt-manifeste-ce-que-nous-vous-devons.txt",
+   "theme": "vision-generale",
+   "titre": "Ce que nous vous devons, manifeste (avril 2026)"
+  },
+  {
+   "url": "https://marinetondelier.fr/s/dossierdeprese-fraicheur-2.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/mt-dp-droit-fraicheur.txt",
+   "theme": "ecologie-energie",
+   "titre": "Dossier de presse : pour un droit à la fraîcheur (juin 2026)"
+  },
+  {
+   "url": "https://marinetondelier.fr/s/dossierpresse-incencies-1.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/mt-dp-incendies.txt",
+   "theme": "securite-protection",
+   "titre": "Dossier de presse : propositions face aux incendies (juillet 2026)"
+  },
+  {
+   "url": "https://marinetondelier.fr/s/Livret-littoraux.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/mt-livret-littoraux.txt",
+   "theme": "ecologie-energie",
+   "titre": "Livret thématique : les littoraux (sept. 2026)"
+  },
+  {
+   "url": "https://marinetondelier.fr/s/Livret-montagne.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/mt-livret-montagne.txt",
+   "theme": "ecologie-energie",
+   "titre": "Livret thématique : la montagne (juil. 2026)"
+  },
+  {
+   "url": "https://marinetondelier.fr/s/Livret-sante-reproductive.pdf",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/mt-livret-sante-reproductive.txt",
+   "theme": "social-sante",
+   "titre": "Livret thématique : santé reproductive (sept. 2026)"
+  },
+  {
+   "url": "https://marinetondelier.fr/blog/reaction-au-second-tour-des-elections-municipales",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/w-blog-reaction-au-second-tour-des-elections-municipales.txt",
+   "theme": "institutions",
+   "titre": "Réaction au second tour des élections municipales (mars 2026)"
+  },
+  {
+   "url": "https://marinetondelier.fr/blog/raction-la-mort-de-quentin-d",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/w-blog-raction-la-mort-de-quentin-d.txt",
+   "theme": "institutions",
+   "titre": "Réaction suite au décès de Quentin D. (février 2026)"
+  },
+  {
+   "url": "https://marinetondelier.fr/blog/en-iran-lescalade-imperialiste-nous-mene-au-bord-du-gouffre",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/w-blog-en-iran-lescalade-imperialiste-nous-mene-au-bord-du-gouffre.txt",
+   "theme": "europe-international",
+   "titre": "En Iran, l'escalade impérialiste nous mène au bord du gouffre (mars 2026)"
+  },
+  {
+   "url": "https://marinetondelier.fr/blog/de-lle-saint-denis-au-groenland",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/w-blog-de-lle-saint-denis-au-groenland.txt",
+   "theme": "europe-international",
+   "titre": "De l'Île-Saint-Denis au Groenland (janvier 2026)"
+  },
+  {
+   "url": "https://marinetondelier.fr/blog/10-ans-attentats-13-novembre-2015",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/w-blog-10-ans-attentats-13-novembre-2015.txt",
+   "theme": "securite-protection",
+   "titre": "Hommage aux victimes du 13 novembre 2015 (nov. 2025)"
+  },
+  {
+   "url": "https://marinetondelier.fr/journal-de-campagne/episode-8-train-de-nuit",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/w-journal-de-campagne-episode-8-train-de-nuit.txt",
+   "theme": "services-publics",
+   "titre": "Journal de campagne, ép. 8 : le train de nuit (février 2026)"
+  },
+  {
+   "url": "https://marinetondelier.fr/journal-de-campagne/une-autre-europe-est-possible",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/w-journal-de-campagne-une-autre-europe-est-possible.txt",
+   "theme": "europe-international",
+   "titre": "Journal de campagne, ép. 27 : une autre Europe est possible (sept. 2026)"
+  },
+  {
+   "url": "https://marinetondelier.fr/journal-de-campagne/rentree",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/marine-tondelier/w-journal-de-campagne-rentree.txt",
+   "theme": "education",
+   "titre": "Journal de campagne, ép. 22 : rentrée scolaire (sept. 2026)"
+  }
+ ]
+}

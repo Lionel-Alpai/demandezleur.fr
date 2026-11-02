@@ -1,0 +1,71 @@
+{
+ "intitule": "Projet d'Édouard Philippe et d'Horizons",
+ "pieces": [
+  {
+   "url": "https://horizonsleparti.fr/discours-dedouard-philippe-lors-de-son-grand-meeting-a-ladidas-arena-5-juillet-2026/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/edouard-philippe/hz_discours-dedouard-philippe-lors-de-son-grand-meeting-a-ladid.txt",
+   "theme": "vision-generale",
+   "titre": "discours du grand meeting de l'Adidas Arena (05/07/2026)"
+  },
+  {
+   "url": "https://horizonsleparti.fr/discours-dedouard-philippe-lors-du-conseil-national-a-reims-10-mai-2026/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/edouard-philippe/hz_discours-dedouard-philippe-lors-du-conseil-national-a-reims-.txt",
+   "theme": "vision-generale",
+   "titre": "discours du Conseil national de Reims (10/05/2026)"
+  },
+  {
+   "url": "https://horizonsleparti.fr/le-plan-dedouard-philippe-contre-le-narcotrafic/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/edouard-philippe/hz_le-plan-dedouard-philippe-contre-le-narcotrafic.txt",
+   "theme": "securite-protection",
+   "titre": "plan contre le narcotrafic"
+  },
+  {
+   "url": "https://horizonsleparti.fr/ma-proposition-aux-entrepreneurs/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/edouard-philippe/hz_ma-proposition-aux-entrepreneurs.txt",
+   "theme": "economie-travail",
+   "titre": "« Ma proposition aux entrepreneurs »"
+  },
+  {
+   "url": "https://horizonsleparti.fr/edouard-philippe-france-2-17-10-2025/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/edouard-philippe/hz_edouard-philippe-france-2-17-10-2025.txt",
+   "theme": "economie-travail",
+   "titre": "entretien France 2 (16/10/2025) — retraites, budget"
+  },
+  {
+   "url": "https://horizonsleparti.fr/edouard-philippe-etait-linvite-de-rtl-matin-le-25-juin/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/edouard-philippe/hz_edouard-philippe-etait-linvite-de-rtl-matin-le-25-juin.txt",
+   "theme": "vision-generale",
+   "titre": "entretien RTL (25/06/2025)"
+  },
+  {
+   "url": "https://horizonsleparti.fr/edouard-philippe-etait-invite-du-grand-entretien-sur-france-inter-le-4-juin/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/edouard-philippe/hz_edouard-philippe-etait-invite-du-grand-entretien-sur-france-.txt",
+   "theme": "vision-generale",
+   "titre": "grand entretien France Inter (04/06/2025)"
+  },
+  {
+   "url": "https://horizonsleparti.fr/edouard-philippe-etait-linvite-de-jean-jacques-bourdin-sur-sud-radio-le-20-mai/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/edouard-philippe/hz_edouard-philippe-etait-linvite-de-jean-jacques-bourdin-sur-s.txt",
+   "theme": "vision-generale",
+   "titre": "entretien Sud Radio (20/05/2025)"
+  },
+  {
+   "url": "https://horizonsleparti.fr/discours-du-congres-de-marseille-17-mai-2025/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/edouard-philippe/hz_discours-du-congres-de-marseille-17-mai-2025.txt",
+   "theme": "vision-generale",
+   "titre": "discours du congrès de Marseille (17/05/2025)"
+  },
+  {
+   "url": "https://horizonsleparti.fr/discours-dedouard-philippe-lors-du-congres-de-lille/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/edouard-philippe/hz_discours-dedouard-philippe-lors-du-congres-de-lille.txt",
+   "theme": "vision-generale",
+   "titre": "discours du congrès de Lille (2025)"
+  },
+  {
+   "url": "https://horizonsleparti.fr/discours-dedouard-philippe-lors-du-congres-de-bordeaux/",
+   "fichier": "/tmp/claude-1000/-home-lionel/9c528d06-a9ad-4495-a201-ddf07cf6b6ee/scratchpad/p2027/agents/edouard-philippe/hz_discours-dedouard-philippe-lors-du-congres-de-bordeaux.txt",
+   "theme": "vision-generale",
+   "titre": "discours du congrès de Bordeaux (26/01/2025)"
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+Tu es un fact-checker indépendant. On te donne une prise de parole d'un candidat fictif dans un débat, et l'ENSEMBLE des documents auxquels il avait accès. Ta tâche : lister chaque affirmation factuelle qu'il fait AU SUJET D'UN ADVERSAIRE NOMMÉ (chiffre, vote, décision, bilan, fonction, citation) et dire si elle est SOUTENUE par les documents (oui/non). Sois strict : une affirmation absente des documents est non soutenue, même si elle te paraît vraie par ailleurs.
+Ignore : les opinions, les questions, les propos de l'orateur sur lui-même, les généralités sans adversaire nommé.
+Réponds UNIQUEMENT en JSON : {"affirmations": [{"phrase": "...", "cible": "...", "soutenue": true|false, "raison": "..."}]}
+
+ADVERSAIRES : {adversaires}
+DOCUMENTS :
+{documents}
+
+PRISE DE PAROLE :
+{replique}

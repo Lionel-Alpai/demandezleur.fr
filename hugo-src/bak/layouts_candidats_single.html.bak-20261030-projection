@@ -1,0 +1,61 @@
+{{ define "main" }}
+{{ $c := index (where site.Data.candidats "id" .Params.candidat_id) 0 }}
+{{ $fam := index site.Data.familles $c.famille }}
+<article class="fiche" data-candidat="{{ $c.id }}">
+  <header class="fiche-entete">
+    <div class="fiche-photo carte-photo">{{ if $c.photo }}<img src="{{ $c.photo }}" alt="Portrait de {{ $c.nom }}" width="512" height="512">{{ else }}<span class="carte-initiales">{{ $c.initiales }}</span>{{ end }}</div>
+    <div class="fiche-identite">
+      <p class="sur-titre">Candidat déclaré{{ with $c.date_declaration }}{{ if findRE "[0-9]{4}" . }} · {{ . }}{{ end }}{{ end }}</p>
+      <h1>{{ $c.nom }}</h1>
+      <p class="fiche-parti">{{ $c.parti }}{{ with $fam }} <span class="badge-famille"><span class="pastille famille-{{ $c.famille }}"></span>{{ .libelle }}</span>{{ end }}</p>
+      {{ with $c.resume }}<p class="fiche-resume">{{ . }}</p>{{ end }}
+      <p class="fiche-actions"><a class="btn btn-accent btn-petit" href="/debat/?candidats={{ $c.id }}">Défier {{ $c.nom }} dans l'Arène →</a></p>
+      {{ with $c.photo_credit }}<p class="meta">Portrait : illustration d'après une photo {{ . }}</p>{{ end }}
+    </div>
+  </header>
+
+  {{ if .Params.sans_source_officielle }}
+  <section class="avertissement-sans-programme" role="note" aria-label="Avertissement : pas de programme consultable">
+    {{ if .Content }}{{ .Content }}{{ else }}<p class="avertissement-texte">Ce candidat n'a publié aucun programme consultable.</p>{{ end }}
+  </section>
+  {{ end }}
+  <section class="chat" id="chat" aria-label="Interroger le programme de {{ $c.nom }}">
+    <div class="chat-fenetre" id="chatWindow">
+      {{ if .Params.sans_source_officielle }}
+      <p class="chat-systeme">Vous interrogez les déclarations publiques de <strong>{{ $c.nom }}</strong> — ce candidat n'a publié aucun programme consultable. L'IA répond uniquement à partir des documents listés plus bas, et cite ses sources.</p>
+      {{ else }}
+      <p class="chat-systeme">Vous interrogez le programme officiel de <strong>{{ $c.nom }}</strong>. L'IA répond uniquement à partir des documents listés plus bas, et cite ses sources.</p>
+      {{ end }}
+    </div>
+    {{ with $c.questions_suggerees }}
+    <div class="chips chat-chips" id="chat-chips" aria-label="Questions suggérées">
+      {{ range . }}<button type="button" class="chip" data-question="{{ . }}">{{ . }}</button>{{ end }}
+    </div>
+    {{ end }}
+    <form id="chatFormFull" class="chat-saisie" data-candidat="{{ $c.id }}" autocomplete="off">
+      <label for="chatInputFull" class="visuellement-cache">Votre question</label>
+      <input type="text" id="chatInputFull" class="chat-input" placeholder="Posez votre question à {{ $c.nom }}…" required maxlength="500">
+      <button type="submit" id="chatSendFull" class="btn btn-accent" aria-label="Envoyer">Envoyer</button>
+    </form>
+    <p class="meta chat-note">Réponse générée automatiquement. <a href="/transparence/">Comment ça marche</a> · <a href="/feedback/">Signaler une erreur</a></p>
+  </section>
+
+  {{ if $c.sources }}
+  <section class="documents">
+    <h2>Documents à partir desquels l'IA répond</h2>
+    <ul class="documents-liste">
+      {{ range $c.sources }}<li>{{ . }}</li>{{ end }}
+    </ul>
+    <p class="meta">L'IA ne sort jamais de ces documents. Si le programme ne traite pas un sujet, elle le dit. Un document manque ? <a href="/suggerer/">Suggérez-le</a>.</p>
+  </section>
+  {{ end }}
+
+  <section class="autres-candidats">
+    <div class="section-entete"><h2>Interroger un autre candidat</h2><a href="/candidats/" class="lien-discret">Tous les candidats →</a></div>
+    <div class="grille-candidats grille-compacte">
+      {{ range site.Data.candidats }}{{ if ne .id $c.id }}{{ partial "candidat-carte.html" (dict "c" . "mode" "lien") }}{{ end }}{{ end }}
+    </div>
+  </section>
+</article>
+{{ end }}
+{{ define "scripts" }}<script src="/js/chat.js?v={{ now.Unix }}"></script>{{ end }}

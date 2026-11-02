@@ -15,8 +15,12 @@ N'est JAMAIS à juger : ce que l'orateur dit de LUI-MÊME, de SON programme, de 
 
 Est NON ANCRÉE toute affirmation sur un adversaire présent qui prête : un chiffre, une date, un vote, une décision, un bilan, une fonction ou une intention qu'aucune pièce ne contient. Exemples : « vous avez fermé 200 commissariats », « vous avez voté contre ce texte », « votre gouvernement a… » quand la personne n'a jamais gouverné.
 
+Tu juges ENFIN deux catégories où MÊME ce que l'orateur dit de lui-même est jugé : (type "evenement") toute phrase qui attribue à un événement récent (2026) un auteur, un mobile, une idéologie, une religion, une nationalité ou une origine (« l'islamisme qui a tué à Trappes »), et (type "propos_public") toute déclaration publique prêtée à quelqu'un, l'orateur compris (« j'ai dit publiquement que… », « vous avez déclaré… »). Elles ne sont ancrées que si une pièce ou l'HISTORIQUE le dit mot pour mot ; sinon ancree=false. Une position générale non accrochée à l'événement n'est PAS à juger. Cible : l'id de l'adversaire visé, ou "sujet" pour un événement.
+
+Les pièces intitulées « Fiche événement » et « Situation politique » sont des FICHES établies par concordance de médias. Cette règle ne vise QUE les phrases qui désignent un événement daté et nommé couvert par une fiche (lieu, date, nom) : si une telle phrase CONTREDIT la fiche (autre date, autre bilan, autre qualification), ou affirme comme acquis un champ « non établi » ou un fait de l'événement absent de la fiche, elle est NON ancrée : type "evenement", ancree=false, cible "sujet". Elle ne vise JAMAIS une analyse, un diagnostic, une position ou une proposition (« les superprofits », « la hausse des prix », « il faut taxer… »), ni ce que l'orateur dit de son programme ou de son camp, même si la fiche ne les mentionne pas : ne les classe pas "evenement".
+
 Réponds UNIQUEMENT par un JSON :
-{"affirmations": [{"phrase": "<phrase exacte de l'orateur>", "cible": "<id de l'adversaire, ou \"sujet\" pour le contenu d'un texte>", "type": "programme|bilan|vote|chiffre|citation|fonction", "ancree": true|false, "raison": "<courte justification>"}]}
+{"affirmations": [{"phrase": "<phrase exacte de l'orateur>", "cible": "<id de l'adversaire, ou \"sujet\" pour le contenu d'un texte>", "type": "programme|bilan|vote|chiffre|citation|fonction|evenement|propos_public", "ancree": true|false, "raison": "<courte justification>"}]}
 Si l'orateur ne fait aucune affirmation de fait sur un adversaire, renvoie {"affirmations": []}.
 
 ORATEUR : {orateur}

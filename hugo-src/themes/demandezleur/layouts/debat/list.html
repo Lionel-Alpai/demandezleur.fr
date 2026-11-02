@@ -7,6 +7,7 @@
       <p class="sur-titre">L'Arène</p>
       <h1>Faites s'affronter les programmes.</h1>
       <p class="hero-texte">Choisissez un sujet, 2 à 5 candidats, et menez le débat : vous distribuez la parole, vous interpellez, vous clôturez.</p>
+      {{ partial "avertissement-projection.html" "" }}
     </div>
 
     <div class="etape">
@@ -63,6 +64,7 @@
       <div><p class="sur-titre">Sujet</p><h1 class="arene-sujet" id="sujet-display"></h1></div>
       <div class="arene-tour"><p class="sur-titre">Tour</p><strong id="tour-display">1/5</strong><span class="badge-mode" id="mode-display" hidden>Arène</span></div>
     </header>
+    <p class="meta avertissement-projection-court">Projections statistiques par IA, à partir des documents publics de chaque candidat : rien n'engage les candidats ni leurs équipes.</p>
     <div class="plateau-strip" id="plateau-strip"></div>
     <p class="meta arene-ordre"><span>Ordre de parole :</span> <span id="ordre-liste"></span></p>
     <div class="interventions" id="debat-interventions"></div>

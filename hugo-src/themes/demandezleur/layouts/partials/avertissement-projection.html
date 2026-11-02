@@ -1,0 +1,6 @@
+{{- /* Avertissement unique « projection statistique » — fiche, Arène, débat partagé. Param : nom du candidat (ou vide = pluriel). */ -}}
+{{- with . -}}
+<p class="avertissement-projection"><strong>Ce n'est pas {{ . }}.</strong> C'est une projection statistique : une IA calcule, à partir de ses seuls documents publics, ce que {{ . }} pourrait répondre. Rien de ce qu'elle dit n'engage le candidat ni son équipe.</p>
+{{- else -}}
+<p class="avertissement-projection"><strong>Ce ne sont pas les candidats qui parlent.</strong> Ce sont des projections statistiques : une IA calcule, à partir de leurs seuls documents publics, ce que chacun pourrait répondre. Rien de ce qui est dit ici n'engage les candidats ni leurs équipes.</p>
+{{- end -}}

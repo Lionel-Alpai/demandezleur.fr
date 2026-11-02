@@ -1,0 +1,3762 @@
+{
+  "candidat": "jean-luc-melenchon",
+  "corpus_comparatif": [
+    "jean-luc-melenchon",
+    "marine-le-pen"
+  ],
+  "couverture_corpus": {
+    "fichiers_sources": [
+      "jean-luc-melenchon.an.jsonl",
+      "jean-luc-melenchon.yt.jsonl"
+    ],
+    "lignes_exclues_voix_mixtes": 0,
+    "lignes_lues_total": 6226,
+    "lignes_retenues_voix_pure": 6226,
+    "nb_mots_analyses": 950183,
+    "nb_phrases_analysees": 34536,
+    "situations_couvertes": [
+      "allocution",
+      "commission",
+      "interpellation",
+      "interruption",
+      "meeting"
+    ]
+  },
+  "formules_adresse": {
+    "formules": [
+      {
+        "formule": "allons",
+        "occurrences": 314,
+        "pour_1000_mots": 0.33
+      },
+      {
+        "formule": "chers collègues",
+        "occurrences": 195,
+        "pour_1000_mots": 0.21
+      },
+      {
+        "formule": "monsieur le ministre",
+        "occurrences": 193,
+        "pour_1000_mots": 0.2
+      },
+      {
+        "formule": "écoutez",
+        "occurrences": 158,
+        "pour_1000_mots": 0.17
+      },
+      {
+        "formule": "monsieur le président",
+        "occurrences": 128,
+        "pour_1000_mots": 0.13
+      },
+      {
+        "formule": "regardez",
+        "occurrences": 111,
+        "pour_1000_mots": 0.12
+      },
+      {
+        "formule": "camarades",
+        "occurrences": 99,
+        "pour_1000_mots": 0.1
+      },
+      {
+        "formule": "monsieur le rapporteur",
+        "occurrences": 99,
+        "pour_1000_mots": 0.1
+      },
+      {
+        "formule": "mes chers collègues",
+        "occurrences": 88,
+        "pour_1000_mots": 0.09
+      },
+      {
+        "formule": "voyez-vous",
+        "occurrences": 80,
+        "pour_1000_mots": 0.08
+      },
+      {
+        "formule": "madame la ministre",
+        "occurrences": 76,
+        "pour_1000_mots": 0.08
+      },
+      {
+        "formule": "monsieur le premier ministre",
+        "occurrences": 69,
+        "pour_1000_mots": 0.07
+      },
+      {
+        "formule": "mes amis",
+        "occurrences": 68,
+        "pour_1000_mots": 0.07
+      },
+      {
+        "formule": "imaginez",
+        "occurrences": 53,
+        "pour_1000_mots": 0.06
+      },
+      {
+        "formule": "madame la présidente",
+        "occurrences": 48,
+        "pour_1000_mots": 0.05
+      },
+      {
+        "formule": "figurez-vous",
+        "occurrences": 47,
+        "pour_1000_mots": 0.05
+      },
+      {
+        "formule": "permettez-moi",
+        "occurrences": 47,
+        "pour_1000_mots": 0.05
+      },
+      {
+        "formule": "mesdames messieurs",
+        "occurrences": 41,
+        "pour_1000_mots": 0.04
+      },
+      {
+        "formule": "croyez-moi",
+        "occurrences": 14,
+        "pour_1000_mots": 0.01
+      },
+      {
+        "formule": "mesdames et messieurs",
+        "occurrences": 10,
+        "pour_1000_mots": 0.01
+      },
+      {
+        "formule": "madame la rapporteure",
+        "occurrences": 7,
+        "pour_1000_mots": 0.01
+      },
+      {
+        "formule": "chers amis",
+        "occurrences": 5,
+        "pour_1000_mots": 0.01
+      },
+      {
+        "formule": "monsieur le député",
+        "occurrences": 3,
+        "pour_1000_mots": 0.0
+      },
+      {
+        "formule": "madame la députée",
+        "occurrences": 2,
+        "pour_1000_mots": 0.0
+      },
+      {
+        "formule": "chers compatriotes",
+        "occurrences": 1,
+        "pour_1000_mots": 0.0
+      },
+      {
+        "formule": "mes chers amis",
+        "occurrences": 1,
+        "pour_1000_mots": 0.0
+      },
+      {
+        "formule": "mes chers compatriotes",
+        "occurrences": 1,
+        "pour_1000_mots": 0.0
+      },
+      {
+        "formule": "rassurez-vous",
+        "occurrences": 1,
+        "pour_1000_mots": 0.0
+      }
+    ],
+    "taux_pour_1000_mots": 2.06,
+    "total_occurrences": 1959
+  },
+  "formules_ouverture": {
+    "nb_prises_analysees": 6225,
+    "repartition_categories": {
+      "adresse_institutionnelle": {
+        "occurrences": 140,
+        "part_pct": 2.25
+      },
+      "affirmation_personnelle_ou_collective": {
+        "occurrences": 738,
+        "part_pct": 11.86
+      },
+      "attaque_ou_contradiction": {
+        "occurrences": 359,
+        "part_pct": 5.77
+      },
+      "explicative_ou_narrative": {
+        "occurrences": 4352,
+        "part_pct": 69.91
+      },
+      "prise_a_temoin_ou_injonction": {
+        "occurrences": 260,
+        "part_pct": 4.18
+      },
+      "question_initiale": {
+        "occurrences": 376,
+        "part_pct": 6.04
+      }
+    },
+    "top_amorces": [
+      {
+        "amorce": "très bien",
+        "exemple": "Très bien !",
+        "occurrences": 162,
+        "part_prises_pct": 2.6
+      },
+      {
+        "amorce": "exactement",
+        "exemple": "Exactement !",
+        "occurrences": 84,
+        "part_prises_pct": 1.35
+      },
+      {
+        "amorce": "ce n est",
+        "exemple": "Ce n'est pas moi qui gouverne !",
+        "occurrences": 76,
+        "part_prises_pct": 1.22
+      },
+      {
+        "amorce": "voilà",
+        "exemple": "Voilà !",
+        "occurrences": 60,
+        "part_prises_pct": 0.96
+      },
+      {
+        "amorce": "ah",
+        "exemple": "Ah !",
+        "occurrences": 59,
+        "part_prises_pct": 0.95
+      },
+      {
+        "amorce": "eh oui",
+        "exemple": "Eh oui !",
+        "occurrences": 47,
+        "part_prises_pct": 0.76
+      },
+      {
+        "amorce": "c est vrai",
+        "exemple": "C'est vrai !",
+        "occurrences": 38,
+        "part_prises_pct": 0.61
+      },
+      {
+        "amorce": "monsieur le président",
+        "exemple": "Monsieur le président, vous n'avez pas appelé l'amendement no 193 !",
+        "occurrences": 37,
+        "part_prises_pct": 0.59
+      },
+      {
+        "amorce": "bravo",
+        "exemple": "Bravo !",
+        "occurrences": 36,
+        "part_prises_pct": 0.58
+      },
+      {
+        "amorce": "c est la",
+        "exemple": "C'est la preuve que le vaccin est une raquette trouée – nous ne le lui reprochons pas, puisque, pour partie, il fonct...",
+        "occurrences": 30,
+        "part_prises_pct": 0.48
+      },
+      {
+        "amorce": "il y a",
+        "exemple": "Il y a problème, en revanche, quand l'activité subventionnée – qui bénéficie donc du concours financier de tous – pre...",
+        "occurrences": 28,
+        "part_prises_pct": 0.45
+      },
+      {
+        "amorce": "et voilà",
+        "exemple": "Et voilà !",
+        "occurrences": 27,
+        "part_prises_pct": 0.43
+      },
+      {
+        "amorce": "non",
+        "exemple": "Non !",
+        "occurrences": 25,
+        "part_prises_pct": 0.4
+      },
+      {
+        "amorce": "ça c est",
+        "exemple": "Ça, c'est sûr !",
+        "occurrences": 23,
+        "part_prises_pct": 0.37
+      },
+      {
+        "amorce": "c est une",
+        "exemple": "C'est une sottise pour la France.",
+        "occurrences": 22,
+        "part_prises_pct": 0.35
+      }
+    ]
+  },
+  "global": {
+    "formules_adresse": {
+      "formules": [
+        {
+          "formule": "allons",
+          "occurrences": 314,
+          "pour_1000_mots": 0.33
+        },
+        {
+          "formule": "chers collègues",
+          "occurrences": 195,
+          "pour_1000_mots": 0.21
+        },
+        {
+          "formule": "monsieur le ministre",
+          "occurrences": 193,
+          "pour_1000_mots": 0.2
+        },
+        {
+          "formule": "écoutez",
+          "occurrences": 158,
+          "pour_1000_mots": 0.17
+        },
+        {
+          "formule": "monsieur le président",
+          "occurrences": 128,
+          "pour_1000_mots": 0.13
+        },
+        {
+          "formule": "regardez",
+          "occurrences": 111,
+          "pour_1000_mots": 0.12
+        },
+        {
+          "formule": "camarades",
+          "occurrences": 99,
+          "pour_1000_mots": 0.1
+        },
+        {
+          "formule": "monsieur le rapporteur",
+          "occurrences": 99,
+          "pour_1000_mots": 0.1
+        },
+        {
+          "formule": "mes chers collègues",
+          "occurrences": 88,
+          "pour_1000_mots": 0.09
+        },
+        {
+          "formule": "voyez-vous",
+          "occurrences": 80,
+          "pour_1000_mots": 0.08
+        },
+        {
+          "formule": "madame la ministre",
+          "occurrences": 76,
+          "pour_1000_mots": 0.08
+        },
+        {
+          "formule": "monsieur le premier ministre",
+          "occurrences": 69,
+          "pour_1000_mots": 0.07
+        },
+        {
+          "formule": "mes amis",
+          "occurrences": 68,
+          "pour_1000_mots": 0.07
+        },
+        {
+          "formule": "imaginez",
+          "occurrences": 53,
+          "pour_1000_mots": 0.06
+        },
+        {
+          "formule": "madame la présidente",
+          "occurrences": 48,
+          "pour_1000_mots": 0.05
+        },
+        {
+          "formule": "figurez-vous",
+          "occurrences": 47,
+          "pour_1000_mots": 0.05
+        },
+        {
+          "formule": "permettez-moi",
+          "occurrences": 47,
+          "pour_1000_mots": 0.05
+        },
+        {
+          "formule": "mesdames messieurs",
+          "occurrences": 41,
+          "pour_1000_mots": 0.04
+        },
+        {
+          "formule": "croyez-moi",
+          "occurrences": 14,
+          "pour_1000_mots": 0.01
+        },
+        {
+          "formule": "mesdames et messieurs",
+          "occurrences": 10,
+          "pour_1000_mots": 0.01
+        },
+        {
+          "formule": "madame la rapporteure",
+          "occurrences": 7,
+          "pour_1000_mots": 0.01
+        },
+        {
+          "formule": "chers amis",
+          "occurrences": 5,
+          "pour_1000_mots": 0.01
+        },
+        {
+          "formule": "monsieur le député",
+          "occurrences": 3,
+          "pour_1000_mots": 0.0
+        },
+        {
+          "formule": "madame la députée",
+          "occurrences": 2,
+          "pour_1000_mots": 0.0
+        },
+        {
+          "formule": "chers compatriotes",
+          "occurrences": 1,
+          "pour_1000_mots": 0.0
+        },
+        {
+          "formule": "mes chers amis",
+          "occurrences": 1,
+          "pour_1000_mots": 0.0
+        },
+        {
+          "formule": "mes chers compatriotes",
+          "occurrences": 1,
+          "pour_1000_mots": 0.0
+        },
+        {
+          "formule": "rassurez-vous",
+          "occurrences": 1,
+          "pour_1000_mots": 0.0
+        }
+      ],
+      "taux_pour_1000_mots": 2.06,
+      "total_occurrences": 1959
+    },
+    "formules_ouverture": {
+      "nb_prises_analysees": 6225,
+      "repartition_categories": {
+        "adresse_institutionnelle": {
+          "occurrences": 140,
+          "part_pct": 2.25
+        },
+        "affirmation_personnelle_ou_collective": {
+          "occurrences": 738,
+          "part_pct": 11.86
+        },
+        "attaque_ou_contradiction": {
+          "occurrences": 359,
+          "part_pct": 5.77
+        },
+        "explicative_ou_narrative": {
+          "occurrences": 4352,
+          "part_pct": 69.91
+        },
+        "prise_a_temoin_ou_injonction": {
+          "occurrences": 260,
+          "part_pct": 4.18
+        },
+        "question_initiale": {
+          "occurrences": 376,
+          "part_pct": 6.04
+        }
+      },
+      "top_amorces": [
+        {
+          "amorce": "très bien",
+          "exemple": "Très bien !",
+          "occurrences": 162,
+          "part_prises_pct": 2.6
+        },
+        {
+          "amorce": "exactement",
+          "exemple": "Exactement !",
+          "occurrences": 84,
+          "part_prises_pct": 1.35
+        },
+        {
+          "amorce": "ce n est",
+          "exemple": "Ce n'est pas moi qui gouverne !",
+          "occurrences": 76,
+          "part_prises_pct": 1.22
+        },
+        {
+          "amorce": "voilà",
+          "exemple": "Voilà !",
+          "occurrences": 60,
+          "part_prises_pct": 0.96
+        },
+        {
+          "amorce": "ah",
+          "exemple": "Ah !",
+          "occurrences": 59,
+          "part_prises_pct": 0.95
+        },
+        {
+          "amorce": "eh oui",
+          "exemple": "Eh oui !",
+          "occurrences": 47,
+          "part_prises_pct": 0.76
+        },
+        {
+          "amorce": "c est vrai",
+          "exemple": "C'est vrai !",
+          "occurrences": 38,
+          "part_prises_pct": 0.61
+        },
+        {
+          "amorce": "monsieur le président",
+          "exemple": "Monsieur le président, vous n'avez pas appelé l'amendement no 193 !",
+          "occurrences": 37,
+          "part_prises_pct": 0.59
+        },
+        {
+          "amorce": "bravo",
+          "exemple": "Bravo !",
+          "occurrences": 36,
+          "part_prises_pct": 0.58
+        },
+        {
+          "amorce": "c est la",
+          "exemple": "C'est la preuve que le vaccin est une raquette trouée – nous ne le lui reprochons pas, puisque, pour partie, il fonct...",
+          "occurrences": 30,
+          "part_prises_pct": 0.48
+        },
+        {
+          "amorce": "il y a",
+          "exemple": "Il y a problème, en revanche, quand l'activité subventionnée – qui bénéficie donc du concours financier de tous – pre...",
+          "occurrences": 28,
+          "part_prises_pct": 0.45
+        },
+        {
+          "amorce": "et voilà",
+          "exemple": "Et voilà !",
+          "occurrences": 27,
+          "part_prises_pct": 0.43
+        },
+        {
+          "amorce": "non",
+          "exemple": "Non !",
+          "occurrences": 25,
+          "part_prises_pct": 0.4
+        },
+        {
+          "amorce": "ça c est",
+          "exemple": "Ça, c'est sûr !",
+          "occurrences": 23,
+          "part_prises_pct": 0.37
+        },
+        {
+          "amorce": "c est une",
+          "exemple": "C'est une sottise pour la France.",
+          "occurrences": 22,
+          "part_prises_pct": 0.35
+        }
+      ]
+    },
+    "longueur_phrases": {
+      "cv_mots": 9.265,
+      "ecart_type_mots": 254.9,
+      "iqr_mots": 19.0,
+      "mediane_mots": 16.0,
+      "moyenne_mots": 27.51,
+      "nb_mots": 950183,
+      "nb_phrases": 34536,
+      "part_periodes_longues_pct": 30.28,
+      "part_phrases_moyennes_pct": 44.47,
+      "part_rafales_courtes_pct": 25.25,
+      "profil_rythmique": "periodes_amples",
+      "q25_mots": 8.0,
+      "q75_mots": 27.0,
+      "ratio_rafales_periodes": 0.834
+    },
+    "nb_interventions": 6226,
+    "nb_mots": 950183,
+    "nb_phrases": 34536,
+    "ponctuation_et_syntaxe": {
+      "exclamations_pour_1000_mots": 4.76,
+      "nb_exclamations": 4526,
+      "nb_phrases_nominales": 3785,
+      "nb_questions": 2728,
+      "questions_pour_1000_mots": 2.87,
+      "taux_exclamations_pct": 13.11,
+      "taux_phrases_nominales_pct": 10.96,
+      "taux_questions_pct": 7.9
+    },
+    "pronoms": {
+      "francais_tous_contextes": {
+        "occurrences": 1179,
+        "pour_1000_mots": 1.24
+      },
+      "je": {
+        "occurrences": 11805,
+        "part_pct": 25.73,
+        "pour_1000_mots": 12.42
+      },
+      "les Français": {
+        "occurrences": 425,
+        "part_pct": 0.93,
+        "pour_1000_mots": 0.45
+      },
+      "les_francais": {
+        "occurrences": 425,
+        "part_pct": 0.93,
+        "pour_1000_mots": 0.45
+      },
+      "nous": {
+        "occurrences": 12135,
+        "part_pct": 26.45,
+        "pour_1000_mots": 12.77
+      },
+      "on": {
+        "occurrences": 9255,
+        "part_pct": 20.17,
+        "pour_1000_mots": 9.74
+      },
+      "peuple": {
+        "occurrences": 728,
+        "pour_1000_mots": 0.77
+      },
+      "ratio_les_francais_sur_nous": 0.035,
+      "ratio_nous_sur_je": 1.028,
+      "vous": {
+        "occurrences": 12261,
+        "part_pct": 26.72,
+        "pour_1000_mots": 12.9
+      }
+    },
+    "taux_exclamations_pct": 13.11,
+    "taux_phrases_nominales_pct": 10.96,
+    "taux_questions_pct": 7.9
+  },
+  "longueur_phrases": {
+    "cv_mots": 9.265,
+    "ecart_type_mots": 254.9,
+    "iqr_mots": 19.0,
+    "mediane_mots": 16.0,
+    "moyenne_mots": 27.51,
+    "nb_mots": 950183,
+    "nb_phrases": 34536,
+    "part_periodes_longues_pct": 30.28,
+    "part_phrases_moyennes_pct": 44.47,
+    "part_rafales_courtes_pct": 25.25,
+    "profil_rythmique": "periodes_amples",
+    "q25_mots": 8.0,
+    "q75_mots": 27.0,
+    "ratio_rafales_periodes": 0.834
+  },
+  "ngrammes_detail": {
+    "bigrammes": [
+      {
+        "log_odds": 1.0082,
+        "ngramme": "le monde",
+        "occurrences": 1066,
+        "occurrences_autres": 88,
+        "pour_1000_mots": 1.122,
+        "pour_1000_mots_autres": 0.441,
+        "taille": 2,
+        "z_score": 9.129
+      },
+      {
+        "log_odds": 1.3227,
+        "ngramme": "les gens",
+        "occurrences": 518,
+        "occurrences_autres": 31,
+        "pour_1000_mots": 0.545,
+        "pour_1000_mots_autres": 0.155,
+        "taille": 2,
+        "z_score": 7.208
+      },
+      {
+        "log_odds": 0.8114,
+        "ngramme": "si vous",
+        "occurrences": 666,
+        "occurrences_autres": 67,
+        "pour_1000_mots": 0.701,
+        "pour_1000_mots_autres": 0.336,
+        "taille": 2,
+        "z_score": 6.353
+      },
+      {
+        "log_odds": 0.425,
+        "ngramme": "nous avons",
+        "occurrences": 1462,
+        "occurrences_autres": 217,
+        "pour_1000_mots": 1.539,
+        "pour_1000_mots_autres": 1.088,
+        "taille": 2,
+        "z_score": 5.856
+      },
+      {
+        "log_odds": 1.8279,
+        "ngramme": "et cetera",
+        "occurrences": 286,
+        "occurrences_autres": 10,
+        "pour_1000_mots": 0.301,
+        "pour_1000_mots_autres": 0.05,
+        "taille": 2,
+        "z_score": 5.817
+      },
+      {
+        "log_odds": 1.3227,
+        "ngramme": "la guerre",
+        "occurrences": 337,
+        "occurrences_autres": 20,
+        "pour_1000_mots": 0.355,
+        "pour_1000_mots_autres": 0.1,
+        "taille": 2,
+        "z_score": 5.815
+      },
+      {
+        "log_odds": 1.4229,
+        "ngramme": "par conséquent",
+        "occurrences": 318,
+        "occurrences_autres": 17,
+        "pour_1000_mots": 0.335,
+        "pour_1000_mots_autres": 0.085,
+        "taille": 2,
+        "z_score": 5.795
+      },
+      {
+        "log_odds": 0.4999,
+        "ngramme": "nous sommes",
+        "occurrences": 1097,
+        "occurrences_autres": 151,
+        "pour_1000_mots": 1.155,
+        "pour_1000_mots_autres": 0.757,
+        "taille": 2,
+        "z_score": 5.774
+      },
+      {
+        "log_odds": 1.7361,
+        "ngramme": "ce pays",
+        "occurrences": 236,
+        "occurrences_autres": 9,
+        "pour_1000_mots": 0.248,
+        "pour_1000_mots_autres": 0.045,
+        "taille": 2,
+        "z_score": 5.247
+      },
+      {
+        "log_odds": 1.1897,
+        "ngramme": "états unis",
+        "occurrences": 295,
+        "occurrences_autres": 20,
+        "pour_1000_mots": 0.31,
+        "pour_1000_mots_autres": 0.1,
+        "taille": 2,
+        "z_score": 5.209
+      },
+      {
+        "log_odds": 0.8008,
+        "ngramme": "des gens",
+        "occurrences": 444,
+        "occurrences_autres": 45,
+        "pour_1000_mots": 0.467,
+        "pour_1000_mots_autres": 0.226,
+        "taille": 2,
+        "z_score": 5.145
+      },
+      {
+        "log_odds": 3.0962,
+        "ngramme": "êtres humains",
+        "occurrences": 242,
+        "occurrences_autres": 2,
+        "pour_1000_mots": 0.255,
+        "pour_1000_mots_autres": 0.01,
+        "taille": 2,
+        "z_score": 4.87
+      },
+      {
+        "log_odds": 1.3132,
+        "ngramme": "la production",
+        "occurrences": 236,
+        "occurrences_autres": 14,
+        "pour_1000_mots": 0.248,
+        "pour_1000_mots_autres": 0.07,
+        "taille": 2,
+        "z_score": 4.854
+      },
+      {
+        "log_odds": 0.7612,
+        "ngramme": "gens qui",
+        "occurrences": 408,
+        "occurrences_autres": 43,
+        "pour_1000_mots": 0.429,
+        "pour_1000_mots_autres": 0.216,
+        "taille": 2,
+        "z_score": 4.773
+      },
+      {
+        "log_odds": 1.438,
+        "ngramme": "la dette",
+        "occurrences": 212,
+        "occurrences_autres": 11,
+        "pour_1000_mots": 0.223,
+        "pour_1000_mots_autres": 0.055,
+        "taille": 2,
+        "z_score": 4.75
+      },
+      {
+        "log_odds": 1.878,
+        "ngramme": "chaque fois",
+        "occurrences": 186,
+        "occurrences_autres": 6,
+        "pour_1000_mots": 0.196,
+        "pour_1000_mots_autres": 0.03,
+        "taille": 2,
+        "z_score": 4.707
+      },
+      {
+        "log_odds": 2.2019,
+        "ngramme": "le moment",
+        "occurrences": 178,
+        "occurrences_autres": 4,
+        "pour_1000_mots": 0.187,
+        "pour_1000_mots_autres": 0.02,
+        "taille": 2,
+        "z_score": 4.613
+      },
+      {
+        "log_odds": 1.2916,
+        "ngramme": "le sujet",
+        "occurrences": 215,
+        "occurrences_autres": 13,
+        "pour_1000_mots": 0.226,
+        "pour_1000_mots_autres": 0.065,
+        "taille": 2,
+        "z_score": 4.604
+      },
+      {
+        "log_odds": 0.5089,
+        "ngramme": "vous êtes",
+        "occurrences": 660,
+        "occurrences_autres": 90,
+        "pour_1000_mots": 0.695,
+        "pour_1000_mots_autres": 0.451,
+        "taille": 2,
+        "z_score": 4.541
+      },
+      {
+        "log_odds": 1.3064,
+        "ngramme": "le reste",
+        "occurrences": 202,
+        "occurrences_autres": 12,
+        "pour_1000_mots": 0.213,
+        "pour_1000_mots_autres": 0.06,
+        "taille": 2,
+        "z_score": 4.482
+      }
+    ],
+    "methode": "log_odds_dirichlet_monroe_2008",
+    "nb_ngrammes_distinctifs": 60,
+    "top_distinctifs": [
+      {
+        "log_odds": 0.3081,
+        "ngramme": "vous",
+        "occurrences": 12261,
+        "occurrences_autres": 2079,
+        "pour_1000_mots": 12.904,
+        "pour_1000_mots_autres": 10.425,
+        "taille": 1,
+        "z_score": 13.034
+      },
+      {
+        "log_odds": 1.1363,
+        "ngramme": "gens",
+        "occurrences": 1453,
+        "occurrences_autres": 106,
+        "pour_1000_mots": 1.529,
+        "pour_1000_mots_autres": 0.532,
+        "taille": 1,
+        "z_score": 11.382
+      },
+      {
+        "log_odds": 0.2237,
+        "ngramme": "nous",
+        "occurrences": 12135,
+        "occurrences_autres": 2235,
+        "pour_1000_mots": 12.771,
+        "pour_1000_mots_autres": 11.207,
+        "taille": 1,
+        "z_score": 9.747
+      },
+      {
+        "log_odds": 0.7254,
+        "ngramme": "monde",
+        "occurrences": 1583,
+        "occurrences_autres": 175,
+        "pour_1000_mots": 1.666,
+        "pour_1000_mots_autres": 0.878,
+        "taille": 1,
+        "z_score": 9.154
+      },
+      {
+        "log_odds": 1.0082,
+        "ngramme": "le monde",
+        "occurrences": 1066,
+        "occurrences_autres": 88,
+        "pour_1000_mots": 1.122,
+        "pour_1000_mots_autres": 0.441,
+        "taille": 2,
+        "z_score": 9.129
+      },
+      {
+        "log_odds": 1.3121,
+        "ngramme": "tout le monde",
+        "occurrences": 786,
+        "occurrences_autres": 47,
+        "pour_1000_mots": 0.827,
+        "pour_1000_mots_autres": 0.236,
+        "taille": 3,
+        "z_score": 8.782
+      },
+      {
+        "log_odds": 0.8036,
+        "ngramme": "pourquoi",
+        "occurrences": 1273,
+        "occurrences_autres": 130,
+        "pour_1000_mots": 1.34,
+        "pour_1000_mots_autres": 0.652,
+        "taille": 1,
+        "z_score": 8.776
+      },
+      {
+        "log_odds": 1.0063,
+        "ngramme": "moment",
+        "occurrences": 818,
+        "occurrences_autres": 68,
+        "pour_1000_mots": 0.861,
+        "pour_1000_mots_autres": 0.341,
+        "taille": 1,
+        "z_score": 8.028
+      },
+      {
+        "log_odds": 1.2777,
+        "ngramme": "guerre",
+        "occurrences": 634,
+        "occurrences_autres": 40,
+        "pour_1000_mots": 0.667,
+        "pour_1000_mots_autres": 0.201,
+        "taille": 1,
+        "z_score": 7.908
+      },
+      {
+        "log_odds": 0.9441,
+        "ngramme": "accord",
+        "occurrences": 802,
+        "occurrences_autres": 71,
+        "pour_1000_mots": 0.844,
+        "pour_1000_mots_autres": 0.356,
+        "taille": 1,
+        "z_score": 7.674
+      },
+      {
+        "log_odds": 0.8095,
+        "ngramme": "chose",
+        "occurrences": 956,
+        "occurrences_autres": 97,
+        "pour_1000_mots": 1.006,
+        "pour_1000_mots_autres": 0.486,
+        "taille": 1,
+        "z_score": 7.639
+      },
+      {
+        "log_odds": 0.8238,
+        "ngramme": "comment",
+        "occurrences": 910,
+        "occurrences_autres": 91,
+        "pour_1000_mots": 0.958,
+        "pour_1000_mots_autres": 0.456,
+        "taille": 1,
+        "z_score": 7.536
+      },
+      {
+        "log_odds": 1.3227,
+        "ngramme": "les gens",
+        "occurrences": 518,
+        "occurrences_autres": 31,
+        "pour_1000_mots": 0.545,
+        "pour_1000_mots_autres": 0.155,
+        "taille": 2,
+        "z_score": 7.208
+      },
+      {
+        "log_odds": 0.5709,
+        "ngramme": "fois",
+        "occurrences": 1185,
+        "occurrences_autres": 153,
+        "pour_1000_mots": 1.247,
+        "pour_1000_mots_autres": 0.767,
+        "taille": 1,
+        "z_score": 6.675
+      },
+      {
+        "log_odds": 0.8777,
+        "ngramme": "idée",
+        "occurrences": 655,
+        "occurrences_autres": 62,
+        "pour_1000_mots": 0.689,
+        "pour_1000_mots_autres": 0.311,
+        "taille": 1,
+        "z_score": 6.645
+      },
+      {
+        "log_odds": 1.5659,
+        "ngramme": "ensuite",
+        "occurrences": 384,
+        "occurrences_autres": 18,
+        "pour_1000_mots": 0.404,
+        "pour_1000_mots_autres": 0.09,
+        "taille": 1,
+        "z_score": 6.579
+      },
+      {
+        "log_odds": 0.7984,
+        "ngramme": "manière",
+        "occurrences": 702,
+        "occurrences_autres": 72,
+        "pour_1000_mots": 0.739,
+        "pour_1000_mots_autres": 0.361,
+        "taille": 1,
+        "z_score": 6.488
+      },
+      {
+        "log_odds": 1.6214,
+        "ngramme": "instant",
+        "occurrences": 362,
+        "occurrences_autres": 16,
+        "pour_1000_mots": 0.381,
+        "pour_1000_mots_autres": 0.08,
+        "taille": 1,
+        "z_score": 6.441
+      },
+      {
+        "log_odds": 1.2841,
+        "ngramme": "production",
+        "occurrences": 415,
+        "occurrences_autres": 26,
+        "pour_1000_mots": 0.437,
+        "pour_1000_mots_autres": 0.13,
+        "taille": 1,
+        "z_score": 6.409
+      },
+      {
+        "log_odds": 0.8114,
+        "ngramme": "si vous",
+        "occurrences": 666,
+        "occurrences_autres": 67,
+        "pour_1000_mots": 0.701,
+        "pour_1000_mots_autres": 0.336,
+        "taille": 2,
+        "z_score": 6.353
+      },
+      {
+        "log_odds": 0.502,
+        "ngramme": "voilà",
+        "occurrences": 1149,
+        "occurrences_autres": 159,
+        "pour_1000_mots": 1.209,
+        "pour_1000_mots_autres": 0.797,
+        "taille": 1,
+        "z_score": 5.957
+      },
+      {
+        "log_odds": 1.8414,
+        "ngramme": "cetera",
+        "occurrences": 287,
+        "occurrences_autres": 10,
+        "pour_1000_mots": 0.302,
+        "pour_1000_mots_autres": 0.05,
+        "taille": 1,
+        "z_score": 5.861
+      },
+      {
+        "log_odds": 0.425,
+        "ngramme": "nous avons",
+        "occurrences": 1462,
+        "occurrences_autres": 217,
+        "pour_1000_mots": 1.539,
+        "pour_1000_mots_autres": 1.088,
+        "taille": 2,
+        "z_score": 5.856
+      },
+      {
+        "log_odds": 1.8279,
+        "ngramme": "et cetera",
+        "occurrences": 286,
+        "occurrences_autres": 10,
+        "pour_1000_mots": 0.301,
+        "pour_1000_mots_autres": 0.05,
+        "taille": 2,
+        "z_score": 5.817
+      },
+      {
+        "log_odds": 1.3227,
+        "ngramme": "la guerre",
+        "occurrences": 337,
+        "occurrences_autres": 20,
+        "pour_1000_mots": 0.355,
+        "pour_1000_mots_autres": 0.1,
+        "taille": 2,
+        "z_score": 5.815
+      },
+      {
+        "log_odds": 1.4229,
+        "ngramme": "par conséquent",
+        "occurrences": 318,
+        "occurrences_autres": 17,
+        "pour_1000_mots": 0.335,
+        "pour_1000_mots_autres": 0.085,
+        "taille": 2,
+        "z_score": 5.795
+      },
+      {
+        "log_odds": 0.4999,
+        "ngramme": "nous sommes",
+        "occurrences": 1097,
+        "occurrences_autres": 151,
+        "pour_1000_mots": 1.155,
+        "pour_1000_mots_autres": 0.757,
+        "taille": 2,
+        "z_score": 5.774
+      },
+      {
+        "log_odds": 1.5936,
+        "ngramme": "humains",
+        "occurrences": 288,
+        "occurrences_autres": 13,
+        "pour_1000_mots": 0.303,
+        "pour_1000_mots_autres": 0.065,
+        "taille": 1,
+        "z_score": 5.723
+      },
+      {
+        "log_odds": 1.7878,
+        "ngramme": "produit",
+        "occurrences": 272,
+        "occurrences_autres": 10,
+        "pour_1000_mots": 0.286,
+        "pour_1000_mots_autres": 0.05,
+        "taille": 1,
+        "z_score": 5.685
+      },
+      {
+        "log_odds": 1.7361,
+        "ngramme": "ce pays",
+        "occurrences": 236,
+        "occurrences_autres": 9,
+        "pour_1000_mots": 0.248,
+        "pour_1000_mots_autres": 0.045,
+        "taille": 2,
+        "z_score": 5.247
+      },
+      {
+        "log_odds": 1.1897,
+        "ngramme": "états unis",
+        "occurrences": 295,
+        "occurrences_autres": 20,
+        "pour_1000_mots": 0.31,
+        "pour_1000_mots_autres": 0.1,
+        "taille": 2,
+        "z_score": 5.209
+      },
+      {
+        "log_odds": 0.8008,
+        "ngramme": "des gens",
+        "occurrences": 444,
+        "occurrences_autres": 45,
+        "pour_1000_mots": 0.467,
+        "pour_1000_mots_autres": 0.226,
+        "taille": 2,
+        "z_score": 5.145
+      },
+      {
+        "log_odds": 3.0962,
+        "ngramme": "êtres humains",
+        "occurrences": 242,
+        "occurrences_autres": 2,
+        "pour_1000_mots": 0.255,
+        "pour_1000_mots_autres": 0.01,
+        "taille": 2,
+        "z_score": 4.87
+      },
+      {
+        "log_odds": 1.3132,
+        "ngramme": "la production",
+        "occurrences": 236,
+        "occurrences_autres": 14,
+        "pour_1000_mots": 0.248,
+        "pour_1000_mots_autres": 0.07,
+        "taille": 2,
+        "z_score": 4.854
+      },
+      {
+        "log_odds": 0.7612,
+        "ngramme": "gens qui",
+        "occurrences": 408,
+        "occurrences_autres": 43,
+        "pour_1000_mots": 0.429,
+        "pour_1000_mots_autres": 0.216,
+        "taille": 2,
+        "z_score": 4.773
+      },
+      {
+        "log_odds": 1.438,
+        "ngramme": "la dette",
+        "occurrences": 212,
+        "occurrences_autres": 11,
+        "pour_1000_mots": 0.223,
+        "pour_1000_mots_autres": 0.055,
+        "taille": 2,
+        "z_score": 4.75
+      },
+      {
+        "log_odds": 1.878,
+        "ngramme": "chaque fois",
+        "occurrences": 186,
+        "occurrences_autres": 6,
+        "pour_1000_mots": 0.196,
+        "pour_1000_mots_autres": 0.03,
+        "taille": 2,
+        "z_score": 4.707
+      },
+      {
+        "log_odds": 2.2019,
+        "ngramme": "le moment",
+        "occurrences": 178,
+        "occurrences_autres": 4,
+        "pour_1000_mots": 0.187,
+        "pour_1000_mots_autres": 0.02,
+        "taille": 2,
+        "z_score": 4.613
+      },
+      {
+        "log_odds": 1.2916,
+        "ngramme": "le sujet",
+        "occurrences": 215,
+        "occurrences_autres": 13,
+        "pour_1000_mots": 0.226,
+        "pour_1000_mots_autres": 0.065,
+        "taille": 2,
+        "z_score": 4.604
+      },
+      {
+        "log_odds": 0.5089,
+        "ngramme": "vous êtes",
+        "occurrences": 660,
+        "occurrences_autres": 90,
+        "pour_1000_mots": 0.695,
+        "pour_1000_mots_autres": 0.451,
+        "taille": 2,
+        "z_score": 4.541
+      },
+      {
+        "log_odds": 1.3064,
+        "ngramme": "le reste",
+        "occurrences": 202,
+        "occurrences_autres": 12,
+        "pour_1000_mots": 0.213,
+        "pour_1000_mots_autres": 0.06,
+        "taille": 2,
+        "z_score": 4.482
+      },
+      {
+        "log_odds": 1.4602,
+        "ngramme": "je ne sais",
+        "occurrences": 182,
+        "occurrences_autres": 9,
+        "pour_1000_mots": 0.192,
+        "pour_1000_mots_autres": 0.045,
+        "taille": 3,
+        "z_score": 4.388
+      },
+      {
+        "log_odds": 3.4101,
+        "ngramme": "états unis amérique",
+        "occurrences": 202,
+        "occurrences_autres": 1,
+        "pour_1000_mots": 0.213,
+        "pour_1000_mots_autres": 0.005,
+        "taille": 3,
+        "z_score": 4.161
+      },
+      {
+        "log_odds": 0.6118,
+        "ngramme": "ce que vous",
+        "occurrences": 423,
+        "occurrences_autres": 51,
+        "pour_1000_mots": 0.445,
+        "pour_1000_mots_autres": 0.256,
+        "taille": 3,
+        "z_score": 4.145
+      },
+      {
+        "log_odds": 0.685,
+        "ngramme": "ce que nous",
+        "occurrences": 349,
+        "occurrences_autres": 39,
+        "pour_1000_mots": 0.367,
+        "pour_1000_mots_autres": 0.196,
+        "taille": 3,
+        "z_score": 4.08
+      }
+    ],
+    "trigrammes": [
+      {
+        "log_odds": 1.3121,
+        "ngramme": "tout le monde",
+        "occurrences": 786,
+        "occurrences_autres": 47,
+        "pour_1000_mots": 0.827,
+        "pour_1000_mots_autres": 0.236,
+        "taille": 3,
+        "z_score": 8.782
+      },
+      {
+        "log_odds": 1.4602,
+        "ngramme": "je ne sais",
+        "occurrences": 182,
+        "occurrences_autres": 9,
+        "pour_1000_mots": 0.192,
+        "pour_1000_mots_autres": 0.045,
+        "taille": 3,
+        "z_score": 4.388
+      },
+      {
+        "log_odds": 3.4101,
+        "ngramme": "états unis amérique",
+        "occurrences": 202,
+        "occurrences_autres": 1,
+        "pour_1000_mots": 0.213,
+        "pour_1000_mots_autres": 0.005,
+        "taille": 3,
+        "z_score": 4.161
+      },
+      {
+        "log_odds": 0.6118,
+        "ngramme": "ce que vous",
+        "occurrences": 423,
+        "occurrences_autres": 51,
+        "pour_1000_mots": 0.445,
+        "pour_1000_mots_autres": 0.256,
+        "taille": 3,
+        "z_score": 4.145
+      },
+      {
+        "log_odds": 0.685,
+        "ngramme": "ce que nous",
+        "occurrences": 349,
+        "occurrences_autres": 39,
+        "pour_1000_mots": 0.367,
+        "pour_1000_mots_autres": 0.196,
+        "taille": 3,
+        "z_score": 4.08
+      },
+      {
+        "log_odds": 1.7522,
+        "ngramme": "est pas vrai",
+        "occurrences": 141,
+        "occurrences_autres": 5,
+        "pour_1000_mots": 0.148,
+        "pour_1000_mots_autres": 0.025,
+        "taille": 3,
+        "z_score": 4.032
+      },
+      {
+        "log_odds": 0.614,
+        "ngramme": "en train de",
+        "occurrences": 391,
+        "occurrences_autres": 47,
+        "pour_1000_mots": 0.411,
+        "pour_1000_mots_autres": 0.236,
+        "taille": 3,
+        "z_score": 3.996
+      },
+      {
+        "log_odds": 2.1156,
+        "ngramme": "et cetera et",
+        "occurrences": 129,
+        "occurrences_autres": 3,
+        "pour_1000_mots": 0.136,
+        "pour_1000_mots_autres": 0.015,
+        "taille": 3,
+        "z_score": 3.905
+      },
+      {
+        "log_odds": 1.2316,
+        "ngramme": "les états unis",
+        "occurrences": 160,
+        "occurrences_autres": 10,
+        "pour_1000_mots": 0.168,
+        "pour_1000_mots_autres": 0.05,
+        "taille": 3,
+        "z_score": 3.866
+      },
+      {
+        "log_odds": 2.3633,
+        "ngramme": "la première fois",
+        "occurrences": 118,
+        "occurrences_autres": 2,
+        "pour_1000_mots": 0.124,
+        "pour_1000_mots_autres": 0.01,
+        "taille": 3,
+        "z_score": 3.698
+      },
+      {
+        "log_odds": 0.9315,
+        "ngramme": "tous ceux qui",
+        "occurrences": 175,
+        "occurrences_autres": 15,
+        "pour_1000_mots": 0.184,
+        "pour_1000_mots_autres": 0.075,
+        "taille": 3,
+        "z_score": 3.515
+      },
+      {
+        "log_odds": 2.2279,
+        "ngramme": "cetera et cetera",
+        "occurrences": 103,
+        "occurrences_autres": 2,
+        "pour_1000_mots": 0.108,
+        "pour_1000_mots_autres": 0.01,
+        "taille": 3,
+        "z_score": 3.481
+      },
+      {
+        "log_odds": 1.2037,
+        "ngramme": "nous avons besoin",
+        "occurrences": 111,
+        "occurrences_autres": 7,
+        "pour_1000_mots": 0.117,
+        "pour_1000_mots_autres": 0.035,
+        "taille": 3,
+        "z_score": 3.191
+      },
+      {
+        "log_odds": 1.3797,
+        "ngramme": "je viens de",
+        "occurrences": 97,
+        "occurrences_autres": 5,
+        "pour_1000_mots": 0.102,
+        "pour_1000_mots_autres": 0.025,
+        "taille": 3,
+        "z_score": 3.148
+      },
+      {
+        "log_odds": 1.9766,
+        "ngramme": "ne sais pas",
+        "occurrences": 80,
+        "occurrences_autres": 2,
+        "pour_1000_mots": 0.084,
+        "pour_1000_mots_autres": 0.01,
+        "taille": 3,
+        "z_score": 3.078
+      },
+      {
+        "log_odds": 1.3378,
+        "ngramme": "que les gens",
+        "occurrences": 93,
+        "occurrences_autres": 5,
+        "pour_1000_mots": 0.098,
+        "pour_1000_mots_autres": 0.025,
+        "taille": 3,
+        "z_score": 3.049
+      },
+      {
+        "log_odds": 0.6485,
+        "ngramme": "des gens qui",
+        "occurrences": 200,
+        "occurrences_autres": 23,
+        "pour_1000_mots": 0.21,
+        "pour_1000_mots_autres": 0.115,
+        "taille": 3,
+        "z_score": 2.974
+      },
+      {
+        "log_odds": 1.6149,
+        "ngramme": "de la production",
+        "occurrences": 78,
+        "occurrences_autres": 3,
+        "pour_1000_mots": 0.082,
+        "pour_1000_mots_autres": 0.015,
+        "taille": 3,
+        "z_score": 2.956
+      },
+      {
+        "log_odds": 1.8719,
+        "ngramme": "nouveau front populaire",
+        "occurrences": 72,
+        "occurrences_autres": 2,
+        "pour_1000_mots": 0.076,
+        "pour_1000_mots_autres": 0.01,
+        "taille": 3,
+        "z_score": 2.91
+      },
+      {
+        "log_odds": 2.3113,
+        "ngramme": "ma part je",
+        "occurrences": 67,
+        "occurrences_autres": 1,
+        "pour_1000_mots": 0.071,
+        "pour_1000_mots_autres": 0.005,
+        "taille": 3,
+        "z_score": 2.8
+      }
+    ],
+    "unigrammes": [
+      {
+        "log_odds": 0.3081,
+        "ngramme": "vous",
+        "occurrences": 12261,
+        "occurrences_autres": 2079,
+        "pour_1000_mots": 12.904,
+        "pour_1000_mots_autres": 10.425,
+        "taille": 1,
+        "z_score": 13.034
+      },
+      {
+        "log_odds": 1.1363,
+        "ngramme": "gens",
+        "occurrences": 1453,
+        "occurrences_autres": 106,
+        "pour_1000_mots": 1.529,
+        "pour_1000_mots_autres": 0.532,
+        "taille": 1,
+        "z_score": 11.382
+      },
+      {
+        "log_odds": 0.2237,
+        "ngramme": "nous",
+        "occurrences": 12135,
+        "occurrences_autres": 2235,
+        "pour_1000_mots": 12.771,
+        "pour_1000_mots_autres": 11.207,
+        "taille": 1,
+        "z_score": 9.747
+      },
+      {
+        "log_odds": 0.7254,
+        "ngramme": "monde",
+        "occurrences": 1583,
+        "occurrences_autres": 175,
+        "pour_1000_mots": 1.666,
+        "pour_1000_mots_autres": 0.878,
+        "taille": 1,
+        "z_score": 9.154
+      },
+      {
+        "log_odds": 0.8036,
+        "ngramme": "pourquoi",
+        "occurrences": 1273,
+        "occurrences_autres": 130,
+        "pour_1000_mots": 1.34,
+        "pour_1000_mots_autres": 0.652,
+        "taille": 1,
+        "z_score": 8.776
+      },
+      {
+        "log_odds": 1.0063,
+        "ngramme": "moment",
+        "occurrences": 818,
+        "occurrences_autres": 68,
+        "pour_1000_mots": 0.861,
+        "pour_1000_mots_autres": 0.341,
+        "taille": 1,
+        "z_score": 8.028
+      },
+      {
+        "log_odds": 1.2777,
+        "ngramme": "guerre",
+        "occurrences": 634,
+        "occurrences_autres": 40,
+        "pour_1000_mots": 0.667,
+        "pour_1000_mots_autres": 0.201,
+        "taille": 1,
+        "z_score": 7.908
+      },
+      {
+        "log_odds": 0.9441,
+        "ngramme": "accord",
+        "occurrences": 802,
+        "occurrences_autres": 71,
+        "pour_1000_mots": 0.844,
+        "pour_1000_mots_autres": 0.356,
+        "taille": 1,
+        "z_score": 7.674
+      },
+      {
+        "log_odds": 0.8095,
+        "ngramme": "chose",
+        "occurrences": 956,
+        "occurrences_autres": 97,
+        "pour_1000_mots": 1.006,
+        "pour_1000_mots_autres": 0.486,
+        "taille": 1,
+        "z_score": 7.639
+      },
+      {
+        "log_odds": 0.8238,
+        "ngramme": "comment",
+        "occurrences": 910,
+        "occurrences_autres": 91,
+        "pour_1000_mots": 0.958,
+        "pour_1000_mots_autres": 0.456,
+        "taille": 1,
+        "z_score": 7.536
+      },
+      {
+        "log_odds": 0.5709,
+        "ngramme": "fois",
+        "occurrences": 1185,
+        "occurrences_autres": 153,
+        "pour_1000_mots": 1.247,
+        "pour_1000_mots_autres": 0.767,
+        "taille": 1,
+        "z_score": 6.675
+      },
+      {
+        "log_odds": 0.8777,
+        "ngramme": "idée",
+        "occurrences": 655,
+        "occurrences_autres": 62,
+        "pour_1000_mots": 0.689,
+        "pour_1000_mots_autres": 0.311,
+        "taille": 1,
+        "z_score": 6.645
+      },
+      {
+        "log_odds": 1.5659,
+        "ngramme": "ensuite",
+        "occurrences": 384,
+        "occurrences_autres": 18,
+        "pour_1000_mots": 0.404,
+        "pour_1000_mots_autres": 0.09,
+        "taille": 1,
+        "z_score": 6.579
+      },
+      {
+        "log_odds": 0.7984,
+        "ngramme": "manière",
+        "occurrences": 702,
+        "occurrences_autres": 72,
+        "pour_1000_mots": 0.739,
+        "pour_1000_mots_autres": 0.361,
+        "taille": 1,
+        "z_score": 6.488
+      },
+      {
+        "log_odds": 1.6214,
+        "ngramme": "instant",
+        "occurrences": 362,
+        "occurrences_autres": 16,
+        "pour_1000_mots": 0.381,
+        "pour_1000_mots_autres": 0.08,
+        "taille": 1,
+        "z_score": 6.441
+      },
+      {
+        "log_odds": 1.2841,
+        "ngramme": "production",
+        "occurrences": 415,
+        "occurrences_autres": 26,
+        "pour_1000_mots": 0.437,
+        "pour_1000_mots_autres": 0.13,
+        "taille": 1,
+        "z_score": 6.409
+      },
+      {
+        "log_odds": 0.502,
+        "ngramme": "voilà",
+        "occurrences": 1149,
+        "occurrences_autres": 159,
+        "pour_1000_mots": 1.209,
+        "pour_1000_mots_autres": 0.797,
+        "taille": 1,
+        "z_score": 5.957
+      },
+      {
+        "log_odds": 1.8414,
+        "ngramme": "cetera",
+        "occurrences": 287,
+        "occurrences_autres": 10,
+        "pour_1000_mots": 0.302,
+        "pour_1000_mots_autres": 0.05,
+        "taille": 1,
+        "z_score": 5.861
+      },
+      {
+        "log_odds": 1.5936,
+        "ngramme": "humains",
+        "occurrences": 288,
+        "occurrences_autres": 13,
+        "pour_1000_mots": 0.303,
+        "pour_1000_mots_autres": 0.065,
+        "taille": 1,
+        "z_score": 5.723
+      },
+      {
+        "log_odds": 1.7878,
+        "ngramme": "produit",
+        "occurrences": 272,
+        "occurrences_autres": 10,
+        "pour_1000_mots": 0.286,
+        "pour_1000_mots_autres": 0.05,
+        "taille": 1,
+        "z_score": 5.685
+      }
+    ]
+  },
+  "ngrammes_signature": [
+    {
+      "log_odds": 0.3081,
+      "ngramme": "vous",
+      "occurrences": 12261,
+      "occurrences_autres": 2079,
+      "pour_1000_mots": 12.904,
+      "pour_1000_mots_autres": 10.425,
+      "taille": 1,
+      "z_score": 13.034
+    },
+    {
+      "log_odds": 1.1363,
+      "ngramme": "gens",
+      "occurrences": 1453,
+      "occurrences_autres": 106,
+      "pour_1000_mots": 1.529,
+      "pour_1000_mots_autres": 0.532,
+      "taille": 1,
+      "z_score": 11.382
+    },
+    {
+      "log_odds": 0.2237,
+      "ngramme": "nous",
+      "occurrences": 12135,
+      "occurrences_autres": 2235,
+      "pour_1000_mots": 12.771,
+      "pour_1000_mots_autres": 11.207,
+      "taille": 1,
+      "z_score": 9.747
+    },
+    {
+      "log_odds": 0.7254,
+      "ngramme": "monde",
+      "occurrences": 1583,
+      "occurrences_autres": 175,
+      "pour_1000_mots": 1.666,
+      "pour_1000_mots_autres": 0.878,
+      "taille": 1,
+      "z_score": 9.154
+    },
+    {
+      "log_odds": 1.0082,
+      "ngramme": "le monde",
+      "occurrences": 1066,
+      "occurrences_autres": 88,
+      "pour_1000_mots": 1.122,
+      "pour_1000_mots_autres": 0.441,
+      "taille": 2,
+      "z_score": 9.129
+    },
+    {
+      "log_odds": 1.3121,
+      "ngramme": "tout le monde",
+      "occurrences": 786,
+      "occurrences_autres": 47,
+      "pour_1000_mots": 0.827,
+      "pour_1000_mots_autres": 0.236,
+      "taille": 3,
+      "z_score": 8.782
+    },
+    {
+      "log_odds": 0.8036,
+      "ngramme": "pourquoi",
+      "occurrences": 1273,
+      "occurrences_autres": 130,
+      "pour_1000_mots": 1.34,
+      "pour_1000_mots_autres": 0.652,
+      "taille": 1,
+      "z_score": 8.776
+    },
+    {
+      "log_odds": 1.0063,
+      "ngramme": "moment",
+      "occurrences": 818,
+      "occurrences_autres": 68,
+      "pour_1000_mots": 0.861,
+      "pour_1000_mots_autres": 0.341,
+      "taille": 1,
+      "z_score": 8.028
+    },
+    {
+      "log_odds": 1.2777,
+      "ngramme": "guerre",
+      "occurrences": 634,
+      "occurrences_autres": 40,
+      "pour_1000_mots": 0.667,
+      "pour_1000_mots_autres": 0.201,
+      "taille": 1,
+      "z_score": 7.908
+    },
+    {
+      "log_odds": 0.9441,
+      "ngramme": "accord",
+      "occurrences": 802,
+      "occurrences_autres": 71,
+      "pour_1000_mots": 0.844,
+      "pour_1000_mots_autres": 0.356,
+      "taille": 1,
+      "z_score": 7.674
+    },
+    {
+      "log_odds": 0.8095,
+      "ngramme": "chose",
+      "occurrences": 956,
+      "occurrences_autres": 97,
+      "pour_1000_mots": 1.006,
+      "pour_1000_mots_autres": 0.486,
+      "taille": 1,
+      "z_score": 7.639
+    },
+    {
+      "log_odds": 0.8238,
+      "ngramme": "comment",
+      "occurrences": 910,
+      "occurrences_autres": 91,
+      "pour_1000_mots": 0.958,
+      "pour_1000_mots_autres": 0.456,
+      "taille": 1,
+      "z_score": 7.536
+    },
+    {
+      "log_odds": 1.3227,
+      "ngramme": "les gens",
+      "occurrences": 518,
+      "occurrences_autres": 31,
+      "pour_1000_mots": 0.545,
+      "pour_1000_mots_autres": 0.155,
+      "taille": 2,
+      "z_score": 7.208
+    },
+    {
+      "log_odds": 0.5709,
+      "ngramme": "fois",
+      "occurrences": 1185,
+      "occurrences_autres": 153,
+      "pour_1000_mots": 1.247,
+      "pour_1000_mots_autres": 0.767,
+      "taille": 1,
+      "z_score": 6.675
+    },
+    {
+      "log_odds": 0.8777,
+      "ngramme": "idée",
+      "occurrences": 655,
+      "occurrences_autres": 62,
+      "pour_1000_mots": 0.689,
+      "pour_1000_mots_autres": 0.311,
+      "taille": 1,
+      "z_score": 6.645
+    },
+    {
+      "log_odds": 1.5659,
+      "ngramme": "ensuite",
+      "occurrences": 384,
+      "occurrences_autres": 18,
+      "pour_1000_mots": 0.404,
+      "pour_1000_mots_autres": 0.09,
+      "taille": 1,
+      "z_score": 6.579
+    },
+    {
+      "log_odds": 0.7984,
+      "ngramme": "manière",
+      "occurrences": 702,
+      "occurrences_autres": 72,
+      "pour_1000_mots": 0.739,
+      "pour_1000_mots_autres": 0.361,
+      "taille": 1,
+      "z_score": 6.488
+    },
+    {
+      "log_odds": 1.6214,
+      "ngramme": "instant",
+      "occurrences": 362,
+      "occurrences_autres": 16,
+      "pour_1000_mots": 0.381,
+      "pour_1000_mots_autres": 0.08,
+      "taille": 1,
+      "z_score": 6.441
+    },
+    {
+      "log_odds": 1.2841,
+      "ngramme": "production",
+      "occurrences": 415,
+      "occurrences_autres": 26,
+      "pour_1000_mots": 0.437,
+      "pour_1000_mots_autres": 0.13,
+      "taille": 1,
+      "z_score": 6.409
+    },
+    {
+      "log_odds": 0.8114,
+      "ngramme": "si vous",
+      "occurrences": 666,
+      "occurrences_autres": 67,
+      "pour_1000_mots": 0.701,
+      "pour_1000_mots_autres": 0.336,
+      "taille": 2,
+      "z_score": 6.353
+    },
+    {
+      "log_odds": 0.502,
+      "ngramme": "voilà",
+      "occurrences": 1149,
+      "occurrences_autres": 159,
+      "pour_1000_mots": 1.209,
+      "pour_1000_mots_autres": 0.797,
+      "taille": 1,
+      "z_score": 5.957
+    },
+    {
+      "log_odds": 1.8414,
+      "ngramme": "cetera",
+      "occurrences": 287,
+      "occurrences_autres": 10,
+      "pour_1000_mots": 0.302,
+      "pour_1000_mots_autres": 0.05,
+      "taille": 1,
+      "z_score": 5.861
+    },
+    {
+      "log_odds": 0.425,
+      "ngramme": "nous avons",
+      "occurrences": 1462,
+      "occurrences_autres": 217,
+      "pour_1000_mots": 1.539,
+      "pour_1000_mots_autres": 1.088,
+      "taille": 2,
+      "z_score": 5.856
+    },
+    {
+      "log_odds": 1.8279,
+      "ngramme": "et cetera",
+      "occurrences": 286,
+      "occurrences_autres": 10,
+      "pour_1000_mots": 0.301,
+      "pour_1000_mots_autres": 0.05,
+      "taille": 2,
+      "z_score": 5.817
+    },
+    {
+      "log_odds": 1.3227,
+      "ngramme": "la guerre",
+      "occurrences": 337,
+      "occurrences_autres": 20,
+      "pour_1000_mots": 0.355,
+      "pour_1000_mots_autres": 0.1,
+      "taille": 2,
+      "z_score": 5.815
+    },
+    {
+      "log_odds": 1.4229,
+      "ngramme": "par conséquent",
+      "occurrences": 318,
+      "occurrences_autres": 17,
+      "pour_1000_mots": 0.335,
+      "pour_1000_mots_autres": 0.085,
+      "taille": 2,
+      "z_score": 5.795
+    },
+    {
+      "log_odds": 0.4999,
+      "ngramme": "nous sommes",
+      "occurrences": 1097,
+      "occurrences_autres": 151,
+      "pour_1000_mots": 1.155,
+      "pour_1000_mots_autres": 0.757,
+      "taille": 2,
+      "z_score": 5.774
+    },
+    {
+      "log_odds": 1.5936,
+      "ngramme": "humains",
+      "occurrences": 288,
+      "occurrences_autres": 13,
+      "pour_1000_mots": 0.303,
+      "pour_1000_mots_autres": 0.065,
+      "taille": 1,
+      "z_score": 5.723
+    },
+    {
+      "log_odds": 1.7878,
+      "ngramme": "produit",
+      "occurrences": 272,
+      "occurrences_autres": 10,
+      "pour_1000_mots": 0.286,
+      "pour_1000_mots_autres": 0.05,
+      "taille": 1,
+      "z_score": 5.685
+    },
+    {
+      "log_odds": 1.7361,
+      "ngramme": "ce pays",
+      "occurrences": 236,
+      "occurrences_autres": 9,
+      "pour_1000_mots": 0.248,
+      "pour_1000_mots_autres": 0.045,
+      "taille": 2,
+      "z_score": 5.247
+    },
+    {
+      "log_odds": 1.1897,
+      "ngramme": "états unis",
+      "occurrences": 295,
+      "occurrences_autres": 20,
+      "pour_1000_mots": 0.31,
+      "pour_1000_mots_autres": 0.1,
+      "taille": 2,
+      "z_score": 5.209
+    },
+    {
+      "log_odds": 0.8008,
+      "ngramme": "des gens",
+      "occurrences": 444,
+      "occurrences_autres": 45,
+      "pour_1000_mots": 0.467,
+      "pour_1000_mots_autres": 0.226,
+      "taille": 2,
+      "z_score": 5.145
+    },
+    {
+      "log_odds": 3.0962,
+      "ngramme": "êtres humains",
+      "occurrences": 242,
+      "occurrences_autres": 2,
+      "pour_1000_mots": 0.255,
+      "pour_1000_mots_autres": 0.01,
+      "taille": 2,
+      "z_score": 4.87
+    },
+    {
+      "log_odds": 1.3132,
+      "ngramme": "la production",
+      "occurrences": 236,
+      "occurrences_autres": 14,
+      "pour_1000_mots": 0.248,
+      "pour_1000_mots_autres": 0.07,
+      "taille": 2,
+      "z_score": 4.854
+    },
+    {
+      "log_odds": 0.7612,
+      "ngramme": "gens qui",
+      "occurrences": 408,
+      "occurrences_autres": 43,
+      "pour_1000_mots": 0.429,
+      "pour_1000_mots_autres": 0.216,
+      "taille": 2,
+      "z_score": 4.773
+    },
+    {
+      "log_odds": 1.438,
+      "ngramme": "la dette",
+      "occurrences": 212,
+      "occurrences_autres": 11,
+      "pour_1000_mots": 0.223,
+      "pour_1000_mots_autres": 0.055,
+      "taille": 2,
+      "z_score": 4.75
+    },
+    {
+      "log_odds": 1.878,
+      "ngramme": "chaque fois",
+      "occurrences": 186,
+      "occurrences_autres": 6,
+      "pour_1000_mots": 0.196,
+      "pour_1000_mots_autres": 0.03,
+      "taille": 2,
+      "z_score": 4.707
+    },
+    {
+      "log_odds": 2.2019,
+      "ngramme": "le moment",
+      "occurrences": 178,
+      "occurrences_autres": 4,
+      "pour_1000_mots": 0.187,
+      "pour_1000_mots_autres": 0.02,
+      "taille": 2,
+      "z_score": 4.613
+    },
+    {
+      "log_odds": 1.2916,
+      "ngramme": "le sujet",
+      "occurrences": 215,
+      "occurrences_autres": 13,
+      "pour_1000_mots": 0.226,
+      "pour_1000_mots_autres": 0.065,
+      "taille": 2,
+      "z_score": 4.604
+    },
+    {
+      "log_odds": 0.5089,
+      "ngramme": "vous êtes",
+      "occurrences": 660,
+      "occurrences_autres": 90,
+      "pour_1000_mots": 0.695,
+      "pour_1000_mots_autres": 0.451,
+      "taille": 2,
+      "z_score": 4.541
+    },
+    {
+      "log_odds": 1.3064,
+      "ngramme": "le reste",
+      "occurrences": 202,
+      "occurrences_autres": 12,
+      "pour_1000_mots": 0.213,
+      "pour_1000_mots_autres": 0.06,
+      "taille": 2,
+      "z_score": 4.482
+    },
+    {
+      "log_odds": 1.4602,
+      "ngramme": "je ne sais",
+      "occurrences": 182,
+      "occurrences_autres": 9,
+      "pour_1000_mots": 0.192,
+      "pour_1000_mots_autres": 0.045,
+      "taille": 3,
+      "z_score": 4.388
+    },
+    {
+      "log_odds": 3.4101,
+      "ngramme": "états unis amérique",
+      "occurrences": 202,
+      "occurrences_autres": 1,
+      "pour_1000_mots": 0.213,
+      "pour_1000_mots_autres": 0.005,
+      "taille": 3,
+      "z_score": 4.161
+    },
+    {
+      "log_odds": 0.6118,
+      "ngramme": "ce que vous",
+      "occurrences": 423,
+      "occurrences_autres": 51,
+      "pour_1000_mots": 0.445,
+      "pour_1000_mots_autres": 0.256,
+      "taille": 3,
+      "z_score": 4.145
+    },
+    {
+      "log_odds": 0.685,
+      "ngramme": "ce que nous",
+      "occurrences": 349,
+      "occurrences_autres": 39,
+      "pour_1000_mots": 0.367,
+      "pour_1000_mots_autres": 0.196,
+      "taille": 3,
+      "z_score": 4.08
+    }
+  ],
+  "par_situation": {
+    "allocution": {
+      "formules_adresse": {
+        "formules": [
+          {
+            "formule": "écoutez",
+            "occurrences": 110,
+            "pour_1000_mots": 0.29
+          },
+          {
+            "formule": "allons",
+            "occurrences": 108,
+            "pour_1000_mots": 0.29
+          },
+          {
+            "formule": "regardez",
+            "occurrences": 55,
+            "pour_1000_mots": 0.15
+          },
+          {
+            "formule": "camarades",
+            "occurrences": 52,
+            "pour_1000_mots": 0.14
+          },
+          {
+            "formule": "voyez-vous",
+            "occurrences": 40,
+            "pour_1000_mots": 0.11
+          },
+          {
+            "formule": "figurez-vous",
+            "occurrences": 22,
+            "pour_1000_mots": 0.06
+          },
+          {
+            "formule": "imaginez",
+            "occurrences": 21,
+            "pour_1000_mots": 0.06
+          },
+          {
+            "formule": "mes amis",
+            "occurrences": 21,
+            "pour_1000_mots": 0.06
+          },
+          {
+            "formule": "mesdames messieurs",
+            "occurrences": 21,
+            "pour_1000_mots": 0.06
+          },
+          {
+            "formule": "croyez-moi",
+            "occurrences": 3,
+            "pour_1000_mots": 0.01
+          },
+          {
+            "formule": "monsieur le président",
+            "occurrences": 3,
+            "pour_1000_mots": 0.01
+          },
+          {
+            "formule": "permettez-moi",
+            "occurrences": 3,
+            "pour_1000_mots": 0.01
+          },
+          {
+            "formule": "chers amis",
+            "occurrences": 2,
+            "pour_1000_mots": 0.01
+          },
+          {
+            "formule": "chers collègues",
+            "occurrences": 2,
+            "pour_1000_mots": 0.01
+          },
+          {
+            "formule": "mesdames et messieurs",
+            "occurrences": 2,
+            "pour_1000_mots": 0.01
+          },
+          {
+            "formule": "chers compatriotes",
+            "occurrences": 1,
+            "pour_1000_mots": 0.0
+          },
+          {
+            "formule": "madame la ministre",
+            "occurrences": 1,
+            "pour_1000_mots": 0.0
+          },
+          {
+            "formule": "mes chers compatriotes",
+            "occurrences": 1,
+            "pour_1000_mots": 0.0
+          },
+          {
+            "formule": "monsieur le député",
+            "occurrences": 1,
+            "pour_1000_mots": 0.0
+          },
+          {
+            "formule": "monsieur le ministre",
+            "occurrences": 1,
+            "pour_1000_mots": 0.0
+          },
+          {
+            "formule": "rassurez-vous",
+            "occurrences": 1,
+            "pour_1000_mots": 0.0
+          }
+        ],
+        "taux_pour_1000_mots": 1.26,
+        "total_occurrences": 471
+      },
+      "formules_ouverture": {
+        "nb_prises_analysees": 928,
+        "repartition_categories": {
+          "adresse_institutionnelle": {
+            "occurrences": 5,
+            "part_pct": 0.54
+          },
+          "affirmation_personnelle_ou_collective": {
+            "occurrences": 73,
+            "part_pct": 7.87
+          },
+          "attaque_ou_contradiction": {
+            "occurrences": 59,
+            "part_pct": 6.36
+          },
+          "explicative_ou_narrative": {
+            "occurrences": 663,
+            "part_pct": 71.44
+          },
+          "prise_a_temoin_ou_injonction": {
+            "occurrences": 68,
+            "part_pct": 7.33
+          },
+          "question_initiale": {
+            "occurrences": 60,
+            "part_pct": 6.47
+          }
+        },
+        "top_amorces": [
+          {
+            "amorce": "et c est",
+            "exemple": "Et c'est alors que toutes sortes de gens qui avaient été assez assez assez superficiels et désinvoltes pour proposer ...",
+            "occurrences": 9,
+            "part_prises_pct": 0.97
+          },
+          {
+            "amorce": "il y a",
+            "exemple": "Il y a eu encore euh des débordements, notamment aujourd'hui à place de la République, des casseurs en majorité qui é...",
+            "occurrences": 9,
+            "part_prises_pct": 0.97
+          },
+          {
+            "amorce": "c est à",
+            "exemple": "C'est-à-dire en compétition, en opposition, c'est moi le meilleur et que je te baisse les coûts sociaux et que je te ...",
+            "occurrences": 8,
+            "part_prises_pct": 0.86
+          },
+          {
+            "amorce": "c est pas",
+            "exemple": "C'est pas tout de donner des ordres.",
+            "occurrences": 6,
+            "part_prises_pct": 0.65
+          },
+          {
+            "amorce": "si bien que",
+            "exemple": "Si bien que moi j'attends de lui qu'il fasse ça demain, qu'il ne joue plus le pourrissement, qu'il le comprenne.",
+            "occurrences": 6,
+            "part_prises_pct": 0.65
+          },
+          {
+            "amorce": "voilà",
+            "exemple": "Voilà.",
+            "occurrences": 6,
+            "part_prises_pct": 0.65
+          },
+          {
+            "amorce": "c est le",
+            "exemple": "C'est le 26 septembre, la marche climat, ce samedi, le 29, la manifestation sur la fonction publique qui est euh bien...",
+            "occurrences": 5,
+            "part_prises_pct": 0.54
+          },
+          {
+            "amorce": "ce n est",
+            "exemple": "Ce n'est pas les deux épisodes ou plutôt l'unique épisode.",
+            "occurrences": 5,
+            "part_prises_pct": 0.54
+          },
+          {
+            "amorce": "est ce que",
+            "exemple": "Est-ce que vous connaissez un seul responsable syndical ou politique qui en ait fait autant que moi dans ce ?",
+            "occurrences": 4,
+            "part_prises_pct": 0.43
+          },
+          {
+            "amorce": "qu est ce",
+            "exemple": "Qu'est-ce que vous êtes en train de faire ?",
+            "occurrences": 4,
+            "part_prises_pct": 0.43
+          },
+          {
+            "amorce": "ça c est",
+            "exemple": "Ça c'est 1971, mais dès 1972 avec la rencontre entre Nixon et Mazedung, une autre organisation s'est mise en place qu...",
+            "occurrences": 4,
+            "part_prises_pct": 0.43
+          },
+          {
+            "amorce": "c est ce",
+            "exemple": "C'est ce que fait monsieur Macron.",
+            "occurrences": 3,
+            "part_prises_pct": 0.32
+          },
+          {
+            "amorce": "c est la",
+            "exemple": "C'est la question de qui est le sujet de l'histoire.",
+            "occurrences": 3,
+            "part_prises_pct": 0.32
+          },
+          {
+            "amorce": "donc c est",
+            "exemple": "Donc c'est un calcul politique en réalité.",
+            "occurrences": 3,
+            "part_prises_pct": 0.32
+          },
+          {
+            "amorce": "en ce moment",
+            "exemple": "en ce moment se discute à l'assemblée des choses très importantes pour la vie du pays d'abord le budget de l'État c'e...",
+            "occurrences": 3,
+            "part_prises_pct": 0.32
+          }
+        ]
+      },
+      "longueur_phrases": {
+        "cv_mots": 10.407,
+        "ecart_type_mots": 458.15,
+        "iqr_mots": 16.0,
+        "mediane_mots": 14.0,
+        "moyenne_mots": 44.02,
+        "nb_mots": 374807,
+        "nb_phrases": 8514,
+        "part_periodes_longues_pct": 24.45,
+        "part_phrases_moyennes_pct": 45.84,
+        "part_rafales_courtes_pct": 29.7,
+        "profil_rythmique": "alternance_rafales_periodes",
+        "q25_mots": 8.0,
+        "q75_mots": 24.0,
+        "ratio_rafales_periodes": 1.215
+      },
+      "nb_interventions": 929,
+      "nb_mots": 374807,
+      "nb_phrases": 8514,
+      "ponctuation_et_syntaxe": {
+        "exclamations_pour_1000_mots": 0.07,
+        "nb_exclamations": 26,
+        "nb_phrases_nominales": 940,
+        "nb_questions": 792,
+        "questions_pour_1000_mots": 2.11,
+        "taux_exclamations_pct": 0.31,
+        "taux_phrases_nominales_pct": 11.04,
+        "taux_questions_pct": 9.3
+      },
+      "pronoms": {
+        "francais_tous_contextes": {
+          "occurrences": 459,
+          "pour_1000_mots": 1.22
+        },
+        "je": {
+          "occurrences": 5074,
+          "part_pct": 26.64,
+          "pour_1000_mots": 13.54
+        },
+        "les Français": {
+          "occurrences": 160,
+          "part_pct": 0.84,
+          "pour_1000_mots": 0.43
+        },
+        "les_francais": {
+          "occurrences": 160,
+          "part_pct": 0.84,
+          "pour_1000_mots": 0.43
+        },
+        "nous": {
+          "occurrences": 4011,
+          "part_pct": 21.06,
+          "pour_1000_mots": 10.7
+        },
+        "on": {
+          "occurrences": 4833,
+          "part_pct": 25.38,
+          "pour_1000_mots": 12.89
+        },
+        "peuple": {
+          "occurrences": 296,
+          "pour_1000_mots": 0.79
+        },
+        "ratio_les_francais_sur_nous": 0.04,
+        "ratio_nous_sur_je": 0.791,
+        "vous": {
+          "occurrences": 4968,
+          "part_pct": 26.08,
+          "pour_1000_mots": 13.25
+        }
+      },
+      "taux_exclamations_pct": 0.31,
+      "taux_phrases_nominales_pct": 11.04,
+      "taux_questions_pct": 9.3
+    },
+    "commission": {
+      "formules_adresse": {
+        "formules": [
+          {
+            "formule": "allons",
+            "occurrences": 27,
+            "pour_1000_mots": 0.46
+          },
+          {
+            "formule": "monsieur le rapporteur",
+            "occurrences": 26,
+            "pour_1000_mots": 0.44
+          },
+          {
+            "formule": "madame la présidente",
+            "occurrences": 14,
+            "pour_1000_mots": 0.24
+          },
+          {
+            "formule": "chers collègues",
+            "occurrences": 9,
+            "pour_1000_mots": 0.15
+          },
+          {
+            "formule": "regardez",
+            "occurrences": 5,
+            "pour_1000_mots": 0.08
+          },
+          {
+            "formule": "imaginez",
+            "occurrences": 4,
+            "pour_1000_mots": 0.07
+          },
+          {
+            "formule": "monsieur le ministre",
+            "occurrences": 4,
+            "pour_1000_mots": 0.07
+          },
+          {
+            "formule": "permettez-moi",
+            "occurrences": 4,
+            "pour_1000_mots": 0.07
+          },
+          {
+            "formule": "croyez-moi",
+            "occurrences": 2,
+            "pour_1000_mots": 0.03
+          },
+          {
+            "formule": "figurez-vous",
+            "occurrences": 2,
+            "pour_1000_mots": 0.03
+          },
+          {
+            "formule": "mes chers collègues",
+            "occurrences": 2,
+            "pour_1000_mots": 0.03
+          },
+          {
+            "formule": "monsieur le président",
+            "occurrences": 2,
+            "pour_1000_mots": 0.03
+          },
+          {
+            "formule": "voyez-vous",
+            "occurrences": 2,
+            "pour_1000_mots": 0.03
+          },
+          {
+            "formule": "mes amis",
+            "occurrences": 1,
+            "pour_1000_mots": 0.02
+          }
+        ],
+        "taux_pour_1000_mots": 1.75,
+        "total_occurrences": 104
+      },
+      "formules_ouverture": {
+        "nb_prises_analysees": 205,
+        "repartition_categories": {
+          "adresse_institutionnelle": {
+            "occurrences": 15,
+            "part_pct": 7.32
+          },
+          "affirmation_personnelle_ou_collective": {
+            "occurrences": 69,
+            "part_pct": 33.66
+          },
+          "attaque_ou_contradiction": {
+            "occurrences": 6,
+            "part_pct": 2.93
+          },
+          "explicative_ou_narrative": {
+            "occurrences": 106,
+            "part_pct": 51.71
+          },
+          "prise_a_temoin_ou_injonction": {
+            "occurrences": 1,
+            "part_pct": 0.49
+          },
+          "question_initiale": {
+            "occurrences": 8,
+            "part_pct": 3.9
+          }
+        },
+        "top_amorces": [
+          {
+            "amorce": "monsieur le rapporteur",
+            "exemple": "Monsieur le rapporteur général, dans votre avis sur l'amendement précédent, vous ne vous êtes pas opposé à notre prop...",
+            "occurrences": 7,
+            "part_prises_pct": 3.41
+          },
+          {
+            "amorce": "il y a",
+            "exemple": "Il y a une raison simple à supprimer le cautionnement, c'est que l'article précédent a imaginé une sécurité sociale e...",
+            "occurrences": 4,
+            "part_prises_pct": 1.95
+          },
+          {
+            "amorce": "l amendement n",
+            "exemple": "L'amendement n° 4487 vise les militaires.",
+            "occurrences": 3,
+            "part_prises_pct": 1.46
+          },
+          {
+            "amorce": "madame la présidente",
+            "exemple": "Madame la présidente, j'entends protester contre cette décision au nom du groupe La France insoumise.",
+            "occurrences": 3,
+            "part_prises_pct": 1.46
+          },
+          {
+            "amorce": "c est une",
+            "exemple": "C'est une disposition extrêmement ferme, vous avez raison de le dire.",
+            "occurrences": 2,
+            "part_prises_pct": 0.98
+          },
+          {
+            "amorce": "il faut que",
+            "exemple": "Il faut que nous nous comprenions, faute de quoi notre discussion serait absurde.",
+            "occurrences": 2,
+            "part_prises_pct": 0.98
+          },
+          {
+            "amorce": "il n y",
+            "exemple": "Il n'y a pas de liberté de choix, ce n'est pas vrai.",
+            "occurrences": 2,
+            "part_prises_pct": 0.98
+          },
+          {
+            "amorce": "j ai bien",
+            "exemple": "J'ai bien compris ce qu'ont dit M.",
+            "occurrences": 2,
+            "part_prises_pct": 0.98
+          },
+          {
+            "amorce": "je pense que",
+            "exemple": "Je pense que je vais voter en faveur de cette convention pour la raison que vous avez évoquée à la fin : un geste à f...",
+            "occurrences": 2,
+            "part_prises_pct": 0.98
+          },
+          {
+            "amorce": "je suis heureux",
+            "exemple": "Je suis heureux de constater que chacun convient de la situation exceptionnelle de la France.",
+            "occurrences": 2,
+            "part_prises_pct": 0.98
+          },
+          {
+            "amorce": "je tiens à",
+            "exemple": "Je tiens à terminer la petite discussion engagée avec M.",
+            "occurrences": 2,
+            "part_prises_pct": 0.98
+          },
+          {
+            "amorce": "je vais me",
+            "exemple": "Je vais me concentrer sur la deuxième partie de ma démonstration de tout à l'heure, dans laquelle le rapporteur sembl...",
+            "occurrences": 2,
+            "part_prises_pct": 0.98
+          },
+          {
+            "amorce": "je voudrais d",
+            "exemple": "Je voudrais d'abord dire à nos deux invités qu'ils sont les bienvenus pour nous tous et que leurs analyses et points ...",
+            "occurrences": 2,
+            "part_prises_pct": 0.98
+          },
+          {
+            "amorce": "le rapport est",
+            "exemple": "Le rapport est très intéressant et j'en félicite l'auteur.",
+            "occurrences": 2,
+            "part_prises_pct": 0.98
+          },
+          {
+            "amorce": "monsieur le ministre",
+            "exemple": "Monsieur le ministre, je vous remercie pour le tableau que vous avez dressé.",
+            "occurrences": 2,
+            "part_prises_pct": 0.98
+          }
+        ]
+      },
+      "longueur_phrases": {
+        "cv_mots": 0.632,
+        "ecart_type_mots": 14.0,
+        "iqr_mots": 18.0,
+        "mediane_mots": 20.0,
+        "moyenne_mots": 22.15,
+        "nb_mots": 59289,
+        "nb_phrases": 2677,
+        "part_periodes_longues_pct": 35.41,
+        "part_phrases_moyennes_pct": 49.94,
+        "part_rafales_courtes_pct": 14.64,
+        "profil_rythmique": "periodes_amples",
+        "q25_mots": 12.0,
+        "q75_mots": 30.0,
+        "ratio_rafales_periodes": 0.414
+      },
+      "nb_interventions": 205,
+      "nb_mots": 59289,
+      "nb_phrases": 2677,
+      "ponctuation_et_syntaxe": {
+        "exclamations_pour_1000_mots": 3.36,
+        "nb_exclamations": 199,
+        "nb_phrases_nominales": 179,
+        "nb_questions": 195,
+        "questions_pour_1000_mots": 3.29,
+        "taux_exclamations_pct": 7.43,
+        "taux_phrases_nominales_pct": 6.69,
+        "taux_questions_pct": 7.28
+      },
+      "pronoms": {
+        "francais_tous_contextes": {
+          "occurrences": 68,
+          "pour_1000_mots": 1.15
+        },
+        "je": {
+          "occurrences": 720,
+          "part_pct": 28.5,
+          "pour_1000_mots": 12.14
+        },
+        "les Français": {
+          "occurrences": 19,
+          "part_pct": 0.75,
+          "pour_1000_mots": 0.32
+        },
+        "les_francais": {
+          "occurrences": 19,
+          "part_pct": 0.75,
+          "pour_1000_mots": 0.32
+        },
+        "nous": {
+          "occurrences": 763,
+          "part_pct": 30.21,
+          "pour_1000_mots": 12.87
+        },
+        "on": {
+          "occurrences": 402,
+          "part_pct": 15.91,
+          "pour_1000_mots": 6.78
+        },
+        "peuple": {
+          "occurrences": 15,
+          "pour_1000_mots": 0.25
+        },
+        "ratio_les_francais_sur_nous": 0.025,
+        "ratio_nous_sur_je": 1.06,
+        "vous": {
+          "occurrences": 622,
+          "part_pct": 24.62,
+          "pour_1000_mots": 10.49
+        }
+      },
+      "taux_exclamations_pct": 7.43,
+      "taux_phrases_nominales_pct": 6.69,
+      "taux_questions_pct": 7.28
+    },
+    "interpellation": {
+      "formules_adresse": {
+        "formules": [
+          {
+            "formule": "monsieur le ministre",
+            "occurrences": 180,
+            "pour_1000_mots": 0.43
+          },
+          {
+            "formule": "chers collègues",
+            "occurrences": 175,
+            "pour_1000_mots": 0.42
+          },
+          {
+            "formule": "allons",
+            "occurrences": 128,
+            "pour_1000_mots": 0.31
+          },
+          {
+            "formule": "monsieur le président",
+            "occurrences": 88,
+            "pour_1000_mots": 0.21
+          },
+          {
+            "formule": "mes chers collègues",
+            "occurrences": 82,
+            "pour_1000_mots": 0.2
+          },
+          {
+            "formule": "monsieur le rapporteur",
+            "occurrences": 69,
+            "pour_1000_mots": 0.17
+          },
+          {
+            "formule": "madame la ministre",
+            "occurrences": 68,
+            "pour_1000_mots": 0.16
+          },
+          {
+            "formule": "monsieur le premier ministre",
+            "occurrences": 66,
+            "pour_1000_mots": 0.16
+          },
+          {
+            "formule": "permettez-moi",
+            "occurrences": 39,
+            "pour_1000_mots": 0.09
+          },
+          {
+            "formule": "mes amis",
+            "occurrences": 35,
+            "pour_1000_mots": 0.08
+          },
+          {
+            "formule": "camarades",
+            "occurrences": 29,
+            "pour_1000_mots": 0.07
+          },
+          {
+            "formule": "madame la présidente",
+            "occurrences": 26,
+            "pour_1000_mots": 0.06
+          },
+          {
+            "formule": "imaginez",
+            "occurrences": 24,
+            "pour_1000_mots": 0.06
+          },
+          {
+            "formule": "écoutez",
+            "occurrences": 22,
+            "pour_1000_mots": 0.05
+          },
+          {
+            "formule": "regardez",
+            "occurrences": 17,
+            "pour_1000_mots": 0.04
+          },
+          {
+            "formule": "voyez-vous",
+            "occurrences": 15,
+            "pour_1000_mots": 0.04
+          },
+          {
+            "formule": "figurez-vous",
+            "occurrences": 13,
+            "pour_1000_mots": 0.03
+          },
+          {
+            "formule": "madame la rapporteure",
+            "occurrences": 7,
+            "pour_1000_mots": 0.02
+          },
+          {
+            "formule": "croyez-moi",
+            "occurrences": 6,
+            "pour_1000_mots": 0.01
+          },
+          {
+            "formule": "mesdames et messieurs",
+            "occurrences": 5,
+            "pour_1000_mots": 0.01
+          },
+          {
+            "formule": "mesdames messieurs",
+            "occurrences": 3,
+            "pour_1000_mots": 0.01
+          },
+          {
+            "formule": "madame la députée",
+            "occurrences": 2,
+            "pour_1000_mots": 0.0
+          },
+          {
+            "formule": "chers amis",
+            "occurrences": 1,
+            "pour_1000_mots": 0.0
+          },
+          {
+            "formule": "monsieur le député",
+            "occurrences": 1,
+            "pour_1000_mots": 0.0
+          }
+        ],
+        "taux_pour_1000_mots": 2.65,
+        "total_occurrences": 1101
+      },
+      "formules_ouverture": {
+        "nb_prises_analysees": 2288,
+        "repartition_categories": {
+          "adresse_institutionnelle": {
+            "occurrences": 93,
+            "part_pct": 4.06
+          },
+          "affirmation_personnelle_ou_collective": {
+            "occurrences": 417,
+            "part_pct": 18.23
+          },
+          "attaque_ou_contradiction": {
+            "occurrences": 119,
+            "part_pct": 5.2
+          },
+          "explicative_ou_narrative": {
+            "occurrences": 1492,
+            "part_pct": 65.21
+          },
+          "prise_a_temoin_ou_injonction": {
+            "occurrences": 57,
+            "part_pct": 2.49
+          },
+          "question_initiale": {
+            "occurrences": 110,
+            "part_pct": 4.81
+          }
+        },
+        "top_amorces": [
+          {
+            "amorce": "monsieur le président",
+            "exemple": "Monsieur le président, collègues, je suis assez âgé pour connaître d'expérience les situations de détresse que ma col...",
+            "occurrences": 28,
+            "part_prises_pct": 1.22
+          },
+          {
+            "amorce": "ce n est",
+            "exemple": "Ce n'est plus la même affaire, n'est-ce pas ?",
+            "occurrences": 17,
+            "part_prises_pct": 0.74
+          },
+          {
+            "amorce": "c est la",
+            "exemple": "C'est la preuve que le vaccin est une raquette trouée – nous ne le lui reprochons pas, puisque, pour partie, il fonct...",
+            "occurrences": 13,
+            "part_prises_pct": 0.57
+          },
+          {
+            "amorce": "madame la présidente",
+            "exemple": "Madame la présidente de la commission des affaires étrangères, vous venez de parler comme une insoumise ; je vous en ...",
+            "occurrences": 10,
+            "part_prises_pct": 0.44
+          },
+          {
+            "amorce": "mes chers collègues",
+            "exemple": "Mes chers collègues, ce que je dis en cet instant mérite mieux que des invectives.",
+            "occurrences": 10,
+            "part_prises_pct": 0.44
+          },
+          {
+            "amorce": "monsieur le ministre",
+            "exemple": "Monsieur le ministre, nous avons décidé, comme organisation politique, que nous n'irions plus à ces réunions parce qu...",
+            "occurrences": 10,
+            "part_prises_pct": 0.44
+          },
+          {
+            "amorce": "c est un",
+            "exemple": "C'est un moment bien étrange que celui où nous allons discuter de la situation dans le Sahel alors que tout est déjà ...",
+            "occurrences": 9,
+            "part_prises_pct": 0.39
+          },
+          {
+            "amorce": "c est une",
+            "exemple": "C'est une sottise pour la France.",
+            "occurrences": 9,
+            "part_prises_pct": 0.39
+          },
+          {
+            "amorce": "c est à",
+            "exemple": "c'est-à-dire leur rembourser la totalité de la dépense supplémentaire annuelle qu'ils ont dû faire depuis 2017, puisq...",
+            "occurrences": 9,
+            "part_prises_pct": 0.39
+          },
+          {
+            "amorce": "il y a",
+            "exemple": "Il y a problème, en revanche, quand l'activité subventionnée – qui bénéficie donc du concours financier de tous – pre...",
+            "occurrences": 9,
+            "part_prises_pct": 0.39
+          },
+          {
+            "amorce": "monsieur le premier",
+            "exemple": "Monsieur le Premier ministre, nous l'avons tous constaté, le froid de l'hiver s'aggrave.",
+            "occurrences": 9,
+            "part_prises_pct": 0.39
+          },
+          {
+            "amorce": "c est pourquoi",
+            "exemple": "c'est pourquoi je m'efforcerai de rendre mes ripostes moins offensantes que celles que j'ai pu entendre à mon encontr...",
+            "occurrences": 7,
+            "part_prises_pct": 0.31
+          },
+          {
+            "amorce": "il n est",
+            "exemple": "Il n'est pas interdit que des bigots siègent dans cet hémicycle, mais dans la République laïque, une et indivisible, ...",
+            "occurrences": 7,
+            "part_prises_pct": 0.31
+          },
+          {
+            "amorce": "il n y",
+            "exemple": "Il n'y avait rien d'autre à faire que de s'attaquer de manière radicale à la racine des problèmes.",
+            "occurrences": 7,
+            "part_prises_pct": 0.31
+          },
+          {
+            "amorce": "je n ai",
+            "exemple": "Je n'ai pu m'empêcher de sourire quand j'ai entendu tout à l'heure le Premier ministre évoquer une petite musique sel...",
+            "occurrences": 7,
+            "part_prises_pct": 0.31
+          }
+        ]
+      },
+      "longueur_phrases": {
+        "cv_mots": 0.681,
+        "ecart_type_mots": 15.37,
+        "iqr_mots": 19.0,
+        "mediane_mots": 19.0,
+        "moyenne_mots": 22.57,
+        "nb_mots": 415236,
+        "nb_phrases": 18395,
+        "part_periodes_longues_pct": 36.97,
+        "part_phrases_moyennes_pct": 46.8,
+        "part_rafales_courtes_pct": 16.24,
+        "profil_rythmique": "periodes_amples",
+        "q25_mots": 11.0,
+        "q75_mots": 30.0,
+        "ratio_rafales_periodes": 0.439
+      },
+      "nb_interventions": 2288,
+      "nb_mots": 415236,
+      "nb_phrases": 18395,
+      "ponctuation_et_syntaxe": {
+        "exclamations_pour_1000_mots": 5.11,
+        "nb_exclamations": 2121,
+        "nb_phrases_nominales": 1285,
+        "nb_questions": 1343,
+        "questions_pour_1000_mots": 3.23,
+        "taux_exclamations_pct": 11.53,
+        "taux_phrases_nominales_pct": 6.99,
+        "taux_questions_pct": 7.3
+      },
+      "pronoms": {
+        "francais_tous_contextes": {
+          "occurrences": 559,
+          "pour_1000_mots": 1.35
+        },
+        "je": {
+          "occurrences": 4535,
+          "part_pct": 24.39,
+          "pour_1000_mots": 10.92
+        },
+        "les Français": {
+          "occurrences": 210,
+          "part_pct": 1.13,
+          "pour_1000_mots": 0.51
+        },
+        "les_francais": {
+          "occurrences": 210,
+          "part_pct": 1.13,
+          "pour_1000_mots": 0.51
+        },
+        "nous": {
+          "occurrences": 6130,
+          "part_pct": 32.97,
+          "pour_1000_mots": 14.76
+        },
+        "on": {
+          "occurrences": 2801,
+          "part_pct": 15.06,
+          "pour_1000_mots": 6.75
+        },
+        "peuple": {
+          "occurrences": 329,
+          "pour_1000_mots": 0.79
+        },
+        "ratio_les_francais_sur_nous": 0.034,
+        "ratio_nous_sur_je": 1.352,
+        "vous": {
+          "occurrences": 4918,
+          "part_pct": 26.45,
+          "pour_1000_mots": 11.84
+        }
+      },
+      "taux_exclamations_pct": 11.53,
+      "taux_phrases_nominales_pct": 6.99,
+      "taux_questions_pct": 7.3
+    },
+    "interruption": {
+      "formules_adresse": {
+        "formules": [
+          {
+            "formule": "monsieur le président",
+            "occurrences": 35,
+            "pour_1000_mots": 1.97
+          },
+          {
+            "formule": "allons",
+            "occurrences": 12,
+            "pour_1000_mots": 0.68
+          },
+          {
+            "formule": "chers collègues",
+            "occurrences": 9,
+            "pour_1000_mots": 0.51
+          },
+          {
+            "formule": "madame la présidente",
+            "occurrences": 8,
+            "pour_1000_mots": 0.45
+          },
+          {
+            "formule": "madame la ministre",
+            "occurrences": 7,
+            "pour_1000_mots": 0.39
+          },
+          {
+            "formule": "monsieur le ministre",
+            "occurrences": 7,
+            "pour_1000_mots": 0.39
+          },
+          {
+            "formule": "écoutez",
+            "occurrences": 7,
+            "pour_1000_mots": 0.39
+          },
+          {
+            "formule": "mes chers collègues",
+            "occurrences": 4,
+            "pour_1000_mots": 0.23
+          },
+          {
+            "formule": "monsieur le rapporteur",
+            "occurrences": 4,
+            "pour_1000_mots": 0.23
+          },
+          {
+            "formule": "monsieur le premier ministre",
+            "occurrences": 3,
+            "pour_1000_mots": 0.17
+          },
+          {
+            "formule": "regardez",
+            "occurrences": 3,
+            "pour_1000_mots": 0.17
+          },
+          {
+            "formule": "croyez-moi",
+            "occurrences": 2,
+            "pour_1000_mots": 0.11
+          },
+          {
+            "formule": "voyez-vous",
+            "occurrences": 2,
+            "pour_1000_mots": 0.11
+          },
+          {
+            "formule": "camarades",
+            "occurrences": 1,
+            "pour_1000_mots": 0.06
+          },
+          {
+            "formule": "chers amis",
+            "occurrences": 1,
+            "pour_1000_mots": 0.06
+          },
+          {
+            "formule": "figurez-vous",
+            "occurrences": 1,
+            "pour_1000_mots": 0.06
+          },
+          {
+            "formule": "mesdames et messieurs",
+            "occurrences": 1,
+            "pour_1000_mots": 0.06
+          },
+          {
+            "formule": "monsieur le député",
+            "occurrences": 1,
+            "pour_1000_mots": 0.06
+          },
+          {
+            "formule": "permettez-moi",
+            "occurrences": 1,
+            "pour_1000_mots": 0.06
+          }
+        ],
+        "taux_pour_1000_mots": 6.14,
+        "total_occurrences": 109
+      },
+      "formules_ouverture": {
+        "nb_prises_analysees": 2569,
+        "repartition_categories": {
+          "adresse_institutionnelle": {
+            "occurrences": 26,
+            "part_pct": 1.01
+          },
+          "affirmation_personnelle_ou_collective": {
+            "occurrences": 164,
+            "part_pct": 6.38
+          },
+          "attaque_ou_contradiction": {
+            "occurrences": 156,
+            "part_pct": 6.07
+          },
+          "explicative_ou_narrative": {
+            "occurrences": 1933,
+            "part_pct": 75.24
+          },
+          "prise_a_temoin_ou_injonction": {
+            "occurrences": 104,
+            "part_pct": 4.05
+          },
+          "question_initiale": {
+            "occurrences": 186,
+            "part_pct": 7.24
+          }
+        },
+        "top_amorces": [
+          {
+            "amorce": "très bien",
+            "exemple": "Très bien !",
+            "occurrences": 161,
+            "part_prises_pct": 6.27
+          },
+          {
+            "amorce": "exactement",
+            "exemple": "Exactement !",
+            "occurrences": 82,
+            "part_prises_pct": 3.19
+          },
+          {
+            "amorce": "ah",
+            "exemple": "Ah !",
+            "occurrences": 58,
+            "part_prises_pct": 2.26
+          },
+          {
+            "amorce": "ce n est",
+            "exemple": "Ce n'est pas moi qui gouverne !",
+            "occurrences": 54,
+            "part_prises_pct": 2.1
+          },
+          {
+            "amorce": "voilà",
+            "exemple": "Voilà !",
+            "occurrences": 51,
+            "part_prises_pct": 1.99
+          },
+          {
+            "amorce": "eh oui",
+            "exemple": "Eh oui !",
+            "occurrences": 46,
+            "part_prises_pct": 1.79
+          },
+          {
+            "amorce": "c est vrai",
+            "exemple": "C'est vrai !",
+            "occurrences": 37,
+            "part_prises_pct": 1.44
+          },
+          {
+            "amorce": "bravo",
+            "exemple": "Bravo !",
+            "occurrences": 36,
+            "part_prises_pct": 1.4
+          },
+          {
+            "amorce": "et voilà",
+            "exemple": "Et voilà !",
+            "occurrences": 27,
+            "part_prises_pct": 1.05
+          },
+          {
+            "amorce": "non",
+            "exemple": "Non !",
+            "occurrences": 23,
+            "part_prises_pct": 0.9
+          },
+          {
+            "amorce": "disponible uniquement en",
+            "exemple": "(disponible uniquement en vidéo)",
+            "occurrences": 21,
+            "part_prises_pct": 0.82
+          },
+          {
+            "amorce": "oui",
+            "exemple": "Oui !",
+            "occurrences": 21,
+            "part_prises_pct": 0.82
+          },
+          {
+            "amorce": "ça c est",
+            "exemple": "Ça, c'est sûr !",
+            "occurrences": 18,
+            "part_prises_pct": 0.7
+          },
+          {
+            "amorce": "oh",
+            "exemple": "Oh !",
+            "occurrences": 17,
+            "part_prises_pct": 0.66
+          },
+          {
+            "amorce": "excellent",
+            "exemple": "Excellent !",
+            "occurrences": 14,
+            "part_prises_pct": 0.54
+          }
+        ]
+      },
+      "longueur_phrases": {
+        "cv_mots": 0.882,
+        "ecart_type_mots": 5.23,
+        "iqr_mots": 6.0,
+        "mediane_mots": 4.0,
+        "moyenne_mots": 5.93,
+        "nb_mots": 17747,
+        "nb_phrases": 2995,
+        "part_periodes_longues_pct": 1.0,
+        "part_phrases_moyennes_pct": 21.27,
+        "part_rafales_courtes_pct": 77.73,
+        "profil_rythmique": "rafales_percussives",
+        "q25_mots": 2.0,
+        "q75_mots": 8.0,
+        "ratio_rafales_periodes": 77.6
+      },
+      "nb_interventions": 2569,
+      "nb_mots": 17747,
+      "nb_phrases": 2995,
+      "ponctuation_et_syntaxe": {
+        "exclamations_pour_1000_mots": 122.44,
+        "nb_exclamations": 2173,
+        "nb_phrases_nominales": 1229,
+        "nb_questions": 251,
+        "questions_pour_1000_mots": 14.14,
+        "taux_exclamations_pct": 72.55,
+        "taux_phrases_nominales_pct": 41.04,
+        "taux_questions_pct": 8.38
+      },
+      "pronoms": {
+        "francais_tous_contextes": {
+          "occurrences": 11,
+          "pour_1000_mots": 0.62
+        },
+        "je": {
+          "occurrences": 283,
+          "part_pct": 23.88,
+          "pour_1000_mots": 15.95
+        },
+        "les Français": {
+          "occurrences": 2,
+          "part_pct": 0.17,
+          "pour_1000_mots": 0.11
+        },
+        "les_francais": {
+          "occurrences": 2,
+          "part_pct": 0.17,
+          "pour_1000_mots": 0.11
+        },
+        "nous": {
+          "occurrences": 215,
+          "part_pct": 18.14,
+          "pour_1000_mots": 12.11
+        },
+        "on": {
+          "occurrences": 104,
+          "part_pct": 8.78,
+          "pour_1000_mots": 5.86
+        },
+        "peuple": {
+          "occurrences": 23,
+          "pour_1000_mots": 1.3
+        },
+        "ratio_les_francais_sur_nous": 0.009,
+        "ratio_nous_sur_je": 0.76,
+        "vous": {
+          "occurrences": 581,
+          "part_pct": 49.03,
+          "pour_1000_mots": 32.74
+        }
+      },
+      "taux_exclamations_pct": 72.55,
+      "taux_phrases_nominales_pct": 41.04,
+      "taux_questions_pct": 8.38
+    },
+    "meeting": {
+      "formules_adresse": {
+        "formules": [
+          {
+            "formule": "allons",
+            "occurrences": 39,
+            "pour_1000_mots": 0.47
+          },
+          {
+            "formule": "regardez",
+            "occurrences": 31,
+            "pour_1000_mots": 0.37
+          },
+          {
+            "formule": "voyez-vous",
+            "occurrences": 21,
+            "pour_1000_mots": 0.25
+          },
+          {
+            "formule": "écoutez",
+            "occurrences": 19,
+            "pour_1000_mots": 0.23
+          },
+          {
+            "formule": "camarades",
+            "occurrences": 17,
+            "pour_1000_mots": 0.2
+          },
+          {
+            "formule": "mesdames messieurs",
+            "occurrences": 17,
+            "pour_1000_mots": 0.2
+          },
+          {
+            "formule": "mes amis",
+            "occurrences": 11,
+            "pour_1000_mots": 0.13
+          },
+          {
+            "formule": "figurez-vous",
+            "occurrences": 9,
+            "pour_1000_mots": 0.11
+          },
+          {
+            "formule": "imaginez",
+            "occurrences": 4,
+            "pour_1000_mots": 0.05
+          },
+          {
+            "formule": "mesdames et messieurs",
+            "occurrences": 2,
+            "pour_1000_mots": 0.02
+          },
+          {
+            "formule": "chers amis",
+            "occurrences": 1,
+            "pour_1000_mots": 0.01
+          },
+          {
+            "formule": "croyez-moi",
+            "occurrences": 1,
+            "pour_1000_mots": 0.01
+          },
+          {
+            "formule": "mes chers amis",
+            "occurrences": 1,
+            "pour_1000_mots": 0.01
+          },
+          {
+            "formule": "monsieur le ministre",
+            "occurrences": 1,
+            "pour_1000_mots": 0.01
+          }
+        ],
+        "taux_pour_1000_mots": 2.09,
+        "total_occurrences": 174
+      },
+      "formules_ouverture": {
+        "nb_prises_analysees": 235,
+        "repartition_categories": {
+          "adresse_institutionnelle": {
+            "occurrences": 1,
+            "part_pct": 0.43
+          },
+          "affirmation_personnelle_ou_collective": {
+            "occurrences": 15,
+            "part_pct": 6.38
+          },
+          "attaque_ou_contradiction": {
+            "occurrences": 19,
+            "part_pct": 8.09
+          },
+          "explicative_ou_narrative": {
+            "occurrences": 158,
+            "part_pct": 67.23
+          },
+          "prise_a_temoin_ou_injonction": {
+            "occurrences": 30,
+            "part_pct": 12.77
+          },
+          "question_initiale": {
+            "occurrences": 12,
+            "part_pct": 5.11
+          }
+        },
+        "top_amorces": [
+          {
+            "amorce": "voilà",
+            "exemple": "Voilà.",
+            "occurrences": 3,
+            "part_prises_pct": 1.28
+          },
+          {
+            "amorce": "alors il y",
+            "exemple": "Alors, il y a déjà des pratiques qui existent dans un certain nombre de de milieux d'adaptation au risque ou de capac...",
+            "occurrences": 2,
+            "part_prises_pct": 0.85
+          },
+          {
+            "amorce": "c est pourquoi",
+            "exemple": "C'est pourquoi dans ce que je vais dire, je ne vais pas trop entrer dans la discussion qui a commencé sur les fonctio...",
+            "occurrences": 2,
+            "part_prises_pct": 0.85
+          },
+          {
+            "amorce": "c est à",
+            "exemple": "C'est-à-dire que aucun intellectuel n'est jamais venu euh de ceux qui participent à la vie de La Boétie exiger de moi...",
+            "occurrences": 2,
+            "part_prises_pct": 0.85
+          },
+          {
+            "amorce": "est ce qu",
+            "exemple": "Est-ce qu'il n'aurait pas ?",
+            "occurrences": 2,
+            "part_prises_pct": 0.85
+          },
+          {
+            "amorce": "et je ne",
+            "exemple": "Et je ne permettrai pas qu'on continue d'insulter l'éducation nationale, ses professeurs et le service public.",
+            "occurrences": 2,
+            "part_prises_pct": 0.85
+          },
+          {
+            "amorce": "si bien que",
+            "exemple": "Si bien que nous avons payé, paraît-il, plus de 100 milliards pour que vous puissiez échanger la monnaie bidon de l'A...",
+            "occurrences": 2,
+            "part_prises_pct": 0.85
+          }
+        ]
+      },
+      "longueur_phrases": {
+        "cv_mots": 11.251,
+        "ecart_type_mots": 478.26,
+        "iqr_mots": 19.0,
+        "mediane_mots": 16.0,
+        "moyenne_mots": 42.51,
+        "nb_mots": 83104,
+        "nb_phrases": 1955,
+        "part_periodes_longues_pct": 30.54,
+        "part_phrases_moyennes_pct": 44.71,
+        "part_rafales_courtes_pct": 24.76,
+        "profil_rythmique": "periodes_amples",
+        "q25_mots": 9.0,
+        "q75_mots": 28.0,
+        "ratio_rafales_periodes": 0.811
+      },
+      "nb_interventions": 235,
+      "nb_mots": 83104,
+      "nb_phrases": 1955,
+      "ponctuation_et_syntaxe": {
+        "exclamations_pour_1000_mots": 0.08,
+        "nb_exclamations": 7,
+        "nb_phrases_nominales": 152,
+        "nb_questions": 147,
+        "questions_pour_1000_mots": 1.77,
+        "taux_exclamations_pct": 0.36,
+        "taux_phrases_nominales_pct": 7.77,
+        "taux_questions_pct": 7.52
+      },
+      "pronoms": {
+        "francais_tous_contextes": {
+          "occurrences": 82,
+          "pour_1000_mots": 0.99
+        },
+        "je": {
+          "occurrences": 1193,
+          "part_pct": 26.34,
+          "pour_1000_mots": 14.36
+        },
+        "les Français": {
+          "occurrences": 34,
+          "part_pct": 0.75,
+          "pour_1000_mots": 0.41
+        },
+        "les_francais": {
+          "occurrences": 34,
+          "part_pct": 0.75,
+          "pour_1000_mots": 0.41
+        },
+        "nous": {
+          "occurrences": 1016,
+          "part_pct": 22.43,
+          "pour_1000_mots": 12.23
+        },
+        "on": {
+          "occurrences": 1115,
+          "part_pct": 24.61,
+          "pour_1000_mots": 13.42
+        },
+        "peuple": {
+          "occurrences": 65,
+          "pour_1000_mots": 0.78
+        },
+        "ratio_les_francais_sur_nous": 0.033,
+        "ratio_nous_sur_je": 0.852,
+        "vous": {
+          "occurrences": 1172,
+          "part_pct": 25.87,
+          "pour_1000_mots": 14.1
+        }
+      },
+      "taux_exclamations_pct": 0.36,
+      "taux_phrases_nominales_pct": 7.77,
+      "taux_questions_pct": 7.52
+    }
+  },
+  "ponctuation_et_syntaxe": {
+    "exclamations_pour_1000_mots": 4.76,
+    "nb_exclamations": 4526,
+    "nb_phrases_nominales": 3785,
+    "nb_questions": 2728,
+    "questions_pour_1000_mots": 2.87,
+    "taux_exclamations_pct": 13.11,
+    "taux_phrases_nominales_pct": 10.96,
+    "taux_questions_pct": 7.9
+  },
+  "pronoms": {
+    "francais_tous_contextes": {
+      "occurrences": 1179,
+      "pour_1000_mots": 1.24
+    },
+    "je": {
+      "occurrences": 11805,
+      "part_pct": 25.73,
+      "pour_1000_mots": 12.42
+    },
+    "les Français": {
+      "occurrences": 425,
+      "part_pct": 0.93,
+      "pour_1000_mots": 0.45
+    },
+    "les_francais": {
+      "occurrences": 425,
+      "part_pct": 0.93,
+      "pour_1000_mots": 0.45
+    },
+    "nous": {
+      "occurrences": 12135,
+      "part_pct": 26.45,
+      "pour_1000_mots": 12.77
+    },
+    "on": {
+      "occurrences": 9255,
+      "part_pct": 20.17,
+      "pour_1000_mots": 9.74
+    },
+    "peuple": {
+      "occurrences": 728,
+      "pour_1000_mots": 0.77
+    },
+    "ratio_les_francais_sur_nous": 0.035,
+    "ratio_nous_sur_je": 1.028,
+    "vous": {
+      "occurrences": 12261,
+      "part_pct": 26.72,
+      "pour_1000_mots": 12.9
+    }
+  },
+  "reactions_interruption": {
+    "exemples_interruptions": [
+      {
+        "contexte_avant": "Bertrand Pancher : L'Europe est en train de se prendre en main, beaucoup trop tardivement, mais la dynamique semble enfin être enclenchée. A",
+        "date": "2022-03-01",
+        "reaction": "",
+        "texte": "La politique est faite de réalités, de faits ! De la sorte, l'honneur de la condition humaine est évidemment dans la résistance des Ukrainiens,…",
+        "url": "https://2017-2022.nosdeputes.fr/15/seance/8673#inter_20b7105e85790e181013811e262b4b35"
+      },
+      {
+        "contexte_avant": "Michel Herbillon : Mélenchon cite Sarkozy ?",
+        "date": "2022-03-01",
+        "reaction": "",
+        "texte": "Cette décision ferait de nous des cobelligérants.",
+        "url": "https://2017-2022.nosdeputes.fr/15/seance/8673#inter_1e1035a58454b1feabd2763a12e1bbc9"
+      },
+      {
+        "contexte_avant": "Un député du groupe LaREM : C'est une honte ! Les Ukrainiens meurent sous les bombes !",
+        "date": "2022-03-01",
+        "reaction": "Huées sur les bancs des groupes LaREM et Dem.",
+        "texte": "Couper le circuit financier SWIFT, n'est-ce pas engager une escalade mondiale en poussant Russes et Chinois à utiliser désormais exclusivement leur propre circuit ?",
+        "url": "https://2017-2022.nosdeputes.fr/15/seance/8673#inter_f407bbb954f46796fdf97fd9e47e56c2"
+      },
+      {
+        "contexte_avant": "François Cormier-Bouligeon : Vous êtes le caniche de Poutine !",
+        "date": "2022-03-01",
+        "reaction": "Protestations sur les bancs des groupes LaREM, Dem et SOC.",
+        "texte": "Ce moyen existe ; déclenchons-le. La solution existe aussi : c'est la proclamation de la neutralité de l'Ukraine.",
+        "url": "https://2017-2022.nosdeputes.fr/15/seance/8673#inter_0d5ad07082dd218dbf26a01dfdc595a1"
+      },
+      {
+        "contexte_avant": "François Cormier-Bouligeon : Que faites-vous de sa souveraineté ? L'Ukraine est un État souverain !",
+        "date": "2022-03-01",
+        "reaction": "",
+        "texte": "La guerre d'Ukraine vient de le prouver.",
+        "url": "https://2017-2022.nosdeputes.fr/15/seance/8673#inter_e15b9a70adeabdeebe2a6e042af6cb24"
+      },
+      {
+        "contexte_avant": "Frédérique Dumas : C'est la réalité ! La France est le seul pays occidental à avoir envoyé des ministres à l'investiture de dirigeants brigu",
+        "date": "2022-02-22",
+        "reaction": "",
+        "texte": "Une honte !",
+        "url": "https://2017-2022.nosdeputes.fr/15/seance/8667#inter_c47ac46f2dfa01a2a71a594acfc5e4be"
+      },
+      {
+        "contexte_avant": "Jean-Paul Lecoq : La situation au Mali et au Sahel n'est que le triste reflet du vide absolu de ce que signifie de manière opérationnelle la",
+        "date": "2022-02-22",
+        "reaction": "",
+        "texte": "Très bien !",
+        "url": "https://2017-2022.nosdeputes.fr/15/seance/8667#inter_ddebdb0d61e0ed1060891f7d7fbc091b"
+      },
+      {
+        "contexte_avant": "David Habib : Au Mali, le groupe Wagner représente plusieurs centaines de soldats qui, au-delà des opérations militaires, contribuent à renf",
+        "date": "2022-02-22",
+        "reaction": "",
+        "texte": "Ce n'était pas le pire, Gromyko !",
+        "url": "https://2017-2022.nosdeputes.fr/15/seance/8667#inter_be376f13b54df494450885334b1c0da5"
+      },
+      {
+        "contexte_avant": "Clémentine Autain : Cette diversité des symptômes joue pour beaucoup dans la difficulté à diagnostiquer la maladie et dans la sous-évaluatio",
+        "date": "2022-01-13",
+        "reaction": "",
+        "texte": "Et la médecine s'en fiche !",
+        "url": "https://2017-2022.nosdeputes.fr/15/seance/8627#inter_345355b143b8574f83c5dfebb1ccf3d9"
+      },
+      {
+        "contexte_avant": "Clémentine Autain : Il convient évidemment, monsieur le ministre des solidarités et de la santé, de faire des efforts pour développer la rec",
+        "date": "2022-01-13",
+        "reaction": "",
+        "texte": "C'est vrai ! Exactement !",
+        "url": "https://2017-2022.nosdeputes.fr/15/seance/8627#inter_e1bb662cf4f5a67cfb85c6dc6d12761a"
+      }
+    ],
+    "longueur_moyenne_interruption_mots": 6.91,
+    "nb_interruptions_spontanees": 2569,
+    "nb_prises_hemicycle": 5062,
+    "part_interruptions_hemicycle_pct": 50.75,
+    "reactions_provoquees_hemicycle": {
+      "applaudissements": 699,
+      "exclamations_ou_protestations": 301,
+      "nb_prises_avec_reaction": 1374,
+      "rires_ou_sourires": 197,
+      "taux_prises_avec_reaction_pct": 27.14
+    },
+    "registres_interruption": {
+      "apostrophe_ou_relance": {
+        "occurrences": 1915,
+        "part_pct": 74.54
+      },
+      "approbation_ou_ironie": {
+        "occurrences": 396,
+        "part_pct": 15.41
+      },
+      "dementi_ou_indignation": {
+        "occurrences": 26,
+        "part_pct": 1.01
+      },
+      "question_incisive": {
+        "occurrences": 232,
+        "part_pct": 9.03
+      }
+    },
+    "reprise_en_duel_apres_contradicteur": {
+      "nb_prises_avec_contexte_avant": 5050,
+      "part_adresse_institutionnelle_pct": 2.61,
+      "part_attaque_ou_contradiction_pct": 5.56,
+      "part_prise_a_temoin_pct": 3.21,
+      "part_question_initiale_pct": 6.02
+    },
+    "taux_exclamations_en_interruption_pct": 76.29,
+    "taux_questions_en_interruption_pct": 9.07
+  },
+  "taux_exclamations_pct": 13.11,
+  "taux_phrases_nominales_pct": 10.96,
+  "taux_questions_pct": 7.9,
+  "version_schema": "1.0"
+}

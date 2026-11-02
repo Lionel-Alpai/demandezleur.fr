@@ -231,6 +231,9 @@ pre { background: var(--bg-2); border: 1px solid var(--border); border-radius: v
 .chat { background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--r-3); padding: var(--sp-4); margin-bottom: var(--sp-6); box-shadow: var(--ombre); }
 .chat-fenetre { min-height: 200px; max-height: 60vh; overflow-y: auto; display: flex; flex-direction: column; gap: var(--sp-3); padding: var(--sp-2) var(--sp-1) var(--sp-3); }
 .chat-systeme { font-size: var(--fs-14); color: var(--fg-3); text-align: center; margin: 0 auto var(--sp-2); max-width: 560px; }
+.avertissement-projection { font-size: var(--fs-14); color: var(--fg-2); background: var(--bg-3); border: 1px solid var(--border-2); border-left: 3px solid var(--bleu-france); border-radius: var(--r-2); padding: var(--sp-3) var(--sp-4); margin: 0 auto var(--sp-3); max-width: 640px; line-height: 1.55; }
+.avertissement-projection strong { color: var(--fg); }
+.avertissement-projection-court { text-align: center; color: var(--fg-3); margin: var(--sp-2) 0; }
 .msg { max-width: 92%; border-radius: var(--r-2); padding: var(--sp-3) var(--sp-4); line-height: 1.6; }
 .msg p { margin: 0 0 var(--sp-2); } .msg p:last-child { margin-bottom: 0; }
 .msg-visiteur { align-self: flex-end; background: var(--accent); color: #fff; border-bottom-right-radius: 4px; }

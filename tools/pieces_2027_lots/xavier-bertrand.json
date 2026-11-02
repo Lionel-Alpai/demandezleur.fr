@@ -1,0 +1,992 @@
+[
+ {
+  "text": "Xavier Bertrand veut restaurer la valeur du travail. Tous les salariés à temps plein doivent recevoir au moins 1 500 euros par mois. Les heures travaillées au-delà de 35 heures seront exonérées d'impôt sur le revenu et de charges sociales, comme c'était le cas en 2007. Meilleur partage de la valeur en entreprise : dans les entreprises de moins de 11 salariés, prime facultative jusqu'à 2 000 euros sans taxe ni charges. Dans les entreprises de 11 à 50 salariés, dispositif obligatoire d'intéressement.",
+  "source": "Programme Xavier Bertrand - Nous France 2027",
+  "page": "Restaurer la valeur travail",
+  "theme": "travail-économie",
+  "id": 0
+ },
+ {
+  "text": "s taxe ni charges. Dans les entreprises de 11 à 50 salariés, dispositif obligatoire d'intéressement. Dans les entreprises de plus de 250 salariés, interdiction de verser des dividendes aux actionnaires sans augmenter les salaires des employés. Les employés qui créent de la valeur par leur travail doivent bénéficier des profits de l'entreprise. Réduction des impôts de production de 30 à 33,6 milliards d'euros (50% des impôts de production, nets des retours d'impôt sur les sociétés) pour rendre la France attractive aux investisseurs et promouvoir la création d'emplois industriels.",
+  "source": "Programme Xavier Bertrand - Nous France 2027",
+  "page": "Restaurer la valeur travail",
+  "theme": "travail-économie",
+  "id": 1
+ },
+ {
+  "text": "pour rendre la France attractive aux investisseurs et promouvoir la création d'emplois industriels. Fonds souverain : consolider toutes les participations de l'État (150 milliards d'euros) en une véritable force économique et stratégique.",
+  "source": "Programme Xavier Bertrand - Nous France 2027",
+  "page": "Restaurer la valeur travail",
+  "theme": "travail-économie",
+  "id": 2
+ },
+ {
+  "text": "Bertrand positionne l'âge de départ à la retraite à 64 ans. Aucune pension ne peut être inférieure à 1 000 euros. Quelqu'un qui a travaillé toute sa carrière au SMIC ne doit pas recevoir moins à la retraite que ce plancher. Bertrand dénonce la réforme des retraites de Macron comme un piège et une vaste opération hypocrite de coupes généralisées dans les pensions. Il s'oppose au système universel par points défendu par Macron. Il défend un système de retraites juste, qui récompense ceux qui ont travaillé toute leur vie, notamment les travailleurs manuels et ceux qui ont commencé tôt.",
+  "source": "Programme Xavier Bertrand - Nous France 2027",
+  "page": "Retraites",
+  "theme": "social-sante",
+  "id": 3,
+  "theme_origine": "retraites"
+ },
+ {
+  "text": "Bertrand veut rétablir l'autorité de l'État et de la République. Abaisser la majorité pénale à 15 ans pour lutter contre la violence des bandes et la délinquance juvénile. Porter la capacité carcérale à 80 000 places (20 000 places supplémentaires) pour rendre la politique pénale réaliste. Rétablir les courtes peines de prison, même inférieures à un mois, comme mesure dissuasive. Peines minimales obligatoires pour les crimes et délits les plus graves. Prison automatique pour les agressions contre les policiers, gendarmes, pompiers et maires.",
+  "source": "Programme Xavier Bertrand - Nous France 2027",
+  "page": "Rétablir l'autorité",
+  "theme": "securite-protection",
+  "id": 4,
+  "theme_origine": "sécurité-justice"
+ },
+ {
+  "text": "graves. Prison automatique pour les agressions contre les policiers, gendarmes, pompiers et maires. Réforme constitutionnelle pour porter la durée maximale de sûreté pour les peines à perpétuité de 30 à 50 ans pour les actes terroristes, soumise à référendum populaire. Doubler sur dix ans la présence des policiers sur le terrain. Donner aux procureurs la capacité d'imposer des amendes pour toute infraction portant une peine inférieure à 5 ans. Renforcer les ordonnances de protection et les comparutions immédiates.",
+  "source": "Programme Xavier Bertrand - Nous France 2027",
+  "page": "Rétablir l'autorité",
+  "theme": "securite-protection",
+  "id": 5,
+  "theme_origine": "sécurité-justice"
+ },
+ {
+  "text": "Bertrand veut passer d'un pays centré sur sa capitale à un pays-capitale, où chaque territoire est considéré et chaque citoyen voit l'État présent pour lui. Réforme constitutionnelle : donner aux collectivités locales la capacité d'adapter les lois et réglementations nationales aux réalités locales. Le président doit se concentrer sur les grandes orientations stratégiques (sécurité, justice, contrôle de l'immigration, lutte contre le terrorisme) tandis que les élus locaux gèrent les affaires quotidiennes (santé, économie, transport, logement).",
+  "source": "Programme Xavier Bertrand - Nous France 2027",
+  "page": "La République des territoires",
+  "theme": "institutions",
+  "id": 6,
+  "theme_origine": "territoires-décentralisation"
+ },
+ {
+  "text": "tandis que les élus locaux gèrent les affaires quotidiennes (santé, économie, transport, logement). Aucune fermeture d'école rurale sans accord du maire. Retour des services publics dans tous les territoires, pas seulement en zone urbaine. Les collectivités et les familles travaillent aux côtés de l'État dans la gestion des affaires locales. La France ne peut pas fonctionner sans l'État dans les territoires, ni sans les territoires dans l'État.",
+  "source": "Programme Xavier Bertrand - Nous France 2027",
+  "page": "La République des territoires",
+  "theme": "institutions",
+  "id": 7,
+  "theme_origine": "territoires-décentralisation"
+ },
+ {
+  "text": "La position de Bertrand sur l'immigration : ce n'est pas à la France de s'adapter aux besoins de l'immigration, mais à l'immigration de s'adapter aux besoins de la France. Réduire l'immigration familiale. Restreindre les visas de travail non qualifié. Limiter les visas étudiants. Réformer les procédures d'asile. Nous France ne fera aucun compromis avec l'extrême droite et se positionne comme une droite républicaine. L'intégration des immigrés légaux présents en France doit être renforcée par des politiques d'emploi, de logement et d'apprentissage du français.",
+  "source": "Programme Xavier Bertrand - Nous France 2027",
+  "page": "Immigration - reprendre le contrôle",
+  "theme": "immigration",
+  "id": 8
+ },
+ {
+  "text": "France doit être renforcée par des politiques d'emploi, de logement et d'apprentissage du français. Contrôle des frontières renforcé dans le cadre européen.",
+  "source": "Programme Xavier Bertrand - Nous France 2027",
+  "page": "Immigration - reprendre le contrôle",
+  "theme": "immigration",
+  "id": 9
+ },
+ {
+  "text": "Bertrand adopte une approche pragmatique sur l'environnement : être pragmatique et l'assumer. Il n'est pas le plus vert du paysage politique mais n'est pas non plus un partisan de la décroissance. Il soutient la construction de nouveaux réacteurs nucléaires EPR sur le sol français. Il soutient le développement du solaire photovoltaïque avec une filière d'approvisionnement européenne, à condition que cela soit fait sans consommer de terres agricoles et sans déforestation. Il est fortement opposé à l'expansion de l'éolien, considérant que la région est saturée.",
+  "source": "Programme Xavier Bertrand - Nous France 2027",
+  "page": "Environnement et énergie",
+  "theme": "ecologie-energie",
+  "id": 10,
+  "theme_origine": "énergie-environnement"
+ },
+ {
+  "text": "restation. Il est fortement opposé à l'expansion de l'éolien, considérant que la région est saturée. Financement des audits carbone pour les entreprises et les exploitations agricoles. Soutien à la transition énergétique dans l'agriculture. Plans pour le développement de l'agriculture biologique. Soutien à l'agroécologie.",
+  "source": "Programme Xavier Bertrand - Nous France 2027",
+  "page": "Environnement et énergie",
+  "theme": "ecologie-energie",
+  "id": 11,
+  "theme_origine": "énergie-environnement"
+ },
+ {
+  "text": "Réforme de la santé selon Bertrand : mariage entre déconcentration (présence de l'État) et décentralisation (autorité locale). Missions régionales élargies en matière de logement et de santé publique. Réforme du médicament : trois piliers — prévenir les conflits d'intérêts et assurer la transparence des décisions, appliquer le principe de précaution (en cas de doute, priorité aux patients), mieux informer les professionnels de santé et les patients. Réguler les prescriptions hors AMM. Déclaration publique unifiée d'intérêts pour tous les experts.",
+  "source": "Programme Xavier Bertrand - Nous France 2027",
+  "page": "Santé",
+  "theme": "social-sante",
+  "id": 12,
+  "theme_origine": "santé"
+ },
+ {
+  "text": ". Réguler les prescriptions hors AMM. Déclaration publique unifiée d'intérêts pour tous les experts. Loi Sunshine à la française rendant consultables toutes les conventions et honoraires entre acteurs du secteur. Lutter contre les déserts médicaux par une politique territoriale de santé. Revaloriser les médecins de terrain et les soignants dans les hôpitaux de proximité.",
+  "source": "Programme Xavier Bertrand - Nous France 2027",
+  "page": "Santé",
+  "theme": "social-sante",
+  "id": 13,
+  "theme_origine": "santé"
+ },
+ {
+  "text": "Bertrand veut donner aux maires le libre choix concernant les rythmes scolaires dans l'enseignement primaire. Renforcer le pouvoir des collectivités locales dans la gouvernance de l'éducation. Pas de fermeture d'école rurale sans accord du maire : la présence d'une école dans un village est essentielle à la vie du territoire. Développer l'apprentissage comme voie d'excellence. Revaloriser les filières professionnelles. La valeur travail doit être enseignée à l'école : le mérite, l'effort et la récompense sont des valeurs fondatrices de la République.",
+  "source": "Programme Xavier Bertrand - Nous France 2027",
+  "page": "Éducation",
+  "theme": "éducation",
+  "id": 14
+ },
+ {
+  "text": "Bertrand prône la réduction des dépenses publiques pour financer les baisses fiscales, sans augmentation des prélèvements obligatoires. L'État doit maigrir, réduire son périmètre d'action. Zéro augmentation des prélèvements obligatoires. Réduction des impôts de production de 30 à 33,6 milliards d'euros. Le fonds souverain doit consolider toutes les participations de l'État (150 milliards d'euros) pour en faire une véritable force économique et stratégique. La France doit retrouver sa souveraineté économique par la réindustrialisation et la création d'emplois sur le territoire national.",
+  "source": "Programme Xavier Bertrand - Nous France 2027",
+  "page": "Finances publiques et État",
+  "theme": "economie-travail",
+  "id": 15,
+  "theme_origine": "finances-publiques"
+ },
+ {
+  "text": "veraineté économique par la réindustrialisation et la création d'emplois sur le territoire national. Lutter contre la fraude fiscale et sociale.",
+  "source": "Programme Xavier Bertrand - Nous France 2027",
+  "page": "Finances publiques et État",
+  "theme": "economie-travail",
+  "id": 16,
+  "theme_origine": "finances-publiques"
+ },
+ {
+  "text": "Des Régions d'espérer Là où la France agit. Une itinérance à travers la France, à la rencontre de celles et ceux qui la font vivre, travailler, entreprendre, soigner, créer et avancer. Aller sur le terrain, ce n'est pas dérouler un discours déjà écrit ni chercher ce qui conforte ses propres convictions. C'est écouter pour comprendre , découvrir ce qui fonctionne, confronter ses idées au réel et se nourrir de l'énergie et des solutions qui naissent dans les territoires.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — « Des Régions d'espérer » — itinérance et carnet de route de l'été 2026 (page officielle, mise à jour le 31 août 2026) — https://www.nousfrance.fr/des-regions-desperer/",
+  "page": 1,
+  "theme": "vision-generale",
+  "id": 17,
+  "annee": 2026,
+  "date_piece": "2026-08-31",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Une démarche directement liée à la vision de Xavier Bertrand : la République des territoires . Toutes les réponses ne viennent pas de Paris, et les meilleures idées sont souvent celles imaginées au plus près des citoyens. Le carnet de route Je ne vais pas dans les territoires pour expliquer aux gens ce qu'ils doivent penser ou faire. J'y vais pour écouter, comprendre et regarder ce qui marche.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — « Des Régions d'espérer » — itinérance et carnet de route de l'été 2026 (page officielle, mise à jour le 31 août 2026) — https://www.nousfrance.fr/des-regions-desperer/",
+  "page": 2,
+  "theme": "vision-generale",
+  "id": 18,
+  "annee": 2026,
+  "date_piece": "2026-08-31",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Choisissez une étape sur la carte En chiffres Un été sur les routes de France Merci pour votre accueil partout en France ♥ Ce qui est ressorti Les sujets qui ont animé les échanges Le grand âge et la dépendance De la résidence Tiers-Temps à Suresnes aux tables rondes sur le handicap en Corrèze, la question du soin apporté aux plus fragiles est revenue avec force. Le personnel du médicosocial, les familles, les MDPH ont tous fait le même constat : on parle depuis trop longtemps, il faut agir.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — « Des Régions d'espérer » — itinérance et carnet de route de l'été 2026 (page officielle, mise à jour le 31 août 2026) — https://www.nousfrance.fr/des-regions-desperer/",
+  "page": 3,
+  "theme": "vision-generale",
+  "id": 19,
+  "annee": 2026,
+  "date_piece": "2026-08-31",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "La République des territoires À Colmar comme en Corrèze ou à Granville, la même conviction traverse les échanges : on ne peut pas administrer toute la France de la même manière depuis Paris. La différenciation territoriale et la confiance aux élus locaux sont des attentes fortes et partagées. Les entrepreneurs et le travail",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — « Des Régions d'espérer » — itinérance et carnet de route de l'été 2026 (page officielle, mise à jour le 31 août 2026) — https://www.nousfrance.fr/des-regions-desperer/",
+  "page": 4,
+  "theme": "vision-generale",
+  "id": 20,
+  "annee": 2026,
+  "date_piece": "2026-08-31",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "À Aix, les Rencontres économiques ont réuni dirigeants et entrepreneurs autour d'une même conviction : ce ne sont pas les responsables politiques qui créent les emplois. Le rôle de la puissance publique, c'est d'enlever les obstacles pour que celles et ceux qui prennent des risques puissent avancer. La culture comme trait d'union",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — « Des Régions d'espérer » — itinérance et carnet de route de l'été 2026 (page officielle, mise à jour le 31 août 2026) — https://www.nousfrance.fr/des-regions-desperer/",
+  "page": 5,
+  "theme": "vision-generale",
+  "id": 21,
+  "annee": 2026,
+  "date_piece": "2026-08-31",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "D'Arles à Lorient en passant par Avignon et Ramatuelle, la culture est apparue partout comme un formidable vecteur de lien entre les gens. Photographie, spectacle vivant, festivals populaires, langues et identités régionales : ce qui rassemble autour d'une même route, d'une même salle, d'une même passion. La souveraineté et la défense",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — « Des Régions d'espérer » — itinérance et carnet de route de l'été 2026 (page officielle, mise à jour le 31 août 2026) — https://www.nousfrance.fr/des-regions-desperer/",
+  "page": 6,
+  "theme": "vision-generale",
+  "id": 22,
+  "annee": 2026,
+  "date_piece": "2026-08-31",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "À Chaumont, au 61e régiment d'artillerie et à l'école des drones, la jeunesse des équipes et leur maîtrise des nouvelles technologies militaires marquent. Pour protéger la France demain, notre armée doit toujours avoir un temps d'avance. C'est aussi vrai pour l'intelligence artificielle, comme l'a montré le sommet de Lille. Le carnet de route — paroles de Xavier Bertrand par étape (été 2026)",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — « Des Régions d'espérer » — itinérance et carnet de route de l'été 2026 (page officielle, mise à jour le 31 août 2026) — https://www.nousfrance.fr/des-regions-desperer/",
+  "page": 7,
+  "theme": "vision-generale",
+  "id": 23,
+  "annee": 2026,
+  "date_piece": "2026-08-31",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Étape 01 — Lille (Sommet de l'IA), 12 juin 2026 : « Nous avons déjà pris trop de virages en retard. Je ne veux pas que ce soit encore le cas avec l'intelligence artificielle : la France doit être un des premiers pays à la pointe en matière d'IA, notamment via les datas center. » Étape 02 — Suresnes (Résidence Tiers-Temps Domusvi), 26 juin 2026 : « Une société se juge aussi à la façon dont elle prend soin de ses aînés. Sur le grand âge, on parle depuis trop longtemps. Maintenant, il faut agir. Ce n'est pas une option, c'est une responsabilité. »",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — « Des Régions d'espérer » — itinérance et carnet de route de l'été 2026 (page officielle, mise à jour le 31 août 2026) — https://www.nousfrance.fr/des-regions-desperer/",
+  "page": 8,
+  "theme": "vision-generale",
+  "id": 24,
+  "annee": 2026,
+  "date_piece": "2026-08-31",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Étape 03 — Aix-en-Provence (Rencontres économiques), 4 juillet 2026 : « Ce ne sont pas les responsables politiques qui créent les emplois : ce sont les entrepreneurs. Notre responsabilité, c'est de leur permettre d'investir, d'embaucher et de se développer. La politique doit enlever les obstacles, pas en ajouter. »",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — « Des Régions d'espérer » — itinérance et carnet de route de l'été 2026 (page officielle, mise à jour le 31 août 2026) — https://www.nousfrance.fr/des-regions-desperer/",
+  "page": 9,
+  "theme": "vision-generale",
+  "id": 25,
+  "annee": 2026,
+  "date_piece": "2026-08-31",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Étape 04 — Arles & Avignon (Rencontres de la photographie et Festival), 5-7 juillet 2026 : « La culture a toujours été pour moi une priorité car elle est, tout comme le sport, un formidable vecteur de lien entre les gens et d'ouverture. Cela vaut ici pour la photo comme pour le spectacle vivant, auxquels je suis très attaché. Le spectacle de Julien Gosselin en est un incroyable exemple, notamment lorsque les spectateurs peuvent tous se retrouver sur scène lors de la 2e partie : un souvenir inoubliable. »",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — « Des Régions d'espérer » — itinérance et carnet de route de l'été 2026 (page officielle, mise à jour le 31 août 2026) — https://www.nousfrance.fr/des-regions-desperer/",
+  "page": 10,
+  "theme": "vision-generale",
+  "id": 26,
+  "annee": 2026,
+  "date_piece": "2026-08-31",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Étape 05 — Colombey (Colombey-les-Deux-Églises), 16 juillet 2026 : « Revenir à Colombey quelques jours après avoir vu La Bataille de Gaulle avait forcément une résonance particulière. Ce lieu rappelle une chose simple : dans les périodes difficiles, la France a besoin d'une direction, d'une volonté et de responsables qui assument leurs décisions. »",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — « Des Régions d'espérer » — itinérance et carnet de route de l'été 2026 (page officielle, mise à jour le 31 août 2026) — https://www.nousfrance.fr/des-regions-desperer/",
+  "page": 11,
+  "theme": "vision-generale",
+  "id": 27,
+  "annee": 2026,
+  "date_piece": "2026-08-31",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Étape 06 — Chaumont (École des drones · 61e RA), 16 juillet 2026 : « Ce qui m'a frappé à Chaumont, c'est la jeunesse des équipes, leur inventivité et leur maîtrise des nouvelles technologies militaires. Pour protéger la France demain, notre armée doit toujours avoir un temps d'avance. Ici, on voit qu'elle en est capable. »",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — « Des Régions d'espérer » — itinérance et carnet de route de l'été 2026 (page officielle, mise à jour le 31 août 2026) — https://www.nousfrance.fr/des-regions-desperer/",
+  "page": 12,
+  "theme": "vision-generale",
+  "id": 28,
+  "annee": 2026,
+  "date_piece": "2026-08-31",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Étape 07 — Paris (Arrivée du Tour de France), 26 juillet 2026 : « Le vélo est pour moi l'un des sports les plus exigeants qui soient, et c'est aussi pour cela que j'aime le Tour. Mais ce qui me frappe toujours, en particulier dans cette incroyable rue Lepic, c'est cette ferveur populaire : des générations, des territoires, des Français très différents réunis au bord d'une même route. »",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — « Des Régions d'espérer » — itinérance et carnet de route de l'été 2026 (page officielle, mise à jour le 31 août 2026) — https://www.nousfrance.fr/des-regions-desperer/",
+  "page": 13,
+  "theme": "vision-generale",
+  "id": 29,
+  "annee": 2026,
+  "date_piece": "2026-08-31",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Étape 08 — Colmar (Foire aux vins), 31 juillet 2026 : « En Alsace, le dynamisme économique saute aux yeux. Et cela renforce une conviction que je porte depuis longtemps : on ne peut pas administrer toute la France de la même manière depuis Paris. Les meilleures décisions sont celles qui sont prises au plus près du terrain et adaptées aux réalités de chaque territoire. C'est cela, pour moi, la différenciation, la République des Territoires. »",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — « Des Régions d'espérer » — itinérance et carnet de route de l'été 2026 (page officielle, mise à jour le 31 août 2026) — https://www.nousfrance.fr/des-regions-desperer/",
+  "page": 14,
+  "theme": "vision-generale",
+  "id": 30,
+  "annee": 2026,
+  "date_piece": "2026-08-31",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Étape 09 — Ramatuelle (Festival · Spectacle Manu Payet), 1er août 2026 : « Un cadre exceptionnel et Manu Payet qui fait rire toutes les générations : une autre facette de la culture pour laquelle je ne cesserai jamais de me battre. » Étape 10 — Lorient (Festival Interceltique · Café NF), 2 août 2026 : « Quelle ferveur autour de la culture celtique, autour de la simplicité et la chaleur des Bretons, quelle fierté autour de leur histoire. Je crois à une France qui respecte et fait vivre ses identités locales, dont les langues régionales. »",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — « Des Régions d'espérer » — itinérance et carnet de route de l'été 2026 (page officielle, mise à jour le 31 août 2026) — https://www.nousfrance.fr/des-regions-desperer/",
+  "page": 15,
+  "theme": "vision-generale",
+  "id": 31,
+  "annee": 2026,
+  "date_piece": "2026-08-31",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Étape 11 — Corse (Lumio · Île-Rousse), 6-13 août 2026 : « Si l'on m'avait dit, il y a trente ans, lorsque j'ai poussé pour la première fois la porte de cette librairie, que j'y dédicacerais un jour un livre racontant mon parcours et ce que je veux pour la France… C'est aussi cela que nous devons retrouver : la conviction que rien n'est écrit d'avance. »",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — « Des Régions d'espérer » — itinérance et carnet de route de l'été 2026 (page officielle, mise à jour le 31 août 2026) — https://www.nousfrance.fr/des-regions-desperer/",
+  "page": 16,
+  "theme": "vision-generale",
+  "id": 32,
+  "annee": 2026,
+  "date_piece": "2026-08-31",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Étape 12 — Corrèze (Lubersac · Tulle), 17-18 août 2026 : « Ici, je cultive l'amitié avec Pascal Costes, Claude Chirac et Frédéric Salat Baroux. Je repars de Corrèze avec une conviction renforcée : il n'y a pas trop de solidarité en France, mais elle n'est pas toujours dirigée vers ceux qui en ont le plus besoin. Sur le handicap notamment, nous ne sommes pas au niveau. Une société juste, c'est une société qui donne réellement à chacun les moyens d'avancer. »",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — « Des Régions d'espérer » — itinérance et carnet de route de l'été 2026 (page officielle, mise à jour le 31 août 2026) — https://www.nousfrance.fr/des-regions-desperer/",
+  "page": 17,
+  "theme": "vision-generale",
+  "id": 33,
+  "annee": 2026,
+  "date_piece": "2026-08-31",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Étape 13 — Granville (Voiles de travail · Conférence), 20-21 août 2026 : « J'ai été séduit par Granville et par l'énergie de son maire. Ce qui m'a surtout parlé, c'est son obsession du résultat : partir d'un problème, agir et tenir ses engagements. C'est exactement ma conception de la politique. À la fin, ce qui compte, ce n'est pas ce qu'on a annoncé : c'est ce qu'on a réussi à changer. »",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — « Des Régions d'espérer » — itinérance et carnet de route de l'été 2026 (page officielle, mise à jour le 31 août 2026) — https://www.nousfrance.fr/des-regions-desperer/",
+  "page": 18,
+  "theme": "vision-generale",
+  "id": 34,
+  "annee": 2026,
+  "date_piece": "2026-08-31",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Lettre aux maires de Xavier Bertrand Félicitations pour votre élection Madame la Maire, Monsieur le Maire, Je tiens à vous adresser mes chaleureuses et sincères félicitations suite à votre élection comme Maire . Vous incarnez désormais, aux yeux de chacun de nos concitoyens, la République dans ce qu’elle a de plus proche et de plus concret . Le maire est le seul élu qui accompagne nos concitoyens à chaque étape de sa vie . Être Maire, c’est à la fois répondre aux attentes du quotidien, mais aussi porter une vision et engager les transformations nécessaires pour sa commune .",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Lettre aux maires (mars 2026) (page officielle, mise à jour le 30 mars 2026) — https://www.nousfrance.fr/2026/03/lettre-aux-maires-de-xavier-bertrand/",
+  "page": 1,
+  "theme": "institutions",
+  "id": 35,
+  "annee": 2026,
+  "date_piece": "2026-03-30",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Cette responsabilité, je la connais bien pour l’avoir exercée à Saint-Quentin dans l’Aisne : Maire un jour, Maire toujours ! Aujourd’hui encore, je dirige ma Région avec le même état d’esprit qu’un Maire, soucieux de la vie quotidienne de mes concitoyens comme de l’avenir de ma Région. Je sais donc combien votre mandat exige de l’écoute , de la disponibilité et une présence constante sur le terrain , et j’ai bien conscience des sacrifices au détriment de votre vie professionnelle ou familiale.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Lettre aux maires (mars 2026) (page officielle, mise à jour le 30 mars 2026) — https://www.nousfrance.fr/2026/03/lettre-aux-maires-de-xavier-bertrand/",
+  "page": 2,
+  "theme": "institutions",
+  "id": 36,
+  "annee": 2026,
+  "date_piece": "2026-03-30",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Je n’ignore pas, non plus, la multiplication des menaces et des agressions dont vous pouvez être l’objet dans l’exercice de votre mandat. Nous avons tous été profondément marqués par l’agressivité sur les réseaux sociaux et les violences physiques contre les élus qui se sont aussi manifestées au soir des résultats des municipales. Les agressions contre les élus locaux sont une atteinte à la République en son cœur. En ce sens, la Justice vous doit une protection renforcée avec des peines accrues pour ceux qui vous menacent et vous attaquent.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Lettre aux maires (mars 2026) (page officielle, mise à jour le 30 mars 2026) — https://www.nousfrance.fr/2026/03/lettre-aux-maires-de-xavier-bertrand/",
+  "page": 3,
+  "theme": "institutions",
+  "id": 37,
+  "annee": 2026,
+  "date_piece": "2026-03-30",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "La République Française tient par ses maires. Elle tient par votre sens du concret, votre capacité à rassembler, et votre attachement à vos habitants. Mais elle ne peut plus continuer à vous demander toujours plus, sans vous redonner pleinement les moyens d’agir. Depuis trop longtemps s’est construit un système éloigné et déconnecté du terrain. On vous demande de gérer des crises avec des moyens que l’État vous a retirés . Trop de règles, trop de complexité, trop de décisions prises à distance. Cela ne peut plus durer !",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Lettre aux maires (mars 2026) (page officielle, mise à jour le 30 mars 2026) — https://www.nousfrance.fr/2026/03/lettre-aux-maires-de-xavier-bertrand/",
+  "page": 4,
+  "theme": "institutions",
+  "id": 38,
+  "annee": 2026,
+  "date_piece": "2026-03-30",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Si nous voulons que le pays fonctionne de nouveau efficacement, ayons le courage de remettre à plat ce qui ne marche plus, de simplifier, et de prendre en compte votre expérience et votre connaissance concrète des réalités. Nous ne reconstruirons pas la France depuis des bureaux parisiens. Nous la reconstruirons par une République des territoires . C’est un projet, une conviction profonde que je défends depuis des années.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Lettre aux maires (mars 2026) (page officielle, mise à jour le 30 mars 2026) — https://www.nousfrance.fr/2026/03/lettre-aux-maires-de-xavier-bertrand/",
+  "page": 5,
+  "theme": "institutions",
+  "id": 39,
+  "annee": 2026,
+  "date_piece": "2026-03-30",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "L’Etat doit se recentrer sur ses missions régaliennes et essentielles . C’est dans nos territoires que nous devons décider et agir pour tout ce qui relève de la vie quotidienne de nos concitoyens. A la différence de l’Etat, nos collectivités ne peuvent pas voter un budget en déficit et ne peuvent être tenues responsables de la situation financière et budgétaire de notre pays. Les Communes ne sont pas la source de notre suradministration et de la bureaucratie, elles en sont la solution.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Lettre aux maires (mars 2026) (page officielle, mise à jour le 30 mars 2026) — https://www.nousfrance.fr/2026/03/lettre-aux-maires-de-xavier-bertrand/",
+  "page": 6,
+  "theme": "institutions",
+  "id": 40,
+  "annee": 2026,
+  "date_piece": "2026-03-30",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Vous me trouverez toujours à vos côtés face à ceux qui s’attaquent à la place et aux rôles des communes de France. Vous qui êtes au contact direct des Français, vous savez que la confiance ne se décrète pas . Elle se construit pas à pas sur le terrain à partir de réalisations et de mesures concrètes. C’est ce que j’appelle la politique de la preuve et du résultat .",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Lettre aux maires (mars 2026) (page officielle, mise à jour le 30 mars 2026) — https://www.nousfrance.fr/2026/03/lettre-aux-maires-de-xavier-bertrand/",
+  "page": 7,
+  "theme": "institutions",
+  "id": 41,
+  "annee": 2026,
+  "date_piece": "2026-03-30",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Pour construire ce projet, j’ai besoin de votre expérience , pas seulement de votre soutien. C’est pourquoi je souhaite que notre lien reste direct. J’ai l’intention, dans les semaines qui viennent, d’aller à votre rencontre, comme je l’ai toujours fait, chez vous . En attendant si vous souhaitez réagir à ces propositions vous pouvez m’écrire en direct. Vous pouvez compter sur mon engagement et sur ma volonté de servir cette admirable cause qu’est la défense des territoires, des communes et des Maires de France,",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Lettre aux maires (mars 2026) (page officielle, mise à jour le 30 mars 2026) — https://www.nousfrance.fr/2026/03/lettre-aux-maires-de-xavier-bertrand/",
+  "page": 8,
+  "theme": "institutions",
+  "id": 42,
+  "annee": 2026,
+  "date_piece": "2026-03-30",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "« La banalisation des extrêmes a altéré notre discernement », par Xavier Bertrand Le président de la région Hauts-de-France, Xavier Bertrand, s’alarme de la défiance généralisée représentée par la montée des partis extrêmes en France.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « La banalisation des extrêmes a altéré notre discernement » (page officielle, mise à jour le 22 février 2026) — https://www.nousfrance.fr/2026/02/la-banalisation-des-extremes-a-altere-notre-discernement-par-xavier-bertrand/",
+  "page": 1,
+  "theme": "vision-generale",
+  "id": 43,
+  "annee": 2026,
+  "date_piece": "2026-02-22",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Ce matin, le cauchemar français a commencé. Hier soir, un candidat issu d’un parti extrême a remporté l’élection présidentielle, au terme d’un second tour inédit : un extrême face à l’autre. Peu importe lequel a gagné. Ce qui importe, c’est ce que cette victoire déclenche : la France se retrouve enfermée dans ce duel mortifère. Car les extrêmes ne s’apaisent jamais : lorsqu’ils gagnent, ils gouvernent contre.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « La banalisation des extrêmes a altéré notre discernement » (page officielle, mise à jour le 22 février 2026) — https://www.nousfrance.fr/2026/02/la-banalisation-des-extremes-a-altere-notre-discernement-par-xavier-bertrand/",
+  "page": 2,
+  "theme": "vision-generale",
+  "id": 44,
+  "annee": 2026,
+  "date_piece": "2026-02-22",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Lorsqu’ils perdent, ils contestent tout. Pour eux, la victoire n’éteint pas la radicalité, elle la met au pouvoir. La défaite ne la tempère pas, elle l’exacerbe. La France n’a pas basculé dans un régime autoritaire, mais dans quelque chose de plus insidieux : une défiance généralisée. La moitié du pays doute de la légitimité de l’autre. Le camp battu parle de fraude, d’illégitimité, de manipulation. Les réseaux s’embrasent.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « La banalisation des extrêmes a altéré notre discernement » (page officielle, mise à jour le 22 février 2026) — https://www.nousfrance.fr/2026/02/la-banalisation-des-extremes-a-altere-notre-discernement-par-xavier-bertrand/",
+  "page": 3,
+  "theme": "vision-generale",
+  "id": 45,
+  "annee": 2026,
+  "date_piece": "2026-02-22",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Les institutions sont soupçonnées. Les forces de l’ordre, les juges, les journalistes, deviennent des cibles symboliques. Le vainqueur promet l’ordre. Le perdant, la résistance. Un face-à-face s’installe, sans armistice possible, où chacun ne conçoit d’issue que dans l’écrasement de l’autre. La mécanique est connue. Le pouvoir durcit son discours au nom de l’impérieuse stabilité. L’opposition radicalise le sien au nom de la justice.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « La banalisation des extrêmes a altéré notre discernement » (page officielle, mise à jour le 22 février 2026) — https://www.nousfrance.fr/2026/02/la-banalisation-des-extremes-a-altere-notre-discernement-par-xavier-bertrand/",
+  "page": 4,
+  "theme": "vision-generale",
+  "id": 46,
+  "annee": 2026,
+  "date_piece": "2026-02-22",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Chaque excès de l’un sert d’argument à l’autre. Chaque affrontement devient une justification. Ce climat produit ce qu’il y a de pire : une confrontation permanente. La politique cesse d’être un débat. Elle devient une épreuve de force. Et dans ce contexte, la rue n’est jamais loin. Et ce qui pourrait sembler n’être qu’une anticipation politique a, hélas, déjà un prix : des vies humaines. Clément Méric, en 2013, n’est pas un simple fait divers. Il a été tué dans un contexte impliquant des militants d’ultradroite. C’était un avertissement.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « La banalisation des extrêmes a altéré notre discernement » (page officielle, mise à jour le 22 février 2026) — https://www.nousfrance.fr/2026/02/la-banalisation-des-extremes-a-altere-notre-discernement-par-xavier-bertrand/",
+  "page": 5,
+  "theme": "vision-generale",
+  "id": 47,
+  "annee": 2026,
+  "date_piece": "2026-02-22",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Quentin Deranque, la semaine dernière, dans un climat d’affrontement impliquant des militants d’ultragauche, est désormais une alerte. Deux violences politiques. Deux faces d’un même engrenage. Une même tragédie : la mort d’un enfant. Alors surgit l’abjecte récupération. À peine l’émotion exprimée que certains, à l’extrême droite, s’en saisissent pour s’absoudre de leur propre passé, désignant l’extrême gauche comme unique péril pour notre démocratie et se présentant comme seuls garants de l’ordre républicain.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « La banalisation des extrêmes a altéré notre discernement » (page officielle, mise à jour le 22 février 2026) — https://www.nousfrance.fr/2026/02/la-banalisation-des-extremes-a-altere-notre-discernement-par-xavier-bertrand/",
+  "page": 6,
+  "theme": "vision-generale",
+  "id": 48,
+  "annee": 2026,
+  "date_piece": "2026-02-22",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Dans le même mouvement, à l’extrême gauche, d’autres écartent toute responsabilité, renvoyant la violence à une pure provocation adverse, comme si l’escalade n’était jamais nourrie des deux côtés. La mémoire devient une arme. La douleur, un argument. La nausée. Deux camps lancés dans une course effrénée au pouvoir : la combinaison est explosive. L’un se pose en rempart contre le chaos qu’il dénonce. L’autre prospère sur la peur d’une dérive qu’il annonce. Chacun a besoin de son adversaire pour exister.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « La banalisation des extrêmes a altéré notre discernement » (page officielle, mise à jour le 22 février 2026) — https://www.nousfrance.fr/2026/02/la-banalisation-des-extremes-a-altere-notre-discernement-par-xavier-bertrand/",
+  "page": 7,
+  "theme": "vision-generale",
+  "id": 49,
+  "annee": 2026,
+  "date_piece": "2026-02-22",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Ils occupent méthodiquement tout l’espace pour en devenir les seuls pôles visibles. Amplifiée par la logique médiatique, cette apparente confrontation installe peu à peu ce duel, au point de le rendre presque inévitable. Le pays se retrouve pris en étau. Soyons honnêtes, leur progression ne tient pas à leur seule stratégie. Les partis de gouvernement ont déçu. Ils ont commis des erreurs, parfois graves, en laissant une partie du pays se sentir abandonnée.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « La banalisation des extrêmes a altéré notre discernement » (page officielle, mise à jour le 22 février 2026) — https://www.nousfrance.fr/2026/02/la-banalisation-des-extremes-a-altere-notre-discernement-par-xavier-bertrand/",
+  "page": 8,
+  "theme": "vision-generale",
+  "id": 50,
+  "annee": 2026,
+  "date_piece": "2026-02-22",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Certains de leurs dirigeants ont cru pouvoir capter cet électorat en reprenant ses thèmes, en brouillant les lignes, en banalisant ce qu’ils auraient dû combattre. Le piège est là, précisément.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « La banalisation des extrêmes a altéré notre discernement » (page officielle, mise à jour le 22 février 2026) — https://www.nousfrance.fr/2026/02/la-banalisation-des-extremes-a-altere-notre-discernement-par-xavier-bertrand/",
+  "page": 9,
+  "theme": "vision-generale",
+  "id": 51,
+  "annee": 2026,
+  "date_piece": "2026-02-22",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "La banalisation des extrêmes a altéré le discernement de certains d’entre nous, persuadés qu’en votant pour l’un ils repoussent l’autre, jugé plus brutal, plus dangereux, plus incontrôlable. Comme si un extrême pouvait servir de rempart à un autre. Ce calcul est une illusion tragique : croire repousser l’un en choisissant l’autre, c’est en réalité nourrir l’engrenage qui finira par nous imposer, à terme, l’un puis l’autre. La France a déjà traversé des crises économiques, sociales, internationales. Ce qu’elle supporte moins, c’est l’érosion de la confiance civique.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « La banalisation des extrêmes a altéré notre discernement » (page officielle, mise à jour le 22 février 2026) — https://www.nousfrance.fr/2026/02/la-banalisation-des-extremes-a-altere-notre-discernement-par-xavier-bertrand/",
+  "page": 10,
+  "theme": "vision-generale",
+  "id": 52,
+  "annee": 2026,
+  "date_piece": "2026-02-22",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Une démocratie ne meurt pas seulement lorsque les libertés disparaissent : elle s’efface quand on incite les citoyens à refuser à l’autre le droit de gouverner. En présentant la prochaine élection présidentielle comme un duel inévitable, au motif que tout aurait été essayé, nous contribuons nous-mêmes à installer cette confrontation. Dans cette logique, il ne peut y avoir ni vainqueur reconnu, ni stabilité possible. Aujourd’hui l’un. Demain l’autre. Et, au milieu, un pays qui se déchire.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « La banalisation des extrêmes a altéré notre discernement » (page officielle, mise à jour le 22 février 2026) — https://www.nousfrance.fr/2026/02/la-banalisation-des-extremes-a-altere-notre-discernement-par-xavier-bertrand/",
+  "page": 11,
+  "theme": "vision-generale",
+  "id": 53,
+  "annee": 2026,
+  "date_piece": "2026-02-22",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Un cauchemar ne s’arrête pas tout seul. Il n’y a pas de fatalité ; on s’en réveille. Encore faut-il ouvrir les yeux. Tout dépend de notre sursaut. Refusons ensemble la résignation, le cynisme, la facilité. Refusons ce jeu où chaque extrême ne se légitime que par la menace de l’autre. C’est à cette condition que la France pourra retrouver une voie apaisée, fidèle à ses principes républicains.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « La banalisation des extrêmes a altéré notre discernement » (page officielle, mise à jour le 22 février 2026) — https://www.nousfrance.fr/2026/02/la-banalisation-des-extremes-a-altere-notre-discernement-par-xavier-bertrand/",
+  "page": 12,
+  "theme": "vision-generale",
+  "id": 54,
+  "annee": 2026,
+  "date_piece": "2026-02-22",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "« Saisir la CJUE : le dernier recours contre le Mercosur », par Julien Dive et Xavier Bertrand (La Tribune) Le traité de libre-échange entre l’Union européenne et les pays du Mercosur est l’ouverture directe à une agriculture low-cost et à l’asphyxie programmée de milliers d’exploitations. Avant le 19 janvier, la France peut agir : saisir la Cour de justice de l’Union européenne (CJUE), qui suspendrait l’accord et en vérifierait la légalité.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Saisir la CJUE : le dernier recours contre le Mercosur » (avec Julien Dive) (page officielle, mise à jour le 8 janvier 2026) — https://www.nousfrance.fr/2026/01/saisir-la-cjue-le-dernier-recours-contre-le-mercosur-par-julien-dive-et-xavier-bertrand-la-tribune/",
+  "page": 1,
+  "theme": "agriculture",
+  "id": 55,
+  "annee": 2026,
+  "date_piece": "2026-01-08",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Les manœuvres dilatoires ne trompent personne Le report d’un mois arraché en décembre n’a été qu’un rideau de fumée pour apaiser une colère légitime. La Commission mise sur l’isolement progressif de la France pour signer dès janvier cet accord inacceptable en l’état. L’Italie, jusqu’ici notre alliée, a finalement fléchi, affaiblissant notre capacité à constituer une minorité de blocage.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Saisir la CJUE : le dernier recours contre le Mercosur » (avec Julien Dive) (page officielle, mise à jour le 8 janvier 2026) — https://www.nousfrance.fr/2026/01/saisir-la-cjue-le-dernier-recours-contre-le-mercosur-par-julien-dive-et-xavier-bertrand-la-tribune/",
+  "page": 2,
+  "theme": "agriculture",
+  "id": 56,
+  "annee": 2026,
+  "date_piece": "2026-01-08",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Dans le même temps, le gouvernement français s’active à préparer les esprits . Arrêtés sur les pesticides, courriers censés rassurer, circulaires techniques… autant de gages destinés à faire croire que la France pourra encore fixer ses règles nationales une fois l’accord européen signé. C’est faux. D’autant plus que les compensations brandies comme le maintien du budget de la politique agricole commune (PAC) ou les clauses de sauvegarde renforcées, reposent sur des illusions. Un budget constant en euros courants, sans indexation, est une baisse déguisée.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Saisir la CJUE : le dernier recours contre le Mercosur » (avec Julien Dive) (page officielle, mise à jour le 8 janvier 2026) — https://www.nousfrance.fr/2026/01/saisir-la-cjue-le-dernier-recours-contre-le-mercosur-par-julien-dive-et-xavier-bertrand-la-tribune/",
+  "page": 3,
+  "theme": "agriculture",
+  "id": 57,
+  "annee": 2026,
+  "date_piece": "2026-01-08",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Une clause de sauvegarde dans un traité, est une promesse en sursis. En réalité, tout est fait pour faire avaler cet accord avec les pays du Mercosur en douce , sans débat et sans confrontation ! Face à cela, se borner à voter contre ne suffit pas . La France doit donc utiliser les leviers dont elle dispose… et le plus décisif aujourd’hui, c’est la saisine de la CJUE !",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Saisir la CJUE : le dernier recours contre le Mercosur » (avec Julien Dive) (page officielle, mise à jour le 8 janvier 2026) — https://www.nousfrance.fr/2026/01/saisir-la-cjue-le-dernier-recours-contre-le-mercosur-par-julien-dive-et-xavier-bertrand-la-tribune/",
+  "page": 4,
+  "theme": "agriculture",
+  "id": 58,
+  "annee": 2026,
+  "date_piece": "2026-01-08",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Sur ce dernier point, notre pays ne partirait pas de zéro. L’Assemblée et le Sénat ont déjà voté, à une quasi-unanimité, des résolutions appelant le gouvernement à saisir la CJUE. Celle du Sénat, portée par Jean-François Rapin, alerte : « La Commission européenne tente par tous les moyens de contourner les Parlements nationaux » . Saisir la CJUE : un devoir pour défendre nos principes",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Saisir la CJUE : le dernier recours contre le Mercosur » (avec Julien Dive) (page officielle, mise à jour le 8 janvier 2026) — https://www.nousfrance.fr/2026/01/saisir-la-cjue-le-dernier-recours-contre-le-mercosur-par-julien-dive-et-xavier-bertrand-la-tribune/",
+  "page": 5,
+  "theme": "agriculture",
+  "id": 59,
+  "annee": 2026,
+  "date_piece": "2026-01-08",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Engager une action devant la Cour de justice de l’Union européenne est aujourd’hui un impératif politique et moral. Car oui, si on veut tuer notre élevage, on applique le Mercosur. La concurrence serait totalement déloyale. Nos producteurs respectent des normes toujours plus strictes ; ceux du Mercosur, non. Pire, l’accord permettrait à ces pays de contester toute nouvelle règle européenne qui leur déplairait. Moins on protège, mieux ils vendent !",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Saisir la CJUE : le dernier recours contre le Mercosur » (avec Julien Dive) (page officielle, mise à jour le 8 janvier 2026) — https://www.nousfrance.fr/2026/01/saisir-la-cjue-le-dernier-recours-contre-le-mercosur-par-julien-dive-et-xavier-bertrand-la-tribune/",
+  "page": 6,
+  "theme": "agriculture",
+  "id": 60,
+  "annee": 2026,
+  "date_piece": "2026-01-08",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Et à travers ce « mécanisme de rééquilibrage », c’est notre capacité à faire progresser nos standards alimentaires, sanitaires et environnementaux qui est menacée. Mais le cœur du problème est aussi juridique. La Commission européenne a sciemment scindé le traité pour éviter une ratification complète par les États. Une manœuvre qui piétine les engagements pris par le Conseil de l’UE et déséquilibre les institutions. La CJUE doit donc trancher : avait-elle le droit d’imposer ce tour de passe-passe démocratique ?",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Saisir la CJUE : le dernier recours contre le Mercosur » (avec Julien Dive) (page officielle, mise à jour le 8 janvier 2026) — https://www.nousfrance.fr/2026/01/saisir-la-cjue-le-dernier-recours-contre-le-mercosur-par-julien-dive-et-xavier-bertrand-la-tribune/",
+  "page": 7,
+  "theme": "agriculture",
+  "id": 61,
+  "annee": 2026,
+  "date_piece": "2026-01-08",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Ajoutons à cela un principe de précaution vidé de sa substance, des contrôles allégés aux frontières et l’absence de garanties sur le bien-être animal ou les traitements vétérinaires. Cet accord est une brèche qu’il est encore temps de refermer ! Restaurer la confiance en l’action publique En engageant un recours devant la CJUE, la France montrerait qu’elle met tout en œuvre pour défendre l’intérêt général et ses engagements. Cette saisine est un outil juridique et politique à notre disposition : servons-nous-en ! Il est trop facile de prétendre que l’impuissance publique serait une fatalité.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Saisir la CJUE : le dernier recours contre le Mercosur » (avec Julien Dive) (page officielle, mise à jour le 8 janvier 2026) — https://www.nousfrance.fr/2026/01/saisir-la-cjue-le-dernier-recours-contre-le-mercosur-par-julien-dive-et-xavier-bertrand-la-tribune/",
+  "page": 8,
+  "theme": "agriculture",
+  "id": 62,
+  "annee": 2026,
+  "date_piece": "2026-01-08",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Au contraire, nous avons les moyens d’agir et de faire respecter nos choix démocratiques. C’est exactement pour cela que les Français nous font confiance et nous élisent : pour que nous utilisions tous les leviers afin de protéger notre modèle agricole, notre souveraineté alimentaire et nos valeurs communes.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Saisir la CJUE : le dernier recours contre le Mercosur » (avec Julien Dive) (page officielle, mise à jour le 8 janvier 2026) — https://www.nousfrance.fr/2026/01/saisir-la-cjue-le-dernier-recours-contre-le-mercosur-par-julien-dive-et-xavier-bertrand-la-tribune/",
+  "page": 9,
+  "theme": "agriculture",
+  "id": 63,
+  "annee": 2026,
+  "date_piece": "2026-01-08",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "La balle est désormais dans le camp du gouvernement. L’exécutif français doit entendre le message de son Parlement et de ses concitoyens : refuser l’accord UE-Mercosur en l’état et enclencher sans tarder la procédure devant la CJUE pour en contester la validité. Ce recours suspendrait l’accord et la Cour pourrait le juger illégal s’il ne respecte pas des principes fondamentaux, comme le respect du principe de précaution ou les modalités de ratification par les parlements nationaux.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Saisir la CJUE : le dernier recours contre le Mercosur » (avec Julien Dive) (page officielle, mise à jour le 8 janvier 2026) — https://www.nousfrance.fr/2026/01/saisir-la-cjue-le-dernier-recours-contre-le-mercosur-par-julien-dive-et-xavier-bertrand-la-tribune/",
+  "page": 10,
+  "theme": "agriculture",
+  "id": 64,
+  "annee": 2026,
+  "date_piece": "2026-01-08",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Nous en appelons solennellement au courage politique du gouvernement français. En l’état, l’accord fait l’union contre lui, cela doit être entendu. Écoutez les agriculteurs, les consommateurs, les scientifiques, les parlementaires et les élus locaux engagés. La France ne sera jamais isolée en défendant l’exigence démocratique, et la santé de ses citoyens. Au contraire, elle honorera son rôle de lanceur d’alerte. Aux États de rappeler à l’Europe ses fondamentaux quand elle les oublie : standards élevés, précaution et démocratie.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Saisir la CJUE : le dernier recours contre le Mercosur » (avec Julien Dive) (page officielle, mise à jour le 8 janvier 2026) — https://www.nousfrance.fr/2026/01/saisir-la-cjue-le-dernier-recours-contre-le-mercosur-par-julien-dive-et-xavier-bertrand-la-tribune/",
+  "page": 11,
+  "theme": "agriculture",
+  "id": 65,
+  "annee": 2026,
+  "date_piece": "2026-01-08",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Tant que rien n’est signé, tout peut être empêché. La liste complète des signataires Julien Dive, député vice-président de la commission des affaires économiques à l’AN Xavier Bertrand, président de région Hauts-de-France Jean-Francois Rapin, Sénateur, Président de la commission des Européennes au Sénat Dominique Estrosi-Sassone, Sénatrice, présidente de la commission des affaires économiques au Sénat Pascal Coste , Agriculteur, président du département de la Corrèze Bruno Cardot, agriculteur",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Saisir la CJUE : le dernier recours contre le Mercosur » (avec Julien Dive) (page officielle, mise à jour le 8 janvier 2026) — https://www.nousfrance.fr/2026/01/saisir-la-cjue-le-dernier-recours-contre-le-mercosur-par-julien-dive-et-xavier-bertrand-la-tribune/",
+  "page": 12,
+  "theme": "agriculture",
+  "id": 66,
+  "annee": 2026,
+  "date_piece": "2026-01-08",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Xavier Bertrand : « La commission d’enquête parlementaire sur l’audiovisuel public est instrumentalisée par son rapporteur à des fins idéologiques » (Le Monde) Le président (Les Républicains) de la région Hauts-de-France, dénonce, dans une tribune au « Monde », les assauts de l’extrême droite contre la presse. La commission d’enquête sur l’audiovisuel public, qui reprend ses travaux le 6 janvier, en donne, selon lui, un grave exemple.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune sur la commission d'enquête et l'audiovisuel public (page officielle, mise à jour le 6 janvier 2026) — https://www.nousfrance.fr/2026/01/xavier-bertrand-la-commission-denquete-parlementaire-sur-laudiovisuel-public-est-instrumentalisee-par-son-rapporteur-a-des-fins-ideologiques-le-monde/",
+  "page": 1,
+  "theme": "culture-numerique",
+  "id": 67,
+  "annee": 2026,
+  "date_piece": "2026-01-06",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Entendez-vous ce silence assourdissant ? Celui dans lequel l’extrême droite œuvre, méthodiquement, pour tenter de mettre au pas des journalistes qui ne pensent pas comme elle.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune sur la commission d'enquête et l'audiovisuel public (page officielle, mise à jour le 6 janvier 2026) — https://www.nousfrance.fr/2026/01/xavier-bertrand-la-commission-denquete-parlementaire-sur-laudiovisuel-public-est-instrumentalisee-par-son-rapporteur-a-des-fins-ideologiques-le-monde/",
+  "page": 2,
+  "theme": "culture-numerique",
+  "id": 68,
+  "annee": 2026,
+  "date_piece": "2026-01-06",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Je suis gaulliste. Je crois à un Etat fort quand il protège, pas quand il intimide. A des institutions solides quand elles garantissent les libertés, pas quand elles les fragilisent. En démocratie, s’attaquer à des journalistes pour ce qu’ils pensent, pour ce sur quoi ils enquêtent ou pour ce qu’ils révèlent est une ligne rouge absolue. Une presse libre n’est pas une presse complaisante. Elle est l’une des conditions de la souveraineté du peuple.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune sur la commission d'enquête et l'audiovisuel public (page officielle, mise à jour le 6 janvier 2026) — https://www.nousfrance.fr/2026/01/xavier-bertrand-la-commission-denquete-parlementaire-sur-laudiovisuel-public-est-instrumentalisee-par-son-rapporteur-a-des-fins-ideologiques-le-monde/",
+  "page": 3,
+  "theme": "culture-numerique",
+  "id": 69,
+  "annee": 2026,
+  "date_piece": "2026-01-06",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Je veux être clair sur un point essentiel : je ne confonds jamais l’extrême droite avec ses électeurs. Celles et ceux qui votent pour elle ne sont ni des ennemis de la République ni des citoyens à disqualifier. Ils sont souvent les premières victimes de stratégies de manipulation, de colère organisée et de désinformation planifiée. Les priver d’une information libre et pluraliste, c’est aussi les priver des moyens de se forger une opinion éclairée.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune sur la commission d'enquête et l'audiovisuel public (page officielle, mise à jour le 6 janvier 2026) — https://www.nousfrance.fr/2026/01/xavier-bertrand-la-commission-denquete-parlementaire-sur-laudiovisuel-public-est-instrumentalisee-par-son-rapporteur-a-des-fins-ideologiques-le-monde/",
+  "page": 4,
+  "theme": "culture-numerique",
+  "id": 70,
+  "annee": 2026,
+  "date_piece": "2026-01-06",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Instruction à charge Défendre la liberté de la presse, c’est défendre tous les citoyens. Ce qui se joue aujourd’hui n’a rien d’anecdotique. A l’instar de l’extrême gauche qui a instrumentalisé précédemment les outils essentiels du contrôle parlementaire, l’extrême droite a souhaité créer une commission d’enquête parlementaire sur la neutralité, le fonctionnement et le financement de l’audiovisuel public, trois sujets parfaitement légitimes au demeurant.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune sur la commission d'enquête et l'audiovisuel public (page officielle, mise à jour le 6 janvier 2026) — https://www.nousfrance.fr/2026/01/xavier-bertrand-la-commission-denquete-parlementaire-sur-laudiovisuel-public-est-instrumentalisee-par-son-rapporteur-a-des-fins-ideologiques-le-monde/",
+  "page": 5,
+  "theme": "culture-numerique",
+  "id": 71,
+  "annee": 2026,
+  "date_piece": "2026-01-06",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Mais, au lieu de s’interroger sur la réforme nécessaire des structures de l’audiovisuel public, sur la réduction des coûts qui s’impose à tous, ou sur le traitement de l’information dans un paysage médiatique métamorphosé par la transition numérique et la révolution des usages et traversé par une crise de confiance sans précédent, cette commission d’enquête parlementaire sur l’audiovisuel public est instrumentalisée par son rapporteur à des fins idéologiques pour disqualifier, intimider, soupçonner.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune sur la commission d'enquête et l'audiovisuel public (page officielle, mise à jour le 6 janvier 2026) — https://www.nousfrance.fr/2026/01/xavier-bertrand-la-commission-denquete-parlementaire-sur-laudiovisuel-public-est-instrumentalisee-par-son-rapporteur-a-des-fins-ideologiques-le-monde/",
+  "page": 6,
+  "theme": "culture-numerique",
+  "id": 72,
+  "annee": 2026,
+  "date_piece": "2026-01-06",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Nous assistons à un rendez-vous démocratique raté pour la commission d’enquête, otage du parti pris et des obsessions de son rapporteur. Instruction à charge, où l’accusation compte plus que les réponses. Procès improvisé aussi détestable dans la forme que dans le principe, et en définitive peu digne de notre démocratie. Quitte à « jeter le bébé avec l’eau du bain », il ne s’agit plus de réfléchir à la réforme de l’audiovisuel public, à améliorer et à optimiser, mais de dénoncer, de chercher à discréditer, à casser, à mettre au pas pour mieux museler.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune sur la commission d'enquête et l'audiovisuel public (page officielle, mise à jour le 6 janvier 2026) — https://www.nousfrance.fr/2026/01/xavier-bertrand-la-commission-denquete-parlementaire-sur-laudiovisuel-public-est-instrumentalisee-par-son-rapporteur-a-des-fins-ideologiques-le-monde/",
+  "page": 7,
+  "theme": "culture-numerique",
+  "id": 73,
+  "annee": 2026,
+  "date_piece": "2026-01-06",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Tout cela serait insignifiant si ce n’était inquiétant. Naturellement, l’extrême gauche, si à l’aise avec la police de la pensée, rejoint le rapporteur dans ses questions inquisitoriales. Comme l’a justement écrit [la philosophe allemande] Hannah Arendt [1906-1975], « la liberté d’opinion est une farce si l’information sur les faits n’est pas garantie et si ce ne sont pas les faits eux-mêmes qui font l’objet du débat » .",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune sur la commission d'enquête et l'audiovisuel public (page officielle, mise à jour le 6 janvier 2026) — https://www.nousfrance.fr/2026/01/xavier-bertrand-la-commission-denquete-parlementaire-sur-laudiovisuel-public-est-instrumentalisee-par-son-rapporteur-a-des-fins-ideologiques-le-monde/",
+  "page": 8,
+  "theme": "culture-numerique",
+  "id": 74,
+  "annee": 2026,
+  "date_piece": "2026-01-06",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Le but pour le rapporteur de cette commission n’est plus d’interroger l’efficience de l’audiovisuel public, son adaptation aux nouveaux usages, la neutralité des antennes, son coût, mais de bien faire comprendre à tous que sortir du cadre idéologique fixé par l’extrême droite aura un coût politique désormais. On ne censure pas frontalement ; on dissuade. On ne fait pas taire par la loi ; on use par la pression jusqu’à l’autocensure pour achever le travail.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune sur la commission d'enquête et l'audiovisuel public (page officielle, mise à jour le 6 janvier 2026) — https://www.nousfrance.fr/2026/01/xavier-bertrand-la-commission-denquete-parlementaire-sur-laudiovisuel-public-est-instrumentalisee-par-son-rapporteur-a-des-fins-ideologiques-le-monde/",
+  "page": 9,
+  "theme": "culture-numerique",
+  "id": 75,
+  "annee": 2026,
+  "date_piece": "2026-01-06",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Indifférence troublante Plus inquiétant : rares sont ceux qui s’émeuvent qu’aujourd’hui en France des journalistes soient suivis, surveillés, écoutés. Que leurs déplacements, leurs échanges, leurs sources soient livrés en pâture publiquement. Ces pratiques devraient provoquer un sursaut. Elles s’installent pourtant dans une indifférence troublante, comme si l’on s’était habitué à l’idée qu’informer puisse justifier d’être traité comme un suspect.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune sur la commission d'enquête et l'audiovisuel public (page officielle, mise à jour le 6 janvier 2026) — https://www.nousfrance.fr/2026/01/xavier-bertrand-la-commission-denquete-parlementaire-sur-laudiovisuel-public-est-instrumentalisee-par-son-rapporteur-a-des-fins-ideologiques-le-monde/",
+  "page": 10,
+  "theme": "culture-numerique",
+  "id": 76,
+  "annee": 2026,
+  "date_piece": "2026-01-06",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Il faut désormais regarder la réalité en face : tout cela obéit à un mobile unique. L’extrême droite s’est professionnalisée. Elle a appris à parler le langage des institutions. Elle a des élus locaux, des députés, des groupes parlementaires. Elle a franchi presque toutes les marches de la respectabilité politique. Il ne lui en reste plus qu’une : l’Elysée. A ce stade, la brutalité devient contre-productive. On intimide plus qu’on ne menace. On se présente en victime. Désormais, le loup a revêtu la peau lainée de l’agneau.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune sur la commission d'enquête et l'audiovisuel public (page officielle, mise à jour le 6 janvier 2026) — https://www.nousfrance.fr/2026/01/xavier-bertrand-la-commission-denquete-parlementaire-sur-laudiovisuel-public-est-instrumentalisee-par-son-rapporteur-a-des-fins-ideologiques-le-monde/",
+  "page": 11,
+  "theme": "culture-numerique",
+  "id": 77,
+  "annee": 2026,
+  "date_piece": "2026-01-06",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Ce silence assourdissant n’est pas seulement le produit de cette offensive. Il est aussi celui de responsables politiques qui, pourtant, refusent les extrêmes mais qui s’interdisent de réagir. Par calcul politicien ou par peur de campagnes de harcèlement numérique. Ce mutisme n’est pas une neutralité vis-à-vis de l’indépendance des médias. C’est un renoncement. Ne pas s’exprimer quand des journalistes sont intimidés, surveillés ou dissuadés, ce n’est pas arbitrer, c’est un manquement.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune sur la commission d'enquête et l'audiovisuel public (page officielle, mise à jour le 6 janvier 2026) — https://www.nousfrance.fr/2026/01/xavier-bertrand-la-commission-denquete-parlementaire-sur-laudiovisuel-public-est-instrumentalisee-par-son-rapporteur-a-des-fins-ideologiques-le-monde/",
+  "page": 12,
+  "theme": "culture-numerique",
+  "id": 78,
+  "annee": 2026,
+  "date_piece": "2026-01-06",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Défendre l’indépendance de la presse n’est ni une posture partisane ni un réflexe militant. C’est un devoir républicain. L’autorité de l’Etat ne se mesure pas à sa capacité à faire taire, mais à sa capacité à garantir la liberté d’expression de chacun. Xavier Bertrand.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune sur la commission d'enquête et l'audiovisuel public (page officielle, mise à jour le 6 janvier 2026) — https://www.nousfrance.fr/2026/01/xavier-bertrand-la-commission-denquete-parlementaire-sur-laudiovisuel-public-est-instrumentalisee-par-son-rapporteur-a-des-fins-ideologiques-le-monde/",
+  "page": 13,
+  "theme": "culture-numerique",
+  "id": 79,
+  "annee": 2026,
+  "date_piece": "2026-01-06",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "OPINION. « Football : la loi qui nous manque », par Xavier Bertrand président LR de la région Hauts-de-France (La Tribune) Le président LR de la région Hauts-de-France appelle les députés à adopter la proposition de loi Lafon et Savin, qui vise à réformer le football professionnel français.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Football : la loi qui nous manque » (page officielle, mise à jour le 29 juin 2026) — https://www.nousfrance.fr/2026/06/opinion-football-la-loi-qui-nous-manque-par-xavier-bertrand-president-lr-de-la-region-hauts-de-france-la-tribune/",
+  "page": 1,
+  "theme": "culture-numerique",
+  "id": 80,
+  "annee": 2026,
+  "date_piece": "2026-06-29",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Deux ans. Deux ans que le diagnostic est posé, que le texte est prêt, que tout le monde s’accorde et que rien n’avance. La proposition de loi n’est pas un texte de circonstance. Elle est le fruit d’une mission d’information dotée des prérogatives d’une commission d’enquête. Son constat, Football-business : stop ou encore ? , a réuni 338 voix au Sénat, une seule contre, en juin 2025. Quand une Chambre parle d’une seule voix, le pays attend une réponse.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Football : la loi qui nous manque » (page officielle, mise à jour le 29 juin 2026) — https://www.nousfrance.fr/2026/06/opinion-football-la-loi-qui-nous-manque-par-xavier-bertrand-president-lr-de-la-region-hauts-de-france-la-tribune/",
+  "page": 2,
+  "theme": "culture-numerique",
+  "id": 81,
+  "annee": 2026,
+  "date_piece": "2026-06-29",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Cette réponse, la voici : conforter les fédérations dans leur rôle de régulation, plafonner les rémunérations des dirigeants de ligues, confier à la Cour des comptes un véritable contrôle et, surtout, renforcer avec force la lutte contre le piratage des contenus sportifs, qui prive nos compétitions de ressources considérables. Des mesures de bon sens, pas d’idéologie. Non pour punir le sport professionnel : pour le sauver de lui-même. Ce texte s’est nourri du travail courageux de la Fédération française de football, qu’il faut saluer.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Football : la loi qui nous manque » (page officielle, mise à jour le 29 juin 2026) — https://www.nousfrance.fr/2026/06/opinion-football-la-loi-qui-nous-manque-par-xavier-bertrand-president-lr-de-la-region-hauts-de-france-la-tribune/",
+  "page": 3,
+  "theme": "culture-numerique",
+  "id": 82,
+  "annee": 2026,
+  "date_piece": "2026-06-29",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Le football traverse la crise la plus profonde qu’il ait connue depuis longtemps. L’effondrement des droits télévisés, les renoncements en cascade des diffuseurs, les inégalités croisées entre clubs : le diagnostic se vérifie chaque semaine. Le remède, lui, attendait dans un tiroir.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Football : la loi qui nous manque » (page officielle, mise à jour le 29 juin 2026) — https://www.nousfrance.fr/2026/06/opinion-football-la-loi-qui-nous-manque-par-xavier-bertrand-president-lr-de-la-region-hauts-de-france-la-tribune/",
+  "page": 4,
+  "theme": "culture-numerique",
+  "id": 83,
+  "annee": 2026,
+  "date_piece": "2026-06-29",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Je parle en élu de terrain, en enfant des Hauts-de-France. Le 22 mai, au Stade de France, le RC Lens a soulevé pour la première fois de son histoire la coupe de France. Une marée Sang et Or, Les Corons , une fierté ouvrière qui ne s’achète pas. Ce club, deuxième du championnat, vient de prouver qu’avec un projet sérieux et l’amour d’un territoire on peut encore tenir tête aux plus riches. Voilà ce que le sport sait offrir.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Football : la loi qui nous manque » (page officielle, mise à jour le 29 juin 2026) — https://www.nousfrance.fr/2026/06/opinion-football-la-loi-qui-nous-manque-par-xavier-bertrand-president-lr-de-la-region-hauts-de-france-la-tribune/",
+  "page": 5,
+  "theme": "culture-numerique",
+  "id": 84,
+  "annee": 2026,
+  "date_piece": "2026-06-29",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Équilibres financiers menacés Mais cette belle histoire ne doit pas masquer la réalité. Dans nos régions, le sport n’est jamais une abstraction : c’est un club qui fait battre le cœur d’un bassin de vie, une formation qui sort des jeunes de la difficulté. Derrière l’émotion d’une finale, il y a des équilibres financiers menacés et un modèle qui se dérobe. Quand la gouvernance défaille, c’est toute la chaîne qui vacille, à commencer par les plus petits clubs amateurs. Cette loi ne menace pas les exploits comme celui de Lens ou d’autres clubs : elle les protège.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Football : la loi qui nous manque » (page officielle, mise à jour le 29 juin 2026) — https://www.nousfrance.fr/2026/06/opinion-football-la-loi-qui-nous-manque-par-xavier-bertrand-president-lr-de-la-region-hauts-de-france-la-tribune/",
+  "page": 6,
+  "theme": "culture-numerique",
+  "id": 85,
+  "annee": 2026,
+  "date_piece": "2026-06-29",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Chaque mois perdu a un coût : financier, parce que les recettes évaporées ne reviennent pas ; démocratique, parce que rien n’abîme davantage la confiance des citoyens qu’un Parlement qui sait, qui s’accorde et qui n’agirait pas.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Football : la loi qui nous manque » (page officielle, mise à jour le 29 juin 2026) — https://www.nousfrance.fr/2026/06/opinion-football-la-loi-qui-nous-manque-par-xavier-bertrand-president-lr-de-la-region-hauts-de-france-la-tribune/",
+  "page": 7,
+  "theme": "culture-numerique",
+  "id": 86,
+  "annee": 2026,
+  "date_piece": "2026-06-29",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Le Sénat a fait son travail. La commission de l’Assemblée nationale a fait le sien. Les sénateurs Lafon et Savin ont ouvert le chemin. Je souhaite que ce texte soit adopté par une large majorité de députés, qui serait la traduction du consensus qui traverse le pays sur ce sujet. Le sport français n’a pas besoin de prolongation, mais d’un coup de sifflet final. À l’Assemblée Nationale de conclure le match.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Football : la loi qui nous manque » (page officielle, mise à jour le 29 juin 2026) — https://www.nousfrance.fr/2026/06/opinion-football-la-loi-qui-nous-manque-par-xavier-bertrand-president-lr-de-la-region-hauts-de-france-la-tribune/",
+  "page": 8,
+  "theme": "culture-numerique",
+  "id": 87,
+  "annee": 2026,
+  "date_piece": "2026-06-29",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Xavier Bertrand : « Il faut aujourd’hui redonner toute sa force à la décentralisation culturelle » [Le Monde] Dans une tribune au « Monde », le président (Les Républicains) de la région Hauts-de-France estime que le modèle culturel français, pour se perpétuer, doit faire davantage confiance aux collectivités locales, que l’Etat, « garant d’un cadre national », doit « soutenir sans contraindre ».",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Redonner toute sa force à la décentralisation culturelle » (page officielle, mise à jour le 4 juillet 2025) — https://www.nousfrance.fr/2025/07/xavier-bertrand-il-faut-aujourdhui-redonner-toute-sa-force-a-la-decentralisation-culturelle-le-monde/",
+  "page": 1,
+  "theme": "culture-numerique",
+  "id": 88,
+  "annee": 2025,
+  "date_piece": "2025-07-04",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "La culture n’est pas un luxe. C’est un choix de société, un choix de civilisation. Ce n’est pas un ornement, mais le fondement même de ce qui fait société. Dans un monde instable, confronté aux replis identitaires, à l’effritement des repères, aux tensions géopolitiques et aux logiques marchandes globalisées, à une digitalisation débridée menée par des acteurs surpuissants, la France a une responsabilité singulière.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Redonner toute sa force à la décentralisation culturelle » (page officielle, mise à jour le 4 juillet 2025) — https://www.nousfrance.fr/2025/07/xavier-bertrand-il-faut-aujourdhui-redonner-toute-sa-force-a-la-decentralisation-culturelle-le-monde/",
+  "page": 2,
+  "theme": "culture-numerique",
+  "id": 89,
+  "annee": 2025,
+  "date_piece": "2025-07-04",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Elle ne peut pas simplement s’adapter à la mondialisation culturelle. Elle doit continuer d’affirmer un modèle original, profondément politique, qui conjugue excellence artistique, enracinement territorial et ouverture universelle.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Redonner toute sa force à la décentralisation culturelle » (page officielle, mise à jour le 4 juillet 2025) — https://www.nousfrance.fr/2025/07/xavier-bertrand-il-faut-aujourdhui-redonner-toute-sa-force-a-la-decentralisation-culturelle-le-monde/",
+  "page": 3,
+  "theme": "culture-numerique",
+  "id": 90,
+  "annee": 2025,
+  "date_piece": "2025-07-04",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "André Malraux avait lancé [au début des années 1960] l’idée visionnaire des Maisons de la culture, pensées non comme des temples réservés à une élite, mais comme des lieux d’émancipation populaire, capables d’éveiller l’imaginaire dans toutes les régions de France. Jean Vilar affirmait qu’il fallait aller là où sont les gens, non pour leur apporter un art condescendant, mais pour leur tendre un miroir. Jack Lang, enfin, a donné à la culture une dimension joyeusement démocratique, assumant l’alliance entre exigence et accessibilité.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Redonner toute sa force à la décentralisation culturelle » (page officielle, mise à jour le 4 juillet 2025) — https://www.nousfrance.fr/2025/07/xavier-bertrand-il-faut-aujourdhui-redonner-toute-sa-force-a-la-decentralisation-culturelle-le-monde/",
+  "page": 4,
+  "theme": "culture-numerique",
+  "id": 91,
+  "annee": 2025,
+  "date_piece": "2025-07-04",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Epouser la diversité Mais, pour que cette ambition demeure vivante, il faut aujourd’hui redonner toute sa force à la décentralisation culturelle. Ce n’est pas une question technique ou budgétaire. C’est un enjeu démocratique. Il s’agit de reconnaître que la culture ne peut plus être pensée depuis un centre unique, ni imposée uniformément. Elle doit épouser les formes, les voix, les histoires, les rythmes des territoires et des habitants dans leur diversité culturelle.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Redonner toute sa force à la décentralisation culturelle » (page officielle, mise à jour le 4 juillet 2025) — https://www.nousfrance.fr/2025/07/xavier-bertrand-il-faut-aujourdhui-redonner-toute-sa-force-a-la-decentralisation-culturelle-le-monde/",
+  "page": 5,
+  "theme": "culture-numerique",
+  "id": 92,
+  "annee": 2025,
+  "date_piece": "2025-07-04",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Ce qui fait la richesse de la France, c’est précisément cette diversité géographique et humaine, cette mosaïque de paysages, de traditions, de transformations, d’accents. Il faut cesser de plaquer des modèles venus d’en haut et faire confiance aux territoires.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Redonner toute sa force à la décentralisation culturelle » (page officielle, mise à jour le 4 juillet 2025) — https://www.nousfrance.fr/2025/07/xavier-bertrand-il-faut-aujourdhui-redonner-toute-sa-force-a-la-decentralisation-culturelle-le-monde/",
+  "page": 6,
+  "theme": "culture-numerique",
+  "id": 93,
+  "annee": 2025,
+  "date_piece": "2025-07-04",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Cela suppose un changement de paradigme. Les régions, départements, intercommunalités et villes doivent pouvoir porter des politiques culturelles ambitieuses, contextualisées et audacieuses. L’Etat doit rester garant d’un cadre national, mais il ne peut plus être prescripteur centralisé. Il doit soutenir sans contraindre, orienter sans imposer. La République des territoires ne peut exister sans une République de la culture.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Redonner toute sa force à la décentralisation culturelle » (page officielle, mise à jour le 4 juillet 2025) — https://www.nousfrance.fr/2025/07/xavier-bertrand-il-faut-aujourdhui-redonner-toute-sa-force-a-la-decentralisation-culturelle-le-monde/",
+  "page": 7,
+  "theme": "culture-numerique",
+  "id": 94,
+  "annee": 2025,
+  "date_piece": "2025-07-04",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Cette approche, nous la voyons déjà à l’œuvre dans la vitalité culturelle réelle du pays. Des centaines de festivals irriguent nos villes et nos campagnes. Chaque été, des millions de visiteurs se pressent à Avignon, La Rochelle, Marciac (Gers), Aix (Bouches-du-Rhône), sur nos littoraux ou à Lille. Un seul chiffre, parmi d’autres, dit la force de ce mouvement populaire : plus de 65 000 chorales en France, rassemblant 2,6 millions de choristes amateurs.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Redonner toute sa force à la décentralisation culturelle » (page officielle, mise à jour le 4 juillet 2025) — https://www.nousfrance.fr/2025/07/xavier-bertrand-il-faut-aujourdhui-redonner-toute-sa-force-a-la-decentralisation-culturelle-le-monde/",
+  "page": 8,
+  "theme": "culture-numerique",
+  "id": 95,
+  "annee": 2025,
+  "date_piece": "2025-07-04",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Ce sont aussi des dizaines de milliers d’artistes professionnels, d’intermittents, de compagnies, d’orchestres, de troupes qui font vivre la culture au quotidien, souvent dans des conditions fragiles. Cette énergie partagée est l’un de nos plus grands trésors.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Redonner toute sa force à la décentralisation culturelle » (page officielle, mise à jour le 4 juillet 2025) — https://www.nousfrance.fr/2025/07/xavier-bertrand-il-faut-aujourdhui-redonner-toute-sa-force-a-la-decentralisation-culturelle-le-monde/",
+  "page": 9,
+  "theme": "culture-numerique",
+  "id": 96,
+  "annee": 2025,
+  "date_piece": "2025-07-04",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Le film En fanfare, d’Emmanuel Courcol [sorti le 27 novembre 2024], incarne à merveille cette France culturelle multiple. Il met en scène la rencontre entre un chef d’orchestre prestigieux et un musicien amateur de la fanfare municipale de Walincourt, dans le Nord. A travers ce choc des mondes, il raconte une même humanité. Et surtout, il a su aller vers les territoires.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Redonner toute sa force à la décentralisation culturelle » (page officielle, mise à jour le 4 juillet 2025) — https://www.nousfrance.fr/2025/07/xavier-bertrand-il-faut-aujourdhui-redonner-toute-sa-force-a-la-decentralisation-culturelle-le-monde/",
+  "page": 10,
+  "theme": "culture-numerique",
+  "id": 97,
+  "annee": 2025,
+  "date_piece": "2025-07-04",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Commencer à l’école Sa tournée d’avant-premières, rythmée par les fanfares locales, a été un moment de communion, de fierté partagée, d’émotion collective. C’est là que la culture prend tout son sens : quand elle n’est pas seulement un spectacle, mais un lien vivant entre les gens, les lieux et les histoires.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Redonner toute sa force à la décentralisation culturelle » (page officielle, mise à jour le 4 juillet 2025) — https://www.nousfrance.fr/2025/07/xavier-bertrand-il-faut-aujourdhui-redonner-toute-sa-force-a-la-decentralisation-culturelle-le-monde/",
+  "page": 11,
+  "theme": "culture-numerique",
+  "id": 98,
+  "annee": 2025,
+  "date_piece": "2025-07-04",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "C’est cette vision que nous devons aujourd’hui porter à l’échelle nationale. Une culture qui ne sépare pas Paris du reste du pays, mais qui unit. Une culture qui donne la parole, qui fait confiance, qui s’appuie sur la réalité des vies et non sur des doctrines abstraites. Une culture qui protège le patrimoine et stimule la création. Une culture qui s’enracine tout en parlant au monde.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Redonner toute sa force à la décentralisation culturelle » (page officielle, mise à jour le 4 juillet 2025) — https://www.nousfrance.fr/2025/07/xavier-bertrand-il-faut-aujourdhui-redonner-toute-sa-force-a-la-decentralisation-culturelle-le-monde/",
+  "page": 12,
+  "theme": "culture-numerique",
+  "id": 99,
+  "annee": 2025,
+  "date_piece": "2025-07-04",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Cela commence à l’école. L’éducation artistique et culturelle doit être pleinement reconnue comme un socle fondamental. Lire, écrire, compter, c’est essentiel. Mais ressentir, imaginer, créer, c’est tout aussi vital. C’est ainsi que naissent les regards critiques, les sensibilités libres, les citoyens éclairés. C’est aussi un rempart contre la résignation, l’isolement, les discours de haine.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Redonner toute sa force à la décentralisation culturelle » (page officielle, mise à jour le 4 juillet 2025) — https://www.nousfrance.fr/2025/07/xavier-bertrand-il-faut-aujourdhui-redonner-toute-sa-force-a-la-decentralisation-culturelle-le-monde/",
+  "page": 13,
+  "theme": "culture-numerique",
+  "id": 100,
+  "annee": 2025,
+  "date_piece": "2025-07-04",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "Il est temps de renouveler le pacte culturel républicain. De reconnaître que la culture n’est pas seulement une affaire de rayonnement : elle est un facteur de justice, d’émancipation et de résilience. Elle est un remède contre la relégation, un levier contre la tentation de l’extrême, un apprentissage des différences vital pour la démocratie.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Redonner toute sa force à la décentralisation culturelle » (page officielle, mise à jour le 4 juillet 2025) — https://www.nousfrance.fr/2025/07/xavier-bertrand-il-faut-aujourdhui-redonner-toute-sa-force-a-la-decentralisation-culturelle-le-monde/",
+  "page": 14,
+  "theme": "culture-numerique",
+  "id": 101,
+  "annee": 2025,
+  "date_piece": "2025-07-04",
+  "origine": "pieces-officielles-2027"
+ },
+ {
+  "text": "La France peut, par la culture, continuer à parler au monde et ne pas perdre sa place de nation modèle pour la création, grâce à la décentralisation. Elle peut incarner une force de résistance face à l’uniformisation mondialisée des plateformes et des blockbusters. Mais elle ne le pourra qu’en restant fidèle à ce qui a toujours fait sa force : un dialogue ouvert avec ses territoires, une confiance dans ses créateurs, une exigence de sa politique publique, et une fidélité à sa mission. Xavier Bertrand est président (Les Républicains) du conseil régional des Hauts-de-France.",
+  "source": "Prises de position de Xavier Bertrand et de Nous France (2025-2026) — Tribune « Redonner toute sa force à la décentralisation culturelle » (page officielle, mise à jour le 4 juillet 2025) — https://www.nousfrance.fr/2025/07/xavier-bertrand-il-faut-aujourdhui-redonner-toute-sa-force-a-la-decentralisation-culturelle-le-monde/",
+  "page": 15,
+  "theme": "culture-numerique",
+  "id": 102,
+  "annee": 2025,
+  "date_piece": "2025-07-04",
+  "origine": "pieces-officielles-2027"
+ }
+]

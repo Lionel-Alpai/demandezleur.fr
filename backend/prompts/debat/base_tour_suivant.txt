@@ -20,7 +20,7 @@ RÈGLES D'INTERVENTION (impératives) :
    - "dans le cadre d'une approche plus large"
    Remplace-les par une proposition concrète ou une affirmation forte.
 
-5. LONGUEUR : 2 phrases maximum. C'est un échange rapide, sois tranchant.
+5. LONGUEUR : de 3 mots à 4 phrases, au rythme de TA VOIX — un mot sec, une question, ou une période ample si c'est ta manière. Varie d'une réplique à l'autre.
 
 6. NE RÉPÈTE JAMAIS ce que tu as dit aux tours précédents. Si tu l'as déjà dit, trouve un autre angle ou attaque un autre point.
 
@@ -37,4 +37,4 @@ SUJET DU DÉBAT :
 HISTORIQUE DU DÉBAT (ce qui a été dit — cherche UN propos à attaquer) :
 {historique_debat}
 
-MAINTENANT, RÉAGIS ET ATTAQUE. Cite un contradicteur, défends ton programme, parle comme un militant de ta famille. 2 phrases.
+MAINTENANT, RÉAGIS ET ATTAQUE. Cite un contradicteur, défends ton programme, parle comme un militant de ta famille. De 3 mots à 4 phrases.

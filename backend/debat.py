@@ -8,6 +8,7 @@ import random
 import json
 import os
 import hashlib
+import re as _re
 from pathlib import Path
 from typing import Iterator
 
@@ -130,7 +131,155 @@ def randomiser_ordre(candidats_ids: list[str]) -> list[str]:
     return ordre
 
 
-def formater_historique(historique: list[dict], exclure_candidat: str = None) -> str:
+_MOT = _re.compile(r"[0-9a-zàâäçéèêëîïôöùûüÿœ]+(?:'[0-9a-zàâäçéèêëîïôöùûüÿœ]+)*")
+_CITATION = _re.compile(r"[«“\"]\s*([^»”\"]{8,400}?)\s*[»”\"]")
+_COUPE_PHRASES = _re.compile(r"(?<=[.!?…])\s+")
+_MAX_DEJA_DIT = 12
+
+
+def _norm_mots(texte: str) -> list:
+    """Mots d'un texte, en minuscules, apostrophes normalisées (clé de comparaison des répliques)."""
+    return _MOT.findall((texte or "").lower().replace("\u2019", "'"))
+
+
+def _occurrences(mots: list, sous: tuple) -> int:
+    n = len(sous)
+    if not n:
+        return 0
+    return sum(1 for k in range(len(mots) - n + 1) if tuple(mots[k:k + n]) == sous)
+
+
+def _interventions_a_plat(historique) -> list:
+    return [(i.get("candidat_nom") or i.get("candidat_id") or "?", i.get("texte", ""))
+            for t in (historique or []) for i in t.get("interventions", [])]
+
+
+def citations_deja_dites(historique) -> list:
+    """[(texte, n, {orateur: fois})] : citations entre guillemets (5 mots ou plus, ou 3 mots et plus si répétées)
+    et formules de 6 mots ou plus reprises, TOUS TOURS CONFONDUS. n = nombre de répliques qui la contiennent."""
+    inter = [(nom, _norm_mots(brut), brut) for nom, brut in _interventions_a_plat(historique)]
+    citees, formules = {}, {}
+    for _, _, brut in inter:
+        for m in _CITATION.finditer(brut.replace("\u2019", "'")):
+            q = tuple(_norm_mots(m.group(1)))
+            if len(q) >= 3 and q not in citees:
+                citees[q] = m.group(1).strip()
+    N = 6
+    grammes = {}
+    for idx, (_, mots, _) in enumerate(inter):
+        for k in range(len(mots) - N + 1):
+            grammes.setdefault(tuple(mots[k:k + N]), set()).add(idx)
+    for _, mots, _ in inter:
+        k = 0
+        while k <= len(mots) - N:
+            if len(grammes[tuple(mots[k:k + N])]) >= 2:
+                j = k
+                while j + 1 <= len(mots) - N and len(grammes[tuple(mots[j + 1:j + 1 + N])]) >= 2:
+                    j += 1
+                formules.setdefault(tuple(mots[k:j + N]), " ".join(mots[k:j + N]))
+                k = j + 1
+            else:
+                k += 1
+    gardees = []
+    for source, est_citation in ((citees, True), (formules, False)):
+        for q, affichage in source.items():
+            par = {}
+            for nom, mots, _ in inter:
+                c = _occurrences(mots, q)
+                if c:
+                    par[nom] = par.get(nom, 0) + c
+            n = sum(1 for _, mots, _ in inter if _occurrences(mots, q))
+            if n == 0:
+                continue
+            if est_citation and (len(q) >= 5 or n >= 2) or (not est_citation and n >= 2):
+                gardees.append((q, affichage, n, par))
+    # une suite incluse dans une plus longue citée aussi souvent est redondante
+    finales = []
+    for q, aff, n, par in gardees:
+        if any(q2 != q and len(q2) > len(q) and n2 >= n and _occurrences(list(q2), q) for q2, _, n2, _ in gardees):
+            continue
+        finales.append((q, aff, n, par))
+    finales.sort(key=lambda e: (-e[2], -len(e[0])))
+    vus, sortie = set(), []
+    for q, aff, n, par in finales:
+        if q in vus:
+            continue
+        vus.add(q)
+        sortie.append((aff, n, par))
+    return sortie[:_MAX_DEJA_DIT]
+
+
+def _phrases(texte: str) -> list:
+    return [p.strip() for p in _COUPE_PHRASES.split((texte or "").strip()) if p.strip()]
+
+
+def derniere_replique(candidat_id: str, historique) -> str:
+    for t in reversed(historique or []):
+        for i in reversed(t.get("interventions", [])):
+            if i.get("candidat_id") == candidat_id:
+                return i.get("texte", "")
+    return ""
+
+
+def questions_en_suspens(candidat: dict, historique) -> tuple:
+    """(questions posées à ce candidat par les autres, questions qu'il a posées dans sa dernière réplique)."""
+    nom_court = candidat["nom"].split()[-1].lower()
+    recues, posees = [], []
+    for t in historique or []:
+        for i in t.get("interventions", []):
+            qs = [p for p in _phrases(i.get("texte", "")) if p.endswith("?")]
+            if i.get("candidat_id") == candidat["id"]:
+                posees = qs
+            else:
+                recues += [(i.get("candidat_nom") or "?", p) for p in qs if nom_court in p.lower()]
+    return recues[-2:], posees[:2]
+
+
+def bloc_deja_dit(candidat: dict, historique, mode: str) -> str:
+    """Bloc « DÉJÀ DIT DANS CE DÉBAT » : citations et formules déjà prononcées, règle d'interdiction, questions."""
+    if not historique or not any(t.get("interventions") for t in historique):
+        return ""
+    lignes = []
+    for aff, n, par in citations_deja_dites(historique):
+        qui = ", ".join(f"{nom} ×{c}" for nom, c in sorted(par.items(), key=lambda e: -e[1]))
+        aff = aff if len(aff) <= 160 else aff[:160].rsplit(" ", 1)[0] + "…"
+        if n >= 2:
+            lignes.append(f"— « {aff} » — dite dans {n} répliques ({qui}) → INTERDITE, ne la reprends sous aucune forme")
+        else:
+            lignes.append(f"— « {aff} » — dite une fois ({qui}) → tu ne peux la reprendre que pour la RETOURNER contre celui qui l'a servie")
+    texte = "\n\nDÉJÀ DIT DANS CE DÉBAT (tous tours confondus ; [TOI] dans l'historique = tes propres répliques) :\n"
+    texte += "\n".join(lignes) if lignes else "— (aucune citation reprise pour l'instant)"
+    texte += ("\nRÈGLE (bloquante) : une citation déjà prononcée DEUX fois est INTERDITE ; prononcée une fois, elle n'est permise que pour la RETOURNER contre celui qui l'a servie. "
+              "Même règle pour toute formule de 6 mots ou plus déjà employée par quelqu'un dans ce débat. "
+              "Un argument que tu as déjà développé ([TOI]) est INTERDIT de resservir : prends un autre angle ou réponds à ce qui vient d'être dit.")
+    if mode == "arene":
+        recues, posees = questions_en_suspens(candidat, historique)
+        if recues:
+            texte += "\nQuestions qu'on t'a posées : " + " | ".join(f"{nom} : « {q[:200]} »" for nom, q in recues) + " — si tu ne réponds pas, dis-le franchement, ne fais pas semblant."
+        if posees:
+            texte += "\nQuestions que tu as posées : " + " | ".join(f"« {q[:200]} »" for q in posees) + " — si l'adversaire visé n'y a pas répondu depuis, fais-le-lui remarquer (« vous n'avez pas répondu à ma question »)."
+    return texte
+
+
+def bloc_forme_arene(candidat: dict, tour: int, historique, position_dans_tour: int, nb_candidats: int) -> str:
+    """Fin de prompt de l'Arène (ping-pong, dl-arene-ping-pong-et-tension) : coup précédent à ne pas refaire,
+    tension qui monte par tour, une RÉACTION À CHAUD par tour à partir du tour 2."""
+    out = ""
+    phrases = _phrases(derniere_replique(candidat["id"], historique))
+    if phrases:
+        out += ("\n\nTA RÉPLIQUE PRÉCÉDENTE finissait par : « " + phrases[-1][:200] + " ». "
+                "INTERDIT de refaire le même coup (même ressort, même chute) : choisis 1 ou 2 AUTRES coups dans la BOÎTE À COUPS.")
+    tension = {1: "TOUR 1 : posé, tu installes ta voix.", 2: "TOUR 2 : ça se tend — tu peux couper."}.get(
+        tour, "TOUR 3 ET SUIVANTS : ça chauffe — réaction à chaud permise, coupure bienvenue.")
+    court = (nb_candidats - 1 - (max(1, tour) - 1)) % max(1, nb_candidats)
+    if tour >= 2 and position_dans_tour == court:
+        out += f"\n\n{tension} FORME : RÉACTION À CHAUD — de 3 mots à une phrase : une coupure, une exclamation, une question-éclair, dans TA voix."
+    else:
+        out += f"\n\n{tension} FORME : de 3 mots à 4 phrases, au rythme de TA voix ; ne décalque ni la longueur ni l'ouverture des répliques précédentes ; réagis d'abord à la DERNIÈRE intervention adverse."
+    return out
+
+
+def formater_historique(historique: list[dict], exclure_candidat: str = None, moi: str = None) -> str:
     """Formate l'historique du débat en texte pour injection dans le prompt."""
     if not historique:
         return "(Début du débat, aucune intervention précédente.)"
@@ -155,7 +304,8 @@ def formater_historique(historique: list[dict], exclure_candidat: str = None) ->
                 # Tronquer au dernier espace avant la limite
                 texte = texte[:HISTORIQUE_TRONCATURE_CHARS].rsplit(" ", 1)[0] + "…"
             
-            lignes.append(f"[{intervention['candidat_nom']}] : {texte}")
+            etiquette = "TOI" if moi and intervention["candidat_id"] == moi else intervention["candidat_nom"]
+            lignes.append(f"[{etiquette}] : {texte}")
         lignes.append("")
     
     return "\n".join(lignes)
@@ -191,7 +341,7 @@ def construire_prompt_debat(
     ton = ton_candidat(candidat)
     
     # Formater l'historique (en excluant le candidat lui-même s'il a déjà parlé)
-    historique_txt = formater_historique(historique, exclure_candidat=candidat["id"])
+    historique_txt = formater_historique(historique, moi=candidat["id"])  # le candidat se voit : [TOI]
     
     # Note spéciale pour l'ouverture selon position
     autres_ont_parle_note = ""
@@ -337,7 +487,7 @@ def construire_prompt_debat(
             jamais = [n for cid, n in noms.items() if cid != candidat["id"] and n not in compte]
             prompt += (
                 "\n\nDANS CE TOUR, AVANT TOI :\n" + "\n".join(lignes)
-                + ("\nPersonne n'a encore interpellé : " + ", ".join(jamais) + "." if jamais else "")
+                + ("\nVise de préférence : " + ", ".join(jamais) + "." if jamais else "")
                 + "\nRÈGLE DE DIVERSITÉ (bloquante) : ne reprends NI l'argument NI la formule d'un candidat qui a parlé avant toi dans ce tour. "
                 + (f"INTERDIT d'interpeller {', '.join(n for n, c in compte.items() if c >= 1)} une nouvelle fois dans ce tour tant que {', '.join(jamais)} n'ont pas été interpellés : ton adversaire nommé est l'un d'eux. " if jamais and compte else "")
                 + "Si tu reviens malgré tout sur un adversaire déjà visé, prends un angle que personne n'a pris (ton programme, une autre pièce, un autre fait). "
@@ -350,12 +500,28 @@ def construire_prompt_debat(
             import actu as _a
             ids_adv = {a["id"] for a in adversaires}
             dernieres = [i.get("texte", "") for t in (historique or [])[-1:] for i in t.get("interventions", []) if i.get("candidat_id") in ids_adv]
-            texte_actu, preuves_actu = _a.pieces_pour(sujet if not question_moderateur else sujet + " " + question_moderateur, candidat, adversaires, " ".join(dernieres))
+            texte_actu, preuves_actu = _a.pieces_pour(sujet if not question_moderateur else sujet + " " + question_moderateur, candidat, adversaires, " ".join(dernieres),
+                                                   textes_debat=[i.get("texte", "") for t in (historique or []) for i in t.get("interventions", [])])
             if texte_actu:
                 prompt += texte_actu
                 liste_preuves.extend(preuves_actu)
         except Exception:
             pass
+
+    # ARÈNE — FICHES (état du monde) : la situation politique du jour est injectée en TÊTE du prompt, et la FICHE ENTIÈRE de tout événement
+    # touché par le sujet, la question ou une pièce d'actu (jamais une pièce orpheline) ; fiches validées par la machine (actu_fiches.py)
+    _tete_monde = ""
+    if mode == "arene":
+        try:
+            import actu_fiches as _af
+            _requete_monde = " ".join([sujet or "", question_moderateur or "", locals().get("texte_actu") or ""])
+            _tete_monde, _corps_monde, _preuves_monde = _af.bloc_etat_du_monde(_requete_monde)
+            prompt += _corps_monde
+            for _p in _preuves_monde:
+                _p["candidat_id"] = candidat["id"]
+            liste_preuves.extend(_preuves_monde)
+        except Exception:
+            _tete_monde = ""
 
     # ARÈNE — le DOSSIER (faits vérifiés + reproches documentés), en fin de prompt : c'est la dernière chose lue
     if mode == "arene" and adversaires:
@@ -371,6 +537,14 @@ def construire_prompt_debat(
                 liste_preuves.extend(preuves_dossier)
         except Exception:
             pass
+    # DÉJÀ DIT (standard et Arène) puis, en Arène, coup à changer et forme : la dernière chose lue
+    prompt += bloc_deja_dit(candidat, historique, mode)
+    if mode == "arene":
+        prompt += bloc_forme_arene(candidat, tour, historique, position_dans_tour, len(adversaires or []) + 1)
+    if mode == "arene":
+        prompt += "\n\nÉVÉNEMENTS RÉCENTS : tu ne sais d'un événement de 2026 QUE ce que disent les pièces. Tu n'attribues JAMAIS un auteur, un mobile, une idéologie, une religion, une nationalité ou une origine qui n'est pas écrit dans une pièce. Si la pièce dit raciste, c'est raciste. Si rien n'est dit, tu n'en dis rien. Tu ne prêtes à personne, ni à toi-même, une déclaration publique (« j'ai dit », « vous avez déclaré ») sans pièce verbatim. Tu gardes ta ligne politique (tu peux parler d'un sujet EN GÉNÉRAL), jamais en l'accrochant à un fait que les pièces contredisent ou ne disent pas.\n"
+    if _tete_monde:
+        prompt = _tete_monde + prompt
     return prompt, liste_preuves
 
 
