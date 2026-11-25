@@ -55,3 +55,6 @@ backend/qg/
 
 # Aperçus de courriers QG (portent un jeton d essai) — jamais au dépôt public
 qg/apercus-courrier/
+
+# Cache de collecte, non publié (un blob de 242 Mo bloquait le push)
+style/cache/
